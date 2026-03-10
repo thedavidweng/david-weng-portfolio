@@ -7,13 +7,16 @@ export function Header() {
     <header className="site-header">
       <Container>
         <div className="site-header__inner">
-          <Link className="site-header__brand" href="/">
+          <Link className="site-header__brand signal-control" href="/">
+            <span className="site-header__mark" aria-hidden="true">
+              {"//"}
+            </span>
             <span className="site-header__title">{siteIdentity.name}</span>
             <span className="site-header__subtitle">{siteIdentity.brandLine}</span>
           </Link>
           <nav className="site-header__nav" aria-label="Main navigation">
             {navigationItems.map((item) => (
-              <Link key={item.label} href={item.href}>
+              <Link key={item.label} className="signal-control signal-control--nav" href={item.href}>
                 {item.label}
               </Link>
             ))}

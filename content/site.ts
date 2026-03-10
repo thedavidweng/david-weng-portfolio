@@ -3,7 +3,7 @@ import type { ServiceItem } from "@/types/content";
 export const siteIdentity = {
   name: "David Weng",
   fullName: "David (Jiachen) Weng",
-  brandLine: "Visual storytelling, design, and creative systems",
+  brandLine: "moving image / visual systems / poster-first portfolio",
   roles: ["Video Editor", "Photographer", "Graphic Designer", "ContentOps"]
 };
 
@@ -15,20 +15,26 @@ export const navigationItems = [
 ];
 
 export const heroContent = {
-  kicker: "Visual storytelling, design, and creative systems",
-  headline: "I build visual stories, content systems, and creative workflows from concept to delivery.",
+  kicker: "David (Jiachen) Weng / Video Editor / Photographer / Graphic Designer / ContentOps",
+  headline: "CUT MOTION. FRAME STILLS. BUILD SIGNAL.",
   support:
-    "I work across video production, photography, graphic design, and AI-integrated workflows for brands, teams, and independent projects.",
-  visualHeadline: "A cinematic portfolio built for employers, collaborators, and research-minded partners.",
-  visualCaption: "Selected work / moving image / design systems",
+    "Versatile digital content creator working across video production, photography, graphic design, social media systems, and AI-integrated creative workflows.",
+  supportSecondary:
+    "I take projects from concept to delivery for employers, collaborators, and research-minded partners who need visual work with both atmosphere and execution discipline.",
+  visualHeadline: "A dark portfolio built to read like a poster system, not a template.",
+  visualCaption: "selected work / archive logic / acid-red signal",
   visualNotes: [
     {
-      title: "Editorial pacing",
-      copy: "Short-form, branded, and narrative projects shaped with a clear sense of rhythm."
+      title: "For employers",
+      copy: "Editing, design, and content production that ships with tone, speed, and control."
     },
     {
-      title: "AI-aware process",
-      copy: "Workflow design that speeds up iteration without flattening the creative voice."
+      title: "For collaborators",
+      copy: "Visual systems that can move between film, campaign work, research, and experiments."
+    },
+    {
+      title: "For process",
+      copy: "AI-integrated workflows used where they sharpen iteration instead of diluting authorship."
     }
   ]
 };
@@ -57,16 +63,17 @@ const services: ServiceItem[] = [
 ];
 
 export const servicesContent = {
-  eyebrow: "What I Do",
-  title: "Creative production with editorial clarity, visual precision, and AI-aware execution.",
+  eyebrow: "01 / Core Capabilities",
+  title: "What I Do",
   description:
-    "The goal is not just output. It is to help teams move from an idea to a credible, publishable result with fewer handoff gaps.",
+    "Four capability lanes, structured for hiring managers and collaborators who need someone that can think conceptually and still deliver under production pressure.",
   items: services
 };
 
 export const aboutContent = {
-  eyebrow: "About",
-  title: "A cross-media practice built around craft, systems, and end-to-end delivery.",
+  eyebrow: "03 / Background",
+  title: "About",
+  lead: "A cross-media practice built around craft, systems, and end-to-end delivery.",
   body:
     "I am a versatile digital content creator working across video editing, photography, design, and content operations. My practice combines visual craft with production thinking, which allows me to move projects from concept development to final delivery with a clear editorial point of view.",
   bodySecondary:
@@ -83,8 +90,9 @@ export const aboutContent = {
 };
 
 export const contactContent = {
-  eyebrow: "Contact",
-  title: "Open to roles, freelance projects, and visual collaborations.",
+  eyebrow: "04 / Contact",
+  title: "Contact",
+  lead: "Open to roles, freelance projects, and visual collaborations.",
   body:
     "I am available for freelance, contract, and collaborative work in editing, campaign content, event recap, visual storytelling, and AI-driven film experiments.",
   email: "hello@davidweng.studio",

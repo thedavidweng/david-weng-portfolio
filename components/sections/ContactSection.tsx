@@ -8,11 +8,12 @@ export function ContactSection() {
       <Container>
         <div className="contact__panel">
           <div className="contact__content">
-            <p className="section-heading__eyebrow">{contactContent.eyebrow}</p>
+            <p className="poster-section__eyebrow">{contactContent.eyebrow}</p>
             <h2 className="contact__title">{contactContent.title}</h2>
+            <p className="contact__lead">{contactContent.lead}</p>
             <p className="contact__copy">{contactContent.body}</p>
             <div className="contact__actions">
-              <Link className="button button--dark" href={`mailto:${contactContent.email}`}>
+              <Link className="button button--signal" href={`mailto:${contactContent.email}`}>
                 Email Me
               </Link>
               <Link className="button button--ghost" href={contactContent.linkedinHref}>
@@ -21,7 +22,7 @@ export function ContactSection() {
             </div>
           </div>
           <div className="contact__rail">
-            <p className="section-heading__eyebrow">Best for</p>
+            <p className="poster-section__eyebrow">Best for</p>
             <ul className="contact__list">
               {contactContent.inquiryTypes.map((item) => (
                 <li key={item.title}>

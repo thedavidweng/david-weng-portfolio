@@ -17,6 +17,8 @@ export type ProjectMediaItem = {
 export type ProjectItem = {
   slug: string;
   title: string;
+  code: string;
+  posterWord: string;
   category: "Film" | "Client Work" | "Research" | "Experimental" | "Design";
   year: string;
   projectType: string;

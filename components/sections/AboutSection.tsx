@@ -8,8 +8,9 @@ export function AboutSection() {
       <Container>
         <div className="about__panel">
           <div className="about__content">
-            <p className="section-heading__eyebrow">{aboutContent.eyebrow}</p>
+            <p className="poster-section__eyebrow">{aboutContent.eyebrow}</p>
             <h2 className="about__title">{aboutContent.title}</h2>
+            <p className="about__lead">{aboutContent.lead}</p>
             <p className="about__copy">{aboutContent.body}</p>
             <p className="about__copy">{aboutContent.bodySecondary}</p>
             <div className="about__actions">
@@ -22,7 +23,7 @@ export function AboutSection() {
             </div>
           </div>
           <div className="about__rail">
-            <p className="section-heading__eyebrow">Practice Focus</p>
+            <p className="poster-section__eyebrow">Practice Focus</p>
             <div className="about__stats">
               {aboutContent.stats.map((stat) => (
                 <div key={stat.label} className="about__stat">
@@ -32,7 +33,7 @@ export function AboutSection() {
               ))}
             </div>
             <div className="about__actions">
-              <Link className="button button--primary" href={aboutContent.linkedinHref}>
+              <Link className="button button--signal" href={aboutContent.linkedinHref}>
                 LinkedIn
               </Link>
             </div>

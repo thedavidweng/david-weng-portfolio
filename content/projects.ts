@@ -1,16 +1,18 @@
 import type { ProjectItem } from "@/types/content";
 
 export const projectSectionContent = {
-  eyebrow: "Selected Projects",
-  title: "A portfolio spanning film, client work, research, design, and experimental image-making.",
+  eyebrow: "02 / Archive",
+  title: "Selected Projects",
   description:
-    "Each card opens into a focused project page with roles, highlights, mixed-media materials, and outbound links for deeper review."
+    "A mixed-media selection across film, client work, research, design, and experimental image-making. Built to read like an archive, not a storefront."
 };
 
 export const projects: ProjectItem[] = [
   {
     slug: "afterimage-city",
     title: "Afterimage City",
+    code: "[FILM-01]",
+    posterWord: "AFTERIMAGE",
     category: "Film",
     year: "2025",
     projectType: "Short Film",
@@ -50,6 +52,8 @@ export const projects: ProjectItem[] = [
   {
     slug: "signal-relay",
     title: "Signal Relay",
+    code: "[CLIENT-02]",
+    posterWord: "RELAY",
     category: "Client Work",
     year: "2024",
     projectType: "Campaign Content Suite",
@@ -83,6 +87,8 @@ export const projects: ProjectItem[] = [
   {
     slug: "fragments-of-arrival",
     title: "Fragments of Arrival",
+    code: "[RESEARCH-03]",
+    posterWord: "FRAGMENTS",
     category: "Research",
     year: "2025",
     projectType: "Research-led Visual Essay",
@@ -116,6 +122,8 @@ export const projects: ProjectItem[] = [
   {
     slug: "synthetic-streets",
     title: "Synthetic Streets",
+    code: "[EXP-04]",
+    posterWord: "SYNTHETIC",
     category: "Experimental",
     year: "2026",
     projectType: "AI Image Experiment",
@@ -149,6 +157,8 @@ export const projects: ProjectItem[] = [
   {
     slug: "monochrome-signal",
     title: "Monochrome Signal",
+    code: "[DESIGN-05]",
+    posterWord: "MONOCHROME",
     category: "Design",
     year: "2024",
     projectType: "Brand System",
