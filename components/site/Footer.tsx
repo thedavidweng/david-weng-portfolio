@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+import { contactContent } from "@/content/site";
 
 export function Footer() {
   return (
@@ -6,7 +7,8 @@ export function Footer() {
       <Container>
         <div className="site-footer__inner">
           <span>© 2026 David Weng.</span>
-          <span>Built for moving images, ideas, and creative systems.</span>
+          <span>{contactContent.email}</span>
+          <span>LinkedIn / Instagram / GitHub</span>
         </div>
       </Container>
     </footer>

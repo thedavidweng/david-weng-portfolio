@@ -12,6 +12,8 @@ export type ProjectMediaItem = {
   type: "image" | "video" | "pdf";
   title: string;
   description: string;
+  src?: string;
+  href?: string;
 };
 
 export type ProjectItem = {
@@ -19,12 +21,14 @@ export type ProjectItem = {
   title: string;
   code: string;
   posterWord: string;
-  category: "Film" | "Client Work" | "Research" | "Experimental" | "Design";
+  category: string;
   year: string;
   projectType: string;
   duration: string;
   coverLabel: string;
   coverPalette: [string, string, string];
+  coverImage: string;
+  coverAlt: string;
   teaser: string;
   summary: string;
   roles: string[];

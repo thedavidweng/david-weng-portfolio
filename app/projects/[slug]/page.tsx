@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/layout/Container";
 import { Footer } from "@/components/site/Footer";
@@ -89,6 +90,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     background: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 55%, ${project.coverPalette[2]})`
                   }}
                 >
+                  <Image
+                    alt={project.coverAlt}
+                    className="project-hero__cover-image"
+                    fill
+                    priority
+                    sizes="(max-width: 1120px) 100vw, 40vw"
+                    src={project.coverImage}
+                  />
                   <div className="project-hero__word" aria-hidden="true">
                     {project.posterWord}
                   </div>
@@ -135,8 +144,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {project.media.map((item) => (
                 <article key={item.title} className="project-media__card signal-panel">
                   <div className="project-media__badge">{item.type}</div>
+                  {item.type === "image" && item.src ? (
+                    <div className="project-media__image">
+                      <Image
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 1120px) 100vw, 28vw"
+                        src={item.src}
+                      />
+                    </div>
+                  ) : null}
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
+                  {item.href ? (
+                    <a className="project-card__cta" href={item.href} rel="noreferrer" target="_blank">
+                      Open resource
+                    </a>
+                  ) : null}
                 </article>
               ))}
             </div>

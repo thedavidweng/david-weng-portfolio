@@ -3,7 +3,7 @@ import type { ServiceItem } from "@/types/content";
 export const siteIdentity = {
   name: "David Weng",
   fullName: "David (Jiachen) Weng",
-  brandLine: "moving image / visual systems / poster-first portfolio",
+  brandLine: "video / photography / design / content systems",
   roles: ["Video Editor", "Photographer", "Graphic Designer", "ContentOps"]
 };
 
@@ -15,28 +15,36 @@ export const navigationItems = [
 ];
 
 export const heroContent = {
-  kicker: "David (Jiachen) Weng / Video Editor / Photographer / Graphic Designer / ContentOps",
-  headline: "CUT MOTION. FRAME STILLS. BUILD SIGNAL.",
+  kicker: "David (Jiachen) Weng / Vancouver / Visual Content Creator",
+  headline: "Video, design, and content systems with cinematic discipline.",
   support:
-    "Versatile digital content creator working across video production, photography, graphic design, social media systems, and AI-integrated creative workflows.",
+    "A versatile digital content creator working across video production, photography, graphic design, and AI-integrated creative workflows.",
   supportSecondary:
-    "I take projects from concept to delivery for employers, collaborators, and research-minded partners who need visual work with both atmosphere and execution discipline.",
-  visualHeadline: "A dark portfolio built to read like a poster system, not a template.",
-  visualCaption: "selected work / archive logic / acid-red signal",
+    "I build from concept to delivery for employers, collaborators, and research-minded teams who need visual work that feels considered and still ships cleanly.",
+  stats: [
+    { label: "Focus", value: "Editing / Photography / Design / ContentOps" },
+    { label: "Workflow", value: "AI-integrated where it improves speed or iteration" },
+    { label: "Formats", value: "Film, campaign, research, publication, and web" }
+  ],
+  visualHeadline: "Selected work from film, research, design, and campaign production.",
+  visualCaption: "Profile / capability / current archive",
   visualNotes: [
     {
-      title: "For employers",
-      copy: "Editing, design, and content production that ships with tone, speed, and control."
+      title: "Current mode",
+      copy: "Visual storytelling anchored in post-production craft and cross-format systems thinking."
     },
     {
-      title: "For collaborators",
-      copy: "Visual systems that can move between film, campaign work, research, and experiments."
+      title: "Best fit",
+      copy: "Teams or projects that need one person who can cut, design, and structure content with continuity."
     },
     {
-      title: "For process",
-      copy: "AI-integrated workflows used where they sharpen iteration instead of diluting authorship."
+      title: "Contact",
+      copy: "Open to freelance editing, campaign work, event recap, and creative collaborations."
     }
-  ]
+  ],
+  primaryCta: "View Projects",
+  secondaryCta: "View Resume",
+  profileImage: "/legacy/profile.jpg"
 };
 
 const services: ServiceItem[] = [
@@ -66,7 +74,7 @@ export const servicesContent = {
   eyebrow: "01 / Core Capabilities",
   title: "What I Do",
   description:
-    "Four capability lanes, structured for hiring managers and collaborators who need someone that can think conceptually and still deliver under production pressure.",
+    "A tighter capability overview for people hiring across moving image, visual communication, and content operations.",
   items: services
 };
 
@@ -75,18 +83,20 @@ export const aboutContent = {
   title: "About",
   lead: "A cross-media practice built around craft, systems, and end-to-end delivery.",
   body:
-    "I am a versatile digital content creator working across video editing, photography, design, and content operations. My practice combines visual craft with production thinking, which allows me to move projects from concept development to final delivery with a clear editorial point of view.",
+    "I am a versatile digital content creator specializing in AI-integrated creative workflows. My background spans video production, graphic design, and social media marketing, with a consistent focus on taking projects from concept to completion.",
   bodySecondary:
-    "I am especially interested in AI-integrated creative workflows, media research, and cross-cultural communication through moving images and digital content. That mix helps me contribute both as a hands-on maker and as a systems-minded collaborator.",
+    "I have also worked on research, publication, and teaching-adjacent projects, including co-developing and instructing a course on AI film production. That mix helps me contribute as both a hands-on maker and a systems-minded collaborator.",
   stats: [
-    { value: "4", label: "Core disciplines across image, motion, design, and operations" },
-    { value: "E2E", label: "Able to lead from concept framing to publish-ready delivery" },
-    { value: "AI", label: "Integrated where it improves speed, experimentation, or consistency" },
-    { value: "Global", label: "Research and storytelling interests grounded in cross-cultural media" }
+    { value: "AI", label: "Integrated into creative workflows, not used as decoration" },
+    { value: "E2E", label: "Comfortable taking work from brief to final delivery" },
+    { value: "Film", label: "Narrative, microfilm, campaign, and event recap experience" },
+    { value: "Research", label: "Publication and media studies work alongside production practice" }
   ],
-  resumeHref: "#",
-  cvHref: "#",
-  linkedinHref: "#"
+  resumeHref: "/legacy/resume.pdf",
+  cvHref: "/legacy/CV.pdf",
+  portfolioHref: "/legacy/Portfolio_web.pdf",
+  linkedinHref: "https://www.linkedin.com/in/thedavidweng/",
+  profileImage: "/legacy/profile.jpg"
 };
 
 export const contactContent = {
@@ -95,8 +105,10 @@ export const contactContent = {
   lead: "Open to roles, freelance projects, and visual collaborations.",
   body:
     "I am available for freelance, contract, and collaborative work in editing, campaign content, event recap, visual storytelling, and AI-driven film experiments.",
-  email: "hello@davidweng.studio",
-  linkedinHref: "#",
+  email: "mail@davidweng.eu.org",
+  linkedinHref: "https://www.linkedin.com/in/thedavidweng/",
+  instagramHref: "https://www.instagram.com/davidwengpro/",
+  githubHref: "https://github.com/thedavidweng",
   inquiryTypes: [
     {
       title: "Freelance Editing",

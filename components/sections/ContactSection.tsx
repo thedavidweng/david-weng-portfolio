@@ -19,6 +19,9 @@ export function ContactSection() {
               <Link className="button button--ghost" href={contactContent.linkedinHref}>
                 LinkedIn
               </Link>
+              <Link className="button button--ghost" href={contactContent.instagramHref}>
+                Instagram
+              </Link>
             </div>
           </div>
           <div className="contact__rail">
@@ -31,6 +34,11 @@ export function ContactSection() {
                 </li>
               ))}
             </ul>
+            <div className="contact__actions">
+              <Link className="button button--ghost" href={contactContent.githubHref}>
+                GitHub
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

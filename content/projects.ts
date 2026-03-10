@@ -4,188 +4,270 @@ export const projectSectionContent = {
   eyebrow: "02 / Archive",
   title: "Selected Projects",
   description:
-    "A mixed-media selection across film, client work, research, design, and experimental image-making. Built to read like an archive, not a storefront."
+    "A responsive reel of projects migrated from the earlier site, spanning publication design, research, film, campaign work, and web."
 };
 
 export const projects: ProjectItem[] = [
   {
-    slug: "afterimage-city",
-    title: "Afterimage City",
-    code: "[FILM-01]",
-    posterWord: "AFTERIMAGE",
-    category: "Film",
-    year: "2025",
-    projectType: "Short Film",
-    duration: "12 min",
-    coverLabel: "Director / Editor / Color",
-    coverPalette: ["#1a1613", "#68493c", "#d4b493"],
-    teaser: "A mood-driven short film balancing cinematic pacing, urban observation, and a restrained color arc.",
-    summary:
-      "A short film project built to explore atmosphere, memory, and visual rhythm through a compact production pipeline spanning direction, editing, and finishing.",
-    roles: ["Director", "Editor", "Color"],
-    highlights: [
-      "Built a cohesive visual language from production planning through final grade.",
-      "Packaged for festival-style screening, trailer use, and portfolio review."
-    ],
-    externalLinks: [
-      { label: "Watch Teaser", href: "https://example.com/afterimage-city" },
-      { label: "Production Notes", href: "https://example.com/afterimage-notes" }
-    ],
-    media: [
-      {
-        type: "video",
-        title: "Trailer Cut",
-        description: "A short teaser edit used to establish tone and pacing for review."
-      },
-      {
-        type: "image",
-        title: "Frame Sequence",
-        description: "Selected stills focused on contrast, texture, and nighttime composition."
-      },
-      {
-        type: "pdf",
-        title: "Lookbook",
-        description: "A visual reference deck for aesthetic alignment and scene continuity."
-      }
-    ]
-  },
-  {
-    slug: "signal-relay",
-    title: "Signal Relay",
-    code: "[CLIENT-02]",
-    posterWord: "RELAY",
-    category: "Client Work",
-    year: "2024",
-    projectType: "Campaign Content Suite",
-    duration: "Multi-format",
-    coverLabel: "Editor / Motion / ContentOps",
-    coverPalette: ["#14181d", "#35536e", "#d5dfeb"],
-    teaser: "A platform-aware campaign package designed for speed, consistency, and repeatable content production.",
-    summary:
-      "A client-facing campaign system built to turn a single shoot into a flexible package of edits, cutdowns, and reusable graphic assets.",
-    roles: ["Editor", "Motion Design", "ContentOps"],
-    highlights: [
-      "Structured deliverables for web, social, and presentation contexts from one source production.",
-      "Reduced editorial turnaround by defining repeatable asset formats and naming logic."
-    ],
-    externalLinks: [
-      { label: "Campaign Overview", href: "https://example.com/signal-relay" }
-    ],
-    media: [
-      {
-        type: "video",
-        title: "Launch Cut",
-        description: "Primary campaign edit designed for web and presentation release."
-      },
-      {
-        type: "image",
-        title: "Social Frames",
-        description: "Graphic and still-frame system for cross-platform adaptation."
-      }
-    ]
-  },
-  {
-    slug: "fragments-of-arrival",
-    title: "Fragments of Arrival",
-    code: "[RESEARCH-03]",
-    posterWord: "FRAGMENTS",
-    category: "Research",
-    year: "2025",
-    projectType: "Research-led Visual Essay",
-    duration: "Essay series",
-    coverLabel: "Research / Editing / Design",
-    coverPalette: ["#1f1f1b", "#6d695d", "#d6d0c1"],
-    teaser: "A visual essay connecting migration, media memory, and cross-cultural narrative framing.",
-    summary:
-      "A research-oriented project that combines writing, image sequencing, and motion fragments to communicate ideas in a more publicly legible format.",
-    roles: ["Research", "Editor", "Graphic Design"],
-    highlights: [
-      "Bridges research language and public-facing visual storytelling.",
-      "Designed for both academic-adjacent context and broader online publication."
-    ],
-    externalLinks: [
-      { label: "Read Essay", href: "https://example.com/fragments" }
-    ],
-    media: [
-      {
-        type: "pdf",
-        title: "Essay Draft",
-        description: "A designed reading version with image-led pacing and annotations."
-      },
-      {
-        type: "image",
-        title: "Research Boards",
-        description: "Reference boards connecting visual motifs, citations, and sequence ideas."
-      }
-    ]
-  },
-  {
-    slug: "synthetic-streets",
-    title: "Synthetic Streets",
-    code: "[EXP-04]",
-    posterWord: "SYNTHETIC",
-    category: "Experimental",
-    year: "2026",
-    projectType: "AI Image Experiment",
-    duration: "Ongoing",
-    coverLabel: "Prompt Design / Curation / Edit",
-    coverPalette: ["#120f16", "#5b435f", "#ceb7cb"],
-    teaser: "An AI-assisted image series testing mood, control, and authored world-building in urban scenes.",
-    summary:
-      "An experimental project exploring how AI-assisted image workflows can support ideation and aesthetic iteration without flattening authorship.",
-    roles: ["Prompt Design", "Curation", "Edit"],
-    highlights: [
-      "Tests workflow boundaries rather than treating AI output as a finished artifact.",
-      "Creates a reusable process for mood studies, pitch imagery, and concept development."
-    ],
-    externalLinks: [
-      { label: "Experiment Log", href: "https://example.com/synthetic-streets" }
-    ],
-    media: [
-      {
-        type: "image",
-        title: "Scene Set",
-        description: "A sequence of curated images ordered by tone, recurrence, and editorial contrast."
-      },
-      {
-        type: "pdf",
-        title: "Workflow Notes",
-        description: "Process notes covering prompting, selection criteria, and post-editing decisions."
-      }
-    ]
-  },
-  {
-    slug: "monochrome-signal",
-    title: "Monochrome Signal",
-    code: "[DESIGN-05]",
-    posterWord: "MONOCHROME",
+    slug: "beaty-biodiversity-museum-annual-report-2022-2023",
+    title: "Beaty Biodiversity Museum Annual Report 2022-2023",
+    code: "[EDITORIAL-01]",
+    posterWord: "BEATY",
     category: "Design",
-    year: "2024",
-    projectType: "Brand System",
-    duration: "Identity package",
-    coverLabel: "Visual Identity / Layout / Motion",
-    coverPalette: ["#1d1c1b", "#6f564b", "#e6d7c8"],
-    teaser: "A restrained visual identity system built for consistency across decks, social, and motion assets.",
+    year: "2023",
+    projectType: "Annual Report",
+    duration: "Publication",
+    coverLabel: "Editorial Design / Report Layout",
+    coverPalette: ["#091520", "#173c58", "#d2e8ff"],
+    coverImage: "/legacy/Annual-Report.jpeg",
+    coverAlt: "Cover preview of the Beaty Biodiversity Museum annual report",
+    teaser: "An institutional annual report summarizing the museum's progress, translated into a clean visual publication.",
     summary:
-      "A brand design system focused on clarity, pacing, and visual restraint for a project that needed to look intentional across static and moving formats.",
-    roles: ["Graphic Design", "Art Direction", "Motion"],
+      "A report design project for the Beaty Biodiversity Museum that organizes institutional updates, visual material, and year-in-review information into a coherent publication.",
+    roles: ["Graphic Design", "Layout", "Publication Design"],
     highlights: [
-      "Created a scalable system rather than one-off graphics.",
-      "Designed to hold together across stills, title cards, and presentation contexts."
+      "Turned a dense institutional report into a more readable visual document.",
+      "Delivered in a web-friendly PDF format for public access."
     ],
     externalLinks: [
-      { label: "Design Case", href: "https://example.com/monochrome-signal" }
+      {
+        label: "Web Version",
+        href: "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
+      }
     ],
     media: [
       {
         type: "image",
-        title: "Identity Frames",
-        description: "Logotype, typographic hierarchy, and key layout applications."
+        title: "Cover Preview",
+        description: "A preview still from the final publication.",
+        src: "/legacy/Annual-Report.jpeg",
+        href: "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
+      },
+      {
+        type: "pdf",
+        title: "Published PDF",
+        description: "The distributed report file.",
+        src: "/legacy/Portfolio_print.pdf",
+        href: "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
+      }
+    ]
+  },
+  {
+    slug: "transcending-barriers",
+    title: 'Transcending Barriers: Viewing Practices of "Games of Thrones" in China, India, and Russia',
+    code: "[RESEARCH-02]",
+    posterWord: "BARRIERS",
+    category: "Research",
+    year: "2024",
+    projectType: "Published Article",
+    duration: "Beacon Journal Vol. 5",
+    coverLabel: "Research / Publication",
+    coverPalette: ["#121515", "#46595b", "#dfe9ea"],
+    coverImage: "/legacy/Transcending_Barriers.png",
+    coverAlt: "Article cover for Transcending Barriers publication",
+    teaser: "A published piece on transnational viewing practices and media circulation.",
+    summary:
+      "A publication in Beacon: Journal of Media Studies examining how audiences in China, India, and Russia engaged with Game of Thrones across different media environments.",
+    roles: ["Research", "Writing", "Publication"],
+    highlights: [
+      "Published in Beacon: Journal of Media Studies, Vol. 5 (2024).",
+      "Bridges academic research and publicly readable media analysis."
+    ],
+    externalLinks: [
+      {
+        label: "Read Online",
+        href: "https://beaconjournal.arts.ubc.ca/transcending-barriers-viewing-practices-of-games-of-thrones-in-china-india-and-russia/"
+      }
+    ],
+    media: [
+      {
+        type: "image",
+        title: "Article Artwork",
+        description: "Lead image used to represent the publication.",
+        src: "/legacy/Transcending_Barriers.png",
+        href: "https://beaconjournal.arts.ubc.ca/transcending-barriers-viewing-practices-of-games-of-thrones-in-china-india-and-russia/"
+      }
+    ]
+  },
+  {
+    slug: "davids-blog",
+    title: "David's Blog",
+    code: "[WEB-03]",
+    posterWord: "BLOG",
+    category: "Web",
+    year: "2024",
+    projectType: "Website",
+    duration: "Live Site",
+    coverLabel: "Web / NotionNext / Next.js",
+    coverPalette: ["#0d1319", "#25465d", "#d0f0ff"],
+    coverImage: "/legacy/blog.png",
+    coverAlt: "Screenshot of David's blog homepage",
+    teaser: "A blog deployed on Vercel using NotionNext and the Notion API.",
+    summary:
+      "A personal publishing site that uses NotionNext as a static blogging system, combining Next.js with the Notion API for a flexible content workflow.",
+    roles: ["Web", "Design", "Content System"],
+    highlights: [
+      "Published as a live site on Vercel.",
+      "Built on a structured content system rather than a hand-authored static page."
+    ],
+    externalLinks: [
+      { label: "See Live", href: "https://blog.davidweng.eu.org" },
+      { label: "Source Code", href: "https://github.com/thedavidweng/NotionNext" }
+    ],
+    media: [
+      {
+        type: "image",
+        title: "Homepage Screenshot",
+        description: "A snapshot of the live blog interface.",
+        src: "/legacy/blog.png",
+        href: "https://blog.davidweng.eu.org"
+      }
+    ]
+  },
+  {
+    slug: "fraud",
+    title: "FRAÜD",
+    code: "[FILM-04]",
+    posterWord: "FRAUD",
+    category: "Film",
+    year: "2024",
+    projectType: "Narrative Film",
+    duration: "Festival / Listing",
+    coverLabel: "Film / Narrative",
+    coverPalette: ["#140f12", "#5f2533", "#f0d6d0"],
+    coverImage: "/legacy/fraud.jpg",
+    coverAlt: "Poster art for FRAÜD",
+    teaser: "A film about fraud among international students.",
+    summary:
+      "A narrative film project centered on fraud and pressure among international students, presented with public-facing listings and festival-ready materials.",
+    roles: ["Film", "Production", "Promotion"],
+    highlights: [
+      "Listed on IMDb and Douban.",
+      "Packaged with poster artwork and external festival-facing presence."
+    ],
+    externalLinks: [
+      { label: "IMDb", href: "https://www.imdb.com/title/tt32035504/" },
+      { label: "Douban", href: "https://movie.douban.com/subject/36934977/" },
+      { label: "FilmFreeway", href: "https://filmfreeway.com/fraudmovie" }
+    ],
+    media: [
+      {
+        type: "image",
+        title: "Poster Artwork",
+        description: "Primary key art used to represent the film.",
+        src: "/legacy/fraud.jpg",
+        href: "https://filmfreeway.com/fraudmovie"
+      }
+    ]
+  },
+  {
+    slug: "the-pills",
+    title: "The Pills",
+    code: "[FILM-05]",
+    posterWord: "PILLS",
+    category: "Film",
+    year: "2023",
+    projectType: "Horror Microfilm",
+    duration: "Trailer / Festival",
+    coverLabel: "Microfilm / Horror",
+    coverPalette: ["#0e0e10", "#60313e", "#f1d5db"],
+    coverImage: "/legacy/The_Pills.jpg",
+    coverAlt: "Poster for The Pills horror microfilm",
+    teaser: "A horror microfilm inspired by the Scream series.",
+    summary:
+      "A short horror microfilm project with a public FilmFreeway entry and launch trailer, developed around genre mood and compact visual storytelling.",
+    roles: ["Film", "Editing", "Promotion"],
+    highlights: [
+      "Distributed with both festival-facing and trailer-facing materials.",
+      "Anchored in a strong genre reference point with a distinct horror tone."
+    ],
+    externalLinks: [
+      { label: "FilmFreeway", href: "https://filmfreeway.com/thepills2023" },
+      { label: "Launch Trailer", href: "https://youtu.be/J0LGfoZQ-0Q" }
+    ],
+    media: [
+      {
+        type: "image",
+        title: "Poster Artwork",
+        description: "Key art used for the public-facing film page.",
+        src: "/legacy/The_Pills.jpg",
+        href: "https://filmfreeway.com/thepills2023"
       },
       {
         type: "video",
-        title: "Motion Tests",
-        description: "Short motion studies translating the identity system into animated transitions."
+        title: "Trailer Link",
+        description: "Launch trailer for the project.",
+        href: "https://youtu.be/J0LGfoZQ-0Q"
+      }
+    ]
+  },
+  {
+    slug: "persona-5-style-campaign-video",
+    title: "Persona 5 Style Campaign Video",
+    code: "[CAMPAIGN-06]",
+    posterWord: "P5",
+    category: "Client Work",
+    year: "2023",
+    projectType: "Campaign Video",
+    duration: "Social / YouTube",
+    coverLabel: "Campaign / Video Editing",
+    coverPalette: ["#0d0d0f", "#8f1e27", "#f4dad6"],
+    coverImage: "/legacy/P5_Resume.jpg",
+    coverAlt: "Persona 5 style campaign video still",
+    teaser: "A stylized election campaign video for UBC CSSA 2023, drawing on Persona 5 aesthetics.",
+    summary:
+      "A campaign video project produced for the UBC CSSA 2023 General Election, using a strong visual reference style to deliver a more distinctive social-first piece.",
+    roles: ["Video Editing", "Graphic Design", "Campaign Content"],
+    highlights: [
+      "Adapted an instantly recognizable style into a campaign context.",
+      "Published across both YouTube and Bilibili."
+    ],
+    externalLinks: [
+      { label: "Watch on YouTube", href: "https://youtu.be/kdPPnUPtH-E" },
+      { label: "Watch on BiliBili", href: "https://www.bilibili.com/video/BV1uL411S7Da/" }
+    ],
+    media: [
+      {
+        type: "image",
+        title: "Campaign Still",
+        description: "A still frame representing the campaign's graphic language.",
+        src: "/legacy/P5_Resume.jpg",
+        href: "https://youtu.be/kdPPnUPtH-E"
+      }
+    ]
+  },
+  {
+    slug: "project-race",
+    title: "Project Race",
+    code: "[FILM-07]",
+    posterWord: "RACE",
+    category: "Film",
+    year: "2023",
+    projectType: "Toy Car Race Short",
+    duration: "Short Video",
+    coverLabel: "Short / Experimental Play",
+    coverPalette: ["#101216", "#1b3d67", "#dce9fa"],
+    coverImage: "/legacy/Project_Race.jpg",
+    coverAlt: "Frame from Project Race toy car race short",
+    teaser: "A toy car race short built around miniature motion, pace, and playful visual construction.",
+    summary:
+      "A compact short-form video project built around a toy car race concept, emphasizing movement, playful framing, and accessible web distribution.",
+    roles: ["Video Editing", "Short-form Production"],
+    highlights: [
+      "Published on both YouTube and Bilibili.",
+      "Shows hands-on experimentation with pace, framing, and miniature action."
+    ],
+    externalLinks: [
+      { label: "Watch on YouTube", href: "https://youtu.be/i64iXe_CPfw/" },
+      { label: "Watch on BiliBili", href: "https://www.bilibili.com/video/BV1PM411q7hA/" }
+    ],
+    media: [
+      {
+        type: "image",
+        title: "Project Still",
+        description: "Representative frame from the short.",
+        src: "/legacy/Project_Race.jpg",
+        href: "https://youtu.be/i64iXe_CPfw/"
       }
     ]
   }

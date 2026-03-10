@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { heroContent, siteIdentity } from "@/content/site";
 
@@ -10,28 +11,31 @@ export function HeroSection() {
           <div className="hero__grid">
             <div className="hero__content">
               <p className="hero__eyebrow">{heroContent.kicker}</p>
-              <h1
-                aria-label={heroContent.headline}
-                className="hero__title"
-              >
-                <span>CUT MOTION.</span>
-                <span>FRAME STILLS.</span>
-                <span>BUILD SIGNAL.</span>
+              <h1 aria-label={heroContent.headline} className="hero__title">
+                {heroContent.headline}
               </h1>
               <p className="hero__lede">{heroContent.support}</p>
               <p className="hero__support">{heroContent.supportSecondary}</p>
+              <dl className="hero__stats">
+                {heroContent.stats.map((item) => (
+                  <div key={item.label} className="hero__stat">
+                    <dt>{item.label}</dt>
+                    <dd>{item.value}</dd>
+                  </div>
+                ))}
+              </dl>
               <div className="hero__actions">
                 <Link className="button button--signal" href="#projects">
-                  Enter Selected Work
+                  {heroContent.primaryCta}
                 </Link>
-                <Link className="button button--ghost" href="#contact">
-                  Open Contact
+                <Link className="button button--ghost" href="/legacy/resume.pdf">
+                  {heroContent.secondaryCta}
                 </Link>
               </div>
             </div>
             <div className="hero__rail">
               <div className="hero__rail-head">
-                <span className="hero__rail-label">Poster-first portfolio</span>
+                <span className="hero__rail-label">Current focus</span>
                 <span className="hero__rail-code">[ 2026 EDITION ]</span>
               </div>
               <div className="hero__roles" aria-label="Professional roles">
@@ -40,7 +44,17 @@ export function HeroSection() {
                 ))}
               </div>
               <div className="hero__visual">
-                <div className="hero__visual-main">
+                <div className="hero__visual-main hero__visual-main--image">
+                  <Image
+                    alt="Portrait of David Weng"
+                    className="hero__portrait"
+                    fill
+                    priority
+                    sizes="(max-width: 1120px) 100vw, 34vw"
+                    src={heroContent.profileImage}
+                  />
+                </div>
+                <div className="hero__visual-main hero__visual-main--copy">
                   <strong>{heroContent.visualHeadline}</strong>
                   <span>{heroContent.visualCaption}</span>
                 </div>
@@ -54,13 +68,6 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="hero__ticker" aria-hidden="true">
-            <span>VIDEO EDITING</span>
-            <span>PHOTOGRAPHY</span>
-            <span>GRAPHIC DESIGN</span>
-            <span>CONTENTOPS</span>
-            <span>AI-INTEGRATED WORKFLOWS</span>
           </div>
         </div>
       </Container>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { projects, projectSectionContent } from "@/content/projects";
 
@@ -9,6 +9,7 @@ const categories = ["All", ...new Set(projects.map((project) => project.category
 
 export function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const reelRef = useRef<HTMLDivElement>(null);
 
   const visibleProjects = useMemo(() => {
     if (activeCategory === "All") {
@@ -17,6 +18,21 @@ export function ProjectsSection() {
 
     return projects.filter((project) => project.category === activeCategory);
   }, [activeCategory]);
+
+  function scrollReel(direction: "next" | "previous") {
+    const reel = reelRef.current;
+    if (!reel) {
+      return;
+    }
+
+    const card = reel.querySelector<HTMLElement>(".project-card");
+    const amount = (card?.clientWidth ?? 360) + 16;
+
+    reel.scrollBy({
+      left: direction === "next" ? amount : -amount,
+      behavior: "smooth"
+    });
+  }
 
   return (
     <section className="section-shell" id="projects">
@@ -39,7 +55,25 @@ export function ProjectsSection() {
               </button>
             ))}
           </div>
-          <div className="projects__grid">
+          <div className="projects__reel-controls">
+            <button
+              aria-label="Previous projects"
+              className="reel-nav"
+              onClick={() => scrollReel("previous")}
+              type="button"
+            >
+              Prev
+            </button>
+            <button
+              aria-label="Next projects"
+              className="reel-nav"
+              onClick={() => scrollReel("next")}
+              type="button"
+            >
+              Next
+            </button>
+          </div>
+          <div className="projects__reel" ref={reelRef}>
             {visibleProjects.map((project) => (
               <Link
                 key={project.slug}
@@ -47,7 +81,7 @@ export function ProjectsSection() {
                 className="project-card signal-panel"
                 href={`/projects/${project.slug}`}
                 style={{
-                  ["--project-cover" as string]: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`
+                  ["--project-cover" as string]: `linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.8)), url(${project.coverImage}), linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`
                 }}
               >
                 <div aria-hidden="true" className="project-card__word">

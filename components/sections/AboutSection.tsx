@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { aboutContent } from "@/content/site";
 
@@ -20,10 +21,21 @@ export function AboutSection() {
               <Link className="button button--ghost" href={aboutContent.cvHref}>
                 View CV
               </Link>
+              <Link className="button button--signal" href={aboutContent.portfolioHref}>
+                View Portfolio
+              </Link>
             </div>
           </div>
           <div className="about__rail">
             <p className="poster-section__eyebrow">Practice Focus</p>
+            <div className="about__portrait">
+              <Image
+                alt="Portrait of David Weng"
+                fill
+                sizes="(max-width: 1120px) 100vw, 28vw"
+                src={aboutContent.profileImage}
+              />
+            </div>
             <div className="about__stats">
               {aboutContent.stats.map((stat) => (
                 <div key={stat.label} className="about__stat">
