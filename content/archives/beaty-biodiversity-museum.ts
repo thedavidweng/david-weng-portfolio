@@ -28,5 +28,11 @@ beatyBiodiversityMuseumArchive.items = [
     ),
     publishedUrl: "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf",
     order: 10
+  },
+  {
+    file: "report/legacy-annual-report.jpeg",
+    kind: "report",
+    hidden: true,
+    notes: "Legacy duplicate kept on disk for reference, but excluded from the public archive page."
   }
 ];

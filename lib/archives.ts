@@ -13,8 +13,8 @@ export function getArchiveFilePath(group: ArchiveGroup, file: string) {
 
 export function getArchiveCoverItem(collection: ArchiveCollection) {
   return (
-    collection.items.find((item) => item.kind === "cover" && item.featured) ??
-    collection.items.find((item) => item.kind === "cover")
+    collection.items.find((item) => item.kind === "cover" && item.featured && !item.hidden) ??
+    collection.items.find((item) => item.kind === "cover" && !item.hidden)
   );
 }
 
@@ -24,7 +24,7 @@ export function getArchiveItemSource(group: ArchiveGroup, item: ArchiveItem) {
 
 export function archiveItemsToProjectMedia(collection: ArchiveCollection): ProjectMediaItem[] {
   return collection.items
-    .filter((item) => item.kind !== "cover")
+    .filter((item) => item.kind !== "cover" && !item.hidden)
     .sort((left, right) => (left.order ?? Number.MAX_SAFE_INTEGER) - (right.order ?? Number.MAX_SAFE_INTEGER))
     .map((item) => ({
       type: "image",

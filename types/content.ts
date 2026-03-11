@@ -85,6 +85,7 @@ export type ArchiveItem = {
   publishedUrl?: string;
   credit?: ExternalLink;
   featured?: boolean;
+  hidden?: boolean;
   order?: number;
   notes?: string;
 };

@@ -35,3 +35,19 @@ test("hydrates archive-backed project media with image dimensions for rows layou
     expect(item.src.startsWith("/projects/bc-ai-ecosystem/")).toBe(true);
   });
 });
+
+test("beaty archive keeps only the linked annual report item in project media", () => {
+  const project = getProjectBySlug("beaty-biodiversity-museum-annual-report-2022-2023");
+
+  if (!project) {
+    throw new Error("Expected Beaty project to exist");
+  }
+
+  const imageItems = project.media.filter((item) => item.type === "image");
+
+  expect(imageItems).toHaveLength(1);
+  expect(imageItems[0]?.title.en).toBe("Beaty annual report archive spread");
+  expect(imageItems[0]?.href).toBe(
+    "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
+  );
+});

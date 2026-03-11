@@ -66,6 +66,7 @@ export function scanArchiveItemsFromDirectory(directory: string, collection: Arc
         publishedUrl: override?.publishedUrl,
         credit: override?.credit ?? collection.defaultCredits?.[kind],
         featured: override?.featured,
+        hidden: override?.hidden,
         order: override?.order,
         notes: override?.notes
       });
