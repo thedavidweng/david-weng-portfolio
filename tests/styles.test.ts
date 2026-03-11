@@ -27,3 +27,13 @@ test("archive media hover keeps the bottom shadow aligned with the image scale",
   expect(css).toContain("transform: translateY(0) scale(var(--archive-media-hover-scale));");
   expect(css).toContain("transform: scale(var(--archive-media-hover-scale));");
 });
+
+test("project hero content stays layered above the cover panel", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const contentBlock = css.match(/\.project-hero__content\s*\{[^}]+\}/)?.[0] ?? "";
+  const coverBlock = css.match(/\.project-hero__cover\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(contentBlock).toContain("position: relative;");
+  expect(contentBlock).toContain("z-index: 1;");
+  expect(coverBlock).toContain("z-index: 0;");
+});
