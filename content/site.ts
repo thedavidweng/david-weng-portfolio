@@ -173,7 +173,7 @@ export const contactContent = {
       title: localized("Freelance Editing", "自由剪辑合作"),
       copy: localized(
         "Short-form video, campaign assets, event recap, and social-first storytelling.",
-        "短视频、campaign 素材、活动 recap 与面向社交平台的叙事内容。"
+        "短视频、活动花絮、宣传物料和社交平台内容的策划与制作。"
       )
     },
     {
