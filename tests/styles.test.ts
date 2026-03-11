@@ -37,3 +37,14 @@ test("project hero content stays layered above the cover panel", () => {
   expect(contentBlock).toContain("z-index: 1;");
   expect(coverBlock).toContain("z-index: 0;");
 });
+
+test("external handoff titles use article-scale typography instead of poster styling", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const externalTitleBlock = css.match(/\.project-page--external-handoff \.project-hero__title\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(externalTitleBlock).toContain("max-width: 14ch;");
+  expect(externalTitleBlock).toContain("font-size: clamp(2.4rem, 4.8vw, 4.4rem);");
+  expect(externalTitleBlock).toContain("line-height: 1;");
+  expect(externalTitleBlock).toContain("letter-spacing: -0.01em;");
+  expect(externalTitleBlock).toContain("text-transform: none;");
+});

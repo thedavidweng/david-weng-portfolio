@@ -14,7 +14,8 @@ export const siteIdentity = {
 export const navigationItems = [
   { label: localized("What I Do", "能力"), href: "#services" },
   { label: localized("Projects", "项目"), href: "#projects" },
-  { label: localized("Contact", "联系"), href: "#contact" }
+  { label: localized("Contact", "联系"), href: "#contact" },
+  { label: localized("Blog", "博客"), href: "https://blog.davidweng.eu.org/" }
 ];
 
 export const heroContent = {

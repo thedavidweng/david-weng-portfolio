@@ -1273,7 +1273,9 @@ main {
 .project-hero__content--external-handoff {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 0.4rem 1.25rem 0.4rem 0;
 }
 
 .project-hero__content--title-only {
@@ -1310,15 +1312,21 @@ main {
   gap: 0.9rem;
   align-content: end;
   min-height: 100%;
+  padding: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01)),
+    rgba(10, 10, 12, 0.82);
 }
 
 .project-handoff__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.4vw, 2.4rem);
-  line-height: 0.95;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: clamp(1.45rem, 2vw, 2.1rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .project-handoff__copy {
@@ -1347,6 +1355,40 @@ main {
   line-height: 0.85;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.project-hero__article-eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.project-hero__publication {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-page--external-handoff .project-hero__title {
+  max-width: 14ch;
+  font-size: clamp(2.4rem, 4.8vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.project-page--external-handoff .project-hero__summary {
+  max-width: 42rem;
+  margin-top: 0;
+}
+
+.project-page--external-handoff .project-hero__roles {
+  margin-top: 0;
+  color: var(--text-soft);
 }
 
 .project-hero__summary {
@@ -1633,31 +1675,6 @@ main {
   border: 0;
 }
 
-.project-video-stage__support {
-  display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
-  gap: 1rem;
-  align-items: center;
-}
-
-.project-video-stage__support-copy {
-  display: grid;
-  gap: 0.65rem;
-}
-
-.project-video-stage__support-copy p:last-child {
-  margin: 0;
-  color: var(--text-soft);
-  line-height: 1.7;
-}
-
-.project-video-stage__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.7rem;
-}
-
 .project-media__image {
   position: relative;
   min-height: 180px;
@@ -1736,14 +1753,6 @@ main {
 
   .project-media__card--landscape {
     grid-column: span 2;
-  }
-
-  .project-video-stage__support {
-    grid-template-columns: 1fr;
-  }
-
-  .project-video-stage__links {
-    justify-content: flex-start;
   }
 
   .hero__content,

@@ -85,6 +85,9 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                 <div
                   className={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
                 >
+                  {isExternalHandoff ? (
+                    <p className="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
+                  ) : null}
                   <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
                   {!isTitleOnly && !isExternalHandoff ? (
                     <>
@@ -109,10 +112,11 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                   ) : null}
                   {isExternalHandoff ? (
                     <>
-                      <p className="project-hero__summary">{projectLabel(project.summary, locale)}</p>
-                      <p className="project-hero__roles">
-                        {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
+                      <p className="project-hero__publication">
+                        {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
                       </p>
+                      <p className="project-hero__summary">{projectLabel(project.summary, locale)}</p>
+                      <p className="project-hero__roles">{project.roles[locale].join(" / ")}</p>
                     </>
                   ) : null}
                 </div>
@@ -192,25 +196,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                   />
                 </div>
               ) : null}
-              <div className="project-video-stage__support signal-panel">
-                <div className="project-video-stage__support-copy">
-                  <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.releaseLinksEyebrow, locale)}</p>
-                  <p>{projectLabel(projectDetailContent.releaseLinksCopy, locale)}</p>
-                </div>
-                <div className="project-video-stage__links">
-                  {project.externalLinks.map((link) => (
-                    <a
-                      key={link.label.en}
-                      className="button button--ghost"
-                      href={link.href}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {projectLabel(link.label, locale)}
-                    </a>
-                  ))}
-                </div>
-              </div>
             </Container>
           </section>
         ) : null}

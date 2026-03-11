@@ -29,6 +29,7 @@ export const projectDetailContent = {
     "Opens the published article on an external site.",
     "将打开外部站点上的已发布文章。"
   ),
+  publicationLabel: localized("Published in", "发表于"),
   externalDestinationLabel: localized("Destination", "访问目标"),
   materialsEyebrow: localized("Project Materials", "项目材料"),
   materialsTitle: localized("Archives", "档案墙"),
@@ -36,12 +37,7 @@ export const projectDetailContent = {
   previewLabel: localized("Preview", "预览"),
   previewDialogLabel: localized("Image preview", "图片预览"),
   closePreviewLabel: localized("Close preview", "关闭预览"),
-  openResourceLabel: localized("Open resource", "打开资源"),
-  releaseLinksEyebrow: localized("Available on", "发布平台"),
-  releaseLinksCopy: localized(
-    "Where the work is published, listed, or available to view outside this site.",
-    "该作品在站外的发布平台、条目页面与观看入口。"
-  )
+  openResourceLabel: localized("Open resource", "打开资源")
 };
 
 const beatyCover = getArchiveCoverItem(beatyBiodiversityMuseumArchive);
@@ -126,49 +122,6 @@ export const projects: ProjectItem[] = [
       }
     ],
     media: []
-  },
-  {
-    slug: "davids-blog",
-    title: localized("David's Blog", "David's Blog"),
-    code: "[WEB-03]",
-    posterWord: "BLOG",
-    category: localized("Web", "网站"),
-    year: "2024",
-    projectType: localized("Website", "网站"),
-    duration: localized("Live Site", "在线站点"),
-    coverLabel: localized("Web / NotionNext / Next.js", "网站 / NotionNext / Next.js"),
-    coverPalette: ["#0d1319", "#25465d", "#d0f0ff"],
-    coverImage: "/projects/davids-blog/cover.png",
-    coverAlt: localized("Screenshot of David's blog homepage", "David 博客首页截图"),
-    teaser: localized(
-      "Blog deployed on Vercel with NotionNext and the Notion API.",
-      "基于 NotionNext 与 Notion API、部署在 Vercel 上的博客系统。"
-    ),
-    summary: localized(
-      "Personal publishing site using NotionNext as a static blogging system, combining Next.js with the Notion API for a flexible content workflow.",
-      "使用 NotionNext 作为静态博客系统的个人发布网站，将 Next.js 与 Notion API 结合，形成更灵活的内容工作流。"
-    ),
-    roles: localized(["Web", "Design", "Content operations"], ["网站开发", "设计", "内容运营"]),
-    highlights: localized(
-      [
-        "Published as a live site on Vercel.",
-        "Built on a structured content operations workflow rather than a hand-authored static page."
-      ],
-      ["已作为在线站点发布在 Vercel 上。", "建立在结构化内容运营流程之上，而不是手工维护的静态页面。"]
-    ),
-    externalLinks: [
-      { label: localized("See Live", "查看网站"), href: "https://blog.davidweng.eu.org" },
-      { label: localized("Source Code", "源代码"), href: "https://github.com/thedavidweng/NotionNext" }
-    ],
-    media: [
-      {
-        type: "image",
-        title: localized("Homepage Screenshot", "首页截图"),
-        description: localized("Snapshot of the live blog interface.", "在线博客界面的截图。"),
-        src: "/projects/davids-blog/cover.png",
-        href: "https://blog.davidweng.eu.org"
-      }
-    ]
   },
   {
     slug: "fraud",

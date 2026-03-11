@@ -37,6 +37,8 @@ test("renders video-first detail pages with embedded players and no repeated sti
   expect(screen.getByTitle(/The Pills/i)).toHaveAttribute("src", expect.stringContaining("/embed/J0LGfoZQ-0Q"));
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
+  expect(screen.queryByText(/^Available on$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/Where the work is published, listed, or available to view outside this site\./i)).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /Poster Artwork/i })).not.toBeInTheDocument();
   expect(screen.getAllByRole("link", { name: /FilmFreeway/i }).length).toBeGreaterThan(0);
   unmount();
@@ -56,6 +58,7 @@ test("renders video-first detail pages with embedded players and no repeated sti
   expect(screen.queryByRole("heading", { name: /Campaign Still/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
+  expect(screen.queryByText(/^Available on$/i)).not.toBeInTheDocument();
 });
 
 test("renders non-YouTube film projects as release-info pages without generic case-study blocks", () => {
@@ -69,6 +72,7 @@ test("renders non-YouTube film projects as release-info pages without generic ca
 
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
+  expect(screen.queryByText(/^Available on$/i)).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /Poster Artwork/i })).not.toBeInTheDocument();
   expect(screen.queryByTitle(/FRAÜD/i)).not.toBeInTheDocument();
   expect(screen.getAllByRole("link", { name: /IMDb/i }).length).toBeGreaterThan(0);
@@ -89,6 +93,7 @@ test("renders article projects as branded handoff pages to the published Beacon 
   expect(screen.getByRole("heading", { name: /Transcending Barriers/i })).toBeInTheDocument();
   expect(container.querySelector(".project-page--external-handoff")).toBeTruthy();
   expect(container.querySelector(".project-hero__cover")).toBeFalsy();
+  expect(screen.getByText(/Published in Beacon: Journal of Media Studies/i)).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^Beacon: Journal of Media Studies$/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {

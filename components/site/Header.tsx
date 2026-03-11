@@ -13,6 +13,7 @@ export function Header({ locale, pathname }: HeaderProps) {
   const homePath = getLocaleHomePath(locale);
   const switchLabel = getLocalizedText(footerContent.languageLabel, locale);
   const switchHref = toLocalePath(pathname, locale === "en" ? "zh" : "en");
+  const resolveNavHref = (href: string) => (href.startsWith("http") ? href : `${homePath}${href}`);
 
   return (
     <header className="site-header">
@@ -30,7 +31,7 @@ export function Header({ locale, pathname }: HeaderProps) {
               <Link
                 key={item.href}
                 className="signal-control signal-control--nav"
-                href={`${homePath}${item.href}`}
+                href={resolveNavHref(item.href)}
               >
                 {getLocalizedText(item.label, locale)}
               </Link>

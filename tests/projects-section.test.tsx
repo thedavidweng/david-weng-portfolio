@@ -77,6 +77,15 @@ test("renders a responsive reel with legacy project content and filtering contro
       name: /open project designs for theupgrade\.ai/i
     })
   ).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /^all$/i })).toBeInTheDocument();
+
+  await user.click(screen.getByRole("button", { name: /^all$/i }));
+
+  expect(
+    screen.queryByRole("link", {
+      name: /open project david's blog/i
+    })
+  ).not.toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /research/i }));
 
@@ -97,11 +106,17 @@ test("renders localized labels and links in chinese", () => {
   expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /上一组项目/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
       name: /open project designs for beaty biodiversity museum/i
     })
   ).toHaveAttribute("href", "/zh/projects/beaty-biodiversity-museum-annual-report-2022-2023");
+  expect(
+    screen.queryByRole("link", {
+      name: /open project david's blog/i
+    })
+  ).not.toBeInTheDocument();
   expect(
     screen.queryByRole("link", {
       name: /open project transcending barriers/i
