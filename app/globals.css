@@ -1451,6 +1451,7 @@ main {
   padding: 0;
   border: 0;
   background: #080808;
+  overflow: hidden;
   cursor: zoom-in;
 }
 
