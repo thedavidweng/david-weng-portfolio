@@ -1,6 +1,6 @@
 # David Weng Portfolio
 
-A GitHub-ready portfolio site for David Weng, focused on visual storytelling, design, content systems, and AI-integrated creative workflows.
+Portfolio site for David Weng, focused on visual storytelling, design, content operations, and AI-integrated creative workflows.
 
 ## Stack
 
@@ -23,7 +23,3 @@ npm test
 npm run lint
 npm run build
 ```
-
-## Content Status
-
-The current project data, outbound links, and resume/CV targets are seeded with placeholder content so the site structure can be reviewed before final assets are added.

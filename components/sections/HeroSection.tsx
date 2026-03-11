@@ -1,71 +1,57 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/layout/Container";
-import { heroContent, siteIdentity } from "@/content/site";
+import { ServiceCard } from "@/components/cards/ServiceCard";
+import { aboutContent, heroContent, servicesContent, siteIdentity } from "@/content/site";
+import { getLocalizedText } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
 
-export function HeroSection() {
+type HeroSectionProps = {
+  locale: Locale;
+};
+
+export function HeroSection({ locale }: HeroSectionProps) {
   return (
-    <section className="hero section-shell" id="top">
+    <section className={`hero section-shell${locale === "zh" ? " hero--zh" : ""}`} id="top">
       <Container>
         <div className="hero__frame">
-          <div className="hero__grid">
-            <div className="hero__content">
-              <p className="hero__eyebrow">{heroContent.kicker}</p>
-              <h1 aria-label={heroContent.headline} className="hero__title">
-                {heroContent.headline}
+          <div className="hero__grid" id="services">
+            <div className="hero__content hero__content--compact">
+              <p className="hero__eyebrow">{getLocalizedText(heroContent.kicker, locale)}</p>
+              <h1 aria-label={getLocalizedText(heroContent.headline, locale)} className="hero__title">
+                {getLocalizedText(heroContent.headline, locale)}
               </h1>
-              <p className="hero__lede">{heroContent.support}</p>
-              <p className="hero__support">{heroContent.supportSecondary}</p>
-              <dl className="hero__stats">
-                {heroContent.stats.map((item) => (
-                  <div key={item.label} className="hero__stat">
-                    <dt>{item.label}</dt>
-                    <dd>{item.value}</dd>
-                  </div>
-                ))}
-              </dl>
-              <div className="hero__actions">
-                <Link className="button button--signal" href="#projects">
-                  {heroContent.primaryCta}
-                </Link>
-                <Link className="button button--ghost" href="/legacy/resume.pdf">
-                  {heroContent.secondaryCta}
-                </Link>
-              </div>
-            </div>
-            <div className="hero__rail">
-              <div className="hero__rail-head">
-                <span className="hero__rail-label">Current focus</span>
-                <span className="hero__rail-code">[ 2026 EDITION ]</span>
-              </div>
+              <p className="hero__lede">{getLocalizedText(heroContent.support, locale)}</p>
+              {getLocalizedText(heroContent.supportSecondary, locale) ? (
+                <p className="hero__support">{getLocalizedText(heroContent.supportSecondary, locale)}</p>
+              ) : null}
               <div className="hero__roles" aria-label="Professional roles">
-                {siteIdentity.roles.map((role) => (
+                {siteIdentity.roles[locale].map((role) => (
                   <span key={role}>{role}</span>
                 ))}
               </div>
-              <div className="hero__visual">
-                <div className="hero__visual-main hero__visual-main--image">
-                  <Image
-                    alt="Portrait of David Weng"
-                    className="hero__portrait"
-                    fill
-                    priority
-                    sizes="(max-width: 1120px) 100vw, 34vw"
-                    src={heroContent.profileImage}
-                  />
-                </div>
-                <div className="hero__visual-main hero__visual-main--copy">
-                  <strong>{heroContent.visualHeadline}</strong>
-                  <span>{heroContent.visualCaption}</span>
-                </div>
-                <div className="hero__visual-detail">
-                  {heroContent.visualNotes.map((note) => (
-                    <article key={note.title}>
-                      <strong>{note.title}</strong>
-                      <p>{note.copy}</p>
-                    </article>
-                  ))}
-                </div>
+              <div className="hero__actions">
+                <Link className="button button--signal" href="#projects">
+                  {getLocalizedText(heroContent.primaryCta, locale)}
+                </Link>
+                <Link className="button button--ghost" href={aboutContent.resumeHref}>
+                  {getLocalizedText(aboutContent.resumeLabel, locale)}
+                </Link>
+                <Link className="button button--ghost" href={aboutContent.portfolioHref}>
+                  {getLocalizedText(aboutContent.portfolioLabel, locale)}
+                </Link>
+              </div>
+            </div>
+            <div className="hero__capabilities">
+              {/* Capabilities live inside the hero on purpose: this keeps the first screen
+                  focused and uses the right column for scan-friendly proof instead of a separate section. */}
+              <div className="hero__capabilities-intro">
+                <p className="poster-section__eyebrow">{getLocalizedText(servicesContent.eyebrow, locale)}</p>
+                <p className="hero__capabilities-copy">{getLocalizedText(servicesContent.description, locale)}</p>
+              </div>
+              <div className={`services__grid${locale === "zh" ? " services__grid--zh" : ""}`}>
+                {servicesContent.items.map((service, index) => (
+                  <ServiceCard key={service.title.en} index={index} locale={locale} service={service} />
+                ))}
               </div>
             </div>
           </div>

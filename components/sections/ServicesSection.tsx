@@ -1,19 +1,25 @@
 import { Container } from "@/components/layout/Container";
 import { ServiceCard } from "@/components/cards/ServiceCard";
 import { servicesContent } from "@/content/site";
+import { getLocalizedText } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
 
-export function ServicesSection() {
+type ServicesSectionProps = {
+  locale: Locale;
+};
+
+export function ServicesSection({ locale }: ServicesSectionProps) {
   return (
-    <section className="section-shell" id="services">
+    <section className={`section-shell services${locale === "zh" ? " services--zh" : ""}`} id="services">
       <Container>
         <div className="poster-section__intro">
-          <p className="poster-section__eyebrow">{servicesContent.eyebrow}</p>
-          <h2 className="poster-section__title">{servicesContent.title}</h2>
-          <p className="poster-section__copy">{servicesContent.description}</p>
+          <p className="poster-section__eyebrow">{getLocalizedText(servicesContent.eyebrow, locale)}</p>
+          <h2 className="poster-section__title">{getLocalizedText(servicesContent.title, locale)}</h2>
+          <p className="poster-section__copy">{getLocalizedText(servicesContent.description, locale)}</p>
         </div>
-        <div className="services__grid">
+        <div className={`services__grid${locale === "zh" ? " services__grid--zh" : ""}`}>
           {servicesContent.items.map((service, index) => (
-            <ServiceCard key={service.title} index={index} service={service} />
+            <ServiceCard key={service.title.en} index={index} locale={locale} service={service} />
           ))}
         </div>
       </Container>

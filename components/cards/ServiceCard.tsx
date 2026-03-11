@@ -1,18 +1,19 @@
 import type { ServiceItem } from "@/types/content";
+import { getLocalizedText } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
 
 type ServiceCardProps = {
   index: number;
+  locale: Locale;
   service: ServiceItem;
 };
 
-export function ServiceCard({ index, service }: ServiceCardProps) {
+export function ServiceCard({ index, locale, service }: ServiceCardProps) {
   return (
-    <article className="service-card signal-panel" tabIndex={0}>
+    <article className={`service-card signal-panel${locale === "zh" ? " service-card--zh" : ""}`} tabIndex={0}>
       <span className="service-card__index">[{String(index + 1).padStart(2, "0")}]</span>
-      <h3 className="service-card__title">
-        <span>{service.title}</span>
-      </h3>
-      <p>{service.description}</p>
+      <h3 className="service-card__title">{getLocalizedText(service.title, locale)}</h3>
+      <p>{getLocalizedText(service.description, locale)}</p>
     </article>
   );
 }
