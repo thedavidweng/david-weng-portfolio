@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, IBM_Plex_Mono, Manrope } from "next/font/google";
+import { Playfair_Display, IBM_Plex_Mono, Manrope } from "next/font/google";
 import "react-photo-album/rows.css";
 import "./globals.css";
 
-const display = Bebas_Neue({
+const display = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: "400"
+  weight: ["400", "500", "600", "700"]
 });
 
 const body = Manrope({

@@ -1,8 +1,8 @@
 :root {
-  --font-display: "Bebas Neue", sans-serif;
+  --font-display: "Playfair Display", serif;
   --font-body: "Manrope", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --bg: #050505;
+  --bg: #070607;
   --bg-raised: #0b0b0d;
   --bg-panel: rgba(12, 12, 14, 0.82);
   --bg-panel-strong: rgba(16, 16, 18, 0.96);
@@ -34,9 +34,9 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at top right, rgba(255, 77, 90, 0.14), transparent 24%),
-    radial-gradient(circle at 14% 18%, rgba(255, 77, 90, 0.08), transparent 18%),
-    linear-gradient(180deg, #050505 0%, #030303 100%);
+    radial-gradient(circle at top right, rgba(255, 77, 90, 0.12), transparent 28%),
+    radial-gradient(circle at 14% 18%, rgba(255, 77, 90, 0.05), transparent 24%),
+    linear-gradient(180deg, #070607 0%, #030304 100%);
   color: var(--text);
   font-family: var(--font-body);
 }
@@ -154,7 +154,7 @@ main {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(16px);
-  background: rgba(5, 5, 5, 0.72);
+  background: rgba(7, 6, 7, 0.76);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -187,9 +187,11 @@ main {
   display: block;
   grid-column: 2;
   font-family: var(--font-display);
-  font-size: 2rem;
-  line-height: 0.92;
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 
 .site-header__subtitle,
@@ -323,11 +325,11 @@ main {
 .hero__title {
   margin: 0;
   font-family: var(--font-display);
-  max-width: 11.5ch;
-  font-size: clamp(3.35rem, 6.2vw, 5.8rem);
-  line-height: 0.94;
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
+  font-weight: 600;
+  max-width: 14ch;
+  font-size: clamp(3rem, 5.8vw, 5.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   white-space: pre-line;
 }
 
@@ -396,10 +398,10 @@ main {
   max-width: 8.5em;
   margin-top: 1rem;
   font-family: "Songti SC", "STSong", "Noto Serif SC", serif;
-  font-size: clamp(3rem, 4.9vw, 5.15rem);
-  font-weight: 800;
-  line-height: 1.04;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.8rem, 4.6vw, 4.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
   text-transform: none;
 }
 
@@ -435,15 +437,11 @@ main {
 .site-shell--zh .poster-section__title,
 .site-shell--zh .about__title,
 .site-shell--zh .contact__title {
-  font-family:
-    "PingFang SC",
-    "Hiragino Sans GB",
-    "Noto Sans SC",
-    "Microsoft YaHei",
-    sans-serif;
-  font-size: clamp(2.75rem, 5vw, 4.6rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  font-family: "Songti SC", "STSong", "Noto Serif SC", serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: 0;
   text-transform: none;
 }
 
@@ -699,10 +697,10 @@ main {
 .project-detail__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 5.2rem);
-  line-height: 0.88;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
 }
 
 .poster-section__copy {

@@ -1,6 +1,6 @@
 # David Weng Portfolio
 
-Portfolio site for David Weng, focused on visual storytelling, design, content operations, and AI-integrated creative workflows.
+Portfolio site of David, focused on visual storytelling, design, content operations, and AI-integrated creative workflows.
 
 ## Stack
 
