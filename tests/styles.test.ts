@@ -125,5 +125,34 @@ test("mobile home shell uses a single-row compressed header and blends the heade
   expect(css).toContain("flex-wrap: nowrap;");
   expect(css).toContain("white-space: nowrap;");
   expect(css).toContain(".site-header__nav a");
-  expect(css).toContain("padding: 0.58rem 0.52rem;");
+  expect(css).toContain("padding: 0.56rem 0.48rem;");
+  expect(css).toContain("border-radius: 0.38rem;");
+});
+
+test("home backgrounds remove the red radial glow layers from the page and hero shell", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const bodyBlock = css.match(/body\s*\{[^}]+\}/)?.[0] ?? "";
+  const heroFrameBlock = css.match(/\.hero__frame\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeHeroFrameBlock = css.match(/\.site-main--home \.hero__frame\s*\{[^}]+\}/)?.[0] ?? "";
+  const heroFrameAfterBlock = css.match(/\.hero__frame::after\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(bodyBlock).not.toContain("radial-gradient(circle at top right, rgba(255, 77, 90, 0.12), transparent 28%)");
+  expect(bodyBlock).not.toContain("radial-gradient(circle at 14% 18%, rgba(255, 77, 90, 0.05), transparent 24%)");
+  expect(heroFrameBlock).not.toContain("linear-gradient(145deg, rgba(255, 77, 90, 0.08), transparent 42%)");
+  expect(homeHeroFrameBlock).not.toContain("linear-gradient(145deg, rgba(255, 77, 90, 0.08), transparent 42%)");
+  expect(heroFrameAfterBlock).not.toContain("linear-gradient(90deg, rgba(255, 77, 90, 0.14), transparent 14%, transparent 86%, rgba(255, 77, 90, 0.14))");
+});
+
+test("mobile non-film project pages define tighter archive and external-handoff hero spacing rules", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+
+  expect(css).toContain(".project-page--archive .project-hero__grid");
+  expect(css).toContain(".project-page--archive .project-hero__content");
+  expect(css).toContain(".project-page--archive .project-media");
+  expect(css).toContain(".project-page--external-handoff .project-hero__grid");
+  expect(css).toContain(".project-page--external-handoff .project-handoff");
+  expect(css).toContain(".project-page:not(.project-page--film) .project-hero__grid");
+  expect(css).toContain("grid-template-columns: 1fr;");
+  expect(css).toContain("padding: 1rem;");
+  expect(css).toContain("gap: 0.6rem;");
 });
