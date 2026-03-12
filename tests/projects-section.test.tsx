@@ -58,7 +58,14 @@ test("renders a responsive reel with legacy project content and filtering contro
 
   render(<ProjectsSection locale="en" />);
 
+  expect(screen.getByRole("toolbar", { name: /project categories/i })).toBeInTheDocument();
   expect(screen.getByRole("region", { name: /projects carousel/i })).toBeInTheDocument();
+  expect(screen.queryByRole("button", { name: /^all$/i })).not.toBeInTheDocument();
+  expect(screen.getAllByRole("button").slice(0, 3).map((button) => button.textContent)).toEqual([
+    "Client / Organization",
+    "Film / Video",
+    "Writing"
+  ]);
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /next projects/i })).toBeInTheDocument();
@@ -77,29 +84,15 @@ test("renders a responsive reel with legacy project content and filtering contro
       name: /open project archive for theupgrade\.ai/i
     })
   ).toBeInTheDocument();
-  expect(
-    screen.queryByRole("link", {
-      name: /open project commissioned video work/i
-    })
-  ).not.toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /^all$/i })).toBeInTheDocument();
 
-  await user.click(screen.getByRole("button", { name: /^all$/i }));
+  await user.click(screen.getByRole("button", { name: /writing/i }));
 
-  expect(
-    screen.queryByRole("link", {
-      name: /open project david's blog/i
-    })
-  ).not.toBeInTheDocument();
-
-  await user.click(screen.getByRole("button", { name: /research/i }));
-
+  expect(screen.getByRole("button", { name: /writing/i })).toHaveClass("filter-chip--active");
   expect(
     screen.getByRole("link", {
       name: /open project transcending barriers/i
     })
   ).toBeInTheDocument();
-  expect(screen.queryByText(/fraüd/i)).not.toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /film\s*\/\s*video/i }));
 
@@ -130,13 +123,17 @@ test("renders localized labels and links in chinese", async () => {
 
   render(<ProjectsSection locale="zh" />);
 
-  expect(screen.getByRole("toolbar", { name: /项目筛选/i })).toBeInTheDocument();
+  expect(screen.getByRole("toolbar", { name: /项目分类/i })).toBeInTheDocument();
   expect(screen.getByRole("region", { name: /项目轮播/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^客户\s*\/\s*机构$/i })).toHaveClass("filter-chip--active");
-  expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
+  expect(screen.queryByRole("button", { name: /^全部$/i })).not.toBeInTheDocument();
+  expect(screen.getAllByRole("button").slice(0, 3).map((button) => button.textContent)).toEqual([
+    "客户 / 机构",
+    "电影 / 视频",
+    "写作"
+  ]);
   expect(screen.getByRole("button", { name: /上一组项目/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
       name: /open project archive for beaty biodiversity museum/i
@@ -151,17 +148,13 @@ test("renders localized labels and links in chinese", async () => {
     screen.queryByRole("link", {
       name: /open project transcending barriers/i
     })
-  ).not.toBeInTheDocument();
+  ).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /电影\s*\/\s*视频/i })).toBeInTheDocument();
-
-  expect(
-    screen.queryByRole("link", {
-      name: /open project commissioned video work/i
-    })
-  ).not.toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /^写作$/i })).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /电影\s*\/\s*视频/i }));
 
+  expect(screen.getByRole("button", { name: /电影\s*\/\s*视频/i })).toHaveClass("filter-chip--active");
   expect(
     screen.getByRole("link", {
       name: /open project commissioned video work/i

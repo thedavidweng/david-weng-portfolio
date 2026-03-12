@@ -119,14 +119,15 @@ test("mobile home shell uses a single-row compressed header and blends the heade
 
   expect(css).toContain(".site-header--home");
   expect(css).toContain(".site-main--home .hero");
-  expect(css).toContain(".site-main--home .hero__frame");
-  expect(css).toContain(".site-main--home .hero__frame::before");
+  expect(css).toContain(".site-header__descriptor");
   expect(css).toContain(".site-header__nav");
-  expect(css).toContain("flex-wrap: nowrap;");
-  expect(css).toContain("white-space: nowrap;");
-  expect(css).toContain(".site-header__nav a");
-  expect(css).toContain("padding: 0.56rem 0.48rem;");
-  expect(css).toContain("border-radius: 0.38rem;");
+  expect(css).toContain(".site-header__nav-link");
+  expect(css).toContain("text-decoration: none;");
+  expect(css).toContain(".hero__mobile-nav");
+  expect(css).toContain(".hero__mobile-nav-link");
+  expect(css).toContain("@media (max-width: 760px)");
+  expect(css).toContain(".site-header--home .site-header__nav");
+  expect(css).toContain("display: none;");
 });
 
 test("home backgrounds remove the red radial glow layers from the page and hero shell", () => {
@@ -155,4 +156,16 @@ test("mobile non-film project pages define tighter archive and external-handoff 
   expect(css).toContain("grid-template-columns: 1fr;");
   expect(css).toContain("padding: 1rem;");
   expect(css).toContain("gap: 0.6rem;");
+});
+
+test("mobile archive hero titles switch out of poster uppercase styling and use a protected reading layer", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+
+  expect(css).toContain(".project-page--archive .project-hero__content");
+  expect(css).toContain(".project-page--archive .project-hero__cover::after");
+  expect(css).toContain(".project-page--archive .project-hero__title");
+  expect(css).toContain("text-transform: none;");
+  expect(css).toContain("line-height: 0.94;");
+  expect(css).toContain(".project-page--archive .project-hero__summary");
+  expect(css).toContain("font-size: 0.96rem;");
 });

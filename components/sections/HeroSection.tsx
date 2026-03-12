@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { ServiceCard } from "@/components/cards/ServiceCard";
-import { aboutContent, heroContent, servicesContent, siteIdentity } from "@/content/site";
-import { getLocalizedText } from "@/lib/i18n";
+import { aboutContent, heroContent, navigationItems, servicesContent, siteIdentity } from "@/content/site";
+import { getLocalizedText, getLocaleHomePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 
 type HeroSectionProps = {
@@ -10,6 +10,8 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ locale }: HeroSectionProps) {
+  const homePath = getLocaleHomePath(locale);
+
   return (
     <section className={`hero section-shell${locale === "zh" ? " hero--zh" : ""}`} id="top">
       <Container>
@@ -52,6 +54,23 @@ export function HeroSection({ locale }: HeroSectionProps) {
               </div>
             </div>
           </div>
+          <nav className="hero__mobile-nav" aria-label="Home section navigation">
+            {navigationItems.map((item) => {
+              const href = item.href.startsWith("http") ? item.href : `${homePath}${item.href}`;
+
+              return (
+                <Link
+                  key={item.href}
+                  className="hero__mobile-nav-link"
+                  href={href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                >
+                  {getLocalizedText(item.label, locale)}
+                </Link>
+              );
+            })}
+          </nav>
         </div>
       </Container>
     </section>
