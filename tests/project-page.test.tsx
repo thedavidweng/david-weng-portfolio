@@ -118,7 +118,7 @@ test("renders archive-backed BC + AI Ecosystem media with event photo credit", (
     <ProjectPageView locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
   );
 
-  expect(screen.getByRole("heading", { name: /Designs for BC \+ AI Ecosystem/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Archive for BC \+ AI Ecosystem/i })).toBeInTheDocument();
   expect(screen.getByRole("img", { name: /April speaker graphic/i })).toBeInTheDocument();
   expect(screen.getByRole("img", { name: /January meetup event photo/i })).toBeInTheDocument();
   expect(container.querySelector(".project-media__wall")).toBeTruthy();
@@ -141,9 +141,9 @@ test("renders archive-backed BC + AI Ecosystem media with event photo credit", (
   youtubeLinks.forEach((link) => {
     expect(link.closest(".project-media__wall-overlay")).toBeTruthy();
   });
-});
+}, 15000);
 
-test("renders Beaty annual report as an archive-backed design collection page", () => {
+test("renders Beaty archive with a static works wall above a separate video section", () => {
   const project = getProjectBySlug("beaty-biodiversity-museum-annual-report-2022-2023");
 
   if (!project) {
@@ -158,9 +158,19 @@ test("renders Beaty annual report as an archive-backed design collection page", 
     />
   );
 
-  expect(screen.getByRole("heading", { name: /Designs for Beaty Biodiversity Museum/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Archive for Beaty Biodiversity Museum/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Print \/ Editorial \/ Static Works$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Video Works$/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /Preview Beaty annual report archive spread/i })).toBeInTheDocument();
-  expect(container.querySelector(".project-media__wall")).toBeTruthy();
+  expect(screen.getByRole("button", { name: /Preview Visitor guide \(Chinese edition\)/i })).toBeInTheDocument();
+  expect(container.querySelectorAll(".project-media__wall").length).toBe(1);
+  const watchLinks = screen.getAllByRole("link", { name: /Watch on YouTube/i });
+  expect(watchLinks).toHaveLength(4);
+  expect(container.querySelectorAll(".project-media__video-card .project-media__badge").length).toBe(0);
+  expect(watchLinks[0]).toHaveAttribute(
+    "href",
+    "https://youtu.be/HaaFUnupWOM"
+  );
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
 });
 

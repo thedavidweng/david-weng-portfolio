@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Locale, ProjectItem } from "@/types/content";
+import type { Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
 import { Container } from "@/components/layout/Container";
 import { ArchiveMediaWall } from "@/components/projects/ArchiveMediaWall";
 import { Footer } from "@/components/site/Footer";
@@ -59,12 +59,16 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const primaryExternalLink = project.externalLinks[0];
   const featuredVideo = project.media.find((item) => item.type === "video" && getYouTubeEmbedUrl(item.href));
   const featuredVideoEmbedUrl = featuredVideo ? getYouTubeEmbedUrl(featuredVideo.href) : null;
+  const archiveVideoItems = useImageWall ? project.media.filter(isArchiveVideoItem) : [];
+  const archiveStaticItems = useImageWall ? project.media.filter((item) => !isArchiveVideoItem(item)) : [];
+  const useSplitArchiveLayout = useImageWall && archiveVideoItems.length > 0;
+  const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.media;
 
   return (
     <div className={`site-shell site-shell--${locale}`}>
       <Header locale={locale} pathname={pathname} />
       <main
-        className={`project-page${isTitleOnly ? " project-page--title-only" : ""}${isExternalHandoff ? " project-page--external-handoff" : ""}`}
+        className={`project-page${useImageWall ? " project-page--archive" : ""}${isTitleOnly ? " project-page--title-only" : ""}${isExternalHandoff ? " project-page--external-handoff" : ""}`}
       >
         <section className="project-hero">
           <Container>
@@ -208,14 +212,60 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                 <h2 className="poster-section__title">{projectLabel(projectDetailContent.materialsTitle, locale)}</h2>
               </div>
               {useImageWall ? (
-                <ArchiveMediaWall
-                  closePreviewLabel={projectDetailContent.closePreviewLabel}
-                  items={project.media}
-                  locale={locale}
-                  photoCreditLabel={projectDetailContent.photoCreditLabel}
-                  previewDialogLabel={projectDetailContent.previewDialogLabel}
-                  previewLabel={projectDetailContent.previewLabel}
-                />
+                <div className="project-media__sections">
+                  {archiveWallItems.length > 0 ? (
+                    <div className="project-media__section">
+                      {useSplitArchiveLayout ? (
+                        <h3 className="project-media__section-title">
+                          {projectLabel(projectDetailContent.staticWorksTitle, locale)}
+                        </h3>
+                      ) : null}
+                      <ArchiveMediaWall
+                        closePreviewLabel={projectDetailContent.closePreviewLabel}
+                        items={archiveWallItems}
+                        locale={locale}
+                        photoCreditLabel={projectDetailContent.photoCreditLabel}
+                        previewDialogLabel={projectDetailContent.previewDialogLabel}
+                        previewLabel={projectDetailContent.previewLabel}
+                      />
+                    </div>
+                  ) : null}
+                  {useSplitArchiveLayout ? (
+                    <div className="project-media__section">
+                      <h3 className="project-media__section-title">
+                        {projectLabel(projectDetailContent.videoWorksTitle, locale)}
+                      </h3>
+                      <div className="project-media__video-grid">
+                        {archiveVideoItems.map((item) => (
+                          <article
+                            key={`${item.title.en}-${item.src ?? item.href ?? "video"}`}
+                            className="project-media__video-card signal-panel"
+                          >
+                            {item.src ? (
+                              <div className="project-media__video-thumb">
+                                <Image
+                                  alt={projectLabel(item.title, locale)}
+                                  fill
+                                  sizes="(max-width: 760px) 100vw, (max-width: 1120px) 50vw, 42vw"
+                                  src={item.src}
+                                />
+                              </div>
+                            ) : null}
+                            <div className="project-media__video-copy">
+                              <h3>{projectLabel(item.title, locale)}</h3>
+                              <p>{projectLabel(item.description, locale)}</p>
+                              {item.href ? (
+                                <a className="button button--signal" href={item.href} rel="noreferrer" target="_blank">
+                                  {projectLabel(projectDetailContent.watchOnYouTubeLabel, locale)}
+                                </a>
+                              ) : null}
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
               ) : (
                 <div className="project-media__grid">
                   {project.media.map((item) => (
@@ -260,4 +310,8 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
       <Footer locale={locale} />
     </div>
   );
+}
+
+function isArchiveVideoItem(item: ProjectMediaItem) {
+  return item.type === "image" && item.archiveKind === "video";
 }

@@ -23,6 +23,10 @@ test("archive media hover keeps the bottom shadow aligned with the image scale",
 
   expect(css).toContain("--archive-media-hover-scale: 1;");
   expect(css).toContain(".project-media__rows-button::after");
+  expect(css).toContain("inset: 0;");
+  expect(css).toContain(
+    "background: linear-gradient(180deg, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.08) 68%, rgba(0, 0, 0, 0.86) 100%);"
+  );
   expect(css).toContain("transform: translateY(10px) scale(var(--archive-media-hover-scale));");
   expect(css).toContain("transform: translateY(0) scale(var(--archive-media-hover-scale));");
   expect(css).toContain("transform: scale(var(--archive-media-hover-scale));");
@@ -47,4 +51,37 @@ test("external handoff titles use article-scale typography instead of poster sty
   expect(externalTitleBlock).toContain("line-height: 1;");
   expect(externalTitleBlock).toContain("letter-spacing: -0.01em;");
   expect(externalTitleBlock).toContain("text-transform: none;");
+});
+
+test("beaty video badge stays content-width inside the video card grid", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const videoCopyBadgeBlock = css.match(/\.project-media__video-copy \.project-media__badge\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(videoCopyBadgeBlock).toContain("justify-self: start;");
+});
+
+test("archive-backed hero layout gives the cover panel more width and height on detail pages", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const archiveGridBlock = css.match(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/)?.[0] ?? "";
+  const archiveCoverBlock = css.match(/\.project-page--archive \.project-hero__cover\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(archiveGridBlock).toContain("grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);");
+  expect(archiveCoverBlock).toContain("min-height: 560px;");
+});
+
+test("beaty video thumbnails render in a fixed 16:9 frame instead of a cropped min-height box", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const videoThumbBlock = css.match(/\.project-media__video-thumb\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(videoThumbBlock).toContain("aspect-ratio: 16 / 9;");
+  expect(videoThumbBlock).not.toContain("min-height: 240px;");
+});
+
+test("archive media wall defers ResizeObserver-based branching until after mount to avoid hydration mismatches", () => {
+  const source = readFileSync(join(process.cwd(), "components/projects/ArchiveMediaWall.tsx"), "utf8");
+
+  expect(source).toContain("useSyncExternalStore");
+  expect(source).toContain("getStaticAlbumSnapshot");
+  expect(source).toContain("return false;");
+  expect(source).not.toContain('const supportsResponsiveAlbum = typeof ResizeObserver !== "undefined";');
 });

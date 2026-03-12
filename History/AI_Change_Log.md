@@ -1,0 +1,1668 @@
+# AI Change Log
+
+### 记录编号 | Entry ID: 20260311-01
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:30:34 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Rename Beaty YouTube thumbnails, add visitor guide archive item, and split Beaty archive into static wall plus video section
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/visitorguide-CN.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-02
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:35:04 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Renamed Beaty YouTube thumbnails in video/, added the Chinese visitor guide booklet item, split the Beaty archive page into a static works wall plus a separate video section, and verified with npm test, npm run lint, and npm run build.
+
+### 记录编号 | Entry ID: 20260311-03
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:39:51 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Tighten Beaty video badge layout and replace placeholder video titles/descriptions with YouTube metadata-backed copy
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-04
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:41:49 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Updated Beaty video cards with YouTube-backed titles and descriptions, fixed the VIDEO badge width in the card grid, and verified with npm test, npm run lint, and npm run build.
+
+### 记录编号 | Entry ID: 20260311-05
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:43:34 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Simplify Beaty archive summary copy and rebalance the Beaty detail hero so the cover image reads larger and more cinematic
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-06
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:45:37 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Simplified the Beaty archive summary copy, rebalanced the archive detail hero to give the cover more width and height, and verified with npm test, npm run lint, and npm run build.
+
+### 记录编号 | Entry ID: 20260311-07
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:48:18 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Remove redundant per-card VIDEO badges from the Beaty video section and force video thumbnails to render at a full 16:9 aspect ratio
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-08
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:50:12 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Removed redundant per-card VIDEO badges from the Beaty video section, changed the video thumbnail frame to a fixed 16:9 ratio, and verified with npm test, npm run lint, and npm run build.
+
+### 记录编号 | Entry ID: 20260311-09
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:51:09 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Fix archive media wall hydration mismatch by making the initial server and client render paths deterministic
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-10
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:55:51 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ArchiveMediaWall.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Fixed the archive media wall hydration mismatch by making the initial render deterministic with useSyncExternalStore, kept lint/build green, and adjusted the heavy BC+AI page regression test timeout to avoid false failures.
+
+### 记录编号 | Entry ID: 20260311-11
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:57:20 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Fix the recurring archive hover shadow seam showing through on Beaty archive images
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ArchiveMediaWall.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-12
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:59:01 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ArchiveMediaWall.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Reworked the archive hover shadow into a full-frame continuous gradient to remove the visible seam on Beaty archive images, and verified with npm test, npm run lint, and npm run build.
+
+### 记录编号 | Entry ID: 20260311-13
+- 日期 Date: 2026-03-11
+- 时间 Time: 17:59:36 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Rename archive-backed organization pages from Designs for to Archive for, and change their category/project type to Client / Organization and Archive Collection
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ArchiveMediaWall.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-14
+- 日期 Date: 2026-03-11
+- 时间 Time: 18:07:05 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ArchiveMediaWall.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/bc-ai-ecosystem.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/beaty-biodiversity-museum.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/theupgrade-ai.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/beaty-archive-cover.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Renamed archive-backed organization pages to Archive for..., changed category to Client / Organization and project type to Archive Collection, and updated related tests

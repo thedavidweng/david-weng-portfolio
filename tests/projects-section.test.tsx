@@ -64,17 +64,17 @@ test("renders a responsive reel with legacy project content and filtering contro
   expect(screen.getByRole("button", { name: /next projects/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
-      name: /open project designs for beaty biodiversity museum/i
+      name: /open project archive for beaty biodiversity museum/i
     })
   ).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
-      name: /open project designs for bc \+ ai ecosystem/i
+      name: /open project archive for bc \+ ai ecosystem/i
     })
   ).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
-      name: /open project designs for theupgrade\.ai/i
+      name: /open project archive for theupgrade\.ai/i
     })
   ).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^all$/i })).toBeInTheDocument();
@@ -102,14 +102,14 @@ test("renders localized labels and links in chinese", () => {
 
   expect(screen.getByRole("toolbar", { name: /项目筛选/i })).toBeInTheDocument();
   expect(screen.getByRole("region", { name: /精选项目轮播/i })).toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /^设计$/i })).toHaveClass("filter-chip--active");
+  expect(screen.getByRole("button", { name: /^客户\s*\/\s*机构$/i })).toHaveClass("filter-chip--active");
   expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /上一组项目/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
-      name: /open project designs for beaty biodiversity museum/i
+      name: /open project archive for beaty biodiversity museum/i
     })
   ).toHaveAttribute("href", "/zh/projects/beaty-biodiversity-museum-annual-report-2022-2023");
   expect(

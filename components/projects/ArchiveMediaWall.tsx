@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { RowsPhotoAlbum, StaticPhotoAlbum, computeRowsLayout, type Photo } from "react-photo-album";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
@@ -34,7 +34,11 @@ export function ArchiveMediaWall({
   closePreviewLabel
 }: ArchiveMediaWallProps) {
   const [activeItem, setActiveItem] = useState<ProjectMediaItem | null>(null);
-  const supportsResponsiveAlbum = typeof ResizeObserver !== "undefined";
+  const supportsResponsiveAlbum = useSyncExternalStore(
+    subscribeToMediaWallEnhancement,
+    getResponsiveAlbumSnapshot,
+    getStaticAlbumSnapshot
+  );
   const photos = useMemo<ArchivePhoto[]>(
     () =>
       items
@@ -226,6 +230,18 @@ export function ArchiveMediaWall({
       ) : null}
     </>
   );
+}
+
+function subscribeToMediaWallEnhancement() {
+  return () => {};
+}
+
+function getResponsiveAlbumSnapshot() {
+  return typeof ResizeObserver !== "undefined";
+}
+
+function getStaticAlbumSnapshot() {
+  return false;
 }
 
 function ArchiveOverlayIcon({ type }: { type: OverlayLinkMeta["icon"] }) {

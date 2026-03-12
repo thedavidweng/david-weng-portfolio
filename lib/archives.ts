@@ -30,6 +30,7 @@ export function archiveItemsToProjectMedia(collection: ArchiveCollection): Proje
       type: "image",
       title: item.title ?? getFallbackArchiveTitle(item),
       description: item.caption ?? getFallbackArchiveCaption(item),
+      archiveKind: item.kind,
       src: getArchiveItemSource(collection.group, item),
       width: item.width,
       height: item.height,

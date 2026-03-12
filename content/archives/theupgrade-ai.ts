@@ -5,8 +5,8 @@ import { localized } from "@/lib/i18n";
 
 export const theUpgradeAiArchive = createEmptyArchiveCollection(
   "theupgrade-ai",
-  "Designs for TheUpgrade.AI",
-  "Designs for TheUpgrade.AI"
+  "Archive for TheUpgrade.AI",
+  "Archive for TheUpgrade.AI"
 );
 
 theUpgradeAiArchive.items = [

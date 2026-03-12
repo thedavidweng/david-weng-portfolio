@@ -5,8 +5,8 @@ import { localized } from "@/lib/i18n";
 
 export const bcAiEcosystemArchive = createEmptyArchiveCollection(
   "bc-ai-ecosystem",
-  "Designs for BC + AI Ecosystem",
-  "Designs for BC + AI Ecosystem"
+  "Archive for BC + AI Ecosystem",
+  "Archive for BC + AI Ecosystem"
 );
 
 bcAiEcosystemArchive.defaultCredits = {

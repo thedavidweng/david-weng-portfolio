@@ -9,8 +9,8 @@ export const projectSectionContent = {
   eyebrow: localized("02 / Archive", "02 / 档案"),
   title: localized("Selected Projects", "精选项目"),
   description: localized(
-    "Current work selection featuring design archives, published research, and video projects.",
-    "当前作品精选，包含设计档案、已发表研究与视频项目。"
+    "Current work selection featuring archive collections, published research, and video projects.",
+    "当前作品精选，包含档案集合、已发表研究与视频项目。"
   ),
   filtersLabel: localized("Project filters", "项目筛选"),
   carouselLabel: localized("Selected projects carousel", "精选项目轮播"),
@@ -33,11 +33,14 @@ export const projectDetailContent = {
   externalDestinationLabel: localized("Destination", "访问目标"),
   materialsEyebrow: localized("Project Materials", "项目材料"),
   materialsTitle: localized("Archives", "档案墙"),
+  staticWorksTitle: localized("Print / Editorial / Static Works", "印刷 / 编辑 / 静态作品"),
+  videoWorksTitle: localized("Video Works", "视频作品"),
   photoCreditLabel: localized("Photo credit", "图片致谢"),
   previewLabel: localized("Preview", "预览"),
   previewDialogLabel: localized("Image preview", "图片预览"),
   closePreviewLabel: localized("Close preview", "关闭预览"),
-  openResourceLabel: localized("Open resource", "打开资源")
+  openResourceLabel: localized("Open resource", "打开资源"),
+  watchOnYouTubeLabel: localized("Watch on YouTube", "前往 YouTube 观看")
 };
 
 const beatyCover = getArchiveCoverItem(beatyBiodiversityMuseumArchive);
@@ -48,12 +51,12 @@ export const projects: ProjectItem[] = [
   {
     slug: "beaty-biodiversity-museum-annual-report-2022-2023",
     archiveGroup: "beaty-biodiversity-museum",
-    title: localized("Designs for Beaty Biodiversity Museum", "Designs for Beaty Biodiversity Museum"),
+    title: localized("Archive for Beaty Biodiversity Museum", "Archive for Beaty Biodiversity Museum"),
     code: "[EDITORIAL-01]",
     posterWord: "BEATY",
-    category: localized("Design", "设计"),
+    category: localized("Client / Organization", "客户 / 机构"),
     year: "2023",
-    projectType: localized("Design Archive", "设计档案"),
+    projectType: localized("Archive Collection", "档案集合"),
     duration: localized("Booklet / Signage / Report / Video", "册页 / 导视 / 报告 / 视频"),
     coverLabel: localized("Archive / Booklet / Signage / Report / Video", "档案 / 册页 / 导视 / 报告 / 视频"),
     coverPalette: ["#091520", "#173c58", "#d2e8ff"],
@@ -61,16 +64,16 @@ export const projects: ProjectItem[] = [
       ? getArchiveFilePath("beaty-biodiversity-museum", beatyCover.file)
       : "/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg",
     coverAlt: beatyCover?.title ?? localized(
-      "Cover preview of the Beaty museum design archive",
-      "Beaty 博物馆设计档案封面预览"
+      "Cover preview of the Beaty museum archive collection",
+      "Beaty 博物馆档案集合封面预览"
     ),
     teaser: localized(
-      "Museum design archive grouping booklet, signage, report, and video work into one record.",
-      "持续扩展的博物馆设计档案，将册页、导视、报告与视频项目归入同一记录。"
+      "Archive collection grouping booklet, signage, report, and video work created for the Beaty museum.",
+      "汇集 Beaty 博物馆相关册页、导视、报告与视频成果的档案集合。"
     ),
     summary: localized(
-      "Unified archive page for design work created for the Beaty Biodiversity Museum, structured to hold booklet pages, signage, annual report spreads, and video-related outputs in one place.",
-      "为 Beaty Biodiversity Museum 设计产出建立的统一档案页，用来持续整理册页、导视、年度报告版面与视频相关成果。"
+      "Booklets, signage, annual report layouts, and video-related work created for the Beaty Biodiversity Museum.",
+      "为 Beaty Biodiversity Museum 设计产出的手册、标识、年度报告与视频相关成果。"
     ),
     roles: localized(
       ["Graphic Design", "Editorial Layout", "Archive Curation"],
@@ -277,12 +280,12 @@ export const projects: ProjectItem[] = [
   {
     slug: "designs-for-bc-ai-ecosystem",
     archiveGroup: "bc-ai-ecosystem",
-    title: localized("Designs for BC + AI Ecosystem", "Designs for BC + AI Ecosystem"),
+    title: localized("Archive for BC + AI Ecosystem", "Archive for BC + AI Ecosystem"),
     code: "[DESIGN-07]",
     posterWord: "BCAI",
-    category: localized("Design", "设计"),
+    category: localized("Client / Organization", "客户 / 机构"),
     year: "2026",
-    projectType: localized("Design Archive", "设计档案"),
+    projectType: localized("Archive Collection", "档案集合"),
     duration: localized("Mixed Formats", "多种尺寸"),
     coverLabel: localized("Archive / Slides / Event Photos", "档案 / 幻灯片 / 活动照片"),
     coverPalette: ["#0b0f16", "#6f1a28", "#f2d7d4"],
@@ -290,12 +293,12 @@ export const projects: ProjectItem[] = [
       ? getArchiveFilePath(bcAiEcosystemArchive.group, bcAiCover.file)
       : "/projects/bc-ai-ecosystem/covers/legacy-portfolio.png",
     coverAlt: bcAiCover?.title ?? localized(
-      "Preview image for the BC plus AI Ecosystem design archive",
-      "BC + AI Ecosystem 设计档案预览图"
+      "Preview image for the BC plus AI Ecosystem archive collection",
+      "BC + AI Ecosystem 档案集合预览图"
     ),
     teaser: localized(
-      "Expandable design archive for BC plus AI Ecosystem, structured for social graphics, slides, event imagery, and mixed-format visual work.",
-      "为 BC + AI Ecosystem 准备的可扩展设计档案，用于整理社交视觉、幻灯片、活动照片与混合尺寸设计。"
+      "Archive collection for BC plus AI Ecosystem, structured for social graphics, slides, event imagery, and mixed-format visual work.",
+      "为 BC + AI Ecosystem 整理社交视觉、幻灯片、活动照片与混合尺寸内容的档案集合。"
     ),
     summary: localized(
       "Collection page for design work created across the BC plus AI ecosystem, spanning meetup graphics, slides, social assets, and event documentation.",
@@ -312,12 +315,12 @@ export const projects: ProjectItem[] = [
   {
     slug: "designs-for-theupgrade-ai",
     archiveGroup: "theupgrade-ai",
-    title: localized("Designs for TheUpgrade.AI", "Designs for TheUpgrade.AI"),
+    title: localized("Archive for TheUpgrade.AI", "Archive for TheUpgrade.AI"),
     code: "[DESIGN-08]",
     posterWord: "UPGRADE",
-    category: localized("Design", "设计"),
+    category: localized("Client / Organization", "客户 / 机构"),
     year: "2026",
-    projectType: localized("Design Archive", "设计档案"),
+    projectType: localized("Archive Collection", "档案集合"),
     duration: localized("Mixed Formats", "多种尺寸"),
     coverLabel: localized("Archive / Brand Graphics / Posters", "档案 / 品牌视觉 / 海报"),
     coverPalette: ["#0c0f12", "#421728", "#e8d8db"],
@@ -325,12 +328,12 @@ export const projects: ProjectItem[] = [
       ? getArchiveFilePath(theUpgradeAiArchive.group, theUpgradeCover.file)
       : "/projects/theupgrade-ai/covers/meet-our-team.png",
     coverAlt: theUpgradeCover?.title ?? localized(
-      "Preview image for TheUpgrade.AI design archive",
-      "TheUpgrade.AI 设计档案预览图"
+      "Preview image for TheUpgrade.AI archive collection",
+      "TheUpgrade.AI 档案集合预览图"
     ),
     teaser: localized(
-      "Dedicated archive page for TheUpgrade.AI design output, ready for branding, square graphics, presentation slides, and launch materials.",
-      "专门为 TheUpgrade.AI 设计产出准备的档案页，可继续承载品牌视觉、方形图片、演示文稿与上线素材。"
+      "Archive collection for TheUpgrade.AI work, ready for branding, square graphics, presentation slides, and launch materials.",
+      "用于整理 TheUpgrade.AI 品牌视觉、方形图片、演示文稿与上线素材的档案集合。"
     ),
     summary: localized(
       "Collection page for visual work made for TheUpgrade.AI, spanning posters, social graphics, and branded launch visuals.",

@@ -30,6 +30,7 @@ export type ProjectMediaItem = {
   type: "image" | "video" | "pdf";
   title: LocalizedText;
   description: LocalizedText;
+  archiveKind?: ArchiveItemKind;
   src?: string;
   width?: number;
   height?: number;
