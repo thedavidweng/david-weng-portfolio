@@ -143,10 +143,8 @@ export const aboutContent = {
     { value: "Research", label: localized("Publication and media studies work alongside production practice", "在影像制作之外也持续进行出版与媒体研究工作") }
   ],
   resumeHref: "/documents/resume.pdf",
-  portfolioHref: "/documents/portfolio.pdf",
   linkedinHref: "https://www.linkedin.com/in/thedavidweng/",
   resumeLabel: localized("Resume", "简历"),
-  portfolioLabel: localized("View Portfolio", "查看作品集"),
   focusLabel: localized("Practice Focus", "实践重点")
 };
 

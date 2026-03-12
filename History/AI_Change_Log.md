@@ -1666,3 +1666,68 @@
 - 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
 - 结果 Result:
   - Renamed archive-backed organization pages to Archive for..., changed category to Client / Organization and project type to Archive Collection, and updated related tests
+
+### 记录编号 | Entry ID: 20260311-15
+- 日期 Date: 2026-03-11
+- 时间 Time: 18:16:29 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Remove homepage View Portfolio button, delete its PDF asset, clean empty directories, and commit the change
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-16
+- 日期 Date: 2026-03-11
+- 时间 Time: 18:22:14 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/AboutSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/HeroSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/site.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/documents/portfolio.pdf
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/homepage.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Removed homepage View Portfolio button and portfolio PDF, cleaned the empty davids-blog directory, updated homepage tests, and verified with npm test, npm run lint, and npm run build

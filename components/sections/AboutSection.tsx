@@ -23,9 +23,6 @@ export function AboutSection({ locale }: AboutSectionProps) {
               <Link className="button button--ghost" href={aboutContent.resumeHref}>
                 {getLocalizedText(aboutContent.resumeLabel, locale)}
               </Link>
-              <Link className="button button--signal" href={aboutContent.portfolioHref}>
-                {getLocalizedText(aboutContent.portfolioLabel, locale)}
-              </Link>
             </div>
           </div>
           <div className="about__rail">

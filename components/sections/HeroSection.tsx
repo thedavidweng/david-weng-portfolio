@@ -36,9 +36,6 @@ export function HeroSection({ locale }: HeroSectionProps) {
                 <Link className="button button--ghost" href={aboutContent.resumeHref}>
                   {getLocalizedText(aboutContent.resumeLabel, locale)}
                 </Link>
-                <Link className="button button--ghost" href={aboutContent.portfolioHref}>
-                  {getLocalizedText(aboutContent.portfolioLabel, locale)}
-                </Link>
               </div>
             </div>
             <div className="hero__capabilities">
