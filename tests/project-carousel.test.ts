@@ -19,19 +19,19 @@ describe("project carousel grouping", () => {
     const groups = buildProjectCategoryGroups("en");
 
     expect(groups.map((group) => group.id)).toEqual([
-      "Client / Organization",
+      "Client",
       "Film / Video",
       "Writing"
     ]);
     expect(groups.map((group) => group.label)).toEqual([
-      "Client / Organization",
+      "Client",
       "Film / Video",
       "Writing"
     ]);
     expect(orderedProjects.map((project) => project.category.en)).toEqual([
-      "Client / Organization",
-      "Client / Organization",
-      "Client / Organization",
+      "Client",
+      "Client",
+      "Client",
       "Film / Video",
       "Film / Video",
       "Film / Video",

@@ -62,7 +62,7 @@ test("renders a responsive reel with legacy project content and filtering contro
   expect(screen.getByRole("region", { name: /projects carousel/i })).toBeInTheDocument();
   expect(screen.queryByRole("button", { name: /^all$/i })).not.toBeInTheDocument();
   expect(screen.getAllByRole("button").slice(0, 3).map((button) => button.textContent)).toEqual([
-    "Client / Organization",
+    "Client",
     "Film / Video",
     "Writing"
   ]);

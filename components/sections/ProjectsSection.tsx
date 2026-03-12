@@ -41,7 +41,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
     () => categoryGroups.map((group) => ({ id: group.id, label: group.label })),
     [categoryGroups]
   );
-  const [activeCategory, setActiveCategory] = useState(() => categoryGroups[0]?.id ?? "Client / Organization");
+  const [activeCategory, setActiveCategory] = useState(() => categoryGroups[0]?.id ?? "Client");
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [elasticClassName, setElasticClassName] = useState("");
