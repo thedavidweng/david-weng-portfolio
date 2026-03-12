@@ -100,6 +100,26 @@ test("renders non-YouTube film projects as release-info pages without generic ca
   expect(document.querySelector(".project-film__posters-rail")).toBeTruthy();
 });
 
+test("renders dedicated film hero blocks in intro-poster-credits order for mobile-specific layout control", () => {
+  const project = getProjectBySlug("fraud");
+
+  if (!project) {
+    throw new Error("Expected fraud project to exist");
+  }
+
+  const { container } = render(<ProjectPageView locale="en" pathname="/projects/fraud" project={project} />);
+
+  const introBlock = container.querySelector(".project-film__intro");
+  const posterBlock = container.querySelector(".project-film__poster");
+  const creditsBlock = container.querySelector(".project-film__credits-wrap");
+
+  expect(introBlock).toBeTruthy();
+  expect(posterBlock).toBeTruthy();
+  expect(creditsBlock).toBeTruthy();
+  expect(introBlock?.compareDocumentPosition(posterBlock as Node)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+  expect(posterBlock?.compareDocumentPosition(creditsBlock as Node)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+});
+
 test("renders article projects as branded handoff pages to the published Beacon article", () => {
   const project = getProjectBySlug("transcending-barriers");
 

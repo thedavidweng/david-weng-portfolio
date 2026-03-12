@@ -1262,6 +1262,9 @@ main {
 
 .project-page--film .project-hero__grid {
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  grid-template-areas:
+    "intro poster"
+    "credits poster";
   align-items: start;
 }
 
@@ -1288,6 +1291,14 @@ main {
   display: grid;
   gap: 1rem;
   align-content: start;
+}
+
+.project-film__intro {
+  grid-area: intro;
+}
+
+.project-film__credits-wrap {
+  grid-area: credits;
 }
 
 .project-hero__content--external-handoff {
@@ -1520,6 +1531,7 @@ main {
 }
 
 .project-film__poster {
+  grid-area: poster;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2107,6 +2119,139 @@ main {
 
   .project-film__fact {
     min-width: calc(50% - 0.35rem);
+  }
+
+  .project-page--film .project-hero__frame {
+    padding-bottom: 0.35rem;
+  }
+
+  .project-page--film .project-hero__header {
+    padding: 0.9rem 1rem 0.75rem;
+  }
+
+  .project-page--film .project-hero__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "poster"
+      "credits";
+    gap: 0.7rem;
+    padding: 0.8rem 1rem 1rem;
+  }
+
+  .project-page--film .project-film__content {
+    gap: 0.7rem;
+  }
+
+  .project-page--film .project-hero__title {
+    max-width: none;
+    font-size: clamp(2.5rem, 14vw, 4rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+  }
+
+  .project-page--film .project-hero__summary {
+    max-width: none;
+    margin-top: 0.65rem;
+    font-size: 0.98rem;
+    line-height: 1.58;
+  }
+
+  .project-page--film .project-hero__roles {
+    margin-top: 0.2rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .project-page--film .project-film__facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .project-page--film .project-film__fact {
+    min-width: 0;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .project-page--film .project-detail__links--film {
+    gap: 0.55rem;
+    margin-top: 0.4rem;
+  }
+
+  .project-page--film .project-link-button {
+    min-height: 44px;
+    padding: 0.78rem 1rem;
+    font-size: 0.92rem;
+  }
+
+  .project-page--film .project-film__poster {
+    justify-content: flex-start;
+  }
+
+  .project-page--film .project-film__poster-image {
+    width: min(100%, 26rem);
+    max-height: 65vh;
+    margin: 0 auto;
+  }
+
+  .project-page--film .project-film__credits-wrap {
+    margin-top: -0.1rem;
+  }
+
+  .project-page--film .project-film__credits {
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+
+  .project-page--film .project-film__credits-groups {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .project-page--film .project-film__credit-role {
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+  }
+
+  .project-page--film .project-film__credit-item {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .project-page--film .project-film .container {
+    gap: 0;
+  }
+
+  .project-page--film .project-film__section {
+    gap: 0.02rem;
+  }
+
+  .project-page--film .project-film__section .poster-section__intro {
+    gap: 0.02rem;
+  }
+
+  .project-page--film .project-film__section .poster-section__title {
+    font-size: clamp(1.55rem, 10vw, 2.1rem);
+    line-height: 0.94;
+  }
+
+  .project-page--film .project-film__rail {
+    gap: 0.06rem;
+    padding-bottom: max(0.18rem, env(safe-area-inset-bottom));
+  }
+
+  .project-page--film .project-film__stills-item,
+  .project-page--film .project-film__poster-card {
+    padding: 0.03rem;
+  }
+
+  .project-page--film .project-film__rail-image--still {
+    height: clamp(180px, 52vw, 240px);
+  }
+
+  .project-page--film .project-film__rail-image--poster {
+    height: clamp(260px, 72vw, 360px);
   }
 
   .hero__title,

@@ -95,3 +95,21 @@ test("film poster hero uses contain sizing and dedicated horizontal rails for st
   expect(css).toContain("overflow-x: auto;");
   expect(css).toContain("scroll-snap-type: x proximity;");
 });
+
+test("mobile film pages define a dedicated stacked layout with tighter credits and media spacing", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+
+  expect(css).toContain(".project-page--film .project-hero__grid");
+  expect(css).toContain("grid-template-areas:");
+  expect(css).toContain('"intro"');
+  expect(css).toContain('"poster"');
+  expect(css).toContain('"credits"');
+  expect(css).toContain(".project-film__intro");
+  expect(css).toContain("grid-area: intro;");
+  expect(css).toContain(".project-film__credits-wrap");
+  expect(css).toContain("grid-area: credits;");
+  expect(css).toContain(".project-page--film .project-film__credits-groups");
+  expect(css).toContain("grid-template-columns: 1fr;");
+  expect(css).toContain(".project-page--film .project-film__section");
+  expect(css).toContain("gap: 0.02rem;");
+});
