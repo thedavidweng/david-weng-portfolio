@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, IBM_Plex_Mono, Manrope } from "next/font/google";
 import "react-photo-album/rows.css";
 import "./globals.css";
@@ -25,11 +25,24 @@ export const metadata: Metadata = {
   title: "David Weng | Visual Storytelling, Design, and Creative Systems",
   description:
     "Portfolio homepage for David Weng, a cross-media creative working across video editing, photography, design, and AI-integrated creative workflows.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "David Weng"
+  },
   icons: {
     icon: "/brand/favicon.png",
     shortcut: "/brand/favicon.png",
     apple: "/brand/favicon.png"
   }
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  colorScheme: "dark",
+  themeColor: "#070607"
 };
 
 export default function RootLayout({

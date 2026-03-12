@@ -113,3 +113,17 @@ test("mobile film pages define a dedicated stacked layout with tighter credits a
   expect(css).toContain(".project-page--film .project-film__section");
   expect(css).toContain("gap: 0.02rem;");
 });
+
+test("mobile home shell uses a single-row compressed header and blends the header into the hero", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+
+  expect(css).toContain(".site-header--home");
+  expect(css).toContain(".site-main--home .hero");
+  expect(css).toContain(".site-main--home .hero__frame");
+  expect(css).toContain(".site-main--home .hero__frame::before");
+  expect(css).toContain(".site-header__nav");
+  expect(css).toContain("flex-wrap: nowrap;");
+  expect(css).toContain("white-space: nowrap;");
+  expect(css).toContain(".site-header__nav a");
+  expect(css).toContain("padding: 0.58rem 0.52rem;");
+});

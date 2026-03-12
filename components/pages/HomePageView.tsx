@@ -12,9 +12,9 @@ type HomePageViewProps = {
 
 export function HomePageView({ locale, pathname }: HomePageViewProps) {
   return (
-    <div className={`site-shell site-shell--${locale}`}>
+    <div className={`site-shell site-shell--${locale} site-shell--home`}>
       <Header locale={locale} pathname={pathname} />
-      <main>
+      <main className="site-main--home">
         <HeroSection locale={locale} />
         <ProjectsSection locale={locale} />
         <ContactSection locale={locale} />
