@@ -35,11 +35,19 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   }
 
   const { unmount } = render(<ProjectPageView locale="en" pathname="/projects/the-pills" project={thePills} />);
+  const englishCredits = screen.getByRole("heading", { name: /^Cast and Crew$/i }).closest(".project-film__credits");
+
+  if (!englishCredits) {
+    throw new Error("Expected The Pills credits panel to render");
+  }
 
   expect(screen.getByRole("heading", { name: /^The Pills$/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^Cast and Crew$/i })).toBeInTheDocument();
   expect(screen.getAllByRole("img", { name: /The Pills main poster/i }).length).toBeGreaterThan(0);
-  expect(screen.getAllByRole("link", { name: /^David Weng$/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014585/");
+  expect(within(englishCredits).getAllByRole("link", { name: /^David Weng$/i })[0]).toHaveAttribute(
+    "href",
+    "https://www.imdb.com/name/nm16014585/"
+  );
   expect(screen.getByRole("heading", { name: /^Stills$/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^Posters$/i })).toBeInTheDocument();
   expect(screen.queryByTitle(/The Pills/i)).not.toBeInTheDocument();
@@ -257,4 +265,21 @@ test("opens a centered preview dialog when an archive image is clicked", async (
   const dialog = screen.getByRole("dialog", { name: /Image preview/i });
   expect(dialog).toBeInTheDocument();
   expect(within(dialog).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
+});
+
+test("archive project pages keep long english titles readable without poster-style uppercase stacking", () => {
+  const project = getProjectBySlug("personal-video-projects");
+
+  if (!project) {
+    throw new Error("Expected personal video archive project to exist");
+  }
+
+  const { container } = render(
+    <ProjectPageView locale="en" pathname="/projects/personal-video-projects" project={project} />
+  );
+
+  expect(screen.getByRole("heading", { name: /^Personal Video Projects$/i })).toBeInTheDocument();
+  expect(container.querySelector(".project-page--archive")).toBeTruthy();
+  expect(container.querySelector(".project-hero__cover")).toBeTruthy();
+  expect(container.querySelector(".project-hero__content")).toBeTruthy();
 });

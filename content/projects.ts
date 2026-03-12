@@ -10,15 +10,14 @@ export const projectSectionContent = {
   eyebrow: localized("02 / Archive", "02 / 档案"),
   title: localized("Projects", "项目"),
   description: localized(
-    "Current work selection featuring archive collections, published research, and video projects.",
-    "当前作品精选，包含档案集合、已发表研究与视频项目。"
+    "Current work spanning archive collections, published writing, and video projects.",
+    "当前作品包含档案集合、已发表文章与视频项目。"
   ),
-  filtersLabel: localized("Project filters", "项目筛选"),
+  filtersLabel: localized("Project categories", "项目分类"),
   carouselLabel: localized("Projects carousel", "项目轮播"),
   previousLabel: localized("Previous projects", "上一组项目"),
   nextLabel: localized("Next projects", "下一组项目"),
-  openItemLabel: localized("Open archive item", "打开项目档案"),
-  allCategory: localized("All", "全部")
+  openItemLabel: localized("Open archive item", "打开项目档案")
 };
 
 export const projectDetailContent = {
@@ -101,7 +100,7 @@ export const projects: ProjectItem[] = [
     ),
     code: "[RESEARCH-02]",
     posterWord: "BARRIERS",
-    category: localized("Research", "研究"),
+    category: localized("Writing", "写作"),
     year: "2024",
     projectType: localized("Published Article", "已发表文章"),
     duration: localized("Beacon: Journal of Media Studies", "Beacon: Journal of Media Studies"),
@@ -377,17 +376,6 @@ export const projects: ProjectItem[] = [
     media: []
   }
 ];
-
-export function getProjectCategories(locale: Locale): Array<{ id: string; label: string }> {
-  const uniqueCategories = projects
-    .map((project) => ({
-      id: project.category.en,
-      label: getLocalizedText(project.category, locale)
-    }))
-    .filter((category, index, allCategories) => allCategories.findIndex((item) => item.id === category.id) === index);
-
-  return [...uniqueCategories, { id: "all", label: getLocalizedText(projectSectionContent.allCategory, locale) }];
-}
 
 export function projectLabel(text: LocalizedText, locale: Locale) {
   return getLocalizedText(text, locale);

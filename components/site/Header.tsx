@@ -15,29 +15,27 @@ export function Header({ locale, pathname }: HeaderProps) {
   const switchHref = toLocalePath(pathname, locale === "en" ? "zh" : "en");
   const resolveNavHref = (href: string) => (href.startsWith("http") ? href : `${homePath}${href}`);
   const isHomePath = pathname === "/" || pathname === "/zh/";
+  const descriptor = getLocalizedText(siteIdentity.brandLine, locale);
 
   return (
     <header className={`site-header${isHomePath ? " site-header--home" : ""}`}>
       <Container>
         <div className="site-header__inner">
-          <Link className="site-header__brand signal-control" href={homePath}>
-            <span className="site-header__mark" aria-hidden="true">
-              {"//"}
-            </span>
+          <Link className="site-header__brand" href={homePath}>
             <span className="site-header__title">{siteIdentity.name}</span>
-            <span className="site-header__subtitle">{getLocalizedText(siteIdentity.brandLine, locale)}</span>
           </Link>
+          <p className="site-header__descriptor">{descriptor}</p>
           <nav className="site-header__nav" aria-label="Main navigation">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
-                className="signal-control signal-control--nav"
+                className="site-header__nav-link"
                 href={resolveNavHref(item.href)}
               >
                 {getLocalizedText(item.label, locale)}
               </Link>
             ))}
-            <Link className="signal-control signal-control--nav site-header__locale" href={switchHref}>
+            <Link className="site-header__nav-link site-header__locale" href={switchHref}>
               {switchLabel}
             </Link>
           </nav>
