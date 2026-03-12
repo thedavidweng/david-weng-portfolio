@@ -24,7 +24,7 @@ vi.mock("embla-carousel-react", () => ({
 test("maps wheel input on the projects reel to embla navigation", () => {
   render(<ProjectsSection locale="en" />);
 
-  const region = screen.getByRole("region", { name: /selected projects carousel/i });
+  const region = screen.getByRole("region", { name: /projects carousel/i });
 
   fireEvent.wheel(region, { deltaY: 120 });
   fireEvent.wheel(region, { deltaY: -120 });

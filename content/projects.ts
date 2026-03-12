@@ -8,13 +8,13 @@ import { getArchiveCoverItem, getArchiveFilePath } from "@/lib/archives";
 
 export const projectSectionContent = {
   eyebrow: localized("02 / Archive", "02 / 档案"),
-  title: localized("Selected Projects", "精选项目"),
+  title: localized("Projects", "项目"),
   description: localized(
     "Current work selection featuring archive collections, published research, and video projects.",
     "当前作品精选，包含档案集合、已发表研究与视频项目。"
   ),
   filtersLabel: localized("Project filters", "项目筛选"),
-  carouselLabel: localized("Selected projects carousel", "精选项目轮播"),
+  carouselLabel: localized("Projects carousel", "项目轮播"),
   previousLabel: localized("Previous projects", "上一组项目"),
   nextLabel: localized("Next projects", "下一组项目"),
   openItemLabel: localized("Open archive item", "打开项目档案"),

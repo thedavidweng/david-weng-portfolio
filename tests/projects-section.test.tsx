@@ -58,7 +58,7 @@ test("renders a responsive reel with legacy project content and filtering contro
 
   render(<ProjectsSection locale="en" />);
 
-  expect(screen.getByRole("region", { name: /selected projects carousel/i })).toBeInTheDocument();
+  expect(screen.getByRole("region", { name: /projects carousel/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /next projects/i })).toBeInTheDocument();
@@ -131,7 +131,7 @@ test("renders localized labels and links in chinese", async () => {
   render(<ProjectsSection locale="zh" />);
 
   expect(screen.getByRole("toolbar", { name: /项目筛选/i })).toBeInTheDocument();
-  expect(screen.getByRole("region", { name: /精选项目轮播/i })).toBeInTheDocument();
+  expect(screen.getByRole("region", { name: /项目轮播/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^客户\s*\/\s*机构$/i })).toHaveClass("filter-chip--active");
   expect(screen.getByRole("button", { name: /^全部$/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /上一组项目/i })).toBeDisabled();

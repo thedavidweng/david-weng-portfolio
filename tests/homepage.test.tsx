@@ -76,11 +76,14 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(within(hero as HTMLElement).getByText(/video editing & post-production/i)).toBeInTheDocument();
   expect(within(hero as HTMLElement).getByText(/I create image sets with narrative weight for portraits, live events, and editorial coverage\./i)).toBeInTheDocument();
   expect(screen.queryByAltText(/portrait of david weng/i)).not.toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /^selected projects$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^projects$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^about$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^contact$/i })).toBeInTheDocument();
   expect(screen.getByText(/^03 \/ contact$/i)).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /email me/i })).toBeInTheDocument();
+  expect(container.querySelector(".site-shell--home")).toBeTruthy();
+  expect(container.querySelector(".site-main--home")).toBeTruthy();
+  expect(container.querySelector(".site-header--home")).toBeTruthy();
 }, 10000);
 
 test("renders the chinese homepage with a switch back to the english route", () => {
@@ -96,7 +99,7 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(screen.queryByRole("link", { name: /^关于$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /^我能做什么$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^我能做什么$/i })).not.toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /^精选项目$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^项目$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^关于我$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^联系$/i })).toBeInTheDocument();
   expect(screen.getByText(/^03 \/ 联系$/i)).toBeInTheDocument();
