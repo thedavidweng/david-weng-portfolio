@@ -100,7 +100,7 @@ test("archive-backed organization projects use the archive collection naming sch
 
   [beaty, bcAi, theUpgrade].forEach((project) => {
     expect(project.title.en).toMatch(/^Archive for /);
-    expect(project.category.en).toBe("Client / Organization");
+    expect(project.category.en).toBe("Client");
     expect(project.category.zh).toBe("客户 / 机构");
     expect(project.projectType.en).toBe("Archive Collection");
     expect(project.projectType.zh).toBe("档案集合");
