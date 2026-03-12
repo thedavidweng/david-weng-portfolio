@@ -12,53 +12,73 @@ test("renders localized chinese project detail content and language switch", () 
 
   render(<ProjectPageView locale="zh" pathname="/zh/projects/fraud" project={project} />);
 
-  expect(screen.getByRole("heading", { name: /^FRAÜD$/i })).toBeInTheDocument();
-  expect(screen.getByText(/围绕国际学生欺诈与压力展开的剧情片/i)).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^信途$/i })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "EN" })).toHaveAttribute("href", "/projects/fraud");
   expect(screen.getByRole("link", { name: /返回项目列表/i })).toHaveAttribute("href", "/zh#projects");
   expect(screen.queryByRole("heading", { name: /项目价值/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /档案墙/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /混合媒介结构/i })).not.toBeInTheDocument();
-  expect(screen.queryByTitle(/FRAÜD/i)).not.toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /演职人员/i })).toBeInTheDocument();
+  expect(screen.getAllByRole("link", { name: /^翁佳宸$/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014585/");
+  expect(screen.getAllByRole("link", { name: /^陈镘伊$/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014588/");
   expect(screen.getAllByRole("link", { name: /IMDb/i }).length).toBeGreaterThan(0);
   expect(screen.getAllByRole("link", { name: /豆瓣/i }).length).toBeGreaterThan(0);
-});
+}, 15000);
 
-test("renders video-first detail pages with embedded players and no repeated still cards", () => {
+test("renders dedicated film pages with full posters, linked credits, and horizontal still rails", async () => {
+  const user = userEvent.setup();
   const thePills = getProjectBySlug("the-pills");
-  const persona5 = getProjectBySlug("persona-5-style-campaign-video");
+  const gourd = getProjectBySlug("gourd");
 
-  if (!thePills || !persona5) {
+  if (!thePills || !gourd) {
     throw new Error("Expected film/video projects to exist");
   }
 
   const { unmount } = render(<ProjectPageView locale="en" pathname="/projects/the-pills" project={thePills} />);
 
-  expect(screen.getByTitle(/The Pills/i)).toHaveAttribute("src", expect.stringContaining("/embed/J0LGfoZQ-0Q"));
+  expect(screen.getByRole("heading", { name: /^The Pills$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Cast and Crew$/i })).toBeInTheDocument();
+  expect(screen.getAllByRole("img", { name: /The Pills main poster/i }).length).toBeGreaterThan(0);
+  expect(screen.getAllByRole("link", { name: /^David Weng$/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014585/");
+  expect(screen.getByRole("heading", { name: /^Stills$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Posters$/i })).toBeInTheDocument();
+  expect(screen.queryByTitle(/The Pills/i)).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
-  expect(screen.queryByText(/^Available on$/i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/Where the work is published, listed, or available to view outside this site\./i)).not.toBeInTheDocument();
-  expect(screen.queryByRole("heading", { name: /Poster Artwork/i })).not.toBeInTheDocument();
-  expect(screen.getAllByRole("link", { name: /FilmFreeway/i }).length).toBeGreaterThan(0);
+  expect(document.querySelector(".project-film__stills-rail")).toBeTruthy();
+  await user.click(screen.getByRole("button", { name: /Preview The Pills still 01/i }));
+  expect(screen.getByRole("dialog", { name: /Image preview/i })).toBeInTheDocument();
   unmount();
 
-  render(
-    <ProjectPageView
-      locale="en"
-      pathname="/projects/persona-5-style-campaign-video"
-      project={persona5}
-    />
-  );
+  render(<ProjectPageView locale="zh" pathname="/zh/projects/gourd" project={gourd} />);
 
-  expect(screen.getByTitle(/Persona 5 Style Campaign Video/i)).toHaveAttribute(
-    "src",
-    expect.stringContaining("/embed/kdPPnUPtH-E")
+  expect(screen.getByRole("heading", { name: /^清兵卫$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /演职人员/i })).toBeInTheDocument();
+  expect(screen.getByText(/^孙梓涵$/)).toBeInTheDocument();
+  expect(screen.queryByRole("link", { name: /^孙梓涵$/ })).not.toBeInTheDocument();
+  expect(screen.getAllByRole("img", { name: /清兵卫主海报/i }).length).toBeGreaterThan(0);
+  expect(screen.getByRole("heading", { name: /^剧照$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^海报$/i })).toBeInTheDocument();
+  expect(document.querySelectorAll(".project-film__stills-item").length).toBeGreaterThan(0);
+}, 15000);
+
+test("renders gourd inside the film/video project filter", async () => {
+  const project = getProjectBySlug("gourd");
+
+  if (!project) {
+    throw new Error("Expected gourd project to exist");
+  }
+
+  render(<ProjectPageView locale="en" pathname="/projects/gourd" project={project} />);
+
+  expect(screen.getByRole("link", { name: /IMDb/i })).toHaveAttribute(
+    "href",
+    "https://www.imdb.com/title/tt35677249/"
   );
-  expect(screen.queryByRole("heading", { name: /Campaign Still/i })).not.toBeInTheDocument();
-  expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
-  expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
-  expect(screen.queryByText(/^Available on$/i)).not.toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /FilmFreeway/i })).toHaveAttribute(
+    "href",
+    "https://filmfreeway.com/GOURD"
+  );
 });
 
 test("renders non-YouTube film projects as release-info pages without generic case-study blocks", () => {
@@ -72,11 +92,12 @@ test("renders non-YouTube film projects as release-info pages without generic ca
 
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
-  expect(screen.queryByText(/^Available on$/i)).not.toBeInTheDocument();
-  expect(screen.queryByRole("heading", { name: /Poster Artwork/i })).not.toBeInTheDocument();
   expect(screen.queryByTitle(/FRAÜD/i)).not.toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Cast and Crew$/i })).toBeInTheDocument();
+  expect(screen.getAllByRole("img", { name: /FRAÜD main poster/i }).length).toBeGreaterThan(0);
   expect(screen.getAllByRole("link", { name: /IMDb/i }).length).toBeGreaterThan(0);
   expect(screen.getAllByRole("link", { name: /Douban/i }).length).toBeGreaterThan(0);
+  expect(document.querySelector(".project-film__posters-rail")).toBeTruthy();
 });
 
 test("renders article projects as branded handoff pages to the published Beacon article", () => {
@@ -172,6 +193,33 @@ test("renders Beaty archive with a static works wall above a separate video sect
     "https://youtu.be/HaaFUnupWOM"
   );
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
+});
+
+test("renders commissioned and personal video archives as video-card collections", () => {
+  const commissioned = getProjectBySlug("commissioned-video-work");
+  const personalVideo = getProjectBySlug("personal-video-projects");
+
+  if (!commissioned || !personalVideo) {
+    throw new Error("Expected commissioned and personal video archives to exist");
+  }
+
+  const { container, unmount } = render(
+    <ProjectPageView locale="en" pathname="/projects/commissioned-video-work" project={commissioned} />
+  );
+
+  expect(screen.getByRole("heading", { name: /^Commissioned Video Work$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Video Works$/i })).toBeInTheDocument();
+  expect(container.querySelectorAll(".project-media__video-card")).toHaveLength(2);
+  expect(container.querySelectorAll(".project-media__wall").length).toBe(0);
+  unmount();
+
+  render(
+    <ProjectPageView locale="en" pathname="/projects/personal-video-projects" project={personalVideo} />
+  );
+
+  expect(screen.getByRole("heading", { name: /^Personal Video Projects$/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^Video Works$/i })).toBeInTheDocument();
+  expect(screen.getAllByRole("link", { name: /Watch on YouTube/i })).toHaveLength(3);
 });
 
 test("opens a centered preview dialog when an archive image is clicked", async () => {

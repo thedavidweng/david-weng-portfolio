@@ -77,6 +77,11 @@ test("renders a responsive reel with legacy project content and filtering contro
       name: /open project archive for theupgrade\.ai/i
     })
   ).toBeInTheDocument();
+  expect(
+    screen.queryByRole("link", {
+      name: /open project commissioned video work/i
+    })
+  ).not.toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^all$/i })).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /^all$/i }));
@@ -95,9 +100,34 @@ test("renders a responsive reel with legacy project content and filtering contro
     })
   ).toBeInTheDocument();
   expect(screen.queryByText(/fraüd/i)).not.toBeInTheDocument();
+
+  await user.click(screen.getByRole("button", { name: /film\s*\/\s*video/i }));
+
+  expect(
+    screen.getByRole("link", {
+      name: /open project commissioned video work/i
+    })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("link", {
+      name: /open project personal video projects/i
+    })
+  ).toBeInTheDocument();
+  expect(
+    screen.queryByRole("link", {
+      name: /open project persona 5 style campaign video/i
+    })
+  ).not.toBeInTheDocument();
+  expect(
+    screen.getByRole("link", {
+      name: /open project gourd/i
+    })
+  ).toBeInTheDocument();
 });
 
-test("renders localized labels and links in chinese", () => {
+test("renders localized labels and links in chinese", async () => {
+  const user = userEvent.setup();
+
   render(<ProjectsSection locale="zh" />);
 
   expect(screen.getByRole("toolbar", { name: /项目筛选/i })).toBeInTheDocument();
@@ -123,4 +153,33 @@ test("renders localized labels and links in chinese", () => {
     })
   ).not.toBeInTheDocument();
   expect(screen.getByRole("button", { name: /电影\s*\/\s*视频/i })).toBeInTheDocument();
+
+  expect(
+    screen.queryByRole("link", {
+      name: /open project commissioned video work/i
+    })
+  ).not.toBeInTheDocument();
+
+  await user.click(screen.getByRole("button", { name: /电影\s*\/\s*视频/i }));
+
+  expect(
+    screen.getByRole("link", {
+      name: /open project commissioned video work/i
+    })
+  ).toHaveAttribute("href", "/zh/projects/commissioned-video-work");
+  expect(
+    screen.getByRole("link", {
+      name: /open project personal video projects/i
+    })
+  ).toHaveAttribute("href", "/zh/projects/personal-video-projects");
+  expect(
+    screen.queryByRole("link", {
+      name: /open project persona 5 style campaign video/i
+    })
+  ).not.toBeInTheDocument();
+  expect(
+    screen.getByRole("link", {
+      name: /open project 清兵卫/i
+    })
+  ).toHaveAttribute("href", "/zh/projects/gourd");
 });

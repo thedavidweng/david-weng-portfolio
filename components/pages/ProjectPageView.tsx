@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
+import type { FilmCreditGroup, FilmCreditPerson, Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
 import { Container } from "@/components/layout/Container";
 import { ArchiveMediaWall } from "@/components/projects/ArchiveMediaWall";
+import { FilmMediaRail } from "@/components/projects/FilmMediaRail";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { projectDetailContent, projectLabel } from "@/content/projects";
@@ -56,6 +57,8 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const isTitleOnly = project.detailLayout === "title-only";
   const isExternalHandoff = project.detailLayout === "external-handoff";
   const isFilmVideoProject = project.category.en === "Film / Video";
+  const isDedicatedFilmProject = isFilmVideoProject && Boolean(project.film) && !useImageWall;
+  const isArchiveFilmVideoProject = isFilmVideoProject && useImageWall;
   const primaryExternalLink = project.externalLinks[0];
   const featuredVideo = project.media.find((item) => item.type === "video" && getYouTubeEmbedUrl(item.href));
   const featuredVideoEmbedUrl = featuredVideo ? getYouTubeEmbedUrl(featuredVideo.href) : null;
@@ -63,12 +66,14 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const archiveStaticItems = useImageWall ? project.media.filter((item) => !isArchiveVideoItem(item)) : [];
   const useSplitArchiveLayout = useImageWall && archiveVideoItems.length > 0;
   const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.media;
+  const film = project.film;
+  const filmHeroPoster = film ? film.heroPoster[locale] : null;
 
   return (
     <div className={`site-shell site-shell--${locale}`}>
       <Header locale={locale} pathname={pathname} />
       <main
-        className={`project-page${useImageWall ? " project-page--archive" : ""}${isTitleOnly ? " project-page--title-only" : ""}${isExternalHandoff ? " project-page--external-handoff" : ""}`}
+        className={`project-page${useImageWall ? " project-page--archive" : ""}${isTitleOnly ? " project-page--title-only" : ""}${isExternalHandoff ? " project-page--external-handoff" : ""}${isDedicatedFilmProject ? " project-page--film" : ""}`}
       >
         <section className="project-hero">
           <Container>
@@ -84,11 +89,63 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                 </div>
               </div>
               <div
-                className={`project-hero__grid${isTitleOnly ? " project-hero__grid--title-only" : ""}${isExternalHandoff ? " project-hero__grid--external-handoff" : ""}`}
+                className={`project-hero__grid${isTitleOnly ? " project-hero__grid--title-only" : ""}${isExternalHandoff ? " project-hero__grid--external-handoff" : ""}${isDedicatedFilmProject ? " project-hero__grid--film" : ""}`}
               >
-                <div
-                  className={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
-                >
+                {isDedicatedFilmProject && film && filmHeroPoster ? (
+                  <>
+                    <div className="project-film__content">
+                      <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
+                      <p className="project-hero__summary">{projectLabel(project.summary, locale)}</p>
+                      <p className="project-hero__roles">
+                        {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
+                      </p>
+                      {film.facts.length > 0 ? (
+                        <div className="project-film__facts">
+                          {film.facts.map((fact) => (
+                            <div
+                              key={`${fact.label.en}-${fact.value.en}`}
+                              className="project-film__fact signal-control signal-control--micro"
+                            >
+                              <span>{projectLabel(fact.label, locale)}</span>
+                              <strong>{projectLabel(fact.value, locale)}</strong>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+                      <div className="project-detail__links project-detail__links--film">
+                        {project.externalLinks.map((link) => (
+                          <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
+                        ))}
+                      </div>
+                      <section className="project-film__credits signal-panel">
+                        <p className="poster-section__eyebrow">{projectLabel(project.projectType, locale)}</p>
+                        <h2 className="project-film__credits-title">
+                          {projectLabel(projectDetailContent.castAndCrewTitle, locale)}
+                        </h2>
+                        <div className="project-film__credits-groups">
+                          {film.credits.map((group) => (
+                            <FilmCreditGroupBlock key={group.role.en} group={group} locale={locale} />
+                          ))}
+                        </div>
+                      </section>
+                    </div>
+                    <div className="project-film__poster">
+                      <Image
+                        alt={projectLabel(filmHeroPoster.title, locale)}
+                        className="project-film__poster-image"
+                        height={filmHeroPoster.height ?? 2304}
+                        priority
+                        sizes="(max-width: 1120px) 100vw, 42vw"
+                        src={filmHeroPoster.src ?? project.coverImage}
+                        width={filmHeroPoster.width ?? 1728}
+                      />
+                    </div>
+                  </>
+                ) : null}
+                {!isDedicatedFilmProject ? (
+                  <div
+                    className={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
+                  >
                   {isExternalHandoff ? (
                     <p className="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
                   ) : null}
@@ -101,15 +158,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                       </p>
                       <div className="project-detail__links">
                         {project.externalLinks.map((link) => (
-                          <a
-                            key={link.label.en}
-                            className="button button--signal"
-                            href={link.href}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            {projectLabel(link.label, locale)}
-                          </a>
+                          <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
                         ))}
                       </div>
                     </>
@@ -123,7 +172,8 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                       <p className="project-hero__roles">{project.roles[locale].join(" / ")}</p>
                     </>
                   ) : null}
-                </div>
+                  </div>
+                ) : null}
                 {isExternalHandoff && primaryExternalLink ? (
                   <aside className="project-handoff signal-panel">
                     <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.externalEyebrow, locale)}</p>
@@ -138,7 +188,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                     </a>
                   </aside>
                 ) : null}
-                {!isTitleOnly && !isExternalHandoff ? (
+                {!isTitleOnly && !isExternalHandoff && !isDedicatedFilmProject ? (
                   <div
                     className="project-hero__cover"
                     style={{
@@ -185,7 +235,48 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
           </section>
         ) : null}
 
-        {!isTitleOnly && !isExternalHandoff && isFilmVideoProject ? (
+        {isDedicatedFilmProject && film ? (
+          <section className="project-film">
+            <Container>
+              <div className="project-film__section">
+                <div className="poster-section__intro">
+                  <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
+                  <h2 className="poster-section__title">{projectLabel(projectDetailContent.stillsTitle, locale)}</h2>
+                </div>
+                <FilmMediaRail
+                  cardClassName="project-film__stills-item"
+                  closePreviewLabel={projectDetailContent.closePreviewLabel}
+                  imageClassName="project-film__rail-image project-film__rail-image--still"
+                  items={film.stills}
+                  locale={locale}
+                  previewDialogLabel={projectDetailContent.previewDialogLabel}
+                  previewLabel={projectDetailContent.previewLabel}
+                  railClassName="project-film__stills-rail"
+                  sizes="(max-width: 760px) 80vw, 34vw"
+                />
+              </div>
+              <div className="project-film__section">
+                <div className="poster-section__intro">
+                  <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
+                  <h2 className="poster-section__title">{projectLabel(projectDetailContent.postersTitle, locale)}</h2>
+                </div>
+                <FilmMediaRail
+                  cardClassName="project-film__poster-card"
+                  closePreviewLabel={projectDetailContent.closePreviewLabel}
+                  imageClassName="project-film__rail-image project-film__rail-image--poster"
+                  items={film.posters}
+                  locale={locale}
+                  previewDialogLabel={projectDetailContent.previewDialogLabel}
+                  previewLabel={projectDetailContent.previewLabel}
+                  railClassName="project-film__posters-rail"
+                  sizes="(max-width: 760px) 60vw, 24vw"
+                />
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
+        {!isTitleOnly && !isExternalHandoff && isFilmVideoProject && !isArchiveFilmVideoProject && !isDedicatedFilmProject ? (
           <section className="project-video-stage">
             <Container>
               {featuredVideoEmbedUrl ? (
@@ -204,7 +295,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
           </section>
         ) : null}
 
-        {!isTitleOnly && !isExternalHandoff && !isFilmVideoProject ? (
+        {!isTitleOnly && !isExternalHandoff && (!isFilmVideoProject || isArchiveFilmVideoProject) ? (
           <section className="project-media">
             <Container>
               <div className="poster-section__intro">
@@ -314,4 +405,78 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
 
 function isArchiveVideoItem(item: ProjectMediaItem) {
   return item.type === "image" && item.archiveKind === "video";
+}
+
+function getProjectLinkIconType(href: string) {
+  return href.includes("youtu") ? "youtube" : "external";
+}
+
+function ProjectExternalLinkButton({ href, label }: { href: string; label: string }) {
+  return (
+    <a className="button button--signal project-link-button" href={href} rel="noreferrer" target="_blank">
+      <span>{label}</span>
+      <ProjectLinkIcon type={getProjectLinkIconType(href)} />
+    </a>
+  );
+}
+
+function FilmCreditGroupBlock({
+  group,
+  locale
+}: {
+  group: FilmCreditGroup;
+  locale: Locale;
+}) {
+  return (
+    <div className="project-film__credit-group">
+      <h3 className="project-film__credit-role">{projectLabel(group.role, locale)}</h3>
+      <ul className="project-film__credit-list">
+        {group.people.map((person) => (
+          <li key={`${group.role.en}-${person.name.en}`} className="project-film__credit-item">
+            <FilmCreditPersonItem person={person} locale={locale} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function FilmCreditPersonItem({ person, locale }: { person: FilmCreditPerson; locale: Locale }) {
+  const label = projectLabel(person.name, locale);
+  const note = person.note ? projectLabel(person.note, locale) : null;
+
+  return (
+    <>
+      {person.href ? (
+        <a className="project-film__credit-link" href={person.href} rel="noreferrer" target="_blank">
+          {label}
+        </a>
+      ) : (
+        <span className="project-film__credit-text">{label}</span>
+      )}
+      {note ? <span className="project-film__credit-note">{note}</span> : null}
+    </>
+  );
+}
+
+function ProjectLinkIcon({ type }: { type: "youtube" | "external" }) {
+  if (type === "youtube") {
+    return (
+      <svg aria-hidden="true" className="project-link-button__icon" viewBox="0 0 24 24">
+        <path
+          d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.5 15.7V8.3l6.4 3.7-6.4 3.7Z"
+          fill="currentColor"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" className="project-link-button__icon" viewBox="0 0 24 24">
+      <path
+        d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3Zm4 14v4H3V6h4v2H5v11h11v-2h2Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
 }

@@ -1,4 +1,5 @@
 import { localized } from "@/lib/i18n";
+import { getArchiveStoragePath } from "@/content/archives/_shared";
 import type {
   ArchiveCollection,
   ArchiveGroup,
@@ -8,7 +9,7 @@ import type {
 } from "@/types/content";
 
 export function getArchiveFilePath(group: ArchiveGroup, file: string) {
-  return `/projects/${group}/${file}`;
+  return `/projects/${getArchiveStoragePath(group)}/${file}`;
 }
 
 export function getArchiveCoverItem(collection: ArchiveCollection) {

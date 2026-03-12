@@ -1,10 +1,10 @@
 "use client";
 
 import { useMemo, useState, useSyncExternalStore } from "react";
-import Image from "next/image";
 import { RowsPhotoAlbum, StaticPhotoAlbum, computeRowsLayout, type Photo } from "react-photo-album";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
+import { ProjectMediaLightbox } from "@/components/projects/ProjectMediaLightbox";
 
 type ArchiveMediaWallProps = {
   locale: Locale;
@@ -200,34 +200,13 @@ export function ArchiveMediaWall({
       ) : staticModel ? (
         <StaticPhotoAlbum {...sharedAlbumProps} layout="rows" model={staticModel} />
       ) : null}
-      {activeItem?.type === "image" && activeItem.src ? (
-        <div
-          aria-label={projectLabel(previewDialogLabel, locale)}
-          className="project-media__lightbox"
-          onClick={() => setActiveItem(null)}
-          role="dialog"
-        >
-          <button
-            aria-label={projectLabel(closePreviewLabel, locale)}
-            className="project-media__lightbox-close"
-            onClick={() => setActiveItem(null)}
-            type="button"
-          >
-            close
-          </button>
-          <div className="project-media__lightbox-frame" onClick={(event) => event.stopPropagation()}>
-            <Image
-              alt={projectLabel(activeItem.title, locale)}
-              className="project-media__lightbox-image"
-              height={activeItem.height ?? 900}
-              priority
-              sizes="90vw"
-              src={activeItem.src}
-              width={activeItem.width ?? 1600}
-            />
-          </div>
-        </div>
-      ) : null}
+      <ProjectMediaLightbox
+        activeItem={activeItem}
+        closePreviewLabel={closePreviewLabel}
+        locale={locale}
+        onClose={() => setActiveItem(null)}
+        previewDialogLabel={previewDialogLabel}
+      />
     </>
   );
 }

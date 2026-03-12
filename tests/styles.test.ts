@@ -85,3 +85,13 @@ test("archive media wall defers ResizeObserver-based branching until after mount
   expect(source).toContain("return false;");
   expect(source).not.toContain('const supportsResponsiveAlbum = typeof ResizeObserver !== "undefined";');
 });
+
+test("film poster hero uses contain sizing and dedicated horizontal rails for stills", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+
+  expect(css).toContain(".project-film__poster-image");
+  expect(css).toContain("object-fit: contain;");
+  expect(css).toContain(".project-film__stills-rail");
+  expect(css).toContain("overflow-x: auto;");
+  expect(css).toContain("scroll-snap-type: x proximity;");
+});

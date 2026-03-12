@@ -5,7 +5,5 @@ export const legacyArchiveMap: Record<string, ArchiveGroup> = {
   "transcending-barriers": "research-publication",
   "davids-blog": "personal",
   "fraud": "film-video",
-  "the-pills": "film-video",
-  "persona-5-style-campaign-video": "film-video",
-  "project-race": "personal"
+  "the-pills": "film-video"
 };

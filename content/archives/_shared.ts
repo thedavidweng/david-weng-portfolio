@@ -6,6 +6,7 @@ export const archiveGroups: ArchiveGroup[] = [
   "bc-ai-ecosystem",
   "theupgrade-ai",
   "personal",
+  "personal-video",
   "client-work",
   "research-publication",
   "film-video"
@@ -13,6 +14,16 @@ export const archiveGroups: ArchiveGroup[] = [
 
 export function isArchiveGroup(value: string): value is ArchiveGroup {
   return archiveGroups.includes(value as ArchiveGroup);
+}
+
+const archiveStoragePathMap: Partial<Record<ArchiveGroup, string>> = {
+  "beaty-biodiversity-museum": "client-work/beaty-biodiversity-museum",
+  "bc-ai-ecosystem": "client-work/bc-ai-ecosystem",
+  "theupgrade-ai": "client-work/theupgrade-ai"
+};
+
+export function getArchiveStoragePath(group: ArchiveGroup) {
+  return archiveStoragePathMap[group] ?? group;
 }
 
 export function createEmptyArchiveCollection(

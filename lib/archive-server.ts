@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { getArchiveStoragePath } from "@/content/archives/_shared";
 import { imageSize } from "image-size";
 import type { ArchiveCollection, ArchiveGroup, ArchiveItem, ArchiveItemKind } from "@/types/content";
 
@@ -32,7 +33,7 @@ const archiveFallbackDimensions: Record<ArchiveItemKind, { width: number; height
 };
 
 export function getArchiveDirectory(group: ArchiveGroup) {
-  return join(process.cwd(), "public", "projects", group);
+  return join(process.cwd(), "public", "projects", getArchiveStoragePath(group));
 }
 
 export function scanArchiveItemsFromDirectory(directory: string, collection: ArchiveCollection): ArchiveItem[] {

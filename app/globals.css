@@ -1260,6 +1260,11 @@ main {
   align-items: stretch;
 }
 
+.project-page--film .project-hero__grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: start;
+}
+
 .project-hero__grid--title-only {
   grid-template-columns: 1fr;
 }
@@ -1277,6 +1282,12 @@ main {
 
 .project-page--archive .project-hero__content {
   padding-right: 1rem;
+}
+
+.project-film__content {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
 }
 
 .project-hero__content--external-handoff {
@@ -1409,6 +1420,44 @@ main {
   margin: 0.85rem 0 0;
 }
 
+.project-film__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.project-film__fact {
+  display: grid;
+  gap: 0.18rem;
+  min-width: 9rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.project-film__fact strong {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.project-detail__links--film {
+  gap: 0.8rem;
+}
+
+.project-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.project-link-button__icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: 0 0 auto;
+}
+
 .project-hero__cover {
   position: relative;
   z-index: 0;
@@ -1427,6 +1476,12 @@ main {
 .project-page--archive .project-hero__title {
   max-width: 8ch;
   font-size: clamp(3.8rem, 8vw, 6.6rem);
+}
+
+.project-page--film .project-hero__title {
+  max-width: 12ch;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.92;
 }
 
 .project-hero__cover-image {
@@ -1462,6 +1517,168 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+}
+
+.project-film__poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 0;
+  overflow: visible;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.project-film__poster-image {
+  width: 100%;
+  height: auto;
+  max-height: min(78vh, 960px);
+  object-fit: contain;
+}
+
+.project-film__credits {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.project-film__credits-title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.project-film__credits-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1.25rem;
+}
+
+.project-film__credit-group {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.project-film__credit-role {
+  margin: 0;
+  color: var(--accent-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-film__credit-list {
+  display: grid;
+  gap: 0.38rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-film__credit-item {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.project-film__credit-link,
+.project-film__credit-text {
+  color: var(--text);
+}
+
+.project-film__credit-link:hover,
+.project-film__credit-link:focus-visible {
+  color: var(--accent);
+}
+
+.project-film__credit-note {
+  margin-left: 0.45rem;
+  color: var(--text-soft);
+}
+
+.project-film {
+  padding-top: 0;
+}
+
+.project-film .container {
+  display: grid;
+  gap: 0;
+}
+
+.project-film__section {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.project-film__section .poster-section__intro {
+  gap: 0.1rem;
+  margin-bottom: 0;
+}
+
+.project-film__section .poster-section__eyebrow {
+  margin: 0;
+}
+
+.project-film__section .poster-section__title {
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+  line-height: 0.96;
+}
+
+.project-film__rail {
+  display: flex;
+  gap: 0.12rem;
+  overflow-x: auto;
+  padding: 0 0 max(0.3rem, env(safe-area-inset-bottom)) 0;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 77, 90, 0.4) rgba(255, 255, 255, 0.08);
+  scroll-snap-type: x proximity;
+}
+
+.project-film__stills-rail {
+  overflow-x: auto;
+}
+
+.project-film__rail:active {
+  cursor: grabbing;
+}
+
+.project-film__stills-item,
+.project-film__poster-card {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  padding: 0.06rem;
+  background: rgba(8, 8, 10, 0.94);
+}
+
+.project-film__rail-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.project-film__rail-image {
+  display: block;
+  width: auto;
+  height: auto;
+  border-radius: calc(var(--radius-md) - 2px);
+}
+
+.project-film__rail-image--still {
+  height: clamp(220px, 26vw, 360px);
+  width: auto;
+}
+
+.project-film__rail-image--poster {
+  height: clamp(320px, 34vw, 520px);
+  width: auto;
 }
 
 .project-detail__grid,
@@ -1805,6 +2022,10 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .project-film__credits-groups {
+    grid-template-columns: 1fr;
+  }
+
   .services__grid,
   .project-media__grid,
   .project-media__video-grid {
@@ -1882,6 +2103,10 @@ main {
 
   .project-media__card--landscape {
     grid-column: auto;
+  }
+
+  .project-film__fact {
+    min-width: calc(50% - 0.35rem);
   }
 
   .hero__title,

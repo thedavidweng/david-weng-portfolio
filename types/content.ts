@@ -5,6 +5,7 @@ export type ArchiveGroup =
   | "bc-ai-ecosystem"
   | "theupgrade-ai"
   | "personal"
+  | "personal-video"
   | "client-work"
   | "research-publication"
   | "film-video";
@@ -26,6 +27,22 @@ export type ExternalLink = {
   href: string;
 };
 
+export type FilmCreditPerson = {
+  name: LocalizedText;
+  href?: string;
+  note?: LocalizedText;
+};
+
+export type FilmCreditGroup = {
+  role: LocalizedText;
+  people: FilmCreditPerson[];
+};
+
+export type FilmInfoItem = {
+  label: LocalizedText;
+  value: LocalizedText;
+};
+
 export type ProjectMediaItem = {
   type: "image" | "video" | "pdf";
   title: LocalizedText;
@@ -40,10 +57,19 @@ export type ProjectMediaItem = {
   layout?: "square" | "landscape" | "portrait";
 };
 
+export type FilmDetails = {
+  heroPoster: LocalizedValue<ProjectMediaItem>;
+  posters: ProjectMediaItem[];
+  stills: ProjectMediaItem[];
+  credits: FilmCreditGroup[];
+  facts: FilmInfoItem[];
+};
+
 export type ProjectItem = {
   slug: string;
   archiveGroup?: ArchiveGroup;
   detailLayout?: "standard" | "title-only" | "external-handoff";
+  film?: FilmDetails;
   title: LocalizedText;
   code: string;
   posterWord: string;

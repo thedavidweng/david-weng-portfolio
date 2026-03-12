@@ -1731,3 +1731,8455 @@
 - 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
 - 结果 Result:
   - Removed homepage View Portfolio button and portfolio PDF, cleaned the empty davids-blog directory, updated homepage tests, and verified with npm test, npm run lint, and npm run build
+
+### 记录编号 | Entry ID: 20260311-17
+- 日期 Date: 2026-03-11
+- 时间 Time: 19:29:57 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Reorganize film project asset paths under /film-video/film/, add gourd asset folder, and keep all existing links working as the first step of film page optimization
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/covers/youtube-WlLGuSej0Yg.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/covers/youtube-sn_P6wawBLk.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/covers/youtube-t9Si3THY5OU.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-18
+- 日期 Date: 2026-03-11
+- 时间 Time: 19:55:44 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Added commissioned and personal video archive projects, normalized film and video asset paths under film-video and personal-video, preserved existing links, and verified with npm test, npm run lint, and npm run build
+
+### 记录编号 | Entry ID: 20260311-19
+- 日期 Date: 2026-03-11
+- 时间 Time: 19:58:48 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Ignore docs and .claude in git, and stop tracking existing docs plan files
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/.claude/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-20
+- 日期 Date: 2026-03-11
+- 时间 Time: 19:59:41 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Updated .gitignore to exclude docs and .claude, and removed existing docs files from git tracking while keeping them locally
+
+### 记录编号 | Entry ID: 20260311-21
+- 日期 Date: 2026-03-11
+- 时间 Time: 20:24:10 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Move beaty, bc-ai, and theupgrade assets under public/projects/client-work while keeping site rendering unchanged
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-22
+- 日期 Date: 2026-03-11
+- 时间 Time: 20:24:49 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Reviewed client-work reorganization options and proposed moving beaty, bc-ai, and theupgrade under client-work as a local namespace while keeping web rendering unchanged
+
+### 记录编号 | Entry ID: 20260311-23
+- 日期 Date: 2026-03-11
+- 时间 Time: 20:28:01 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Move beaty, bc-ai, and theupgrade assets under public/projects/client-work with unchanged page behavior and updated archive path resolution
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-24
+- 日期 Date: 2026-03-11
+- 时间 Time: 20:37:41 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Moved Beaty, BC+AI, and TheUpgrade assets into public/projects/client-work with archive path mapping preserved and full verification passing
+
+### 记录编号 | Entry ID: 20260311-25
+- 日期 Date: 2026-03-11
+- 时间 Time: 20:38:43 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Optimize film project pages using local poster/still assets plus IMDb, Douban, and FilmFreeway metadata for Fraud, The Pills, and Gourd
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-26
+- 日期 Date: 2026-03-11
+- 时间 Time: 21:49:30 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Built dedicated film-detail pages for Fraud, The Pills, and Gourd with renamed poster/still assets, localized linked credits, external-link icons, and horizontal still/poster rails; verified with npm test, npm run lint, and npm run build
+
+### 记录编号 | Entry ID: 20260311-27
+- 日期 Date: 2026-03-11
+- 时间 Time: 21:53:00 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Refine Fraud Chinese summary to mirror the English synopsis and better match the author's voice
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-28
+- 日期 Date: 2026-03-11
+- 时间 Time: 21:54:13 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Rewrote Fraud's Chinese summary to follow the English synopsis more closely and match the portfolio's direct narrative tone; verified with npm test -- tests/project-page.test.tsx
+
+### 记录编号 | Entry ID: 20260311-29
+- 日期 Date: 2026-03-11
+- 时间 Time: 21:55:41 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Tighten film page spacing by bringing stills and posters closer together and removing the bordered framing around the hero poster
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-30
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:03:34 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Adjusted film page visual spacing by removing the framed hero-poster treatment and tightening the gap between stills and poster rails; verified with npm test -- tests/project-page.test.tsx tests/styles.test.ts and npm run lint
+
+### 记录编号 | Entry ID: 20260311-31
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:04:35 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Remove the standalone Persona 5 project card now that it is represented inside Personal Video Projects
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-32
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:07:54 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/ProjectsSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Removed the standalone Persona 5 card from the homepage portfolio reel while keeping the project accessible through Personal Video Projects and its direct route; verified with npm test -- tests/projects-section.test.tsx tests/projects-lib.test.ts and npm run lint
+
+### 记录编号 | Entry ID: 20260311-33
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:08:51 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Refine commissioned video archive copy by removing mixed-language phrasing and rewriting each video description as a concise standalone content summary
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/ProjectsSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-34
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:13:05 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/ProjectsSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Rewrote the commissioned video archive summary and per-video titles/captions to avoid mixed-language phrasing and describe each video on its own terms; verified with npm test -- tests/projects-lib.test.ts tests/project-page.test.tsx and npm run lint
+
+### 记录编号 | Entry ID: 20260311-35
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:14:09 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Tighten the gap between film still and poster rails and make the horizontal scrolling affordance more obvious
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/ProjectsSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-36
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:15:56 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/ProjectsSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Compressed the spacing between film still and poster rails, tightened the card gaps, reduced heading bulk, and added a clearer horizontal drag affordance; verified with npm test -- tests/project-page.test.tsx tests/styles.test.ts and npm run lint
+
+### 记录编号 | Entry ID: 20260311-37
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:16:50 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Remove the standalone Persona 5 and Project Race project entries so they exist only inside Personal Video Projects
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/sections/ProjectsSection.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-38
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:22:49 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Deleted the standalone Persona 5 and Project Race project entries and removed their legacy slug mappings so both videos now exist only inside Personal Video Projects; verified with npm test -- tests/projects-lib.test.ts tests/projects-section.test.tsx tests/project-copy.test.ts tests/archive-foundation.test.ts and npm run lint
+
+### 记录编号 | Entry ID: 20260311-39
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:24:00 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Fix commissioned/personal video archive copy and categorization by reverting titles to YouTube originals, redefining the commissioned archive summary, and moving Phantom Pain into personal video projects
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-40
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:28:44 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/personal-video/video/youtube-t9Si3THY5OU.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Restored commissioned/personal video archive titles to the YouTube originals, rewrote the commissioned archive summary as a category definition, moved PHANTOM PAIN into Personal Video Projects, and updated the related tests; verified with npm test -- tests/projects-lib.test.ts tests/project-page.test.tsx tests/projects-section.test.tsx and npm run lint
+
+### 记录编号 | Entry ID: 20260311-41
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:31:17 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Refine the Chinese summary for Personal Video Projects to the approved phrasing
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/personal-video/video/youtube-t9Si3THY5OU.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-42
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:32:45 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/personal-video/video/youtube-t9Si3THY5OU.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Updated the Chinese summary for Personal Video Projects to the approved phrasing and verified with npm test -- tests/projects-lib.test.ts and npm run lint
+
+### 记录编号 | Entry ID: 20260311-43
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:33:57 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - Tighten film still/poster rail spacing further and reuse the existing image preview dialog for clickable film stills and posters
+- Prompt 摘要 Prompt Summary:
+  - 任务开始记录（START）。
+  - Task start log (START).
+- 状态 Status: START
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/personal-video/video/youtube-t9Si3THY5OU.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 待定 TBD
+- 量化标签 Quant Tags: [文件数 Files=TBD, 代码行变化 LOC=TBD, 风险 Risk=TBD]
+- 验证方式 Verification: 未执行 Not Run
+- 结果 Result:
+  - 任务已开始，结束后将补充 END 记录。
+  - Task has started; END entry will be appended on completion.
+
+### 记录编号 | Entry ID: 20260311-44
+- 日期 Date: 2026-03-11
+- 时间 Time: 22:37:38 (PDT)
+- 模型 Model: GPT-5 (Codex)
+- 会话/执行者 Session/Agent: Codex CLI Agent
+- 重要程度 Priority: P1
+- 用户 Prompt (原文) User Prompt (Original):
+  - (同任务上下文 See task context)
+- Prompt 摘要 Prompt Summary:
+  - 任务结束记录（END）。
+  - Task completion log (END).
+- 状态 Status: END
+- 动作类型 Action Type: 修改 Modify
+- 变更文件 Files Changed:
+  - 路径 Path: /Users/david/Documents/Vibe/.gitignore
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/History/AI_Change_Log.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/app/globals.css
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/pages/ProjectPageView.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ArchiveMediaWall.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/_shared.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/film-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/index.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/legacy-map.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/projects.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup-design.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/docs/plans/2026-03-11-homepage-ia-cleanup.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archive-server.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/lib/archives.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/next-env.d.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/covers/cover-bcai-legacy-portfolio.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-155.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-161.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2025-11-michelle-diamond-178.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/event-photos/event-bcai-2026-01-michelle-diamond-267.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-apr-26-meetup-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-20-meetup-graphics.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/slides/slide-bcai-nov-26-slide-deck.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-14.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-jan-26-15.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/square/square-bcai-nov-25-speaker.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-AXYZZ_P218Q.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-RUGucjG76Y0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-SM69zw8Q79E.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-ZN-IywZzAp0.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-boAPl6_OZks.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-nb61rAIMQhU.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/bc-ai-ecosystem/thumbs/youtube-wjc1-bnjU4s.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/signage/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Accessibility
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Admission
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Brochure-rack
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Door
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Social
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/"public/projects/beaty-biodiversity-museum/signage/Visitor
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/README.md
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/cover-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-01.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-02.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-03.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-04.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-05.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-06.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-07.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-08.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-09.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/poster-theupgrade-course-thumb.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-aisl.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-faster-sharper.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-linkedin-creative-professionals.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-master-ai-shape-the-future.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-meet-our-team.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/square-theupgrade-ode-quote.png
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/client-work/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/fraud/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/the-pills/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/persona-5-style-campaign-video/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/project-race/cover.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/covers/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/event-photos/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/posters/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/slides/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/square/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/theupgrade-ai/thumbs/.gitkeep
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/archive-foundation.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-copy.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/project-page.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-lib.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/projects-section.test.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/tests/styles.test.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/types/content.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/FilmMediaRail.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/components/projects/ProjectMediaLightbox.tsx
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/archives/personal-video.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/content/film-data.ts
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/fraud/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/gourd/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/posters/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/film/the-pills/stills/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/film-video/video/
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+  - 路径 Path: /Users/david/Documents/Vibe/public/projects/personal-video/video/youtube-t9Si3THY5OU.jpg
+  - 动作 Action: 修改/新增/删除之一 (Modify/Add/Delete)
+  - 说明 Notes: 由本次任务改动（详见 git 记录）。
+- 影响范围 Impact Scope: 中 Medium
+- 量化标签 Quant Tags: [文件数 Files=见上 See above, 代码行变化 LOC=建议用 git diff 统计, 风险 Risk=Low/Med]
+- 验证方式 Verification: 已执行 Executed（建议含 hook / git 状态检查）
+- 结果 Result:
+  - Reused the existing archive lightbox on film still/poster rails, made film images clickable for fullscreen preview, and tightened the film media spacing further; verified with npm test -- tests/project-page.test.tsx tests/styles.test.ts and npm run lint

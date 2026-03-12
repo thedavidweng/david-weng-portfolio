@@ -28,11 +28,11 @@ test("hydrates archive-backed project media with image dimensions for rows layou
   const imageItems = project.media.filter((item) => item.type === "image");
 
   expect(imageItems.length).toBeGreaterThan(0);
-  expect(project.coverImage?.startsWith("/projects/bc-ai-ecosystem/")).toBe(true);
+  expect(project.coverImage?.startsWith("/projects/client-work/bc-ai-ecosystem/")).toBe(true);
   imageItems.forEach((item) => {
     expect(item.width).toBeGreaterThan(0);
     expect(item.height).toBeGreaterThan(0);
-    expect(item.src.startsWith("/projects/bc-ai-ecosystem/")).toBe(true);
+    expect(item.src.startsWith("/projects/client-work/bc-ai-ecosystem/")).toBe(true);
   });
 });
 
@@ -50,10 +50,10 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(videoItems).toHaveLength(4);
   expect(videoItems.map((item) => item.src)).toEqual(
     expect.arrayContaining([
-      "/projects/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg",
-      "/projects/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg",
-      "/projects/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg",
-      "/projects/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg"
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg",
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg",
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg",
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg"
     ])
   );
   expect(videoItems.map((item) => item.href)).toEqual(
@@ -79,11 +79,11 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(videoItems.find((item) => item.href === "https://youtu.be/wwMFyMqo19M")?.description.en).toBe(
     "Find out how a natural history collection is digitized at the Beaty Biodiversity Museum, including 3D scanning and collection database work."
   );
-  expect(staticItems.some((item) => item.src === "/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg")).toBe(true);
-  expect(staticItems.find((item) => item.src === "/projects/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg")?.href).toBe(
+  expect(staticItems.some((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg")).toBe(true);
+  expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg")?.href).toBe(
     "https://explore.beatymuseum.ubc.ca/assets/guides/visitorguide-CN.pdf"
   );
-  expect(staticItems.find((item) => item.src === "/projects/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg")?.href).toBe(
+  expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg")?.href).toBe(
     "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
   );
   expect(project.summary.zh).toBe("为 Beaty Biodiversity Museum 设计产出的手册、标识、年度报告与视频相关成果。");
@@ -105,4 +105,50 @@ test("archive-backed organization projects use the archive collection naming sch
     expect(project.projectType.en).toBe("Archive Collection");
     expect(project.projectType.zh).toBe("档案集合");
   });
+});
+
+test("adds dedicated commissioned and personal video archive projects with normalized asset paths", () => {
+  const commissioned = getProjectBySlug("commissioned-video-work");
+  const personalVideo = getProjectBySlug("personal-video-projects");
+  const fraud = getProjectBySlug("fraud");
+  const thePills = getProjectBySlug("the-pills");
+  const gourd = getProjectBySlug("gourd");
+  const persona5 = getProjectBySlug("persona-5-style-campaign-video");
+  const projectRace = getProjectBySlug("project-race");
+
+  if (!commissioned || !personalVideo || !fraud || !thePills || !gourd) {
+    throw new Error("Expected video archive and film projects to exist");
+  }
+
+  expect(commissioned.archiveGroup).toBe("film-video");
+  expect(commissioned.title.en).toBe("Commissioned Video Work");
+  expect(commissioned.media.filter((item) => item.archiveKind === "video")).toHaveLength(2);
+  expect(commissioned.media.map((item) => item.src)).toEqual(
+    expect.arrayContaining([
+      "/projects/film-video/video/youtube-WlLGuSej0Yg.jpg",
+      "/projects/film-video/video/youtube-sn_P6wawBLk.jpeg"
+    ])
+  );
+  expect(commissioned.media.find((item) => item.href === "https://youtu.be/WlLGuSej0Yg")?.title.en).toBe(
+    "Notion 繁體中文版發布會 Traditional Chinese Launch Party"
+  );
+  expect(commissioned.media.find((item) => item.href === "https://youtu.be/sn_P6wawBLk")?.title.en).toBe("Iris's Lain");
+
+  expect(personalVideo.archiveGroup).toBe("personal-video");
+  expect(personalVideo.title.en).toBe("Personal Video Projects");
+  expect(personalVideo.media.filter((item) => item.archiveKind === "video")).toHaveLength(3);
+  expect(personalVideo.media.map((item) => item.href)).toEqual(
+    expect.arrayContaining([
+      "https://youtu.be/kdPPnUPtH-E",
+      "https://youtu.be/i64iXe_CPfw/",
+      "https://youtu.be/t9Si3THY5OU"
+    ])
+  );
+
+  expect(fraud.coverImage).toBe("/projects/film-video/film/fraud/cover.jpg");
+  expect(thePills.coverImage).toBe("/projects/film-video/film/the-pills/cover.jpg");
+  expect(gourd.title.zh).toBe("清兵卫");
+  expect(gourd.coverImage).toBe("/projects/film-video/film/gourd/stills/still-gourd-01.png");
+  expect(persona5).toBeUndefined();
+  expect(projectRace).toBeUndefined();
 });

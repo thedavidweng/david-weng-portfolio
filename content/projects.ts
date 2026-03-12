@@ -3,6 +3,7 @@ import { getLocalizedText, localized } from "@/lib/i18n";
 import { beatyBiodiversityMuseumArchive } from "@/content/archives/beaty-biodiversity-museum";
 import { bcAiEcosystemArchive } from "@/content/archives/bc-ai-ecosystem";
 import { theUpgradeAiArchive } from "@/content/archives/theupgrade-ai";
+import { fraudFilmDetails, gourdFilmDetails, thePillsFilmDetails } from "@/content/film-data";
 import { getArchiveCoverItem, getArchiveFilePath } from "@/lib/archives";
 
 export const projectSectionContent = {
@@ -40,7 +41,10 @@ export const projectDetailContent = {
   previewDialogLabel: localized("Image preview", "图片预览"),
   closePreviewLabel: localized("Close preview", "关闭预览"),
   openResourceLabel: localized("Open resource", "打开资源"),
-  watchOnYouTubeLabel: localized("Watch on YouTube", "前往 YouTube 观看")
+  watchOnYouTubeLabel: localized("Watch on YouTube", "前往 YouTube 观看"),
+  castAndCrewTitle: localized("Cast and Crew", "演职人员"),
+  stillsTitle: localized("Stills", "剧照"),
+  postersTitle: localized("Posters", "海报")
 };
 
 const beatyCover = getArchiveCoverItem(beatyBiodiversityMuseumArchive);
@@ -62,7 +66,7 @@ export const projects: ProjectItem[] = [
     coverPalette: ["#091520", "#173c58", "#d2e8ff"],
     coverImage: beatyCover
       ? getArchiveFilePath("beaty-biodiversity-museum", beatyCover.file)
-      : "/projects/beaty-biodiversity-museum/report/legacy-annual-report.jpeg",
+      : "/projects/client-work/beaty-biodiversity-museum/report/legacy-annual-report.jpeg",
     coverAlt: beatyCover?.title ?? localized(
       "Cover preview of the Beaty museum archive collection",
       "Beaty 博物馆档案集合封面预览"
@@ -128,154 +132,179 @@ export const projects: ProjectItem[] = [
   },
   {
     slug: "fraud",
-    title: localized("FRAÜD", "FRAÜD"),
+    film: fraudFilmDetails,
+    title: localized("FRAÜD", "信途"),
     code: "[FILM-04]",
     posterWord: "FRAUD",
     category: localized("Film / Video", "电影 / 视频"),
     year: "2024",
     projectType: localized("Narrative Film", "剧情短片"),
-    duration: localized("Festival / Listing", "电影节 / 条目页面"),
+    duration: localized("Short Film / Drama", "短片 / 剧情"),
     coverLabel: localized("Film / Narrative", "电影 / 叙事"),
     coverPalette: ["#140f12", "#5f2533", "#f0d6d0"],
-    coverImage: "/projects/fraud/cover.jpg",
-    coverAlt: localized("Poster art for FRAÜD", "FRAÜD 海报"),
+    coverImage: "/projects/film-video/film/fraud/cover.jpg",
+    coverAlt: localized("FRAÜD cover frame", "《信途》封面画面"),
     teaser: localized(
-      "Film about fraud among international students.",
-      "关于国际学生欺诈与压力的影片。"
+      "Short drama about debt, manipulation, and fraud among international students.",
+      "围绕债务、操控与国际学生欺诈展开的剧情短片。"
     ),
     summary: localized(
-      "Narrative film project centered on fraud and pressure among international students, developed with a tense social frame and direct dramatic stakes.",
-      "围绕国际学生欺诈与压力展开的剧情片，以直接的戏剧冲突和紧张的社会语境推进叙事。"
+      "Facing debt and manipulation from their senior in academia, two international students are pushed toward financial fraud and the fallout that follows.",
+      "面对学术体系中学姐的债务压迫与操控，两名国际学生一步步被推向金融欺诈，以及随之而来的后果。"
     ),
-    roles: localized(["Film", "Production", "Promotion"], ["电影制作", "制片", "宣传"]),
+    roles: localized(["Direction", "Writing", "Editing"], ["导演", "编剧", "剪辑"]),
     highlights: localized(
       [
-        "Builds pressure through a grounded social premise rather than spectacle.",
-        "Frames migration anxiety and fraud through a concentrated narrative setup."
+        "Builds pressure through academic debt, coercion, and social precarity rather than spectacle.",
+        "Holds the moral tension close to the characters through a concentrated short-film runtime."
       ],
-      ["不是靠奇观，而是通过贴近现实的社会处境逐步积累压力。", "以高度集中的叙事设定处理迁移焦虑与欺诈主题。"]
+      ["不是靠奇观，而是通过债务、操控与现实处境逐步积累压力。", "在短片长度内把道德困境紧贴角色展开。"]
     ),
     externalLinks: [
       { label: localized("IMDb", "IMDb"), href: "https://www.imdb.com/title/tt32035504/" },
       { label: localized("Douban", "豆瓣"), href: "https://movie.douban.com/subject/36934977/" },
       { label: localized("FilmFreeway", "FilmFreeway"), href: "https://filmfreeway.com/fraudmovie" }
     ],
-    media: [
-      {
-        type: "image",
-        title: localized("Poster Artwork", "海报主视觉"),
-        description: localized("Primary key art used to represent the film.", "用于代表影片的主海报。"),
-        src: "/projects/fraud/cover.jpg",
-        href: "https://filmfreeway.com/fraudmovie"
-      }
-    ]
+    media: []
   },
   {
     slug: "the-pills",
-    title: localized("The Pills", "The Pills"),
+    film: thePillsFilmDetails,
+    title: localized("The Pills", "药丸"),
     code: "[FILM-05]",
     posterWord: "PILLS",
     category: localized("Film / Video", "电影 / 视频"),
     year: "2023",
     projectType: localized("Horror Microfilm", "惊悚微电影"),
-    duration: localized("Trailer / Festival", "预告 / 电影节"),
+    duration: localized("Microfilm / Horror", "微电影 / 惊悚"),
     coverLabel: localized("Microfilm / Horror", "微电影 / 惊悚"),
     coverPalette: ["#0e0e10", "#60313e", "#f1d5db"],
-    coverImage: "/projects/the-pills/cover.jpg",
-    coverAlt: localized("Poster for The Pills horror microfilm", "《The Pills》海报"),
+    coverImage: "/projects/film-video/film/the-pills/cover.jpg",
+    coverAlt: localized("The Pills cover frame", "《药丸》封面画面"),
     teaser: localized(
-      "Horror microfilm inspired by the Scream series.",
-      "受《惊声尖叫》系列启发的惊悚微电影。"
+      "Short horror microfilm built around a medicine-fueled nightmare setup.",
+      "围绕药物失控设定展开的惊悚微电影。"
     ),
     summary: localized(
-      "Short horror microfilm developed around genre mood, compressed suspense, and compact visual storytelling.",
+      "When his medication stops working, a man in a dental office is unexpectedly tormented by terrifying hallucinations.",
       "以类型片氛围、压缩式悬念推进与紧凑视觉叙事为核心的惊悚微电影。"
     ),
-    roles: localized(["Film", "Editing", "Promotion"], ["电影制作", "剪辑", "宣传"]),
+    roles: localized(["Direction", "Writing", "Editing"], ["导演", "编剧", "剪辑"]),
     highlights: localized(
       [
-        "Anchored in a strong genre reference point with a distinct horror tone.",
-        "Uses tight pacing and controlled reveal to keep the setup immediate."
+        "Uses a compressed runtime to establish dread quickly through genre framing.",
+        "Builds its horror tone around the bodily unease of a routine clinic visit."
       ],
-      ["在明确的类型片参考下建立出较强的惊悚氛围。", "通过紧凑节奏与信息控制让设定迅速成立。"]
+      ["在极短时长内快速建立惊悚气氛。", "把恐惧感建立在日常诊所场景与身体不适之上。"]
     ),
     externalLinks: [
-      { label: localized("FilmFreeway", "FilmFreeway"), href: "https://filmfreeway.com/thepills2023" },
-      { label: localized("Launch Trailer", "上线预告"), href: "https://youtu.be/J0LGfoZQ-0Q" }
+      { label: localized("IMDb", "IMDb"), href: "https://www.imdb.com/title/tt35674862/" },
+      { label: localized("Douban", "豆瓣"), href: "https://movie.douban.com/subject/37235581/" },
+      { label: localized("FilmFreeway", "FilmFreeway"), href: "https://filmfreeway.com/thepillsmovie" }
     ],
-    media: [
-      {
-        type: "image",
-        title: localized("Poster Artwork", "海报主视觉"),
-        description: localized("Key art used for the public-facing film page.", "用于公开影片页面的主海报。"),
-        src: "/projects/the-pills/cover.jpg",
-        href: "https://filmfreeway.com/thepills2023"
-      },
-      {
-        type: "video",
-        title: localized("Horror Sequence", "惊悚片段"),
-        description: localized(
-          "Condensed sequence showing the microfilm's genre pacing and tonal setup.",
-          "浓缩呈现这部微电影的类型节奏与氛围建立方式。"
-        ),
-        href: "https://youtu.be/J0LGfoZQ-0Q"
-      }
-    ]
+    media: []
   },
   {
-    slug: "persona-5-style-campaign-video",
-    title: localized("Persona 5 Style Campaign Video", "Persona 5 Style Campaign Video"),
-    code: "[VIDEO-06]",
-    posterWord: "P5",
+    slug: "gourd",
+    film: gourdFilmDetails,
+    title: localized("Gourd", "清兵卫"),
+    code: "[FILM-12]",
+    posterWord: "GOURD",
     category: localized("Film / Video", "电影 / 视频"),
-    year: "2023",
-    projectType: localized("Video Piece", "视频作品"),
-    duration: localized("Social / YouTube", "社交平台 / YouTube"),
-    coverLabel: localized("Video / Editing / Motion Graphics", "视频 / 剪辑 / 动态图形"),
-    coverPalette: ["#0d0d0f", "#8f1e27", "#f4dad6"],
-    coverImage: "/projects/persona-5-style-campaign-video/cover.jpg",
-    coverAlt: localized("Persona 5 style campaign video still", "Persona 5 风格竞选视频截图"),
+    year: "2020",
+    projectType: localized("Short Film", "短片"),
+    duration: localized("Student Film", "学生短片"),
+    coverLabel: localized("Film / Short", "电影 / 短片"),
+    coverPalette: ["#0f1011", "#2d2c26", "#d9ceb8"],
+    coverImage: "/projects/film-video/film/gourd/stills/still-gourd-01.png",
+    coverAlt: localized("Frame from Gourd", "《清兵卫》剧照"),
     teaser: localized(
-      "Stylized election campaign video for UBC CSSA 2023, drawing on Persona 5 aesthetics.",
-      "为 UBC CSSA 2023 竞选制作的风格化视频，视觉上借鉴 Persona 5。"
+      "Early short film project centered on a young ensemble and a spare, atmospheric setup.",
+      "早期短片项目，以年轻群像和克制氛围为核心。"
     ),
     summary: localized(
-      "Video piece produced for the UBC CSSA 2023 General Election, using a strong visual reference style to deliver a more distinctive social-first result.",
-      "为 UBC CSSA 2023 General Election 制作的视频作品，以鲜明的视觉参考风格完成更具辨识度、面向社交传播的表达。"
+      "Early short film project built around a compact ensemble and a restrained visual atmosphere.",
+      "以年轻群像与克制氛围构成的早期短片项目。"
     ),
-    roles: localized(
-      ["Video Editing", "Graphic Design", "Campaign Content"],
-      ["视频剪辑", "平面设计", "竞选内容制作"]
-    ),
+    roles: localized(["Direction", "Writing", "Editing"], ["导演", "编剧", "剪辑"]),
     highlights: localized(
       [
-        "Adapted an instantly recognizable style into a campaign context.",
-        "Turns a borrowed pop reference into a sharper social-first campaign voice."
+        "Keeps the mise-en-scène spare to foreground performance and atmosphere.",
+        "Shows an earlier stage of your narrative film language before the later festival pieces."
       ],
-      ["将高度可识别的视觉风格转译到竞选传播语境中。", "把借用而来的流行文化视觉转成更鲜明的社交传播语气。"]
+      ["通过克制的场面调度把注意力集中到表演与气氛上。", "可以看出在后续电影节短片之前，更早期的叙事电影语言。"]
     ),
     externalLinks: [
-      { label: localized("Watch on YouTube", "在 YouTube 观看"), href: "https://youtu.be/kdPPnUPtH-E" },
-      { label: localized("Watch on BiliBili", "在 Bilibili 观看"), href: "https://www.bilibili.com/video/BV1uL411S7Da/" }
+      { label: localized("IMDb", "IMDb"), href: "https://www.imdb.com/title/tt35677249/" },
+      { label: localized("FilmFreeway", "FilmFreeway"), href: "https://filmfreeway.com/GOURD" }
     ],
-    media: [
-      {
-        type: "image",
-        title: localized("Campaign Still", "宣传片画面"),
-        description: localized("Still frame representing the campaign's graphic language.", "代表该宣传片视觉语言的画面截图。"),
-        src: "/projects/persona-5-style-campaign-video/cover.jpg",
-        href: "https://youtu.be/kdPPnUPtH-E"
-      },
-      {
-        type: "video",
-        title: localized("Campaign Video", "竞选视频"),
-        description: localized(
-          "Main cut of the campaign piece, focused on rhythm, graphic punch, and tone.",
-          "这支竞选视频的主体成片，重点在节奏、图形冲击力与整体语气。"
-        ),
-        href: "https://youtu.be/kdPPnUPtH-E"
-      }
-    ]
+    media: []
+  },
+  {
+    slug: "commissioned-video-work",
+    archiveGroup: "film-video",
+    title: localized("Commissioned Video Work", "Commissioned Video Work"),
+    code: "[VIDEO-10]",
+    posterWord: "CLIENT",
+    category: localized("Film / Video", "电影 / 视频"),
+    year: "2026",
+    projectType: localized("Archive Collection", "档案集合"),
+    duration: localized("Commissioned / YouTube", "委托项目 / YouTube"),
+    coverLabel: localized("Archive / Commissioned / YouTube", "档案 / 委托项目 / YouTube"),
+    coverPalette: ["#0a0d14", "#24324f", "#dae7ff"],
+    coverImage: "/projects/film-video/video/youtube-WlLGuSej0Yg.jpg",
+    coverAlt: localized(
+      "Commissioned video archive cover",
+      "委托视频档案封面"
+    ),
+    teaser: localized(
+      "Archive page for commissioned video projects.",
+      "用于整理受委托制作视频项目的集合页。"
+    ),
+    summary: localized(
+      "Archive for video projects created on commission.",
+      "汇集受委托制作的视频项目。"
+    ),
+    roles: localized(
+      ["Video Editing", "Motion Graphics", "Archive Curation"],
+      ["视频剪辑", "动态图形", "档案整理"]
+    ),
+    highlights: localized([], []),
+    externalLinks: [],
+    media: []
+  },
+  {
+    slug: "personal-video-projects",
+    archiveGroup: "personal-video",
+    title: localized("Personal Video Projects", "Personal Video Projects"),
+    code: "[VIDEO-11]",
+    posterWord: "PERSONAL",
+    category: localized("Film / Video", "电影 / 视频"),
+    year: "2026",
+    projectType: localized("Archive Collection", "档案集合"),
+    duration: localized("Personal / YouTube", "个人项目 / YouTube"),
+    coverLabel: localized("Archive / Personal / YouTube", "档案 / 个人项目 / YouTube"),
+    coverPalette: ["#0e1014", "#2b3d5d", "#d8e3f8"],
+    coverImage: "/projects/personal-video/video/persona-5-style-campaign-video-cover.jpg",
+    coverAlt: localized(
+      "Personal video archive cover",
+      "个人视频档案封面"
+    ),
+    teaser: localized(
+      "Collection page for personal video pieces ranging from campaign experiments to playful short-form edits.",
+      "用于整理从竞选实验视频到趣味短片剪辑的个人视频集合页。"
+    ),
+    summary: localized(
+      "Personal video archive bringing together stylized campaign edits and web-native short-form experiments.",
+      "个人创作的视频项目。"
+    ),
+    roles: localized(
+      ["Video Editing", "Concept Development", "Archive Curation"],
+      ["视频剪辑", "概念发展", "档案整理"]
+    ),
+    highlights: localized([], []),
+    externalLinks: [],
+    media: []
   },
   {
     slug: "designs-for-bc-ai-ecosystem",
@@ -291,7 +320,7 @@ export const projects: ProjectItem[] = [
     coverPalette: ["#0b0f16", "#6f1a28", "#f2d7d4"],
     coverImage: bcAiCover
       ? getArchiveFilePath(bcAiEcosystemArchive.group, bcAiCover.file)
-      : "/projects/bc-ai-ecosystem/covers/legacy-portfolio.png",
+      : "/projects/client-work/bc-ai-ecosystem/covers/legacy-portfolio.png",
     coverAlt: bcAiCover?.title ?? localized(
       "Preview image for the BC plus AI Ecosystem archive collection",
       "BC + AI Ecosystem 档案集合预览图"
@@ -326,7 +355,7 @@ export const projects: ProjectItem[] = [
     coverPalette: ["#0c0f12", "#421728", "#e8d8db"],
     coverImage: theUpgradeCover
       ? getArchiveFilePath(theUpgradeAiArchive.group, theUpgradeCover.file)
-      : "/projects/theupgrade-ai/covers/meet-our-team.png",
+      : "/projects/client-work/theupgrade-ai/covers/meet-our-team.png",
     coverAlt: theUpgradeCover?.title ?? localized(
       "Preview image for TheUpgrade.AI archive collection",
       "TheUpgrade.AI 档案集合预览图"
@@ -346,58 +375,6 @@ export const projects: ProjectItem[] = [
     highlights: localized([], []),
     externalLinks: [],
     media: []
-  },
-  {
-    slug: "project-race",
-    title: localized("Project Race", "Project Race"),
-    code: "[FILM-09]",
-    posterWord: "RACE",
-    category: localized("Film / Video", "电影 / 视频"),
-    year: "2023",
-    projectType: localized("Toy Car Race Short", "玩具车竞速短片"),
-    duration: localized("Short Video", "短视频"),
-    coverLabel: localized("Short / Experimental Play", "短片 / 实验性创作"),
-    coverPalette: ["#101216", "#1b3d67", "#dce9fa"],
-    coverImage: "/projects/project-race/cover.jpg",
-    coverAlt: localized("Frame from Project Race toy car race short", "Project Race 画面截图"),
-    teaser: localized(
-      "Toy car race short built around miniature motion, pace, and playful visual construction.",
-      "围绕微缩运动、节奏与趣味视觉构建的玩具车竞速短片。"
-    ),
-    summary: localized(
-      "Compact short-form video project built around a toy car race concept, emphasizing movement, playful framing, and accessible web distribution.",
-      "以玩具车竞速为概念的短视频项目，强调运动感、趣味性构图与适合网络传播的轻量表达。"
-    ),
-    roles: localized(["Video Editing", "Short-form Production"], ["视频剪辑", "短片制作"]),
-    highlights: localized(
-      [
-        "Shows hands-on experimentation with pace, framing, and miniature action.",
-        "Leans into play, motion, and scale illusion rather than narrative complexity."
-      ],
-      ["展示了在节奏、构图与微缩动作表达上的动手实验。", "重点在玩具尺度、运动感与趣味表达，而不是复杂剧情。"]
-    ),
-    externalLinks: [
-      { label: localized("Watch on YouTube", "在 YouTube 观看"), href: "https://youtu.be/i64iXe_CPfw/" },
-      { label: localized("Watch on BiliBili", "在 Bilibili 观看"), href: "https://www.bilibili.com/video/BV1PM411q7hA/" }
-    ],
-    media: [
-      {
-        type: "image",
-        title: localized("Project Still", "项目画面"),
-        description: localized("Representative frame from the short.", "短片中的代表性画面。"),
-        src: "/projects/project-race/cover.jpg",
-        href: "https://youtu.be/i64iXe_CPfw/"
-      },
-      {
-        type: "video",
-        title: localized("Short Video", "短片视频"),
-        description: localized(
-          "Main cut focused on motion, playful framing, and miniature race energy.",
-          "主体成片围绕运动感、趣味构图与微缩竞速的能量展开。"
-        ),
-        href: "https://youtu.be/i64iXe_CPfw/"
-      }
-    ]
   }
 ];
 
