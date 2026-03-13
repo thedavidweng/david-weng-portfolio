@@ -13,6 +13,11 @@ type ProjectMediaLightboxProps = {
   previewDialogLabel: LocalizedText;
 };
 
+type PreviewImageItem = ProjectMediaItem & {
+  type: "image";
+  src: string;
+};
+
 export function ProjectMediaLightbox({
   activeItem,
   closePreviewLabel,
@@ -21,7 +26,8 @@ export function ProjectMediaLightbox({
   previewDialogLabel
 }: ProjectMediaLightboxProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const isOpen = activeItem?.type === "image" && !!activeItem.src;
+  const previewItem = isPreviewImageItem(activeItem) ? activeItem : null;
+  const isOpen = previewItem !== null;
 
   const handleCancel = useCallback(
     (e: Event) => {
@@ -35,11 +41,15 @@ export function ProjectMediaLightbox({
     const dialog = dialogRef.current;
     if (!dialog) return;
 
-    if (isOpen && !dialog.open) {
+    if (!dialog.open) {
       dialog.showModal();
-    } else if (!isOpen && dialog.open) {
-      dialog.close();
     }
+
+    return () => {
+      if (dialog.open) {
+        dialog.close();
+      }
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -59,6 +69,10 @@ export function ProjectMediaLightbox({
     [onClose]
   );
 
+  if (!previewItem) {
+    return null;
+  }
+
   return (
     <dialog
       ref={dialogRef}
@@ -66,29 +80,29 @@ export function ProjectMediaLightbox({
       className="project-media__lightbox"
       onClick={handleBackdropClick}
     >
-      {isOpen && activeItem ? (
-        <>
-          <button
-            aria-label={projectLabel(closePreviewLabel, locale)}
-            className="project-media__lightbox-close"
-            onClick={onClose}
-            type="button"
-          >
-            close
-          </button>
-          <div className="project-media__lightbox-frame" onClick={(e) => e.stopPropagation()}>
-            <Image
-              alt={projectLabel(activeItem.title, locale)}
-              className="project-media__lightbox-image"
-              height={activeItem.height ?? 900}
-              priority
-              sizes="90vw"
-              src={activeItem.src!}
-              width={activeItem.width ?? 1600}
-            />
-          </div>
-        </>
-      ) : null}
+      <button
+        aria-label={projectLabel(closePreviewLabel, locale)}
+        className="project-media__lightbox-close"
+        onClick={onClose}
+        type="button"
+      >
+        close
+      </button>
+      <div className="project-media__lightbox-frame" onClick={(e) => e.stopPropagation()}>
+        <Image
+          alt={projectLabel(previewItem.title, locale)}
+          className="project-media__lightbox-image"
+          height={previewItem.height ?? 900}
+          priority
+          sizes="90vw"
+          src={previewItem.src}
+          width={previewItem.width ?? 1600}
+        />
+      </div>
     </dialog>
   );
+}
+
+function isPreviewImageItem(item: ProjectMediaItem | null): item is PreviewImageItem {
+  return item?.type === "image" && typeof item.src === "string";
 }

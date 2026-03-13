@@ -156,6 +156,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 40;
+  padding-top: env(safe-area-inset-top);
   backdrop-filter: blur(16px);
   background: rgba(7, 6, 7, 0.76);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -235,6 +236,18 @@ main {
     opacity var(--ease);
 }
 
+.site-header__nav-link + .site-header__nav-link::before {
+  position: absolute;
+  left: -0.56rem;
+  top: 50%;
+  width: 1px;
+  height: 1rem;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-50%);
+  content: "";
+  pointer-events: none;
+}
+
 .site-header__nav-link::after {
   position: absolute;
   left: 0;
@@ -294,41 +307,6 @@ main {
 .site-main--home .hero__frame {
   border-top-color: rgba(255, 255, 255, 0.02);
   background: linear-gradient(180deg, rgba(11, 10, 12, 0.98), rgba(7, 7, 9, 0.98));
-}
-
-.hero__mobile-nav {
-  display: none;
-  align-items: center;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 0.95rem 1.5rem 1.05rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  scrollbar-width: none;
-}
-
-.hero__mobile-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.hero__mobile-nav-link {
-  flex: 0 0 auto;
-  color: var(--text-soft);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color var(--ease);
-}
-
-.hero__mobile-nav-link:focus-visible {
-  color: var(--text);
-}
-
-@media (hover: hover) {
-  .hero__mobile-nav-link:hover {
-    color: var(--text);
-  }
 }
 
 .site-main--home .hero__frame::before {
@@ -2323,8 +2301,7 @@ main {
     align-items: center;
   }
 
-  .site-header--home .site-header__descriptor,
-  .site-header--home .site-header__nav {
+  .site-header--home .site-header__descriptor {
     display: none;
   }
 
@@ -2339,10 +2316,6 @@ main {
   .site-main--home .hero__frame {
     border-top-left-radius: calc(var(--radius-xl) - 6px);
     border-top-right-radius: calc(var(--radius-xl) - 6px);
-  }
-
-  .hero__mobile-nav {
-    display: flex;
   }
 
   .hero__content,

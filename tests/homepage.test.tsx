@@ -74,7 +74,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(screen.queryByRole("link", { name: /^about$/i })).not.toBeInTheDocument();
   const hero = container.querySelector(".hero");
   expect(hero).toBeTruthy();
-  expect((hero as HTMLElement).querySelector(".hero__mobile-nav")).toBeTruthy();
+  expect((hero as HTMLElement).querySelector(".hero__mobile-nav")).toBeFalsy();
   expect((hero as HTMLElement).querySelector(".hero__grid")).toBeTruthy();
   expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities")).toBeTruthy();
   expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities .services__grid")).toBeTruthy();
@@ -87,6 +87,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(screen.getByRole("heading", { name: /^contact$/i })).toBeInTheDocument();
   expect(screen.getByText(/^03 \/ contact$/i)).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /email me/i })).toBeInTheDocument();
+  expect(screen.getByRole("navigation", { name: /main navigation/i })).toBeInTheDocument();
   expect(container.querySelector(".site-shell--home")).toBeTruthy();
   expect(container.querySelector(".site-main--home")).toBeTruthy();
   expect(container.querySelector(".site-header--home")).toBeTruthy();
@@ -118,7 +119,7 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(container.querySelector(".hero.hero--zh")).toBeTruthy();
   const hero = container.querySelector(".hero");
   expect(hero).toBeTruthy();
-  expect((hero as HTMLElement).querySelector(".hero__mobile-nav")).toBeTruthy();
+  expect((hero as HTMLElement).querySelector(".hero__mobile-nav")).toBeFalsy();
   expect((hero as HTMLElement).querySelector(".hero__grid")).toBeTruthy();
   expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities")).toBeTruthy();
   expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities .services__grid")).toBeTruthy();

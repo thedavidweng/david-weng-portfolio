@@ -114,7 +114,7 @@ test("mobile film pages define a dedicated stacked layout with tighter credits a
   expect(css).toContain("gap: 0.02rem;");
 });
 
-test("mobile home shell uses a single-row compressed header and blends the header into the hero", () => {
+test("mobile home shell keeps a visible header nav with built-in separators instead of a duplicate hero nav", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
 
   expect(css).toContain(".site-header--home");
@@ -123,11 +123,21 @@ test("mobile home shell uses a single-row compressed header and blends the heade
   expect(css).toContain(".site-header__nav");
   expect(css).toContain(".site-header__nav-link");
   expect(css).toContain("text-decoration: none;");
-  expect(css).toContain(".hero__mobile-nav");
-  expect(css).toContain(".hero__mobile-nav-link");
+  expect(css).toContain(".site-header__nav-link + .site-header__nav-link::before");
+  expect(css).toContain("width: 1px;");
+  expect(css).not.toContain('content: "/";');
   expect(css).toContain("@media (max-width: 760px)");
-  expect(css).toContain(".site-header--home .site-header__nav");
-  expect(css).toContain("display: none;");
+  const hiddenHomeNavBlock = css.match(
+    /\.site-header--home\s+\.site-header__nav\s*\{[^}]*display:\s*none;[^}]*\}/
+  );
+  expect(hiddenHomeNavBlock).toBeNull();
+});
+
+test("sticky header reserves the iPhone safe-area inset instead of exposing page content behind the status bar", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const headerBlock = css.match(/\.site-header\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(headerBlock).toContain("padding-top: env(safe-area-inset-top);");
 });
 
 test("home backgrounds remove the red radial glow layers from the page and hero shell", () => {

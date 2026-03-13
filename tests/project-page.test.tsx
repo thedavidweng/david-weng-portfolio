@@ -267,6 +267,19 @@ test("opens a centered preview dialog when an archive image is clicked", async (
   expect(within(dialog).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
 });
 
+test("does not render idle preview dialogs before any project media is opened", () => {
+  const project = getProjectBySlug("fraud");
+
+  if (!project) {
+    throw new Error("Expected fraud project to exist");
+  }
+
+  const { container } = render(<ProjectPageView locale="en" pathname="/projects/fraud" project={project} />);
+
+  expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
+  expect(container.querySelectorAll("dialog")).toHaveLength(0);
+});
+
 test("archive project pages keep long english titles readable without poster-style uppercase stacking", () => {
   const project = getProjectBySlug("personal-video-projects");
 

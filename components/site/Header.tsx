@@ -31,6 +31,8 @@ export function Header({ locale, pathname }: HeaderProps) {
                 key={item.href}
                 className="site-header__nav-link"
                 href={resolveNavHref(item.href)}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
               >
                 {getLocalizedText(item.label, locale)}
               </Link>
