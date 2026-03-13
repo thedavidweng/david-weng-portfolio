@@ -2,7 +2,7 @@ import { projects } from "@/content/projects";
 import { getLocalizedText } from "@/lib/i18n";
 import type { Locale, ProjectItem } from "@/types/content";
 
-export const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film / Video", "Writing"] as const;
+export const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
 
 export const BOUNDARY_DRAG_THRESHOLD_PX = 96;
 export const BOUNDARY_DRAG_VELOCITY_PX_PER_MS = 0.58;

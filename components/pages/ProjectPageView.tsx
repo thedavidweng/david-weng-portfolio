@@ -23,9 +23,11 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const useImageWall = Boolean(project.archiveGroup);
   const isTitleOnly = project.detailLayout === "title-only";
   const isExternalHandoff = project.detailLayout === "external-handoff";
-  const isFilmVideoProject = project.category.en === "Film / Video";
-  const isDedicatedFilmProject = isFilmVideoProject && Boolean(project.film) && !useImageWall;
-  const isArchiveFilmVideoProject = isFilmVideoProject && useImageWall;
+  const isFilmProject = project.category.en === "Film";
+  const isVideoProject = project.category.en === "Video";
+  const isFilmOrVideoProject = isFilmProject || isVideoProject;
+  const isDedicatedFilmProject = isFilmProject && Boolean(project.film) && !useImageWall;
+  const isArchiveVideoProject = isVideoProject && useImageWall;
   const primaryExternalLink = project.externalLinks[0];
   const featuredVideo = project.media.find((item) => item.type === "video" && getYouTubeEmbedUrl(item.href));
   const featuredVideoEmbedUrl = featuredVideo ? getYouTubeEmbedUrl(featuredVideo.href) : null;
@@ -188,7 +190,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
           </Container>
         </section>
 
-        {!project.archiveGroup && !isTitleOnly && !isExternalHandoff && !isFilmVideoProject ? (
+        {!project.archiveGroup && !isTitleOnly && !isExternalHandoff && !isFilmOrVideoProject ? (
           <section className="project-detail">
             <Container>
               <div className="project-detail__grid">
@@ -247,7 +249,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
           </section>
         ) : null}
 
-        {!isTitleOnly && !isExternalHandoff && isFilmVideoProject && !isArchiveFilmVideoProject && !isDedicatedFilmProject ? (
+        {!isTitleOnly && !isExternalHandoff && isVideoProject && !isArchiveVideoProject ? (
           <section className="project-video-stage">
             <Container>
               {featuredVideoEmbedUrl ? (
@@ -266,7 +268,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
           </section>
         ) : null}
 
-        {!isTitleOnly && !isExternalHandoff && (!isFilmVideoProject || isArchiveFilmVideoProject) ? (
+        {!isTitleOnly && !isExternalHandoff && (!isFilmOrVideoProject || isArchiveVideoProject) ? (
           <section className="project-media">
             <Container>
               <div className="poster-section__intro">

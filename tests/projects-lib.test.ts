@@ -101,7 +101,7 @@ test("archive-backed organization projects use the archive collection naming sch
   [beaty, bcAi, theUpgrade].forEach((project) => {
     expect(project.title.en).toMatch(/^Archive for /);
     expect(project.category.en).toBe("Client");
-    expect(project.category.zh).toBe("客户 / 机构");
+    expect(project.category.zh).toBe("客户");
     expect(project.projectType.en).toBe("Archive Collection");
     expect(project.projectType.zh).toBe("档案集合");
   });
@@ -120,8 +120,15 @@ test("adds dedicated commissioned and personal video archive projects with norma
     throw new Error("Expected video archive and film projects to exist");
   }
 
+  expect(fraud.category.en).toBe("Film");
+  expect(fraud.category.zh).toBe("电影");
+  expect(thePills.category.en).toBe("Film");
+  expect(gourd.category.en).toBe("Film");
+
   expect(commissioned.archiveGroup).toBe("film-video");
   expect(commissioned.title.en).toBe("Commissioned Video Work");
+  expect(commissioned.category.en).toBe("Video");
+  expect(commissioned.category.zh).toBe("视频");
   expect(commissioned.media.filter((item) => item.archiveKind === "video")).toHaveLength(2);
   expect(commissioned.media.map((item) => item.src)).toEqual(
     expect.arrayContaining([
@@ -136,6 +143,8 @@ test("adds dedicated commissioned and personal video archive projects with norma
 
   expect(personalVideo.archiveGroup).toBe("personal-video");
   expect(personalVideo.title.en).toBe("Personal Video Projects");
+  expect(personalVideo.category.en).toBe("Video");
+  expect(personalVideo.category.zh).toBe("视频");
   expect(personalVideo.media.filter((item) => item.archiveKind === "video")).toHaveLength(3);
   expect(personalVideo.media.map((item) => item.href)).toEqual(
     expect.arrayContaining([

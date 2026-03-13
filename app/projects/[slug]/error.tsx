@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function ProjectError({
@@ -54,9 +55,9 @@ export default function ProjectError({
         <button className="button" onClick={reset} type="button">
           Try again
         </button>
-        <a className="button button--ghost" href="/#projects">
+        <Link className="button button--ghost" href="/#projects">
           Back to projects
-        </a>
+        </Link>
       </div>
     </div>
   );
