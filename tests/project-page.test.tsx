@@ -169,7 +169,7 @@ test("renders archive-backed BC + AI Ecosystem media with event photo credit", (
 
   expect(screen.getByRole("heading", { name: /Archive for BC \+ AI Ecosystem/i })).toBeInTheDocument();
   expect(screen.getByRole("img", { name: /April speaker graphic/i })).toBeInTheDocument();
-  expect(screen.getByRole("img", { name: /January meetup event photo/i })).toBeInTheDocument();
+  expect(screen.getByRole("img", { name: /January meetup photo/i })).toBeInTheDocument();
   expect(container.querySelector(".project-media__wall")).toBeTruthy();
   expect(container.querySelector(".react-photo-album--rows")).toBeTruthy();
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();

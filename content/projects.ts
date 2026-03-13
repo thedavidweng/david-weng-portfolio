@@ -17,6 +17,8 @@ export const projectSectionContent = {
   carouselLabel: localized("Projects carousel", "项目轮播"),
   previousLabel: localized("Previous projects", "上一组项目"),
   nextLabel: localized("Next projects", "下一组项目"),
+  previousButtonText: localized("Prev", "上一组"),
+  nextButtonText: localized("Next", "下一组"),
   openItemLabel: localized("Open archive item", "打开项目档案")
 };
 
@@ -54,7 +56,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "beaty-biodiversity-museum-annual-report-2022-2023",
     archiveGroup: "beaty-biodiversity-museum",
-    title: localized("Archive for Beaty Biodiversity Museum", "Archive for Beaty Biodiversity Museum"),
+    title: localized("Archive for Beaty Biodiversity Museum", "Beaty Biodiversity Museum 档案"),
     code: "[EDITORIAL-01]",
     posterWord: "BEATY",
     category: localized("Client / Organization", "客户 / 机构"),
@@ -71,12 +73,12 @@ export const projects: ProjectItem[] = [
       "Beaty 博物馆档案集合封面预览"
     ),
     teaser: localized(
-      "Archive collection grouping booklet, signage, report, and video work created for the Beaty museum.",
-      "汇集 Beaty 博物馆相关册页、导视、报告与视频成果的档案集合。"
+      "Booklet, signage, report, and video work for the Beaty Biodiversity Museum.",
+      "为 Beaty Biodiversity Museum 制作的册页、导视、报告与视频。"
     ),
     summary: localized(
-      "Booklets, signage, annual report layouts, and video-related work created for the Beaty Biodiversity Museum.",
-      "为 Beaty Biodiversity Museum 设计产出的手册、标识、年度报告与视频相关成果。"
+      "Booklets, signage, annual report layouts, and video work created for the Beaty Biodiversity Museum.",
+      "为 Beaty Biodiversity Museum 制作的手册、标识、年度报告版式与视频。"
     ),
     roles: localized(
       ["Graphic Design", "Editorial Layout", "Archive Curation"],
@@ -228,10 +230,10 @@ export const projects: ProjectItem[] = [
     roles: localized(["Direction", "Writing", "Editing"], ["导演", "编剧", "剪辑"]),
     highlights: localized(
       [
-        "Keeps the mise-en-scène spare to foreground performance and atmosphere.",
-        "Shows an earlier stage of your narrative film language before the later festival pieces."
+        "Spare mise-en-scène, foregrounding performance and atmosphere.",
+        "An earlier piece — before the later festival short films."
       ],
-      ["通过克制的场面调度把注意力集中到表演与气氛上。", "可以看出在后续电影节短片之前，更早期的叙事电影语言。"]
+      ["克制的场面调度，注意力集中在表演与气氛上。", "更早期的作品——在后续电影节短片之前。"]
     ),
     externalLinks: [
       { label: localized("IMDb", "IMDb"), href: "https://www.imdb.com/title/tt35677249/" },
@@ -242,7 +244,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "commissioned-video-work",
     archiveGroup: "film-video",
-    title: localized("Commissioned Video Work", "Commissioned Video Work"),
+    title: localized("Commissioned Video Work", "委托视频项目"),
     code: "[VIDEO-10]",
     posterWord: "CLIENT",
     category: localized("Film / Video", "电影 / 视频"),
@@ -257,12 +259,12 @@ export const projects: ProjectItem[] = [
       "委托视频档案封面"
     ),
     teaser: localized(
-      "Archive page for commissioned video projects.",
-      "用于整理受委托制作视频项目的集合页。"
+      "Video projects created on commission.",
+      "受委托制作的视频项目。"
     ),
     summary: localized(
-      "Archive for video projects created on commission.",
-      "汇集受委托制作的视频项目。"
+      "Video projects created on commission — event recaps, promotional content, and more.",
+      "受委托制作的视频项目——活动回顾、宣传内容等。"
     ),
     roles: localized(
       ["Video Editing", "Motion Graphics", "Archive Curation"],
@@ -275,7 +277,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "personal-video-projects",
     archiveGroup: "personal-video",
-    title: localized("Personal Video Projects", "Personal Video Projects"),
+    title: localized("Personal Video Projects", "个人视频项目"),
     code: "[VIDEO-11]",
     posterWord: "PERSONAL",
     category: localized("Film / Video", "电影 / 视频"),
@@ -290,16 +292,16 @@ export const projects: ProjectItem[] = [
       "个人视频档案封面"
     ),
     teaser: localized(
-      "Collection page for personal video pieces ranging from campaign experiments to playful short-form edits.",
-      "用于整理从竞选实验视频到趣味短片剪辑的个人视频集合页。"
+      "Personal video work — campaign edits, short films, and experiments.",
+      "个人视频作品——宣传片剪辑、短片与实验性项目。"
     ),
     summary: localized(
-      "Personal video archive bringing together stylized campaign edits and web-native short-form experiments.",
-      "个人创作的视频项目。"
+      "Personal video projects, from stylized campaign edits to short-form experiments.",
+      "个人视频项目，从风格化宣传片剪辑到短片实验。"
     ),
     roles: localized(
       ["Video Editing", "Concept Development", "Archive Curation"],
-      ["视频剪辑", "概念发展", "档案整理"]
+      ["视频剪辑", "概念开发", "档案整理"]
     ),
     highlights: localized([], []),
     externalLinks: [],
@@ -308,7 +310,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "designs-for-bc-ai-ecosystem",
     archiveGroup: "bc-ai-ecosystem",
-    title: localized("Archive for BC + AI Ecosystem", "Archive for BC + AI Ecosystem"),
+    title: localized("Archive for BC + AI Ecosystem", "BC + AI Ecosystem 档案"),
     code: "[DESIGN-07]",
     posterWord: "BCAI",
     category: localized("Client / Organization", "客户 / 机构"),
@@ -325,12 +327,12 @@ export const projects: ProjectItem[] = [
       "BC + AI Ecosystem 档案集合预览图"
     ),
     teaser: localized(
-      "Archive collection for BC plus AI Ecosystem, structured for social graphics, slides, event imagery, and mixed-format visual work.",
-      "为 BC + AI Ecosystem 整理社交视觉、幻灯片、活动照片与混合尺寸内容的档案集合。"
+      "Social graphics, slides, event photos, and design work for BC + AI Ecosystem.",
+      "为 BC + AI Ecosystem 制作的社交图片、幻灯片、活动照片与设计作品。"
     ),
     summary: localized(
-      "Collection page for design work created across the BC plus AI ecosystem, spanning meetup graphics, slides, social assets, and event documentation.",
-      "用于汇集 BC + AI Ecosystem 相关设计作品的集合页，涵盖 meetup 视觉、幻灯片、社交图片与活动记录。"
+      "Design work for BC + AI Ecosystem — meetup graphics, presentation slides, social assets, and event documentation.",
+      "BC + AI Ecosystem 的设计工作——线下聚会视觉、演示文稿、社交图片与活动记录。"
     ),
     roles: localized(
       ["Graphic Design", "Visual System", "Archive Curation"],
@@ -343,7 +345,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "designs-for-theupgrade-ai",
     archiveGroup: "theupgrade-ai",
-    title: localized("Archive for TheUpgrade.AI", "Archive for TheUpgrade.AI"),
+    title: localized("Archive for TheUpgrade.AI", "TheUpgrade.AI 档案"),
     code: "[DESIGN-08]",
     posterWord: "UPGRADE",
     category: localized("Client / Organization", "客户 / 机构"),
@@ -360,12 +362,12 @@ export const projects: ProjectItem[] = [
       "TheUpgrade.AI 档案集合预览图"
     ),
     teaser: localized(
-      "Archive collection for TheUpgrade.AI work, ready for branding, square graphics, presentation slides, and launch materials.",
-      "用于整理 TheUpgrade.AI 品牌视觉、方形图片、演示文稿与上线素材的档案集合。"
+      "Posters, social graphics, and brand visuals for TheUpgrade.AI.",
+      "为 TheUpgrade.AI 制作的海报、社交图片与品牌视觉。"
     ),
     summary: localized(
-      "Collection page for visual work made for TheUpgrade.AI, spanning posters, social graphics, and branded launch visuals.",
-      "用于整理 TheUpgrade.AI 视觉设计作品的集合页，涵盖海报、社交图片与品牌发布视觉。"
+      "Visual work for TheUpgrade.AI — posters, social graphics, and branded launch materials.",
+      "TheUpgrade.AI 的视觉设计——海报、社交图片与品牌发布物料。"
     ),
     roles: localized(
       ["Graphic Design", "Content Design", "Archive Curation"],

@@ -86,7 +86,7 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg")?.href).toBe(
     "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
   );
-  expect(project.summary.zh).toBe("为 Beaty Biodiversity Museum 设计产出的手册、标识、年度报告与视频相关成果。");
+  expect(project.summary.zh).toBe("为 Beaty Biodiversity Museum 制作的手册、标识、年度报告版式与视频。");
 });
 
 test("archive-backed organization projects use the archive collection naming scheme", () => {

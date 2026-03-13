@@ -136,7 +136,7 @@ test("renders localized labels and links in chinese", async () => {
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
-      name: /open project archive for beaty biodiversity museum/i
+      name: /Beaty Biodiversity Museum 档案/i
     })
   ).toHaveAttribute("href", "/zh/projects/beaty-biodiversity-museum-annual-report-2022-2023");
   expect(
@@ -157,22 +157,22 @@ test("renders localized labels and links in chinese", async () => {
   expect(screen.getByRole("button", { name: /电影\s*\/\s*视频/i })).toHaveClass("filter-chip--active");
   expect(
     screen.getByRole("link", {
-      name: /open project commissioned video work/i
+      name: /委托视频项目/i
     })
   ).toHaveAttribute("href", "/zh/projects/commissioned-video-work");
   expect(
     screen.getByRole("link", {
-      name: /open project personal video projects/i
+      name: /个人视频项目/i
     })
   ).toHaveAttribute("href", "/zh/projects/personal-video-projects");
   expect(
     screen.queryByRole("link", {
-      name: /open project persona 5 style campaign video/i
+      name: /persona 5/i
     })
   ).not.toBeInTheDocument();
   expect(
     screen.getByRole("link", {
-      name: /open project 清兵卫/i
+      name: /清兵卫/i
     })
   ).toHaveAttribute("href", "/zh/projects/gourd");
 });

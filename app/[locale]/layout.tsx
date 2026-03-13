@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { localizedRouteLocales } from "@/lib/routes";
+import { SetDocumentLang } from "@/components/site/SetDocumentLang";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -19,5 +20,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     notFound();
   }
 
-  return <div lang={locale}>{children}</div>;
+  return (
+    <div lang={locale}>
+      <SetDocumentLang lang={locale} />
+      {children}
+    </div>
+  );
 }

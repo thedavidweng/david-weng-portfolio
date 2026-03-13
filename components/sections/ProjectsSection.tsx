@@ -424,7 +424,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               onClick={() => scrollReel("previous")}
               type="button"
             >
-              {locale === "zh" ? "上一组" : "Prev"}
+              {getLocalizedText(projectSectionContent.previousButtonText, locale)}
             </button>
             <button
               aria-label={getLocalizedText(projectSectionContent.nextLabel, locale)}
@@ -433,7 +433,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               onClick={() => scrollReel("next")}
               type="button"
             >
-              {locale === "zh" ? "下一组" : "Next"}
+              {getLocalizedText(projectSectionContent.nextButtonText, locale)}
             </button>
           </div>
           <div
