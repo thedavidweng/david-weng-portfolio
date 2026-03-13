@@ -19,7 +19,7 @@ export const navigationItems = [
 ];
 
 export const heroContent = {
-  kicker: localized("Based in Vancouver · Visual Content Creator", "常驻温哥华 · 视觉内容创作者"),
+  kicker: localized("Visual Content Creator in Vancouver", "常驻温哥华 · 视觉内容创作者"),
   headline: localized(
     "Video, design, and Content operations.",
     "影像剪辑\n视觉设计\n内容运营"
