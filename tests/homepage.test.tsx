@@ -114,7 +114,7 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(screen.queryByRole("heading", { name: /^关于我$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^联系$/i })).toBeInTheDocument();
   expect(screen.getByText(/^03 \/ 联系$/i)).toBeInTheDocument();
-  expect(screen.getByText(/从概念、拍摄到后期与发布，完成完整的视觉内容交付/i)).toBeInTheDocument();
+  expect(screen.getByText(/视频剪辑、摄影、平面设计。从概念到交付。/i)).toBeInTheDocument();
   expect(container.querySelector(".hero.hero--zh")).toBeTruthy();
   const hero = container.querySelector(".hero");
   expect(hero).toBeTruthy();

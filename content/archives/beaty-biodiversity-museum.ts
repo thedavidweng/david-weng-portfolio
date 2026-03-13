@@ -23,8 +23,8 @@ beatyBiodiversityMuseumArchive.items = [
     kind: "report",
     title: localized("Beaty annual report archive spread", "Beaty 年度报告档案版面"),
     caption: localized(
-      "Initial report spread carried into the expanded Beaty archive.",
-      "作为 Beaty 扩展档案起点保留下来的报告版面。"
+      "Spread from the 2022–2023 annual report.",
+      "2022–2023 年度报告版面。"
     ),
     publishedUrl: "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf",
     order: 10

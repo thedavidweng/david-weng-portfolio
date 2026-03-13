@@ -25,12 +25,12 @@ export const heroContent = {
     "影像剪辑\n视觉设计\n内容运营"
   ),
   support: localized(
-    "A versatile digital content creator working across video production, photography, graphic design, and AI-integrated creative workflows.",
-    "从概念、拍摄到后期与发布，完成完整的视觉内容交付。"
+    "Video editing, photography, graphic design. Concept to delivery.",
+    "视频剪辑、摄影、平面设计。从概念到交付。"
   ),
   supportSecondary: localized(
-    "I build from concept to delivery for employers, collaborators, and research-minded teams who need visual work that feels considered and still ships cleanly.",
-    ""
+    "Working with teams and collaborators who need visual content that's well-made and ready to publish.",
+    "与需要高完成度、可直接发布的视觉内容的团队与合作者协作。"
   ),
   stats: [
     {
@@ -46,7 +46,7 @@ export const heroContent = {
     },
     {
       label: localized("Formats", "内容形式"),
-      value: localized("Film, campaign, research, publication, and web", "电影、campaign、研究、出版与网站")
+      value: localized("Film, campaign, research, publication, and web", "电影、宣传活动、研究、出版与网站")
     }
   ],
   visualHeadline: localized(
@@ -58,22 +58,22 @@ export const heroContent = {
     {
       title: localized("Current mode", "当前状态"),
       copy: localized(
-        "Visual storytelling anchored in post-production craft and cross-format systems thinking.",
-        "以剪辑与后期为核心，同时用跨媒介的系统思维组织视觉表达。"
+        "Post-production and editing as the core, with design and content work built around it.",
+        "以后期与剪辑为核心，围绕它展开设计与内容工作。"
       )
     },
     {
       title: localized("Best fit", "最佳合作"),
       copy: localized(
-        "Teams or projects that need one person who can cut, design, and structure content with continuity.",
-        "适合需要同一个人同时处理剪辑、设计与内容结构，保证整体连续性的团队或项目。"
+        "Projects that need one person to handle editing, design, and content — start to finish.",
+        "需要一个人完成剪辑、设计与内容的项目——从头到尾。"
       )
     },
     {
       title: localized("Contact", "合作方向"),
       copy: localized(
-        "Open to freelance editing, campaign work, event recap, and creative collaborations.",
-        "开放视频剪辑、campaign 制作、活动 recap 与创意合作。"
+        "Open to freelance editing, campaign work, event recaps, and creative collaborations.",
+        "接受自由剪辑、宣传活动、活动回顾与创意合作。"
       )
     }
   ],
@@ -115,8 +115,8 @@ export const servicesContent = {
   eyebrow: localized("01 / Core Capabilities", "01 / 核心能力"),
   title: localized("What I Do", "我能做什么"),
   description: localized(
-    "A tighter capability overview for people hiring across moving image, visual communication, and content operations.",
-    "为招聘、合作或研究场景快速说明我在影像、视觉沟通与内容运营方面能提供什么。"
+    "Video, photography, design, and content operations.",
+    "视频、摄影、设计与内容运营。"
   ),
   items: services
 };
@@ -125,22 +125,22 @@ export const aboutContent = {
   eyebrow: localized("03 / Background", "03 / 背景"),
   title: localized("About", "关于我"),
   lead: localized(
-    "A cross-media practice built around craft, systems, and end-to-end delivery.",
-    "一个围绕创作手艺、系统思维与端到端交付建立的跨媒介实践。"
+    "Video production, graphic design, and content operations — concept to delivery.",
+    "视频制作、平面设计与内容运营——从概念到交付。"
   ),
   body: localized(
-    "I am a versatile digital content creator specializing in AI-integrated creative workflows. My background spans video production, graphic design, and social media marketing, with a consistent focus on taking projects from concept to completion.",
-    "我是一名专注于 AI 整合创意流程的多面向数字内容创作者。我的背景横跨视频制作、平面设计与社交媒体营销，并始终强调从概念到完成的完整执行能力。"
+    "Background in video editing, photography, graphic design, and social media content. Most projects go from concept to final output in-house, with AI tools integrated where they improve speed or quality.",
+    "背景涵盖视频剪辑、摄影、平面设计与社交媒体内容。多数项目从概念到成品独立完成，在有助于提速或提升质量的环节引入 AI 工具。"
   ),
   bodySecondary: localized(
-    "I have also worked on research, publication, and teaching-adjacent projects, including co-developing and instructing a course on AI film production. That mix helps me contribute as both a hands-on maker and a systems-minded collaborator.",
-    "我也参与过研究、出版与教学相关项目，包括共同开发并教授一门关于 AI 电影制作的课程。这种经历让我既能作为一线创作者动手执行，也能作为重视系统与协作的伙伴参与项目。"
+    "Also involved in research, publication, and teaching — including co-developing and instructing a course on AI film production.",
+    "同时参与研究、出版与教学工作，包括共同开发并教授一门 AI 电影制作课程。"
   ),
   stats: [
-    { value: "AI", label: localized("Integrated into creative workflows, not used as decoration", "融入实际创作流程，而不是作为表面装饰") },
-    { value: "E2E", label: localized("Comfortable taking work from brief to final delivery", "能够从 brief 一路推进到最终交付") },
-    { value: "Film", label: localized("Narrative, microfilm, campaign, and event recap experience", "具备叙事短片、微电影、campaign 与活动 recap 经验") },
-    { value: "Research", label: localized("Publication and media studies work alongside production practice", "在影像制作之外也持续进行出版与媒体研究工作") }
+    { value: "AI", label: localized("Integrated into real workflows, not used as decoration", "融入实际流程，而非表面装饰") },
+    { value: "E2E", label: localized("From brief to final delivery", "从需求简报到最终交付") },
+    { value: "Film", label: localized("Narrative, microfilm, campaign, and event recaps", "叙事短片、微电影、宣传活动与活动回顾") },
+    { value: "Research", label: localized("Publication and media studies alongside production", "在制作之外持续进行出版与媒体研究") }
   ],
   resumeHref: "/documents/resume.pdf",
   linkedinHref: "https://www.linkedin.com/in/thedavidweng/",
@@ -156,8 +156,8 @@ export const contactContent = {
     ""
   ),
   body: localized(
-    "Available for freelance, contract, and collaborative work, focusing on editing, commercial campaigns, event recaps, and visual storytelling.",
-    "可承接自由职业、合同制与合作型项目：专注于视频剪辑、商业短片、活动记录与视觉叙事。"
+    "Available for freelance, contract, and collaborative work — editing, commercial campaigns, event recaps, and visual storytelling.",
+    "接受自由职业、合同制与合作项目——视频剪辑、商业宣传、活动回顾与视觉叙事。"
   ),
   email: "mail@davidweng.eu.org",
   emailDisplay: "mail[at]davidweng.eu.org",
@@ -168,24 +168,24 @@ export const contactContent = {
   bestForLabel: localized("Best for", "适合合作"),
   inquiryTypes: [
     {
-      title: localized("Freelance Editing", "自由剪辑合作"),
+      title: localized("Freelance Editing", "自由剪辑"),
       copy: localized(
-        "Short-form video, campaign assets, event recap, and social-first storytelling.",
-        "短视频、活动花絮、宣传物料和社交平台内容的策划与制作。"
+        "Short-form video, campaign assets, event recaps, social content.",
+        "短视频、宣传物料、活动回顾、社交媒体内容。"
       )
     },
     {
       title: localized("Creative Production", "创意制作"),
       copy: localized(
-        "Concept shaping, visual systems, and cross-format delivery for content teams or founders.",
-        "为内容团队或创始人提供概念梳理、视觉系统与跨格式交付。"
+        "Visual systems, content design, and delivery for teams or founders.",
+        "视觉系统、内容设计，为团队或创始人交付完整方案。"
       )
     },
     {
       title: localized("Experimental Work", "实验性项目"),
       copy: localized(
-        "AI image-making, media research, and visual prototypes with a strong editorial frame.",
-        "带有明确编辑框架的 AI 影像、媒体研究与视觉原型实验。"
+        "AI image-making, media research, visual prototyping.",
+        "AI 影像制作、媒体研究、视觉原型。"
       )
     }
   ]

@@ -21,10 +21,44 @@ const mono = IBM_Plex_Mono({
   weight: ["400", "500", "600"]
 });
 
+const siteUrl = "https://davidweng.eu.org";
+
 export const metadata: Metadata = {
   title: "David Weng | Visual Storytelling, Design, and Creative Systems",
   description:
-    "Portfolio homepage for David Weng, a cross-media creative working across video editing, photography, design, and AI-integrated creative workflows.",
+    "Portfolio of David Weng — video editing, photography, graphic design, and content operations.",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      zh: "/zh/"
+    }
+  },
+  openGraph: {
+    type: "website",
+    locale: "en",
+    alternateLocale: "zh",
+    siteName: "David Weng",
+    title: "David Weng | Visual Storytelling, Design, and Creative Systems",
+    description:
+      "Portfolio of David Weng — video editing, photography, graphic design, and content operations.",
+    images: [
+      {
+        url: "/brand/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "David Weng — Portfolio"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "David Weng | Visual Storytelling, Design, and Creative Systems",
+    description:
+      "Portfolio of David Weng — video editing, photography, graphic design, and content operations.",
+    images: ["/brand/og-image.png"]
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
