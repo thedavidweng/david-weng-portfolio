@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, vi } from "vitest";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { BOUNDARY_WHEEL_THRESHOLD } from "@/lib/project-carousel";
 
 const scrollNext = vi.fn();
 const scrollPrev = vi.fn();
@@ -70,7 +69,7 @@ test("keeps wheel navigation smooth within a category", () => {
   expect(scrollPrev).toHaveBeenCalledTimes(1);
 });
 
-test("requires extra wheel intent before crossing a category boundary", () => {
+test("crosses a category boundary immediately with a single wheel gesture", () => {
   selectedScrollSnap.mockReturnValue(2);
 
   render(<ProjectsSection locale="en" />);
@@ -80,10 +79,6 @@ test("requires extra wheel intent before crossing a category boundary", () => {
 
   fireEvent.wheel(region, { deltaY: 120 });
 
-  expect(scrollNext).not.toHaveBeenCalled();
+  expect(scrollNext).toHaveBeenCalledTimes(1);
   expect(scrollTo).not.toHaveBeenCalledWith(3);
-
-  fireEvent.wheel(region, { deltaY: BOUNDARY_WHEEL_THRESHOLD - 120 });
-
-  expect(scrollTo).toHaveBeenCalledWith(3);
 });

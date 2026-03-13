@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProjectPageView } from "@/components/pages/ProjectPageView";
-import { getLocalizedText } from "@/lib/i18n";
+import { buildProjectMetadata } from "@/lib/project-metadata";
 import { getProjectBySlug } from "@/lib/projects";
 import { projects } from "@/content/projects";
 
@@ -27,10 +27,11 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     };
   }
 
-  return {
-    title: `${getLocalizedText(project.title, "en")} | David Weng`,
-    description: getLocalizedText(project.summary, "en")
-  };
+  return buildProjectMetadata({
+    locale: "en",
+    pathname: `/projects/${slug}`,
+    project
+  });
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {

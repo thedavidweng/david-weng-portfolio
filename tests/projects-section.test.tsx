@@ -56,7 +56,15 @@ beforeAll(() => {
 test("renders a responsive reel with legacy project content and filtering controls", async () => {
   const user = userEvent.setup();
 
-  render(<ProjectsSection locale="en" />);
+  const { container } = render(<ProjectsSection locale="en" />);
+
+  const topbar = container.querySelector(".projects__topbar");
+  const filterToolbar = container.querySelector(".projects__filters");
+  const reelControls = container.querySelector(".projects__reel-controls");
+
+  expect(topbar).toBeTruthy();
+  expect(filterToolbar?.parentElement).toBe(topbar);
+  expect(reelControls?.parentElement).toBe(topbar);
 
   expect(screen.getByRole("toolbar", { name: /project categories/i })).toBeInTheDocument();
   expect(screen.getByRole("region", { name: /projects carousel/i })).toBeInTheDocument();
