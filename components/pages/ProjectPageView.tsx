@@ -1,13 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { FilmCreditGroup, FilmCreditPerson, Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
+import type { Locale, ProjectItem } from "@/types/content";
 import { Container } from "@/components/layout/Container";
 import { ArchiveMediaWall } from "@/components/projects/ArchiveMediaWall";
+import { FilmCreditGroupBlock } from "@/components/projects/FilmCredits";
 import { FilmMediaRail } from "@/components/projects/FilmMediaRail";
+import { ProjectExternalLinkButton } from "@/components/projects/ProjectExternalLinkButton";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { projectDetailContent, projectLabel } from "@/content/projects";
 import { getLocaleHomePath } from "@/lib/i18n";
+import { getYouTubeEmbedUrl, isArchiveVideoItem } from "@/lib/project-page";
 
 type ProjectPageViewProps = {
   locale: Locale;
@@ -15,45 +18,9 @@ type ProjectPageViewProps = {
   project: ProjectItem;
 };
 
-function getYouTubeEmbedUrl(href?: string) {
-  if (!href) {
-    return null;
-  }
-
-  try {
-    const url = new URL(href);
-    const host = url.hostname.replace(/^www\./, "");
-
-    if (host === "youtu.be") {
-      const videoId = url.pathname.slice(1);
-
-      return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
-    }
-
-    if (host === "youtube.com" || host === "m.youtube.com") {
-      if (url.pathname === "/watch") {
-        const videoId = url.searchParams.get("v");
-
-        return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
-      }
-
-      if (url.pathname.startsWith("/embed/")) {
-        return `https://www.youtube.com${url.pathname}`;
-      }
-    }
-  } catch {
-    return null;
-  }
-
-  return null;
-}
-
 export function ProjectPageView({ locale, pathname, project }: ProjectPageViewProps) {
   const homePath = getLocaleHomePath(locale);
   const useImageWall = Boolean(project.archiveGroup);
-  // Project pages deliberately branch by intent, not just by media type:
-  // article/research pages can hand off externally, film/video pages become viewing pages,
-  // and archive-backed projects use the image wall instead of generic case-study sections.
   const isTitleOnly = project.detailLayout === "title-only";
   const isExternalHandoff = project.detailLayout === "external-handoff";
   const isFilmVideoProject = project.category.en === "Film / Video";
@@ -404,83 +371,5 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
       </main>
       <Footer locale={locale} />
     </div>
-  );
-}
-
-function isArchiveVideoItem(item: ProjectMediaItem) {
-  return item.type === "image" && item.archiveKind === "video";
-}
-
-function getProjectLinkIconType(href: string) {
-  return href.includes("youtu") ? "youtube" : "external";
-}
-
-function ProjectExternalLinkButton({ href, label }: { href: string; label: string }) {
-  return (
-    <a className="button button--signal project-link-button" href={href} rel="noreferrer" target="_blank">
-      <span>{label}</span>
-      <ProjectLinkIcon type={getProjectLinkIconType(href)} />
-    </a>
-  );
-}
-
-function FilmCreditGroupBlock({
-  group,
-  locale
-}: {
-  group: FilmCreditGroup;
-  locale: Locale;
-}) {
-  return (
-    <div className="project-film__credit-group">
-      <h3 className="project-film__credit-role">{projectLabel(group.role, locale)}</h3>
-      <ul className="project-film__credit-list">
-        {group.people.map((person) => (
-          <li key={`${group.role.en}-${person.name.en}`} className="project-film__credit-item">
-            <FilmCreditPersonItem person={person} locale={locale} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function FilmCreditPersonItem({ person, locale }: { person: FilmCreditPerson; locale: Locale }) {
-  const label = projectLabel(person.name, locale);
-  const note = person.note ? projectLabel(person.note, locale) : null;
-
-  return (
-    <>
-      {person.href ? (
-        <a className="project-film__credit-link" href={person.href} rel="noreferrer" target="_blank">
-          {label}
-        </a>
-      ) : (
-        <span className="project-film__credit-text">{label}</span>
-      )}
-      {note ? <span className="project-film__credit-note">{note}</span> : null}
-    </>
-  );
-}
-
-function ProjectLinkIcon({ type }: { type: "youtube" | "external" }) {
-  if (type === "youtube") {
-    return (
-      <svg aria-hidden="true" className="project-link-button__icon" viewBox="0 0 24 24">
-        <path
-          d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.5 15.7V8.3l6.4 3.7-6.4 3.7Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
-
-  return (
-    <svg aria-hidden="true" className="project-link-button__icon" viewBox="0 0 24 24">
-      <path
-        d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3Zm4 14v4H3V6h4v2H5v11h11v-2h2Z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
