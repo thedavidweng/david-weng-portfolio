@@ -61,10 +61,8 @@ export function ProjectMediaLightbox({
   }, [handleCancel]);
 
   const handleBackdropClick = useCallback(
-    (e: React.MouseEvent<HTMLDialogElement>) => {
-      if (e.target === dialogRef.current) {
-        onClose();
-      }
+    () => {
+      onClose();
     },
     [onClose]
   );
@@ -74,30 +72,32 @@ export function ProjectMediaLightbox({
   }
 
   return (
-    <dialog
-      ref={dialogRef}
-      aria-label={projectLabel(previewDialogLabel, locale)}
-      className="project-media__lightbox"
-      onClick={handleBackdropClick}
-    >
-      <button
-        aria-label={projectLabel(closePreviewLabel, locale)}
-        className="project-media__lightbox-close"
-        onClick={onClose}
-        type="button"
-      >
-        close
-      </button>
-      <div className="project-media__lightbox-frame" onClick={(e) => e.stopPropagation()}>
-        <Image
-          alt={projectLabel(previewItem.title, locale)}
-          className="project-media__lightbox-image"
-          height={previewItem.height ?? 900}
-          priority
-          sizes="90vw"
-          src={previewItem.src}
-          width={previewItem.width ?? 1600}
-        />
+    <dialog ref={dialogRef} aria-label={projectLabel(previewDialogLabel, locale)} className="project-media__lightbox">
+      <div className="project-media__lightbox-stage" onClick={handleBackdropClick}>
+        <button
+          aria-label={projectLabel(closePreviewLabel, locale)}
+          className="project-media__lightbox-close"
+          onClick={(event) => {
+            event.stopPropagation();
+            onClose();
+          }}
+          type="button"
+        >
+          close
+        </button>
+        <div className="project-media__lightbox-scroll">
+          <div className="project-media__lightbox-frame" onClick={(event) => event.stopPropagation()}>
+            <Image
+              alt={projectLabel(previewItem.title, locale)}
+              className="project-media__lightbox-image"
+              height={previewItem.height ?? 900}
+              priority
+              sizes="90vw"
+              src={previewItem.src}
+              width={previewItem.width ?? 1600}
+            />
+          </div>
+        </div>
       </div>
     </dialog>
   );

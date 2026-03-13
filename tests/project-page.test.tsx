@@ -267,6 +267,27 @@ test("opens a centered preview dialog when an archive image is clicked", async (
   expect(within(dialog).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
 });
 
+test("clicking outside the previewed image closes the preview dialog", async () => {
+  const user = userEvent.setup();
+  const project = getProjectBySlug("designs-for-bc-ai-ecosystem");
+
+  if (!project) {
+    throw new Error("Expected BC + AI Ecosystem project to exist");
+  }
+
+  const { container } = render(
+    <ProjectPageView locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
+  );
+
+  await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
+
+  const stage = container.querySelector(".project-media__lightbox-stage");
+
+  expect(stage).toBeTruthy();
+  await user.click(stage as HTMLElement);
+  expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
+});
+
 test("does not render idle preview dialogs before any project media is opened", () => {
   const project = getProjectBySlug("fraud");
 
