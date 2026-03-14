@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Locale, ProjectItem } from "@/types/content";
+import { LocalizedInlineText } from "@/components/content/LocalizedInlineText";
 import { Container } from "@/components/layout/Container";
 import { ArchiveMediaWall } from "@/components/projects/ArchiveMediaWall";
 import { FilmCreditGroupBlock } from "@/components/projects/FilmCredits";
@@ -37,6 +38,12 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.media;
   const film = project.film;
   const filmHeroPoster = film ? film.heroPoster[locale] : null;
+  const renderProjectSummary = () =>
+    project.detailSummary ? (
+      <LocalizedInlineText locale={locale} value={project.detailSummary} linkClassName="project-hero__summary-link" />
+    ) : (
+      projectLabel(project.summary, locale)
+    );
 
   return (
     <div className={`site-shell site-shell--${locale}`}>
@@ -65,7 +72,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                     <div className="project-film__intro">
                       <div className="project-film__content">
                         <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
-                        <p className="project-hero__summary">{projectLabel(project.summary, locale)}</p>
+                        <p className="project-hero__summary">{renderProjectSummary()}</p>
                         <p className="project-hero__roles">
                           {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
                         </p>
@@ -119,32 +126,32 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                   <div
                     className={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
                   >
-                  {isExternalHandoff ? (
-                    <p className="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
-                  ) : null}
-                  <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
-                  {!isTitleOnly && !isExternalHandoff ? (
-                    <>
-                      <p className="project-hero__summary">{projectLabel(project.summary, locale)}</p>
-                      <p className="project-hero__roles">
-                        {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
-                      </p>
-                      <div className="project-detail__links">
-                        {project.externalLinks.map((link) => (
-                          <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
-                        ))}
-                      </div>
-                    </>
-                  ) : null}
-                  {isExternalHandoff ? (
-                    <>
-                      <p className="project-hero__publication">
-                        {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
-                      </p>
-                      <p className="project-hero__summary">{projectLabel(project.summary, locale)}</p>
-                      <p className="project-hero__roles">{project.roles[locale].join(" / ")}</p>
-                    </>
-                  ) : null}
+                    {isExternalHandoff ? (
+                      <p className="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
+                    ) : null}
+                    <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
+                    {!isTitleOnly && !isExternalHandoff ? (
+                      <>
+                        <p className="project-hero__summary">{renderProjectSummary()}</p>
+                        <p className="project-hero__roles">
+                          {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
+                        </p>
+                        <div className="project-detail__links">
+                          {project.externalLinks.map((link) => (
+                            <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
+                          ))}
+                        </div>
+                      </>
+                    ) : null}
+                    {isExternalHandoff ? (
+                      <>
+                        <p className="project-hero__publication">
+                          {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
+                        </p>
+                        <p className="project-hero__summary">{renderProjectSummary()}</p>
+                        <p className="project-hero__roles">{project.roles[locale].join(" / ")}</p>
+                      </>
+                    ) : null}
                   </div>
                 ) : null}
                 {isExternalHandoff && primaryExternalLink ? (

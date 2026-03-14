@@ -1556,6 +1556,23 @@ main {
   margin: 1rem 0 0;
 }
 
+.project-hero__summary-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.project-hero__summary-link:focus-visible {
+  color: var(--text);
+}
+
+@media (hover: hover) {
+  .project-hero__summary-link:hover {
+    color: var(--text);
+  }
+}
+
 .project-hero__roles {
   margin: 0.85rem 0 0;
 }

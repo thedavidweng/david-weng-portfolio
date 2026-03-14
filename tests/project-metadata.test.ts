@@ -56,4 +56,18 @@ describe("project page metadata", () => {
     expect(metadata.twitter?.description).toBe(metadata.description);
     expect(metadata.twitter?.images).toEqual(["/projects/film-video/film/fraud/cover.jpg"]);
   });
+
+  test("gourd metadata stays plain text even when the detail page summary contains inline links", async () => {
+    const englishMetadata = await generateEnglishProjectMetadata({
+      params: Promise.resolve({ slug: "gourd" })
+    });
+    const chineseMetadata = await generateLocalizedProjectMetadata({
+      params: Promise.resolve({ locale: "zh", slug: "gourd" })
+    });
+
+    expect(englishMetadata.description).toBe(
+      'A short film made in high school, loosely adapted from "The Artist" by Shiga Naoya.'
+    );
+    expect(chineseMetadata.description).toBe("高中拍摄的微电影，松散地改编自志贺直哉《清兵卫和葫芦》");
+  });
 });

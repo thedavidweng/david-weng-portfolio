@@ -89,6 +89,40 @@ test("renders gourd inside the film/video project filter", async () => {
   );
 });
 
+test("renders linked rich-text summary on the english gourd detail page", () => {
+  const project = getProjectBySlug("gourd");
+
+  if (!project) {
+    throw new Error("Expected gourd project to exist");
+  }
+
+  const { container } = render(<ProjectPageView locale="en" pathname="/projects/gourd" project={project} />);
+  const summary = container.querySelector(".project-hero__summary");
+
+  expect(summary).toHaveTextContent('A short film made in high school, loosely adapted from "The Artist" by Shiga Naoya.');
+  expect(screen.getByRole("link", { name: /^The Artist$/i })).toHaveAttribute(
+    "href",
+    "https://en.wikisource.org/wiki/Modern_Japanese_Stories/The_Artist"
+  );
+});
+
+test("renders linked rich-text summary on the chinese gourd detail page", () => {
+  const project = getProjectBySlug("gourd");
+
+  if (!project) {
+    throw new Error("Expected gourd project to exist");
+  }
+
+  const { container } = render(<ProjectPageView locale="zh" pathname="/zh/projects/gourd" project={project} />);
+  const summary = container.querySelector(".project-hero__summary");
+
+  expect(summary).toHaveTextContent("高中拍摄的微电影，松散地改编自志贺直哉《清兵卫和葫芦》");
+  expect(screen.getByRole("link", { name: /清兵卫和葫芦/i })).toHaveAttribute(
+    "href",
+    "https://ja.wikipedia.org/wiki/%E6%B8%85%E5%85%B5%E8%A1%9B%E3%81%A8%E7%93%A2%E7%AE%AA"
+  );
+});
+
 test("renders non-YouTube film projects as release-info pages without generic case-study blocks", () => {
   const project = getProjectBySlug("fraud");
 

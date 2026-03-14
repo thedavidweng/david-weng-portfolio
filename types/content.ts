@@ -17,6 +17,19 @@ export type LocalizedValue<T> = {
 
 export type LocalizedText = LocalizedValue<string>;
 
+export type InlineTextFragment =
+  | {
+      type: "text";
+      text: string;
+    }
+  | {
+      type: "link";
+      text: string;
+      href: string;
+    };
+
+export type LocalizedInlineText = LocalizedValue<InlineTextFragment[]>;
+
 export type ServiceItem = {
   title: LocalizedText;
   description: LocalizedText;
@@ -83,6 +96,7 @@ export type ProjectItem = {
   coverAlt: LocalizedText;
   teaser: LocalizedText;
   summary: LocalizedText;
+  detailSummary?: LocalizedInlineText;
   roles: LocalizedValue<string[]>;
   highlights: LocalizedValue<string[]>;
   externalLinks: ExternalLink[];

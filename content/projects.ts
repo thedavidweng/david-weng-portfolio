@@ -224,8 +224,27 @@ export const projects: ProjectItem[] = [
       "早期短片项目，以年轻群像和克制氛围为核心。"
     ),
     summary: localized(
-      "Early short film project built around a compact ensemble and a restrained visual atmosphere.",
-      "以年轻群像与克制氛围构成的早期短片项目。"
+      'A short film made in high school, loosely adapted from "The Artist" by Shiga Naoya.',
+      "高中拍摄的微电影，松散地改编自志贺直哉《清兵卫和葫芦》"
+    ),
+    detailSummary: localized(
+      [
+        { type: "text", text: 'A short film made in high school, loosely adapted from "' },
+        {
+          type: "link",
+          text: "The Artist",
+          href: "https://en.wikisource.org/wiki/Modern_Japanese_Stories/The_Artist"
+        },
+        { type: "text", text: '" by Shiga Naoya.' }
+      ],
+      [
+        { type: "text", text: "高中拍摄的微电影，松散地改编自志贺直哉" },
+        {
+          type: "link",
+          text: "《清兵卫和葫芦》",
+          href: "https://ja.wikipedia.org/wiki/%E6%B8%85%E5%85%B5%E8%A1%9B%E3%81%A8%E7%93%A2%E7%AE%AA"
+        }
+      ]
     ),
     roles: localized(["Direction", "Writing", "Editing"], ["导演", "编剧", "剪辑"]),
     highlights: localized(

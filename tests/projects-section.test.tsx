@@ -129,6 +129,7 @@ test("renders a responsive reel with legacy project content and filtering contro
       name: /open project gourd/i
     })
   ).toBeInTheDocument();
+  expect(screen.queryByRole("link", { name: /^The Artist$/i })).not.toBeInTheDocument();
 });
 
 test("renders localized labels and links in chinese", async () => {
