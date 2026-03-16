@@ -22,12 +22,12 @@ export function ContactSection({ locale }: ContactSectionProps) {
               <Link className="button button--signal" href={`mailto:${contactContent.email}`}>
                 {getLocalizedText(contactContent.emailLabel, locale)}
               </Link>
-              <Link className="button button--ghost" href={contactContent.linkedinHref}>
-                LinkedIn
-              </Link>
-              <Link className="button button--ghost" href={contactContent.instagramHref}>
-                Instagram
-              </Link>
+              <a className="button button--ghost" href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
+                LinkedIn<span className="visually-hidden"> (opens in new tab)</span>
+              </a>
+              <a className="button button--ghost" href={contactContent.instagramHref} rel="noreferrer" target="_blank">
+                Instagram<span className="visually-hidden"> (opens in new tab)</span>
+              </a>
             </div>
           </div>
           <div className="contact__rail">
@@ -41,9 +41,9 @@ export function ContactSection({ locale }: ContactSectionProps) {
               ))}
             </ul>
             <div className="contact__actions">
-              <Link className="button button--ghost" href={contactContent.githubHref}>
-                GitHub
-              </Link>
+              <a className="button button--ghost" href={contactContent.githubHref} rel="noreferrer" target="_blank">
+                GitHub<span className="visually-hidden"> (opens in new tab)</span>
+              </a>
             </div>
           </div>
         </div>

@@ -22,6 +22,7 @@ export function LocalizedInlineText({ locale, value, linkClassName }: LocalizedI
           target="_blank"
         >
           {fragment.text}
+          <span className="visually-hidden">(opens in new tab)</span>
         </a>
       );
     }

@@ -16,15 +16,15 @@ export function Footer({ locale }: FooterProps) {
           <span>{contactContent.emailDisplay}</span>
           <span>
             <a href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
-              LinkedIn
+              LinkedIn<span className="visually-hidden"> (opens in new tab)</span>
             </a>
             {" / "}
             <a href={contactContent.instagramHref} rel="noreferrer" target="_blank">
-              Instagram
+              Instagram<span className="visually-hidden"> (opens in new tab)</span>
             </a>
             {" / "}
             <a href={contactContent.githubHref} rel="noreferrer" target="_blank">
-              GitHub
+              GitHub<span className="visually-hidden"> (opens in new tab)</span>
             </a>
           </span>
         </div>

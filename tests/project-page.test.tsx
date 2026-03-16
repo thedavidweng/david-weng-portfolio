@@ -19,8 +19,8 @@ test("renders localized chinese project detail content and language switch", () 
   expect(screen.queryByRole("heading", { name: /档案墙/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /混合媒介结构/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /演职人员/i })).toBeInTheDocument();
-  expect(screen.getAllByRole("link", { name: /^翁佳宸$/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014585/");
-  expect(screen.getAllByRole("link", { name: /^陈镘伊$/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014588/");
+  expect(screen.getAllByRole("link", { name: /^翁佳宸/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014585/");
+  expect(screen.getAllByRole("link", { name: /^陈镘伊/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014588/");
   expect(screen.getAllByRole("link", { name: /IMDb/i }).length).toBeGreaterThan(0);
   expect(screen.getAllByRole("link", { name: /豆瓣/i }).length).toBeGreaterThan(0);
 }, 15000);
@@ -44,7 +44,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(screen.getByRole("heading", { name: /^The Pills$/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^Cast and Crew$/i })).toBeInTheDocument();
   expect(screen.getAllByRole("img", { name: /The Pills main poster/i }).length).toBeGreaterThan(0);
-  expect(within(englishCredits).getAllByRole("link", { name: /^David Weng$/i })[0]).toHaveAttribute(
+  expect(within(englishCredits).getAllByRole("link", { name: /^David Weng/i })[0]).toHaveAttribute(
     "href",
     "https://www.imdb.com/name/nm16014585/"
   );
@@ -99,8 +99,8 @@ test("renders linked rich-text summary on the english gourd detail page", () => 
   const { container } = render(<ProjectPageView locale="en" pathname="/projects/gourd" project={project} />);
   const summary = container.querySelector(".project-hero__summary");
 
-  expect(summary).toHaveTextContent('A short film made in high school, loosely adapted from "The Artist" by Shiga Naoya.');
-  expect(screen.getByRole("link", { name: /^The Artist$/i })).toHaveAttribute(
+  expect(summary).toHaveTextContent('A short film made in high school, loosely adapted from "The Artist(opens in new tab)" by Shiga Naoya.');
+  expect(screen.getByRole("link", { name: /^The Artist/i })).toHaveAttribute(
     "href",
     "https://en.wikisource.org/wiki/Modern_Japanese_Stories/The_Artist"
   );
@@ -116,7 +116,7 @@ test("renders linked rich-text summary on the chinese gourd detail page", () => 
   const { container } = render(<ProjectPageView locale="zh" pathname="/zh/projects/gourd" project={project} />);
   const summary = container.querySelector(".project-hero__summary");
 
-  expect(summary).toHaveTextContent("高中拍摄的微电影，松散地改编自志贺直哉《清兵卫和葫芦》");
+  expect(summary).toHaveTextContent("高中拍摄的微电影，松散地改编自志贺直哉《清兵卫和葫芦》(opens in new tab)");
   expect(screen.getByRole("link", { name: /清兵卫和葫芦/i })).toHaveAttribute(
     "href",
     "https://ja.wikipedia.org/wiki/%E6%B8%85%E5%85%B5%E8%A1%9B%E3%81%A8%E7%93%A2%E7%AE%AA"
@@ -218,7 +218,7 @@ test("renders archive-backed BC + AI Ecosystem media with event photo credit", (
     expect(link).toHaveAttribute("href", "https://www.instagram.com/diamondsedgephotography/");
     expect(link.closest(".project-media__wall-overlay")).toBeTruthy();
   });
-  const youtubeLinks = screen.getAllByRole("link", { name: /^YouTube$/i });
+  const youtubeLinks = screen.getAllByRole("link", { name: /^YouTube/i });
   expect(youtubeLinks.length).toBe(7);
   expect(youtubeLinks[0]).toHaveAttribute("href", "https://youtu.be/ZN-IywZzAp0");
   youtubeLinks.forEach((link) => {

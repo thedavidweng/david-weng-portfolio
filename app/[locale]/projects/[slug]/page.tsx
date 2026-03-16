@@ -49,5 +49,5 @@ export default async function LocalizedProjectPage({ params }: LocalizedProjectP
     notFound();
   }
 
-  return <ProjectPageView locale={resolvedLocale} pathname={`/zh/projects/${slug}`} project={project} />;
+  return <ProjectPageView locale={resolvedLocale} pathname={`/${resolvedLocale}/projects/${slug}`} project={project} />;
 }

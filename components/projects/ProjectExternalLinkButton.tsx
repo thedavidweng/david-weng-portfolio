@@ -5,6 +5,7 @@ export function ProjectExternalLinkButton({ href, label }: { href: string; label
     <a className="button button--signal project-link-button" href={href} rel="noreferrer" target="_blank">
       <span>{label}</span>
       <ProjectLinkIcon type={getProjectLinkIconType(href)} />
+      <span className="visually-hidden">(opens in new tab)</span>
     </a>
   );
 }

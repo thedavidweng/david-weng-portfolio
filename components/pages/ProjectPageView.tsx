@@ -47,8 +47,12 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
 
   return (
     <div className={`site-shell site-shell--${locale}`}>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <Header locale={locale} pathname={pathname} />
       <main
+        id="main-content"
         className={`project-page${useImageWall ? " project-page--archive" : ""}${isTitleOnly ? " project-page--title-only" : ""}${isExternalHandoff ? " project-page--external-handoff" : ""}${isDedicatedFilmProject ? " project-page--film" : ""}`}
       >
         <section className="project-hero">
@@ -165,6 +169,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                     </div>
                     <a className="button button--signal" href={primaryExternalLink.href} rel="noreferrer" target="_blank">
                       {projectLabel(primaryExternalLink.label, locale)}
+                      <span className="visually-hidden">(opens in new tab)</span>
                     </a>
                   </aside>
                 ) : null}
@@ -328,6 +333,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                               {item.href ? (
                                 <a className="button button--signal" href={item.href} rel="noreferrer" target="_blank">
                                   {projectLabel(projectDetailContent.watchOnYouTubeLabel, locale)}
+                                  <span className="visually-hidden">(opens in new tab)</span>
                                 </a>
                               ) : null}
                             </div>
@@ -362,12 +368,14 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                           {projectLabel(projectDetailContent.photoCreditLabel, locale)}:{" "}
                           <a href={item.credit.href} rel="noreferrer" target="_blank">
                             {projectLabel(item.credit.label, locale)}
+                            <span className="visually-hidden">(opens in new tab)</span>
                           </a>
                         </p>
                       ) : null}
                       {item.href ? (
                         <a className="project-card__cta" href={item.href} rel="noreferrer" target="_blank">
                           {projectLabel(projectDetailContent.openResourceLabel, locale)}
+                          <span className="visually-hidden">(opens in new tab)</span>
                         </a>
                       ) : null}
                     </article>

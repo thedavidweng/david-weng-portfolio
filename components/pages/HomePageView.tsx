@@ -13,8 +13,11 @@ type HomePageViewProps = {
 export function HomePageView({ locale, pathname }: HomePageViewProps) {
   return (
     <div className={`site-shell site-shell--${locale} site-shell--home`}>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <Header locale={locale} pathname={pathname} />
-      <main className="site-main--home">
+      <main className="site-main--home" id="main-content">
         <HeroSection locale={locale} />
         <ProjectsSection locale={locale} />
         <ContactSection locale={locale} />

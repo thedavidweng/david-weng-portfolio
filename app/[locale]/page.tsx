@@ -20,5 +20,5 @@ export default async function LocaleHomePage({ params }: LocalePageProps) {
     notFound();
   }
 
-  return <HomePageView locale={resolvedLocale} pathname="/zh/" />;
+  return <HomePageView locale={resolvedLocale} pathname={`/${resolvedLocale}/`} />;
 }

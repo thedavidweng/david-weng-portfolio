@@ -129,6 +129,7 @@ export function ArchiveMediaWall({
                 {projectLabel(photoCreditLabel, locale)}:{" "}
                 <a href={photo.item.credit.href} onClick={(event) => event.stopPropagation()} rel="noreferrer" target="_blank">
                   {projectLabel(photo.item.credit.label, locale)}
+                  <span className="visually-hidden">(opens in new tab)</span>
                 </a>
               </span>
             ) : (
@@ -144,6 +145,7 @@ export function ArchiveMediaWall({
               >
                 <ArchiveOverlayIcon type={linkMeta.icon} />
                 <span>{linkMeta.label}</span>
+                <span className="visually-hidden">(opens in new tab)</span>
               </a>
             ) : null}
           </div>

@@ -31,6 +31,7 @@ function FilmCreditPersonItem({ person, locale }: { person: FilmCreditPerson; lo
       {person.href ? (
         <a className="project-film__credit-link" href={person.href} rel="noreferrer" target="_blank">
           {label}
+          <span className="visually-hidden">(opens in new tab)</span>
         </a>
       ) : (
         <span className="project-film__credit-text">{label}</span>
