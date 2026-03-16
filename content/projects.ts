@@ -19,7 +19,7 @@ export const projectSectionContent = {
   nextLabel: localized("Next projects", "下一组项目"),
   previousButtonText: localized("Prev", "上一组"),
   nextButtonText: localized("Next", "下一组"),
-  openItemLabel: localized("Open archive item", "打开项目档案")
+  openItemLabel: localized("View project", "查看项目")
 };
 
 export const projectDetailContent = {

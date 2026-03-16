@@ -55,7 +55,7 @@ vi.mock("embla-carousel-react", () => ({
   ]
 }));
 
-test("keeps wheel navigation smooth within a category", () => {
+test("ignores vertical wheel gestures so page scroll stays vertical", () => {
   selectedScrollSnap.mockReturnValue(1);
   render(<ProjectsSection locale="en" />);
 
@@ -65,11 +65,24 @@ test("keeps wheel navigation smooth within a category", () => {
   fireEvent.wheel(region, { deltaY: 120 });
   fireEvent.wheel(region, { deltaY: -120 });
 
-  expect(scrollNext).toHaveBeenCalledTimes(1);
-  expect(scrollPrev).toHaveBeenCalledTimes(1);
+  expect(scrollNext).not.toHaveBeenCalled();
+  expect(scrollPrev).not.toHaveBeenCalled();
 });
 
-test("crosses a category boundary immediately with a single wheel gesture", () => {
+test("ignores diagonal gestures when vertical movement is dominant", () => {
+  selectedScrollSnap.mockReturnValue(1);
+  render(<ProjectsSection locale="en" />);
+
+  const region = screen.getByRole("region", { name: /projects carousel/i });
+
+  fireEvent.wheel(region, { deltaX: 6, deltaY: 12 });
+  fireEvent.wheel(region, { deltaX: -6, deltaY: -12 });
+
+  expect(scrollNext).not.toHaveBeenCalled();
+  expect(scrollPrev).not.toHaveBeenCalled();
+});
+
+test("scrolls immediately on horizontal wheel gestures", () => {
   selectedScrollSnap.mockReturnValue(2);
 
   render(<ProjectsSection locale="en" />);
@@ -77,8 +90,9 @@ test("crosses a category boundary immediately with a single wheel gesture", () =
   const region = screen.getByRole("region", { name: /projects carousel/i });
   scrollTo.mockClear();
 
-  fireEvent.wheel(region, { deltaY: 120 });
+  fireEvent.wheel(region, { deltaX: 1, deltaY: 0 });
+  fireEvent.wheel(region, { deltaX: -1, deltaY: 0 });
 
   expect(scrollNext).toHaveBeenCalledTimes(1);
-  expect(scrollTo).not.toHaveBeenCalledWith(3);
+  expect(scrollPrev).toHaveBeenCalledTimes(1);
 });

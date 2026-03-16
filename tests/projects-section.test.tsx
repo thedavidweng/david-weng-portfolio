@@ -83,6 +83,8 @@ test("renders a responsive reel with legacy project content and filtering contro
       name: /open project archive for beaty biodiversity museum/i
     })
   ).toBeInTheDocument();
+  expect(screen.getAllByText("View project").length).toBeGreaterThan(0);
+  expect(screen.queryByText("Open archive item")).not.toBeInTheDocument();
   expect(
     screen.getByRole("link", {
       name: /open project archive for bc \+ ai ecosystem/i
@@ -154,6 +156,8 @@ test("renders localized labels and links in chinese", async () => {
       name: /Beaty Biodiversity Museum 档案/i
     })
   ).toHaveAttribute("href", "/zh/projects/beaty-biodiversity-museum-annual-report-2022-2023");
+  expect(screen.getAllByText("查看项目").length).toBeGreaterThan(0);
+  expect(screen.queryByText("打开项目档案")).not.toBeInTheDocument();
   expect(
     screen.queryByRole("link", {
       name: /open project david's blog/i

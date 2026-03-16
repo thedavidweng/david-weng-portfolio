@@ -51,13 +51,11 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
         return;
       }
 
-      const primaryDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
-
-      if (Math.abs(primaryDelta) < 12) {
+      if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) {
         return;
       }
 
-      const direction: -1 | 1 = primaryDelta > 0 ? 1 : -1;
+      const direction: -1 | 1 = event.deltaX > 0 ? 1 : -1;
 
       if (direction === 1) {
         if (!emblaApi.canScrollNext()) {
