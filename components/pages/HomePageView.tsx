@@ -2,6 +2,7 @@ import type { Locale } from "@/types/content";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 
@@ -19,6 +20,7 @@ export function HomePageView({ locale, pathname }: HomePageViewProps) {
       <Header locale={locale} pathname={pathname} />
       <main className="site-main--home" id="main-content">
         <HeroSection locale={locale} />
+        <ServicesSection locale={locale} />
         <ProjectsSection locale={locale} />
         <ContactSection locale={locale} />
       </main>

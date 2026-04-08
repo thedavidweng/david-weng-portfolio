@@ -54,6 +54,9 @@ beforeAll(() => {
 
 test("renders the english homepage with a switch to the chinese route", () => {
   const { container } = render(<HomePageView locale="en" pathname="/" />);
+  const mainChildren = Array.from(container.querySelector("#main-content")?.children ?? []).map((node) =>
+    (node as HTMLElement).id
+  );
 
   expect(
     screen.getByRole("heading", {
@@ -70,23 +73,34 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(screen.getByRole("link", { name: "中文" })).toHaveAttribute("href", "/zh");
   expect(container.querySelector(".site-header__descriptor")).toBeTruthy();
   expect(container.querySelector(".site-header__mark")).toBeFalsy();
-  expect(screen.queryByRole("heading", { name: /^what i do$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /^about$/i })).not.toBeInTheDocument();
+  expect(mainChildren).toEqual(["top", "services", "projects", "contact"]);
   const hero = container.querySelector(".hero");
+  const services = container.querySelector("#services");
+  const contact = container.querySelector("#contact");
   expect(hero).toBeTruthy();
   expect((hero as HTMLElement).querySelector(".hero__mobile-nav")).toBeFalsy();
-  expect((hero as HTMLElement).querySelector(".hero__grid")).toBeTruthy();
-  expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities")).toBeTruthy();
-  expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities .services__grid")).toBeTruthy();
+  expect((hero as HTMLElement).querySelector(".hero__grid")).toBeFalsy();
+  expect((hero as HTMLElement).querySelector(".hero__capabilities")).toBeFalsy();
   expect(within(hero as HTMLElement).queryByAltText(/portrait of david weng/i)).not.toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/video editing & post-production/i)).toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/I create image sets with narrative weight for portraits, live events, and editorial coverage\./i)).toBeInTheDocument();
+  expect(services).toBeTruthy();
+  expect(within(services as HTMLElement).getByRole("heading", { name: /^what i do$/i })).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/video editing & post-production/i)).toBeInTheDocument();
+  expect(
+    within(services as HTMLElement).getByText(
+      /I create image sets with narrative weight for portraits, live events, and editorial coverage\./i
+    )
+  ).toBeInTheDocument();
   expect(screen.queryByAltText(/portrait of david weng/i)).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^projects$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^about$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^contact$/i })).toBeInTheDocument();
   expect(screen.getByText(/^03 \/ contact$/i)).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: /email me/i })).toBeInTheDocument();
+  expect(contact).toBeTruthy();
+  expect(within(contact as HTMLElement).getByRole("link", { name: /email me/i })).toBeInTheDocument();
+  expect(within(contact as HTMLElement).getByRole("link", { name: /^linkedin/i })).toBeInTheDocument();
+  expect(within(contact as HTMLElement).getByRole("link", { name: /^instagram/i })).toBeInTheDocument();
+  expect(within(contact as HTMLElement).getByRole("link", { name: /^github/i })).toBeInTheDocument();
   expect(screen.getByRole("navigation", { name: /main navigation/i })).toBeInTheDocument();
   expect(container.querySelector(".site-shell--home")).toBeTruthy();
   expect(container.querySelector(".site-main--home")).toBeTruthy();
@@ -95,6 +109,9 @@ test("renders the english homepage with a switch to the chinese route", () => {
 
 test("renders the chinese homepage with a switch back to the english route", () => {
   const { container } = render(<HomePageView locale="zh" pathname="/zh/" />);
+  const mainChildren = Array.from(container.querySelector("#main-content")?.children ?? []).map((node) =>
+    (node as HTMLElement).id
+  );
 
   expect(screen.getByRole("heading", { name: /影像剪辑\s*视觉设计\s*内容运营/i })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /查看项目/i })).toBeInTheDocument();
@@ -110,25 +127,26 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(screen.getAllByRole("link", { name: /^能力$/i })[0]).toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /^关于$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /^我能做什么$/i })).not.toBeInTheDocument();
-  expect(screen.queryByRole("heading", { name: /^我能做什么$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^项目$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^关于我$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^联系$/i })).toBeInTheDocument();
   expect(screen.getByText(/^03 \/ 联系$/i)).toBeInTheDocument();
   expect(screen.getByText(/视频剪辑、摄影、平面设计。从概念到交付。/i)).toBeInTheDocument();
   expect(container.querySelector(".hero.hero--zh")).toBeTruthy();
+  expect(mainChildren).toEqual(["top", "services", "projects", "contact"]);
   const hero = container.querySelector(".hero");
+  const services = container.querySelector("#services");
   expect(hero).toBeTruthy();
   expect((hero as HTMLElement).querySelector(".hero__mobile-nav")).toBeFalsy();
-  expect((hero as HTMLElement).querySelector(".hero__grid")).toBeTruthy();
-  expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities")).toBeTruthy();
-  expect((hero as HTMLElement).querySelector(".hero__grid .hero__capabilities .services__grid")).toBeTruthy();
+  expect((hero as HTMLElement).querySelector(".hero__grid")).toBeFalsy();
+  expect((hero as HTMLElement).querySelector(".hero__capabilities")).toBeFalsy();
   expect(within(hero as HTMLElement).queryByAltText(/portrait of david weng/i)).not.toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/视频剪辑与后期制作/i)).toBeInTheDocument();
+  expect(services).toBeTruthy();
   expect(screen.queryByAltText(/portrait of david weng/i)).not.toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/摄影与视觉叙事/i)).toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/为人物写真、现场活动与编辑报道拍摄具有叙事感的图像。/i)).toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/平面与品牌设计/i)).toBeInTheDocument();
-  expect(within(hero as HTMLElement).getByText(/AI 整合创意流程/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/视频剪辑与后期制作/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/摄影与视觉叙事/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/为人物写真、现场活动与编辑报道拍摄具有叙事感的图像。/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/平面与品牌设计/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/AI 整合创意流程/i)).toBeInTheDocument();
   expect(screen.queryByText(/video editing & post-production/i)).not.toBeInTheDocument();
 }, 10000);

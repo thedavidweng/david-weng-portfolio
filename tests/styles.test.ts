@@ -133,6 +133,37 @@ test("mobile home shell keeps a visible header nav with built-in separators inst
   expect(hiddenHomeNavBlock).toBeNull();
 });
 
+test("home layout uses dedicated modern font variables without changing project card typography", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const layoutSource = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+  const projectCardTitleBlock = css.match(/\.project-card__title\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(layoutSource).toContain("Inter_Tight");
+  expect(layoutSource).toContain("Inter(");
+  expect(layoutSource).toContain("Noto_Sans_SC");
+  expect(layoutSource).toContain('variable: "--font-home-display"');
+  expect(layoutSource).toContain('variable: "--font-home-body"');
+  expect(layoutSource).toContain('variable: "--font-home-zh"');
+  expect(css).toContain("--font-home-display");
+  expect(css).toContain("--font-home-body");
+  expect(css).toContain("--font-home-zh");
+  expect(css).toContain(".site-main--home .hero__title");
+  expect(css).toContain(".site-main--home .poster-section__title");
+  expect(css).toContain(".site-main--home .contact__title");
+  expect(projectCardTitleBlock).toContain("font-family: var(--font-body);");
+});
+
+test("homepage components separate services from hero instead of rendering hero capabilities inline", () => {
+  const heroSource = readFileSync(join(process.cwd(), "components/sections/HeroSection.tsx"), "utf8");
+  const homeSource = readFileSync(join(process.cwd(), "components/pages/HomePageView.tsx"), "utf8");
+
+  expect(heroSource).not.toContain("ServiceCard");
+  expect(heroSource).not.toContain("hero__capabilities");
+  expect(heroSource).not.toContain('id="services"');
+  expect(homeSource).toContain("ServicesSection");
+  expect(homeSource).toContain("<ServicesSection locale={locale} />");
+});
+
 test("sticky header reserves the iPhone safe-area inset instead of exposing page content behind the status bar", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
   const headerBlock = css.match(/\.site-header\s*\{[^}]+\}/)?.[0] ?? "";

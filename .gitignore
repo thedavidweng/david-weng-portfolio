@@ -8,3 +8,12 @@ dist
 docs/
 .claude/
 History/
+.worktrees/
+
+# Local planning / design references
+.stitch/
+stitch/
+stitch-reference/
+references/stitch/
+tmp/stitch/
+tmp/references/
