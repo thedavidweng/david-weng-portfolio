@@ -1,36 +1,36 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Inter, Inter_Tight, Manrope, Noto_Sans_SC, Playfair_Display } from "next/font/google";
+import { IBM_Plex_Mono, Outfit, Manrope, Noto_Sans_SC } from "next/font/google";
 import "react-photo-album/rows.css";
 import "./globals.css";
 
-const display = Playfair_Display({
+const display = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"]
+  weight: ["700", "800", "900"]
 });
 
 const body = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["400", "500", "600", "700"]
-});
-
-const homeDisplay = Inter_Tight({
-  subsets: ["latin"],
-  variable: "--font-home-display",
   weight: ["400", "500", "600", "700", "800"]
 });
 
-const homeBody = Inter({
+const homeDisplay = Outfit({
+  subsets: ["latin"],
+  variable: "--font-home-display",
+  weight: ["700", "800", "900"]
+});
+
+const homeBody = Manrope({
   subsets: ["latin"],
   variable: "--font-home-body",
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700", "800"]
 });
 
 const homeZh = Noto_Sans_SC({
   subsets: ["latin"],
   variable: "--font-home-zh",
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700", "900"]
 });
 
 const mono = IBM_Plex_Mono({

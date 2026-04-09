@@ -63,9 +63,9 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                   {projectLabel(projectDetailContent.backLabel, locale)}
                 </Link>
                 <div className="project-hero__micro">
-                  <span>{project.code}</span>
-                  <span>{projectLabel(project.category, locale)}</span>
-                  <span>{project.year}</span>
+                  <span>[{project.code}]</span>
+                  <span>[{projectLabel(project.category, locale)}]</span>
+                  <span>[{project.year}]</span>
                 </div>
               </div>
               <div
@@ -138,7 +138,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                       <>
                         <p className="project-hero__summary">{renderProjectSummary()}</p>
                         <p className="project-hero__roles">
-                          {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
+                          [{projectLabel(project.projectType, locale)}] / {project.roles[locale].join(" / ")}
                         </p>
                         <div className="project-detail__links">
                           {project.externalLinks.map((link) => (
