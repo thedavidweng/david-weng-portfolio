@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
-import { contactContent } from "@/content/site";
+import { aboutContent, contactContent } from "@/content/site";
 import { getLocalizedText } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 
@@ -37,6 +37,9 @@ export function ContactSection({ locale }: ContactSectionProps) {
               ))}
             </ul>
             <div className="contact__secondary">
+              <Link className="button button--ghost" href={aboutContent.resumeHref}>
+                {getLocalizedText(aboutContent.resumeLabel, locale)}
+              </Link>
               <a className="button button--ghost" href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
                 LinkedIn<span className="visually-hidden"> (opens in new tab)</span>
               </a>

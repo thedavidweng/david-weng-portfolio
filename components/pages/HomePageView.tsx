@@ -20,8 +20,8 @@ export function HomePageView({ locale, pathname }: HomePageViewProps) {
       <Header locale={locale} pathname={pathname} />
       <main className="site-main--home" id="main-content">
         <HeroSection locale={locale} />
-        <ServicesSection locale={locale} />
         <ProjectsSection locale={locale} />
+        <ServicesSection locale={locale} />
         <ContactSection locale={locale} />
       </main>
       <Footer locale={locale} />

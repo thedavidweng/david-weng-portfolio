@@ -150,6 +150,7 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(css).toContain(".site-main--home .hero__title");
   expect(css).toContain(".site-main--home .poster-section__title");
   expect(css).toContain(".site-main--home .contact__title");
+  expect(css).toContain(".site-shell--home .site-header__title");
   expect(projectCardTitleBlock).toContain("font-family: var(--font-body);");
 });
 
@@ -162,6 +163,10 @@ test("homepage components separate services from hero instead of rendering hero 
   expect(heroSource).not.toContain('id="services"');
   expect(homeSource).toContain("ServicesSection");
   expect(homeSource).toContain("<ServicesSection locale={locale} />");
+  expect(homeSource).toContain("<ProjectsSection locale={locale} />");
+  expect(homeSource.indexOf("<ProjectsSection locale={locale} />")).toBeLessThan(
+    homeSource.indexOf("<ServicesSection locale={locale} />"),
+  );
 });
 
 test("sticky header reserves the iPhone safe-area inset instead of exposing page content behind the status bar", () => {
@@ -183,6 +188,25 @@ test("home backgrounds remove the red radial glow layers from the page and hero 
   expect(heroFrameBlock).not.toContain("linear-gradient(145deg, rgba(255, 77, 90, 0.08), transparent 42%)");
   expect(homeHeroFrameBlock).not.toContain("linear-gradient(145deg, rgba(255, 77, 90, 0.08), transparent 42%)");
   expect(heroFrameAfterBlock).not.toContain("linear-gradient(90deg, rgba(255, 77, 90, 0.14), transparent 14%, transparent 86%, rgba(255, 77, 90, 0.14))");
+});
+
+test("home hero and contact no longer use the same boxed panel treatment", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const homeHeroFrameBlock = Array.from(css.matchAll(/\.site-main--home \.hero__frame\s*\{[^}]+\}/g))
+    .map((match) => match[0])
+    .join("\n");
+  const homeContactContentBlock = css.match(/\.site-main--home \.contact__content,\s*\.site-main--home \.contact__rail\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeContactRailBlock = Array.from(css.matchAll(/\.site-main--home \.contact__rail\s*\{[^}]+\}/g))
+    .map((match) => match[0])
+    .join("\n");
+
+  expect(homeHeroFrameBlock).toContain("border: none;");
+  expect(homeHeroFrameBlock).toContain("border-radius: 0;");
+  expect(homeHeroFrameBlock).toContain("background: transparent;");
+  expect(homeHeroFrameBlock).toContain("box-shadow: none;");
+  expect(homeContactContentBlock).toContain("border: none;");
+  expect(homeContactContentBlock).toContain("border-radius: 0;");
+  expect(homeContactRailBlock).toContain("border-left: 1px solid rgba(255, 240, 240, 0.08);");
 });
 
 test("mobile non-film project pages define tighter archive and external-handoff hero spacing rules", () => {
