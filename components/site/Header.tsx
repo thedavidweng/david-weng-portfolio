@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -23,30 +23,6 @@ export function Header({ locale, pathname }: HeaderProps) {
   const switchHref = toLocalePath(pathname, locale === "en" ? "zh" : "en");
   const resolveNavHref = (href: string) => (href.startsWith("http") ? href : `${homePath}${href}`);
   const isHomePath = pathname === "/" || pathname === "/zh/";
-
-  const emitDebugLog = (
-    location: string,
-    message: string,
-    data: Record<string, unknown>,
-    hypothesisId: string,
-    runId = "pre-fix"
-  ) => {
-    // #region agent log
-    fetch("http://127.0.0.1:7519/ingest/cebfa676-b386-48f1-8ef3-27f3f750bc6d", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "90cbf6" },
-      body: JSON.stringify({
-        sessionId: "90cbf6",
-        runId,
-        hypothesisId,
-        location,
-        message,
-        data,
-        timestamp: Date.now()
-      })
-    }).catch(() => {});
-    // #endregion
-  };
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -78,71 +54,6 @@ export function Header({ locale, pathname }: HeaderProps) {
       document.body.style.overflow = "";
     };
   }, [mobileMenuOpen]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const logLayoutProbe = (trigger: "mount" | "resize" | "orientationchange") => {
-      const headerEl = document.querySelector(".site-header") as HTMLElement | null;
-      const heroEl = document.querySelector(".site-main--home .hero") as HTMLElement | null;
-      const descriptorEl = document.querySelector(".site-header__descriptor") as HTMLElement | null;
-      const headerInnerEl = document.querySelector(".site-header__inner") as HTMLElement | null;
-
-      const headerRect = headerEl?.getBoundingClientRect();
-      const heroRect = heroEl?.getBoundingClientRect();
-      const descriptorRect = descriptorEl?.getBoundingClientRect();
-      const computedHero = heroEl ? window.getComputedStyle(heroEl) : null;
-      const computedDescriptor = descriptorEl ? window.getComputedStyle(descriptorEl) : null;
-      const computedHeader = headerEl ? window.getComputedStyle(headerEl) : null;
-      const overlap = Boolean(
-        descriptorRect &&
-          heroRect &&
-          descriptorRect.height > 0 &&
-          descriptorRect.bottom > heroRect.top &&
-          descriptorRect.top < heroRect.bottom
-      );
-
-      emitDebugLog(
-        "components/site/Header.tsx:layout-probe",
-        "Mobile header/home layout probe",
-        {
-          trigger,
-          width: window.innerWidth,
-          height: window.innerHeight,
-          isHomePath,
-          mobileMenuOpen,
-          headerVisible,
-          headerScrolled,
-          headerHeight: headerRect?.height ?? null,
-          headerTop: headerRect?.top ?? null,
-          headerTransform: computedHeader?.transform ?? null,
-          headerInnerHeight: headerInnerEl?.getBoundingClientRect().height ?? null,
-          heroTop: heroRect?.top ?? null,
-          heroPaddingTop: computedHero?.paddingTop ?? null,
-          descriptorDisplay: computedDescriptor?.display ?? null,
-          descriptorOpacity: computedDescriptor?.opacity ?? null,
-          descriptorTop: descriptorRect?.top ?? null,
-          descriptorBottom: descriptorRect?.bottom ?? null,
-          overlap
-        },
-        "H1-H4"
-      );
-    };
-
-    const handleResize = () => logLayoutProbe("resize");
-    const handleOrientationChange = () => logLayoutProbe("orientationchange");
-
-    logLayoutProbe("mount");
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleOrientationChange);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleOrientationChange);
-    };
-  }, [headerScrolled, headerVisible, isHomePath, mobileMenuOpen]);
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -218,7 +129,7 @@ export function Header({ locale, pathname }: HeaderProps) {
             <div className="site-header__menu-panel">
               <nav className="site-header__nav" aria-label="Main navigation">
                 {navigationItems.map((item) => {
-                  if (item.href === "#contact") return null; // We place Contact button on the right
+                  if (item.href === "#contact") return null;
 
                   const label = getLocalizedText(item.label, locale);
                   const isExternal = item.href.startsWith("http");

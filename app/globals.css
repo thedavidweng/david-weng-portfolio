@@ -2502,7 +2502,7 @@ main {
     transform: translateX(101%);
     transition:
       transform var(--ease-slow),
-      visibility 0s linear var(--ease-slow);
+      visibility 0s linear 600ms;
     z-index: 49;
     overflow-y: auto;
   }
@@ -3369,16 +3369,12 @@ main {
 }
 
 @media (max-width: 760px) {
-  .site-header {
-    --mobile-header-safe-offset: calc(env(safe-area-inset-top) + 5.4rem);
-  }
-
   .site-main--home {
     gap: 0.9rem;
   }
 
   .site-main--home .hero {
-    padding-top: calc(var(--mobile-header-safe-offset) + 0.6rem);
+    padding-top: calc(env(safe-area-inset-top) + 6rem);
   }
 
   .site-main--home .hero__content,
