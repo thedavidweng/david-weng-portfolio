@@ -4,7 +4,6 @@ import { getLocalizedText, localized } from "@/lib/i18n";
 export const siteIdentity = {
   name: "David Weng",
   fullName: "David (Jiachen) Weng",
-  brandLine: localized("video / photography / design / content operations", "视频 / 摄影 / 设计 / 内容运营"),
   roles: localized(
     ["Video Editor", "Photographer", "Graphic Designer", "ContentOps"],
     ["视频剪辑", "摄影", "平面设计", "内容运营"]

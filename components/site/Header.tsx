@@ -101,7 +101,6 @@ export function Header({ locale, pathname }: HeaderProps) {
           <Link className="site-header__brand" href={homePath}>
             <span className="site-header__title">{siteIdentity.name}</span>
           </Link>
-          <p className="site-header__descriptor">{getLocalizedText(siteIdentity.brandLine, locale)}</p>
 
           <button
             aria-controls="site-mobile-menu"
