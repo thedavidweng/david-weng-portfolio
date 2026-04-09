@@ -16,7 +16,6 @@ export function ContactSection({ locale }: ContactSectionProps) {
       <Container>
         <div className="contact__panel">
           <div className="contact__content">
-            <p className="poster-section__eyebrow">{getLocalizedText(contactContent.eyebrow, locale)}</p>
             <h2 className="contact__title">{getLocalizedText(contactContent.title, locale)}</h2>
             {lead ? <p className="contact__lead">{lead}</p> : null}
             <p className="contact__copy">{getLocalizedText(contactContent.body, locale)}</p>
@@ -27,7 +26,6 @@ export function ContactSection({ locale }: ContactSectionProps) {
             </div>
           </div>
           <div className="contact__rail">
-            <p className="poster-section__eyebrow">{getLocalizedText(contactContent.bestForLabel, locale)}</p>
             <ul className="contact__list">
               {contactContent.inquiryTypes.map((item) => (
                 <li key={item.title.en}>

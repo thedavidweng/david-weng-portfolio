@@ -12,6 +12,7 @@ type HeaderProps = {
 export function Header({ locale, pathname }: HeaderProps) {
   const homePath = getLocaleHomePath(locale);
   const switchLabel = getLocalizedText(footerContent.languageLabel, locale);
+  const externalWindowHint = getLocalizedText(footerContent.externalWindowHint, locale);
   const switchHref = toLocalePath(pathname, locale === "en" ? "zh" : "en");
   const resolveNavHref = (href: string) => (href.startsWith("http") ? href : `${homePath}${href}`);
   const isHomePath = pathname === "/" || pathname === "/zh/";
@@ -26,17 +27,23 @@ export function Header({ locale, pathname }: HeaderProps) {
           </Link>
           <p className="site-header__descriptor">{descriptor}</p>
           <nav className="site-header__nav" aria-label="Main navigation">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                className="site-header__nav-link"
-                href={resolveNavHref(item.href)}
-                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-              >
-                {getLocalizedText(item.label, locale)}
-              </Link>
-            ))}
+            {navigationItems.map((item) => {
+              const label = getLocalizedText(item.label, locale);
+              const isExternal = item.href.startsWith("http");
+
+              return (
+                <Link
+                  key={item.href}
+                  aria-label={isExternal ? `${label} (${externalWindowHint})` : undefined}
+                  className="site-header__nav-link"
+                  href={resolveNavHref(item.href)}
+                  rel={isExternal ? "noreferrer" : undefined}
+                  target={isExternal ? "_blank" : undefined}
+                >
+                  {label}
+                </Link>
+              );
+            })}
             <Link className="site-header__nav-link site-header__locale" href={switchHref}>
               {switchLabel}
             </Link>

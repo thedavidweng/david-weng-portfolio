@@ -83,7 +83,7 @@ export function ProjectMediaLightbox({
           }}
           type="button"
         >
-          close
+          {projectLabel(closePreviewLabel, locale)}
         </button>
         <div className="project-media__lightbox-scroll">
           <div className="project-media__lightbox-frame" onClick={(event) => event.stopPropagation()}>

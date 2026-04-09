@@ -67,7 +67,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(within(hero as HTMLElement).queryByRole("link", { name: /view projects/i })).not.toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /^resume$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /view portfolio/i })).not.toBeInTheDocument();
-  expect(screen.getAllByRole("link", { name: /^blog$/i })[0]).toHaveAttribute(
+  expect(screen.getAllByRole("link", { name: /blog/i })[0]).toHaveAttribute(
     "href",
     "https://blog.davidweng.eu.org/"
   );
@@ -98,7 +98,10 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(screen.getByRole("heading", { name: /^projects$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^about$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^contact$/i })).toBeInTheDocument();
-  expect(screen.getByText(/^03 \/ contact$/i)).toBeInTheDocument();
+  expect(screen.queryByText(/^01 \/ core capabilities$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/^02 \/ archive$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/^03 \/ contact$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/^best for$/i)).not.toBeInTheDocument();
   expect(contact).toBeTruthy();
   expect(within(contact as HTMLElement).getByRole("link", { name: /email me/i })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /^resume$/i })).toHaveAttribute("href", "/documents/resume.pdf");
@@ -122,7 +125,7 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(within(hero as HTMLElement).queryByRole("link", { name: /查看项目/i })).not.toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /简历/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /查看作品集/i })).not.toBeInTheDocument();
-  expect(screen.getAllByRole("link", { name: /^博客$/i })[0]).toHaveAttribute(
+  expect(screen.getAllByRole("link", { name: /博客/i })[0]).toHaveAttribute(
     "href",
     "https://blog.davidweng.eu.org/"
   );
@@ -135,7 +138,10 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(screen.getByRole("heading", { name: /^项目$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^关于我$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^联系$/i })).toBeInTheDocument();
-  expect(screen.getByText(/^03 \/ 联系$/i)).toBeInTheDocument();
+  expect(screen.queryByText(/^01 \/ 核心能力$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/^02 \/ 档案$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/^03 \/ 联系$/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/^适合合作$/i)).not.toBeInTheDocument();
   expect(screen.getByText(/视频剪辑、摄影、平面设计。从概念到交付。/i)).toBeInTheDocument();
   expect(container.querySelector(".hero.hero--zh")).toBeTruthy();
   expect(mainChildren).toEqual(["top", "projects", "services", "contact"]);

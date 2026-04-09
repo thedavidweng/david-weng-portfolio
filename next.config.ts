@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(__dirname),
   images: {
     formats: ["image/avif", "image/webp"],
+    qualities: [68, 75],
   },
   async headers() {
     return [

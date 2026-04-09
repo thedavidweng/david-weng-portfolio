@@ -13,7 +13,6 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
     <section className={`section-shell services${locale === "zh" ? " services--zh" : ""}`} id="services">
       <Container>
         <div className="poster-section__intro">
-          <p className="poster-section__eyebrow">{getLocalizedText(servicesContent.eyebrow, locale)}</p>
           <h2 className="poster-section__title">{getLocalizedText(servicesContent.title, locale)}</h2>
           <p className="poster-section__copy">{getLocalizedText(servicesContent.description, locale)}</p>
         </div>

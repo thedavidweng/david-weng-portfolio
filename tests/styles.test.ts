@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
-test("project card title styling does not animate letter-spacing on hover", () => {
+test("project card title styling keeps letter-spacing stable without block highlight overrides", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
 
   expect(css).toContain(".project-card__title");
@@ -12,10 +12,17 @@ test("project card title styling does not animate letter-spacing on hover", () =
 
 test("project card covers use a softened default filter and sharpen slightly on hover", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const source = readFileSync(join(process.cwd(), "components/sections/ProjectsSection.tsx"), "utf8");
 
-  expect(css).toContain("filter: blur(4px) brightness(0.72)");
-  expect(css).toContain("filter: blur(1.5px) brightness(0.9) saturate(1.15)");
-  expect(css).toContain("transform: translate3d(10px, -8px, 0);");
+  expect(source).toContain('import Image from "next/image"');
+  expect(source).toContain('className="project-card__image"');
+  expect(source).not.toContain("url(${project.coverImage})");
+  expect(css).toContain(".project-card__backdrop");
+  expect(css).toContain(".project-card__image");
+  expect(css).toContain("filter: blur(2.75px) brightness(0.76)");
+  expect(css).toContain("filter: blur(0.75px) brightness(0.9) saturate(1.08)");
+  expect(css).toContain(".projects__slide");
+  expect(css).toContain("contain: layout paint;");
 });
 
 test("archive media hover keeps the bottom shadow aligned with the image scale", () => {
@@ -137,6 +144,8 @@ test("home layout uses dedicated modern font variables without changing project 
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
   const layoutSource = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
   const projectCardTitleBlock = css.match(/\.project-card__title\s*\{[^}]+\}/)?.[0] ?? "";
+  const headerTitleBlock = css.match(/\.site-header__title\s*\{[^}]+\}/)?.[0] ?? "";
+  const rootBlock = css.match(/:root\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(layoutSource).toContain("Inter_Tight");
   expect(layoutSource).toContain("Inter(");
@@ -150,7 +159,23 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(css).toContain(".site-main--home .hero__title");
   expect(css).toContain(".site-main--home .poster-section__title");
   expect(css).toContain(".site-main--home .contact__title");
-  expect(css).toContain(".site-shell--home .site-header__title");
+  expect(headerTitleBlock).toContain("font-family: var(--font-home-display);");
+  expect(headerTitleBlock).toContain("display: inline-flex;");
+  expect(headerTitleBlock).toContain("align-items: center;");
+  expect(headerTitleBlock).toContain("min-height: 44px;");
+  expect(headerTitleBlock).toContain("font-style: normal;");
+  expect(headerTitleBlock).toContain("font-weight: 700;");
+  const headerBrandBlock = css.match(/\.site-header__brand\s*\{[^}]+\}/)?.[0] ?? "";
+  expect(headerBrandBlock).toContain("align-items: center;");
+  expect(rootBlock).toContain("--line: rgba(174, 174, 180, 0.12);");
+  expect(rootBlock).toContain("--line-strong: rgba(174, 174, 180, 0.18);");
+  expect(rootBlock).toContain("--text-soft: rgba(202, 202, 206, 0.74);");
+  expect(rootBlock).toContain("--text-faint: rgba(150, 150, 156, 0.62);");
+  expect(rootBlock).toContain("--accent-soft: rgba(165, 56, 72, 0.72);");
+  expect(rootBlock).toContain("--radius-xl: 0;");
+  expect(rootBlock).toContain("--radius-lg: 0;");
+  expect(rootBlock).toContain("--radius-md: 0;");
+  expect(rootBlock).toContain("--radius-pill: 0;");
   expect(projectCardTitleBlock).toContain("font-family: var(--font-body);");
 });
 
@@ -206,7 +231,128 @@ test("home hero and contact no longer use the same boxed panel treatment", () =>
   expect(homeHeroFrameBlock).toContain("box-shadow: none;");
   expect(homeContactContentBlock).toContain("border: none;");
   expect(homeContactContentBlock).toContain("border-radius: 0;");
-  expect(homeContactRailBlock).toContain("border-left: 1px solid rgba(255, 240, 240, 0.08);");
+  expect(homeContactRailBlock).toContain("border-left: 1px solid rgba(229, 226, 225, 0.08);");
+});
+
+test("global controls switch to square noir styling without pill buttons or slash suffixes", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const buttonBlock = css.match(/\.button\s*\{[^}]+\}/)?.[0] ?? "";
+  const filterBlock = css.match(/\.filter-chip\s*\{[^}]+\}/)?.[0] ?? "";
+  const reelNavBlock = css.match(/\.reel-nav\s*\{[^}]+\}/)?.[0] ?? "";
+  const signalButtonBlock = css.match(/\.button--signal\s*\{[^}]+\}/)?.[0] ?? "";
+  const headerLinkBlock = css.match(/\.site-header__nav-link\s*\{[^}]+\}/)?.[0] ?? "";
+  const lightboxCloseBlock = css.match(/\.project-media__lightbox-close\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(buttonBlock).toContain("border-radius: 0;");
+  expect(buttonBlock).toContain("text-transform: uppercase;");
+  expect(buttonBlock).toContain("border: 1px solid var(--line-strong);");
+  expect(css).not.toContain('content: "//";');
+  expect(headerLinkBlock).toContain("min-height: 44px;");
+  expect(filterBlock).toContain("background: transparent;");
+  expect(filterBlock).toContain("min-height: 44px;");
+  expect(reelNavBlock).toContain("border-radius: 0;");
+  expect(reelNavBlock).toContain("min-height: 44px;");
+  expect(reelNavBlock).toContain("min-width: 44px;");
+  expect(signalButtonBlock).toContain("background: rgba(var(--accent-rgb), 0.92);");
+  expect(signalButtonBlock).toContain("border-color: rgba(var(--accent-rgb), 0.74);");
+  expect(lightboxCloseBlock).toContain("min-width: 44px;");
+  expect(lightboxCloseBlock).toContain("min-height: 44px;");
+});
+
+test("signal panels restore the red border and top-right corner accent on hover", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const signalPanelBlock = Array.from(css.matchAll(/\.signal-panel\s*\{[^}]+\}/g))
+    .map((match) => match[0])
+    .join("\n");
+  const signalPanelAfterBlock = css.match(/\.signal-panel::after\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(signalPanelBlock).toContain("border: 1px solid rgba(229, 226, 225, 0.08);");
+  expect(css).toContain(".signal-panel:hover");
+  expect(css).toContain("border-color: rgba(252, 0, 0, 0.76);");
+  expect(css).toContain("outline: 1px solid rgba(252, 0, 0, 0.92);");
+  expect(css).toContain("outline-offset: -1px;");
+  expect(signalPanelAfterBlock).toContain('content: "";');
+  expect(signalPanelAfterBlock).toContain("border-top: 2px solid transparent;");
+  expect(signalPanelAfterBlock).toContain("border-right: 2px solid transparent;");
+  expect(css).toContain(".signal-panel:hover::after");
+  expect(css).toContain("border-color: rgba(252, 0, 0, 0.94);");
+});
+
+test("home hero splits the title into stage lines and colors the operations line", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const heroSource = readFileSync(join(process.cwd(), "components/sections/HeroSection.tsx"), "utf8");
+
+  expect(heroSource).toContain('className="hero__title-line hero__title-line--accent"');
+  expect(css).toContain(".hero__title-line");
+  expect(css).toContain("display: block;");
+  expect(css).toContain(".hero__title-line--accent");
+  expect(css).toContain("color: #b33445;");
+});
+
+test("home services use a full border and tighter vertical spacing instead of a top-only divider", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const homeServiceCardBlock = css.match(/\.site-main--home \.service-card\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeServiceCopyBlock = css.match(/\.site-main--home \.service-card p\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(homeServiceCardBlock).toContain("min-height: 264px;");
+  expect(homeServiceCardBlock).toContain("justify-content: flex-start;");
+  expect(homeServiceCardBlock).toContain("gap: 0.78rem;");
+  expect(homeServiceCardBlock).toContain("border: 1px solid rgba(229, 226, 225, 0.08);");
+  expect(homeServiceCardBlock).not.toContain("border-top:");
+  expect(homeServiceCopyBlock).toContain("margin-top: 0.25rem;");
+  expect(homeServiceCopyBlock).toContain("line-height: 1.62;");
+});
+
+test("homepage sections remove eyebrow labels and tighten section intro spacing", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const servicesSource = readFileSync(join(process.cwd(), "components/sections/ServicesSection.tsx"), "utf8");
+  const projectsSource = readFileSync(join(process.cwd(), "components/sections/ProjectsSection.tsx"), "utf8");
+  const contactSource = readFileSync(join(process.cwd(), "components/sections/ContactSection.tsx"), "utf8");
+  const introBlock = css.match(/\.poster-section__intro\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeServicesIntroBlock = css.match(/\.site-main--home \.services \.poster-section__intro\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(servicesSource).not.toContain("poster-section__eyebrow");
+  expect(projectsSource).not.toContain("poster-section__eyebrow");
+  expect(contactSource).not.toContain("poster-section__eyebrow");
+  expect(introBlock).toContain("gap: 0.55rem;");
+  expect(homeServicesIntroBlock).toContain("gap: 0.55rem;");
+});
+
+test("home sections share a stage gutter so projects services and contact do not pin to the container edge", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const homeHeroContentBlock = css.match(/\.site-main--home \.hero__content\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeHeroStageBlock = css.match(/\.site-main--home \.hero__content--stage\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(css).toContain("--home-stage-gutter: clamp(1.2rem, 3.6vw, 3.25rem);");
+  expect(css).toContain(".site-main--home .projects__layout,");
+  expect(css).toContain(".site-main--home .services .poster-section__intro,");
+  expect(css).toContain(".site-main--home .services__grid,");
+  expect(css).toContain(".site-main--home .contact__panel {");
+  expect(css).toContain("padding-inline: var(--home-stage-gutter);");
+  expect(css).toContain("--home-section-top: clamp(1.4rem, 3.8vw, 2.7rem);");
+  expect(homeHeroContentBlock).toContain("padding: clamp(3.2rem, 7vw, 5.8rem) var(--home-stage-gutter) clamp(3rem, 7vw, 4.6rem);");
+  expect(homeHeroStageBlock).toContain("padding: clamp(3.2rem, 7vw, 5.8rem) var(--home-stage-gutter) clamp(3rem, 7vw, 4.6rem);");
+});
+
+test("project pages and media modules use open-stage containers instead of dark boxed panels", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const heroFrameBlock = css.match(/\.project-hero__frame\s*\{[^}]+\}/)?.[0] ?? "";
+  const handoffBlock = css.match(/\.project-handoff\s*\{[^}]+\}/)?.[0] ?? "";
+  const videoThumbBlock = css.match(/\.project-media__video-thumb\s*\{[^}]+\}/)?.[0] ?? "";
+  const imageBlock = css.match(/\.project-media__image\s*\{[^}]+\}/)?.[0] ?? "";
+  const signalPanelBlock = Array.from(css.matchAll(/\.signal-panel\s*\{[^}]+\}/g))
+    .map((match) => match[0])
+    .join("\n");
+
+  expect(heroFrameBlock).toContain("background: transparent;");
+  expect(heroFrameBlock).toContain("box-shadow: none;");
+  expect(heroFrameBlock).toContain("border-radius: 0;");
+  expect(handoffBlock).toContain("background: transparent;");
+  expect(handoffBlock).toContain("border-left: 1px solid rgba(229, 226, 225, 0.08);");
+  expect(signalPanelBlock).toContain("background: transparent;");
+  expect(signalPanelBlock).toContain("border-radius: 0;");
+  expect(videoThumbBlock).toContain("border-radius: 0;");
+  expect(imageBlock).toContain("border-radius: 0;");
 });
 
 test("mobile non-film project pages define tighter archive and external-handoff hero spacing rules", () => {

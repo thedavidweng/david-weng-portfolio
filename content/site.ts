@@ -193,7 +193,8 @@ export const contactContent = {
 
 export const footerContent = {
   copyright: localized("© 2026 David Weng.", "© 2026 David Weng."),
-  languageLabel: localized("中文", "EN")
+  languageLabel: localized("中文", "EN"),
+  externalWindowHint: localized("opens in new tab", "将在新标签页打开")
 };
 
 export function label(text: LocalizedText, locale: Locale) {

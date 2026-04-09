@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 
@@ -53,10 +53,40 @@ beforeAll(() => {
   });
 });
 
+function installNativeScrollLayout(container: HTMLElement) {
+  const viewport = screen.getByRole("region", { name: /projects carousel|项目轮播/i }) as HTMLDivElement;
+  const slides = Array.from(container.querySelectorAll(".projects__slide")) as HTMLAnchorElement[];
+  const slideWidth = 320;
+
+  Object.defineProperty(viewport, "scrollLeft", {
+    configurable: true,
+    value: 0,
+    writable: true
+  });
+
+  slides.forEach((slide, index) => {
+    Object.defineProperty(slide, "offsetLeft", {
+      configurable: true,
+      get: () => index * slideWidth
+    });
+  });
+
+  Object.defineProperty(viewport, "scrollTo", {
+    configurable: true,
+    value: ({ left = 0 }: ScrollToOptions) => {
+      viewport.scrollLeft = left;
+      fireEvent.scroll(viewport);
+    }
+  });
+
+  fireEvent(window, new Event("resize"));
+}
+
 test("renders a responsive reel with legacy project content and filtering controls", async () => {
   const user = userEvent.setup();
 
   const { container } = render(<ProjectsSection locale="en" />);
+  installNativeScrollLayout(container);
 
   const topbar = container.querySelector(".projects__topbar");
   const filterToolbar = container.querySelector(".projects__filters");
@@ -75,6 +105,7 @@ test("renders a responsive reel with legacy project content and filtering contro
     "Video",
     "Writing"
   ]);
+  expect(screen.getByRole("button", { name: /^client$/i })).toHaveAttribute("aria-pressed", "true");
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /next projects/i })).toBeInTheDocument();
@@ -83,7 +114,7 @@ test("renders a responsive reel with legacy project content and filtering contro
       name: /open project archive for beaty biodiversity museum/i
     })
   ).toBeInTheDocument();
-  expect(screen.getAllByText("View project").length).toBeGreaterThan(0);
+  expect(screen.queryByText("View project")).not.toBeInTheDocument();
   expect(screen.queryByText("Open archive item")).not.toBeInTheDocument();
   expect(
     screen.getByRole("link", {
@@ -98,7 +129,10 @@ test("renders a responsive reel with legacy project content and filtering contro
 
   await user.click(screen.getByRole("button", { name: /writing/i }));
 
-  expect(screen.getByRole("button", { name: /writing/i })).toHaveClass("filter-chip--active");
+  await waitFor(() => {
+    expect(screen.getByRole("button", { name: /writing/i })).toHaveClass("filter-chip--active");
+    expect(screen.getByRole("button", { name: /writing/i })).toHaveAttribute("aria-pressed", "true");
+  });
   expect(
     screen.getByRole("link", {
       name: /open project transcending barriers/i
@@ -125,7 +159,10 @@ test("renders a responsive reel with legacy project content and filtering contro
 
   await user.click(screen.getByRole("button", { name: /^film$/i }));
 
-  expect(screen.getByRole("button", { name: /^film$/i })).toHaveClass("filter-chip--active");
+  await waitFor(() => {
+    expect(screen.getByRole("button", { name: /^film$/i })).toHaveClass("filter-chip--active");
+    expect(screen.getByRole("button", { name: /^film$/i })).toHaveAttribute("aria-pressed", "true");
+  });
   expect(
     screen.getByRole("link", {
       name: /open project gourd/i
@@ -137,7 +174,8 @@ test("renders a responsive reel with legacy project content and filtering contro
 test("renders localized labels and links in chinese", async () => {
   const user = userEvent.setup();
 
-  render(<ProjectsSection locale="zh" />);
+  const { container } = render(<ProjectsSection locale="zh" />);
+  installNativeScrollLayout(container);
 
   expect(screen.getByRole("toolbar", { name: /项目分类/i })).toBeInTheDocument();
   expect(screen.getByRole("region", { name: /项目轮播/i })).toBeInTheDocument();
@@ -149,6 +187,7 @@ test("renders localized labels and links in chinese", async () => {
     "视频",
     "写作"
   ]);
+  expect(screen.getByRole("button", { name: /^客户$/i })).toHaveAttribute("aria-pressed", "true");
   expect(screen.getByRole("button", { name: /上一组项目/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
   expect(
@@ -156,7 +195,7 @@ test("renders localized labels and links in chinese", async () => {
       name: /Beaty Biodiversity Museum 档案/i
     })
   ).toHaveAttribute("href", "/zh/projects/beaty-biodiversity-museum-annual-report-2022-2023");
-  expect(screen.getAllByText("查看项目").length).toBeGreaterThan(0);
+  expect(screen.queryByText("查看项目")).not.toBeInTheDocument();
   expect(screen.queryByText("打开项目档案")).not.toBeInTheDocument();
   expect(
     screen.queryByRole("link", {
@@ -174,7 +213,10 @@ test("renders localized labels and links in chinese", async () => {
 
   await user.click(screen.getByRole("button", { name: /^视频$/i }));
 
-  expect(screen.getByRole("button", { name: /^视频$/i })).toHaveClass("filter-chip--active");
+  await waitFor(() => {
+    expect(screen.getByRole("button", { name: /^视频$/i })).toHaveClass("filter-chip--active");
+    expect(screen.getByRole("button", { name: /^视频$/i })).toHaveAttribute("aria-pressed", "true");
+  });
   expect(
     screen.getByRole("link", {
       name: /委托视频项目/i
@@ -193,7 +235,10 @@ test("renders localized labels and links in chinese", async () => {
 
   await user.click(screen.getByRole("button", { name: /^电影$/i }));
 
-  expect(screen.getByRole("button", { name: /^电影$/i })).toHaveClass("filter-chip--active");
+  await waitFor(() => {
+    expect(screen.getByRole("button", { name: /^电影$/i })).toHaveClass("filter-chip--active");
+    expect(screen.getByRole("button", { name: /^电影$/i })).toHaveAttribute("aria-pressed", "true");
+  });
   expect(
     screen.getByRole("link", {
       name: /清兵卫/i

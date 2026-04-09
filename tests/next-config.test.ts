@@ -6,6 +6,7 @@ test("next config pins outputFileTracingRoot to the project directory", () => {
 
   expect(configSource).toContain("outputFileTracingRoot");
   expect(configSource).toContain("__dirname");
+  expect(configSource).toContain("qualities: [68, 75]");
 });
 
 test("dev script uses polling watchers to avoid EMFILE errors in local preview", () => {

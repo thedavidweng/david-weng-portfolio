@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { projectLabel, projectSectionContent } from "@/content/projects";
 import { getLocalizedText, getProjectPath } from "@/lib/i18n";
@@ -19,108 +19,112 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
     () => categoryGroups.map((group) => ({ id: group.id, label: group.label })),
     [categoryGroups]
   );
-  const [activeCategory, setActiveCategory] = useState(() => categoryGroups[0]?.id ?? "Client");
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
-  const [viewportRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    container: ".projects__reel",
-    containScroll: "trimSnaps",
-    dragFree: false,
-    slidesToScroll: 1
-  });
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+  const slideRefs = useRef<Array<HTMLAnchorElement | null>>([]);
+  const slideOffsetsRef = useRef<number[]>([]);
+  const scrollFrameRef = useRef<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const syncCarouselState = useCallback(() => {
-    if (!emblaApi) {
+  const activeCategory = useMemo(
+    () => getCategoryBySnap(categoryGroups, activeIndex)?.id ?? categoryGroups[0]?.id ?? "Client",
+    [activeIndex, categoryGroups]
+  );
+  const canScrollPrev = activeIndex > 0;
+  const canScrollNext = activeIndex < orderedProjects.length - 1;
+
+  const syncScrollState = useCallback(() => {
+    const viewport = viewportRef.current;
+    const slideOffsets = slideOffsetsRef.current;
+
+    if (!viewport || slideOffsets.length === 0) {
       return;
     }
 
-    const activeGroup = getCategoryBySnap(categoryGroups, emblaApi.selectedScrollSnap());
+    const scrollLeft = viewport.scrollLeft;
+    let closestIndex = 0;
+    let closestDistance = Number.POSITIVE_INFINITY;
 
-    if (activeGroup) {
-      setActiveCategory(activeGroup.id);
+    slideOffsets.forEach((offsetLeft, index) => {
+      const distance = Math.abs(offsetLeft - scrollLeft);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    setActiveIndex((currentIndex) => (currentIndex === closestIndex ? currentIndex : closestIndex));
+  }, []);
+
+  const scheduleScrollSync = useCallback(() => {
+    if (scrollFrameRef.current !== null) {
+      return;
     }
 
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [categoryGroups, emblaApi]);
+    scrollFrameRef.current = window.requestAnimationFrame(() => {
+      scrollFrameRef.current = null;
+      syncScrollState();
+    });
+  }, [syncScrollState]);
 
-  const handleViewportWheel = useCallback(
-    (event: React.WheelEvent<HTMLDivElement>) => {
-      if (!emblaApi) {
+  const measureSlides = useCallback(() => {
+    slideOffsetsRef.current = slideRefs.current.map((slide) => slide?.offsetLeft ?? 0);
+    scheduleScrollSync();
+  }, [scheduleScrollSync]);
+
+  const scrollToIndex = useCallback(
+    (index: number, behavior: ScrollBehavior = "smooth") => {
+      const viewport = viewportRef.current;
+      const clampedIndex = Math.max(0, Math.min(index, orderedProjects.length - 1));
+      const slide = slideRefs.current[clampedIndex];
+      const targetOffset = slideOffsetsRef.current[clampedIndex] ?? slide?.offsetLeft ?? 0;
+
+      if (!viewport || !slide) {
         return;
       }
 
-      if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) {
-        return;
+      setActiveIndex(clampedIndex);
+
+      if (typeof viewport.scrollTo === "function") {
+        viewport.scrollTo({ left: targetOffset, behavior });
+      } else {
+        viewport.scrollLeft = targetOffset;
       }
 
-      const direction: -1 | 1 = event.deltaX > 0 ? 1 : -1;
-
-      if (direction === 1) {
-        if (!emblaApi.canScrollNext()) {
-          return;
-        }
-
-        event.preventDefault();
-        emblaApi.scrollNext();
-        return;
-      }
-
-      if (!emblaApi.canScrollPrev()) {
-        return;
-      }
-
-      event.preventDefault();
-      emblaApi.scrollPrev();
+      scheduleScrollSync();
     },
-    [emblaApi]
+    [scheduleScrollSync]
   );
 
   useEffect(() => {
-    if (!emblaApi) {
+    const viewport = viewportRef.current;
+
+    if (!viewport) {
       return;
     }
 
-    const frame = requestAnimationFrame(syncCarouselState);
-    emblaApi.on("reInit", syncCarouselState);
-    emblaApi.on("select", syncCarouselState);
-    emblaApi.on("settle", syncCarouselState);
+    slideRefs.current = slideRefs.current.slice(0, orderedProjects.length);
+    measureSlides();
+    viewport.addEventListener("scroll", scheduleScrollSync, { passive: true });
+    window.addEventListener("resize", measureSlides);
 
     return () => {
-      cancelAnimationFrame(frame);
-      emblaApi.off("reInit", syncCarouselState);
-      emblaApi.off("select", syncCarouselState);
-      emblaApi.off("settle", syncCarouselState);
+      viewport.removeEventListener("scroll", scheduleScrollSync);
+      window.removeEventListener("resize", measureSlides);
     };
-  }, [emblaApi, syncCarouselState]);
+  }, [categoryGroups, measureSlides, scheduleScrollSync]);
 
   useEffect(() => {
-    if (!emblaApi) {
-      return;
-    }
-
-    emblaApi.reInit();
-    emblaApi.scrollTo(categoryGroups[0]?.startIndex ?? 0, true);
-
-    const frame = requestAnimationFrame(syncCarouselState);
-
     return () => {
-      cancelAnimationFrame(frame);
+      if (scrollFrameRef.current !== null) {
+        window.cancelAnimationFrame(scrollFrameRef.current);
+      }
     };
-  }, [categoryGroups, emblaApi, syncCarouselState]);
+  }, []);
 
   function scrollReel(direction: "next" | "previous") {
-    if (!emblaApi) {
-      return;
-    }
-
-    if (direction === "next") {
-      emblaApi.scrollNext();
-      return;
-    }
-
-    emblaApi.scrollPrev();
+    const delta = direction === "next" ? 1 : -1;
+    scrollToIndex(activeIndex + delta);
   }
 
   function scrollToCategory(categoryId: string) {
@@ -130,13 +134,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
       return;
     }
 
-    setActiveCategory(nextCategory.id);
-
-    if (!emblaApi) {
-      return;
-    }
-
-    emblaApi.scrollTo(nextCategory.startIndex);
+    scrollToIndex(nextCategory.startIndex);
   }
 
   return (
@@ -144,7 +142,6 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
       <Container>
         <div className="projects__layout">
           <div className="poster-section__intro">
-            <p className="poster-section__eyebrow">{getLocalizedText(projectSectionContent.eyebrow, locale)}</p>
             <h2 className="poster-section__title">{getLocalizedText(projectSectionContent.title, locale)}</h2>
             <p className="poster-section__copy">{getLocalizedText(projectSectionContent.description, locale)}</p>
           </div>
@@ -157,6 +154,8 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               {categories.map((category) => (
                 <button
                   key={category.id}
+                  aria-controls="projects-carousel"
+                  aria-pressed={activeCategory === category.id}
                   className={`filter-chip${activeCategory === category.id ? " filter-chip--active" : ""}`}
                   onClick={() => scrollToCategory(category.id)}
                   type="button"
@@ -168,6 +167,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
             <div className="projects__reel-controls">
               <button
                 aria-label={getLocalizedText(projectSectionContent.previousLabel, locale)}
+                aria-controls="projects-carousel"
                 className="reel-nav"
                 disabled={!canScrollPrev}
                 onClick={() => scrollReel("previous")}
@@ -177,6 +177,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               </button>
               <button
                 aria-label={getLocalizedText(projectSectionContent.nextLabel, locale)}
+                aria-controls="projects-carousel"
                 className="reel-nav"
                 disabled={!canScrollNext}
                 onClick={() => scrollReel("next")}
@@ -189,23 +190,35 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
           <div
             aria-label={getLocalizedText(projectSectionContent.carouselLabel, locale)}
             className="projects__viewport"
-            onWheel={handleViewportWheel}
-            ref={viewportRef}
+            id="projects-carousel"
             role="region"
+            ref={viewportRef}
           >
             <div className="projects__reel">
-              {orderedProjects.map((project) => (
+              {orderedProjects.map((project, index) => (
                 <Link
                   key={project.slug}
                   aria-label={`Open project ${projectLabel(project.title, locale)}`}
                   className="project-card projects__slide signal-panel"
                   href={getProjectPath(locale, project.slug)}
+                  ref={(node) => {
+                    slideRefs.current[index] = node;
+                  }}
                   style={{
-                    ["--project-cover" as string]: project.coverImage
-                      ? `linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.8)), url(${project.coverImage}), linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`
-                      : `linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.8)), linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`
+                    ["--project-cover-palette" as string]: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`
                   }}
                 >
+                  <div aria-hidden="true" className="project-card__backdrop">
+                    {project.coverImage ? (
+                      <Image
+                        alt=""
+                        className="project-card__image"
+                        fill
+                        sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
+                        src={project.coverImage}
+                      />
+                    ) : null}
+                  </div>
                   <div aria-hidden="true" className="project-card__word">
                     {project.posterWord}
                   </div>
@@ -219,9 +232,6 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
                     <p className="project-card__summary">{projectLabel(project.teaser, locale)}</p>
                     <div className="project-card__footer">
                       <span>{projectLabel(project.coverLabel, locale)}</span>
-                      <span className="project-card__cta">
-                        {getLocalizedText(projectSectionContent.openItemLabel, locale)}
-                      </span>
                     </div>
                   </div>
                 </Link>
