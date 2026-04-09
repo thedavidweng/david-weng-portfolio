@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/types/content";
 import { Container } from "@/components/layout/Container";
-import { footerContent, navigationItems, siteIdentity } from "@/content/site";
+import { footerContent, navigationItems, siteIdentity, aboutContent } from "@/content/site";
 import { getLocaleHomePath, getLocalizedText, toLocalePath } from "@/lib/i18n";
 
 type HeaderProps = {
@@ -16,7 +16,6 @@ export function Header({ locale, pathname }: HeaderProps) {
   const switchHref = toLocalePath(pathname, locale === "en" ? "zh" : "en");
   const resolveNavHref = (href: string) => (href.startsWith("http") ? href : `${homePath}${href}`);
   const isHomePath = pathname === "/" || pathname === "/zh/";
-  const descriptor = getLocalizedText(siteIdentity.brandLine, locale);
 
   return (
     <header className={`site-header${isHomePath ? " site-header--home" : ""}`}>
@@ -25,9 +24,11 @@ export function Header({ locale, pathname }: HeaderProps) {
           <Link className="site-header__brand" href={homePath}>
             <span className="site-header__title">{siteIdentity.name}</span>
           </Link>
-          <p className="site-header__descriptor">{descriptor}</p>
+          
           <nav className="site-header__nav" aria-label="Main navigation">
             {navigationItems.map((item) => {
+              if (item.href === "#contact") return null; // We place Contact button on the right
+              
               const label = getLocalizedText(item.label, locale);
               const isExternal = item.href.startsWith("http");
 
@@ -48,6 +49,15 @@ export function Header({ locale, pathname }: HeaderProps) {
               {switchLabel}
             </Link>
           </nav>
+          
+          <div className="site-header__actions">
+            <Link className="button button--ghost" href={aboutContent.resumeHref}>
+              {getLocalizedText(aboutContent.resumeLabel, locale)}
+            </Link>
+            <Link className="button button--signal" href="#contact">
+              {locale === "en" ? "CONTACT" : "联系"}
+            </Link>
+          </div>
         </div>
       </Container>
     </header>

@@ -9,45 +9,27 @@ type ContactSectionProps = {
 };
 
 export function ContactSection({ locale }: ContactSectionProps) {
-  const lead = getLocalizedText(contactContent.lead, locale);
-
   return (
     <section className="section-shell" id="contact">
       <Container>
-        <div className="contact__panel">
-          <div className="contact__content">
-            <h2 className="contact__title">{getLocalizedText(contactContent.title, locale)}</h2>
-            {lead ? <p className="contact__lead">{lead}</p> : null}
-            <p className="contact__copy">{getLocalizedText(contactContent.body, locale)}</p>
-            <div className="contact__actions">
-              <Link className="button button--signal" href={`mailto:${contactContent.email}`}>
-                {getLocalizedText(contactContent.emailLabel, locale)}
-              </Link>
-            </div>
-          </div>
-          <div className="contact__rail">
-            <ul className="contact__list">
-              {contactContent.inquiryTypes.map((item) => (
-                <li key={item.title.en}>
-                  <strong>{getLocalizedText(item.title, locale)}</strong>
-                  <span>{getLocalizedText(item.copy, locale)}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="contact__secondary">
-              <Link className="button button--ghost" href={aboutContent.resumeHref}>
-                {getLocalizedText(aboutContent.resumeLabel, locale)}
-              </Link>
-              <a className="button button--ghost" href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
-                LinkedIn<span className="visually-hidden"> (opens in new tab)</span>
-              </a>
-              <a className="button button--ghost" href={contactContent.instagramHref} rel="noreferrer" target="_blank">
-                Instagram<span className="visually-hidden"> (opens in new tab)</span>
-              </a>
-              <a className="button button--ghost" href={contactContent.githubHref} rel="noreferrer" target="_blank">
-                GitHub<span className="visually-hidden"> (opens in new tab)</span>
-              </a>
-            </div>
+        <div className="contact-hero">
+          <h2 className="contact-hero__title">
+            {getLocalizedText(contactContent.title, locale)}<br/>
+            <span>{getLocalizedText(contactContent.unseenLabel, locale)}</span>
+          </h2>
+          <div className="contact-hero__actions">
+            <Link className="contact-hero__button contact-hero__button--primary" href={`mailto:${contactContent.email}`}>
+              {getLocalizedText(contactContent.emailLabel, locale)}
+            </Link>
+            <Link className="contact-hero__button" href={aboutContent.resumeHref}>
+              {getLocalizedText(aboutContent.resumeLabel, locale)}
+            </Link>
+            <a className="contact-hero__button" href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
+              {getLocalizedText(contactContent.linkedinLabel, locale)}
+            </a>
+            <a className="contact-hero__button" href={contactContent.instagramHref} rel="noreferrer" target="_blank">
+              {getLocalizedText(contactContent.instagramLabel, locale)}
+            </a>
           </div>
         </div>
       </Container>

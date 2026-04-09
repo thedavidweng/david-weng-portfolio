@@ -5,7 +5,7 @@
   --font-home-body: "Inter", sans-serif;
   --font-home-zh: "Noto Sans SC", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --bg: #131313;
+  --bg: #151515;
   --bg-deep: #0e0e0e;
   --bg-raised: #1c1b1b;
   --bg-panel: transparent;
@@ -75,7 +75,7 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
 }
@@ -201,16 +201,15 @@ main {
   top: 0;
   z-index: 40;
   padding-top: env(safe-area-inset-top);
-  backdrop-filter: blur(16px);
-  background: rgba(19, 19, 19, 0.72);
+  backdrop-filter: blur(24px) saturate(1.5);
+  background: rgba(19, 19, 19, 0.45);
   border-bottom: 1px solid rgba(229, 226, 225, 0.08);
 }
 
 .site-header--home {
-  background:
-    linear-gradient(180deg, rgba(19, 19, 19, 0.92), rgba(19, 19, 19, 0.74)),
-    rgba(19, 19, 19, 0.78);
-  border-bottom-color: rgba(229, 226, 225, 0.05);
+  background: rgba(19, 19, 19, 0.45);
+  border-bottom: none;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
 }
 
 .site-header__inner {
@@ -267,8 +266,20 @@ main {
 .site-header__nav {
   display: flex;
   align-items: center;
+  justify-self: center;
+  gap: 2.5rem;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
   justify-self: end;
-  gap: 1.05rem;
+  gap: 1rem;
+}
+
+.site-header__actions .button {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
 }
 
 .site-header__nav-link {
@@ -277,55 +288,23 @@ main {
   min-height: 44px;
   position: relative;
   padding: 0.35rem 0;
-  color: var(--text-soft);
-  font-size: 0.92rem;
-  letter-spacing: 0.03em;
+  color: #dbcece;
+  font-family: var(--font-home-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
   text-decoration: none;
-  transition:
-    color var(--ease),
-    opacity var(--ease);
-}
-
-.site-header__nav-link + .site-header__nav-link::before {
-  position: absolute;
-  left: -0.56rem;
-  top: 50%;
-  width: 1px;
-  height: 1rem;
-  background: var(--line-strong);
-  transform: translateY(-50%);
-  content: "";
-  pointer-events: none;
-}
-
-.site-header__nav-link::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.24rem;
-  height: 1px;
-  background: rgba(var(--accent-rgb), 0.72);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--ease);
-  content: "";
+  text-transform: uppercase;
+  transition: color var(--ease);
 }
 
 .site-header__nav-link:focus-visible {
-  color: var(--text);
-}
-
-.site-header__nav-link:focus-visible::after {
-  transform: scaleX(1);
+  color: #ffffff;
 }
 
 @media (hover: hover) {
   .site-header__nav-link:hover {
-    color: var(--text);
-  }
-
-  .site-header__nav-link:hover::after {
-    transform: scaleX(1);
+    color: #ffffff;
   }
 }
 
@@ -1273,8 +1252,7 @@ main {
   line-height: 1.45;
 }
 
-.about__panel,
-.contact__panel {
+.about__panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
   gap: clamp(1.5rem, 3vw, 2.75rem);
@@ -1285,9 +1263,7 @@ main {
 }
 
 .about__content,
-.contact__content,
-.about__rail,
-.contact__rail {
+.about__rail {
   padding: 1.6rem 0 0;
 }
 
@@ -3279,6 +3255,70 @@ main {
   .site-shell--zh.site-shell--home .service-card__title {
     font-size: clamp(1.7rem, 8.8vw, 2.35rem);
   }
+}
+
+/* --- Contact Hero Minimalist Layout --- */
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 6rem;
+}
+
+.contact-hero__title {
+  font-family: var(--font-home-display);
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 3.5rem;
+  color: var(--text);
+}
+
+.contact-hero__title span {
+  color: var(--accent);
+}
+
+.contact-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.88rem;
+  border: 1px solid rgba(229, 226, 225, 0.3);
+  color: var(--text);
+  background: transparent;
+  transition: all var(--ease);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-hero__button:hover {
+  background: var(--bg-raised);
+}
+
+.contact-hero__button--primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.contact-hero__button--primary:hover {
+  background: var(--accent-soft);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -84,8 +84,8 @@ const services: ServiceItem[] = [
   {
     title: localized("Video Editing & Post-Production", "视频剪辑与后期制作"),
     description: localized(
-      "I shoot and edit footage into focused, clearly paced stories, specializing in commercial campaigns, event recaps, and social-first content.",
-      "拍摄并剪辑节奏明确、故事清晰的成片，擅长商业短片、活动记录与社交平台内容呈现。"
+      "I shoot and edit footage into focused, clearly paced stories, specializing in commercial campaigns, event recaps, short-form video, and social-first content.",
+      "拍摄并剪辑节奏明确、故事清晰的成片，擅长短视频、商业短片、宣传物料、活动记录与社交平台内容呈现。"
     )
   },
   {
@@ -96,17 +96,17 @@ const services: ServiceItem[] = [
     )
   },
   {
-    title: localized("Graphic & Brand Design", "平面与品牌设计"),
+    title: localized("Graphic & Brand System Design", "平面与品牌系统设计"),
     description: localized(
-      "I build visual systems that help projects look coherent, credible, and ready to ship across web, social, and presentation formats.",
-      "搭建统一的视觉系统，让项目在网页、社交媒体与展示材料中都保持清晰、可信与可发布。"
+      "I build visual systems, content designs, and guidelines that help projects look coherent, credible, and ready to ship across web, social, and presentation formats.",
+      "搭建视觉系统与内容设计，为团队或创始人交付完整方案，让项目在网页、社交媒体与展示材料中都保持清晰、可信与统一。"
     )
   },
   {
-    title: localized("AI-Integrated Creative Workflows", "AI 整合创意流程"),
+    title: localized("AI-Integrated Experimental Work", "AI 整合与实验性项目"),
     description: localized(
-      "I use AI to streamline research, ideation, and content operations while preserving authorship and production quality.",
-      "在保留作者性与成片质量的前提下，用 AI 加速研究、构思与内容运营流程。"
+      "I use AI for image-making, media research, visual prototyping, and accelerating content operations while preserving authorship and production quality.",
+      "在保留作者性与创作质量的前提下，使用 AI 进行影像制作、媒体研究、视觉原型并加速核心内容运营流程。"
     )
   }
 ];
@@ -150,14 +150,15 @@ export const aboutContent = {
 
 export const contactContent = {
   eyebrow: localized("03 / Contact", "03 / 联系"),
-  title: localized("Contact", "联系"),
+  title: localized("Let's craft the", "一起来打磨你的"),
+  unseenLabel: localized("unseen.", "卓越作品。"),
   lead: localized(
     "",
     ""
   ),
   body: localized(
-    "Available for freelance, contract, and collaborative work — editing, commercial campaigns, event recaps, and visual storytelling.",
-    "接受自由职业、合同制与合作项目——视频剪辑、商业宣传、活动回顾与视觉叙事。"
+    "",
+    ""
   ),
   email: "mail@davidweng.eu.org",
   emailDisplay: "mail[at]davidweng.eu.org",
@@ -165,30 +166,8 @@ export const contactContent = {
   instagramHref: "https://www.instagram.com/davidwengpro/",
   githubHref: "https://github.com/thedavidweng",
   emailLabel: localized("Email Me", "发邮件"),
-  bestForLabel: localized("Best for", "适合合作"),
-  inquiryTypes: [
-    {
-      title: localized("Freelance Editing", "自由剪辑"),
-      copy: localized(
-        "Short-form video, campaign assets, event recaps, social content.",
-        "短视频、宣传物料、活动回顾、社交媒体内容。"
-      )
-    },
-    {
-      title: localized("Creative Production", "创意制作"),
-      copy: localized(
-        "Visual systems, content design, and delivery for teams or founders.",
-        "视觉系统、内容设计，为团队或创始人交付完整方案。"
-      )
-    },
-    {
-      title: localized("Experimental Work", "实验性项目"),
-      copy: localized(
-        "AI image-making, media research, visual prototyping.",
-        "AI 影像制作、媒体研究、视觉原型。"
-      )
-    }
-  ]
+  linkedinLabel: localized("LinkedIn", "领英"),
+  instagramLabel: localized("Instagram", "Instagram")
 };
 
 export const footerContent = {
