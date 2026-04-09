@@ -14,7 +14,7 @@ export function ContactSection({ locale }: ContactSectionProps) {
       <Container>
         <div className="contact-hero">
           <h2 className="contact-hero__title">
-            {getLocalizedText(contactContent.title, locale)}<br/>
+            {getLocalizedText(contactContent.title, locale)}{" "}
             <span>{getLocalizedText(contactContent.unseenLabel, locale)}</span>
           </h2>
           <div className="contact-hero__actions">
@@ -24,12 +24,6 @@ export function ContactSection({ locale }: ContactSectionProps) {
             <Link className="contact-hero__button" href={aboutContent.resumeHref}>
               {getLocalizedText(aboutContent.resumeLabel, locale)}
             </Link>
-            <a className="contact-hero__button" href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
-              {getLocalizedText(contactContent.linkedinLabel, locale)}
-            </a>
-            <a className="contact-hero__button" href={contactContent.instagramHref} rel="noreferrer" target="_blank">
-              {getLocalizedText(contactContent.instagramLabel, locale)}
-            </a>
           </div>
         </div>
       </Container>

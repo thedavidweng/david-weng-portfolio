@@ -77,9 +77,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                       <div className="project-film__content">
                         <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
                         <p className="project-hero__summary">{renderProjectSummary()}</p>
-                        <p className="project-hero__roles">
-                          {projectLabel(project.projectType, locale)} / {project.roles[locale].join(" / ")}
-                        </p>
                         {film.facts.length > 0 ? (
                           <div className="project-film__facts">
                             {film.facts.map((fact) => (
@@ -137,9 +134,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                     {!isTitleOnly && !isExternalHandoff ? (
                       <>
                         <p className="project-hero__summary">{renderProjectSummary()}</p>
-                        <p className="project-hero__roles">
-                          [{projectLabel(project.projectType, locale)}] / {project.roles[locale].join(" / ")}
-                        </p>
                         <div className="project-detail__links">
                           {project.externalLinks.map((link) => (
                             <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
@@ -153,7 +147,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                           {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
                         </p>
                         <p className="project-hero__summary">{renderProjectSummary()}</p>
-                        <p className="project-hero__roles">{project.roles[locale].join(" / ")}</p>
                       </>
                     ) : null}
                   </div>

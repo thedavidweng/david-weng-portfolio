@@ -214,6 +214,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
                         alt=""
                         className="project-card__image"
                         fill
+                        priority={index < 2}
                         sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
                         src={project.coverImage}
                       />

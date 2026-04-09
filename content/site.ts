@@ -12,8 +12,8 @@ export const siteIdentity = {
 };
 
 export const navigationItems = [
-  { label: localized("What I Do", "能力"), href: "#services" },
   { label: localized("Projects", "项目"), href: "#projects" },
+  { label: localized("What I Do", "能力"), href: "#services" },
   { label: localized("Contact", "联系"), href: "#contact" },
   { label: localized("Blog", "博客"), href: "https://blog.davidweng.eu.org/" }
 ];
@@ -27,10 +27,6 @@ export const heroContent = {
   support: localized(
     "Video editing, photography, graphic design. Concept to delivery.",
     "视频剪辑、摄影、平面设计。从概念到交付。"
-  ),
-  supportSecondary: localized(
-    "Working with teams and collaborators who need visual content that's well-made and ready to publish.",
-    "与需要高完成度、可直接发布的视觉内容的团队与合作者协作。"
   ),
   stats: [
     {
@@ -153,12 +149,12 @@ export const contactContent = {
   title: localized("Let's craft the", "一起来打磨你的"),
   unseenLabel: localized("unseen.", "卓越作品。"),
   lead: localized(
-    "",
-    ""
+    "Open to freelance editing, campaign work, event recaps, and creative collaborations.",
+    "接受自由剪辑、宣传活动、活动回顾与创意合作。"
   ),
   body: localized(
-    "",
-    ""
+    "Based in Vancouver, working globally. If you have a project that needs a focused visual approach, let's talk about how to bring it to life.",
+    "常驻温哥华，面向全球。如果你有项目需要专注的视觉呈现，让我们聊聊如何将其实现。"
   ),
   email: "mail@davidweng.eu.org",
   emailDisplay: "mail[at]davidweng.eu.org",
