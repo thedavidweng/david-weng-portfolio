@@ -11,7 +11,7 @@ export const beatyBiodiversityMuseumArchive = createEmptyArchiveCollection(
 
 beatyBiodiversityMuseumArchive.items = [
   {
-    file: "covers/Big-Blue-lights-3-scaled.jpg",
+    file: "covers/Big-Blue-lights-3-scaled.avif",
     kind: "cover",
     title: localized("Beaty archive cover", "Beaty 档案封面"),
     caption: localized("Cover image for the Beaty archive collection.", "Beaty 档案集合的封面图。"),
@@ -19,7 +19,7 @@ beatyBiodiversityMuseumArchive.items = [
     order: 0
   },
   {
-    file: "report/beaty-annual-report-spread.jpeg",
+    file: "report/beaty-annual-report-spread.avif",
     kind: "report",
     title: localized("Beaty annual report archive spread", "Beaty 年度报告档案版面"),
     caption: localized(
@@ -30,7 +30,7 @@ beatyBiodiversityMuseumArchive.items = [
     order: 10
   },
   {
-    file: "booklet/beaty-visitor-guide-cn.jpg",
+    file: "booklet/beaty-visitor-guide-cn.avif",
     kind: "booklet",
     title: localized("Visitor guide (Chinese edition)", "访客指南（中文版）"),
     caption: localized(
@@ -41,7 +41,7 @@ beatyBiodiversityMuseumArchive.items = [
     order: 11
   },
   {
-    file: "video/youtube-HaaFUnupWOM.jpg",
+    file: "video/youtube-HaaFUnupWOM.avif",
     kind: "video",
     title: localized("Tulip tree | Liriodendron tulipifera", "Tulip tree | Liriodendron tulipifera"),
     caption: localized(
@@ -52,7 +52,7 @@ beatyBiodiversityMuseumArchive.items = [
     order: 100
   },
   {
-    file: "video/youtube-hAw-MQBdgIk.jpg",
+    file: "video/youtube-hAw-MQBdgIk.avif",
     kind: "video",
     title: localized(
       "Apicomplexans - Ina Na | Researchers Revealed - UBC",
@@ -66,7 +66,7 @@ beatyBiodiversityMuseumArchive.items = [
     order: 101
   },
   {
-    file: "video/youtube-wELwGJ1fM50.jpg",
+    file: "video/youtube-wELwGJ1fM50.avif",
     kind: "video",
     title: localized(
       "Jacelyn Shu - Visual Communication | Researchers Revealed, Beaty Biodiversity Museum, UBC",
@@ -80,7 +80,7 @@ beatyBiodiversityMuseumArchive.items = [
     order: 102
   },
   {
-    file: "video/youtube-wwMFyMqo19M.jpg",
+    file: "video/youtube-wwMFyMqo19M.avif",
     kind: "video",
     title: localized(
       "Digitization of the Beaty with the Museums Assistance Program | Researchers Revealed - UBC",

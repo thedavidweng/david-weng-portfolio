@@ -7,6 +7,9 @@ dist
 *.tsbuildinfo
 docs/
 .claude/
+.cursor/
+.vscode/
+.idea/
 History/
 .worktrees/
 
@@ -17,3 +20,8 @@ stitch-reference/
 references/stitch/
 tmp/stitch/
 tmp/references/
+
+# Local-only tools and private notes
+.local/
+private/
+notes-private/

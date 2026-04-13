@@ -11,7 +11,7 @@ export const personalVideoArchive = createEmptyArchiveCollection(
 
 personalVideoArchive.items = [
   {
-    file: "video/persona-5-style-campaign-video-cover.jpg",
+    file: "video/persona-5-style-campaign-video-cover.avif",
     kind: "video",
     title: localized("Persona 5 Style Campaign Video", "Persona 5 Style Campaign Video"),
     caption: localized(
@@ -22,7 +22,7 @@ personalVideoArchive.items = [
     order: 10
   },
   {
-    file: "video/project-race-cover.jpg",
+    file: "video/project-race-cover.avif",
     kind: "video",
     title: localized("Project Race", "Project Race"),
     caption: localized(
@@ -33,7 +33,7 @@ personalVideoArchive.items = [
     order: 11
   },
   {
-    file: "video/youtube-t9Si3THY5OU.jpg",
+    file: "video/youtube-t9Si3THY5OU.avif",
     kind: "video",
     title: localized("PHANTOM PAIN", "PHANTOM PAIN"),
     caption: localized(

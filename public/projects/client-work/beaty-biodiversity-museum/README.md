@@ -10,6 +10,6 @@ Folders:
 - `video/`: video stills, frames, thumbnails, or motion-design captures
 
 Notes:
-- Keep semantic metadata in `/Users/david/Documents/Vibe/david-weng-portfolio/content/archives/beaty-biodiversity-museum.ts`
+- Keep semantic metadata in `content/archives/beaty-biodiversity-museum.ts`.
 - Use stable descriptive filenames instead of export-generated names
 - Images dropped into these folders are auto-scanned into the archive wall at build time

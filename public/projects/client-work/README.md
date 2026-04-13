@@ -10,6 +10,7 @@ Use this folder as a namespace for archive assets grouped by client or organizat
 
 Notes:
 
-- Prefer `webp` first, then `jpg`.
-- Keep filenames stable and descriptive, such as `client-cover-main.webp` or `client-slide-01.jpg`.
+- Store canonical assets as `avif` in the repository.
+- Runtime delivery should negotiate `avif/webp` with fallback handled by the image pipeline.
+- Keep filenames stable and descriptive, such as `client-cover-main.avif` or `client-slide-01.avif`.
 - Do not rely on embedded image metadata. Record titles, links, and notes in the relevant archive collection file under `content/archives/`.

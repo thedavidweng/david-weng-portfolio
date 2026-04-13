@@ -11,7 +11,7 @@ export const filmVideoArchive = createEmptyArchiveCollection(
 
 filmVideoArchive.items = [
   {
-    file: "video/youtube-WlLGuSej0Yg.jpg",
+    file: "video/youtube-WlLGuSej0Yg.avif",
     kind: "video",
     title: localized(
       "Notion 繁體中文版發布會 Traditional Chinese Launch Party",
@@ -25,7 +25,7 @@ filmVideoArchive.items = [
     order: 10
   },
   {
-    file: "video/youtube-sn_P6wawBLk.jpeg",
+    file: "video/youtube-sn_P6wawBLk.avif",
     kind: "video",
     title: localized("Iris's Lain", "Iris's Lain"),
     caption: localized(

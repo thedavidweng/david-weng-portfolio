@@ -143,7 +143,7 @@ export const projects: ProjectItem[] = [
     duration: localized("Short Film / Drama", "短片 / 剧情"),
     coverLabel: localized("Film / Narrative", "电影 / 叙事"),
     coverPalette: ["#140f12", "#5f2533", "#f0d6d0"],
-    coverImage: "/projects/film-video/film/fraud/cover.jpg",
+    coverImage: "/projects/film-video/film/fraud/cover.avif",
     coverAlt: localized("FRAÜD cover frame", "《信途》封面画面"),
     teaser: localized(
       "Short drama about debt, manipulation, and fraud among international students.",
@@ -180,7 +180,7 @@ export const projects: ProjectItem[] = [
     duration: localized("Microfilm / Horror", "微电影 / 惊悚"),
     coverLabel: localized("Microfilm / Horror", "微电影 / 惊悚"),
     coverPalette: ["#0e0e10", "#60313e", "#f1d5db"],
-    coverImage: "/projects/film-video/film/the-pills/cover.jpg",
+    coverImage: "/projects/film-video/film/the-pills/cover.avif",
     coverAlt: localized("The Pills cover frame", "《药丸》封面画面"),
     teaser: localized(
       "Short horror microfilm built around a medicine-fueled nightmare setup.",
@@ -217,7 +217,7 @@ export const projects: ProjectItem[] = [
     duration: localized("Student Film", "学生短片"),
     coverLabel: localized("Film / Short", "电影 / 短片"),
     coverPalette: ["#0f1011", "#2d2c26", "#d9ceb8"],
-    coverImage: "/projects/film-video/film/gourd/stills/still-gourd-01.png",
+    coverImage: "/projects/film-video/film/gourd/stills/still-gourd-01.avif",
     coverAlt: localized("Frame from Gourd", "《清兵卫》剧照"),
     teaser: localized(
       "Early short film project centered on a young ensemble and a spare, atmospheric setup.",
@@ -272,7 +272,7 @@ export const projects: ProjectItem[] = [
     duration: localized("Commissioned / YouTube", "委托项目 / YouTube"),
     coverLabel: localized("Archive / Commissioned / YouTube", "档案 / 委托项目 / YouTube"),
     coverPalette: ["#0a0d14", "#24324f", "#dae7ff"],
-    coverImage: "/projects/film-video/video/youtube-WlLGuSej0Yg.jpg",
+    coverImage: "/projects/film-video/video/youtube-WlLGuSej0Yg.avif",
     coverAlt: localized(
       "Commissioned video archive cover",
       "委托视频档案封面"
@@ -305,7 +305,7 @@ export const projects: ProjectItem[] = [
     duration: localized("Personal / YouTube", "个人项目 / YouTube"),
     coverLabel: localized("Archive / Personal / YouTube", "档案 / 个人项目 / YouTube"),
     coverPalette: ["#0e1014", "#2b3d5d", "#d8e3f8"],
-    coverImage: "/projects/personal-video/video/persona-5-style-campaign-video-cover.jpg",
+    coverImage: "/projects/personal-video/video/persona-5-style-campaign-video-cover.avif",
     coverAlt: localized(
       "Personal video archive cover",
       "个人视频档案封面"

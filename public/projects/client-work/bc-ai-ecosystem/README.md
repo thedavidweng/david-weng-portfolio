@@ -11,6 +11,7 @@ Put archive assets for this collection in the subfolders below.
 
 Notes:
 
-- Prefer `webp` first, then `jpg`.
-- Keep filenames stable and descriptive, such as `bcai-cover-main.webp` or `bcai-slide-01.jpg`.
+- Store canonical assets as `avif` in the repository.
+- Runtime delivery should negotiate `avif/webp` with fallback handled by the image pipeline.
+- Keep filenames stable and descriptive, such as `bcai-cover-main.avif` or `bcai-slide-01.avif`.
 - Do not rely on embedded image metadata. Record titles, links, and notes in `content/archives/bc-ai-ecosystem.ts`.

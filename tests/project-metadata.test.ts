@@ -18,13 +18,13 @@ describe("project page metadata", () => {
     expect(metadata.openGraph?.url).toBe("/projects/fraud");
     expect(metadata.openGraph?.images).toEqual([
       {
-        url: "/projects/film-video/film/fraud/cover.jpg",
+        url: "/projects/film-video/film/fraud/cover.avif",
         alt: "FRAÜD cover frame"
       }
     ]);
     expect(metadata.twitter?.title).toBe("FRAÜD | David Weng");
     expect(metadata.twitter?.description).toBe(metadata.description);
-    expect(metadata.twitter?.images).toEqual(["/projects/film-video/film/fraud/cover.jpg"]);
+    expect(metadata.twitter?.images).toEqual(["/projects/film-video/film/fraud/cover.avif"]);
   });
 
   test("localized project pages expose localized canonical, alternates, Open Graph, and Twitter metadata", async () => {
@@ -48,13 +48,13 @@ describe("project page metadata", () => {
     expect(metadata.openGraph?.alternateLocale).toBe("en");
     expect(metadata.openGraph?.images).toEqual([
       {
-        url: "/projects/film-video/film/fraud/cover.jpg",
+        url: "/projects/film-video/film/fraud/cover.avif",
         alt: "《信途》封面画面"
       }
     ]);
     expect(metadata.twitter?.title).toBe("信途 | David Weng");
     expect(metadata.twitter?.description).toBe(metadata.description);
-    expect(metadata.twitter?.images).toEqual(["/projects/film-video/film/fraud/cover.jpg"]);
+    expect(metadata.twitter?.images).toEqual(["/projects/film-video/film/fraud/cover.avif"]);
   });
 
   test("gourd metadata stays plain text even when the detail page summary contains inline links", async () => {

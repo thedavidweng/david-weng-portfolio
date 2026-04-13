@@ -50,10 +50,10 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(videoItems).toHaveLength(4);
   expect(videoItems.map((item) => item.src)).toEqual(
     expect.arrayContaining([
-      "/projects/client-work/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.jpg",
-      "/projects/client-work/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.jpg",
-      "/projects/client-work/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.jpg",
-      "/projects/client-work/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.jpg"
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-HaaFUnupWOM.avif",
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-hAw-MQBdgIk.avif",
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-wELwGJ1fM50.avif",
+      "/projects/client-work/beaty-biodiversity-museum/video/youtube-wwMFyMqo19M.avif"
     ])
   );
   expect(videoItems.map((item) => item.href)).toEqual(
@@ -79,11 +79,11 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(videoItems.find((item) => item.href === "https://youtu.be/wwMFyMqo19M")?.description.en).toBe(
     "Find out how a natural history collection is digitized at the Beaty Biodiversity Museum, including 3D scanning and collection database work."
   );
-  expect(staticItems.some((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg")).toBe(true);
-  expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.jpg")?.href).toBe(
+  expect(staticItems.some((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.avif")).toBe(true);
+  expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/booklet/beaty-visitor-guide-cn.avif")?.href).toBe(
     "https://explore.beatymuseum.ubc.ca/assets/guides/visitorguide-CN.pdf"
   );
-  expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/report/beaty-annual-report-spread.jpeg")?.href).toBe(
+  expect(staticItems.find((item) => item.src === "/projects/client-work/beaty-biodiversity-museum/report/beaty-annual-report-spread.avif")?.href).toBe(
     "https://beatymuseum.sites.olt.ubc.ca/files/2023/09/Beaty-Museum-Annual-Report-2022-2023_compressed.pdf"
   );
   expect(project.summary.zh).toBe("为 Beaty Biodiversity Museum 制作的手册、标识、年度报告版式与视频。");
@@ -132,8 +132,8 @@ test("adds dedicated commissioned and personal video archive projects with norma
   expect(commissioned.media.filter((item) => item.archiveKind === "video")).toHaveLength(2);
   expect(commissioned.media.map((item) => item.src)).toEqual(
     expect.arrayContaining([
-      "/projects/film-video/video/youtube-WlLGuSej0Yg.jpg",
-      "/projects/film-video/video/youtube-sn_P6wawBLk.jpeg"
+      "/projects/film-video/video/youtube-WlLGuSej0Yg.avif",
+      "/projects/film-video/video/youtube-sn_P6wawBLk.avif"
     ])
   );
   expect(commissioned.media.find((item) => item.href === "https://youtu.be/WlLGuSej0Yg")?.title.en).toBe(
@@ -154,10 +154,10 @@ test("adds dedicated commissioned and personal video archive projects with norma
     ])
   );
 
-  expect(fraud.coverImage).toBe("/projects/film-video/film/fraud/cover.jpg");
-  expect(thePills.coverImage).toBe("/projects/film-video/film/the-pills/cover.jpg");
+  expect(fraud.coverImage).toBe("/projects/film-video/film/fraud/cover.avif");
+  expect(thePills.coverImage).toBe("/projects/film-video/film/the-pills/cover.avif");
   expect(gourd.title.zh).toBe("清兵卫");
-  expect(gourd.coverImage).toBe("/projects/film-video/film/gourd/stills/still-gourd-01.png");
+  expect(gourd.coverImage).toBe("/projects/film-video/film/gourd/stills/still-gourd-01.avif");
   expect(persona5).toBeUndefined();
   expect(projectRace).toBeUndefined();
 });

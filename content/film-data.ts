@@ -75,7 +75,7 @@ function asCreditGroup(roleEn: string, roleZh: string, people: FilmCreditGroup["
 
 const fraudMainPoster = createFilmImage(
   "fraud",
-  "posters/poster-fraud-main.png",
+  "posters/poster-fraud-main.avif",
   localized("FRAÜD main poster", "信途主海报"),
   localized("Primary one-sheet poster used for FRAÜD.", "《信途》的主海报。"),
   { width: 1728, height: 2304 }
@@ -83,7 +83,7 @@ const fraudMainPoster = createFilmImage(
 
 const thePillsMainPosterEn = createFilmImage(
   "the-pills",
-  "posters/poster-the-pills-main-en.png",
+  "posters/poster-the-pills-main-en.avif",
   localized("The Pills main poster", "药丸主海报"),
   localized("Primary English-language festival poster for The Pills.", "《药丸》的英文主海报。"),
   { width: 1728, height: 2304 }
@@ -91,7 +91,7 @@ const thePillsMainPosterEn = createFilmImage(
 
 const thePillsMainPosterZh = createFilmImage(
   "the-pills",
-  "posters/poster-the-pills-main-zh.png",
+  "posters/poster-the-pills-main-zh.avif",
   localized("The Pills main poster", "药丸主海报"),
   localized("Primary Chinese-language festival poster for The Pills.", "《药丸》的中文主海报。"),
   { width: 1728, height: 2304 }
@@ -99,7 +99,7 @@ const thePillsMainPosterZh = createFilmImage(
 
 const gourdMainPoster = createFilmImage(
   "gourd",
-  "posters/poster-gourd-main.png",
+  "posters/poster-gourd-main.avif",
   localized("Gourd main poster", "清兵卫主海报"),
   localized("Primary poster artwork for Gourd.", "《清兵卫》的主海报。"),
   { width: 1587, height: 2245 }
@@ -114,42 +114,42 @@ export const fraudFilmDetails: FilmDetails = {
     fraudMainPoster,
     createFilmImage(
       "fraud",
-      "posters/poster-fraud-christy-character.png",
+      "posters/poster-fraud-christy-character.avif",
       localized("Christy character poster", "Christy 角色海报"),
       localized("Character poster featuring Christy.", "Christy 的角色海报。"),
       { width: 1728, height: 2304 }
     ),
     createFilmImage(
       "fraud",
-      "posters/poster-fraud-christy-quote.png",
+      "posters/poster-fraud-christy-quote.avif",
       localized("Christy quote poster", "Christy 台词海报"),
       localized("Quote poster built around Christy's dialogue.", "围绕 Christy 台词设计的海报。"),
       { width: 1728, height: 2304 }
     ),
     createFilmImage(
       "fraud",
-      "posters/poster-fraud-isabella-character.png",
+      "posters/poster-fraud-isabella-character.avif",
       localized("Isabella character poster", "Isabella 角色海报"),
       localized("Character poster featuring Isabella.", "Isabella 的角色海报。"),
       { width: 1728, height: 2304 }
     ),
     createFilmImage(
       "fraud",
-      "posters/poster-fraud-isabella-quote.png",
+      "posters/poster-fraud-isabella-quote.avif",
       localized("Isabella quote poster", "Isabella 台词海报"),
       localized("Quote poster built around Isabella's dialogue.", "围绕 Isabella 台词设计的海报。"),
       { width: 1728, height: 2304 }
     ),
     createFilmImage(
       "fraud",
-      "posters/poster-fraud-senior-sister-character.png",
+      "posters/poster-fraud-senior-sister-character.avif",
       localized("Senior Sister character poster", "学姐角色海报"),
       localized("Character poster featuring the senior sister.", "学姐角色海报。"),
       { width: 1728, height: 2304 }
     ),
     createFilmImage(
       "fraud",
-      "posters/poster-fraud-senior-sister-quote.png",
+      "posters/poster-fraud-senior-sister-quote.avif",
       localized("Senior Sister quote poster", "学姐台词海报"),
       localized("Quote poster built around the senior sister's dialogue.", "围绕学姐台词设计的海报。"),
       { width: 1728, height: 2304 }
@@ -213,14 +213,14 @@ export const thePillsFilmDetails: FilmDetails = {
     thePillsMainPosterEn,
     createFilmImage(
       "the-pills",
-      "posters/poster-the-pills-main-ja.png",
+      "posters/poster-the-pills-main-ja.avif",
       localized("The Pills Japanese poster", "药丸日文海报"),
       localized("Japanese-language poster variant for The Pills.", "《药丸》的日文版海报。"),
       { width: 1728, height: 2304 }
     ),
     createFilmImage(
       "the-pills",
-      "posters/poster-the-pills-youtube-cover.png",
+      "posters/poster-the-pills-youtube-cover.avif",
       localized("The Pills YouTube cover", "药丸 YouTube 封面"),
       localized("Landscape promo cover prepared for YouTube.", "为 YouTube 准备的横版宣传封面。"),
       { width: 1280, height: 720 }
