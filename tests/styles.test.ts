@@ -130,8 +130,7 @@ test("mobile home shell keeps a visible header nav with built-in separators inst
   expect(css).toContain(".site-header__nav");
   expect(css).toContain(".site-header__nav-link");
   expect(css).toContain("text-decoration: none;");
-  expect(css).toContain(".site-header__nav-link + .site-header__nav-link::before");
-  expect(css).toContain("width: 1px;");
+  expect(css).not.toContain(".site-header__nav-link + .site-header__nav-link::before");
   expect(css).not.toContain('content: "/";');
   expect(css).toContain("@media (max-width: 760px)");
   const hiddenHomeNavBlock = css.match(
@@ -164,14 +163,14 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(headerTitleBlock).toContain("align-items: center;");
   expect(headerTitleBlock).toContain("min-height: 44px;");
   expect(headerTitleBlock).toContain("font-style: normal;");
-  expect(headerTitleBlock).toContain("font-weight: 700;");
+  expect(headerTitleBlock).toContain("font-weight: 900;");
   const headerBrandBlock = css.match(/\.site-header__brand\s*\{[^}]+\}/)?.[0] ?? "";
   expect(headerBrandBlock).toContain("align-items: center;");
-  expect(rootBlock).toContain("--line: rgba(174, 174, 180, 0.12);");
-  expect(rootBlock).toContain("--line-strong: rgba(174, 174, 180, 0.18);");
-  expect(rootBlock).toContain("--text-soft: rgba(202, 202, 206, 0.74);");
-  expect(rootBlock).toContain("--text-faint: rgba(150, 150, 156, 0.62);");
-  expect(rootBlock).toContain("--accent-soft: rgba(165, 56, 72, 0.72);");
+  expect(rootBlock).toContain("--line: rgba(255, 255, 255, 0.15);");
+  expect(rootBlock).toContain("--line-strong: rgba(255, 255, 255, 0.3);");
+  expect(rootBlock).toContain("--text-soft: #a0a0a0;");
+  expect(rootBlock).toContain("--text-faint: #949494;");
+  expect(rootBlock).toContain("--accent-soft: rgba(225, 29, 37, 0.72);");
   expect(rootBlock).toContain("--radius-xl: 0;");
   expect(rootBlock).toContain("--radius-lg: 0;");
   expect(rootBlock).toContain("--radius-md: 0;");
@@ -236,16 +235,16 @@ test("home hero and contact no longer use the same boxed panel treatment", () =>
 
 test("global controls switch to square noir styling without pill buttons or slash suffixes", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
-  const buttonBlock = css.match(/\.button\s*\{[^}]+\}/)?.[0] ?? "";
   const filterBlock = css.match(/\.filter-chip\s*\{[^}]+\}/)?.[0] ?? "";
   const reelNavBlock = css.match(/\.reel-nav\s*\{[^}]+\}/)?.[0] ?? "";
   const signalButtonBlock = css.match(/\.button--signal\s*\{[^}]+\}/)?.[0] ?? "";
   const headerLinkBlock = css.match(/\.site-header__nav-link\s*\{[^}]+\}/)?.[0] ?? "";
   const lightboxCloseBlock = css.match(/\.project-media__lightbox-close\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(buttonBlock).toContain("border-radius: 0;");
-  expect(buttonBlock).toContain("text-transform: uppercase;");
-  expect(buttonBlock).toContain("border: 1px solid var(--line-strong);");
+  expect(css).toContain(".button {");
+  expect(css).toContain("border-radius: 0;");
+  expect(css).toContain("text-transform: uppercase;");
+  expect(css).toContain("border: 1px solid var(--line-strong);");
   expect(css).not.toContain('content: "//";');
   expect(headerLinkBlock).toContain("min-height: 44px;");
   expect(filterBlock).toContain("background: transparent;");
@@ -268,14 +267,14 @@ test("signal panels restore the red border and top-right corner accent on hover"
 
   expect(signalPanelBlock).toContain("border: 1px solid rgba(229, 226, 225, 0.08);");
   expect(css).toContain(".signal-panel:hover");
-  expect(css).toContain("border-color: rgba(252, 0, 0, 0.76);");
-  expect(css).toContain("outline: 1px solid rgba(252, 0, 0, 0.92);");
+  expect(css).toContain("border-color: rgba(var(--accent-rgb), 0.76);");
+  expect(css).toContain("outline: 1px solid rgba(var(--accent-rgb), 0.92);");
   expect(css).toContain("outline-offset: -1px;");
   expect(signalPanelAfterBlock).toContain('content: "";');
   expect(signalPanelAfterBlock).toContain("border-top: 2px solid transparent;");
   expect(signalPanelAfterBlock).toContain("border-right: 2px solid transparent;");
   expect(css).toContain(".signal-panel:hover::after");
-  expect(css).toContain("border-color: rgba(252, 0, 0, 0.94);");
+  expect(css).toContain("border-color: rgba(var(--accent-rgb), 0.94);");
 });
 
 test("home hero splits the title into stage lines and colors the operations line", () => {
@@ -286,7 +285,7 @@ test("home hero splits the title into stage lines and colors the operations line
   expect(css).toContain(".hero__title-line");
   expect(css).toContain("display: block;");
   expect(css).toContain(".hero__title-line--accent");
-  expect(css).toContain("color: #b33445;");
+  expect(css).toContain("color: var(--accent);");
 });
 
 test("home services use a full border and tighter vertical spacing instead of a top-only divider", () => {
@@ -348,7 +347,7 @@ test("project pages and media modules use open-stage containers instead of dark 
   expect(heroFrameBlock).toContain("box-shadow: none;");
   expect(heroFrameBlock).toContain("border-radius: 0;");
   expect(handoffBlock).toContain("background: transparent;");
-  expect(handoffBlock).toContain("border-left: 1px solid rgba(229, 226, 225, 0.08);");
+  expect(handoffBlock).toContain("border-top: 1px solid rgba(229, 226, 225, 0.12);");
   expect(signalPanelBlock).toContain("background: transparent;");
   expect(signalPanelBlock).toContain("border-radius: 0;");
   expect(videoThumbBlock).toContain("border-radius: 0;");

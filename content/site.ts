@@ -61,7 +61,7 @@ export const heroContent = {
       title: localized("Best fit", "最佳合作"),
       copy: localized(
         "Projects that need one person to handle editing, design, and content — start to finish.",
-        "需要一个人完成剪辑、设计与内容的项目——从头到尾。"
+        "需要一个人从头到尾完成剪辑、设计与内容的项目。"
       )
     },
     {
@@ -121,7 +121,7 @@ export const aboutContent = {
   title: localized("About", "关于我"),
   lead: localized(
     "Video production, graphic design, and content operations — concept to delivery.",
-    "视频制作、平面设计与内容运营——从概念到交付。"
+    "视频制作、平面设计与内容运营，从概念到交付。"
   ),
   body: localized(
     "Background in video editing, photography, graphic design, and social media content. Most projects go from concept to final output in-house, with AI tools integrated where they improve speed or quality.",
@@ -145,8 +145,8 @@ export const aboutContent = {
 
 export const contactContent = {
   eyebrow: localized("03 / Contact", "03 / 联系"),
-  title: localized("Let's craft the", "一起来打磨你的"),
-  unseenLabel: localized("unseen.", "卓越作品。"),
+  title: localized("Let's craft the", "创造"),
+  unseenLabel: localized("unseen.", "未见之物"),
   lead: localized(
     "Open to freelance editing, campaign work, event recaps, and creative collaborations.",
     "接受自由剪辑、宣传活动、活动回顾与创意合作。"

@@ -72,7 +72,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
     "https://blog.davidweng.eu.org/"
   );
   expect(screen.getByRole("link", { name: "中文" })).toHaveAttribute("href", "/zh");
-  expect(container.querySelector(".site-header__descriptor")).toBeTruthy();
+  expect(container.querySelector(".site-header__descriptor")).toBeFalsy();
   expect(container.querySelector(".site-header__mark")).toBeFalsy();
   expect(screen.queryByRole("link", { name: /^about$/i })).not.toBeInTheDocument();
   expect(mainChildren).toEqual(["top", "projects", "services", "contact"]);
@@ -97,17 +97,14 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(screen.queryByAltText(/portrait of david weng/i)).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^projects$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^about$/i })).not.toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /^contact$/i })).toBeInTheDocument();
   expect(screen.queryByText(/^01 \/ core capabilities$/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/^02 \/ archive$/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/^03 \/ contact$/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/^best for$/i)).not.toBeInTheDocument();
   expect(contact).toBeTruthy();
+  expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /email me/i })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /^resume$/i })).toHaveAttribute("href", "/documents/resume.pdf");
-  expect(within(contact as HTMLElement).getByRole("link", { name: /^linkedin/i })).toBeInTheDocument();
-  expect(within(contact as HTMLElement).getByRole("link", { name: /^instagram/i })).toBeInTheDocument();
-  expect(within(contact as HTMLElement).getByRole("link", { name: /^github/i })).toBeInTheDocument();
   expect(screen.getByRole("navigation", { name: /main navigation/i })).toBeInTheDocument();
   expect(container.querySelector(".site-shell--home")).toBeTruthy();
   expect(container.querySelector(".site-main--home")).toBeTruthy();
@@ -130,14 +127,13 @@ test("renders the chinese homepage with a switch back to the english route", () 
     "https://blog.davidweng.eu.org/"
   );
   expect(screen.getByRole("link", { name: "EN" })).toHaveAttribute("href", "/");
-  expect(container.querySelector(".site-header__descriptor")).toBeTruthy();
+  expect(container.querySelector(".site-header__descriptor")).toBeFalsy();
   expect(container.querySelector(".site-header__mark")).toBeFalsy();
   expect(screen.getAllByRole("link", { name: /^能力$/i })[0]).toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /^关于$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /^我能做什么$/i })).not.toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^项目$/i })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^关于我$/i })).not.toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /^联系$/i })).toBeInTheDocument();
   expect(screen.queryByText(/^01 \/ 核心能力$/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/^02 \/ 档案$/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/^03 \/ 联系$/i)).not.toBeInTheDocument();
@@ -159,10 +155,11 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(within(services as HTMLElement).getByText(/视频剪辑与后期制作/i)).toBeInTheDocument();
   expect(within(services as HTMLElement).getByText(/摄影与视觉叙事/i)).toBeInTheDocument();
   expect(within(services as HTMLElement).getByText(/为人物写真、现场活动与编辑报道拍摄具有叙事感的图像。/i)).toBeInTheDocument();
-  expect(within(services as HTMLElement).getByText(/平面与品牌设计/i)).toBeInTheDocument();
-  expect(within(services as HTMLElement).getByText(/AI 整合创意流程/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/平面与品牌系统设计/i)).toBeInTheDocument();
+  expect(within(services as HTMLElement).getByText(/AI 整合与实验性项目/i)).toBeInTheDocument();
   expect(screen.queryByText(/video editing & post-production/i)).not.toBeInTheDocument();
   const contact = container.querySelector("#contact");
   expect(contact).toBeTruthy();
+  expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /简历/i })).toHaveAttribute("href", "/documents/resume.pdf");
 }, 10000);

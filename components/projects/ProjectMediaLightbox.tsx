@@ -7,9 +7,12 @@ import { projectLabel } from "@/content/projects";
 
 type ProjectMediaLightboxProps = {
   activeItem: ProjectMediaItem | null;
+  canNavigate?: boolean;
   closePreviewLabel: LocalizedText;
   locale: Locale;
   onClose: () => void;
+  onNext?: () => void;
+  onPrevious?: () => void;
   previewDialogLabel: LocalizedText;
 };
 
@@ -20,9 +23,12 @@ type PreviewImageItem = ProjectMediaItem & {
 
 export function ProjectMediaLightbox({
   activeItem,
+  canNavigate = false,
   closePreviewLabel,
   locale,
   onClose,
+  onNext,
+  onPrevious,
   previewDialogLabel
 }: ProjectMediaLightboxProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -60,6 +66,23 @@ export function ProjectMediaLightbox({
     return () => dialog.removeEventListener("cancel", handleCancel);
   }, [handleCancel]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "ArrowRight" && canNavigate) {
+        event.preventDefault();
+        onNext?.();
+      } else if (event.key === "ArrowLeft" && canNavigate) {
+        event.preventDefault();
+        onPrevious?.();
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [canNavigate, isOpen, onNext, onPrevious]);
+
   const handleBackdropClick = useCallback(
     () => {
       onClose();
@@ -83,8 +106,34 @@ export function ProjectMediaLightbox({
           }}
           type="button"
         >
-          {projectLabel(closePreviewLabel, locale)}
+          X
         </button>
+        {canNavigate ? (
+          <>
+            <button
+              aria-label="Previous image"
+              className="project-media__lightbox-nav project-media__lightbox-nav--prev"
+              onClick={(event) => {
+                event.stopPropagation();
+                onPrevious?.();
+              }}
+              type="button"
+            >
+              ←
+            </button>
+            <button
+              aria-label="Next image"
+              className="project-media__lightbox-nav project-media__lightbox-nav--next"
+              onClick={(event) => {
+                event.stopPropagation();
+                onNext?.();
+              }}
+              type="button"
+            >
+              →
+            </button>
+          </>
+        ) : null}
         <div className="project-media__lightbox-scroll">
           <div className="project-media__lightbox-frame" onClick={(event) => event.stopPropagation()}>
             <Image

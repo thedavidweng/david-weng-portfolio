@@ -100,7 +100,7 @@ export const projects: ProjectItem[] = [
       'Transcending Barriers: Viewing Practices of "Games of Thrones" in China, India, and Russia',
       'Transcending Barriers: Viewing Practices of "Games of Thrones" in China, India, and Russia'
     ),
-    code: "[RESEARCH-02]",
+    code: "[RESEARCH-01]",
     posterWord: "BARRIERS",
     category: localized("Writing", "写作"),
     year: "2024",
@@ -118,8 +118,8 @@ export const projects: ProjectItem[] = [
       "关于跨国观看实践与媒介流通的已发表研究文章。"
     ),
     summary: localized(
-      "Publication in Beacon: Journal of Media Studies examining how audiences in China, India, and Russia engaged with Game of Thrones across different media environments.",
-      "发表于《Beacon: Journal of Media Studies》，讨论中国、印度与俄罗斯观众如何在不同媒介环境中观看《权力的游戏》。"
+      "Examines how audiences in China, India, and Russia engaged with Game of Thrones across different media environments.",
+      "讨论中国、印度与俄罗斯观众如何在不同媒介环境中观看《权力的游戏》。"
     ),
     roles: localized(["Research", "Writing", "Publication"], ["研究", "写作", "出版"]),
     highlights: localized([], []),
@@ -135,7 +135,7 @@ export const projects: ProjectItem[] = [
     slug: "fraud",
     film: fraudFilmDetails,
     title: localized("FRAÜD", "信途"),
-    code: "[FILM-04]",
+    code: "[FILM-01]",
     posterWord: "FRAUD",
     category: localized("Film", "电影"),
     year: "2024",
@@ -172,7 +172,7 @@ export const projects: ProjectItem[] = [
     slug: "the-pills",
     film: thePillsFilmDetails,
     title: localized("The Pills", "药丸"),
-    code: "[FILM-05]",
+    code: "[FILM-02]",
     posterWord: "PILLS",
     category: localized("Film", "电影"),
     year: "2023",
@@ -209,7 +209,7 @@ export const projects: ProjectItem[] = [
     slug: "gourd",
     film: gourdFilmDetails,
     title: localized("Gourd", "清兵卫"),
-    code: "[FILM-12]",
+    code: "[FILM-03]",
     posterWord: "GOURD",
     category: localized("Film", "电影"),
     year: "2020",
@@ -252,7 +252,7 @@ export const projects: ProjectItem[] = [
         "Spare mise-en-scène, foregrounding performance and atmosphere.",
         "An earlier piece — before the later festival short films."
       ],
-      ["克制的场面调度，注意力集中在表演与气氛上。", "更早期的作品——在后续电影节短片之前。"]
+      ["克制的场面调度，注意力集中在表演与气氛上。", "更早期的作品，拍于后续电影节短片之前。"]
     ),
     externalLinks: [
       { label: localized("IMDb", "IMDb"), href: "https://www.imdb.com/title/tt35677249/" },
@@ -264,7 +264,7 @@ export const projects: ProjectItem[] = [
     slug: "commissioned-video-work",
     archiveGroup: "film-video",
     title: localized("Commissioned Video Work", "委托视频项目"),
-    code: "[VIDEO-10]",
+    code: "[VIDEO-01]",
     posterWord: "CLIENT",
     category: localized("Video", "视频"),
     year: "2026",
@@ -283,7 +283,7 @@ export const projects: ProjectItem[] = [
     ),
     summary: localized(
       "Video projects created on commission — event recaps, promotional content, and more.",
-      "受委托制作的视频项目——活动回顾、宣传内容等。"
+      "受委托制作的视频项目，包括活动回顾、宣传内容等。"
     ),
     roles: localized(
       ["Video Editing", "Motion Graphics", "Archive Curation"],
@@ -297,7 +297,7 @@ export const projects: ProjectItem[] = [
     slug: "personal-video-projects",
     archiveGroup: "personal-video",
     title: localized("Personal Video Projects", "个人视频项目"),
-    code: "[VIDEO-11]",
+    code: "[VIDEO-02]",
     posterWord: "PERSONAL",
     category: localized("Video", "视频"),
     year: "2026",
@@ -312,7 +312,7 @@ export const projects: ProjectItem[] = [
     ),
     teaser: localized(
       "Personal video work — campaign edits, short films, and experiments.",
-      "个人视频作品——宣传片剪辑、短片与实验性项目。"
+      "个人视频作品，包括宣传片剪辑、短片与实验性项目。"
     ),
     summary: localized(
       "Personal video projects, from stylized campaign edits to short-form experiments.",
@@ -330,7 +330,7 @@ export const projects: ProjectItem[] = [
     slug: "designs-for-bc-ai-ecosystem",
     archiveGroup: "bc-ai-ecosystem",
     title: localized("Archive for BC + AI Ecosystem", "BC + AI Ecosystem 档案"),
-    code: "[DESIGN-07]",
+    code: "[DESIGN-01]",
     posterWord: "BCAI",
     category: localized("Client", "客户"),
     year: "2026",
@@ -351,7 +351,7 @@ export const projects: ProjectItem[] = [
     ),
     summary: localized(
       "Design work for BC + AI Ecosystem — meetup graphics, presentation slides, social assets, and event documentation.",
-      "BC + AI Ecosystem 的设计工作——线下聚会视觉、演示文稿、社交图片与活动记录。"
+      "BC + AI Ecosystem 的设计工作，包括线下聚会视觉、演示文稿、社交图片与活动记录。"
     ),
     roles: localized(
       ["Graphic Design", "Visual System", "Archive Curation"],
@@ -365,7 +365,7 @@ export const projects: ProjectItem[] = [
     slug: "designs-for-theupgrade-ai",
     archiveGroup: "theupgrade-ai",
     title: localized("Archive for TheUpgrade.AI", "TheUpgrade.AI 档案"),
-    code: "[DESIGN-08]",
+    code: "[DESIGN-02]",
     posterWord: "UPGRADE",
     category: localized("Client", "客户"),
     year: "2026",
@@ -386,7 +386,7 @@ export const projects: ProjectItem[] = [
     ),
     summary: localized(
       "Visual work for TheUpgrade.AI — posters, social graphics, and branded launch materials.",
-      "TheUpgrade.AI 的视觉设计——海报、社交图片与品牌发布物料。"
+      "TheUpgrade.AI 的视觉设计，包括海报、社交图片与品牌发布物料。"
     ),
     roles: localized(
       ["Graphic Design", "Content Design", "Archive Curation"],

@@ -46,7 +46,7 @@ function createFilmCredit(
 function createSequentialStills(
   project: string,
   count: number,
-  extension: "png" | "jpeg",
+  extension: "png" | "jpeg" | "avif",
   titleEn: string,
   titleZh: string,
   descriptionEn: string,
@@ -158,7 +158,7 @@ export const fraudFilmDetails: FilmDetails = {
   stills: createSequentialStills(
     "fraud",
     13,
-    "png",
+    "avif",
     "FRAÜD still",
     "信途剧照",
     "Production still from FRAÜD.",
@@ -229,7 +229,7 @@ export const thePillsFilmDetails: FilmDetails = {
   stills: createSequentialStills(
     "the-pills",
     6,
-    "jpeg",
+    "avif",
     "The Pills still",
     "药丸剧照",
     "Production still from The Pills.",
@@ -277,7 +277,7 @@ export const gourdFilmDetails: FilmDetails = {
   stills: createSequentialStills(
     "gourd",
     11,
-    "png",
+    "avif",
     "Gourd still",
     "清兵卫剧照",
     "Production still from Gourd.",

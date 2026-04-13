@@ -29,38 +29,49 @@ export function FilmMediaRail({
   railClassName,
   sizes
 }: FilmMediaRailProps) {
-  const [activeItem, setActiveItem] = useState<ProjectMediaItem | null>(null);
+  const previewItems = items.filter(
+    (item): item is ProjectMediaItem & { type: "image"; src: string } => item.type === "image" && typeof item.src === "string"
+  );
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const activeItem = activeIndex === null ? null : (previewItems[activeIndex] ?? null);
 
   return (
     <>
       <div className={`project-film__rail ${railClassName}`}>
-        {items.map((item) => (
+        {previewItems.map((item, index) => (
           <figure key={item.src} className={`${cardClassName} signal-panel`}>
-            {item.src ? (
-              <button
-                aria-label={`${projectLabel(previewLabel, locale)} ${projectLabel(item.title, locale)}`}
-                className="project-film__rail-button"
-                onClick={() => setActiveItem(item)}
-                type="button"
-              >
-                <Image
-                  alt={projectLabel(item.title, locale)}
-                  className={imageClassName}
-                  height={item.height ?? 1080}
-                  sizes={sizes}
-                  src={item.src}
-                  width={item.width ?? 1920}
-                />
-              </button>
-            ) : null}
+            <button
+              aria-label={`${projectLabel(previewLabel, locale)} ${projectLabel(item.title, locale)}`}
+              className="project-film__rail-button"
+              onClick={() => setActiveIndex(index)}
+              type="button"
+            >
+              <Image
+                alt={projectLabel(item.title, locale)}
+                className={imageClassName}
+                height={item.height ?? 1080}
+                sizes={sizes}
+                src={item.src}
+                width={item.width ?? 1920}
+              />
+            </button>
           </figure>
         ))}
       </div>
       <ProjectMediaLightbox
         activeItem={activeItem}
+        canNavigate={previewItems.length > 1}
         closePreviewLabel={closePreviewLabel}
         locale={locale}
-        onClose={() => setActiveItem(null)}
+        onClose={() => setActiveIndex(null)}
+        onNext={() => {
+          if (activeIndex === null || previewItems.length <= 1) return;
+          setActiveIndex((activeIndex + 1) % previewItems.length);
+        }}
+        onPrevious={() => {
+          if (activeIndex === null || previewItems.length <= 1) return;
+          setActiveIndex((activeIndex - 1 + previewItems.length) % previewItems.length);
+        }}
         previewDialogLabel={previewDialogLabel}
       />
     </>

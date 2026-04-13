@@ -100,7 +100,7 @@ export function Header({ locale, pathname }: HeaderProps) {
             <span className="site-header__title">{siteIdentity.name}</span>
           </Link>
 
-          <Dialog.Root open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <Dialog.Root modal={false} open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <Dialog.Trigger asChild>
               <button
                 aria-controls="site-mobile-menu-panel"

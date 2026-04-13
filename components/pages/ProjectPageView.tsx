@@ -11,7 +11,7 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { projectDetailContent, projectLabel } from "@/content/projects";
 import { getLocaleHomePath } from "@/lib/i18n";
-import { getYouTubeEmbedUrl, isArchiveVideoItem } from "@/lib/project-page";
+import { isArchiveVideoItem } from "@/lib/project-page";
 
 type ProjectPageViewProps = {
   locale: Locale;
@@ -30,8 +30,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const isDedicatedFilmProject = isFilmProject && Boolean(project.film) && !useImageWall;
   const isArchiveVideoProject = isVideoProject && useImageWall;
   const primaryExternalLink = project.externalLinks[0];
-  const featuredVideo = project.media.find((item) => item.type === "video" && getYouTubeEmbedUrl(item.href));
-  const featuredVideoEmbedUrl = featuredVideo ? getYouTubeEmbedUrl(featuredVideo.href) : null;
   const archiveVideoItems = useImageWall ? project.media.filter(isArchiveVideoItem) : [];
   const archiveStaticItems = useImageWall ? project.media.filter((item) => !isArchiveVideoItem(item)) : [];
   const useSplitArchiveLayout = useImageWall && archiveVideoItems.length > 0;
@@ -250,25 +248,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                   sizes="(max-width: 760px) 60vw, 24vw"
                 />
               </div>
-            </Container>
-          </section>
-        ) : null}
-
-        {!isTitleOnly && !isExternalHandoff && isVideoProject && !isArchiveVideoProject ? (
-          <section className="project-video-stage">
-            <Container>
-              {featuredVideoEmbedUrl ? (
-                <div className="project-video-stage__frame signal-panel">
-                  <iframe
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="project-video-stage__iframe"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    src={featuredVideoEmbedUrl}
-                    title={projectLabel(project.title, locale)}
-                  />
-                </div>
-              ) : null}
             </Container>
           </section>
         ) : null}
