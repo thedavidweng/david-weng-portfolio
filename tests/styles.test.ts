@@ -147,11 +147,11 @@ test("home layout uses dedicated modern font variables without changing project 
   const headerTitleBlock = css.match(/\.site-header__title\s*\{[^}]+\}/)?.[0] ?? "";
   const rootBlock = css.match(/:root\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(layoutSource).toContain("Inter_Tight");
-  expect(layoutSource).toContain("Inter(");
+  expect(layoutSource).toContain("Outfit");
+  expect(layoutSource).toContain("Manrope");
   expect(layoutSource).toContain("Noto_Sans_SC");
-  expect(layoutSource).toContain('variable: "--font-home-display"');
-  expect(layoutSource).toContain('variable: "--font-home-body"');
+  expect(layoutSource).toContain('variable: "--font-display"');
+  expect(layoutSource).toContain('variable: "--font-body"');
   expect(layoutSource).toContain('variable: "--font-home-zh"');
   expect(css).toContain("--font-home-display");
   expect(css).toContain("--font-home-body");

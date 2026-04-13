@@ -6,37 +6,31 @@ import "./globals.css";
 const display = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["700", "800", "900"]
+  display: "swap",
+  preload: true
 });
 
 const body = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["400", "500", "600", "700", "800"]
-});
-
-const homeDisplay = Outfit({
-  subsets: ["latin"],
-  variable: "--font-home-display",
-  weight: ["700", "800", "900"]
-});
-
-const homeBody = Manrope({
-  subsets: ["latin"],
-  variable: "--font-home-body",
-  weight: ["400", "500", "600", "700", "800"]
+  display: "swap",
+  preload: true
 });
 
 const homeZh = Noto_Sans_SC({
   subsets: ["latin"],
   variable: "--font-home-zh",
-  weight: ["400", "500", "600", "700", "900"]
+  weight: ["400", "700", "900"],
+  display: "swap",
+  preload: false
 });
 
 const mono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "500", "600"]
+  weight: ["400", "500", "600"],
+  display: "swap",
+  preload: false
 });
 
 const siteUrl = "https://davidweng.eu.org";
@@ -105,7 +99,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${display.variable} ${body.variable} ${homeDisplay.variable} ${homeBody.variable} ${homeZh.variable} ${mono.variable}`}
+        className={`${display.variable} ${body.variable} ${homeZh.variable} ${mono.variable}`}
       >
         {children}
       </body>

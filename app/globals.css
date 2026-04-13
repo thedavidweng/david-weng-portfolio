@@ -1,8 +1,8 @@
 :root {
-  --font-display: "Inter Tight", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-home-display: "Inter Tight", sans-serif;
-  --font-home-body: "Inter", sans-serif;
+  --font-display: "Outfit", "Inter Tight", sans-serif;
+  --font-body: "Manrope", "Inter", sans-serif;
+  --font-home-display: var(--font-display);
+  --font-home-body: var(--font-body);
   --font-home-zh: "Noto Sans SC", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
   --bg: #030303;
