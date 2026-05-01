@@ -258,6 +258,18 @@ test("global controls switch to square noir styling without pill buttons or slas
   expect(lightboxCloseBlock).toContain("min-height: 44px;");
 });
 
+test("mobile menu toggle keeps the line morph and adds immediate press feedback", () => {
+  const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
+  const toggleBlock = css.match(/\.site-header__menu-toggle\s*\{[^}]+\}/)?.[0] ?? "";
+  const toggleActiveBlock = css.match(/\.site-header__menu-toggle:active\s*\{[^}]+\}/)?.[0] ?? "";
+  const iconLineBlock = css.match(/\.site-header__menu-icon span\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(toggleBlock).toContain("transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1);");
+  expect(toggleActiveBlock).toContain("transform: scale(0.97);");
+  expect(iconLineBlock).toContain("transition: transform var(--ease), opacity var(--ease);");
+  expect(iconLineBlock).not.toContain("filter");
+});
+
 test("signal panels restore the red border and top-right corner accent on hover", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
   const signalPanelBlock = Array.from(css.matchAll(/\.signal-panel\s*\{[^}]+\}/g))
