@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Outfit, Manrope, Noto_Sans_SC } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "react-photo-album/rows.css";
 import "./globals.css";
 
@@ -102,6 +103,7 @@ export default function RootLayout({
         className={`${display.variable} ${body.variable} ${homeZh.variable} ${mono.variable}`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
