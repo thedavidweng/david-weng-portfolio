@@ -61,7 +61,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
 
   expect(
     screen.getByRole("heading", {
-      name: /video, design, and content operations/i
+      name: /^portfolio$/i
     })
   ).toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /view projects/i })).not.toBeInTheDocument();
@@ -118,7 +118,7 @@ test("renders the chinese homepage with a switch back to the english route", () 
   );
   const hero = container.querySelector(".hero");
 
-  expect(screen.getByRole("heading", { name: /影像剪辑\s*视觉设计\s*内容运营/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /^portfolio$/i })).toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /查看项目/i })).not.toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /简历/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /查看作品集/i })).not.toBeInTheDocument();

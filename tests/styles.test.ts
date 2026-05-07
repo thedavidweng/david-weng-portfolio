@@ -289,15 +289,19 @@ test("signal panels restore the red border and top-right corner accent on hover"
   expect(css).toContain("border-color: rgba(var(--accent-rgb), 0.94);");
 });
 
-test("home hero splits the title into stage lines and colors the operations line", () => {
+test("home hero uses a single minimalist portfolio title without accent title lines", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
   const heroSource = readFileSync(join(process.cwd(), "components/sections/HeroSection.tsx"), "utf8");
+  const siteSource = readFileSync(join(process.cwd(), "content/site.ts"), "utf8");
+  const homeHeroTitleBlock = css.match(/\.site-main--home \.hero__title\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(heroSource).toContain('className="hero__title-line hero__title-line--accent"');
-  expect(css).toContain(".hero__title-line");
-  expect(css).toContain("display: block;");
-  expect(css).toContain(".hero__title-line--accent");
-  expect(css).toContain("color: var(--accent);");
+  expect(siteSource).toContain('headline: localized("PORTFOLIO", "PORTFOLIO")');
+  expect(heroSource).not.toContain("renderHeadline");
+  expect(heroSource).not.toContain("hero__title-line");
+  expect(css).not.toContain(".hero__title-line");
+  expect(css).not.toContain(".hero__title-line--accent");
+  expect(homeHeroTitleBlock).toContain("text-transform: uppercase;");
+  expect(homeHeroTitleBlock).toContain("letter-spacing: -0.04em;");
 });
 
 test("home services use a full border and tighter vertical spacing instead of a top-only divider", () => {
@@ -341,8 +345,10 @@ test("home sections share a stage gutter so projects services and contact do not
   expect(css).toContain(".site-main--home .contact__panel {");
   expect(css).toContain("padding-inline: var(--home-stage-gutter);");
   expect(css).toContain("--home-section-top: clamp(1.4rem, 3.8vw, 2.7rem);");
-  expect(homeHeroContentBlock).toContain("padding: clamp(3.2rem, 7vw, 5.8rem) var(--home-stage-gutter) clamp(3rem, 7vw, 4.6rem);");
-  expect(homeHeroStageBlock).toContain("padding: clamp(3.2rem, 7vw, 5.8rem) var(--home-stage-gutter) clamp(3rem, 7vw, 4.6rem);");
+  expect(homeHeroContentBlock).toContain("align-items: center;");
+  expect(homeHeroContentBlock).toContain("justify-content: center;");
+  expect(homeHeroContentBlock).toContain("padding: 3.25rem var(--home-stage-gutter) 3.6rem;");
+  expect(homeHeroStageBlock).toContain("padding: 3.25rem var(--home-stage-gutter) 3.6rem;");
 });
 
 test("project pages and media modules use open-stage containers instead of dark boxed panels", () => {

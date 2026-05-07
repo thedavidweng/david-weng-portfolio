@@ -19,60 +19,11 @@ export const navigationItems = [
 
 export const heroContent = {
   kicker: localized("Visual Content Creator in Vancouver", "常驻温哥华 · 视觉内容创作者"),
-  headline: localized(
-    "Video, design, and Content operations.",
-    "影像剪辑\n视觉设计\n内容运营"
-  ),
+  headline: localized("PORTFOLIO", "PORTFOLIO"),
   support: localized(
     "Video editing, photography, graphic design. Concept to delivery.",
     "视频剪辑、摄影、平面设计。从概念到交付。"
-  ),
-  stats: [
-    {
-      label: localized("Focus", "专注方向"),
-      value: localized("Editing / Photography / Design / ContentOps", "剪辑 / 摄影 / 设计 / 内容运营")
-    },
-    {
-      label: localized("Workflow", "工作流程"),
-      value: localized(
-        "AI-integrated where it improves speed or iteration",
-        "在提速或提升迭代效率时引入 AI"
-      )
-    },
-    {
-      label: localized("Formats", "内容形式"),
-      value: localized("Film, campaign, research, publication, and web", "电影、宣传活动、研究、出版与网站")
-    }
-  ],
-  visualHeadline: localized(
-    "Selected work from film, research, design, and campaign production.",
-    "来自电影、研究、设计与 campaign 制作的精选项目"
-  ),
-  visualCaption: localized("Profile / capability / current archive", "简介 / 能力 / 当前档案"),
-  visualNotes: [
-    {
-      title: localized("Current mode", "当前状态"),
-      copy: localized(
-        "Post-production and editing as the core, with design and content work built around it.",
-        "以后期与剪辑为核心，围绕它展开设计与内容工作。"
-      )
-    },
-    {
-      title: localized("Best fit", "最佳合作"),
-      copy: localized(
-        "Projects that need one person to handle editing, design, and content — start to finish.",
-        "需要一个人从头到尾完成剪辑、设计与内容的项目。"
-      )
-    },
-    {
-      title: localized("Contact", "合作方向"),
-      copy: localized(
-        "Open to freelance editing, campaign work, event recaps, and creative collaborations.",
-        "接受自由剪辑、宣传活动、活动回顾与创意合作。"
-      )
-    }
-  ],
-  primaryCta: localized("View Projects", "查看项目")
+  )
 };
 
 const services: ServiceItem[] = [

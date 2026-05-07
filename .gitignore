@@ -7,6 +7,7 @@ dist
 *.tsbuildinfo
 docs/
 .claude/
+.commandcode/
 .cursor/
 .vscode/
 .idea/

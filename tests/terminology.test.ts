@@ -21,6 +21,5 @@ test("repository uses content operations / 内容运营 consistently in active c
   const siteCopy = readFileSync(join(process.cwd(), "content/site.ts"), "utf8");
 
   expect(siteCopy).toContain("content operations");
-  expect(siteCopy).toContain("Content operations");
   expect(siteCopy).toContain("内容运营");
 });
