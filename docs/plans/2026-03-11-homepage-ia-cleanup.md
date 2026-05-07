@@ -23,7 +23,7 @@
 
 **Step 2: Run test to verify it fails**
 
-Run: `npm test -- tests/homepage.test.tsx`
+Run: `pnpm test -- tests/homepage.test.tsx`
 
 **Step 3: Write minimal implementation**
 - Add a localized `Blog` navigation item with an absolute URL.
@@ -31,7 +31,7 @@ Run: `npm test -- tests/homepage.test.tsx`
 
 **Step 4: Run test to verify it passes**
 
-Run: `npm test -- tests/homepage.test.tsx`
+Run: `pnpm test -- tests/homepage.test.tsx`
 
 ### Task 2: Remove Blog From Project Data
 
@@ -44,14 +44,14 @@ Run: `npm test -- tests/homepage.test.tsx`
 
 **Step 2: Run test to verify it fails**
 
-Run: `npm test -- tests/projects-section.test.tsx`
+Run: `pnpm test -- tests/projects-section.test.tsx`
 
 **Step 3: Write minimal implementation**
 - Remove the `davids-blog` project entry from `projects`.
 
 **Step 4: Run test to verify it passes**
 
-Run: `npm test -- tests/projects-section.test.tsx`
+Run: `pnpm test -- tests/projects-section.test.tsx`
 
 ### Task 3: Reframe Article Handoff Pages
 
@@ -67,7 +67,7 @@ Run: `npm test -- tests/projects-section.test.tsx`
 
 **Step 2: Run tests to verify they fail**
 
-Run: `npm test -- tests/project-page.test.tsx tests/styles.test.ts`
+Run: `pnpm test -- tests/project-page.test.tsx tests/styles.test.ts`
 
 **Step 3: Write minimal implementation**
 - Add a small article meta block to the left column for `external-handoff`.
@@ -76,7 +76,7 @@ Run: `npm test -- tests/project-page.test.tsx tests/styles.test.ts`
 
 **Step 4: Run tests to verify they pass**
 
-Run: `npm test -- tests/project-page.test.tsx tests/styles.test.ts`
+Run: `pnpm test -- tests/project-page.test.tsx tests/styles.test.ts`
 
 ### Task 4: Remove Duplicate Film Release Section
 
@@ -89,14 +89,14 @@ Run: `npm test -- tests/project-page.test.tsx tests/styles.test.ts`
 
 **Step 2: Run test to verify it fails**
 
-Run: `npm test -- tests/project-page.test.tsx`
+Run: `pnpm test -- tests/project-page.test.tsx`
 
 **Step 3: Write minimal implementation**
 - Remove the dedicated `project-video-stage__support` section while preserving hero CTA links and the embedded player.
 
 **Step 4: Run test to verify it passes**
 
-Run: `npm test -- tests/project-page.test.tsx`
+Run: `pnpm test -- tests/project-page.test.tsx`
 
 ### Task 5: Full Verification and Sync
 
@@ -106,9 +106,9 @@ Run: `npm test -- tests/project-page.test.tsx`
 **Step 1: Run the full verification suite**
 
 Run:
-- `npm test`
-- `npm run lint`
-- `npm run build`
+- `pnpm test`
+- `pnpm lint`
+- `pnpm build`
 
 **Step 2: Commit**
 

@@ -8,13 +8,21 @@ const eslintConfig = [
       "**/node_modules/**",
       "**/coverage/**",
       "**/dist/**",
+      "**/.claude/**",
       "docs/plans/**",
       "*.log",
       "*.tsbuildinfo"
     ]
   },
   ...nextCoreWebVitals,
-  ...nextTypeScript
+  ...nextTypeScript,
+  {
+    settings: {
+      react: {
+        version: "19.2"
+      }
+    }
+  }
 ];
 
 export default eslintConfig;
