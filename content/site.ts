@@ -88,9 +88,9 @@ export const aboutContent = {
     { value: "Film", label: localized("Narrative, microfilm, campaign, and event recaps", "叙事短片、微电影、宣传活动与活动回顾") },
     { value: "Research", label: localized("Publication and media studies alongside production", "在制作之外持续进行出版与媒体研究") }
   ],
-  resumeHref: "/documents/resume.pdf",
+  homepageHref: "https://thedavidweng.github.io/",
   linkedinHref: "https://www.linkedin.com/in/thedavidweng/",
-  resumeLabel: localized("Resume", "简历"),
+  homepageLabel: localized("Home", "主页"),
   focusLabel: localized("Practice Focus", "实践重点")
 };
 

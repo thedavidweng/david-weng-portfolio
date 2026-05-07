@@ -66,6 +66,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
   ).toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /view projects/i })).not.toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /^resume$/i })).not.toBeInTheDocument();
+  expect(within(hero as HTMLElement).queryByRole("link", { name: /^home$/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /view portfolio/i })).not.toBeInTheDocument();
   expect(screen.getAllByRole("link", { name: /blog/i })[0]).toHaveAttribute(
     "href",
@@ -104,7 +105,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(contact).toBeTruthy();
   expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /email me/i })).toBeInTheDocument();
-  expect(within(contact as HTMLElement).getByRole("link", { name: /^resume$/i })).toHaveAttribute("href", "/documents/resume.pdf");
+  expect(within(contact as HTMLElement).getByRole("link", { name: /^home$/i })).toHaveAttribute("href", "https://thedavidweng.github.io/");
   expect(screen.getByRole("navigation", { name: /main navigation/i })).toBeInTheDocument();
   expect(container.querySelector(".site-shell--home")).toBeTruthy();
   expect(container.querySelector(".site-main--home")).toBeTruthy();
@@ -121,6 +122,7 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(screen.getByRole("heading", { name: /^portfolio$/i })).toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /查看项目/i })).not.toBeInTheDocument();
   expect(within(hero as HTMLElement).queryByRole("link", { name: /简历/i })).not.toBeInTheDocument();
+  expect(within(hero as HTMLElement).queryByRole("link", { name: /主页/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("link", { name: /查看作品集/i })).not.toBeInTheDocument();
   expect(screen.getAllByRole("link", { name: /博客/i })[0]).toHaveAttribute(
     "href",
@@ -161,5 +163,5 @@ test("renders the chinese homepage with a switch back to the english route", () 
   const contact = container.querySelector("#contact");
   expect(contact).toBeTruthy();
   expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
-  expect(within(contact as HTMLElement).getByRole("link", { name: /简历/i })).toHaveAttribute("href", "/documents/resume.pdf");
+  expect(within(contact as HTMLElement).getByRole("link", { name: /主页/i })).toHaveAttribute("href", "https://thedavidweng.github.io/");
 }, 10000);

@@ -163,8 +163,8 @@ export function Header({ locale, pathname }: HeaderProps) {
                 </div>
 
                 <div className="site-header__actions">
-                  <Link className="button button--ghost" href={aboutContent.resumeHref}>
-                    {getLocalizedText(aboutContent.resumeLabel, locale)}
+                  <Link className="button button--ghost" href={aboutContent.homepageHref}>
+                    {getLocalizedText(aboutContent.homepageLabel, locale)}
                   </Link>
                   <Link className="button button--signal" href="#contact">
                     {locale === "en" ? "CONTACT" : "联系"}
@@ -222,8 +222,8 @@ export function Header({ locale, pathname }: HeaderProps) {
                 </div>
 
                 <div className="site-header__actions">
-                  <Link className="button button--ghost" href={aboutContent.resumeHref} onClick={closeMenu}>
-                    {getLocalizedText(aboutContent.resumeLabel, locale)}
+                  <Link className="button button--ghost" href={aboutContent.homepageHref} onClick={closeMenu}>
+                    {getLocalizedText(aboutContent.homepageLabel, locale)}
                   </Link>
                   <Link className="button button--signal" href="#contact" onClick={closeMenu}>
                     {locale === "en" ? "CONTACT" : "联系"}

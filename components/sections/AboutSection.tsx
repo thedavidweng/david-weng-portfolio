@@ -20,8 +20,8 @@ export function AboutSection({ locale }: AboutSectionProps) {
             <p className="about__copy">{getLocalizedText(aboutContent.body, locale)}</p>
             <p className="about__copy">{getLocalizedText(aboutContent.bodySecondary, locale)}</p>
             <div className="about__actions">
-              <Link className="button button--ghost" href={aboutContent.resumeHref}>
-                {getLocalizedText(aboutContent.resumeLabel, locale)}
+              <Link className="button button--ghost" href={aboutContent.homepageHref}>
+                {getLocalizedText(aboutContent.homepageLabel, locale)}
               </Link>
             </div>
           </div>

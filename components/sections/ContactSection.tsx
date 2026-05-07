@@ -21,8 +21,8 @@ export function ContactSection({ locale }: ContactSectionProps) {
             <Link className="contact-hero__button contact-hero__button--primary" href={`mailto:${contactContent.email}`}>
               {getLocalizedText(contactContent.emailLabel, locale)}
             </Link>
-            <Link className="contact-hero__button" href={aboutContent.resumeHref}>
-              {getLocalizedText(aboutContent.resumeLabel, locale)}
+            <Link className="contact-hero__button" href={aboutContent.homepageHref}>
+              {getLocalizedText(aboutContent.homepageLabel, locale)}
             </Link>
           </div>
         </div>
