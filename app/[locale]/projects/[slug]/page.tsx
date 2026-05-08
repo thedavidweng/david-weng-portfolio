@@ -5,6 +5,8 @@ import { buildProjectMetadata } from "@/lib/project-metadata";
 import { getProjectBySlug } from "@/lib/projects";
 import { localizedRouteLocales, resolveLocalizedRouteLocale } from "@/lib/routes";
 import { projects } from "@/content/projects";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildCreativeWorkSchema } from "@/lib/jsonld";
 
 type LocalizedProjectPageProps = {
   params: Promise<{
@@ -49,5 +51,5 @@ export default async function LocalizedProjectPage({ params }: LocalizedProjectP
     notFound();
   }
 
-  return <ProjectPageView locale={resolvedLocale} pathname={`/${resolvedLocale}/projects/${slug}`} project={project} />;
+  return <><JsonLd data={buildCreativeWorkSchema(project, resolvedLocale)} /><ProjectPageView locale={resolvedLocale} pathname={`/${resolvedLocale}/projects/${slug}`} project={project} /></>;
 }

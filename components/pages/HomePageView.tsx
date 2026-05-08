@@ -5,6 +5,8 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildOrganizationSchema } from "@/lib/jsonld";
 
 type HomePageViewProps = {
   locale: Locale;
@@ -14,6 +16,7 @@ type HomePageViewProps = {
 export function HomePageView({ locale, pathname }: HomePageViewProps) {
   return (
     <div className={`site-shell site-shell--${locale} site-shell--home`}>
+      <JsonLd data={buildOrganizationSchema(locale)} />
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>

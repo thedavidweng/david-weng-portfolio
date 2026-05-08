@@ -4,6 +4,8 @@ import { ProjectPageView } from "@/components/pages/ProjectPageView";
 import { buildProjectMetadata } from "@/lib/project-metadata";
 import { getProjectBySlug } from "@/lib/projects";
 import { projects } from "@/content/projects";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildCreativeWorkSchema } from "@/lib/jsonld";
 
 type ProjectPageProps = {
   params: Promise<{
@@ -42,5 +44,5 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  return <ProjectPageView locale="en" pathname={`/projects/${slug}`} project={project} />;
+  return <><JsonLd data={buildCreativeWorkSchema(project, "en")} /><ProjectPageView locale="en" pathname={`/projects/${slug}`} project={project} /></>;
 }
