@@ -10,6 +10,55 @@ import {
 
 const SITE_URL = "https://davidweng.eu.org";
 
+export function buildPersonSchema(locale: Locale) {
+  const services = servicesContent.items;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteIdentity.fullName,
+    givenName: "David",
+    familyName: "Weng",
+    alternateName: siteIdentity.name,
+    jobTitle: getLocalizedValue(siteIdentity.roles, locale),
+    description: getLocalizedText(heroContent.support, locale),
+    url: SITE_URL,
+    email: contactContent.email,
+    sameAs: [
+      contactContent.linkedinHref,
+      contactContent.instagramHref,
+      contactContent.githubHref,
+      aboutContent.homepageHref
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: siteIdentity.name,
+      url: SITE_URL
+    },
+    knowsAbout: [
+      "Video Editing",
+      "Photography",
+      "Graphic Design",
+      "Visual Storytelling",
+      "Brand System Design",
+      "Content Operations",
+      "AI-integrated Creative Work"
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services",
+      itemListElement: services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: getLocalizedText(s.title, locale),
+          description: getLocalizedText(s.description, locale)
+        }
+      }))
+    }
+  };
+}
+
 export function buildOrganizationSchema(locale: Locale) {
   const services = servicesContent.items;
 
@@ -59,8 +108,8 @@ export function buildCreativeWorkSchema(project: ProjectItem, locale: Locale) {
     name: getLocalizedText(project.title, locale),
     description: getLocalizedText(project.summary, locale),
     creator: {
-      "@type": "Organization",
-      name: "David Weng",
+      "@type": "Person",
+      name: siteIdentity.fullName,
       url: SITE_URL
     },
     dateCreated: project.year,

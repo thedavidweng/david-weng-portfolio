@@ -44,7 +44,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(screen.getByRole("heading", { name: /^The Pills$/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /^Cast and Crew$/i })).toBeInTheDocument();
   expect(screen.getAllByRole("img", { name: /The Pills main poster/i }).length).toBeGreaterThan(0);
-  expect(within(englishCredits).getAllByRole("link", { name: /^David Weng/i })[0]).toHaveAttribute(
+  expect(within(englishCredits as HTMLElement).getAllByRole("link", { name: /^David Weng/i })[0]).toHaveAttribute(
     "href",
     "https://www.imdb.com/name/nm16014585/"
   );

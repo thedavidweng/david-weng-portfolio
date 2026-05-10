@@ -32,7 +32,7 @@ test("hydrates archive-backed project media with image dimensions for rows layou
   imageItems.forEach((item) => {
     expect(item.width).toBeGreaterThan(0);
     expect(item.height).toBeGreaterThan(0);
-    expect(item.src.startsWith("/projects/client-work/bc-ai-ecosystem/")).toBe(true);
+    expect(item.src && item.src.startsWith("/projects/client-work/bc-ai-ecosystem/")).toBe(true);
   });
 });
 

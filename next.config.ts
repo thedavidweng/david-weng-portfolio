@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
           {
             key: "Link",
             value:
-              '</.well-known/api-catalog>; rel="api-catalog", </sitemap.xml>; rel="sitemap", </robots.txt>; rel="robots"'
+              '</llms.txt>; rel="llms.txt", </llms-full.txt>; rel="llms-full.txt", </index.md>; rel="index.md", </agent>; rel="agent-catalog", </sitemap.xml>; rel="sitemap", </robots.txt>; rel="robots"'
           }
         ]
       },
