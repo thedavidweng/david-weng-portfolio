@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Locale, ProjectItem } from "@/types/content";
+import type { Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
 import { LocalizedInlineText } from "@/components/content/LocalizedInlineText";
 import { Container } from "@/components/layout/Container";
 import { ArchiveMediaWall } from "@/components/projects/ArchiveMediaWall";
@@ -11,7 +11,9 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { projectDetailContent, projectLabel } from "@/content/projects";
 import { getLocaleHomePath } from "@/lib/i18n";
-import { isArchiveVideoItem } from "@/lib/project-page";
+function isArchiveVideoItem(item: ProjectMediaItem) {
+  return item.type === "image" && item.archiveKind === "video";
+}
 
 type ProjectPageViewProps = {
   locale: Locale;

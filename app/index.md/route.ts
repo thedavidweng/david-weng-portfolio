@@ -2,34 +2,13 @@ import { NextResponse } from "next/server";
 import {
   siteIdentity,
   heroContent,
-  servicesContent,
   contactContent,
   aboutContent,
   navigationItems
 } from "@/content/site";
-import { projects } from "@/content/projects";
-
-const SITE_URL = "https://davidweng.eu.org";
+import { SITE_URL, formatServices, formatProjects } from "@/lib/agent-content";
 
 export async function GET() {
-  const services = servicesContent.items
-    .map(
-      (s) => `### ${s.title.en}
-
-${s.description.en}`
-    )
-    .join("\n\n");
-
-  const projectList = projects
-    .map(
-      (p) => `- **[${p.code} ${p.title.en}](${SITE_URL}/projects/${p.slug})** (${p.year})
-  - Category: ${p.category.en}
-  - Type: ${p.projectType.en}
-  - Roles: ${p.roles.en.join(", ")}
-  - ${p.summary.en}`
-    )
-    .join("\n\n");
-
   const markdown = `# ${siteIdentity.name} — ${siteIdentity.roles.en.join(", ")}
 
 ${heroContent.kicker.en}
@@ -38,11 +17,11 @@ ${heroContent.support.en}
 
 ## Services
 
-${services}
+${formatServices("en")}
 
 ## Projects
 
-${projectList}
+${formatProjects("en")}
 
 ## About
 

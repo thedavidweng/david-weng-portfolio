@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { HomePageView } from "@/components/pages/HomePageView";
 import { AgentView } from "@/components/pages/AgentView";
-import { localizedRouteLocales, resolveLocalizedRouteLocale } from "@/lib/routes";
+import { localizedRouteLocales, resolveLocalizedRouteLocale } from "@/lib/i18n";
 
 type LocalePageProps = {
   params: Promise<{

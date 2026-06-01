@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProjectPageView } from "@/components/pages/ProjectPageView";
-import { buildProjectMetadata } from "@/lib/project-metadata";
-import { getProjectBySlug } from "@/lib/projects";
-import { projects } from "@/content/projects";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { buildCreativeWorkSchema } from "@/lib/jsonld";
+import { buildProjectPageData } from "@/lib/page-helpers";
+import { projects } from "@/content/projects";
 
 type ProjectPageProps = {
   params: Promise<{
@@ -21,28 +19,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
-
-  if (!project) {
-    return {
-      title: "Project Not Found | David Weng"
-    };
-  }
-
-  return buildProjectMetadata({
-    locale: "en",
-    pathname: `/projects/${slug}`,
-    project
-  });
+  const data = buildProjectPageData(slug, "en");
+  return data?.metadata ?? { title: "Project Not Found | David Weng" };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const data = buildProjectPageData(slug, "en");
 
-  if (!project) {
+  if (!data) {
     notFound();
   }
 
-  return <><JsonLd data={buildCreativeWorkSchema(project, "en")} /><ProjectPageView locale="en" pathname={`/projects/${slug}`} project={project} /></>;
+  return <><JsonLd data={data.jsonLd} /><ProjectPageView locale="en" pathname={data.pathname} project={data.project} /></>;
 }

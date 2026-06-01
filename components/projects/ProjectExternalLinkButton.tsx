@@ -1,10 +1,8 @@
-import { getProjectLinkIconType } from "@/lib/project-page";
-
 export function ProjectExternalLinkButton({ href, label }: { href: string; label: string }) {
   return (
     <a className="button button--signal project-link-button" href={href} rel="noreferrer" target="_blank">
       <span>{label}</span>
-      <ProjectLinkIcon type={getProjectLinkIconType(href)} />
+      <ProjectLinkIcon type={href.includes("youtu") ? "youtube" : "external"} />
       <span className="visually-hidden">(opens in new tab)</span>
     </a>
   );

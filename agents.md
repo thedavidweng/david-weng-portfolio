@@ -136,3 +136,31 @@ curl -s "http://localhost:3000/?mode=agent" | grep -o "<h3>" | wc -l  # should m
 ## Adding a New Agent Endpoint
 
 If you introduce a new agent-visible route (e.g. `/feed.json`, `/api/projects`), update this file and `next.config.ts` HTTP Link headers so agents can discover it.
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues — skills use `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default five-role vocabulary (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout — `CONTEXT.md` + `docs/adr/` at repo root. See `docs/agents/domain.md`.
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues — skills use `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default five-role vocabulary (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout — `CONTEXT.md` + `docs/adr/` at repo root. See `docs/agents/domain.md`.

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { localizedRouteLocales } from "@/lib/routes";
+import { localizedRouteLocales } from "@/lib/i18n";
 import { SetDocumentLang } from "@/components/site/SetDocumentLang";
 
 type LocaleLayoutProps = {

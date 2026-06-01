@@ -1,25 +1,12 @@
 import type { Locale } from "@/types/content";
-import {
-  siteIdentity,
-  heroContent,
-  servicesContent,
-  contactContent,
-  aboutContent,
-  navigationItems
-} from "@/content/site";
-import { projects } from "@/content/projects";
-import { getLocalizedText, getLocalizedValue } from "@/lib/i18n";
+import { buildAgentData, SITE_URL } from "@/lib/agent-content";
 
 type AgentViewProps = {
   locale: Locale;
 };
 
-const SITE_URL = "https://davidweng.eu.org";
-
 export function AgentView({ locale }: AgentViewProps) {
-  const headline = getLocalizedText(heroContent.support, locale);
-  const services = servicesContent.items;
-  const nav = navigationItems;
+  const data = buildAgentData(locale);
 
   return (
     <div
@@ -33,19 +20,19 @@ export function AgentView({ locale }: AgentViewProps) {
       }}
     >
       <header>
-        <h1>{siteIdentity.name} — {getLocalizedValue(siteIdentity.roles, locale).join(", ")}</h1>
-        <p><strong>{getLocalizedText(heroContent.kicker, locale)}</strong></p>
-        <p>{headline}</p>
+        <h1>{data.identity.name} — {data.identity.roles.join(", ")}</h1>
+        <p><strong>{data.hero.kicker}</strong></p>
+        <p>{data.hero.support}</p>
       </header>
 
       <hr style={{ margin: "2rem 0" }} />
 
       <section aria-labelledby="services-heading">
         <h2 id="services-heading">Services</h2>
-        {services.map((s, i) => (
+        {data.services.map((s, i) => (
           <article key={i} style={{ marginBottom: "1.5rem" }}>
-            <h3>{getLocalizedText(s.title, locale)}</h3>
-            <p>{getLocalizedText(s.description, locale)}</p>
+            <h3>{s.name}</h3>
+            <p>{s.description}</p>
           </article>
         ))}
       </section>
@@ -53,18 +40,18 @@ export function AgentView({ locale }: AgentViewProps) {
       <hr style={{ margin: "2rem 0" }} />
 
       <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects ({projects.length})</h2>
+        <h2 id="projects-heading">Projects ({data.projects.length})</h2>
         <ul>
-          {projects.map((p) => (
+          {data.projects.map((p) => (
             <li key={p.slug}>
-              <a href={`${SITE_URL}/projects/${p.slug}`}>
-                {p.code} {getLocalizedText(p.title, locale)}
+              <a href={p.url}>
+                {p.title}
               </a>
               <br />
               <small>
-                {getLocalizedText(p.category, locale)} · {p.year} · {getLocalizedText(p.projectType, locale)}
+                {p.category} · {p.year} · {p.type}
                 <br />
-                {getLocalizedValue(p.roles, locale).join(", ")}
+                {p.roles.join(", ")}
               </small>
             </li>
           ))}
@@ -76,11 +63,11 @@ export function AgentView({ locale }: AgentViewProps) {
       <section aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
         <ul>
-          <li>Email: <a href={`mailto:${contactContent.email}`}>{contactContent.emailDisplay}</a></li>
-          <li>LinkedIn: <a href={contactContent.linkedinHref}>{contactContent.linkedinHref}</a></li>
-          <li>Instagram: <a href={contactContent.instagramHref}>{contactContent.instagramHref}</a></li>
-          <li>GitHub: <a href={contactContent.githubHref}>{contactContent.githubHref}</a></li>
-          <li>Homepage: <a href={aboutContent.homepageHref}>{aboutContent.homepageHref}</a></li>
+          <li>Email: <a href={`mailto:${data.contact.email}`}>{data.contact.emailDisplay}</a></li>
+          <li>LinkedIn: <a href={data.contact.linkedIn}>{data.contact.linkedIn}</a></li>
+          <li>Instagram: <a href={data.contact.instagram}>{data.contact.instagram}</a></li>
+          <li>GitHub: <a href={data.contact.github}>{data.contact.github}</a></li>
+          <li>Homepage: <a href={data.contact.homepage}>{data.contact.homepage}</a></li>
         </ul>
       </section>
 
@@ -89,9 +76,9 @@ export function AgentView({ locale }: AgentViewProps) {
       <section aria-labelledby="nav-heading">
         <h2 id="nav-heading">Site Navigation</h2>
         <ul>
-          {nav.map((item) => (
+          {data.navigation.map((item) => (
             <li key={item.href}>
-              <a href={item.href}>{getLocalizedText(item.label, locale)}</a>
+              <a href={item.href}>{item.label}</a>
             </li>
           ))}
         </ul>
