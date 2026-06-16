@@ -6,7 +6,13 @@
     "perf": "warn"
   },
   "rules": {
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "caughtErrors": "none" }],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "none"
+      }
+    ],
     "no-console": "off",
     "sort-imports": "off",
     "sort-keys": "off",
@@ -22,5 +28,9 @@
     "no-await-in-loop": "off",
     "no-underscore-dangle": "off",
     "no-shadow": "off"
-  }
+  },
+  "ignore": [
+    ".next/**",
+    "node_modules/**"
+  ]
 }
