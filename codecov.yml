@@ -1,0 +1,48 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 2%
+    patch:
+      default:
+        target: 80%
+
+  precision: 1
+  round: down
+  range: "60...100"
+
+component_management:
+  individual_components:
+    - component_id: app
+      name: app
+      paths:
+        - app/**
+    - component_id: components
+      name: components
+      paths:
+        - components/**
+    - component_id: lib
+      name: lib
+      paths:
+        - lib/**
+
+comment:
+  layout: "header, diff, components, files"
+  require_changes: true
+
+flags:
+  unit:
+    paths:
+      - app/**
+      - components/**
+      - lib/**
+    carryforward: true
+
+ignore:
+  - "**/*.d.ts"
+  - "**/*.config.*"
+  - ".next/**"
+  - "public/**"
+  - "content/**"
+  - "proxy.ts"
