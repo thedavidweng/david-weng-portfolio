@@ -29,7 +29,7 @@
     "no-underscore-dangle": "off",
     "no-shadow": "off"
   },
-  "ignore": [
+  "ignorePatterns": [
     ".next/**",
     "node_modules/**"
   ]
