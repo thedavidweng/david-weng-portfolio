@@ -1,5 +1,4 @@
 import type { Locale } from "@/types/content";
-import type { ProjectItem } from "@/types/content";
 import { getProjectBySlug } from "@/lib/projects";
 import { buildProjectMetadata } from "@/lib/project-metadata";
 import { buildCreativeWorkSchema } from "@/lib/jsonld";
