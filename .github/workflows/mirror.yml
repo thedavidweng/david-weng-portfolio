@@ -1,4 +1,4 @@
-name: Mirror to Codeberg
+name: Mirror to GitLab
 
 on:
   push:
@@ -21,10 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Mirror to Codeberg
+      - name: Mirror to GitLab
         uses: cssnr/mirror-repository-action@2af5bf347684245f52b5f56502956a57f9b8813e # v1
         with:
-          host: https://codeberg.org
+          host: https://gitlab.com
           username: thedavidweng
-          password: ${{ secrets.CODEBERG_TOKEN }}
+          password: ${{ secrets.GITLAB_TOKEN }}
           force_push: true
