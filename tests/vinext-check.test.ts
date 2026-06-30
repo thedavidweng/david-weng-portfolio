@@ -20,6 +20,6 @@ test("vinext config files exist for Cloudflare deployment", () => {
 
   expect(existsSync(join(root, "wrangler.jsonc"))).toBe(true);
   expect(wranglerConfig).toContain("vinext/server/fetch-handler");
-  expect(viteConfig).toContain("imagesOptimizer()");
+  expect(viteConfig).not.toContain("imagesOptimizer()");
   expect(viteConfig).not.toContain("@vitejs/plugin-rsc");
 });

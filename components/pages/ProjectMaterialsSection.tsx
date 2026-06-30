@@ -62,6 +62,7 @@ export function ProjectMaterialsSection({ locale, project, useImageWall }: Proje
                           <Image
                             alt={projectLabel(item.title, locale)}
                             fill
+                            loading="lazy"
                             sizes="(max-width: 760px) 100vw, (max-width: 1120px) 50vw, 42vw"
                             src={item.src}
                           />
@@ -96,6 +97,7 @@ export function ProjectMaterialsSection({ locale, project, useImageWall }: Proje
                     <Image
                       alt={projectLabel(item.title, locale)}
                       fill
+                      loading="lazy"
                       sizes="(max-width: 1120px) 100vw, 28vw"
                       src={item.src}
                     />

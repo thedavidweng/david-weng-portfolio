@@ -145,6 +145,7 @@ export function ProjectMediaLightbox({
             alt={projectLabel(previewItem.title, locale)}
             className="project-media__lightbox-image"
             height={previewItem.height ?? 900}
+            loading="lazy"
             sizes="90vw"
             src={previewItem.src}
             width={previewItem.width ?? 1600}

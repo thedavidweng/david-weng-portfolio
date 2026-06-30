@@ -50,6 +50,7 @@ export function FilmMediaRail({
                 alt={projectLabel(item.title, locale)}
                 className={imageClassName}
                 height={item.height ?? 1080}
+                loading="lazy"
                 sizes={sizes}
                 src={item.src}
                 width={item.width ?? 1920}
