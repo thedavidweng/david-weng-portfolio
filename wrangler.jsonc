@@ -12,6 +12,10 @@
       "head_sampling_rate": 1
     }
   },
+  "placement": {
+    "mode": "smart"
+  },
+  "minify": true,
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
