@@ -15,6 +15,7 @@
     "verify:dist": "node scripts/verify-dist.mjs",
     "preview": "astro preview",
     "pages:build": "pnpm install --frozen-lockfile --ignore-scripts && pnpm build",
+    "deploy:apex": "wrangler deploy -c wrangler.jsonc",
     "typecheck": "astro check && tsc --noEmit",
     "lint": "oxlint --fix",
     "lint:check": "oxlint",

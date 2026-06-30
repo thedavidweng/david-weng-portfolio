@@ -1,0 +1,15 @@
+{
+  // Routes davidweng.eu.org to Pages origin. Needed while a zone redirect rule
+  // sends bare apex to www; remove this worker after deleting that rule.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "david-weng-portfolio-apex",
+  "main": "workers/apex-proxy.mjs",
+  "account_id": "99e63a7c867f83d0d7806e0e6cd09933",
+  "compatibility_date": "2026-06-30",
+  "routes": [
+    {
+      "pattern": "davidweng.eu.org/*",
+      "zone_name": "davidweng.eu.org"
+    }
+  ]
+}
