@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "david-weng-portfolio",
+  "account_id": "99e63a7c867f83d0d7806e0e6cd09933",
   "compatibility_date": "2026-06-14",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./worker/index.ts",
@@ -11,5 +12,11 @@
   },
   "images": {
     "binding": "IMAGES"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "davidweng.eu.org/*",
+      "zone_name": "davidweng.eu.org"
+    }
+  ]
 }

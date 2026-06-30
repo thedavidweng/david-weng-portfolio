@@ -8,13 +8,13 @@ test("next config pins outputFileTracingRoot to the project directory", () => {
   expect(configSource).toContain("import.meta.dirname");
 });
 
-test("dev script uses polling watchers to avoid EMFILE errors in local preview", () => {
+test("dev script starts the vinext development server", () => {
   const packageJson = JSON.parse(
     readFileSync(join(process.cwd(), "package.json"), "utf8"),
   ) as {
     scripts?: Record<string, string>;
   };
 
-  expect(packageJson.scripts?.dev).toContain("WATCHPACK_POLLING=true");
-  expect(packageJson.scripts?.dev).toContain("next dev --webpack");
+  expect(packageJson.scripts?.dev).toBe("vinext dev");
+  expect(packageJson.scripts?.build).toBe("vinext build");
 });

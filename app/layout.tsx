@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { StrictMode } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { body, display, homeZh, mono } from "@/lib/fonts";
 import { buildWebSiteSchema, buildPersonSchema } from "@/lib/jsonld";
@@ -78,7 +77,6 @@ export default function RootLayout({
         <StrictMode>{children}</StrictMode>
         <JsonLd data={buildPersonSchema("en")} />
         <JsonLd data={buildWebSiteSchema("en")} />
-        {process.env.VERCEL ? <SpeedInsights /> : null}
       </body>
     </html>
   );

@@ -130,31 +130,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm build
-
-  vinext:
-    name: Vinext
-    runs-on: ubuntu-latest
-    needs: prepare-dependencies
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
       - name: Check vinext compatibility
         run: pnpm check:vinext
 
-      - name: Build with vinext
-        run: pnpm build:vinext
+      - name: Build
+        run: pnpm build
