@@ -1,0 +1,5 @@
+# Cloudflare Pages preview project (Git-connected).
+# Worker production deploy uses wrangler.jsonc via `pnpm deploy`.
+name = "david-weng-portfolio-astro"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-06-30"
