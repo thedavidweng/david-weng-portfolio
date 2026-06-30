@@ -5,5 +5,20 @@ minimumReleaseAgeExclude:
   - next
   - webpack
   - workerd
+  - wrangler
+  - miniflare
+  - vinext
+  - "@vinext/*"
   - "@cloudflare/*"
 trustPolicy: no-downgrade
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - unrs-resolver
+  - workerd
+overrides:
+  postcss: 8.5.13
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
