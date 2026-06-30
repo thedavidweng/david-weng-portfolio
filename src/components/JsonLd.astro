@@ -10,4 +10,4 @@ const serialized = JSON.stringify(data)
   .replace(/&/g, "\\u0026");
 ---
 
-<script type="application/ld+json" set:html={serialized} />
+<script is:inline type="application/ld+json" set:html={serialized} />

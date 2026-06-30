@@ -13,8 +13,8 @@ permissions:
   contents: read
 
 env:
-  NODE_VERSION: 22
-  PNPM_VERSION: 11
+  NODE_VERSION: "22"
+  PNPM_VERSION: "11.9.0"
 
 jobs:
   deploy:
@@ -26,6 +26,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -34,7 +36,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts --trust-policy=off
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Test
         run: pnpm test

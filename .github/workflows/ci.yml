@@ -7,8 +7,8 @@ permissions:
   contents: read
 
 env:
-  NODE_VERSION: 22
-  PNPM_VERSION: 11
+  NODE_VERSION: "22"
+  PNPM_VERSION: "11.9.0"
 
 jobs:
   prepare-dependencies:
@@ -20,6 +20,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -40,6 +42,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -48,7 +52,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --trust-policy=off --ignore-scripts --trust-policy=off
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Run tests with coverage
         run: pnpm test -- --coverage
@@ -92,6 +96,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -100,7 +106,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --trust-policy=off
+        run: pnpm install --frozen-lockfile
 
       - name: Lint
         run: pnpm lint:check
@@ -115,6 +121,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -123,7 +131,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --trust-policy=off
+        run: pnpm install --frozen-lockfile
 
       - name: Typecheck
         run: pnpm typecheck
@@ -138,6 +146,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -146,7 +156,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --trust-policy=off
+        run: pnpm install --frozen-lockfile
 
       - name: Build and verify dist
         run: pnpm build && pnpm verify:dist
