@@ -1,10 +1,4 @@
 :root {
-  --font-display: "Outfit", "Inter Tight", sans-serif;
-  --font-body: "Manrope", "Inter", sans-serif;
-  --font-home-display: var(--font-display);
-  --font-home-body: var(--font-body);
-  --font-home-zh: "Noto Sans SC", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
   --bg: #030303;
   --bg-deep: #000000;
   --bg-raised: #080808;

@@ -162,9 +162,13 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(readFileSync(join(process.cwd(), "src/styles/font-fallbacks.css"), "utf8")).toContain(
     'font-family: "display Fallback"'
   );
-  expect(css).toContain("--font-home-display");
-  expect(css).toContain("--font-home-body");
-  expect(css).toContain("--font-home-zh");
+  expect(fontsSource).toContain("--font-home-display");
+  expect(fontsSource).toContain("--font-home-body");
+  expect(fontsSource).toContain("font-display: optional");
+  expect(layoutSource).toContain('rel="preload"');
+  expect(layoutSource).toContain("outfit-latin-wght-normal.woff2?url");
+  expect(layoutSource).toContain('fetchpriority="high"');
+  expect(rootBlock).not.toContain("Inter Tight");
   expect(css).toContain(".site-main--home .hero__title");
   expect(css).toContain(".site-main--home .poster-section__title");
   expect(css).toContain(".site-main--home .contact__title");

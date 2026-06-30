@@ -2,6 +2,10 @@
 import JsonLd from "@/src/components/JsonLd.astro";
 import { buildPersonSchema, buildWebSiteSchema } from "@/lib/jsonld";
 import type { Locale } from "@/types/content";
+import manropeFont from "../../assets/fonts/manrope-latin-wght-normal.woff2?url";
+import notoSansSc400Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2?url";
+import notoSansSc700Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2?url";
+import outfitFont from "../../assets/fonts/outfit-latin-wght-normal.woff2?url";
 import "@/src/styles/fonts.css";
 import "@/src/styles/global.css";
 
@@ -27,7 +31,6 @@ const {
 } = Astro.props;
 
 const htmlLang = locale;
-const zhPreload = locale === "zh";
 ---
 
 <!doctype html>
@@ -55,12 +58,17 @@ const zhPreload = locale === "zh";
     <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
     <link rel="icon" href="/brand/favicon.png" />
     <link rel="apple-touch-icon" href="/brand/favicon.png" />
-    {zhPreload ? (
+    {locale === "zh" ? (
       <>
-        <link rel="preload" href="/_astro/noto-sans-sc-chinese-simplified-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/_astro/noto-sans-sc-chinese-simplified-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href={notoSansSc400Font} as="font" type="font/woff2" crossorigin fetchpriority="high" />
+        <link rel="preload" href={notoSansSc700Font} as="font" type="font/woff2" crossorigin fetchpriority="high" />
       </>
-    ) : null}
+    ) : (
+      <>
+        <link rel="preload" href={outfitFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
+        <link rel="preload" href={manropeFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
+      </>
+    )}
     <slot name="head" />
   </head>
   <body class={locale === "zh" ? "site-body--zh" : undefined} style={locale === "zh" ? "--font-home-zh-active: var(--font-home-zh)" : undefined}>

@@ -11,4 +11,7 @@ test("base layout declares dark mobile browser chrome metadata for Safari-compat
   expect(source).toContain('rel="apple-touch-icon"');
   expect(source).toContain("/brand/og-image.png");
   expect(existsSync(join(process.cwd(), "public/brand/og-image.png"))).toBe(true);
+  expect(source).toContain('rel="preload"');
+  expect(source).toContain('as="font"');
+  expect(source).toContain('fetchpriority="high"');
 });
