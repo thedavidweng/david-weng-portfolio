@@ -1,5 +1,5 @@
-import type { Locale, LocalizedText, ServiceItem } from "@/types/content";
-import { getLocalizedText, localized } from "@/lib/i18n";
+import type { ServiceItem } from "@/types/content";
+import { localized } from "@/lib/i18n";
 
 export const siteIdentity = {
   name: "David Weng",
@@ -121,7 +121,3 @@ export const footerContent = {
   languageLabel: localized("中文", "EN"),
   externalWindowHint: localized("opens in new tab", "将在新标签页打开")
 };
-
-function label(text: LocalizedText, locale: Locale) {
-  return getLocalizedText(text, locale);
-}
