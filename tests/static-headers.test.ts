@@ -1,9 +1,10 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
-test("wrangler Pages config points at dist output", () => {
-  const wranglerConfig = readFileSync(join(process.cwd(), "wrangler.toml"), "utf8");
+test("wrangler Workers static assets config points at dist output", () => {
+  const wranglerConfig = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
 
-  expect(wranglerConfig).toContain('pages_build_output_dir = "./dist"');
-  expect(wranglerConfig).not.toContain("routes");
+  expect(wranglerConfig).toContain('"directory": "./dist"');
+  expect(wranglerConfig).toContain('"not_found_handling": "404-page"');
+  expect(wranglerConfig).not.toContain('"routes"');
 });
