@@ -1,0 +1,36 @@
+/* Metric-adjusted fallbacks matching Next.js next/font/google output. */
+@font-face {
+  font-family: "display Fallback";
+  src: local("Arial");
+  ascent-override: 100.84%;
+  descent-override: 26.22%;
+  line-gap-override: 0%;
+  size-adjust: 99.17%;
+}
+
+@font-face {
+  font-family: "body Fallback";
+  src: local("Arial");
+  ascent-override: 106.45%;
+  descent-override: 29.96%;
+  line-gap-override: 0%;
+  size-adjust: 100.14%;
+}
+
+@font-face {
+  font-family: "homeZh Fallback";
+  src: local("Arial");
+  ascent-override: 110.26%;
+  descent-override: 27.38%;
+  line-gap-override: 0%;
+  size-adjust: 105.2%;
+}
+
+@font-face {
+  font-family: "mono Fallback";
+  src: local("Arial");
+  ascent-override: 77.95%;
+  descent-override: 20.91%;
+  line-gap-override: 0%;
+  size-adjust: 131.49%;
+}

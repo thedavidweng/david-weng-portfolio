@@ -1,17 +1,22 @@
 import localFont from "next/font/local";
+import "./font-fallbacks.css";
 
 export const display = localFont({
   src: "../public/fonts/outfit-latin-wght-normal.woff2",
   variable: "--font-display",
+  weight: "100 900",
   display: "swap",
-  preload: true
+  preload: true,
+  fallback: ["display Fallback"]
 });
 
 export const body = localFont({
   src: "../public/fonts/manrope-latin-wght-normal.woff2",
   variable: "--font-body",
+  weight: "100 900",
   display: "swap",
-  preload: true
+  preload: true,
+  fallback: ["body Fallback"]
 });
 
 export const homeZh = localFont({
@@ -31,7 +36,8 @@ export const homeZh = localFont({
   ],
   variable: "--font-home-zh",
   display: "swap",
-  preload: false
+  preload: false,
+  fallback: ["homeZh Fallback"]
 });
 
 export const mono = localFont({
@@ -51,5 +57,6 @@ export const mono = localFont({
   ],
   variable: "--font-mono",
   display: "swap",
-  preload: false
+  preload: false,
+  fallback: ["mono Fallback"]
 });

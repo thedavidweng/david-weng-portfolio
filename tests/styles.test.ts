@@ -152,8 +152,16 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(fontsSource).toContain("manrope-latin-wght-normal.woff2");
   expect(fontsSource).toContain("noto-sans-sc-chinese-simplified");
   expect(fontsSource).toContain('variable: "--font-display"');
+  expect(fontsSource).toContain('weight: "100 900"');
+  expect(fontsSource).toContain('fallback: ["display Fallback"]');
   expect(fontsSource).toContain('variable: "--font-body"');
+  expect(fontsSource).toContain('fallback: ["body Fallback"]');
   expect(fontsSource).toContain('variable: "--font-home-zh"');
+  expect(fontsSource).toContain('fallback: ["homeZh Fallback"]');
+  expect(fontsSource).toContain('fallback: ["mono Fallback"]');
+  expect(readFileSync(join(process.cwd(), "lib/font-fallbacks.css"), "utf8")).toContain(
+    'font-family: "display Fallback"'
+  );
   expect(css).toContain("--font-home-display");
   expect(css).toContain("--font-home-body");
   expect(css).toContain("--font-home-zh");
