@@ -1,40 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Outfit, Manrope, Noto_Sans_SC } from "next/font/google";
+import { StrictMode } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { body, display, homeZh, mono } from "@/lib/fonts";
 import { buildWebSiteSchema, buildPersonSchema } from "@/lib/jsonld";
 import "react-photo-album/rows.css";
 import "./globals.css";
-
-const display = Outfit({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-  preload: true
-});
-
-const body = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-  preload: true
-});
-
-const homeZh = Noto_Sans_SC({
-  subsets: ["latin"],
-  variable: "--font-home-zh",
-  weight: ["400", "700", "900"],
-  display: "swap",
-  preload: false
-});
-
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500", "600"],
-  display: "swap",
-  preload: false
-});
 
 const siteUrl = "https://davidweng.eu.org";
 
@@ -104,10 +75,10 @@ export default function RootLayout({
       <body
         className={`${display.variable} ${body.variable} ${homeZh.variable} ${mono.variable}`}
       >
-        {children}
+        <StrictMode>{children}</StrictMode>
         <JsonLd data={buildPersonSchema("en")} />
         <JsonLd data={buildWebSiteSchema("en")} />
-        <SpeedInsights />
+        {process.env.VERCEL ? <SpeedInsights /> : null}
       </body>
     </html>
   );

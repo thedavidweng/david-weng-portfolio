@@ -5,8 +5,7 @@ test("next config pins outputFileTracingRoot to the project directory", () => {
   const configSource = readFileSync(join(process.cwd(), "next.config.ts"), "utf8");
 
   expect(configSource).toContain("outputFileTracingRoot");
-  expect(configSource).toContain("__dirname");
-  expect(configSource).toContain("qualities: [68, 75]");
+  expect(configSource).toContain("import.meta.dirname");
 });
 
 test("dev script uses polling watchers to avoid EMFILE errors in local preview", () => {

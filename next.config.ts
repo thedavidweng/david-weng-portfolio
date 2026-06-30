@@ -1,16 +1,7 @@
 import type { NextConfig } from "next";
-import path from "node:path";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  outputFileTracingRoot: path.join(__dirname),
-  images: {
-    formats: ["image/avif", "image/webp"],
-    qualities: [68, 75],
-    minimumCacheTTL: 2678400,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [64, 128, 256, 384],
-  },
+  outputFileTracingRoot: import.meta.dirname,
   async headers() {
     return [
       {

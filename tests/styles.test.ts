@@ -142,16 +142,18 @@ test("mobile home shell keeps a visible header nav with built-in separators inst
 test("home layout uses dedicated modern font variables without changing project card typography", () => {
   const css = readFileSync(join(process.cwd(), "app/globals.css"), "utf8");
   const layoutSource = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8");
+  const fontsSource = readFileSync(join(process.cwd(), "lib/fonts.ts"), "utf8");
   const projectCardTitleBlock = css.match(/\.project-card__title\s*\{[^}]+\}/)?.[0] ?? "";
   const headerTitleBlock = css.match(/\.site-header__title\s*\{[^}]+\}/)?.[0] ?? "";
   const rootBlock = css.match(/:root\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(layoutSource).toContain("Outfit");
-  expect(layoutSource).toContain("Manrope");
-  expect(layoutSource).toContain("Noto_Sans_SC");
-  expect(layoutSource).toContain('variable: "--font-display"');
-  expect(layoutSource).toContain('variable: "--font-body"');
-  expect(layoutSource).toContain('variable: "--font-home-zh"');
+  expect(layoutSource).toContain('@/lib/fonts');
+  expect(fontsSource).toContain("outfit-latin-wght-normal.woff2");
+  expect(fontsSource).toContain("manrope-latin-wght-normal.woff2");
+  expect(fontsSource).toContain("noto-sans-sc-chinese-simplified");
+  expect(fontsSource).toContain('variable: "--font-display"');
+  expect(fontsSource).toContain('variable: "--font-body"');
+  expect(fontsSource).toContain('variable: "--font-home-zh"');
   expect(css).toContain("--font-home-display");
   expect(css).toContain("--font-home-body");
   expect(css).toContain("--font-home-zh");
