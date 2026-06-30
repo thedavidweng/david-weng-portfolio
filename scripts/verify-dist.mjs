@@ -44,9 +44,12 @@ ok("wrangler Workers static assets config");
 const headersPath = join(distDir, "_headers");
 assert(existsSync(headersPath), "dist/_headers is missing");
 const headers = readFileSync(headersPath, "utf8");
-assert(headers.includes("/projects/*"), "dist/_headers must cache /projects/*");
+assert(headers.includes("/_astro/*"), "dist/_headers must cache /_astro/*");
+assert(headers.includes("/projects/film-video/*"), "dist/_headers must cache portfolio media paths");
 assert(headers.includes("/brand/*"), "dist/_headers must cache /brand/*");
 assert(headers.includes("max-age=31536000, immutable"), "dist/_headers must set immutable long cache");
+assert(headers.includes("stale-while-revalidate=86400"), "dist/_headers must set HTML stale-while-revalidate");
+assert(!headers.includes("/projects/*\n"), "dist/_headers must not blanket-cache all /projects/* HTML");
 ok("dist/_headers cache rules");
 
 const sitemapPath = join(distDir, "sitemap.xml");
