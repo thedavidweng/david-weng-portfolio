@@ -106,7 +106,9 @@ export function ArchiveMediaWall({
         className: "project-media__wall project-media__wall--rows"
       },
       image: {
-        className: "project-media__rows-image"
+        className: "project-media__rows-image",
+        decoding: "async",
+        loading: "lazy"
       },
       wrapper: ({ photo }: { photo: ArchivePhoto }) => ({
         className: `project-media__rows-item${photo.item.layout ? ` project-media__rows-item--${photo.item.layout}` : ""}`

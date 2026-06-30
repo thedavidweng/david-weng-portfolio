@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build",
+    "subset:fonts": "node scripts/subset-cjk-fonts.mjs",
+    "prebuild": "pnpm subset:fonts",
+    "build": "vinext build --precompress",
     "start": "vinext start",
     "deploy": "vinext-cloudflare deploy",
     "check:vinext": "vinext check",
@@ -40,6 +42,7 @@
     "jsdom": "29.1.1",
     "oxlint": "^1.72.0",
     "react-server-dom-webpack": "^19.2.7",
+    "subset-font": "^2.5.0",
     "typescript": "6.0.3",
     "vinext": "^0.2.0",
     "vite": "8.1.0",

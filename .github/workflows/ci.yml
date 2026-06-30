@@ -153,3 +153,6 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Report client asset weight
+        run: du -sh dist/client && du -sh dist/client/*

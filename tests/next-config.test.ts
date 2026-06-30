@@ -16,5 +16,6 @@ test("dev script starts the vinext development server", () => {
   };
 
   expect(packageJson.scripts?.dev).toBe("vinext dev");
-  expect(packageJson.scripts?.build).toBe("vinext build");
+  expect(packageJson.scripts?.build).toBe("vinext build --precompress");
+  expect(packageJson.scripts?.prebuild).toBe("pnpm subset:fonts");
 });
