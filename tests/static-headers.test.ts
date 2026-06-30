@@ -6,7 +6,7 @@ test("wrangler Workers static assets config points at dist output", () => {
 
   expect(wranglerConfig).toContain('"directory": "./dist"');
   expect(wranglerConfig).toContain('"not_found_handling": "404-page"');
-  expect(wranglerConfig).toContain('"html_handling": "none"');
+  expect(wranglerConfig).toContain('"html_handling": "auto-trailing-slash"');
   expect(wranglerConfig).toContain('"observability"');
   expect(wranglerConfig).not.toContain('"routes"');
 });
