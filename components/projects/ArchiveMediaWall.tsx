@@ -25,6 +25,28 @@ type OverlayLinkMeta = {
   platform: "youtube" | "generic";
 };
 
+function getOverlayLinkMeta(href: string): OverlayLinkMeta {
+  try {
+    const hostname = new URL(href).hostname.replace(/^www\./, "");
+
+    if (hostname === "youtu.be" || hostname.endsWith("youtube.com")) {
+      return {
+        icon: "youtube",
+        label: "YouTube",
+        platform: "youtube"
+      };
+    }
+  } catch {
+    // Fall back to a generic label if the URL is malformed.
+  }
+
+  return {
+    icon: "external",
+    label: "Open",
+    platform: "generic"
+  };
+}
+
 export function ArchiveMediaWall({
   locale,
   items,
@@ -73,28 +95,6 @@ export function ArchiveMediaWall({
       ),
     [photos]
   );
-
-  const getOverlayLinkMeta = (href: string): OverlayLinkMeta => {
-    try {
-      const hostname = new URL(href).hostname.replace(/^www\./, "");
-
-      if (hostname === "youtu.be" || hostname.endsWith("youtube.com")) {
-        return {
-          icon: "youtube",
-          label: "YouTube",
-          platform: "youtube"
-        };
-      }
-    } catch {
-      // Fall back to a generic label if the URL is malformed.
-    }
-
-    return {
-      icon: "external",
-      label: "Open",
-      platform: "generic"
-    };
-  };
 
   const sharedAlbumProps = {
     componentsProps: {

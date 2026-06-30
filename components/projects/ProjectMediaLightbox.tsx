@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useEffectEvent, useRef } from "react";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
 
@@ -35,13 +35,20 @@ export function ProjectMediaLightbox({
   const previewItem = isPreviewImageItem(activeItem) ? activeItem : null;
   const isOpen = previewItem !== null;
 
-  const handleCancel = useCallback(
-    (e: Event) => {
-      e.preventDefault();
-      onClose();
-    },
-    [onClose]
-  );
+  const handleCancel = useEffectEvent((e: Event) => {
+    e.preventDefault();
+    onClose();
+  });
+
+  const handleKeyDown = useEffectEvent((event: KeyboardEvent) => {
+    if (event.key === "ArrowRight" && canNavigate) {
+      event.preventDefault();
+      onNext?.();
+    } else if (event.key === "ArrowLeft" && canNavigate) {
+      event.preventDefault();
+      onPrevious?.();
+    }
+  });
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -62,30 +69,31 @@ export function ProjectMediaLightbox({
     const dialog = dialogRef.current;
     if (!dialog) return;
 
-    dialog.addEventListener("cancel", handleCancel);
-    return () => dialog.removeEventListener("cancel", handleCancel);
-  }, [handleCancel]);
+    const onCancel = (event: Event) => handleCancel(event);
+
+    dialog.addEventListener("cancel", onCancel);
+    return () => dialog.removeEventListener("cancel", onCancel);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
 
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "ArrowRight" && canNavigate) {
+    const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event);
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
+
+  const handleBackdropClick = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
+  const handleBackdropKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        onNext?.();
-      } else if (event.key === "ArrowLeft" && canNavigate) {
-        event.preventDefault();
-        onPrevious?.();
+        onClose();
       }
-    }
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [canNavigate, isOpen, onNext, onPrevious]);
-
-  const handleBackdropClick = useCallback(
-    () => {
-      onClose();
     },
     [onClose]
   );
@@ -96,55 +104,51 @@ export function ProjectMediaLightbox({
 
   return (
     <dialog ref={dialogRef} aria-label={projectLabel(previewDialogLabel, locale)} className="project-media__lightbox">
-      <div className="project-media__lightbox-stage" onClick={handleBackdropClick}>
-        <button
-          aria-label={projectLabel(closePreviewLabel, locale)}
-          className="project-media__lightbox-close"
-          onClick={(event) => {
-            event.stopPropagation();
-            onClose();
-          }}
-          type="button"
-        >
-          X
-        </button>
-        {canNavigate ? (
-          <>
-            <button
-              aria-label="Previous image"
-              className="project-media__lightbox-nav project-media__lightbox-nav--prev"
-              onClick={(event) => {
-                event.stopPropagation();
-                onPrevious?.();
-              }}
-              type="button"
-            >
-              ←
-            </button>
-            <button
-              aria-label="Next image"
-              className="project-media__lightbox-nav project-media__lightbox-nav--next"
-              onClick={(event) => {
-                event.stopPropagation();
-                onNext?.();
-              }}
-              type="button"
-            >
-              →
-            </button>
-          </>
-        ) : null}
-        <div className="project-media__lightbox-scroll">
-          <div className="project-media__lightbox-frame" onClick={(event) => event.stopPropagation()}>
-            <Image
-              alt={projectLabel(previewItem.title, locale)}
-              className="project-media__lightbox-image"
-              height={previewItem.height ?? 900}
-              sizes="90vw"
-              src={previewItem.src}
-              width={previewItem.width ?? 1600}
-            />
-          </div>
+      <button
+        aria-label={projectLabel(previewDialogLabel, locale)}
+        className="project-media__lightbox-backdrop"
+        onClick={handleBackdropClick}
+        onKeyDown={handleBackdropKeyDown}
+        type="button"
+      />
+      <button
+        aria-label={projectLabel(closePreviewLabel, locale)}
+        className="project-media__lightbox-close"
+        onClick={onClose}
+        type="button"
+      >
+        X
+      </button>
+      {canNavigate ? (
+        <>
+          <button
+            aria-label="Previous image"
+            className="project-media__lightbox-nav project-media__lightbox-nav--prev"
+            onClick={onPrevious}
+            type="button"
+          >
+            ←
+          </button>
+          <button
+            aria-label="Next image"
+            className="project-media__lightbox-nav project-media__lightbox-nav--next"
+            onClick={onNext}
+            type="button"
+          >
+            →
+          </button>
+        </>
+      ) : null}
+      <div className="project-media__lightbox-scroll">
+        <div className="project-media__lightbox-frame">
+          <Image
+            alt={projectLabel(previewItem.title, locale)}
+            className="project-media__lightbox-image"
+            height={previewItem.height ?? 900}
+            sizes="90vw"
+            src={previewItem.src}
+            width={previewItem.width ?? 1600}
+          />
         </div>
       </div>
     </dialog>

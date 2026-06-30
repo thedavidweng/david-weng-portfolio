@@ -1,19 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
-import { LocalizedInlineText } from "@/components/content/LocalizedInlineText";
+import type { Locale, ProjectItem } from "@/types/content";
 import { Container } from "@/components/layout/Container";
-import { ArchiveMediaWall } from "@/components/projects/ArchiveMediaWall";
-import { FilmCreditGroupBlock } from "@/components/projects/FilmCredits";
-import { FilmMediaRail } from "@/components/projects/FilmMediaRail";
 import { ProjectExternalLinkButton } from "@/components/projects/ProjectExternalLinkButton";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { ProjectFilmHero } from "@/components/pages/ProjectFilmHero";
+import { ProjectFilmRails } from "@/components/pages/ProjectFilmRails";
+import { ProjectMaterialsSection } from "@/components/pages/ProjectMaterialsSection";
+import { ProjectSummary } from "@/components/pages/ProjectSummary";
 import { projectDetailContent, projectLabel } from "@/content/projects";
 import { getLocaleHomePath } from "@/lib/i18n";
-function isArchiveVideoItem(item: ProjectMediaItem) {
-  return item.type === "image" && item.archiveKind === "video";
-}
 
 type ProjectPageViewProps = {
   locale: Locale;
@@ -32,18 +29,6 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
   const isDedicatedFilmProject = isFilmProject && Boolean(project.film) && !useImageWall;
   const isArchiveVideoProject = isVideoProject && useImageWall;
   const primaryExternalLink = project.externalLinks[0];
-  const archiveVideoItems = useImageWall ? project.media.filter(isArchiveVideoItem) : [];
-  const archiveStaticItems = useImageWall ? project.media.filter((item) => !isArchiveVideoItem(item)) : [];
-  const useSplitArchiveLayout = useImageWall && archiveVideoItems.length > 0;
-  const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.media;
-  const film = project.film;
-  const filmHeroPoster = film ? film.heroPoster[locale] : null;
-  const renderProjectSummary = () =>
-    project.detailSummary ? (
-      <LocalizedInlineText locale={locale} value={project.detailSummary} linkClassName="project-hero__summary-link" />
-    ) : (
-      projectLabel(project.summary, locale)
-    );
 
   return (
     <div className={`site-shell site-shell--${locale}`}>
@@ -71,58 +56,7 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
               <div
                 className={`project-hero__grid${isTitleOnly ? " project-hero__grid--title-only" : ""}${isExternalHandoff ? " project-hero__grid--external-handoff" : ""}${isDedicatedFilmProject ? " project-hero__grid--film" : ""}`}
               >
-                {isDedicatedFilmProject && film && filmHeroPoster ? (
-                  <>
-                    <div className="project-film__intro">
-                      <div className="project-film__content">
-                        <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
-                        <p className="project-hero__summary">{renderProjectSummary()}</p>
-                        {film.facts.length > 0 ? (
-                          <div className="project-film__facts">
-                            {film.facts.map((fact) => (
-                              <div
-                                key={`${fact.label.en}-${fact.value.en}`}
-                                className="project-film__fact signal-control signal-control--micro"
-                              >
-                                <span>{projectLabel(fact.label, locale)}</span>
-                                <strong>{projectLabel(fact.value, locale)}</strong>
-                              </div>
-                            ))}
-                          </div>
-                        ) : null}
-                        <div className="project-detail__links project-detail__links--film">
-                          {project.externalLinks.map((link) => (
-                            <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="project-film__poster">
-                      <Image
-                        alt={projectLabel(filmHeroPoster.title, locale)}
-                        className="project-film__poster-image"
-                        height={filmHeroPoster.height ?? 2304}
-                        priority
-                        sizes="(max-width: 760px) 100vw, (max-width: 1120px) 78vw, 42vw"
-                        src={filmHeroPoster.src ?? project.coverImage}
-                        width={filmHeroPoster.width ?? 1728}
-                      />
-                    </div>
-                    <div className="project-film__credits-wrap">
-                      <section className="project-film__credits signal-panel">
-                        <p className="poster-section__eyebrow">{projectLabel(project.projectType, locale)}</p>
-                        <h2 className="project-film__credits-title">
-                          {projectLabel(projectDetailContent.castAndCrewTitle, locale)}
-                        </h2>
-                        <div className="project-film__credits-groups">
-                          {film.credits.map((group) => (
-                            <FilmCreditGroupBlock key={group.role.en} group={group} locale={locale} />
-                          ))}
-                        </div>
-                      </section>
-                    </div>
-                  </>
-                ) : null}
+                {isDedicatedFilmProject ? <ProjectFilmHero locale={locale} project={project} /> : null}
                 {!isDedicatedFilmProject ? (
                   <div
                     className={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
@@ -133,7 +67,9 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                     <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
                     {!isTitleOnly && !isExternalHandoff ? (
                       <>
-                        <p className="project-hero__summary">{renderProjectSummary()}</p>
+                        <p className="project-hero__summary">
+                          <ProjectSummary locale={locale} project={project} />
+                        </p>
                         <div className="project-detail__links">
                           {project.externalLinks.map((link) => (
                             <ProjectExternalLinkButton key={link.label.en} href={link.href} label={projectLabel(link.label, locale)} />
@@ -146,7 +82,9 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
                         <p className="project-hero__publication">
                           {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
                         </p>
-                        <p className="project-hero__summary">{renderProjectSummary()}</p>
+                        <p className="project-hero__summary">
+                          <ProjectSummary locale={locale} project={project} />
+                        </p>
                       </>
                     ) : null}
                   </div>
@@ -213,151 +151,10 @@ export function ProjectPageView({ locale, pathname, project }: ProjectPageViewPr
           </section>
         ) : null}
 
-        {isDedicatedFilmProject && film ? (
-          <section className="project-film">
-            <Container>
-              <div className="project-film__section">
-                <div className="poster-section__intro">
-                  <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
-                  <h2 className="poster-section__title">{projectLabel(projectDetailContent.stillsTitle, locale)}</h2>
-                </div>
-                <FilmMediaRail
-                  cardClassName="project-film__stills-item"
-                  closePreviewLabel={projectDetailContent.closePreviewLabel}
-                  imageClassName="project-film__rail-image project-film__rail-image--still"
-                  items={film.stills}
-                  locale={locale}
-                  previewDialogLabel={projectDetailContent.previewDialogLabel}
-                  previewLabel={projectDetailContent.previewLabel}
-                  railClassName="project-film__stills-rail"
-                  sizes="(max-width: 760px) 80vw, 34vw"
-                />
-              </div>
-              <div className="project-film__section">
-                <div className="poster-section__intro">
-                  <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
-                  <h2 className="poster-section__title">{projectLabel(projectDetailContent.postersTitle, locale)}</h2>
-                </div>
-                <FilmMediaRail
-                  cardClassName="project-film__poster-card"
-                  closePreviewLabel={projectDetailContent.closePreviewLabel}
-                  imageClassName="project-film__rail-image project-film__rail-image--poster"
-                  items={film.posters}
-                  locale={locale}
-                  previewDialogLabel={projectDetailContent.previewDialogLabel}
-                  previewLabel={projectDetailContent.previewLabel}
-                  railClassName="project-film__posters-rail"
-                  sizes="(max-width: 760px) 60vw, 24vw"
-                />
-              </div>
-            </Container>
-          </section>
-        ) : null}
+        {isDedicatedFilmProject && project.film ? <ProjectFilmRails locale={locale} project={project} /> : null}
 
         {!isTitleOnly && !isExternalHandoff && (!isFilmOrVideoProject || isArchiveVideoProject) ? (
-          <section className="project-media">
-            <Container>
-              <div className="poster-section__intro">
-                <p className="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
-                <h2 className="poster-section__title">{projectLabel(projectDetailContent.materialsTitle, locale)}</h2>
-              </div>
-              {useImageWall ? (
-                <div className="project-media__sections">
-                  {archiveWallItems.length > 0 ? (
-                    <div className="project-media__section">
-                      {useSplitArchiveLayout ? (
-                        <h3 className="project-media__section-title">
-                          {projectLabel(projectDetailContent.staticWorksTitle, locale)}
-                        </h3>
-                      ) : null}
-                      <ArchiveMediaWall
-                        closePreviewLabel={projectDetailContent.closePreviewLabel}
-                        items={archiveWallItems}
-                        locale={locale}
-                        photoCreditLabel={projectDetailContent.photoCreditLabel}
-                        previewDialogLabel={projectDetailContent.previewDialogLabel}
-                        previewLabel={projectDetailContent.previewLabel}
-                      />
-                    </div>
-                  ) : null}
-                  {useSplitArchiveLayout ? (
-                    <div className="project-media__section">
-                      <h3 className="project-media__section-title">
-                        {projectLabel(projectDetailContent.videoWorksTitle, locale)}
-                      </h3>
-                      <div className="project-media__video-grid">
-                        {archiveVideoItems.map((item) => (
-                          <article
-                            key={`${item.title.en}-${item.src ?? item.href ?? "video"}`}
-                            className="project-media__video-card signal-panel"
-                          >
-                            {item.src ? (
-                              <div className="project-media__video-thumb">
-                                <Image
-                                  alt={projectLabel(item.title, locale)}
-                                  fill
-                                  sizes="(max-width: 760px) 100vw, (max-width: 1120px) 50vw, 42vw"
-                                  src={item.src}
-                                />
-                              </div>
-                            ) : null}
-                            <div className="project-media__video-copy">
-                              <h3>{projectLabel(item.title, locale)}</h3>
-                              <p>{projectLabel(item.description, locale)}</p>
-                              {item.href ? (
-                                <a className="button button--signal" href={item.href} rel="noreferrer" target="_blank">
-                                  {projectLabel(projectDetailContent.watchOnYouTubeLabel, locale)}
-                                  <span className="visually-hidden">(opens in new tab)</span>
-                                </a>
-                              ) : null}
-                            </div>
-                          </article>
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
-              ) : (
-                <div className="project-media__grid">
-                  {project.media.map((item) => (
-                    <article
-                      key={`${item.title.en}-${item.src ?? item.href ?? "resource"}`}
-                      className={`project-media__card signal-panel${item.layout ? ` project-media__card--${item.layout}` : ""}`}
-                    >
-                      <div className="project-media__badge">{item.badge ? projectLabel(item.badge, locale) : item.type}</div>
-                      {item.type === "image" && item.src ? (
-                        <div className={`project-media__image${item.layout ? ` project-media__image--${item.layout}` : ""}`}>
-                          <Image
-                            alt={projectLabel(item.title, locale)}
-                            fill
-                            sizes="(max-width: 1120px) 100vw, 28vw"
-                            src={item.src}
-                          />
-                        </div>
-                      ) : null}
-                      <h3>{projectLabel(item.title, locale)}</h3>
-                      <p>{projectLabel(item.description, locale)}</p>
-                      {item.credit ? (
-                        <p className="project-media__credit">
-                          {projectLabel(projectDetailContent.photoCreditLabel, locale)}:{" "}
-                          <a href={item.credit.href} rel="noreferrer" target="_blank">
-                            {projectLabel(item.credit.label, locale)}
-                            <span className="visually-hidden">(opens in new tab)</span>
-                          </a>
-                        </p>
-                      ) : null}
-                      {item.href ? (
-                        <a className="project-card__cta" href={item.href} rel="noreferrer" target="_blank">
-                          {projectLabel(projectDetailContent.openResourceLabel, locale)}
-                          <span className="visually-hidden">(opens in new tab)</span>
-                        </a>
-                      ) : null}
-                    </article>
-                  ))}
-                </div>
-              )}
-            </Container>
-          </section>
+          <ProjectMaterialsSection locale={locale} project={project} useImageWall={useImageWall} />
         ) : null}
       </main>
       <Footer locale={locale} />

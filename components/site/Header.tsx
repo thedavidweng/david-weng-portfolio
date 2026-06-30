@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Locale } from "@/types/content";
 import { Container } from "@/components/layout/Container";
 import { footerContent, navigationItems, siteIdentity, aboutContent, contactContent } from "@/content/site";
@@ -14,13 +14,39 @@ type HeaderProps = {
   pathname: string;
 };
 
+function subscribeToDesktopViewport(onStoreChange: () => void) {
+  const mediaQuery = window.matchMedia("(min-width: 761px)");
+  mediaQuery.addEventListener("change", onStoreChange);
+  return () => mediaQuery.removeEventListener("change", onStoreChange);
+}
+
+function getDesktopViewportSnapshot() {
+  return window.matchMedia("(min-width: 761px)").matches;
+}
+
+function getDesktopViewportServerSnapshot() {
+  return false;
+}
+
 export function Header({ locale, pathname }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [headerScrolled, setHeaderScrolled] = useState(false);
-  const scrollControllerRef = useRef(createHeaderScrollController());
+  const scrollControllerRef = useRef<ReturnType<typeof createHeaderScrollController> | null>(null);
+
+  if (scrollControllerRef.current === null) {
+    scrollControllerRef.current = createHeaderScrollController();
+  }
+
   const latestScrollYRef = useRef(0);
-  const frameRef = useRef<number | null>(null);
+  const mobileMenuOpenRef = useRef(mobileMenuOpen);
+  mobileMenuOpenRef.current = mobileMenuOpen;
+  const isDesktop = useSyncExternalStore(
+    subscribeToDesktopViewport,
+    getDesktopViewportSnapshot,
+    getDesktopViewportServerSnapshot
+  );
+  const menuOpen = mobileMenuOpen && !isDesktop;
   const homePath = getLocaleHomePath(locale);
   const switchLabel = getLocalizedText(footerContent.languageLabel, locale);
   const externalWindowHint = getLocalizedText(footerContent.externalWindowHint, locale);
@@ -33,41 +59,23 @@ export function Header({ locale, pathname }: HeaderProps) {
       return;
     }
 
-    const mediaQuery = window.matchMedia("(min-width: 761px)");
-    const handleViewportChange = () => {
-      if (mediaQuery.matches) {
-        setMobileMenuOpen(false);
-      }
-    };
-
-    handleViewportChange();
-    mediaQuery.addEventListener("change", handleViewportChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleViewportChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
+    let pendingFrame: number | null = null;
 
     const updateFromScroll = () => {
-      frameRef.current = null;
-      const next = scrollControllerRef.current.update(latestScrollYRef.current);
+      pendingFrame = null;
+      const next = scrollControllerRef.current!.update(latestScrollYRef.current);
       setHeaderScrolled((current) => (current === next.scrolled ? current : next.scrolled));
       setHeaderVisible((current) => {
-        const desired = mobileMenuOpen ? true : next.visible;
+        const desired = mobileMenuOpenRef.current ? true : next.visible;
         return current === desired ? current : desired;
       });
     };
 
     const requestFrame = () => {
-      if (frameRef.current !== null) {
+      if (pendingFrame !== null) {
         return;
       }
-      frameRef.current = window.requestAnimationFrame(updateFromScroll);
+      pendingFrame = window.requestAnimationFrame(updateFromScroll);
     };
 
     const handleScroll = () => {
@@ -81,18 +89,19 @@ export function Header({ locale, pathname }: HeaderProps) {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (frameRef.current !== null) {
-        window.cancelAnimationFrame(frameRef.current);
+
+      if (pendingFrame !== null) {
+        window.cancelAnimationFrame(pendingFrame);
       }
     };
-  }, [mobileMenuOpen]);
+  }, []);
 
   const menuLabel = locale === "zh" ? "主菜单" : "Main menu";
   const closeMenu = () => setMobileMenuOpen(false);
 
   return (
     <header
-      className={`site-header${isHomePath ? " site-header--home" : ""}${mobileMenuOpen ? " site-header--menu-open" : ""}${headerVisible ? " site-header--visible" : " site-header--hidden"}${headerScrolled ? " site-header--scrolled" : ""}`}
+      className={`site-header${isHomePath ? " site-header--home" : ""}${menuOpen ? " site-header--menu-open" : ""}${headerVisible ? " site-header--visible" : " site-header--hidden"}${headerScrolled ? " site-header--scrolled" : ""}`}
     >
       <Container>
         <div className="site-header__inner">
@@ -100,12 +109,12 @@ export function Header({ locale, pathname }: HeaderProps) {
             <span className="site-header__title">{siteIdentity.name}</span>
           </Link>
 
-          <Dialog.Root modal={false} open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <Dialog.Root modal={false} open={menuOpen} onOpenChange={setMobileMenuOpen}>
             <Dialog.Trigger asChild>
               <button
                 aria-controls="site-mobile-menu-panel"
-                aria-expanded={mobileMenuOpen}
-                aria-label={mobileMenuOpen ? (locale === "zh" ? "关闭菜单" : "Close menu") : locale === "zh" ? "打开菜单" : "Open menu"}
+                aria-expanded={menuOpen}
+                aria-label={menuOpen ? (locale === "zh" ? "关闭菜单" : "Close menu") : locale === "zh" ? "打开菜单" : "Open menu"}
                 className="site-header__menu-toggle"
                 type="button"
               >

@@ -15,8 +15,7 @@ export async function generateStaticParams() {
 }
 
 export default async function LocaleHomePage({ params, searchParams }: LocalePageProps) {
-  const { locale } = await params;
-  const { mode } = await searchParams;
+  const [{ locale }, { mode }] = await Promise.all([params, searchParams]);
   const resolvedLocale = resolveLocalizedRouteLocale(locale);
 
   if (!resolvedLocale) {

@@ -29,8 +29,8 @@ export function AgentView({ locale }: AgentViewProps) {
 
       <section aria-labelledby="services-heading">
         <h2 id="services-heading">Services</h2>
-        {data.services.map((s, i) => (
-          <article key={i} style={{ marginBottom: "1.5rem" }}>
+        {data.services.map((s) => (
+          <article key={s.name} style={{ marginBottom: "1.5rem" }}>
             <h3>{s.name}</h3>
             <p>{s.description}</p>
           </article>

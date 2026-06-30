@@ -318,10 +318,10 @@ test("clicking outside the previewed image closes the preview dialog", async () 
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
-  const stage = container.querySelector(".project-media__lightbox-stage");
+  const backdrop = container.querySelector(".project-media__lightbox-backdrop");
 
-  expect(stage).toBeTruthy();
-  await user.click(stage as HTMLElement);
+  expect(backdrop).toBeTruthy();
+  await user.click(backdrop as HTMLElement);
   expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
 });
 

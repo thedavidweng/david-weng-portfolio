@@ -2,7 +2,7 @@ import { projects } from "@/content/projects";
 import { getLocalizedText } from "@/lib/i18n";
 import type { Locale, ProjectItem } from "@/types/content";
 
-export const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
+const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
 
 export type ProjectCategoryId = (typeof PROJECT_CATEGORY_SEQUENCE)[number];
 

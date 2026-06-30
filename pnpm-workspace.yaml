@@ -1,0 +1,9 @@
+packages:
+  - "."
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - next
+  - webpack
+  - workerd
+  - "@cloudflare/*"
+trustPolicy: no-downgrade

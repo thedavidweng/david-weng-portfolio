@@ -8,7 +8,7 @@ import { clientWorkArchive } from "@/content/archives/client-work";
 import { researchPublicationArchive } from "@/content/archives/research-publication";
 import { filmVideoArchive } from "@/content/archives/film-video";
 
-export const archiveCollections: Record<ArchiveGroup, ArchiveCollection> = {
+const archiveCollections: Record<ArchiveGroup, ArchiveCollection> = {
   "beaty-biodiversity-museum": beatyBiodiversityMuseumArchive,
   "bc-ai-ecosystem": bcAiEcosystemArchive,
   "theupgrade-ai": theUpgradeAiArchive,

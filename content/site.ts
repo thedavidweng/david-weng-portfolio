@@ -122,6 +122,6 @@ export const footerContent = {
   externalWindowHint: localized("opens in new tab", "将在新标签页打开")
 };
 
-export function label(text: LocalizedText, locale: Locale) {
+function label(text: LocalizedText, locale: Locale) {
   return getLocalizedText(text, locale);
 }

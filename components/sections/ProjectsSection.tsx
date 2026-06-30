@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { projectLabel, projectSectionContent } from "@/content/projects";
 import { getLocalizedText, getProjectPath } from "@/lib/i18n";
@@ -19,11 +19,20 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
     () => categoryGroups.map((group) => ({ id: group.id, label: group.label })),
     [categoryGroups]
   );
+  const categoryKey = categories.map((category) => category.id).join("|");
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const slideRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const slideOffsetsRef = useRef<number[]>([]);
-  const scrollFrameRef = useRef<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const prevCategoryKeyRef = useRef(categoryKey);
+
+  if (categoryKey !== prevCategoryKeyRef.current) {
+    prevCategoryKeyRef.current = categoryKey;
+
+    if (activeIndex !== 0) {
+      setActiveIndex(0);
+    }
+  }
 
   const activeCategory = useMemo(
     () => getCategoryBySnap(categoryGroups, activeIndex)?.id ?? categoryGroups[0]?.id ?? "Client",
@@ -56,21 +65,18 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
     setActiveIndex((currentIndex) => (currentIndex === closestIndex ? currentIndex : closestIndex));
   }, []);
 
-  const scheduleScrollSync = useCallback(() => {
-    if (scrollFrameRef.current !== null) {
-      return;
-    }
+  const scheduleScrollSyncRef = useRef<() => void>(() => {});
 
-    scrollFrameRef.current = window.requestAnimationFrame(() => {
-      scrollFrameRef.current = null;
-      syncScrollState();
-    });
-  }, [syncScrollState]);
-
-  const measureSlides = useCallback(() => {
+  const measureSlideOffsets = useCallback(() => {
+    slideRefs.current = slideRefs.current.slice(0, orderedProjects.length);
     slideOffsetsRef.current = slideRefs.current.map((slide) => slide?.offsetLeft ?? 0);
-    scheduleScrollSync();
-  }, [scheduleScrollSync]);
+  }, []);
+
+  const measureSlidesRef = useRef(measureSlideOffsets);
+  measureSlidesRef.current = () => {
+    measureSlideOffsets();
+    scheduleScrollSyncRef.current();
+  };
 
   const scrollToIndex = useCallback(
     (index: number, behavior: ScrollBehavior = "smooth") => {
@@ -91,10 +97,25 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
         viewport.scrollLeft = targetOffset;
       }
 
-      scheduleScrollSync();
+      scheduleScrollSyncRef.current();
     },
-    [scheduleScrollSync]
+    []
   );
+
+  const prevMeasuredCategoryKeyRef = useRef(categoryKey);
+
+  useLayoutEffect(() => {
+    measureSlideOffsets();
+    const viewport = viewportRef.current;
+
+    if (prevMeasuredCategoryKeyRef.current !== categoryKey) {
+      prevMeasuredCategoryKeyRef.current = categoryKey;
+
+      if (viewport) {
+        viewport.scrollLeft = 0;
+      }
+    }
+  }, [categoryKey, measureSlideOffsets]);
 
   useEffect(() => {
     const viewport = viewportRef.current;
@@ -103,24 +124,36 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
       return;
     }
 
-    slideRefs.current = slideRefs.current.slice(0, orderedProjects.length);
-    measureSlides();
-    viewport.addEventListener("scroll", scheduleScrollSync, { passive: true });
-    window.addEventListener("resize", measureSlides);
+    let pendingFrame: number | null = null;
 
-    return () => {
-      viewport.removeEventListener("scroll", scheduleScrollSync);
-      window.removeEventListener("resize", measureSlides);
+    const scheduleScrollSync = () => {
+      if (pendingFrame !== null) {
+        return;
+      }
+
+      pendingFrame = window.requestAnimationFrame(() => {
+        pendingFrame = null;
+        syncScrollState();
+      });
     };
-  }, [categoryGroups, measureSlides, scheduleScrollSync]);
 
-  useEffect(() => {
+    scheduleScrollSyncRef.current = scheduleScrollSync;
+
+    const handleScroll = () => scheduleScrollSync();
+    const handleResize = () => measureSlidesRef.current();
+
+    viewport.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      if (scrollFrameRef.current !== null) {
-        window.cancelAnimationFrame(scrollFrameRef.current);
+      viewport.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+
+      if (pendingFrame !== null) {
+        window.cancelAnimationFrame(pendingFrame);
       }
     };
-  }, []);
+  }, [syncScrollState]);
 
   function scrollReel(direction: "next" | "previous") {
     const delta = direction === "next" ? 1 : -1;
@@ -187,11 +220,10 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               </button>
             </div>
           </div>
-          <div
+          <section
             aria-label={getLocalizedText(projectSectionContent.carouselLabel, locale)}
             className="projects__viewport"
             id="projects-carousel"
-            role="region"
             ref={viewportRef}
           >
             <div className="projects__reel">
@@ -238,7 +270,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
                 </Link>
               ))}
             </div>
-          </div>
+          </section>
         </div>
       </Container>
     </section>

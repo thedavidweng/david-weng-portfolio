@@ -405,7 +405,7 @@ test("lightbox keeps the close control pinned while preview content scrolls insi
   const scrollBlock = css.match(/\.project-media__lightbox-scroll\s*\{[^}]+\}/)?.[0] ?? "";
   const closeBlock = css.match(/\.project-media__lightbox-close\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(css).toContain(".project-media__lightbox-stage");
+  expect(css).toContain(".project-media__lightbox-backdrop");
   expect(scrollBlock).toContain("overflow: auto;");
   expect(scrollBlock).toContain("overscroll-behavior: contain;");
   expect(closeBlock).toContain("position: fixed;");

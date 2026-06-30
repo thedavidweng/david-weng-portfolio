@@ -1949,6 +1949,7 @@ main {
   height: 100dvh;
   margin: 0;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .project-media__lightbox::backdrop {
@@ -1956,13 +1957,23 @@ main {
   backdrop-filter: blur(6px);
 }
 
-.project-media__lightbox-stage {
-  position: relative;
+.project-media__lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
 }
 
 .project-media__lightbox-scroll {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -1976,6 +1987,61 @@ main {
   overflow: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+}
+
+.project-media__lightbox-frame,
+.project-media__lightbox-close,
+.project-media__lightbox-nav {
+  pointer-events: auto;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  text-align: center;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.error-page--global {
+  min-height: 80vh;
+}
+
+.error-page--project {
+  min-height: 60vh;
+}
+
+.error-page__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  margin: 0;
+}
+
+.error-page--global .error-page__title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.error-page--project .error-page__title {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+
+.error-page__copy {
+  font-family: var(--font-body);
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  max-width: 420px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.error-page__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .project-media__lightbox-frame {

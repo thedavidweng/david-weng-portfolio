@@ -1,6 +1,6 @@
 import type { Locale, LocalizedText, LocalizedValue } from "@/types/content";
 
-export const locales: Locale[] = ["en", "zh"];
+const locales: Locale[] = ["en", "zh"];
 
 export function localized<T>(en: T, zh: T): LocalizedValue<T> {
   return { en, zh };
@@ -48,7 +48,7 @@ export const localizedRouteLocales = ["zh"] as const;
 
 export type LocalizedRouteLocale = (typeof localizedRouteLocales)[number];
 
-export function isLocalizedRouteLocale(value: string): value is LocalizedRouteLocale {
+function isLocalizedRouteLocale(value: string): value is LocalizedRouteLocale {
   return localizedRouteLocales.includes(value as LocalizedRouteLocale);
 }
 
