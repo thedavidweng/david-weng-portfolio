@@ -1,12 +1,12 @@
 import type { APIRoute } from "astro";
-import { projects } from "@/content/projects";
+import { getProjectMarkdownStaticPaths } from "@/lib/astro-static-paths";
 import { generateProjectMd } from "@/lib/project-md";
 import { getProjectBySlug } from "@/lib/projects";
 
 export const prerender = true;
 
 export function getStaticPaths() {
-  return projects.map((p) => ({ params: { slug: p.slug } }));
+  return getProjectMarkdownStaticPaths();
 }
 
 export const GET: APIRoute = ({ params }) => {

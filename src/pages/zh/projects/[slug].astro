@@ -1,17 +1,9 @@
 ---
 import ProjectLayout from "@/src/layouts/ProjectLayout.astro";
-import { projects } from "@/content/projects";
-import { buildProjectPageData } from "@/lib/page-helpers";
+import { getProjectPageStaticPaths } from "@/lib/astro-static-paths";
 
 export function getStaticPaths() {
-  return projects.map((p) => {
-    const data = buildProjectPageData(p.slug, "zh");
-    if (!data) return null;
-    return {
-      params: { slug: p.slug },
-      props: { project: data.project, pathname: data.pathname, metadata: data.metadata, jsonLd: data.jsonLd }
-    };
-  }).filter(Boolean);
+  return getProjectPageStaticPaths("zh");
 }
 
 const { project, pathname, metadata, jsonLd } = Astro.props;

@@ -7,7 +7,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | Endpoint | Format | Purpose | Human Equivalent |
 |---|---|---|---|
 | `/?mode=agent` | HTML (semantic, **requires JavaScript**) | Agent-optimized homepage view via `AgentModeGate` island | `src/pages/index.astro` / `src/pages/zh/index.astro` |
-| `/agent` | `application/json` | Machine-readable site data | Same as above |
+| `/agent` | `application/json` | Machine-readable site data (en + zh in `locales`) | Same as above |
 | `/llms.txt` | `text/plain` | LLM discovery file (AI equivalent of robots.txt) | Homepage overview |
 | `/llms-full.txt` | `text/plain` | Complete site docs in one file | Entire site |
 | `/index.md` | `text/markdown` | Markdown version of English homepage | Homepage |
@@ -23,8 +23,8 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 
 | Source File | Consumed By |
 |---|---|
-| `content/site.ts` | `src/pages/*.astro`, `src/components/AgentView.astro`, `src/pages/agent.ts`, `lib/llms-full.ts`, `lib/index-md.ts`, `lib/jsonld.ts` |
-| `content/projects.ts` | `src/pages/projects/*.astro`, `src/components/AgentView.astro`, `src/pages/agent.ts`, `lib/llms-txt.ts`, `lib/llms-full.ts`, `lib/index-md.ts` |
+| `content/site.ts` | `src/pages/*.astro`, `src/islands/AgentView.tsx`, `src/pages/agent.ts`, `lib/llms-full.ts`, `lib/index-md.ts`, `lib/jsonld.ts` |
+| `content/projects.ts` | `src/pages/projects/*.astro`, `src/islands/AgentView.tsx`, `src/pages/agent.ts`, `lib/llms-txt.ts`, `lib/llms-full.ts`, `lib/index-md.ts` |
 | `content/film-data.ts` | Film project detail pages, archive layouts |
 | `content/archives/*.ts` | Archive project pages, agent project listings |
 
@@ -46,7 +46,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 - [ ] Verify `lib/llms-full.ts` auto-renders the new project
 - [ ] Verify `lib/index-md.ts` auto-renders the new project
 - [ ] Verify `src/pages/agent.ts` auto-includes the new project
-- [ ] Verify `src/components/AgentView.astro` auto-includes the new project
+- [ ] Verify `src/islands/AgentView.tsx` auto-includes the new project
 - [ ] If the project has a film detail page, check `content/film-data.ts`
 - [ ] If the project has an archive, check `content/archives/*.ts`
 
@@ -77,8 +77,8 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | File | Description |
 |---|---|
 | `src/islands/AgentModeGate.tsx` | `?mode=agent` client gate (requires JS) |
-| `src/components/AgentView.astro` | Agent HTML template |
-| `src/pages/agent.ts` | `/agent` JSON endpoint |
+| `src/islands/AgentView.tsx` | Full agent HTML panel (used by `AgentModeGate`) |
+| `src/pages/agent.ts` | `/agent` JSON endpoint (`lib/agent-endpoint.ts`, en + zh) |
 | `src/pages/llms.txt.ts` | `/llms.txt` — auto-generated from `content/projects.ts` |
 | `src/pages/llms-full.txt.ts` | `/llms-full.txt` — auto-generated |
 | `src/pages/index.md.ts` | `/index.md` — auto-generated |
@@ -100,7 +100,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 ```bash
 pnpm dev
 
-curl -s "http://localhost:4321/agent" | jq '.projects | length'
+curl -s "http://localhost:4321/agent" | jq '.locales.en.projects | length'
 curl -s "http://localhost:4321/llms.txt" | grep -c "https://davidweng.eu.org/projects/"
 curl -s "http://localhost:4321/llms-full.txt" | head -n 20
 curl -s "http://localhost:4321/index.md" | head -n 10

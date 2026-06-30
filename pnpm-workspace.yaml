@@ -2,7 +2,6 @@ packages:
   - "."
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
-  - next
   - vite
   - "@vitejs/*"
   - oxlint
@@ -12,8 +11,6 @@ minimumReleaseAgeExclude:
   - workerd
   - wrangler
   - miniflare
-  - vinext
-  - "@vinext/*"
   - "@cloudflare/*"
 trustPolicy: no-downgrade
 onlyBuiltDependencies:
