@@ -119,3 +119,11 @@ Default five-role vocabulary (needs-triage, needs-info, ready-for-agent, ready-f
 ### Domain docs
 
 Single-context layout — `CONTEXT.md` + `docs/adr/` at repo root. See `docs/agents/domain.md`.
+
+## Cursor Cloud specific instructions
+
+This is a static Astro 7 + React 19 site (pnpm). Standard commands live in `README.md` (`pnpm dev`, `pnpm test`, `pnpm lint:check`, `pnpm typecheck`, `pnpm build`) and `package.json` scripts; the agent-content checks live in **Testing Agent Content** above.
+
+- **Node version gotcha:** the project requires Node `>=24` (see `package.json` `engines`, `.nvmrc`). It is installed via `nvm` and is the default. Login/interactive shells and `tmux` (`bash -l`) resolve Node 24 automatically. However, non-login shells (including direct Shell tool commands) hit `/exec-daemon/node` (Node 22) first on `PATH`, which fails the engine check. For one-off commands, run them through a login shell (e.g. `bash -lc 'pnpm ...'`) or prepend `"$HOME/.nvm/versions/node/v24.18.0/bin"` to `PATH`. `pnpm` is provided via `corepack` and is only on `PATH` once Node 24 is active.
+- **Dev server:** `pnpm dev` serves at `http://localhost:4321`. It is a static site with no database or external service dependencies, so no extra services are needed.
+- The site's top-nav `HOME` link points at the production URL (`https://davidweng.eu.org`), not the local dev server — this is expected, not a bug. Use the browser back button when navigating locally.
