@@ -1,0 +1,4 @@
+# Build inputs live outside public/; keep deploy bundle lean if anything slips through.
+fonts/
+documents/
+**/*.gitkeep

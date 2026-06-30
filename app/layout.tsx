@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { StrictMode } from "react";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { body, display, homeZh, mono } from "@/lib/fonts";
+import { body, display, mono } from "@/lib/fonts";
 import { buildWebSiteSchema, buildPersonSchema } from "@/lib/jsonld";
 import "react-photo-album/rows.css";
 import "./globals.css";
@@ -72,7 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${display.variable} ${body.variable} ${homeZh.variable} ${mono.variable}`}
+        className={`${display.variable} ${body.variable} ${mono.variable}`}
       >
         <StrictMode>{children}</StrictMode>
         <JsonLd data={buildPersonSchema("en")} />

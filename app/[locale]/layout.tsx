@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { homeZh } from "@/lib/fonts";
 import { localizedRouteLocales } from "@/lib/i18n";
 import { SetDocumentLang } from "@/components/site/SetDocumentLang";
 
@@ -21,7 +22,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   }
 
   return (
-    <div lang={locale}>
+    <div lang={locale} className={homeZh.variable}>
       <SetDocumentLang lang={locale} />
       {children}
     </div>
