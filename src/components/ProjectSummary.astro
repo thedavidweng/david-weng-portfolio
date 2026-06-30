@@ -1,0 +1,18 @@
+---
+import LocalizedInlineText from "@/src/components/LocalizedInlineText.astro";
+import { projectLabel } from "@/content/projects";
+import type { Locale, ProjectItem } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+  project: ProjectItem;
+}
+
+const { locale, project } = Astro.props;
+---
+
+{project.detailSummary ? (
+  <LocalizedInlineText locale={locale} linkClassName="project-hero__summary-link" value={project.detailSummary} />
+) : (
+  projectLabel(project.summary, locale)
+)}

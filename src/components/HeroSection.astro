@@ -1,0 +1,29 @@
+---
+import Container from "@/src/components/Container.astro";
+import { heroContent } from "@/content/site";
+import { getLocalizedText } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const headline = getLocalizedText(heroContent.headline, locale);
+---
+
+<section class={`hero section-shell${locale === "zh" ? " hero--zh" : ""}`} id="top">
+  <Container>
+    <div class="hero__frame">
+      <div class="hero__content hero__content--stage">
+        <div class="hero__stage">
+          <p class="hero__eyebrow">{getLocalizedText(heroContent.kicker, locale)}</p>
+          <h1 aria-label={headline} class="hero__title">{headline}</h1>
+          <div class="hero__copy">
+            <p class="hero__lede">{getLocalizedText(heroContent.support, locale)}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,27 @@
+---
+import Container from "@/src/components/Container.astro";
+import ServiceCard from "@/src/components/ServiceCard.astro";
+import { servicesContent } from "@/content/site";
+import { getLocalizedText } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class={`section-shell services${locale === "zh" ? " services--zh" : ""}`} id="services">
+  <Container>
+    <div class="poster-section__intro">
+      <h2 class="poster-section__title">{getLocalizedText(servicesContent.title, locale)}</h2>
+      <p class="poster-section__copy">{getLocalizedText(servicesContent.description, locale)}</p>
+    </div>
+    <div class={`services__grid${locale === "zh" ? " services__grid--zh" : ""}`}>
+      {servicesContent.items.map((service, index) => (
+        <ServiceCard index={index} locale={locale} service={service} />
+      ))}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,28 @@
+---
+import ContactSection from "@/src/components/ContactSection.astro";
+import Footer from "@/src/components/Footer.astro";
+import HeroSection from "@/src/components/HeroSection.astro";
+import JsonLd from "@/src/components/JsonLd.astro";
+import ServicesSection from "@/src/components/ServicesSection.astro";
+import BaseLayout from "@/src/layouts/BaseLayout.astro";
+import AgentModeGate from "@/src/islands/AgentModeGate";
+import Header from "@/src/islands/Header";
+import ProjectsSection from "@/src/islands/ProjectsSection";
+import { buildOrganizationSchema } from "@/lib/jsonld";
+---
+
+<BaseLayout locale="zh" canonical="/zh/" alternateEn="/" alternateZh="/zh/">
+  <JsonLd data={buildOrganizationSchema("zh")} slot="head" />
+  <div id="site-content" class="site-shell site-shell--zh site-shell--home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Header client:load locale="zh" pathname="/zh/" />
+    <main class="site-main--home" id="main-content">
+      <HeroSection locale="zh" />
+      <ProjectsSection client:load locale="zh" />
+      <ServicesSection locale="zh" />
+      <ContactSection locale="zh" />
+    </main>
+    <Footer locale="zh" />
+  </div>
+  <AgentModeGate client:only="react" locale="zh" />
+</BaseLayout>

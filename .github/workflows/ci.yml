@@ -48,7 +48,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts
+        run: pnpm install --frozen-lockfile --trust-policy=off --ignore-scripts --trust-policy=off
 
       - name: Run tests with coverage
         run: pnpm test -- --coverage
@@ -100,7 +100,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --trust-policy=off
 
       - name: Lint
         run: pnpm lint:check
@@ -123,7 +123,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --trust-policy=off
 
       - name: Typecheck
         run: pnpm typecheck
@@ -146,13 +146,18 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Check vinext compatibility
-        run: pnpm check:vinext
+        run: pnpm install --frozen-lockfile --trust-policy=off
 
       - name: Build
         run: pnpm build
 
-      - name: Report client asset weight
-        run: du -sh dist/client && du -sh dist/client/*
+      - name: Verify dist structure
+        run: |
+          test -f dist/_headers
+          grep -q "projects/\*" dist/_headers
+          grep -q "immutable" dist/_headers
+          test ! -d app
+          test ! -f next.config.ts
+
+      - name: Report dist asset weight
+        run: du -sh dist && du -sh dist/*

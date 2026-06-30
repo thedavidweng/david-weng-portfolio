@@ -1,0 +1,24 @@
+---
+import type { Locale, LocalizedInlineText as LocalizedInlineTextType } from "@/types/content";
+import { getLocalizedValue } from "@/lib/i18n";
+
+interface Props {
+  locale: Locale;
+  value: LocalizedInlineTextType;
+  linkClassName?: string;
+}
+
+const { locale, value, linkClassName } = Astro.props;
+const fragments = getLocalizedValue(value, locale);
+---
+
+{fragments.map((fragment) =>
+  fragment.type === "link" ? (
+    <a class={linkClassName} href={fragment.href} rel="noreferrer" target="_blank">
+      {fragment.text}
+      <span class="visually-hidden">(opens in new tab)</span>
+    </a>
+  ) : (
+    fragment.text
+  )
+)}

@@ -1,6 +1,28 @@
-import type { Metadata } from "next";
 import type { Locale, ProjectItem } from "@/types/content";
 import { getLocalizedText } from "@/lib/i18n";
+
+export type PageMetadata = {
+  title: string;
+  description: string;
+  canonical: string;
+  languages: { en: string; zh: string };
+  openGraph: {
+    type: string;
+    title: string;
+    description: string;
+    url: string;
+    siteName: string;
+    locale: string;
+    alternateLocale: string;
+    images: Array<{ url: string; alt: string }>;
+  };
+  twitter: {
+    card: string;
+    title: string;
+    description: string;
+    images: string[];
+  };
+};
 
 type BuildProjectMetadataInput = {
   locale: Locale;
@@ -8,19 +30,17 @@ type BuildProjectMetadataInput = {
   project: ProjectItem;
 };
 
-export function buildProjectMetadata({ locale, pathname, project }: BuildProjectMetadataInput): Metadata {
+export function buildProjectMetadata({ locale, pathname, project }: BuildProjectMetadataInput): PageMetadata {
   const title = `${getLocalizedText(project.title, locale)} | David Weng`;
   const description = getLocalizedText(project.summary, locale);
 
   return {
     title,
     description,
-    alternates: {
-      canonical: pathname,
-      languages: {
-        en: `/projects/${project.slug}`,
-        zh: `/zh/projects/${project.slug}`
-      }
+    canonical: pathname,
+    languages: {
+      en: `/projects/${project.slug}`,
+      zh: `/zh/projects/${project.slug}`
     },
     openGraph: {
       type: "website",

@@ -1,0 +1,81 @@
+---
+import JsonLd from "@/src/components/JsonLd.astro";
+import { buildPersonSchema, buildWebSiteSchema } from "@/lib/jsonld";
+import type { Locale } from "@/types/content";
+import "@/src/styles/fonts.css";
+import "@/src/styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  locale?: Locale;
+  alternateEn?: string;
+  alternateZh?: string;
+  ogImage?: string;
+}
+
+const siteUrl = "https://davidweng.eu.org";
+const {
+  title = "David Weng | Visual Storytelling, Design, and Creative Systems",
+  description = "Portfolio of David Weng — video editing, photography, graphic design, and content operations.",
+  canonical = "/",
+  locale = "en",
+  alternateEn = "/",
+  alternateZh = "/zh/",
+  ogImage = "/brand/og-image.png"
+} = Astro.props;
+
+const htmlLang = locale;
+const zhPreload = locale === "zh";
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070607" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`${siteUrl}${canonical}`} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}${alternateEn}`} />
+    <link rel="alternate" hreflang="zh" href={`${siteUrl}${alternateZh}`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === "zh" ? "zh" : "en"} />
+    <meta property="og:site_name" content="David Weng" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={`${siteUrl}${canonical}`} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+    <link rel="icon" href="/brand/favicon.png" />
+    <link rel="apple-touch-icon" href="/brand/favicon.png" />
+    {zhPreload ? (
+      <>
+        <link rel="preload" href="/_astro/noto-sans-sc-chinese-simplified-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/_astro/noto-sans-sc-chinese-simplified-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+      </>
+    ) : null}
+    <slot name="head" />
+  </head>
+  <body class={locale === "zh" ? "site-body--zh" : undefined} style={locale === "zh" ? "--font-home-zh-active: var(--font-home-zh)" : undefined}>
+    <slot />
+    <JsonLd data={buildPersonSchema(locale)} />
+    <JsonLd data={buildWebSiteSchema(locale)} />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: var(--font-body);
+  }
+
+  body.site-body--zh .site-shell--zh {
+    font-family: var(--font-home-zh);
+  }
+</style>

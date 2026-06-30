@@ -1,0 +1,67 @@
+---
+import FilmCredits from "@/src/components/FilmCredits.astro";
+import PortfolioImage from "@/src/components/PortfolioImage.astro";
+import ProjectExternalLinkButton from "@/src/components/ProjectExternalLinkButton.astro";
+import ProjectSummary from "@/src/components/ProjectSummary.astro";
+import { projectDetailContent, projectLabel } from "@/content/projects";
+import type { Locale, ProjectItem } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+  project: ProjectItem;
+}
+
+const { locale, project } = Astro.props;
+const film = project.film;
+const filmHeroPoster = film ? film.heroPoster[locale] : null;
+---
+
+{film && filmHeroPoster ? (
+  <>
+    <div class="project-film__intro">
+      <div class="project-film__content">
+        <h1 class="project-hero__title">{projectLabel(project.title, locale)}</h1>
+        <p class="project-hero__summary">
+          <ProjectSummary locale={locale} project={project} />
+        </p>
+        {film.facts.length > 0 ? (
+          <div class="project-film__facts">
+            {film.facts.map((fact) => (
+              <div class="project-film__fact signal-control signal-control--micro">
+                <span>{projectLabel(fact.label, locale)}</span>
+                <strong>{projectLabel(fact.value, locale)}</strong>
+              </div>
+            ))}
+          </div>
+        ) : null}
+        <div class="project-detail__links project-detail__links--film">
+          {project.externalLinks.map((link) => (
+            <ProjectExternalLinkButton href={link.href} label={projectLabel(link.label, locale)} />
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="project-film__poster">
+      <PortfolioImage
+        alt={projectLabel(filmHeroPoster.title, locale)}
+        class="project-film__poster-image"
+        height={filmHeroPoster.height ?? 2304}
+        priority
+        sizes="(max-width: 760px) 100vw, (max-width: 1120px) 78vw, 42vw"
+        src={filmHeroPoster.src ?? project.coverImage}
+        width={filmHeroPoster.width ?? 1728}
+      />
+    </div>
+    <div class="project-film__credits-wrap">
+      <section class="project-film__credits signal-panel">
+        <p class="poster-section__eyebrow">{projectLabel(project.projectType, locale)}</p>
+        <h2 class="project-film__credits-title">{projectLabel(projectDetailContent.castAndCrewTitle, locale)}</h2>
+        <div class="project-film__credits-groups">
+          {film.credits.map((group) => (
+            <FilmCredits group={group} locale={locale} />
+          ))}
+        </div>
+      </section>
+    </div>
+  </>
+) : null}

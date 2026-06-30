@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import { HomePageView } from "@/components/pages/HomePageView";
+import { HomePageFixture } from "@/tests/helpers/HomePageFixture";
 
 class MockIntersectionObserver {
   disconnect() {
@@ -53,7 +53,7 @@ beforeAll(() => {
 });
 
 test("renders the english homepage with a switch to the chinese route", () => {
-  const { container } = render(<HomePageView locale="en" pathname="/" />);
+  const { container } = render(<HomePageFixture locale="en" pathname="/" />);
   const mainChildren = Array.from(container.querySelector("#main-content")?.children ?? []).map((node) =>
     (node as HTMLElement).id
   );
@@ -72,7 +72,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
     "href",
     "https://blog.davidweng.eu.org/"
   );
-  expect(screen.getByRole("link", { name: "中文" })).toHaveAttribute("href", "/zh");
+  expect(screen.getByRole("link", { name: "中文" })).toHaveAttribute("href", "/zh/");
   expect(container.querySelector(".site-header__descriptor")).toBeFalsy();
   expect(container.querySelector(".site-header__mark")).toBeFalsy();
   expect(screen.queryByRole("link", { name: /^about$/i })).not.toBeInTheDocument();
@@ -113,7 +113,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
 }, 10000);
 
 test("renders the chinese homepage with a switch back to the english route", () => {
-  const { container } = render(<HomePageView locale="zh" pathname="/zh/" />);
+  const { container } = render(<HomePageFixture locale="zh" pathname="/zh/" />);
   const mainChildren = Array.from(container.querySelector("#main-content")?.children ?? []).map((node) =>
     (node as HTMLElement).id
   );

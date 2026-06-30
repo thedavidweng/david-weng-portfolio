@@ -3,7 +3,7 @@ import { join, relative } from "node:path";
 import subsetFont from "subset-font";
 
 const ROOT = process.cwd();
-const SCAN_DIRS = ["app", "components", "content", "lib"];
+const SCAN_DIRS = ["src", "content", "lib", "tests"];
 const SCAN_EXTENSIONS = new Set([".ts", ".tsx", ".md"]);
 const FULL_DIR = join(ROOT, "assets/fonts/full");
 const OUTPUT_DIR = join(ROOT, "assets/fonts");

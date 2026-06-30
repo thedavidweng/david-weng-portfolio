@@ -1,44 +1,13 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2022"
-    ],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "types": ["vitest/globals", "@testing-library/jest-dom"],
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": { "@/*": ["./*"] },
     "jsx": "react-jsx",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    "jsxImportSource": "react",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/routes.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "worker",
-    "dist",
-    ".vinext"
-  ]
+  "include": ["src/**/*", "content/**/*", "lib/**/*", "tests/**/*", "vitest.setup.ts"],
+  "exclude": ["node_modules", "dist"]
 }

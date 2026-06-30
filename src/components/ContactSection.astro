@@ -1,0 +1,31 @@
+---
+import Container from "@/src/components/Container.astro";
+import { aboutContent, contactContent } from "@/content/site";
+import { getLocalizedText } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="section-shell" id="contact">
+  <Container>
+    <div class="contact-hero">
+      <h2 class="contact-hero__title">
+        {getLocalizedText(contactContent.title, locale)}{" "}
+        <span>{getLocalizedText(contactContent.unseenLabel, locale)}</span>
+      </h2>
+      <div class="contact-hero__actions">
+        <a class="contact-hero__button contact-hero__button--primary" href={`mailto:${contactContent.email}`}>
+          {getLocalizedText(contactContent.emailLabel, locale)}
+        </a>
+        <a class="contact-hero__button" href={aboutContent.homepageHref}>
+          {getLocalizedText(aboutContent.homepageLabel, locale)}
+        </a>
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ProjectsSection } from "@/src/islands/ProjectsSection";
 
 function installNativeScrollLayout(container: HTMLElement) {
   const viewport = screen.getByRole("region", { name: /projects carousel/i }) as HTMLDivElement;
@@ -49,7 +49,7 @@ function installNativeScrollLayout(container: HTMLElement) {
 }
 
 test("projects section no longer imports embla or intercepts wheel gestures directly", () => {
-  const source = readFileSync(join(process.cwd(), "components/sections/ProjectsSection.tsx"), "utf8");
+  const source = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
 
   expect(source).not.toContain("embla-carousel-react");
   expect(source).not.toContain("useEmblaCarousel");

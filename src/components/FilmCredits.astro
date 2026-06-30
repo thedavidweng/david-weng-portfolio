@@ -1,0 +1,30 @@
+---
+import { projectLabel } from "@/content/projects";
+import type { FilmCreditGroup, FilmCreditPerson, Locale } from "@/types/content";
+
+interface Props {
+  group: FilmCreditGroup;
+  locale: Locale;
+}
+
+const { group, locale } = Astro.props;
+---
+
+<div class="project-film__credit-group">
+  <h3 class="project-film__credit-role">{projectLabel(group.role, locale)}</h3>
+  <ul class="project-film__credit-list">
+    {group.people.map((person) => (
+      <li class="project-film__credit-item">
+        {person.href ? (
+          <a class="project-film__credit-link" href={person.href} rel="noreferrer" target="_blank">
+            {projectLabel(person.name, locale)}
+            <span class="visually-hidden">(opens in new tab)</span>
+          </a>
+        ) : (
+          <span class="project-film__credit-text">{projectLabel(person.name, locale)}</span>
+        )}
+        {person.note ? <span class="project-film__credit-note">{projectLabel(person.note, locale)}</span> : null}
+      </li>
+    ))}
+  </ul>
+</div>

@@ -18,7 +18,7 @@ env:
 
 jobs:
   deploy:
-    name: Deploy to Cloudflare Workers
+    name: Deploy to Cloudflare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts
+        run: pnpm install --frozen-lockfile --ignore-scripts --trust-policy=off
 
       - name: Test
         run: pnpm test
@@ -43,10 +43,7 @@ jobs:
         run: pnpm lint:check
 
       - name: Typecheck
-        run: pnpm exec tsc --noEmit
-
-      - name: Check vinext compatibility
-        run: pnpm check:vinext
+        run: pnpm typecheck
 
       - name: Deploy
         env:

@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { getProjectBySlug } from "@/lib/projects";
-import { ProjectPageView } from "@/components/pages/ProjectPageView";
+import { ProjectPageFixture } from "@/tests/helpers/ProjectPageFixture";
 
 test("renders localized chinese project detail content and language switch", () => {
   const project = getProjectBySlug("fraud");
@@ -10,11 +10,11 @@ test("renders localized chinese project detail content and language switch", () 
     throw new Error("Expected fraud project to exist");
   }
 
-  render(<ProjectPageView locale="zh" pathname="/zh/projects/fraud" project={project} />);
+  render(<ProjectPageFixture locale="zh" pathname="/zh/projects/fraud" project={project} />);
 
   expect(screen.getByRole("heading", { name: /^信途$/i })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "EN" })).toHaveAttribute("href", "/projects/fraud");
-  expect(screen.getByRole("link", { name: /返回项目列表/i })).toHaveAttribute("href", "/zh#projects");
+  expect(screen.getByRole("link", { name: /返回项目列表/i })).toHaveAttribute("href", "/zh/#projects");
   expect(screen.queryByRole("heading", { name: /项目价值/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /档案墙/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /混合媒介结构/i })).not.toBeInTheDocument();
@@ -34,7 +34,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
     throw new Error("Expected film/video projects to exist");
   }
 
-  const { unmount } = render(<ProjectPageView locale="en" pathname="/projects/the-pills" project={thePills} />);
+  const { unmount } = render(<ProjectPageFixture locale="en" pathname="/projects/the-pills" project={thePills} />);
   const englishCredits = screen.getByRole("heading", { name: /^Cast and Crew$/i }).closest(".project-film__credits");
 
   if (!englishCredits) {
@@ -59,7 +59,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(screen.getByRole("button", { name: /Close preview/i })).toHaveTextContent("X");
   unmount();
 
-  render(<ProjectPageView locale="zh" pathname="/zh/projects/gourd" project={gourd} />);
+  render(<ProjectPageFixture locale="zh" pathname="/zh/projects/gourd" project={gourd} />);
 
   expect(screen.getByRole("heading", { name: /^清兵卫$/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /演职人员/i })).toBeInTheDocument();
@@ -80,7 +80,7 @@ test("renders gourd inside the film/video project filter", async () => {
     throw new Error("Expected gourd project to exist");
   }
 
-  render(<ProjectPageView locale="en" pathname="/projects/gourd" project={project} />);
+  render(<ProjectPageFixture locale="en" pathname="/projects/gourd" project={project} />);
 
   expect(screen.getByRole("link", { name: /IMDb/i })).toHaveAttribute(
     "href",
@@ -99,7 +99,7 @@ test("renders linked rich-text summary on the english gourd detail page", () => 
     throw new Error("Expected gourd project to exist");
   }
 
-  const { container } = render(<ProjectPageView locale="en" pathname="/projects/gourd" project={project} />);
+  const { container } = render(<ProjectPageFixture locale="en" pathname="/projects/gourd" project={project} />);
   const summary = container.querySelector(".project-hero__summary");
 
   expect(summary).toHaveTextContent('A short film made in high school, loosely adapted from "The Artist(opens in new tab)" by Shiga Naoya.');
@@ -116,7 +116,7 @@ test("renders linked rich-text summary on the chinese gourd detail page", () => 
     throw new Error("Expected gourd project to exist");
   }
 
-  const { container } = render(<ProjectPageView locale="zh" pathname="/zh/projects/gourd" project={project} />);
+  const { container } = render(<ProjectPageFixture locale="zh" pathname="/zh/projects/gourd" project={project} />);
   const summary = container.querySelector(".project-hero__summary");
 
   expect(summary).toHaveTextContent("高中拍摄的微电影，松散地改编自志贺直哉《清兵卫和葫芦》(opens in new tab)");
@@ -133,7 +133,7 @@ test("renders non-YouTube film projects as release-info pages without generic ca
     throw new Error("Expected fraud project to exist");
   }
 
-  render(<ProjectPageView locale="en" pathname="/projects/fraud" project={project} />);
+  render(<ProjectPageFixture locale="en" pathname="/projects/fraud" project={project} />);
 
   expect(screen.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
@@ -152,7 +152,7 @@ test("renders dedicated film hero blocks in intro-poster-credits order for mobil
     throw new Error("Expected fraud project to exist");
   }
 
-  const { container } = render(<ProjectPageView locale="en" pathname="/projects/fraud" project={project} />);
+  const { container } = render(<ProjectPageFixture locale="en" pathname="/projects/fraud" project={project} />);
 
   const introBlock = container.querySelector(".project-film__intro");
   const posterBlock = container.querySelector(".project-film__poster");
@@ -173,7 +173,7 @@ test("renders article projects as branded handoff pages to the published Beacon 
   }
 
   const { container } = render(
-    <ProjectPageView locale="en" pathname="/projects/transcending-barriers" project={project} />
+    <ProjectPageFixture locale="en" pathname="/projects/transcending-barriers" project={project} />
   );
 
   expect(screen.getByRole("heading", { name: /Transcending Barriers/i })).toBeInTheDocument();
@@ -201,7 +201,7 @@ test("renders archive-backed BC + AI Ecosystem media with event photo credit", (
   }
 
   const { container } = render(
-    <ProjectPageView locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
+    <ProjectPageFixture locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
   );
 
   expect(screen.getByRole("heading", { name: /Archive for BC \+ AI Ecosystem/i })).toBeInTheDocument();
@@ -237,7 +237,7 @@ test("renders Beaty archive with a static works wall above a separate video sect
   }
 
   const { container } = render(
-    <ProjectPageView
+    <ProjectPageFixture
       locale="en"
       pathname="/projects/beaty-biodiversity-museum-annual-report-2022-2023"
       project={project}
@@ -269,7 +269,7 @@ test("renders commissioned and personal video archives as video-card collections
   }
 
   const { container, unmount } = render(
-    <ProjectPageView locale="en" pathname="/projects/commissioned-video-work" project={commissioned} />
+    <ProjectPageFixture locale="en" pathname="/projects/commissioned-video-work" project={commissioned} />
   );
 
   expect(screen.getByRole("heading", { name: /^Commissioned Video Work$/i })).toBeInTheDocument();
@@ -279,7 +279,7 @@ test("renders commissioned and personal video archives as video-card collections
   unmount();
 
   render(
-    <ProjectPageView locale="en" pathname="/projects/personal-video-projects" project={personalVideo} />
+    <ProjectPageFixture locale="en" pathname="/projects/personal-video-projects" project={personalVideo} />
   );
 
   expect(screen.getByRole("heading", { name: /^Personal Video Projects$/i })).toBeInTheDocument();
@@ -295,7 +295,7 @@ test("opens a centered preview dialog when an archive image is clicked", async (
     throw new Error("Expected BC + AI Ecosystem project to exist");
   }
 
-  render(<ProjectPageView locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />);
+  render(<ProjectPageFixture locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />);
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
@@ -313,7 +313,7 @@ test("clicking outside the previewed image closes the preview dialog", async () 
   }
 
   const { container } = render(
-    <ProjectPageView locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
+    <ProjectPageFixture locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
   );
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
@@ -332,7 +332,7 @@ test("does not render idle preview dialogs before any project media is opened", 
     throw new Error("Expected fraud project to exist");
   }
 
-  const { container } = render(<ProjectPageView locale="en" pathname="/projects/fraud" project={project} />);
+  const { container } = render(<ProjectPageFixture locale="en" pathname="/projects/fraud" project={project} />);
 
   expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
   expect(container.querySelectorAll("dialog")).toHaveLength(0);
@@ -346,7 +346,7 @@ test("archive project pages keep long english titles readable without poster-sty
   }
 
   const { container } = render(
-    <ProjectPageView locale="en" pathname="/projects/personal-video-projects" project={project} />
+    <ProjectPageFixture locale="en" pathname="/projects/personal-video-projects" project={project} />
   );
 
   expect(screen.getByRole("heading", { name: /^Personal Video Projects$/i })).toBeInTheDocument();

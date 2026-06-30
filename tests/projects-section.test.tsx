@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ProjectsSection } from "@/src/islands/ProjectsSection";
 
 class MockIntersectionObserver {
   disconnect() {

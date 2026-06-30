@@ -4,9 +4,10 @@ Portfolio site of David, focused on visual storytelling, design, content operati
 
 ## Stack
 
-- Next.js 16
-- React 19
+- Astro 5 (static output)
+- React 19 islands (Header, Projects carousel, media lightbox)
 - TypeScript
+- Cloudflare static assets (`wrangler deploy`)
 - Vitest + Testing Library
 
 ## Local Development
@@ -20,6 +21,13 @@ pnpm dev
 
 ```bash
 pnpm test
-pnpm lint
+pnpm lint:check
+pnpm typecheck
 pnpm build
+```
+
+## Deploy
+
+```bash
+pnpm deploy
 ```

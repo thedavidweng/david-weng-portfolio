@@ -1,0 +1,57 @@
+---
+import Container from "@/src/components/Container.astro";
+import FilmMediaRail from "@/src/islands/FilmMediaRail";
+import { projectDetailContent, projectLabel } from "@/content/projects";
+import type { Locale, ProjectItem } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+  project: ProjectItem;
+}
+
+const { locale, project } = Astro.props;
+const film = project.film;
+---
+
+{film ? (
+  <section class="project-film">
+    <Container>
+      <div class="project-film__section">
+        <div class="poster-section__intro">
+          <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
+          <h2 class="poster-section__title">{projectLabel(projectDetailContent.stillsTitle, locale)}</h2>
+        </div>
+        <FilmMediaRail
+          client:visible
+          cardClassName="project-film__stills-item"
+          closePreviewLabel={projectDetailContent.closePreviewLabel}
+          imageClassName="project-film__rail-image project-film__rail-image--still"
+          items={film.stills}
+          locale={locale}
+          previewDialogLabel={projectDetailContent.previewDialogLabel}
+          previewLabel={projectDetailContent.previewLabel}
+          railClassName="project-film__stills-rail"
+          sizes="(max-width: 760px) 80vw, 34vw"
+        />
+      </div>
+      <div class="project-film__section">
+        <div class="poster-section__intro">
+          <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
+          <h2 class="poster-section__title">{projectLabel(projectDetailContent.postersTitle, locale)}</h2>
+        </div>
+        <FilmMediaRail
+          client:visible
+          cardClassName="project-film__poster-card"
+          closePreviewLabel={projectDetailContent.closePreviewLabel}
+          imageClassName="project-film__rail-image project-film__rail-image--poster"
+          items={film.posters}
+          locale={locale}
+          previewDialogLabel={projectDetailContent.previewDialogLabel}
+          previewLabel={projectDetailContent.previewLabel}
+          railClassName="project-film__posters-rail"
+          sizes="(max-width: 760px) 60vw, 24vw"
+        />
+      </div>
+    </Container>
+  </section>
+) : null}
