@@ -16,9 +16,10 @@ test("vinext compatibility check reports 100%", () => {
 test("vinext config files exist for Cloudflare deployment", () => {
   const root = process.cwd();
   const viteConfig = readFileSync(join(root, "vite.config.ts"), "utf8");
+  const wranglerConfig = readFileSync(join(root, "wrangler.jsonc"), "utf8");
 
   expect(existsSync(join(root, "wrangler.jsonc"))).toBe(true);
-  expect(existsSync(join(root, "worker/index.ts"))).toBe(true);
-  expect(viteConfig).toContain("vinext()");
+  expect(wranglerConfig).toContain("vinext/server/fetch-handler");
+  expect(viteConfig).toContain("imagesOptimizer()");
   expect(viteConfig).not.toContain("@vitejs/plugin-rsc");
 });

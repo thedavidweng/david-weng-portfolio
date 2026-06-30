@@ -4,7 +4,7 @@
   "account_id": "99e63a7c867f83d0d7806e0e6cd09933",
   "compatibility_date": "2026-06-14",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "./worker/index.ts",
+  "main": "vinext/server/fetch-handler",
   "assets": {
     "directory": "dist/client",
     "not_found_handling": "none",
