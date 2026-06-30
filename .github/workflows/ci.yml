@@ -148,16 +148,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --trust-policy=off
 
-      - name: Build
-        run: pnpm build
-
-      - name: Verify dist structure
-        run: |
-          test -f dist/_headers
-          grep -q "projects/\*" dist/_headers
-          grep -q "immutable" dist/_headers
-          test ! -d app
-          test ! -f next.config.ts
+      - name: Build and verify dist
+        run: pnpm build && pnpm verify:dist
 
       - name: Report dist asset weight
         run: du -sh dist && du -sh dist/*

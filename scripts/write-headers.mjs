@@ -1,5 +1,6 @@
-import { copyFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { aliasSitemapXml } from "./sitemap-alias.mjs";
 
 const distDir = join(process.cwd(), "dist");
 const headersPath = join(distDir, "_headers");
@@ -29,17 +30,8 @@ if (!existsSync(distDir)) {
   throw new Error(`[write-headers] Missing build output at ${distDir}. Run pnpm build first.`);
 }
 
-const sitemapChunkPath = join(distDir, "sitemap-0.xml");
-const sitemapPath = join(distDir, "sitemap.xml");
-
-if (!existsSync(sitemapChunkPath)) {
-  throw new Error(
-    `[write-headers] Missing ${sitemapChunkPath} from @astrojs/sitemap. Run astro build first.`
-  );
-}
-
 // @astrojs/sitemap emits sitemap-index.xml + sitemap-0.xml; preserve legacy /sitemap.xml URL.
-copyFileSync(sitemapChunkPath, sitemapPath);
+aliasSitemapXml(distDir);
 
 let headers = existsSync(headersPath) ? readFileSync(headersPath, "utf8") : "";
 

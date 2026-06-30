@@ -10,6 +10,7 @@ import {
 import { projects } from "@/content/projects";
 
 export const SITE_URL = "https://davidweng.eu.org";
+export const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
 export function formatServices(locale: Locale): string {
   return servicesContent.items

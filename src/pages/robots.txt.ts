@@ -1,11 +1,12 @@
 import type { APIRoute } from "astro";
+import { SITEMAP_URL } from "@/lib/agent-content";
 
 export const prerender = true;
 
 const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: https://davidweng.eu.org/sitemap.xml
+Sitemap: ${SITEMAP_URL}
 
 Content-Signal: ai-train=no, search=yes, ai-input=no
 `;
