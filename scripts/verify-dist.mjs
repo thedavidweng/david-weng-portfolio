@@ -34,9 +34,10 @@ ok("no proxy.ts");
 assert(existsSync(join(root, "astro.config.mjs")), "astro.config.mjs must exist");
 ok("astro.config.mjs present");
 
-const wranglerConfig = readFileSync(join(root, "wrangler.toml"), "utf8");
-assert(wranglerConfig.includes('pages_build_output_dir = "./dist"'), 'wrangler.toml must set pages_build_output_dir to "./dist"');
-ok("wrangler Pages config");
+const wranglerConfig = readFileSync(join(root, "wrangler.jsonc"), "utf8");
+assert(wranglerConfig.includes('"directory": "./dist"'), 'wrangler.jsonc must set assets.directory to "./dist"');
+assert(wranglerConfig.includes('"not_found_handling": "404-page"'), 'wrangler.jsonc must set assets.not_found_handling to "404-page"');
+ok("wrangler Workers static assets config");
 
 const headersPath = join(distDir, "_headers");
 assert(existsSync(headersPath), "dist/_headers is missing");
