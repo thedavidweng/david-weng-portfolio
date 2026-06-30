@@ -3,6 +3,11 @@ packages:
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - next
+  - vite
+  - "@vitejs/*"
+  - oxlint
+  - "@oxlint/*"
+  - "@types/node"
   - webpack
   - workerd
   - wrangler
@@ -16,8 +21,6 @@ onlyBuiltDependencies:
   - sharp
   - unrs-resolver
   - workerd
-overrides:
-  postcss: 8.5.13
 allowBuilds:
   esbuild: true
   sharp: true

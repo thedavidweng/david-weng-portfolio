@@ -50,7 +50,7 @@ export function scanArchiveItemsFromDirectory(directory: string, collection: Arc
       continue;
     }
 
-    for (const entry of entries.sort((left, right) => left.localeCompare(right, undefined, { numeric: true }))) {
+    for (const entry of entries.toSorted((left, right) => left.localeCompare(right, undefined, { numeric: true }))) {
       if (ignoredArchiveFiles.has(entry)) {
         continue;
       }

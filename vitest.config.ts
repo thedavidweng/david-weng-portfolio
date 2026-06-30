@@ -18,6 +18,8 @@ export default defineConfig({
       exclude: [
         "node_modules/**",
         ".next/**",
+        "dist/**",
+        ".vinext/**",
         "**/*.d.ts",
         "**/*.config.*",
         "**/vitest.setup.ts",

@@ -1,13 +1,13 @@
 import type { Locale, LocalizedText, LocalizedValue } from "@/types/content";
 
-const locales: Locale[] = ["en", "zh"];
+const locales = new Set<Locale>(["en", "zh"]);
 
 export function localized<T>(en: T, zh: T): LocalizedValue<T> {
   return { en, zh };
 }
 
 export function isLocale(value: string): value is Locale {
-  return locales.includes(value as Locale);
+  return locales.has(value as Locale);
 }
 
 export function getLocalizedValue<T>(value: LocalizedValue<T>, locale: Locale): T {

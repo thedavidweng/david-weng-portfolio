@@ -26,7 +26,7 @@ export function getArchiveItemSource(group: ArchiveGroup, item: ArchiveItem) {
 export function archiveItemsToProjectMedia(collection: ArchiveCollection): ProjectMediaItem[] {
   return collection.items
     .filter((item) => item.kind !== "cover" && !item.hidden)
-    .sort((left, right) => (left.order ?? Number.MAX_SAFE_INTEGER) - (right.order ?? Number.MAX_SAFE_INTEGER))
+    .toSorted((left, right) => (left.order ?? Number.MAX_SAFE_INTEGER) - (right.order ?? Number.MAX_SAFE_INTEGER))
     .map((item) => ({
       type: "image",
       title: item.title ?? getFallbackArchiveTitle(item),

@@ -1,11 +1,11 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
-test("next config pins outputFileTracingRoot to the project directory", () => {
+test("next config enables the Lightning CSS pipeline for Vite 8", () => {
   const configSource = readFileSync(join(process.cwd(), "next.config.ts"), "utf8");
 
-  expect(configSource).toContain("outputFileTracingRoot");
-  expect(configSource).toContain("import.meta.dirname");
+  expect(configSource).toContain("useLightningcss");
+  expect(configSource).not.toContain("outputFileTracingRoot");
 });
 
 test("dev script starts the vinext development server", () => {
