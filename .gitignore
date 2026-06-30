@@ -1,5 +1,6 @@
 .next
 .vinext
+.vercel
 .wrangler
 node_modules
 coverage
