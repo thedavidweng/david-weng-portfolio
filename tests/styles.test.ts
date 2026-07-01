@@ -452,14 +452,21 @@ test("mobile archive hero titles switch out of poster uppercase styling and use 
   expect(css).toContain("font-size: 0.96rem;");
 });
 
-test("lightbox keeps the close control pinned while preview content scrolls inside its own viewport", () => {
+test("project media lightbox styles YARL with noir chrome and mobile pinch-zoom support", () => {
   const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
-  const scrollBlock = css.match(/\.project-media__lightbox-scroll\s*\{[^}]+\}/)?.[0] ?? "";
   const closeBlock = css.match(/\.project-media__lightbox-close\s*\{[^}]+\}/)?.[0] ?? "";
+  const mobileSlideBlock =
+    css.match(/@media \(max-width: 760px\)[\s\S]*?\.project-media__lightbox \.yarl__slide\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(css).toContain(".project-media__lightbox-backdrop");
-  expect(scrollBlock).toContain("overflow: auto;");
-  expect(scrollBlock).toContain("overscroll-behavior: contain;");
+  expect(css).toContain(".project-media__lightbox");
+  expect(css).toContain(".project-media__lightbox .yarl__container");
+  expect(css).toContain(".project-media__lightbox .yarl__slide_image");
+  expect(css).toContain("touch-action: pan-x pan-y pinch-zoom;");
+  expect(css).not.toContain(".project-media__lightbox-backdrop");
+  expect(css).not.toContain(".project-media__lightbox-scroll");
+  expect(css).not.toContain(".project-media__lightbox-frame");
+  expect(css).not.toContain(".project-media__lightbox-image");
   expect(closeBlock).toContain("position: fixed;");
   expect(closeBlock).toContain("top: calc(env(safe-area-inset-top) + 1rem);");
+  expect(mobileSlideBlock).toContain("env(safe-area-inset-top)");
 });

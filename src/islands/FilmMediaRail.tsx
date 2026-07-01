@@ -31,7 +31,6 @@ export function FilmMediaRail({
     (item): item is ProjectMediaItem & { type: "image"; src: string } => item.type === "image" && typeof item.src === "string"
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const activeItem = activeIndex === null ? null : (previewItems[activeIndex] ?? null);
 
   return (
     <StrictMode>
@@ -59,19 +58,12 @@ export function FilmMediaRail({
         ))}
       </div>
       <ProjectMediaLightbox
-        activeItem={activeItem}
-        canNavigate={previewItems.length > 1}
+        activeIndex={activeIndex}
         closePreviewLabel={closePreviewLabel}
+        items={previewItems}
         locale={locale}
         onClose={() => setActiveIndex(null)}
-        onNext={() => {
-          if (activeIndex === null || previewItems.length <= 1) return;
-          setActiveIndex((activeIndex + 1) % previewItems.length);
-        }}
-        onPrevious={() => {
-          if (activeIndex === null || previewItems.length <= 1) return;
-          setActiveIndex((activeIndex - 1 + previewItems.length) % previewItems.length);
-        }}
+        onIndexChange={setActiveIndex}
         previewDialogLabel={previewDialogLabel}
       />
     </>

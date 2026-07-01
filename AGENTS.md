@@ -73,6 +73,14 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `src/pages/projects/[slug].astro` | English project detail |
 | `src/pages/zh/projects/[slug].astro` | Chinese project detail |
 
+### React Islands
+
+| File | Description |
+|---|---|
+| `src/islands/ArchiveMediaWall.tsx` | Archive photo wall (`react-photo-album` rows layout) |
+| `src/islands/FilmMediaRail.tsx` | Horizontal film stills / posters rail |
+| `src/islands/ProjectMediaLightbox.tsx` | Image preview overlay via `yet-another-react-lightbox` + Zoom plugin (pinch/double-tap zoom, carousel nav) |
+
 ### Agent-Visible Routes
 
 | File | Description |

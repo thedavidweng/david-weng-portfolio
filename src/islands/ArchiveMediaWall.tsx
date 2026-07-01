@@ -54,7 +54,15 @@ export function ArchiveMediaWall({
   previewDialogLabel,
   closePreviewLabel
 }: ArchiveMediaWallProps) {
-  const [activeItem, setActiveItem] = useState<ProjectMediaItem | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const imageItems = useMemo(
+    () =>
+      items.filter(
+        (item): item is ProjectMediaItem & { src: string; width: number; height: number } =>
+          item.type === "image" && Boolean(item.src) && Boolean(item.width) && Boolean(item.height)
+      ),
+    [items]
+  );
   const supportsResponsiveAlbum = useSyncExternalStore(
     subscribeToMediaWallEnhancement,
     getResponsiveAlbumSnapshot,
@@ -113,7 +121,7 @@ export function ArchiveMediaWall({
         className: `project-media__rows-item${photo.item.layout ? ` project-media__rows-item--${photo.item.layout}` : ""}`
       })
     },
-    onClick: ({ photo }: { photo: ArchivePhoto }) => setActiveItem(photo.item),
+    onClick: ({ index }: { index: number }) => setActiveIndex(index),
     photos,
     render: {
       extras: (_props: object, { photo }: { photo: ArchivePhoto }) => {
@@ -205,10 +213,11 @@ export function ArchiveMediaWall({
         <StaticPhotoAlbum {...sharedAlbumProps} layout="rows" model={staticModel} />
       ) : null}
       <ProjectMediaLightbox
-        activeItem={activeItem}
+        activeIndex={activeIndex}
         closePreviewLabel={closePreviewLabel}
+        items={imageItems}
         locale={locale}
-        onClose={() => setActiveItem(null)}
+        onClose={() => setActiveIndex(null)}
         previewDialogLabel={previewDialogLabel}
       />
     </>

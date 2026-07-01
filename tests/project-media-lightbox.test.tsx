@@ -4,147 +4,157 @@ import { projectDetailContent } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
 import type { ProjectMediaItem } from "@/types/content";
 
-const previewImage: ProjectMediaItem = {
-  type: "image",
-  title: { en: "Still 01", zh: "剧照 01" },
-  description: { en: "", zh: "" },
-  src: "/projects/film/still-01.jpg",
-  width: 1600,
-  height: 900
+const previewImages: ProjectMediaItem[] = [
+  {
+    type: "image",
+    title: { en: "Still 01", zh: "剧照 01" },
+    description: { en: "", zh: "" },
+    src: "/projects/film/still-01.jpg",
+    width: 1600,
+    height: 900
+  },
+  {
+    type: "image",
+    title: { en: "Still 02", zh: "剧照 02" },
+    description: { en: "", zh: "" },
+    src: "/projects/film/still-02.jpg",
+    width: 1600,
+    height: 900
+  }
+];
+
+const lightboxProps = {
+  closePreviewLabel: projectDetailContent.closePreviewLabel,
+  locale: "en" as const,
+  previewDialogLabel: projectDetailContent.previewDialogLabel
 };
 
-const secondPreviewImage: ProjectMediaItem = {
-  type: "image",
-  title: { en: "Still 02", zh: "剧照 02" },
-  description: { en: "", zh: "" },
-  src: "/projects/film/still-02.jpg",
-  width: 1600,
-  height: 900
-};
-
-test("renders nothing when the active item is not a previewable image", () => {
+test("renders nothing when the active index is null", () => {
   const { container } = render(
     <ProjectMediaLightbox
-      activeItem={{
-        type: "video",
-        title: { en: "Clip", zh: "片段" },
-        description: { en: "", zh: "" },
-        href: "https://www.youtube.com/watch?v=example"
-      }}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
-      locale="en"
+      {...lightboxProps}
+      activeIndex={null}
+      items={previewImages}
       onClose={() => undefined}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
     />
   );
 
   expect(container).toBeEmptyDOMElement();
 });
 
-test("closes from the close button, backdrop click, and Escape cancel", async () => {
+test("opens a YARL lightbox with the active slide image", () => {
+  render(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={0}
+      items={previewImages}
+      onClose={() => undefined}
+    />
+  );
+
+  const lightbox = screen.getByRole("dialog", { name: /image preview/i });
+  expect(lightbox).toHaveClass("project-media__lightbox");
+  expect(lightbox.querySelector(".yarl__slide:not([inert]) img")).toHaveAttribute("alt", "Still 01");
+});
+
+test("closes from the custom close button", async () => {
   const user = userEvent.setup();
   const onClose = vi.fn();
 
   render(
     <ProjectMediaLightbox
-      activeItem={previewImage}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
-      locale="en"
+      {...lightboxProps}
+      activeIndex={0}
+      items={previewImages}
       onClose={onClose}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
     />
   );
 
-  const dialog = screen.getByRole("dialog", { name: /image preview/i });
-
   await user.click(screen.getByRole("button", { name: /close preview/i }));
-  expect(onClose).toHaveBeenCalledTimes(1);
-
-  onClose.mockClear();
-  await user.click(dialog.querySelector(".project-media__lightbox-backdrop") as HTMLElement);
-  expect(onClose).toHaveBeenCalledTimes(1);
-
-  onClose.mockClear();
-  dialog.dispatchEvent(new Event("cancel", { bubbles: true, cancelable: true }));
   expect(onClose).toHaveBeenCalledTimes(1);
 });
 
-test("navigates with arrow keys and overlay controls when multiple images are available", async () => {
+test("reports carousel navigation through onIndexChange", async () => {
   const user = userEvent.setup();
-  const onNext = vi.fn();
-  const onPrevious = vi.fn();
+  let activeIndex = 0;
+  const onIndexChange = vi.fn((index: number) => {
+    activeIndex = index;
+  });
 
   const { rerender } = render(
     <ProjectMediaLightbox
-      activeItem={previewImage}
-      canNavigate
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
-      locale="en"
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
       onClose={() => undefined}
-      onNext={onNext}
-      onPrevious={onPrevious}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
+      onIndexChange={onIndexChange}
     />
   );
 
   await user.click(screen.getByRole("button", { name: /next image/i }));
-  expect(onNext).toHaveBeenCalledTimes(1);
+  expect(onIndexChange).toHaveBeenLastCalledWith(1);
+  rerender(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
+      onClose={() => undefined}
+      onIndexChange={onIndexChange}
+    />
+  );
 
   await user.click(screen.getByRole("button", { name: /previous image/i }));
-  expect(onPrevious).toHaveBeenCalledTimes(1);
+  expect(onIndexChange).toHaveBeenLastCalledWith(0);
+  rerender(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
+      onClose={() => undefined}
+      onIndexChange={onIndexChange}
+    />
+  );
 
   await user.keyboard("{ArrowRight}");
-  expect(onNext).toHaveBeenCalledTimes(2);
+  expect(onIndexChange).toHaveBeenLastCalledWith(1);
+  rerender(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
+      onClose={() => undefined}
+      onIndexChange={onIndexChange}
+    />
+  );
 
   await user.keyboard("{ArrowLeft}");
-  expect(onPrevious).toHaveBeenCalledTimes(2);
+  expect(onIndexChange).toHaveBeenLastCalledWith(0);
 
   rerender(
     <ProjectMediaLightbox
-      activeItem={secondPreviewImage}
-      canNavigate={false}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
-      locale="en"
+      {...lightboxProps}
+      activeIndex={0}
+      items={[previewImages[0]!]}
       onClose={() => undefined}
-      onNext={onNext}
-      onPrevious={onPrevious}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
+      onIndexChange={onIndexChange}
     />
   );
 
-  expect(screen.queryByRole("button", { name: /next image/i })).not.toBeInTheDocument();
-  onNext.mockClear();
-  onPrevious.mockClear();
-
-  await user.keyboard("{ArrowRight}");
-  await user.keyboard("{ArrowLeft}");
-  expect(onNext).not.toHaveBeenCalled();
-  expect(onPrevious).not.toHaveBeenCalled();
+  expect(screen.getByRole("button", { name: /next image/i })).toBeDisabled();
+  expect(screen.getByRole("button", { name: /previous image/i })).toBeDisabled();
 });
 
-test("closes when the backdrop receives Enter or Space", async () => {
-  const user = userEvent.setup();
-  const onClose = vi.fn();
-
+test("localizes navigation labels for non-English locales", () => {
   render(
     <ProjectMediaLightbox
-      activeItem={previewImage}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
-      locale="en"
-      onClose={onClose}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
+      {...lightboxProps}
+      activeIndex={0}
+      items={previewImages}
+      locale="zh"
+      onClose={() => undefined}
     />
   );
 
-  const backdrop = screen
-    .getByRole("dialog", { name: /image preview/i })
-    .querySelector(".project-media__lightbox-backdrop") as HTMLElement;
-
-  backdrop.focus();
-  await user.keyboard("{Enter}");
-  expect(onClose).toHaveBeenCalledTimes(1);
-
-  onClose.mockClear();
-  await user.keyboard(" ");
-  expect(onClose).toHaveBeenCalledTimes(1);
+  expect(screen.getByRole("button", { name: /下一张/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /上一张/i })).toBeInTheDocument();
 });

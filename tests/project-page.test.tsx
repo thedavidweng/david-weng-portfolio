@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { getProjectBySlug } from "@/lib/projects";
 import { ProjectPageFixture } from "@/tests/helpers/ProjectPageFixture";
@@ -288,7 +288,7 @@ test("renders commissioned and personal video archives as video-card collections
   expect(screen.getAllByRole("link", { name: /Watch on YouTube/i })).toHaveLength(3);
 });
 
-test("opens a centered preview dialog when an archive image is clicked", async () => {
+test("opens the YARL image lightbox when an archive image is clicked", async () => {
   const user = userEvent.setup();
   const project = getProjectBySlug("designs-for-bc-ai-ecosystem");
 
@@ -300,12 +300,12 @@ test("opens a centered preview dialog when an archive image is clicked", async (
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
-  const dialog = screen.getByRole("dialog", { name: /Image preview/i });
-  expect(dialog).toBeInTheDocument();
-  expect(within(dialog).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
+  const lightbox = screen.getByRole("dialog", { name: /Image preview/i });
+  expect(lightbox).toHaveClass("project-media__lightbox");
+  expect(within(lightbox).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
 });
 
-test("clicking outside the previewed image closes the preview dialog", async () => {
+test("clicking the slide backdrop closes the YARL image lightbox", async () => {
   const user = userEvent.setup();
   const project = getProjectBySlug("designs-for-bc-ai-ecosystem");
 
@@ -313,20 +313,23 @@ test("clicking outside the previewed image closes the preview dialog", async () 
     throw new Error("Expected BC + AI Ecosystem project to exist");
   }
 
-  const { container } = render(
+  render(
     <ProjectPageFixture locale="en" pathname="/projects/designs-for-bc-ai-ecosystem" project={project} />
   );
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
-  const backdrop = container.querySelector(".project-media__lightbox-backdrop");
+  const slideBackdrop = document.querySelector(".yarl__slide:not([inert])");
 
-  expect(backdrop).toBeTruthy();
-  await user.click(backdrop as HTMLElement);
-  expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
+  expect(slideBackdrop).toBeTruthy();
+  fireEvent.pointerDown(slideBackdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
+  fireEvent.pointerUp(slideBackdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
+  await waitFor(() => {
+    expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
+  });
 });
 
-test("does not render idle preview dialogs before any project media is opened", () => {
+test("does not mount an open YARL lightbox before any project media is opened", () => {
   const project = getProjectBySlug("fraud");
 
   if (!project) {
@@ -336,7 +339,7 @@ test("does not render idle preview dialogs before any project media is opened", 
   const { container } = render(<ProjectPageFixture locale="en" pathname="/projects/fraud" project={project} />);
 
   expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
-  expect(container.querySelectorAll("dialog")).toHaveLength(0);
+  expect(container.querySelectorAll(".yarl__portal_open")).toHaveLength(0);
 });
 
 test("archive project pages render readable title casing instead of poster-style uppercase", () => {

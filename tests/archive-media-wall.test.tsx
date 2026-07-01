@@ -60,9 +60,9 @@ test("archive media wall renders credit, YouTube, and generic overlay links", as
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
-  const dialog = screen.getByRole("dialog", { name: /image preview/i });
-  expect(dialog).toBeInTheDocument();
-  expect(within(dialog).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
+  const lightbox = screen.getByRole("dialog", { name: /image preview/i });
+  expect(lightbox).toHaveClass("project-media__lightbox");
+  expect(within(lightbox).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
 });
 
 test("archive media wall falls back to the static album layout without ResizeObserver", () => {
