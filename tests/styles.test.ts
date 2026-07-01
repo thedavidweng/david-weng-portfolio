@@ -438,6 +438,8 @@ test("mobile archive hero titles switch out of poster uppercase styling and use 
 
   expect(css).toContain(".project-page--archive .project-hero__content");
   expect(css).toContain(".project-page--archive .project-hero__cover::after");
+  expect(css).toContain(".project-page--archive .project-hero__cover-image");
+  expect(css).not.toMatch(/\.project-page--archive \.project-hero__cover\s*\{[^}]*align-items:\s*flex-start;/);
   expect(css).toContain(".project-page--archive .project-hero__title");
   expect(css).toContain("text-transform: none;");
   expect(css).toContain("line-height: 0.94;");

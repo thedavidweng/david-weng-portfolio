@@ -512,13 +512,17 @@ export function ProjectPageFixture({ locale, pathname, project }: ProjectPageFix
                       sizes="(max-width: 1120px) 100vw, 40vw"
                       src={project.coverImage}
                     />
-                    <div className="project-hero__word" aria-hidden="true">
-                      {project.posterWord}
-                    </div>
-                    <div className="project-hero__cover-meta">
-                      <span>{projectLabel(project.coverLabel, locale)}</span>
-                      <span>{projectLabel(project.duration, locale)}</span>
-                    </div>
+                    {!useImageWall ? (
+                      <>
+                        <div className="project-hero__word" aria-hidden="true">
+                          {project.posterWord}
+                        </div>
+                        <div className="project-hero__cover-meta">
+                          <span>{projectLabel(project.coverLabel, locale)}</span>
+                          <span>{projectLabel(project.duration, locale)}</span>
+                        </div>
+                      </>
+                    ) : null}
                   </div>
                 ) : null}
               </div>

@@ -140,11 +140,15 @@ const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
                     sizes="(max-width: 1120px) 100vw, 40vw"
                     src={project.coverImage}
                   />
-                  <div class="project-hero__word" aria-hidden="true">{project.posterWord}</div>
-                  <div class="project-hero__cover-meta">
-                    <span>{projectLabel(project.coverLabel, locale)}</span>
-                    <span>{projectLabel(project.duration, locale)}</span>
-                  </div>
+                  {!useImageWall ? (
+                    <>
+                      <div class="project-hero__word" aria-hidden="true">{project.posterWord}</div>
+                      <div class="project-hero__cover-meta">
+                        <span>{projectLabel(project.coverLabel, locale)}</span>
+                        <span>{projectLabel(project.duration, locale)}</span>
+                      </div>
+                    </>
+                  ) : null}
                 </div>
               ) : null}
             </div>

@@ -2696,8 +2696,14 @@ main {
   }
 
   .project-page--archive .project-hero__grid {
-    gap: 0.6rem;
+    gap: 1.1rem;
     padding: 1rem;
+  }
+
+  .project-hero__archive-ledger {
+    gap: 0.72rem;
+    margin-bottom: 0.15rem;
+    padding-top: 0.85rem;
   }
 
   .project-page--archive .project-hero__content {
@@ -2711,11 +2717,6 @@ main {
     background: transparent;
   }
 
-  .project-hero__archive-ledger {
-    gap: 0.72rem;
-    padding-top: 0.85rem;
-  }
-
   .project-hero__archive-ledger-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -2726,20 +2727,18 @@ main {
   }
 
   .project-page--archive .project-hero__cover {
-    min-height: clamp(20rem, 82vw, 28rem);
-    align-items: flex-start;
-    padding: 0.9rem;
+    min-height: clamp(16rem, 58vw, 22rem);
+    align-items: stretch;
+    padding: 0;
   }
 
   .project-page--archive .project-hero__cover::after {
-    background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.82)),
-      linear-gradient(0deg, rgba(7, 7, 9, 0.76), rgba(7, 7, 9, 0.14) 48%, rgba(7, 7, 9, 0.76));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.42));
   }
 
   .project-page--archive .project-hero__cover-image {
-    opacity: 0.46;
-    object-position: center 28%;
+    opacity: 0.88;
+    object-position: center 32%;
   }
 
   .project-page--archive .project-hero__title {
@@ -2757,13 +2756,6 @@ main {
 
   .project-page--archive .project-hero__roles {
     margin-top: 0.42rem;
-  }
-
-  .project-page--archive .project-hero__word {
-    left: 0.9rem;
-    right: 0.9rem;
-    bottom: 0.9rem;
-    font-size: clamp(3rem, 18vw, 5rem);
   }
 
   .project-page--archive .project-media {

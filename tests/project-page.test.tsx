@@ -378,4 +378,6 @@ test("archive project pages render a bottom-anchored catalog ledger with roles a
   expect(screen.getByText("Graphic Design")).toBeInTheDocument();
   expect(screen.getByText("Archive Curation")).toBeInTheDocument();
   expect(document.querySelector(".project-hero__archive-watermark")).toHaveTextContent("BEATY");
+  expect(document.querySelector(".project-hero__cover-meta")).toBeNull();
+  expect(document.querySelector(".project-hero__word")).toBeNull();
 });
