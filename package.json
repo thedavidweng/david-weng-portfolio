@@ -14,6 +14,7 @@
     "prebuild": "pnpm subset:fonts",
     "build": "astro build && node scripts/write-headers.mjs",
     "verify:dist": "node scripts/verify-dist.mjs",
+    "verify:zone": "node scripts/verify-zone-redirects.mjs --curl",
     "preview": "pnpm build && wrangler dev",
     "deploy": "pnpm build && wrangler deploy",
     "typecheck": "astro check && tsc --noEmit",
