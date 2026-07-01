@@ -67,13 +67,38 @@ test("beaty video badge stays content-width inside the video card grid", () => {
   expect(videoCopyBadgeBlock).toContain("justify-self: start;");
 });
 
+test("archive-backed titles use article-scale typography instead of poster styling", () => {
+  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+  const archiveTitleBlock = css.match(/\.project-page--archive \.project-hero__title\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(archiveTitleBlock).toContain("max-width: none;");
+  expect(archiveTitleBlock).toContain("font-size: clamp(2.35rem, 4.5vw, 4.6rem);");
+  expect(archiveTitleBlock).toContain("line-height: 1.05;");
+  expect(archiveTitleBlock).toContain("text-transform: none;");
+  expect(archiveTitleBlock).toContain("overflow-wrap: normal;");
+  expect(archiveTitleBlock).toContain("text-wrap: balance;");
+});
+
+test("archive-backed hero layout anchors a catalog ledger beneath the title block", () => {
+  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+  const archiveContentBlock = css.match(/\.project-hero__content--archive\s*\{[^}]+\}/)?.[0] ?? "";
+  const archiveLedgerBlock = css.match(/\.project-hero__archive-ledger\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(archiveContentBlock).toContain("justify-content: space-between;");
+  expect(archiveContentBlock).toContain("min-height: 100%;");
+  expect(archiveLedgerBlock).toContain("margin-top: auto;");
+  expect(archiveLedgerBlock).toContain("border-top: 1px solid rgba(var(--accent-rgb), 0.24);");
+  expect(css).toContain(".project-hero__cover-meta--archive");
+  expect(css).toContain(".project-hero__archive-watermark");
+});
+
 test("archive-backed hero layout gives the cover panel more width and height on detail pages", () => {
   const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveGridBlock = css.match(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/)?.[0] ?? "";
   const archiveCoverBlock = css.match(/\.project-page--archive \.project-hero__cover\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(archiveGridBlock).toContain("grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);");
-  expect(archiveCoverBlock).toContain("min-height: 560px;");
+  expect(archiveCoverBlock).toContain("min-height: clamp(24rem, 34vw, 30rem);");
 });
 
 test("beaty video thumbnails render in a fixed 16:9 frame instead of a cropped min-height box", () => {
@@ -397,6 +422,10 @@ test("project pages and media modules use open-stage containers instead of dark 
 
 test("mobile non-film project pages define tighter archive and external-handoff hero spacing rules", () => {
   const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+  const archiveGridBlocks = Array.from(css.matchAll(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/g)).map(
+    (match) => match[0]
+  );
+  const mobileArchiveGridBlock = archiveGridBlocks.find((block) => block.includes("gap: 1.1rem;")) ?? "";
 
   expect(css).toContain(".project-page--archive .project-hero__grid");
   expect(css).toContain(".project-page--archive .project-hero__content");
@@ -405,8 +434,8 @@ test("mobile non-film project pages define tighter archive and external-handoff 
   expect(css).toContain(".project-page--external-handoff .project-handoff");
   expect(css).toContain(".project-page:not(.project-page--film) .project-hero__grid");
   expect(css).toContain("grid-template-columns: 1fr;");
-  expect(css).toContain("padding: 1rem;");
-  expect(css).toContain("gap: 0.6rem;");
+  expect(mobileArchiveGridBlock).toContain("padding: 1rem;");
+  expect(mobileArchiveGridBlock).toContain("gap: 1.1rem;");
 });
 
 test("mobile archive hero titles switch out of poster uppercase styling and use a protected reading layer", () => {
@@ -414,6 +443,8 @@ test("mobile archive hero titles switch out of poster uppercase styling and use 
 
   expect(css).toContain(".project-page--archive .project-hero__content");
   expect(css).toContain(".project-page--archive .project-hero__cover::after");
+  expect(css).toContain(".project-page--archive .project-hero__cover-image");
+  expect(css).not.toMatch(/\.project-page--archive \.project-hero__cover\s*\{[^}]*align-items:\s*flex-start;/);
   expect(css).toContain(".project-page--archive .project-hero__title");
   expect(css).toContain("text-transform: none;");
   expect(css).toContain("line-height: 0.94;");

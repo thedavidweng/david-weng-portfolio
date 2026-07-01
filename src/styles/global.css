@@ -1520,11 +1520,76 @@ main {
 }
 
 .project-page--archive .project-hero__cover {
-  min-height: 560px;
+  min-height: clamp(24rem, 34vw, 30rem);
+}
+
+.project-hero__content--archive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.35rem;
+  min-height: 100%;
+}
+
+.project-hero__archive-intro--stacked {
+  display: grid;
+  gap: 0;
+}
+
+.project-hero__archive-ledger {
+  position: relative;
+  display: grid;
+  gap: 0.7rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(var(--accent-rgb), 0.24);
+  overflow: hidden;
+}
+
+.project-hero__archive-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-hero__archive-role {
+  padding: 0.34rem 0.58rem;
+  border: 1px solid rgba(229, 226, 225, 0.16);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.project-hero__archive-watermark {
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.45rem;
+  z-index: 0;
+  color: rgba(var(--accent-rgb), 0.1);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.8vw, 4rem);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
 }
 
 .project-page--archive .project-hero__title {
-  max-width: 12ch;
+  max-width: none;
+  font-size: clamp(2.35rem, 4.5vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .project-page--film .project-hero__title {
@@ -1564,6 +1629,23 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+}
+
+.project-hero__cover-meta--archive {
+  width: 100%;
+  margin-top: auto;
+  padding: 0 0.95rem 0.95rem;
+}
+
+.project-hero__cover-meta--archive span {
+  max-width: 28rem;
+  line-height: 1.45;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.project-page--archive .project-hero__cover {
+  align-items: flex-end;
 }
 
 .project-film__poster {
@@ -2608,38 +2690,60 @@ main {
   }
 
   .project-page--archive .project-hero__grid {
-    gap: 0.6rem;
+    gap: 1.1rem;
     padding: 1rem;
+  }
+
+  .project-hero__archive-ledger {
+    gap: 0.72rem;
+    margin-bottom: 0.15rem;
+    padding-top: 0.85rem;
   }
 
   .project-page--archive .project-hero__content {
     position: relative;
     z-index: 2;
+    gap: 1rem;
+    min-height: 0;
     padding: 0.95rem;
     padding-right: 0.95rem;
     border-radius: 0;
     background: transparent;
   }
 
+  .project-hero__archive-watermark {
+    font-size: clamp(2.2rem, 14vw, 3.4rem);
+  }
+
   .project-page--archive .project-hero__cover {
-    min-height: clamp(20rem, 82vw, 28rem);
-    align-items: flex-start;
-    padding: 0.9rem;
+    min-height: clamp(16rem, 58vw, 22rem);
+    align-items: flex-end;
+    padding: 0;
   }
 
   .project-page--archive .project-hero__cover::after {
-    background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.82)),
-      linear-gradient(0deg, rgba(7, 7, 9, 0.76), rgba(7, 7, 9, 0.14) 48%, rgba(7, 7, 9, 0.76));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.72));
   }
 
   .project-page--archive .project-hero__cover-image {
-    opacity: 0.46;
-    object-position: center 28%;
+    opacity: 0.9;
+    object-position: center 32%;
+  }
+
+  .project-hero__cover-meta--archive {
+    padding: 0 0.9rem 0.9rem;
+  }
+
+  .project-hero__cover-meta--archive span {
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
   }
 
   .project-page--archive .project-hero__title {
     max-width: none;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.08;
+    text-wrap: balance;
   }
 
   .project-page--archive .project-hero__summary {
@@ -2650,13 +2754,6 @@ main {
 
   .project-page--archive .project-hero__roles {
     margin-top: 0.42rem;
-  }
-
-  .project-page--archive .project-hero__word {
-    left: 0.9rem;
-    right: 0.9rem;
-    bottom: 0.9rem;
-    font-size: clamp(3rem, 18vw, 5rem);
   }
 
   .project-page--archive .project-media {

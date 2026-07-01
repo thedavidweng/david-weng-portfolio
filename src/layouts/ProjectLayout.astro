@@ -3,6 +3,7 @@ import Container from "@/src/components/Container.astro";
 import Footer from "@/src/components/Footer.astro";
 import JsonLd from "@/src/components/JsonLd.astro";
 import PortfolioImage from "@/src/components/PortfolioImage.astro";
+import ProjectArchiveLedger from "@/src/components/ProjectArchiveLedger.astro";
 import ProjectExternalLinkButton from "@/src/components/ProjectExternalLinkButton.astro";
 import ProjectFilmHero from "@/src/components/ProjectFilmHero.astro";
 import ProjectFilmRails from "@/src/components/ProjectFilmRails.astro";
@@ -78,34 +79,37 @@ const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
               {isDedicatedFilmProject ? <ProjectFilmHero locale={locale} project={project} /> : null}
               {!isDedicatedFilmProject ? (
                 <div
-                  class={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
+                  class={`project-hero__content${useImageWall ? " project-hero__content--archive" : ""}${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
                 >
-                  {isExternalHandoff ? (
-                    <p class="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
-                  ) : null}
-                  <h1 class="project-hero__title">{projectLabel(project.title, locale)}</h1>
-                  {!isTitleOnly && !isExternalHandoff ? (
-                    <>
-                      <p class="project-hero__summary">
-                        <ProjectSummary locale={locale} project={project} />
-                      </p>
-                      <div class="project-detail__links">
-                        {project.externalLinks.map((link) => (
-                          <ProjectExternalLinkButton href={link.href} label={projectLabel(link.label, locale)} />
-                        ))}
-                      </div>
-                    </>
-                  ) : null}
-                  {isExternalHandoff ? (
-                    <>
-                      <p class="project-hero__publication">
-                        {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
-                      </p>
-                      <p class="project-hero__summary">
-                        <ProjectSummary locale={locale} project={project} />
-                      </p>
-                    </>
-                  ) : null}
+                  <div class={`project-hero__archive-intro${useImageWall ? " project-hero__archive-intro--stacked" : ""}`}>
+                    {isExternalHandoff ? (
+                      <p class="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
+                    ) : null}
+                    <h1 class="project-hero__title">{projectLabel(project.title, locale)}</h1>
+                    {!isTitleOnly && !isExternalHandoff ? (
+                      <>
+                        <p class="project-hero__summary">
+                          <ProjectSummary locale={locale} project={project} />
+                        </p>
+                        <div class="project-detail__links">
+                          {project.externalLinks.map((link) => (
+                            <ProjectExternalLinkButton href={link.href} label={projectLabel(link.label, locale)} />
+                          ))}
+                        </div>
+                      </>
+                    ) : null}
+                    {isExternalHandoff ? (
+                      <>
+                        <p class="project-hero__publication">
+                          {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
+                        </p>
+                        <p class="project-hero__summary">
+                          <ProjectSummary locale={locale} project={project} />
+                        </p>
+                      </>
+                    ) : null}
+                  </div>
+                  {useImageWall ? <ProjectArchiveLedger locale={locale} project={project} /> : null}
                 </div>
               ) : null}
               {isExternalHandoff && primaryExternalLink ? (
@@ -136,11 +140,19 @@ const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
                     sizes="(max-width: 1120px) 100vw, 40vw"
                     src={project.coverImage}
                   />
-                  <div class="project-hero__word" aria-hidden="true">{project.posterWord}</div>
-                  <div class="project-hero__cover-meta">
-                    <span>{projectLabel(project.coverLabel, locale)}</span>
-                    <span>{projectLabel(project.duration, locale)}</span>
-                  </div>
+                  {!useImageWall ? (
+                    <>
+                      <div class="project-hero__word" aria-hidden="true">{project.posterWord}</div>
+                      <div class="project-hero__cover-meta">
+                        <span>{projectLabel(project.coverLabel, locale)}</span>
+                        <span>{projectLabel(project.duration, locale)}</span>
+                      </div>
+                    </>
+                  ) : (
+                    <div class="project-hero__cover-meta project-hero__cover-meta--archive">
+                      <span>{projectLabel(project.coverLabel, locale)}</span>
+                    </div>
+                  )}
                 </div>
               ) : null}
             </div>

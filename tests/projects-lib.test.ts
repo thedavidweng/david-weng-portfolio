@@ -89,7 +89,7 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(project.summary.zh).toBe("为 Beaty Biodiversity Museum 制作的手册、标识、年度报告版式与视频。");
 });
 
-test("archive-backed organization projects use the archive collection naming scheme", () => {
+test("archive-backed client organization projects keep archive titles with client-work typing", () => {
   const beaty = getProjectBySlug("beaty-biodiversity-museum-annual-report-2022-2023");
   const bcAi = getProjectBySlug("designs-for-bc-ai-ecosystem");
   const theUpgrade = getProjectBySlug("designs-for-theupgrade-ai");
@@ -102,8 +102,9 @@ test("archive-backed organization projects use the archive collection naming sch
     expect(project.title.en).toMatch(/^Archive for /);
     expect(project.category.en).toBe("Client");
     expect(project.category.zh).toBe("客户");
-    expect(project.projectType.en).toBe("Archive Collection");
-    expect(project.projectType.zh).toBe("档案集合");
+    expect(project.projectType.en).toBe("Client work");
+    expect(project.projectType.zh).toBe("客户项目");
+    expect(project.roles.en).not.toContain("Archive Curation");
   });
 });
 

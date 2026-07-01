@@ -134,6 +134,33 @@ function isArchiveVideoItem(item: ProjectMediaItem) {
   return item.type === "image" && item.archiveKind === "video";
 }
 
+function ProjectArchiveLedger({ locale, project }: { locale: Locale; project: ProjectItem }) {
+  const roles = project.roles[locale];
+
+  return (
+    <aside
+      className="project-hero__archive-ledger"
+      aria-label={`${projectLabel(project.category, locale)} ${project.year}`}
+    >
+      <p className="poster-section__eyebrow">
+        {projectLabel(project.category, locale)} · {project.year}
+      </p>
+      {roles.length > 0 ? (
+        <ul className="project-hero__archive-roles">
+          {roles.map((role) => (
+            <li key={role} className="project-hero__archive-role">
+              {role}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      <span className="project-hero__archive-watermark" aria-hidden="true">
+        {project.posterWord}
+      </span>
+    </aside>
+  );
+}
+
 function ProjectFilmHero({ locale, project }: { locale: Locale; project: ProjectItem }) {
   const film = project.film;
   const filmHeroPoster = film ? film.heroPoster[locale] : null;
@@ -413,38 +440,41 @@ export function ProjectPageFixture({ locale, pathname, project }: ProjectPageFix
                 {isDedicatedFilmProject ? <ProjectFilmHero locale={locale} project={project} /> : null}
                 {!isDedicatedFilmProject ? (
                   <div
-                    className={`project-hero__content${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
+                    className={`project-hero__content${useImageWall ? " project-hero__content--archive" : ""}${isTitleOnly ? " project-hero__content--title-only" : ""}${isExternalHandoff ? " project-hero__content--external-handoff" : ""}`}
                   >
-                    {isExternalHandoff ? (
-                      <p className="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
-                    ) : null}
-                    <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
-                    {!isTitleOnly && !isExternalHandoff ? (
-                      <>
-                        <p className="project-hero__summary">
-                          <ProjectSummary locale={locale} project={project} />
-                        </p>
-                        <div className="project-detail__links">
-                          {project.externalLinks.map((link) => (
-                            <ProjectExternalLinkButton
-                              key={link.label.en}
-                              href={link.href}
-                              label={projectLabel(link.label, locale)}
-                            />
-                          ))}
-                        </div>
-                      </>
-                    ) : null}
-                    {isExternalHandoff ? (
-                      <>
-                        <p className="project-hero__publication">
-                          {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
-                        </p>
-                        <p className="project-hero__summary">
-                          <ProjectSummary locale={locale} project={project} />
-                        </p>
-                      </>
-                    ) : null}
+                    <div className={`project-hero__archive-intro${useImageWall ? " project-hero__archive-intro--stacked" : ""}`}>
+                      {isExternalHandoff ? (
+                        <p className="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
+                      ) : null}
+                      <h1 className="project-hero__title">{projectLabel(project.title, locale)}</h1>
+                      {!isTitleOnly && !isExternalHandoff ? (
+                        <>
+                          <p className="project-hero__summary">
+                            <ProjectSummary locale={locale} project={project} />
+                          </p>
+                          <div className="project-detail__links">
+                            {project.externalLinks.map((link) => (
+                              <ProjectExternalLinkButton
+                                key={link.label.en}
+                                href={link.href}
+                                label={projectLabel(link.label, locale)}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      ) : null}
+                      {isExternalHandoff ? (
+                        <>
+                          <p className="project-hero__publication">
+                            {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
+                          </p>
+                          <p className="project-hero__summary">
+                            <ProjectSummary locale={locale} project={project} />
+                          </p>
+                        </>
+                      ) : null}
+                    </div>
+                    {useImageWall ? <ProjectArchiveLedger locale={locale} project={project} /> : null}
                   </div>
                 ) : null}
                 {isExternalHandoff && primaryExternalLink ? (
@@ -477,13 +507,21 @@ export function ProjectPageFixture({ locale, pathname, project }: ProjectPageFix
                       sizes="(max-width: 1120px) 100vw, 40vw"
                       src={project.coverImage}
                     />
-                    <div className="project-hero__word" aria-hidden="true">
-                      {project.posterWord}
-                    </div>
-                    <div className="project-hero__cover-meta">
-                      <span>{projectLabel(project.coverLabel, locale)}</span>
-                      <span>{projectLabel(project.duration, locale)}</span>
-                    </div>
+                    {!useImageWall ? (
+                      <>
+                        <div className="project-hero__word" aria-hidden="true">
+                          {project.posterWord}
+                        </div>
+                        <div className="project-hero__cover-meta">
+                          <span>{projectLabel(project.coverLabel, locale)}</span>
+                          <span>{projectLabel(project.duration, locale)}</span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="project-hero__cover-meta project-hero__cover-meta--archive">
+                        <span>{projectLabel(project.coverLabel, locale)}</span>
+                      </div>
+                    )}
                   </div>
                 ) : null}
               </div>
