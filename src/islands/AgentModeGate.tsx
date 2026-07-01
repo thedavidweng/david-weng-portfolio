@@ -1,4 +1,5 @@
-import { StrictMode, useEffect, useState } from "react";
+import { StrictMode, useEffect } from "react";
+import { createRoot, type Root } from "react-dom/client";
 import type { Locale } from "@/types/content";
 import { AgentView } from "@/src/islands/AgentView";
 
@@ -6,27 +7,44 @@ type AgentModeGateProps = {
   locale: Locale;
 };
 
-export function AgentModeGate({ locale }: AgentModeGateProps) {
-  const [showAgent, setShowAgent] = useState(false);
+let agentRoot: Root | null = null;
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("mode") !== "agent") return;
+export function mountAgentModeGate(locale: Locale) {
+  const siteContent = document.getElementById("site-content");
 
-    const siteContent = document.getElementById("site-content");
-    if (siteContent) {
-      siteContent.hidden = true;
-    }
-    setShowAgent(true);
-  }, []);
+  if (siteContent) {
+    siteContent.hidden = true;
+  }
 
-  if (!showAgent) return null;
+  let host = document.getElementById("agent-mode-root");
 
-  return (
+  if (!host) {
+    host = document.createElement("div");
+    host.id = "agent-mode-root";
+    document.body.appendChild(host);
+  }
+
+  if (agentRoot) {
+    agentRoot.unmount();
+  }
+
+  agentRoot = createRoot(host);
+  agentRoot.render(
     <StrictMode>
       <AgentView locale={locale} />
     </StrictMode>
   );
+}
+
+export function AgentModeGate({ locale }: AgentModeGateProps) {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("mode") !== "agent") return;
+
+    mountAgentModeGate(locale);
+  }, [locale]);
+
+  return null;
 }
 
 export default AgentModeGate;

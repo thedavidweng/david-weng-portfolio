@@ -10,9 +10,11 @@
   "scripts": {
     "dev": "astro dev",
     "subset:fonts": "node scripts/subset-cjk-fonts.mjs",
+    "generate:carousel": "GENERATE_CAROUSEL=1 vitest run tests/generate-carousel-projects.test.ts -t regenerate",
     "prebuild": "pnpm subset:fonts",
     "build": "astro build && node scripts/write-headers.mjs",
     "verify:dist": "node scripts/verify-dist.mjs",
+    "verify:zone": "node scripts/verify-zone-redirects.mjs --curl",
     "preview": "pnpm build && wrangler dev",
     "deploy": "pnpm build && wrangler deploy",
     "typecheck": "astro check && tsc --noEmit",
@@ -23,7 +25,6 @@
   "dependencies": {
     "@astrojs/react": "6.0.0",
     "@astrojs/sitemap": "3.7.3",
-    "@radix-ui/react-dialog": "1.1.17",
     "astro": "7.0.3",
     "image-size": "2.0.2",
     "react": "19.2.7",

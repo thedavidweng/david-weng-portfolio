@@ -2,7 +2,7 @@
 import { StrictMode, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Container } from "@/src/islands/_shared/Container";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
-import { projectLabel, projectSectionContent } from "@/content/projects";
+import { projectSectionContent } from "@/content/project-section";
 import { getLocalizedText, getProjectPath } from "@/lib/i18n";
 import { buildProjectCategoryGroups, getCategoryBySnap, orderedProjects } from "@/lib/project-carousel";
 import type { Locale } from "@/types/content";
@@ -229,7 +229,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               {orderedProjects.map((project, index) => (
                 <a
                   key={project.slug}
-                  aria-label={`Open project ${projectLabel(project.title, locale)}`}
+                  aria-label={`Open project ${getLocalizedText(project.title, locale)}`}
                   className="project-card projects__slide signal-panel"
                   href={getProjectPath(locale, project.slug)}
                   ref={(node) => {
@@ -246,6 +246,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
                         className="project-card__image"
                         fill
                         priority={index === 0}
+                        fetchPriority={index === 0 ? "high" : "low"}
                         sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
                         src={project.coverImage}
                       />
@@ -257,13 +258,13 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
                   <div className="project-card__content">
                     <div className="project-card__meta">
                       <span>{project.code}</span>
-                      <span>{projectLabel(project.category, locale)}</span>
+                      <span>{getLocalizedText(project.category, locale)}</span>
                       <span>{project.year}</span>
                     </div>
-                    <h3 className="project-card__title">{projectLabel(project.title, locale)}</h3>
-                    <p className="project-card__summary">{projectLabel(project.teaser, locale)}</p>
+                    <h3 className="project-card__title">{getLocalizedText(project.title, locale)}</h3>
+                    <p className="project-card__summary">{getLocalizedText(project.teaser, locale)}</p>
                     <div className="project-card__footer">
-                      <span>{projectLabel(project.coverLabel, locale)}</span>
+                      <span>{getLocalizedText(project.coverLabel, locale)}</span>
                     </div>
                   </div>
                 </a>

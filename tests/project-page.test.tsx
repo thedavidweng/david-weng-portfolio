@@ -73,7 +73,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(screen.getByRole("button", { name: /关闭预览/i })).toHaveTextContent("X");
 }, 15000);
 
-test("renders gourd inside the film/video project filter", async () => {
+test("renders gourd film release links on the english detail page", async () => {
   const project = getProjectBySlug("gourd");
 
   if (!project) {
@@ -82,6 +82,7 @@ test("renders gourd inside the film/video project filter", async () => {
 
   render(<ProjectPageFixture locale="en" pathname="/projects/gourd" project={project} />);
 
+  expect(screen.getByRole("heading", { name: /^Gourd$/i })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /IMDb/i })).toHaveAttribute(
     "href",
     "https://www.imdb.com/title/tt35677249/"
@@ -338,7 +339,7 @@ test("does not render idle preview dialogs before any project media is opened", 
   expect(container.querySelectorAll("dialog")).toHaveLength(0);
 });
 
-test("archive project pages keep long english titles readable without poster-style uppercase stacking", () => {
+test("archive project pages render readable title casing instead of poster-style uppercase", () => {
   const project = getProjectBySlug("personal-video-projects");
 
   if (!project) {
@@ -349,8 +350,9 @@ test("archive project pages keep long english titles readable without poster-sty
     <ProjectPageFixture locale="en" pathname="/projects/personal-video-projects" project={project} />
   );
 
-  expect(screen.getByRole("heading", { name: /^Personal Video Projects$/i })).toBeInTheDocument();
-  expect(container.querySelector(".project-page--archive")).toBeTruthy();
-  expect(container.querySelector(".project-hero__cover")).toBeTruthy();
-  expect(container.querySelector(".project-hero__content")).toBeTruthy();
+  const title = container.querySelector(".project-page--archive .project-hero__title");
+
+  expect(title).toBeTruthy();
+  expect(title?.textContent).toBe("Personal Video Projects");
+  expect(title?.textContent).not.toMatch(/^[A-Z0-9\s/&+.'-]+$/);
 });

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { AgentModeGate } from "@/src/islands/AgentModeGate";
 
 const originalLocation = window.location;
@@ -19,6 +19,7 @@ afterEach(() => {
     configurable: true,
     value: originalLocation
   });
+  document.getElementById("agent-mode-root")?.remove();
 });
 
 test("renders full agent view and hides human content when mode=agent", () => {
@@ -44,11 +45,13 @@ test("does not render agent view without mode=agent query", () => {
   expect(document.getElementById("site-content")?.hidden).toBe(false);
 });
 
-test("renders localized chinese agent view when locale is zh", () => {
+test("renders localized chinese agent view when locale is zh", async () => {
   setSearch("?mode=agent");
 
   render(<AgentModeGate locale="zh" />);
 
-  expect(screen.getByRole("heading", { name: /项目/ })).toBeInTheDocument();
+  await waitFor(() => {
+    expect(screen.getByRole("heading", { name: /Projects \(\d+\)/ })).toBeInTheDocument();
+  });
   expect(screen.getByRole("link", { name: /\/zh\/index\.md/ })).toBeInTheDocument();
 });

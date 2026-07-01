@@ -5,7 +5,6 @@ import HeroSection from "@/src/components/HeroSection.astro";
 import JsonLd from "@/src/components/JsonLd.astro";
 import ServicesSection from "@/src/components/ServicesSection.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
-import AgentModeGate from "@/src/islands/AgentModeGate";
 import Header from "@/src/islands/Header";
 import ProjectsSection from "@/src/islands/ProjectsSection";
 import { buildOrganizationSchema } from "@/lib/jsonld";
@@ -18,11 +17,18 @@ import { buildOrganizationSchema } from "@/lib/jsonld";
     <Header client:load locale="en" pathname="/" />
     <main class="site-main--home" id="main-content">
       <HeroSection locale="en" />
-      <ProjectsSection client:load locale="en" />
+      <ProjectsSection client:visible locale="en" />
       <ServicesSection locale="en" />
       <ContactSection locale="en" />
     </main>
     <Footer locale="en" />
   </div>
-  <AgentModeGate client:only="react" locale="en" />
+  <script>
+    if (new URLSearchParams(window.location.search).get("mode") === "agent") {
+      const locale = document.documentElement.lang === "zh" ? "zh" : "en";
+      void import("@/src/islands/AgentModeGate.tsx").then(({ mountAgentModeGate }) =>
+        mountAgentModeGate(locale)
+      );
+    }
+  </script>
 </BaseLayout>
