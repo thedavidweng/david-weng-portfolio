@@ -1,6 +1,6 @@
-import { projects } from "@/content/projects";
+import { carouselProjects } from "@/content/carousel-projects";
 import { getLocalizedText } from "@/lib/i18n";
-import type { Locale, ProjectItem } from "@/types/content";
+import type { CarouselProjectItem, Locale } from "@/types/content";
 
 const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
 
@@ -13,8 +13,8 @@ export type ProjectCategoryGroup = {
   endIndex: number;
 };
 
-export const orderedProjects: ProjectItem[] = PROJECT_CATEGORY_SEQUENCE.flatMap((categoryId) =>
-  projects.filter((project) => project.category.en === categoryId)
+export const orderedProjects: CarouselProjectItem[] = PROJECT_CATEGORY_SEQUENCE.flatMap((categoryId) =>
+  carouselProjects.filter((project) => project.category.en === categoryId)
 );
 
 export function buildProjectCategoryGroups(locale: Locale): ProjectCategoryGroup[] {

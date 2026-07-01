@@ -1,3 +1,11 @@
+/**
+ * Legacy redirect helper — production redirects are handled at the Cloudflare Zone
+ * layer (always_use_https + www→apex Redirect Rule). See scripts/apply-cf-zone-free-tier.mjs.
+ *
+ * Deploy uses assets-only Workers Static Assets (no `main` in wrangler.jsonc), so this
+ * script is not invoked in production. Kept for local redirect behavior documentation.
+ */
+
 /** @typedef {{ ASSETS: { fetch: typeof fetch } }} Env */
 
 /** @type {import("cloudflare:workers").ExportedHandler<Env>} */
@@ -6,7 +14,6 @@ export default {
     const url = new URL(request.url);
     let shouldRedirect = false;
 
-    // Minimize redirects: force HTTPS and apex domain in a single jump
     if (url.protocol === "http:") {
       url.protocol = "https:";
       shouldRedirect = true;

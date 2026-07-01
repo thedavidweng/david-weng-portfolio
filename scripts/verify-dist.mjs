@@ -37,8 +37,8 @@ ok("astro.config.mjs present");
 const wranglerConfig = readFileSync(join(root, "wrangler.jsonc"), "utf8");
 assert(wranglerConfig.includes('"directory": "./dist"'), 'wrangler.jsonc must set assets.directory to "./dist"');
 assert(wranglerConfig.includes('"not_found_handling": "404-page"'), 'wrangler.jsonc must set assets.not_found_handling to "404-page"');
-assert(wranglerConfig.includes('"main": "workers/site.mjs"'), 'wrangler.jsonc must set main to workers/site.mjs for www redirect');
-assert(wranglerConfig.includes('"binding": "ASSETS"'), 'wrangler.jsonc must bind static assets as ASSETS');
+assert(!wranglerConfig.includes('"main"'), "wrangler.jsonc must use assets-only deploy (no main worker script)");
+assert(!wranglerConfig.includes("run_worker_first"), "wrangler.jsonc must not set run_worker_first (static assets are free/unlimited)");
 ok("wrangler Workers static assets config");
 
 const headersPath = join(distDir, "_headers");
@@ -50,6 +50,7 @@ assert(headers.includes("/brand/*"), "dist/_headers must cache /brand/*");
 assert(headers.includes("max-age=31536000, immutable"), "dist/_headers must set immutable long cache");
 assert(headers.includes("stale-while-revalidate=86400"), "dist/_headers must set HTML stale-while-revalidate");
 assert(!headers.includes("/projects/*\n"), "dist/_headers must not blanket-cache all /projects/* HTML");
+assert(headers.includes("/projects/fraud/"), "dist/_headers must cache project detail HTML paths");
 ok("dist/_headers cache rules");
 
 const sitemapPath = join(distDir, "sitemap.xml");

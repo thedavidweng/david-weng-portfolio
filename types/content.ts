@@ -78,6 +78,19 @@ export type FilmDetails = {
   facts: FilmInfoItem[];
 };
 
+export type CarouselProjectItem = {
+  slug: string;
+  title: LocalizedText;
+  code: string;
+  posterWord: string;
+  category: LocalizedText;
+  year: string;
+  coverLabel: LocalizedText;
+  coverPalette: [string, string, string];
+  coverImage: string;
+  teaser: LocalizedText;
+};
+
 export type ProjectItem = {
   slug: string;
   archiveGroup?: ArchiveGroup;

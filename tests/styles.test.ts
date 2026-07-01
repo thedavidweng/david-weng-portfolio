@@ -201,10 +201,12 @@ test("homepage components separate services from hero instead of rendering hero 
   expect(heroSource).not.toContain('id="services"');
   expect(homeSource).toContain("ServicesSection");
   expect(homeSource).toContain('<ServicesSection locale="en" />');
-  expect(homeSource).toContain('<ProjectsSection client:load locale="en" />');
-  expect(homeSource.indexOf('<ProjectsSection client:load locale="en" />')).toBeLessThan(
+  expect(homeSource).toContain('<ProjectsSection client:visible locale="en" />');
+  expect(homeSource.indexOf('<ProjectsSection client:visible locale="en" />')).toBeLessThan(
     homeSource.indexOf('<ServicesSection locale="en" />'),
   );
+  expect(homeSource).toContain('import("@/src/islands/AgentModeGate.tsx")');
+  expect(homeSource).not.toContain("AgentModeGate client:only");
 });
 
 test("sticky header reserves the iPhone safe-area inset instead of exposing page content behind the status bar", () => {

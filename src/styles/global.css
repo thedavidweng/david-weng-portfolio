@@ -2462,20 +2462,12 @@ main {
     color: var(--accent);
   }
 
-  .site-header__menu-backdrop[data-state="open"] {
+  .site-header__menu-backdrop--open {
     animation-name: site-menu-overlay-in;
   }
 
-  .site-header__menu-backdrop[data-state="closed"] {
-    animation-name: site-menu-overlay-out;
-  }
-
-  .site-header__menu-panel[data-state="open"] {
+  .site-header__menu-panel--open {
     animation-name: site-menu-panel-in;
-  }
-
-  .site-header__menu-panel[data-state="closed"] {
-    animation-name: site-menu-panel-out;
   }
 
   .site-header__descriptor {

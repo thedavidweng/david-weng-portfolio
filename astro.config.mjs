@@ -5,7 +5,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://davidweng.eu.org",
   output: "static",
-  prefetch: true,
+  prefetch: {
+    prefetchAll: false,
+    defaultStrategy: "hover"
+  },
   integrations: [
     react(),
     sitemap({

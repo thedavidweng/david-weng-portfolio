@@ -7,7 +7,7 @@ Portfolio site of David, focused on visual storytelling, design, content operati
 - Astro 7 (static output)
 - React 19 islands (Header, Projects carousel, media lightbox)
 - TypeScript
-- Cloudflare static assets (`wrangler deploy`)
+- Cloudflare Workers Static Assets (`wrangler deploy`, assets-only — no Worker script)
 - Vitest + Testing Library
 
 ## Local Development
