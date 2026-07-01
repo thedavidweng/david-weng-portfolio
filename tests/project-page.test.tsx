@@ -288,7 +288,7 @@ test("renders commissioned and personal video archives as video-card collections
   expect(screen.getAllByRole("link", { name: /Watch on YouTube/i })).toHaveLength(3);
 });
 
-test("opens a centered preview dialog when an archive image is clicked", async () => {
+test("opens the YARL image lightbox when an archive image is clicked", async () => {
   const user = userEvent.setup();
   const project = getProjectBySlug("designs-for-bc-ai-ecosystem");
 
@@ -300,12 +300,12 @@ test("opens a centered preview dialog when an archive image is clicked", async (
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
-  const dialog = screen.getByRole("dialog", { name: /Image preview/i });
-  expect(dialog).toBeInTheDocument();
-  expect(within(dialog).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
+  const lightbox = screen.getByRole("dialog", { name: /Image preview/i });
+  expect(lightbox).toHaveClass("project-media__lightbox");
+  expect(within(lightbox).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
 });
 
-test("clicking outside the previewed image closes the preview dialog", async () => {
+test("clicking the slide backdrop closes the YARL image lightbox", async () => {
   const user = userEvent.setup();
   const project = getProjectBySlug("designs-for-bc-ai-ecosystem");
 
@@ -319,17 +319,17 @@ test("clicking outside the previewed image closes the preview dialog", async () 
 
   await user.click(screen.getByRole("button", { name: /Preview April meetup slides/i }));
 
-  const backdrop = document.querySelector(".yarl__slide:not([inert])");
+  const slideBackdrop = document.querySelector(".yarl__slide:not([inert])");
 
-  expect(backdrop).toBeTruthy();
-  fireEvent.pointerDown(backdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
-  fireEvent.pointerUp(backdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
+  expect(slideBackdrop).toBeTruthy();
+  fireEvent.pointerDown(slideBackdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
+  fireEvent.pointerUp(slideBackdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
   await waitFor(() => {
     expect(screen.queryByRole("dialog", { name: /Image preview/i })).not.toBeInTheDocument();
   });
 });
 
-test("does not render idle preview dialogs before any project media is opened", () => {
+test("does not mount an open YARL lightbox before any project media is opened", () => {
   const project = getProjectBySlug("fraud");
 
   if (!project) {

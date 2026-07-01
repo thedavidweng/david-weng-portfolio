@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Replace the custom `<dialog>` project-media lightbox with `yet-another-react-lightbox` and its Zoom plugin so mobile archive images support pinch-to-zoom and fill the viewport
 
 ### Style
 

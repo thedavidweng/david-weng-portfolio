@@ -23,33 +23,50 @@ const previewImages: ProjectMediaItem[] = [
   }
 ];
 
+const lightboxProps = {
+  closePreviewLabel: projectDetailContent.closePreviewLabel,
+  locale: "en" as const,
+  previewDialogLabel: projectDetailContent.previewDialogLabel
+};
+
 test("renders nothing when the active index is null", () => {
   const { container } = render(
     <ProjectMediaLightbox
+      {...lightboxProps}
       activeIndex={null}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
       items={previewImages}
-      locale="en"
       onClose={() => undefined}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
     />
   );
 
   expect(container).toBeEmptyDOMElement();
 });
 
-test("closes from the close button", async () => {
+test("opens a YARL lightbox with the active slide image", () => {
+  render(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={0}
+      items={previewImages}
+      onClose={() => undefined}
+    />
+  );
+
+  const lightbox = screen.getByRole("dialog", { name: /image preview/i });
+  expect(lightbox).toHaveClass("project-media__lightbox");
+  expect(lightbox.querySelector(".yarl__slide:not([inert]) img")).toHaveAttribute("alt", "Still 01");
+});
+
+test("closes from the custom close button", async () => {
   const user = userEvent.setup();
   const onClose = vi.fn();
 
   render(
     <ProjectMediaLightbox
+      {...lightboxProps}
       activeIndex={0}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
       items={previewImages}
-      locale="en"
       onClose={onClose}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
     />
   );
 
@@ -57,19 +74,17 @@ test("closes from the close button", async () => {
   expect(onClose).toHaveBeenCalledTimes(1);
 });
 
-test("navigates with arrow keys and overlay controls when multiple images are available", async () => {
+test("reports carousel navigation through onIndexChange", async () => {
   const user = userEvent.setup();
   const onIndexChange = vi.fn();
 
   const { rerender } = render(
     <ProjectMediaLightbox
+      {...lightboxProps}
       activeIndex={0}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
       items={previewImages}
-      locale="en"
       onClose={() => undefined}
       onIndexChange={onIndexChange}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
     />
   );
 
@@ -87,15 +102,14 @@ test("navigates with arrow keys and overlay controls when multiple images are av
 
   rerender(
     <ProjectMediaLightbox
-      activeIndex={1}
-      closePreviewLabel={projectDetailContent.closePreviewLabel}
-      items={[previewImages[1]!]}
-      locale="en"
+      {...lightboxProps}
+      activeIndex={0}
+      items={[previewImages[0]!]}
       onClose={() => undefined}
       onIndexChange={onIndexChange}
-      previewDialogLabel={projectDetailContent.previewDialogLabel}
     />
   );
 
-  expect(screen.queryByRole("button", { name: /next image/i })).not.toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /next image/i })).toBeDisabled();
+  expect(screen.getByRole("button", { name: /previous image/i })).toBeDisabled();
 });

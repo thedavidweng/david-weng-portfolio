@@ -37,10 +37,11 @@ test("film media rail opens previews and cycles across stills", async () => {
     })
   );
 
-  const dialog = screen.getByRole("dialog", { name: /image preview/i });
-  const activeImage = () => dialog.querySelector(".yarl__slide:not([inert]) img");
+  const lightbox = screen.getByRole("dialog", { name: /image preview/i });
+  expect(lightbox).toHaveClass("project-media__lightbox");
+  const activeImage = () => lightbox.querySelector(".yarl__slide:not([inert]) img");
 
-  expect(within(dialog).getByRole("img", { name: new RegExp(firstStill.title.en, "i") })).toBeInTheDocument();
+  expect(within(lightbox).getByRole("img", { name: new RegExp(firstStill.title.en, "i") })).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /next image/i }));
   expect(activeImage()).toBeInTheDocument();
