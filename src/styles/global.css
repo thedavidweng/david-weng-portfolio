@@ -2023,6 +2023,10 @@ main {
   backdrop-filter: blur(6px);
 }
 
+.project-media__lightbox .yarl__toolbar {
+  display: none;
+}
+
 .project-media__lightbox .yarl__slide_image {
   touch-action: pan-x pan-y pinch-zoom;
 }
