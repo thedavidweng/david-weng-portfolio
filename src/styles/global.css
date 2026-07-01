@@ -2466,8 +2466,16 @@ main {
     animation-name: site-menu-overlay-in;
   }
 
+  .site-header__menu-backdrop--closed {
+    animation-name: site-menu-overlay-out;
+  }
+
   .site-header__menu-panel--open {
     animation-name: site-menu-panel-in;
+  }
+
+  .site-header__menu-panel--closed {
+    animation-name: site-menu-panel-out;
   }
 
   .site-header__descriptor {

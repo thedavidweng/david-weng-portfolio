@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useState } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import type { Locale } from "@/types/content";
 import { AgentView } from "@/src/islands/AgentView";
@@ -37,17 +37,12 @@ export function mountAgentModeGate(locale: Locale) {
 }
 
 export function AgentModeGate({ locale }: AgentModeGateProps) {
-  const [showAgent, setShowAgent] = useState(false);
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get("mode") !== "agent") return;
 
     mountAgentModeGate(locale);
-    setShowAgent(true);
   }, [locale]);
-
-  if (!showAgent) return null;
 
   return null;
 }

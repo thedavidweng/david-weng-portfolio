@@ -50,7 +50,7 @@ assert(headers.includes("/brand/*"), "dist/_headers must cache /brand/*");
 assert(headers.includes("max-age=31536000, immutable"), "dist/_headers must set immutable long cache");
 assert(headers.includes("stale-while-revalidate=86400"), "dist/_headers must set HTML stale-while-revalidate");
 assert(!headers.includes("/projects/*\n"), "dist/_headers must not blanket-cache all /projects/* HTML");
-assert(headers.includes("/projects/fraud/"), "dist/_headers must cache project detail HTML paths");
+assert(headers.includes("/projects/fraud/\n  Cache-Control:"), "dist/_headers must pair project HTML paths with cache headers");
 ok("dist/_headers cache rules");
 
 const sitemapPath = join(distDir, "sitemap.xml");

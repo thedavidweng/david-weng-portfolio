@@ -68,7 +68,7 @@ function buildProjectHtmlCacheRules() {
       continue;
     }
 
-    rules.push(`/projects/${slug}/`, htmlCache);
+    rules.push(`/projects/${slug}/\n${htmlCache}`);
   }
 
   if (existsSync(zhProjectsDir)) {
@@ -77,7 +77,7 @@ function buildProjectHtmlCacheRules() {
         continue;
       }
 
-      rules.push(`/zh/projects/${slug}/`, htmlCache);
+      rules.push(`/zh/projects/${slug}/\n${htmlCache}`);
     }
   }
 

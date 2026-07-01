@@ -1,10 +1,12 @@
 
-import { StrictMode, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { StrictMode, useEffect, useRef, useState, useSyncExternalStore, type RefObject } from "react";
 import type { Locale } from "@/types/content";
 import { Container } from "@/src/islands/_shared/Container";
 import { footerContent, navigationItems, siteIdentity, aboutContent, contactContent } from "@/content/site";
 import { getLocaleHomePath, getLocalizedText, toLocalePath } from "@/lib/i18n";
 import { createHeaderScrollController } from "@/lib/header-scroll";
+
+const MOBILE_MENU_CLOSE_MS = 380;
 
 type HeaderProps = {
   locale: Locale;
@@ -32,7 +34,9 @@ function MobileMenuPanel({
   switchLabel,
   externalWindowHint,
   resolveNavHref,
-  closeMenu
+  closeMenu,
+  menuAnimatedOpen,
+  panelRef
 }: {
   locale: Locale;
   menuLabel: string;
@@ -41,17 +45,26 @@ function MobileMenuPanel({
   externalWindowHint: string;
   resolveNavHref: (href: string) => string;
   closeMenu: () => void;
+  menuAnimatedOpen: boolean;
+  panelRef: RefObject<HTMLDivElement | null>;
 }) {
+  const motionClass = menuAnimatedOpen ? "site-header__menu-backdrop--open" : "site-header__menu-backdrop--closed";
+  const panelMotionClass = menuAnimatedOpen ? "site-header__menu-panel--open" : "site-header__menu-panel--closed";
+
   return (
     <>
       <button
         aria-hidden="true"
-        className="site-header__menu-backdrop site-header__menu-backdrop--open"
+        className={`site-header__menu-backdrop ${motionClass}`}
         onClick={closeMenu}
         tabIndex={-1}
         type="button"
       />
-      <div className="site-header__menu-panel site-header__menu-panel--open" id="site-mobile-menu-panel">
+      <div
+        className={`site-header__menu-panel ${panelMotionClass}`}
+        id="site-mobile-menu-panel"
+        ref={panelRef}
+      >
         <h2 className="visually-hidden">{menuLabel}</h2>
         <nav className="site-header__nav" aria-label="Main navigation">
           {navigationItems.map((item) => {
@@ -112,9 +125,13 @@ function MobileMenuPanel({
 
 export function Header({ locale, pathname }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menuRendered, setMenuRendered] = useState(false);
+  const [menuAnimatedOpen, setMenuAnimatedOpen] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [headerScrolled, setHeaderScrolled] = useState(false);
   const scrollControllerRef = useRef<ReturnType<typeof createHeaderScrollController> | null>(null);
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const menuPanelRef = useRef<HTMLDivElement>(null);
 
   if (scrollControllerRef.current === null) {
     scrollControllerRef.current = createHeaderScrollController();
@@ -179,19 +196,104 @@ export function Header({ locale, pathname }: HeaderProps) {
   }, []);
 
   useEffect(() => {
-    if (!menuOpen) {
+    if (isDesktop) {
+      setMenuRendered(false);
+      setMenuAnimatedOpen(false);
       return;
     }
 
+    if (menuOpen) {
+      setMenuRendered(true);
+      const frame = window.requestAnimationFrame(() => {
+        setMenuAnimatedOpen(true);
+      });
+
+      return () => window.cancelAnimationFrame(frame);
+    }
+
+    if (!menuRendered) {
+      return;
+    }
+
+    setMenuAnimatedOpen(false);
+    const timer = window.setTimeout(() => {
+      setMenuRendered(false);
+    }, MOBILE_MENU_CLOSE_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [isDesktop, menuOpen, menuRendered]);
+
+  useEffect(() => {
+    const siteContent = document.getElementById("site-content");
+
+    if (!siteContent) {
+      return;
+    }
+
+    if (menuRendered) {
+      siteContent.setAttribute("aria-hidden", "true");
+      siteContent.inert = true;
+      return () => {
+        siteContent.removeAttribute("aria-hidden");
+        siteContent.inert = false;
+      };
+    }
+
+    siteContent.removeAttribute("aria-hidden");
+    siteContent.inert = false;
+  }, [menuRendered]);
+
+  useEffect(() => {
+    if (!menuRendered || !menuAnimatedOpen) {
+      return;
+    }
+
+    const panel = menuPanelRef.current;
+
+    if (!panel) {
+      return;
+    }
+
+    const focusable = panel.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    first?.focus();
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        event.preventDefault();
         setMobileMenuOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab" || focusable.length === 0) {
+        return;
+      }
+
+      if (event.shiftKey) {
+        if (document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        }
+        return;
+      }
+
+      if (document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [menuOpen]);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      menuToggleRef.current?.focus();
+    };
+  }, [menuAnimatedOpen, menuRendered]);
 
   const menuLabel = locale === "zh" ? "主菜单" : "Main menu";
   const closeMenu = () => setMobileMenuOpen(false);
@@ -199,7 +301,7 @@ export function Header({ locale, pathname }: HeaderProps) {
   return (
     <StrictMode>
     <header
-      className={`site-header${isHomePath ? " site-header--home" : ""}${menuOpen ? " site-header--menu-open" : ""}${headerVisible ? " site-header--visible" : " site-header--hidden"}${headerScrolled ? " site-header--scrolled" : ""}`}
+      className={`site-header${isHomePath ? " site-header--home" : ""}${menuRendered ? " site-header--menu-open" : ""}${headerVisible ? " site-header--visible" : " site-header--hidden"}${headerScrolled ? " site-header--scrolled" : ""}`}
     >
       <Container>
         <div className="site-header__inner">
@@ -213,6 +315,7 @@ export function Header({ locale, pathname }: HeaderProps) {
             aria-label={menuOpen ? (locale === "zh" ? "关闭菜单" : "Close menu") : locale === "zh" ? "打开菜单" : "Open menu"}
             className="site-header__menu-toggle"
             onClick={() => setMobileMenuOpen((open) => !open)}
+            ref={menuToggleRef}
             type="button"
           >
             <span className="site-header__menu-icon" aria-hidden="true">
@@ -278,12 +381,14 @@ export function Header({ locale, pathname }: HeaderProps) {
             </div>
           </div>
 
-          {menuOpen ? (
+          {menuRendered ? (
             <MobileMenuPanel
               closeMenu={closeMenu}
               externalWindowHint={externalWindowHint}
               locale={locale}
+              menuAnimatedOpen={menuAnimatedOpen}
               menuLabel={menuLabel}
+              panelRef={menuPanelRef}
               resolveNavHref={resolveNavHref}
               switchHref={switchHref}
               switchLabel={switchLabel}
