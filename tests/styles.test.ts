@@ -422,6 +422,10 @@ test("project pages and media modules use open-stage containers instead of dark 
 
 test("mobile non-film project pages define tighter archive and external-handoff hero spacing rules", () => {
   const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+  const archiveGridBlocks = Array.from(css.matchAll(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/g)).map(
+    (match) => match[0]
+  );
+  const mobileArchiveGridBlock = archiveGridBlocks.find((block) => block.includes("gap: 1.1rem;")) ?? "";
 
   expect(css).toContain(".project-page--archive .project-hero__grid");
   expect(css).toContain(".project-page--archive .project-hero__content");
@@ -430,8 +434,8 @@ test("mobile non-film project pages define tighter archive and external-handoff 
   expect(css).toContain(".project-page--external-handoff .project-handoff");
   expect(css).toContain(".project-page:not(.project-page--film) .project-hero__grid");
   expect(css).toContain("grid-template-columns: 1fr;");
-  expect(css).toContain("padding: 1rem;");
-  expect(css).toContain("gap: 0.6rem;");
+  expect(mobileArchiveGridBlock).toContain("padding: 1rem;");
+  expect(mobileArchiveGridBlock).toContain("gap: 1.1rem;");
 });
 
 test("mobile archive hero titles switch out of poster uppercase styling and use a protected reading layer", () => {
