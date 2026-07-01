@@ -5,6 +5,10 @@ import { Container } from "@/src/islands/_shared/Container";
 import { footerContent, navigationItems, siteIdentity, aboutContent, contactContent } from "@/content/site";
 import { getLocaleHomePath, getLocalizedText, toLocalePath } from "@/lib/i18n";
 import { createHeaderScrollController } from "@/lib/header-scroll";
+import {
+  getMobileMenuInertTargets,
+  getMobileMenuPageShell
+} from "@/lib/mobile-menu-inert";
 
 const MOBILE_MENU_CLOSE_MS = 380;
 
@@ -224,23 +228,32 @@ export function Header({ locale, pathname }: HeaderProps) {
   }, [isDesktop, menuOpen, menuRendered]);
 
   useEffect(() => {
-    const siteContent = document.getElementById("site-content");
+    const shell = getMobileMenuPageShell();
 
-    if (!siteContent) {
+    if (!shell) {
       return;
     }
 
+    const targets = getMobileMenuInertTargets(shell);
+
     if (menuRendered) {
-      siteContent.setAttribute("aria-hidden", "true");
-      siteContent.inert = true;
+      for (const target of targets) {
+        target.setAttribute("aria-hidden", "true");
+        target.inert = true;
+      }
+
       return () => {
-        siteContent.removeAttribute("aria-hidden");
-        siteContent.inert = false;
+        for (const target of targets) {
+          target.removeAttribute("aria-hidden");
+          target.inert = false;
+        }
       };
     }
 
-    siteContent.removeAttribute("aria-hidden");
-    siteContent.inert = false;
+    for (const target of targets) {
+      target.removeAttribute("aria-hidden");
+      target.inert = false;
+    }
   }, [menuRendered]);
 
   useEffect(() => {
