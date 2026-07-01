@@ -66,6 +66,10 @@ test("mobile menu inerts only non-header page content inside site-content", asyn
     expect(headerHost?.inert).not.toBe(true);
     expect(headerHost).not.toHaveAttribute("aria-hidden");
     expect(getMobileMenuPanel()).toBeInTheDocument();
+    expect(screen.getByRole("dialog", { name: /main menu/i })).toHaveAttribute(
+      "aria-labelledby",
+      "site-mobile-menu-label"
+    );
 
     await user.keyboard("{Escape}");
 

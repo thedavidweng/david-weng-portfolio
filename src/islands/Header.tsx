@@ -65,11 +65,15 @@ function MobileMenuPanel({
         type="button"
       />
       <div
+        aria-labelledby="site-mobile-menu-label"
         className={`site-header__menu-panel ${panelMotionClass}`}
         id="site-mobile-menu-panel"
         ref={panelRef}
+        role="dialog"
       >
-        <h2 className="visually-hidden">{menuLabel}</h2>
+        <h2 className="visually-hidden" id="site-mobile-menu-label">
+          {menuLabel}
+        </h2>
         <nav className="site-header__nav" aria-label="Main navigation">
           {navigationItems.map((item) => {
             if (item.href === "#contact") return null;
