@@ -76,12 +76,15 @@ test("closes from the custom close button", async () => {
 
 test("reports carousel navigation through onIndexChange", async () => {
   const user = userEvent.setup();
-  const onIndexChange = vi.fn();
+  let activeIndex = 0;
+  const onIndexChange = vi.fn((index: number) => {
+    activeIndex = index;
+  });
 
   const { rerender } = render(
     <ProjectMediaLightbox
       {...lightboxProps}
-      activeIndex={0}
+      activeIndex={activeIndex}
       items={previewImages}
       onClose={() => undefined}
       onIndexChange={onIndexChange}
@@ -89,16 +92,43 @@ test("reports carousel navigation through onIndexChange", async () => {
   );
 
   await user.click(screen.getByRole("button", { name: /next image/i }));
-  expect(onIndexChange).toHaveBeenCalledWith(1);
+  expect(onIndexChange).toHaveBeenLastCalledWith(1);
+  rerender(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
+      onClose={() => undefined}
+      onIndexChange={onIndexChange}
+    />
+  );
 
   await user.click(screen.getByRole("button", { name: /previous image/i }));
-  expect(onIndexChange).toHaveBeenCalledWith(1);
+  expect(onIndexChange).toHaveBeenLastCalledWith(0);
+  rerender(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
+      onClose={() => undefined}
+      onIndexChange={onIndexChange}
+    />
+  );
 
   await user.keyboard("{ArrowRight}");
-  expect(onIndexChange).toHaveBeenCalledWith(1);
+  expect(onIndexChange).toHaveBeenLastCalledWith(1);
+  rerender(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={activeIndex}
+      items={previewImages}
+      onClose={() => undefined}
+      onIndexChange={onIndexChange}
+    />
+  );
 
   await user.keyboard("{ArrowLeft}");
-  expect(onIndexChange).toHaveBeenCalledWith(1);
+  expect(onIndexChange).toHaveBeenLastCalledWith(0);
 
   rerender(
     <ProjectMediaLightbox
@@ -112,4 +142,19 @@ test("reports carousel navigation through onIndexChange", async () => {
 
   expect(screen.getByRole("button", { name: /next image/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /previous image/i })).toBeDisabled();
+});
+
+test("localizes navigation labels for non-English locales", () => {
+  render(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={0}
+      items={previewImages}
+      locale="zh"
+      onClose={() => undefined}
+    />
+  );
+
+  expect(screen.getByRole("button", { name: /下一张/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /上一张/i })).toBeInTheDocument();
 });

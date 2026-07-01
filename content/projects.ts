@@ -27,6 +27,8 @@ export const projectDetailContent = {
   previewLabel: localized("Preview", "预览"),
   previewDialogLabel: localized("Image preview", "图片预览"),
   closePreviewLabel: localized("Close preview", "关闭预览"),
+  nextPreviewLabel: localized("Next image", "下一张"),
+  previousPreviewLabel: localized("Previous image", "上一张"),
   openResourceLabel: localized("Open resource", "打开资源"),
   watchOnYouTubeLabel: localized("Watch on YouTube", "前往 YouTube 观看"),
   castAndCrewTitle: localized("Cast and Crew", "演职人员"),

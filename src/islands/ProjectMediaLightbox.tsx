@@ -3,7 +3,7 @@ import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
-import { projectLabel } from "@/content/projects";
+import { projectLabel, projectDetailContent } from "@/content/projects";
 
 type ProjectMediaLightboxProps = {
   activeIndex: number | null;
@@ -62,8 +62,8 @@ export function ProjectMediaLightbox({
       index={activeIndex ?? 0}
       labels={{
         Close: closeLabel,
-        Next: "Next image",
-        Previous: "Previous image"
+        Next: projectLabel(projectDetailContent.nextPreviewLabel, locale),
+        Previous: projectLabel(projectDetailContent.previousPreviewLabel, locale)
       }}
       on={{
         view: ({ index }) => onIndexChange?.(index)
