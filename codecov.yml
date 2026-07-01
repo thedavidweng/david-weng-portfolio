@@ -14,14 +14,10 @@ coverage:
 
 component_management:
   individual_components:
-    - component_id: app
-      name: app
+    - component_id: islands
+      name: islands
       paths:
-        - app/**
-    - component_id: components
-      name: components
-      paths:
-        - components/**
+        - src/islands/**
     - component_id: lib
       name: lib
       paths:
@@ -34,8 +30,7 @@ comment:
 flags:
   unit:
     paths:
-      - app/**
-      - components/**
+      - src/**
       - lib/**
     carryforward: true
 

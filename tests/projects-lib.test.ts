@@ -1,7 +1,7 @@
 import { getLocalizedText, isLocale } from "@/lib/i18n";
 import { getProjectBySlug } from "@/lib/projects";
 
-test("resolves supported locales and bilingual project content", () => {
+test("resolves supported locales and rejects unknown locale codes", () => {
   expect(isLocale("en")).toBe(true);
   expect(isLocale("zh")).toBe(true);
   expect(isLocale("fr")).toBe(false);
@@ -14,7 +14,7 @@ test("resolves supported locales and bilingual project content", () => {
       "zh"
     )
   ).toBe("我能做什么");
-  expect(getProjectBySlug("fraud")?.slug).toBe("fraud");
+  expect(getProjectBySlug("missing-project-slug")).toBeUndefined();
   expect(getProjectBySlug("fraud")?.title.zh).toBeTruthy();
 });
 

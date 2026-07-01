@@ -10,8 +10,10 @@ test("wrangler uses assets-only deploy for free unlimited static requests", () =
 
   expect(wranglerConfig).toContain('"directory": "./dist"');
   expect(wranglerConfig).toContain('"not_found_handling": "404-page"');
+  expect(wranglerConfig).toContain('"html_handling": "auto-trailing-slash"');
   expect(wranglerConfig).not.toContain('"main"');
   expect(wranglerConfig).not.toContain("run_worker_first");
+  expect(wranglerConfig).not.toContain('"routes"');
 });
 
 test("legacy worker script still redirects www host to apex with path and query preserved", async () => {

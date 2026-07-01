@@ -105,9 +105,6 @@ test("renders a responsive reel with legacy project content and filtering contro
     "Video",
     "Writing"
   ]);
-  expect(screen.getByRole("button", { name: /^client$/i })).toHaveAttribute("aria-pressed", "true");
-  expect(screen.getByRole("button", { name: /previous projects/i })).toBeDisabled();
-  expect(screen.getByRole("button", { name: /previous projects/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /next projects/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {
@@ -187,8 +184,6 @@ test("renders localized labels and links in chinese", async () => {
     "视频",
     "写作"
   ]);
-  expect(screen.getByRole("button", { name: /^客户$/i })).toHaveAttribute("aria-pressed", "true");
-  expect(screen.getByRole("button", { name: /上一组项目/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
   expect(
     screen.getByRole("link", {

@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 test("project card title styling keeps letter-spacing stable without block highlight overrides", () => {
@@ -168,6 +168,13 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(layoutSource).toContain('rel="preload"');
   expect(layoutSource).toContain("outfit-latin-wght-normal.woff2?url");
   expect(layoutSource).toContain('fetchpriority="high"');
+  expect(layoutSource).toContain('name="theme-color"');
+  expect(layoutSource).toContain("#070607");
+  expect(layoutSource).toContain('name="color-scheme"');
+  expect(layoutSource).toContain("viewport-fit=cover");
+  expect(layoutSource).toContain('rel="apple-touch-icon"');
+  expect(layoutSource).toContain("/brand/og-image.png");
+  expect(existsSync(join(process.cwd(), "public/brand/og-image.png"))).toBe(true);
   expect(rootBlock).not.toContain("Inter Tight");
   expect(css).toContain(".site-main--home .hero__title");
   expect(css).toContain(".site-main--home .poster-section__title");
