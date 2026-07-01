@@ -89,7 +89,7 @@ test("beaty archive hydrates linked static works and YouTube video thumbnails fr
   expect(project.summary.zh).toBe("为 Beaty Biodiversity Museum 制作的手册、标识、年度报告版式与视频。");
 });
 
-test("archive-backed organization projects use the archive collection naming scheme", () => {
+test("archive-backed client organization projects keep archive titles with client-work typing", () => {
   const beaty = getProjectBySlug("beaty-biodiversity-museum-annual-report-2022-2023");
   const bcAi = getProjectBySlug("designs-for-bc-ai-ecosystem");
   const theUpgrade = getProjectBySlug("designs-for-theupgrade-ai");
