@@ -1524,7 +1524,13 @@ main {
 }
 
 .project-page--archive .project-hero__title {
-  max-width: 12ch;
+  max-width: none;
+  font-size: clamp(2.35rem, 4.5vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .project-page--film .project-hero__title {
@@ -2640,6 +2646,9 @@ main {
 
   .project-page--archive .project-hero__title {
     max-width: none;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.08;
+    text-wrap: balance;
   }
 
   .project-page--archive .project-hero__summary {

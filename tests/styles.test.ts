@@ -67,6 +67,18 @@ test("beaty video badge stays content-width inside the video card grid", () => {
   expect(videoCopyBadgeBlock).toContain("justify-self: start;");
 });
 
+test("archive-backed titles use article-scale typography instead of poster styling", () => {
+  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+  const archiveTitleBlock = css.match(/\.project-page--archive \.project-hero__title\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(archiveTitleBlock).toContain("max-width: none;");
+  expect(archiveTitleBlock).toContain("font-size: clamp(2.35rem, 4.5vw, 4.6rem);");
+  expect(archiveTitleBlock).toContain("line-height: 1.05;");
+  expect(archiveTitleBlock).toContain("text-transform: none;");
+  expect(archiveTitleBlock).toContain("overflow-wrap: normal;");
+  expect(archiveTitleBlock).toContain("text-wrap: balance;");
+});
+
 test("archive-backed hero layout gives the cover panel more width and height on detail pages", () => {
   const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveGridBlock = css.match(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/)?.[0] ?? "";
