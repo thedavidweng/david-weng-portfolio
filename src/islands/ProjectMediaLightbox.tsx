@@ -1,16 +1,17 @@
-import { useCallback, useEffect, useEffectEvent, useRef } from "react";
+import { useMemo } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
-import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
 
 type ProjectMediaLightboxProps = {
-  activeItem: ProjectMediaItem | null;
-  canNavigate?: boolean;
+  activeIndex: number | null;
   closePreviewLabel: LocalizedText;
+  items: ProjectMediaItem[];
   locale: Locale;
   onClose: () => void;
-  onNext?: () => void;
-  onPrevious?: () => void;
+  onIndexChange?: (index: number) => void;
   previewDialogLabel: LocalizedText;
 };
 
@@ -20,140 +21,79 @@ type PreviewImageItem = ProjectMediaItem & {
 };
 
 export function ProjectMediaLightbox({
-  activeItem,
-  canNavigate = false,
+  activeIndex,
   closePreviewLabel,
+  items,
   locale,
   onClose,
-  onNext,
-  onPrevious,
+  onIndexChange,
   previewDialogLabel
 }: ProjectMediaLightboxProps) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const previewItem = isPreviewImageItem(activeItem) ? activeItem : null;
-  const isOpen = previewItem !== null;
-
-  const handleCancel = useEffectEvent((e: Event) => {
-    e.preventDefault();
-    onClose();
-  });
-
-  const handleKeyDown = useEffectEvent((event: KeyboardEvent) => {
-    if (event.key === "ArrowRight" && canNavigate) {
-      event.preventDefault();
-      onNext?.();
-    } else if (event.key === "ArrowLeft" && canNavigate) {
-      event.preventDefault();
-      onPrevious?.();
-    }
-  });
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    if (!dialog.open) {
-      dialog.showModal();
-    }
-
-    return () => {
-      if (dialog.open) {
-        dialog.close();
-      }
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    const onCancel = (event: Event) => handleCancel(event);
-
-    dialog.addEventListener("cancel", onCancel);
-    return () => dialog.removeEventListener("cancel", onCancel);
-  }, []);
-
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const onKeyDown = (event: KeyboardEvent) => handleKeyDown(event);
-
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [isOpen]);
-
-  const handleBackdropClick = useCallback(() => {
-    onClose();
-  }, [onClose]);
-
-  const handleBackdropKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLButtonElement>) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        onClose();
-      }
-    },
-    [onClose]
+  const slides = useMemo(
+    () =>
+      items
+        .filter((item): item is PreviewImageItem => item.type === "image" && typeof item.src === "string")
+        .map((item) => ({
+          alt: projectLabel(item.title, locale),
+          height: item.height ?? 900,
+          src: item.src,
+          width: item.width ?? 1600
+        })),
+    [items, locale]
   );
-
-  if (!previewItem) {
-    return null;
-  }
+  const isOpen = activeIndex !== null && activeIndex >= 0 && activeIndex < slides.length;
+  const previewLabel = projectLabel(previewDialogLabel, locale);
+  const closeLabel = projectLabel(closePreviewLabel, locale);
 
   return (
-    <dialog ref={dialogRef} aria-label={projectLabel(previewDialogLabel, locale)} className="project-media__lightbox">
-      <button
-        aria-label={projectLabel(previewDialogLabel, locale)}
-        className="project-media__lightbox-backdrop"
-        onClick={handleBackdropClick}
-        onKeyDown={handleBackdropKeyDown}
-        type="button"
-      />
-      <button
-        aria-label={projectLabel(closePreviewLabel, locale)}
-        className="project-media__lightbox-close"
-        onClick={onClose}
-        type="button"
-      >
-        X
-      </button>
-      {canNavigate ? (
-        <>
+    <Lightbox
+      carousel={{
+        finite: slides.length <= 1,
+        imageFit: "contain",
+        padding: 0,
+        spacing: 0
+      }}
+      className="project-media__lightbox"
+      close={onClose}
+      controller={{
+        aria: true,
+        closeOnBackdropClick: true
+      }}
+      index={activeIndex ?? 0}
+      labels={{
+        Close: closeLabel,
+        Next: "Next image",
+        Previous: "Previous image"
+      }}
+      on={{
+        view: ({ index }) => onIndexChange?.(index)
+      }}
+      open={isOpen}
+      plugins={[Zoom]}
+      portal={{
+        container: {
+          "aria-label": previewLabel,
+          role: "dialog"
+        }
+      }}
+      render={{
+        controls: () => (
           <button
-            aria-label="Previous image"
-            className="project-media__lightbox-nav project-media__lightbox-nav--prev"
-            onClick={onPrevious}
+            aria-label={closeLabel}
+            className="project-media__lightbox-close"
+            onClick={onClose}
             type="button"
           >
-            ←
+            X
           </button>
-          <button
-            aria-label="Next image"
-            className="project-media__lightbox-nav project-media__lightbox-nav--next"
-            onClick={onNext}
-            type="button"
-          >
-            →
-          </button>
-        </>
-      ) : null}
-      <div className="project-media__lightbox-scroll">
-        <div className="project-media__lightbox-frame">
-          <PortfolioImage
-            alt={projectLabel(previewItem.title, locale)}
-            className="project-media__lightbox-image"
-            height={previewItem.height ?? 900}
-            loading="lazy"
-            sizes="90vw"
-            src={previewItem.src}
-            width={previewItem.width ?? 1600}
-          />
-        </div>
-      </div>
-    </dialog>
+        )
+      }}
+      slides={slides}
+      toolbar={{ buttons: [] }}
+      zoom={{
+        maxZoomPixelRatio: 3,
+        pinchZoomV4: true
+      }}
+    />
   );
-}
-
-function isPreviewImageItem(item: ProjectMediaItem | null): item is PreviewImageItem {
-  return item?.type === "image" && typeof item.src === "string";
 }

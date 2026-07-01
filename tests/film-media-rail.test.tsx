@@ -38,16 +38,18 @@ test("film media rail opens previews and cycles across stills", async () => {
   );
 
   const dialog = screen.getByRole("dialog", { name: /image preview/i });
+  const activeImage = () => dialog.querySelector(".yarl__slide:not([inert]) img");
+
   expect(within(dialog).getByRole("img", { name: new RegExp(firstStill.title.en, "i") })).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /next image/i }));
-  expect(within(dialog).getByRole("img")).toBeInTheDocument();
+  expect(activeImage()).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /previous image/i }));
-  expect(within(dialog).getByRole("img", { name: new RegExp(firstStill.title.en, "i") })).toBeInTheDocument();
+  expect(activeImage()).toHaveAttribute("alt", firstStill.title.en);
 
   await user.keyboard("{ArrowRight}");
-  expect(within(dialog).getByRole("img")).toBeInTheDocument();
+  expect(activeImage()).toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /close preview/i }));
   expect(screen.queryByRole("dialog", { name: /image preview/i })).not.toBeInTheDocument();
