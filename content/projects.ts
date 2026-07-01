@@ -31,7 +31,10 @@ export const projectDetailContent = {
   watchOnYouTubeLabel: localized("Watch on YouTube", "前往 YouTube 观看"),
   castAndCrewTitle: localized("Cast and Crew", "演职人员"),
   stillsTitle: localized("Stills", "剧照"),
-  postersTitle: localized("Posters", "海报")
+  postersTitle: localized("Posters", "海报"),
+  archiveLedgerLabel: localized("Archive details", "档案信息"),
+  archiveFormatsLabel: localized("Formats", "格式"),
+  archiveScopeLabel: localized("Scope", "范围")
 };
 
 const beatyCover = getArchiveCoverItem(beatyBiodiversityMuseumArchive);

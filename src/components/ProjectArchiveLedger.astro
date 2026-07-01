@@ -1,0 +1,34 @@
+---
+import { projectDetailContent, projectLabel } from "@/content/projects";
+import type { Locale, ProjectItem } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+  project: ProjectItem;
+}
+
+const { locale, project } = Astro.props;
+const roles = project.roles[locale];
+---
+
+<aside class="project-hero__archive-ledger" aria-label={projectLabel(projectDetailContent.archiveLedgerLabel, locale)}>
+  <p class="poster-section__eyebrow">{projectLabel(project.projectType, locale)}</p>
+  <div class="project-hero__archive-ledger-grid">
+    <div class="project-hero__archive-ledger-fact signal-control signal-control--micro">
+      <span>{projectLabel(projectDetailContent.archiveFormatsLabel, locale)}</span>
+      <strong>{projectLabel(project.duration, locale)}</strong>
+    </div>
+    <div class="project-hero__archive-ledger-fact signal-control signal-control--micro">
+      <span>{projectLabel(projectDetailContent.archiveScopeLabel, locale)}</span>
+      <strong>{projectLabel(project.coverLabel, locale)}</strong>
+    </div>
+  </div>
+  {roles.length > 0 ? (
+    <ul class="project-hero__archive-roles">
+      {roles.map((role) => (
+        <li class="project-hero__archive-role">{role}</li>
+      ))}
+    </ul>
+  ) : null}
+  <span class="project-hero__archive-watermark" aria-hidden="true">{project.posterWord}</span>
+</aside>

@@ -1520,7 +1520,89 @@ main {
 }
 
 .project-page--archive .project-hero__cover {
-  min-height: 560px;
+  min-height: clamp(24rem, 34vw, 30rem);
+}
+
+.project-hero__content--archive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.35rem;
+  min-height: 100%;
+}
+
+.project-hero__archive-intro--stacked {
+  display: grid;
+  gap: 0;
+}
+
+.project-hero__archive-ledger {
+  position: relative;
+  display: grid;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(var(--accent-rgb), 0.24);
+  overflow: hidden;
+}
+
+.project-hero__archive-ledger-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.project-hero__archive-ledger-fact {
+  display: grid;
+  gap: 0.18rem;
+  min-width: 0;
+  padding: 0.62rem 0.72rem;
+}
+
+.project-hero__archive-ledger-fact strong {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.project-hero__archive-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-hero__archive-role {
+  padding: 0.34rem 0.58rem;
+  border: 1px solid rgba(229, 226, 225, 0.16);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.project-hero__archive-watermark {
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.45rem;
+  z-index: 0;
+  color: rgba(var(--accent-rgb), 0.1);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.8vw, 4rem);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
 }
 
 .project-page--archive .project-hero__title {
@@ -2621,10 +2703,26 @@ main {
   .project-page--archive .project-hero__content {
     position: relative;
     z-index: 2;
+    gap: 1rem;
+    min-height: 0;
     padding: 0.95rem;
     padding-right: 0.95rem;
     border-radius: 0;
     background: transparent;
+  }
+
+  .project-hero__archive-ledger {
+    gap: 0.72rem;
+    padding-top: 0.85rem;
+  }
+
+  .project-hero__archive-ledger-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .project-hero__archive-watermark {
+    font-size: clamp(2.2rem, 14vw, 3.4rem);
   }
 
   .project-page--archive .project-hero__cover {

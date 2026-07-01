@@ -79,13 +79,25 @@ test("archive-backed titles use article-scale typography instead of poster styli
   expect(archiveTitleBlock).toContain("text-wrap: balance;");
 });
 
+test("archive-backed hero layout anchors a catalog ledger beneath the title block", () => {
+  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+  const archiveContentBlock = css.match(/\.project-hero__content--archive\s*\{[^}]+\}/)?.[0] ?? "";
+  const archiveLedgerBlock = css.match(/\.project-hero__archive-ledger\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(archiveContentBlock).toContain("justify-content: space-between;");
+  expect(archiveContentBlock).toContain("min-height: 100%;");
+  expect(archiveLedgerBlock).toContain("margin-top: auto;");
+  expect(archiveLedgerBlock).toContain("border-top: 1px solid rgba(var(--accent-rgb), 0.24);");
+  expect(css).toContain(".project-hero__archive-watermark");
+});
+
 test("archive-backed hero layout gives the cover panel more width and height on detail pages", () => {
   const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveGridBlock = css.match(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/)?.[0] ?? "";
   const archiveCoverBlock = css.match(/\.project-page--archive \.project-hero__cover\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(archiveGridBlock).toContain("grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);");
-  expect(archiveCoverBlock).toContain("min-height: 560px;");
+  expect(archiveCoverBlock).toContain("min-height: clamp(24rem, 34vw, 30rem);");
 });
 
 test("beaty video thumbnails render in a fixed 16:9 frame instead of a cropped min-height box", () => {

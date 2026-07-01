@@ -356,3 +356,26 @@ test("archive project pages render readable title casing instead of poster-style
   expect(title?.textContent).toBe("Personal Video Projects");
   expect(title?.textContent).not.toMatch(/^[A-Z0-9\s/&+.'-]+$/);
 });
+
+test("archive project pages render a bottom-anchored catalog ledger with roles and format metadata", () => {
+  const project = getProjectBySlug("beaty-biodiversity-museum-annual-report-2022-2023");
+
+  if (!project) {
+    throw new Error("Expected Beaty archive project to exist");
+  }
+
+  render(
+    <ProjectPageFixture
+      locale="en"
+      pathname="/projects/beaty-biodiversity-museum-annual-report-2022-2023"
+      project={project}
+    />
+  );
+
+  expect(screen.getByLabelText(/archive details/i)).toBeInTheDocument();
+  expect(screen.getByText("Formats")).toBeInTheDocument();
+  expect(screen.getByText("Scope")).toBeInTheDocument();
+  expect(screen.getByText("Graphic Design")).toBeInTheDocument();
+  expect(screen.getByText("Archive Curation")).toBeInTheDocument();
+  expect(document.querySelector(".project-hero__archive-watermark")).toHaveTextContent("BEATY");
+});
