@@ -148,7 +148,11 @@ const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
                         <span>{projectLabel(project.duration, locale)}</span>
                       </div>
                     </>
-                  ) : null}
+                  ) : (
+                    <div class="project-hero__cover-meta project-hero__cover-meta--archive">
+                      <span>{projectLabel(project.coverLabel, locale)}</span>
+                    </div>
+                  )}
                 </div>
               ) : null}
             </div>

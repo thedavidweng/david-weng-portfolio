@@ -32,9 +32,7 @@ export const projectDetailContent = {
   castAndCrewTitle: localized("Cast and Crew", "演职人员"),
   stillsTitle: localized("Stills", "剧照"),
   postersTitle: localized("Posters", "海报"),
-  archiveLedgerLabel: localized("Archive details", "档案信息"),
-  archiveFormatsLabel: localized("Formats", "格式"),
-  archiveScopeLabel: localized("Scope", "范围")
+  archiveLedgerLabel: localized("Archive details", "档案信息")
 };
 
 const beatyCover = getArchiveCoverItem(beatyBiodiversityMuseumArchive);
@@ -50,9 +48,9 @@ export const projects: ProjectItem[] = [
     posterWord: "BEATY",
     category: localized("Client", "客户"),
     year: "2023",
-    projectType: localized("Archive Collection", "档案集合"),
-    duration: localized("Booklet / Signage / Report / Video", "册页 / 导视 / 报告 / 视频"),
-    coverLabel: localized("Archive / Booklet / Signage / Report / Video", "档案 / 册页 / 导视 / 报告 / 视频"),
+    projectType: localized("Client work", "客户项目"),
+    duration: localized("2022–2023", "2022–2023"),
+    coverLabel: localized("Annual report, signage & booklets", "年报、导视与手册"),
     coverPalette: ["#091520", "#173c58", "#d2e8ff"],
     coverImage: beatyCover
       ? getArchiveFilePath("beaty-biodiversity-museum", beatyCover.file)
@@ -70,8 +68,8 @@ export const projects: ProjectItem[] = [
       "为 Beaty Biodiversity Museum 制作的手册、标识、年度报告版式与视频。"
     ),
     roles: localized(
-      ["Graphic Design", "Editorial Layout", "Archive Curation"],
-      ["平面设计", "编辑版式", "档案整理"]
+      ["Graphic Design", "Editorial Layout"],
+      ["平面设计", "编辑版式"]
     ),
     highlights: localized([], []),
     externalLinks: [
@@ -257,9 +255,9 @@ export const projects: ProjectItem[] = [
     posterWord: "CLIENT",
     category: localized("Video", "视频"),
     year: "2026",
-    projectType: localized("Archive Collection", "档案集合"),
-    duration: localized("Commissioned / YouTube", "委托项目 / YouTube"),
-    coverLabel: localized("Archive / Commissioned / YouTube", "档案 / 委托项目 / YouTube"),
+    projectType: localized("Commissioned video", "委托视频"),
+    duration: localized("YouTube & event edits", "YouTube 与活动剪辑"),
+    coverLabel: localized("Event recaps & promo edits", "活动回顾与宣传剪辑"),
     coverPalette: ["#0a0d14", "#24324f", "#dae7ff"],
     coverImage: "/projects/film-video/video/youtube-WlLGuSej0Yg.avif",
     coverAlt: localized(
@@ -275,8 +273,8 @@ export const projects: ProjectItem[] = [
       "受委托制作的视频项目，包括活动回顾、宣传内容等。"
     ),
     roles: localized(
-      ["Video Editing", "Motion Graphics", "Archive Curation"],
-      ["视频剪辑", "动态图形", "档案整理"]
+      ["Video Editing", "Motion Graphics"],
+      ["视频剪辑", "动态图形"]
     ),
     highlights: localized([], []),
     externalLinks: [],
@@ -290,9 +288,9 @@ export const projects: ProjectItem[] = [
     posterWord: "PERSONAL",
     category: localized("Video", "视频"),
     year: "2026",
-    projectType: localized("Archive Collection", "档案集合"),
-    duration: localized("Personal / YouTube", "个人项目 / YouTube"),
-    coverLabel: localized("Archive / Personal / YouTube", "档案 / 个人项目 / YouTube"),
+    projectType: localized("Personal video", "个人视频"),
+    duration: localized("YouTube uploads", "YouTube 发布"),
+    coverLabel: localized("Campaign edits & short experiments", "宣传剪辑与短片实验"),
     coverPalette: ["#0e1014", "#2b3d5d", "#d8e3f8"],
     coverImage: "/projects/personal-video/video/persona-5-style-campaign-video-cover.avif",
     coverAlt: localized(
@@ -308,8 +306,8 @@ export const projects: ProjectItem[] = [
       "个人视频项目，从风格化宣传片剪辑到短片实验。"
     ),
     roles: localized(
-      ["Video Editing", "Concept Development", "Archive Curation"],
-      ["视频剪辑", "概念开发", "档案整理"]
+      ["Video Editing", "Concept Development"],
+      ["视频剪辑", "概念开发"]
     ),
     highlights: localized([], []),
     externalLinks: [],
@@ -323,9 +321,9 @@ export const projects: ProjectItem[] = [
     posterWord: "BCAI",
     category: localized("Client", "客户"),
     year: "2026",
-    projectType: localized("Archive Collection", "档案集合"),
-    duration: localized("Mixed Formats", "多种尺寸"),
-    coverLabel: localized("Archive / Slides / Event Photos", "档案 / 幻灯片 / 活动照片"),
+    projectType: localized("Client work", "客户项目"),
+    duration: localized("Meetups & talks", "聚会与分享活动"),
+    coverLabel: localized("Meetup graphics & event photos", "聚会视觉与活动摄影"),
     coverPalette: ["#0b0f16", "#6f1a28", "#f2d7d4"],
     coverImage: bcAiCover
       ? getArchiveFilePath(bcAiEcosystemArchive.group, bcAiCover.file)
@@ -343,8 +341,8 @@ export const projects: ProjectItem[] = [
       "BC + AI Ecosystem 的设计工作，包括线下聚会视觉、演示文稿、社交图片与活动记录。"
     ),
     roles: localized(
-      ["Graphic Design", "Visual System", "Archive Curation"],
-      ["平面设计", "视觉系统", "档案整理"]
+      ["Graphic Design", "Visual System"],
+      ["平面设计", "视觉系统"]
     ),
     highlights: localized([], []),
     externalLinks: [],
@@ -358,9 +356,9 @@ export const projects: ProjectItem[] = [
     posterWord: "UPGRADE",
     category: localized("Client", "客户"),
     year: "2026",
-    projectType: localized("Archive Collection", "档案集合"),
-    duration: localized("Mixed Formats", "多种尺寸"),
-    coverLabel: localized("Archive / Brand Graphics / Posters", "档案 / 品牌视觉 / 海报"),
+    projectType: localized("Client work", "客户项目"),
+    duration: localized("Brand launch", "品牌发布"),
+    coverLabel: localized("Posters & social graphics", "海报与社交视觉"),
     coverPalette: ["#0c0f12", "#421728", "#e8d8db"],
     coverImage: theUpgradeCover
       ? getArchiveFilePath(theUpgradeAiArchive.group, theUpgradeCover.file)
@@ -378,8 +376,8 @@ export const projects: ProjectItem[] = [
       "TheUpgrade.AI 的视觉设计，包括海报、社交图片与品牌发布物料。"
     ),
     roles: localized(
-      ["Graphic Design", "Content Design", "Archive Curation"],
-      ["平面设计", "内容设计", "档案整理"]
+      ["Graphic Design", "Content Design"],
+      ["平面设计", "内容设计"]
     ),
     highlights: localized([], []),
     externalLinks: [],

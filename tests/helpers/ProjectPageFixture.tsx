@@ -138,18 +138,13 @@ function ProjectArchiveLedger({ locale, project }: { locale: Locale; project: Pr
   const roles = project.roles[locale];
 
   return (
-    <aside className="project-hero__archive-ledger" aria-label={projectLabel(projectDetailContent.archiveLedgerLabel, locale)}>
-      <p className="poster-section__eyebrow">{projectLabel(project.projectType, locale)}</p>
-      <div className="project-hero__archive-ledger-grid">
-        <div className="project-hero__archive-ledger-fact signal-control signal-control--micro">
-          <span>{projectLabel(projectDetailContent.archiveFormatsLabel, locale)}</span>
-          <strong>{projectLabel(project.duration, locale)}</strong>
-        </div>
-        <div className="project-hero__archive-ledger-fact signal-control signal-control--micro">
-          <span>{projectLabel(projectDetailContent.archiveScopeLabel, locale)}</span>
-          <strong>{projectLabel(project.coverLabel, locale)}</strong>
-        </div>
-      </div>
+    <aside
+      className="project-hero__archive-ledger"
+      aria-label={`${projectLabel(project.category, locale)} ${project.year}`}
+    >
+      <p className="poster-section__eyebrow">
+        {projectLabel(project.category, locale)} · {project.year}
+      </p>
       {roles.length > 0 ? (
         <ul className="project-hero__archive-roles">
           {roles.map((role) => (
@@ -522,7 +517,11 @@ export function ProjectPageFixture({ locale, pathname, project }: ProjectPageFix
                           <span>{projectLabel(project.duration, locale)}</span>
                         </div>
                       </>
-                    ) : null}
+                    ) : (
+                      <div className="project-hero__cover-meta project-hero__cover-meta--archive">
+                        <span>{projectLabel(project.coverLabel, locale)}</span>
+                      </div>
+                    )}
                   </div>
                 ) : null}
               </div>

@@ -16,8 +16,8 @@ export const carouselProjects: CarouselProjectItem[] = [
     },
     "year": "2023",
     "coverLabel": {
-      "en": "Archive / Booklet / Signage / Report / Video",
-      "zh": "档案 / 册页 / 导视 / 报告 / 视频"
+      "en": "Annual report, signage & booklets",
+      "zh": "年报、导视与手册"
     },
     "coverPalette": [
       "#091520",
@@ -156,8 +156,8 @@ export const carouselProjects: CarouselProjectItem[] = [
     },
     "year": "2026",
     "coverLabel": {
-      "en": "Archive / Commissioned / YouTube",
-      "zh": "档案 / 委托项目 / YouTube"
+      "en": "Event recaps & promo edits",
+      "zh": "活动回顾与宣传剪辑"
     },
     "coverPalette": [
       "#0a0d14",
@@ -184,8 +184,8 @@ export const carouselProjects: CarouselProjectItem[] = [
     },
     "year": "2026",
     "coverLabel": {
-      "en": "Archive / Personal / YouTube",
-      "zh": "档案 / 个人项目 / YouTube"
+      "en": "Campaign edits & short experiments",
+      "zh": "宣传剪辑与短片实验"
     },
     "coverPalette": [
       "#0e1014",
@@ -212,8 +212,8 @@ export const carouselProjects: CarouselProjectItem[] = [
     },
     "year": "2026",
     "coverLabel": {
-      "en": "Archive / Slides / Event Photos",
-      "zh": "档案 / 幻灯片 / 活动照片"
+      "en": "Meetup graphics & event photos",
+      "zh": "聚会视觉与活动摄影"
     },
     "coverPalette": [
       "#0b0f16",
@@ -240,8 +240,8 @@ export const carouselProjects: CarouselProjectItem[] = [
     },
     "year": "2026",
     "coverLabel": {
-      "en": "Archive / Brand Graphics / Posters",
-      "zh": "档案 / 品牌视觉 / 海报"
+      "en": "Posters & social graphics",
+      "zh": "海报与社交视觉"
     },
     "coverPalette": [
       "#0c0f12",

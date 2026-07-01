@@ -102,8 +102,9 @@ test("archive-backed organization projects use the archive collection naming sch
     expect(project.title.en).toMatch(/^Archive for /);
     expect(project.category.en).toBe("Client");
     expect(project.category.zh).toBe("客户");
-    expect(project.projectType.en).toBe("Archive Collection");
-    expect(project.projectType.zh).toBe("档案集合");
+    expect(project.projectType.en).toBe("Client work");
+    expect(project.projectType.zh).toBe("客户项目");
+    expect(project.roles.en).not.toContain("Archive Curation");
   });
 });
 

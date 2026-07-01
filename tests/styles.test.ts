@@ -88,6 +88,7 @@ test("archive-backed hero layout anchors a catalog ledger beneath the title bloc
   expect(archiveContentBlock).toContain("min-height: 100%;");
   expect(archiveLedgerBlock).toContain("margin-top: auto;");
   expect(archiveLedgerBlock).toContain("border-top: 1px solid rgba(var(--accent-rgb), 0.24);");
+  expect(css).toContain(".project-hero__cover-meta--archive");
   expect(css).toContain(".project-hero__archive-watermark");
 });
 

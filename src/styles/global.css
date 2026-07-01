@@ -1539,34 +1539,11 @@ main {
 .project-hero__archive-ledger {
   position: relative;
   display: grid;
-  gap: 0.8rem;
+  gap: 0.7rem;
   margin-top: auto;
   padding-top: 1rem;
   border-top: 1px solid rgba(var(--accent-rgb), 0.24);
   overflow: hidden;
-}
-
-.project-hero__archive-ledger-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.6rem;
-}
-
-.project-hero__archive-ledger-fact {
-  display: grid;
-  gap: 0.18rem;
-  min-width: 0;
-  padding: 0.62rem 0.72rem;
-}
-
-.project-hero__archive-ledger-fact strong {
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: 0;
-  text-transform: none;
 }
 
 .project-hero__archive-roles {
@@ -1652,6 +1629,23 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+}
+
+.project-hero__cover-meta--archive {
+  width: 100%;
+  margin-top: auto;
+  padding: 0 0.95rem 0.95rem;
+}
+
+.project-hero__cover-meta--archive span {
+  max-width: 28rem;
+  line-height: 1.45;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.project-page--archive .project-hero__cover {
+  align-items: flex-end;
 }
 
 .project-film__poster {
@@ -2717,28 +2711,32 @@ main {
     background: transparent;
   }
 
-  .project-hero__archive-ledger-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
   .project-hero__archive-watermark {
     font-size: clamp(2.2rem, 14vw, 3.4rem);
   }
 
   .project-page--archive .project-hero__cover {
     min-height: clamp(16rem, 58vw, 22rem);
-    align-items: stretch;
+    align-items: flex-end;
     padding: 0;
   }
 
   .project-page--archive .project-hero__cover::after {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.42));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.72));
   }
 
   .project-page--archive .project-hero__cover-image {
-    opacity: 0.88;
+    opacity: 0.9;
     object-position: center 32%;
+  }
+
+  .project-hero__cover-meta--archive {
+    padding: 0 0.9rem 0.9rem;
+  }
+
+  .project-hero__cover-meta--archive span {
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
   }
 
   .project-page--archive .project-hero__title {
