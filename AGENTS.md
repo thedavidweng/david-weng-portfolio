@@ -42,6 +42,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 ### When adding, removing, or renaming a project
 
 - [ ] Update `content/projects.ts` (canonical source)
+- [ ] Run `pnpm generate:carousel` and commit `content/carousel-projects.ts` (CI fails if stale)
 - [ ] Verify `lib/llms-txt.ts` auto-renders the new project
 - [ ] Verify `lib/llms-full.ts` auto-renders the new project
 - [ ] Verify `lib/index-md.ts` auto-renders the new project

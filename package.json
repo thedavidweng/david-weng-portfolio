@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "astro dev",
     "subset:fonts": "node scripts/subset-cjk-fonts.mjs",
-    "prebuild": "pnpm subset:fonts && pnpm exec vitest run tests/generate-carousel-projects.test.ts",
+    "generate:carousel": "GENERATE_CAROUSEL=1 vitest run tests/generate-carousel-projects.test.ts -t regenerate",
+    "prebuild": "pnpm subset:fonts",
     "build": "astro build && node scripts/write-headers.mjs",
     "verify:dist": "node scripts/verify-dist.mjs",
     "preview": "pnpm build && wrangler dev",
@@ -18,7 +19,7 @@
     "typecheck": "astro check && tsc --noEmit",
     "lint": "oxlint --fix",
     "lint:check": "oxlint",
-    "test": "vitest run tests/generate-carousel-projects.test.ts && vitest run"
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/react": "6.0.0",
