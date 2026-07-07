@@ -39,8 +39,7 @@ assert(wranglerConfig.includes('"directory": "./dist"'), 'wrangler.jsonc must se
 assert(wranglerConfig.includes('"not_found_handling": "404-page"'), 'wrangler.jsonc must set assets.not_found_handling to "404-page"');
 assert(wranglerConfig.includes('"main": "workers/site.mjs"'), 'wrangler.jsonc must set main to workers/site.mjs for www redirect');
 assert(wranglerConfig.includes('"binding": "ASSETS"'), 'wrangler.jsonc must bind static assets as ASSETS');
-assert(wranglerConfig.includes('"cache"'), 'wrangler.jsonc must enable Workers Cache');
-assert(wranglerConfig.includes('"enabled": true'), 'wrangler.jsonc must enable Workers Cache');
+assert(/"cache"\s*:\s*\{\s*"enabled"\s*:\s*true\s*\}/.test(wranglerConfig), 'wrangler.jsonc must enable Workers Cache');
 ok("wrangler Workers static assets config");
 
 const headersPath = join(distDir, "_headers");

@@ -9,6 +9,5 @@ test("wrangler Workers static assets config points at dist output", () => {
   expect(wranglerConfig).toContain('"html_handling": "none"');
   expect(wranglerConfig).toContain('"observability"');
   expect(wranglerConfig).not.toContain('"routes"');
-  expect(wranglerConfig).toContain('"cache"');
-  expect(wranglerConfig).toContain('"enabled": true');
+  expect(wranglerConfig).toMatch(/"cache"\s*:\s*\{\s*"enabled"\s*:\s*true\s*\}/);
 });
