@@ -4,6 +4,9 @@
   "main": "workers/site.mjs",
   "compatibility_date": "2026-06-30",
   "workers_dev": false,
+  "cache": {
+    "enabled": true
+  },
   "preview_urls": false,
   "observability": {
     "enabled": true,

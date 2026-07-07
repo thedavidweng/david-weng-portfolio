@@ -11,6 +11,7 @@ test("redirects www host to apex with path and query preserved", async () => {
 
   expect(response.status).toBe(301);
   expect(response.headers.get("Location")).toBe(`${APEX}/projects/fraud/?lang=en`);
+  expect(response.headers.get("Cache-Control")).toMatch(/max-age=86400/);
 });
 
 test("serves assets on apex host", async () => {

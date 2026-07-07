@@ -18,7 +18,13 @@ export default {
     }
 
     if (shouldRedirect) {
-      return Response.redirect(url.toString(), 301);
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: url.toString(),
+          "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      });
     }
 
     return env.ASSETS.fetch(request);
