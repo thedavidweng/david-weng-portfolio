@@ -8,16 +8,15 @@ import {
   navigationItems
 } from "@/content/site";
 import { projects } from "@/content/projects";
-
-export const SITE_URL = "https://davidweng.eu.org";
-export const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
+import { SITE_URL } from "@/lib/site-config";
+import { getLocalizedText, getLocalizedValue } from "@/lib/i18n";
 
 export function formatServices(locale: Locale): string {
   return servicesContent.items
     .map(
-      (s) => `### ${s.title[locale]}
+      (s) => `### ${getLocalizedText(s.title, locale)}
 
-${s.description[locale]}`
+${getLocalizedText(s.description, locale)}`
     )
     .join("\n\n");
 }
@@ -25,11 +24,11 @@ ${s.description[locale]}`
 export function formatProjects(locale: Locale): string {
   return projects
     .map(
-      (p) => `- **[${p.code} ${p.title[locale]}](${SITE_URL}/projects/${p.slug})** (${p.year})
-  - Category: ${p.category[locale]}
-  - Type: ${p.projectType[locale]}
-  - Roles: ${p.roles[locale].join(", ")}
-  - ${p.summary[locale]}`
+      (p) => `- **[${p.code} ${getLocalizedText(p.title, locale)}](${SITE_URL}/projects/${p.slug})** (${p.year})
+  - Category: ${getLocalizedText(p.category, locale)}
+  - Type: ${getLocalizedText(p.projectType, locale)}
+  - Roles: ${getLocalizedValue(p.roles, locale).join(", ")}
+  - ${getLocalizedText(p.summary, locale)}`
     )
     .join("\n\n");
 }
@@ -39,11 +38,11 @@ export function buildAgentData(locale: Locale) {
     identity: {
       name: siteIdentity.name,
       fullName: siteIdentity.fullName,
-      roles: siteIdentity.roles[locale]
+      roles: getLocalizedValue(siteIdentity.roles, locale)
     },
     hero: {
-      kicker: heroContent.kicker[locale],
-      support: heroContent.support[locale]
+      kicker: getLocalizedText(heroContent.kicker, locale),
+      support: getLocalizedText(heroContent.support, locale)
     },
     location: {
       city: "Vancouver",
@@ -51,21 +50,21 @@ export function buildAgentData(locale: Locale) {
       workingScope: "Global"
     },
     services: servicesContent.items.map((s) => ({
-      name: s.title[locale],
-      description: s.description[locale]
+      name: getLocalizedText(s.title, locale),
+      description: getLocalizedText(s.description, locale)
     })),
     projects: projects.map((p) => ({
       slug: p.slug,
-      title: p.title[locale],
-      category: p.category[locale],
+      title: getLocalizedText(p.title, locale),
+      category: getLocalizedText(p.category, locale),
       year: p.year,
-      type: p.projectType[locale],
-      roles: p.roles[locale],
-      summary: p.summary[locale],
+      type: getLocalizedText(p.projectType, locale),
+      roles: getLocalizedValue(p.roles, locale),
+      summary: getLocalizedText(p.summary, locale),
       url: `${SITE_URL}/projects/${p.slug}`
     })),
     navigation: navigationItems.map((item) => ({
-      label: item.label[locale],
+      label: getLocalizedText(item.label, locale),
       href: item.href
     })),
     contact: {

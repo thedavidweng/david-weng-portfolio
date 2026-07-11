@@ -121,3 +121,11 @@ export const footerContent = {
   languageLabel: localized("中文", "EN"),
   externalWindowHint: localized("opens in new tab", "将在新标签页打开")
 };
+
+export const headerContent = {
+  menuLabel: localized("Main menu", "主菜单"),
+  openMenuLabel: localized("Open menu", "打开菜单"),
+  closeMenuLabel: localized("Close menu", "关闭菜单"),
+  socialLinksLabel: localized("Social links", "社交链接"),
+  contactButtonLabel: localized("CONTACT", "联系")
+};

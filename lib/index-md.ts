@@ -6,7 +6,8 @@ import {
   aboutContent,
   navigationItems
 } from "@/content/site";
-import { SITE_URL, formatServices, formatProjects } from "@/lib/agent-content";
+import { formatServices, formatProjects } from "@/lib/agent-content";
+import { SITE_URL } from "@/lib/site-config";
 
 export function generateIndexMd(locale: Locale): string {
   const roles = siteIdentity.roles[locale].join(", ");

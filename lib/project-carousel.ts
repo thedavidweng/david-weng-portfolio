@@ -2,7 +2,7 @@ import { carouselProjects } from "@/content/carousel-projects";
 import { getLocalizedText } from "@/lib/i18n";
 import type { CarouselProjectItem, Locale } from "@/types/content";
 
-const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
+export const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
 
 export type ProjectCategoryId = (typeof PROJECT_CATEGORY_SEQUENCE)[number];
 
@@ -17,26 +17,46 @@ export const orderedProjects: CarouselProjectItem[] = PROJECT_CATEGORY_SEQUENCE.
   carouselProjects.filter((project) => project.category.en === categoryId)
 );
 
+/**
+ * Build category groups with start/end indices into `orderedProjects`.
+ *
+ * Single-pass O(n) implementation: iterates `orderedProjects` once, tracking
+ * the current category and emitting a group each time the category changes.
+ */
 export function buildProjectCategoryGroups(locale: Locale): ProjectCategoryGroup[] {
-  return PROJECT_CATEGORY_SEQUENCE.reduce<ProjectCategoryGroup[]>((groups, categoryId) => {
-    const startIndex = orderedProjects.findIndex((project) => project.category.en === categoryId);
+  const groups: ProjectCategoryGroup[] = [];
+  let currentGroupId: ProjectCategoryId | null = null;
+  let currentStart = 0;
 
-    if (startIndex === -1) {
-      return groups;
+  for (let index = 0; index < orderedProjects.length; index++) {
+    const project = orderedProjects[index];
+    const categoryId = project.category.en as ProjectCategoryId;
+
+    if (categoryId !== currentGroupId) {
+      if (currentGroupId !== null) {
+        groups.push({
+          id: currentGroupId,
+          label: getLocalizedText(orderedProjects[currentStart].category, locale),
+          startIndex: currentStart,
+          endIndex: index - 1
+        });
+      }
+
+      currentGroupId = categoryId;
+      currentStart = index;
     }
+  }
 
-    const categoryProjects = orderedProjects.filter((project) => project.category.en === categoryId);
-    const endIndex = startIndex + categoryProjects.length - 1;
-
+  if (currentGroupId !== null) {
     groups.push({
-      id: categoryId,
-      label: getLocalizedText(categoryProjects[0].category, locale),
-      startIndex,
-      endIndex
+      id: currentGroupId,
+      label: getLocalizedText(orderedProjects[currentStart].category, locale),
+      startIndex: currentStart,
+      endIndex: orderedProjects.length - 1
     });
+  }
 
-    return groups;
-  }, []);
+  return groups;
 }
 
 export function getCategoryBySnap(groups: ProjectCategoryGroup[], snapIndex: number) {

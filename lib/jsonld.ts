@@ -7,8 +7,7 @@ import {
   contactContent,
   aboutContent
 } from "@/content/site";
-
-const SITE_URL = "https://davidweng.eu.org";
+import { SITE_URL } from "@/lib/site-config";
 
 export function buildPersonSchema(locale: Locale) {
   const services = servicesContent.items;

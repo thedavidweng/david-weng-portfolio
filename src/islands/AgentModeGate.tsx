@@ -3,12 +3,20 @@ import { createRoot, type Root } from "react-dom/client";
 import type { Locale } from "@/types/content";
 import { AgentView } from "@/src/islands/AgentView";
 
-type AgentModeGateProps = {
-  locale: Locale;
-};
-
+/**
+ * Module-level singleton ensuring that repeated calls unmount the previous
+ * React tree before mounting a new one, preventing leaked roots.
+ */
 let agentRoot: Root | null = null;
 
+/**
+ * Mount the agent-mode panel into a dedicated root element.
+ *
+ * Called directly from an inline <script> in the homepage pages
+ * (src/pages/index.astro, src/pages/zh/index.astro) when ?mode=agent is
+ * present in the URL. The panel replaces the normal site content with a
+ * simplified, agent-optimized HTML view.
+ */
 export function mountAgentModeGate(locale: Locale) {
   const siteContent = document.getElementById("site-content");
 
@@ -32,10 +40,22 @@ export function mountAgentModeGate(locale: Locale) {
   agentRoot.render(
     <StrictMode>
       <AgentView locale={locale} />
-    </StrictMode>
+    </StrictMode>,
   );
 }
 
+type AgentModeGateProps = {
+  locale: Locale;
+};
+
+/**
+ * Testable React wrapper around `mountAgentModeGate`.
+ *
+ * In production, the homepage pages call `mountAgentModeGate` directly via an
+ * inline <script> tag (not as a hydrated Astro island). This component exists
+ * so that the gate's `?mode=agent` query-param check and mounting behavior can
+ * be tested with React Testing Library.
+ */
 export function AgentModeGate({ locale }: AgentModeGateProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

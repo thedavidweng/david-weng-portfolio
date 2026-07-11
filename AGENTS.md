@@ -27,6 +27,8 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `content/projects.ts` | `src/pages/projects/*.astro`, `src/islands/AgentView.tsx`, `src/pages/agent.ts`, `lib/llms-txt.ts`, `lib/llms-full.ts`, `lib/index-md.ts` |
 | `content/film-data.ts` | Film project detail pages, archive layouts |
 | `content/archives/*.ts` | Archive project pages, agent project listings |
+| `lib/site-config.ts` | `SITE_URL`, `SITEMAP_URL` — single source for all URL constants |
+| `src/icons.ts` | Shared SVG path data for social/external-link icons (Header, Footer, ArchiveMediaWall, ProjectExternalLinkButton) |
 
 ### Dual-Maintenance Content
 

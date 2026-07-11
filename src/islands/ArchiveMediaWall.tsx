@@ -1,9 +1,15 @@
 import { StrictMode, useMemo, useState, useSyncExternalStore } from "react";
-import { RowsPhotoAlbum, StaticPhotoAlbum, computeRowsLayout, type Photo } from "react-photo-album";
+import {
+  RowsPhotoAlbum,
+  StaticPhotoAlbum,
+  computeRowsLayout,
+  type Photo,
+} from "react-photo-album";
 import "react-photo-album/rows.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
+import { YOUTUBE_ICON_PATH, EXTERNAL_LINK_ICON_PATH } from "@/src/icons";
 
 type ArchiveMediaWallProps = {
   locale: Locale;
@@ -12,6 +18,12 @@ type ArchiveMediaWallProps = {
   previewLabel: LocalizedText;
   previewDialogLabel: LocalizedText;
   closePreviewLabel: LocalizedText;
+};
+
+type DimensionalMediaItem = ProjectMediaItem & {
+  src: string;
+  width: number;
+  height: number;
 };
 
 type ArchivePhoto = Photo & {
@@ -24,6 +36,23 @@ type OverlayLinkMeta = {
   platform: "youtube" | "generic";
 };
 
+const STATIC_ALBUM_CONTAINER_WIDTH = 1280;
+const STATIC_ALBUM_ROW_HEIGHT = 320;
+const STATIC_ALBUM_SPACING = 18;
+const STATIC_ALBUM_PADDING = 0;
+const STATIC_ALBUM_MIN_PHOTOS = 1;
+
+function isDimensionalImageItem(
+  item: ProjectMediaItem,
+): item is DimensionalMediaItem {
+  return (
+    item.type === "image" &&
+    Boolean(item.src) &&
+    Boolean(item.width) &&
+    Boolean(item.height)
+  );
+}
+
 function getOverlayLinkMeta(href: string): OverlayLinkMeta {
   try {
     const hostname = new URL(href).hostname.replace(/^www\./, "");
@@ -32,7 +61,7 @@ function getOverlayLinkMeta(href: string): OverlayLinkMeta {
       return {
         icon: "youtube",
         label: "YouTube",
-        platform: "youtube"
+        platform: "youtube",
       };
     }
   } catch {
@@ -42,190 +71,19 @@ function getOverlayLinkMeta(href: string): OverlayLinkMeta {
   return {
     icon: "external",
     label: "Open",
-    platform: "generic"
+    platform: "generic",
   };
 }
 
-export function ArchiveMediaWall({
-  locale,
-  items,
-  photoCreditLabel,
-  previewLabel,
-  previewDialogLabel,
-  closePreviewLabel
-}: ArchiveMediaWallProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const imageItems = useMemo(
-    () =>
-      items.filter(
-        (item): item is ProjectMediaItem & { src: string; width: number; height: number } =>
-          item.type === "image" && Boolean(item.src) && Boolean(item.width) && Boolean(item.height)
-      ),
-    [items]
-  );
-  const supportsResponsiveAlbum = useSyncExternalStore(
-    subscribeToMediaWallEnhancement,
-    getResponsiveAlbumSnapshot,
-    getStaticAlbumSnapshot
-  );
-  const photos = useMemo<ArchivePhoto[]>(
-    () =>
-      items
-        .filter((item): item is ProjectMediaItem & { src: string; width: number; height: number } => {
-          return item.type === "image" && Boolean(item.src) && Boolean(item.width) && Boolean(item.height);
-        })
-        .map((item) => {
-          const title = projectLabel(item.title, locale);
-
-          return {
-            key: `${title}-${item.src}`,
-            src: item.src,
-            width: item.width,
-            height: item.height,
-            alt: title,
-            title,
-            label: `${projectLabel(previewLabel, locale)} ${title}`,
-            item
-          };
-        }),
-    [items, locale, previewLabel]
-  );
-  const staticModel = useMemo(
-    () =>
-      computeRowsLayout(
-        photos,
-        18,
-        0,
-        1280,
-        320,
-        1
-      ),
-    [photos]
-  );
-
-  const sharedAlbumProps = {
-    componentsProps: {
-      button: ({ photo }: { photo: ArchivePhoto }) => ({
-        "aria-label": photo.label,
-        className: "project-media__rows-button"
-      }),
-      container: {
-        className: "project-media__wall project-media__wall--rows"
-      },
-      image: {
-        className: "project-media__rows-image",
-        decoding: "async" as const,
-        loading: "lazy" as const
-      },
-      wrapper: ({ photo }: { photo: ArchivePhoto }) => ({
-        className: `project-media__rows-item${photo.item.layout ? ` project-media__rows-item--${photo.item.layout}` : ""}`
-      })
-    },
-    onClick: ({ index }: { index: number }) => setActiveIndex(index),
-    photos,
-    render: {
-      extras: (_props: object, { photo }: { photo: ArchivePhoto }) => {
-        if (!photo.item.href && !photo.item.credit) {
-          return null;
-        }
-
-        const linkMeta = photo.item.href ? getOverlayLinkMeta(photo.item.href) : null;
-
-        return (
-          <div className="project-media__wall-overlay">
-            {photo.item.credit ? (
-              <span className="project-media__wall-credit">
-                {projectLabel(photoCreditLabel, locale)}:{" "}
-                <a href={photo.item.credit.href} onClick={(event) => event.stopPropagation()} rel="noreferrer" target="_blank">
-                  {projectLabel(photo.item.credit.label, locale)}
-                  <span className="visually-hidden">(opens in new tab)</span>
-                </a>
-              </span>
-            ) : (
-              <span />
-            )}
-            {photo.item.href && linkMeta ? (
-              <a
-                className={`project-media__wall-link-indicator project-media__wall-link-indicator--${linkMeta.platform}`}
-                href={photo.item.href}
-                onClick={(event) => event.stopPropagation()}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <ArchiveOverlayIcon type={linkMeta.icon} />
-                <span>{linkMeta.label}</span>
-                <span className="visually-hidden">(opens in new tab)</span>
-              </a>
-            ) : null}
-          </div>
-        );
-      }
-    },
-    sizes: {
-      size: "100vw",
-      sizes: [
-        {
-          viewport: "(max-width: 760px)",
-          size: "calc(100vw - 32px)"
-        },
-        {
-          viewport: "(max-width: 1200px)",
-          size: "calc(100vw - 64px)"
-        },
-        {
-          viewport: "(max-width: 1600px)",
-          size: "calc(100vw - 96px)"
-        },
-        {
-          viewport: "(min-width: 1601px)",
-          size: "1400px"
-        }
-      ]
-    }
-  };
-
-  return (
-    <StrictMode>
-    <>
-      {supportsResponsiveAlbum ? (
-        <RowsPhotoAlbum
-          {...sharedAlbumProps}
-          defaultContainerWidth={1280}
-          padding={0}
-          rowConstraints={{
-            minPhotos: 1,
-            singleRowMaxHeight: 560
-          }}
-          spacing={(containerWidth) => (containerWidth < 760 ? 12 : 18)}
-          targetRowHeight={(containerWidth) => {
-            if (containerWidth < 760) {
-              return 180;
-            }
-
-            if (containerWidth < 1200) {
-              return 240;
-            }
-
-            return 320;
-          }}
-        />
-      ) : staticModel ? (
-        <StaticPhotoAlbum {...sharedAlbumProps} layout="rows" model={staticModel} />
-      ) : null}
-      <ProjectMediaLightbox
-        activeIndex={activeIndex}
-        closePreviewLabel={closePreviewLabel}
-        items={imageItems}
-        locale={locale}
-        onClose={() => setActiveIndex(null)}
-        previewDialogLabel={previewDialogLabel}
-      />
-    </>
-    </StrictMode>
-  );
-}
-
-function subscribeToMediaWallEnhancement() {
+/**
+ * `useSyncExternalStore` for SSR-safe feature detection of `ResizeObserver`.
+ * The subscribe function is a no-op because `ResizeObserver` availability is
+ * static — it never changes during a component's lifetime — so there is nothing
+ * to subscribe to. `useSyncExternalStore` is still used (rather than a plain
+ * `useState`/`useMemo`) because it provides the `getServerSnapshot` parameter,
+ * which keeps SSR output deterministic.
+ */
+function subscribeToResponsiveAlbum() {
   return () => {};
 }
 
@@ -237,24 +95,202 @@ function getStaticAlbumSnapshot() {
   return false;
 }
 
-function ArchiveOverlayIcon({ type }: { type: OverlayLinkMeta["icon"] }) {
-  if (type === "youtube") {
-    return (
-      <svg aria-hidden="true" className="project-media__wall-link-icon" viewBox="0 0 24 24">
-        <path
-          d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.5 15.7V8.3l6.4 3.7-6.4 3.7Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
+export function ArchiveMediaWall({
+  locale,
+  items,
+  photoCreditLabel,
+  previewLabel,
+  previewDialogLabel,
+  closePreviewLabel,
+}: ArchiveMediaWallProps) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const supportsResponsiveAlbum = useSyncExternalStore(
+    subscribeToResponsiveAlbum,
+    getResponsiveAlbumSnapshot,
+    getStaticAlbumSnapshot,
+  );
+
+  const dimensionalItems = useMemo(
+    () => items.filter(isDimensionalImageItem),
+    [items],
+  );
+
+  const photos = useMemo<ArchivePhoto[]>(
+    () =>
+      dimensionalItems.map((item) => {
+        const title = projectLabel(item.title, locale);
+
+        return {
+          key: `${title}-${item.src}`,
+          src: item.src,
+          width: item.width,
+          height: item.height,
+          alt: title,
+          title,
+          label: `${projectLabel(previewLabel, locale)} ${title}`,
+          item,
+        };
+      }),
+    [dimensionalItems, locale, previewLabel],
+  );
+
+  const staticModel = useMemo(
+    () =>
+      computeRowsLayout(
+        photos,
+        STATIC_ALBUM_SPACING,
+        STATIC_ALBUM_PADDING,
+        STATIC_ALBUM_CONTAINER_WIDTH,
+        STATIC_ALBUM_ROW_HEIGHT,
+        STATIC_ALBUM_MIN_PHOTOS,
+      ),
+    [photos],
+  );
+
+  const sharedAlbumProps = useMemo(
+    () => ({
+      componentsProps: {
+        button: ({ photo }: { photo: ArchivePhoto }) => ({
+          "aria-label": photo.label,
+          className: "project-media__rows-button",
+        }),
+        container: {
+          className: "project-media__wall project-media__wall--rows",
+        },
+        image: {
+          className: "project-media__rows-image",
+          decoding: "async" as const,
+          loading: "lazy" as const,
+        },
+        wrapper: ({ photo }: { photo: ArchivePhoto }) => ({
+          className: `project-media__rows-item${photo.item.layout ? ` project-media__rows-item--${photo.item.layout}` : ""}`,
+        }),
+      },
+      onClick: ({ index }: { index: number }) => setActiveIndex(index),
+      photos,
+      render: {
+        extras: (_props: object, { photo }: { photo: ArchivePhoto }) => {
+          if (!photo.item.href && !photo.item.credit) {
+            return null;
+          }
+
+          const linkMeta = photo.item.href
+            ? getOverlayLinkMeta(photo.item.href)
+            : null;
+
+          return (
+            <div className="project-media__wall-overlay">
+              {photo.item.credit ? (
+                <span className="project-media__wall-credit">
+                  {projectLabel(photoCreditLabel, locale)}:{" "}
+                  <a
+                    href={photo.item.credit.href}
+                    onClick={(event) => event.stopPropagation()}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {projectLabel(photo.item.credit.label, locale)}
+                    <span className="visually-hidden">(opens in new tab)</span>
+                  </a>
+                </span>
+              ) : null}
+              {photo.item.href && linkMeta ? (
+                <a
+                  className={`project-media__wall-link-indicator project-media__wall-link-indicator--${linkMeta.platform}`}
+                  href={photo.item.href}
+                  onClick={(event) => event.stopPropagation()}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <ArchiveOverlayIcon type={linkMeta.icon} />
+                  <span>{linkMeta.label}</span>
+                  <span className="visually-hidden">(opens in new tab)</span>
+                </a>
+              ) : null}
+            </div>
+          );
+        },
+      },
+      sizes: {
+        size: "100vw",
+        sizes: [
+          {
+            viewport: "(max-width: 760px)",
+            size: "calc(100vw - 32px)",
+          },
+          {
+            viewport: "(max-width: 1200px)",
+            size: "calc(100vw - 64px)",
+          },
+          {
+            viewport: "(max-width: 1600px)",
+            size: "calc(100vw - 96px)",
+          },
+          {
+            viewport: "(min-width: 1601px)",
+            size: "1400px",
+          },
+        ],
+      },
+    }),
+    [photos, locale, photoCreditLabel],
+  );
 
   return (
-    <svg aria-hidden="true" className="project-media__wall-link-icon" viewBox="0 0 24 24">
-      <path
-        d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3Zm4 14v4H3V6h4v2H5v11h11v-2h2Z"
-        fill="currentColor"
-      />
+    <StrictMode>
+      <>
+        {supportsResponsiveAlbum ? (
+          <RowsPhotoAlbum
+            {...sharedAlbumProps}
+            defaultContainerWidth={STATIC_ALBUM_CONTAINER_WIDTH}
+            padding={0}
+            rowConstraints={{
+              minPhotos: 1,
+              singleRowMaxHeight: 560,
+            }}
+            spacing={(containerWidth) => (containerWidth < 760 ? 12 : 18)}
+            targetRowHeight={(containerWidth) => {
+              if (containerWidth < 760) {
+                return 180;
+              }
+
+              if (containerWidth < 1200) {
+                return 240;
+              }
+
+              return 320;
+            }}
+          />
+        ) : staticModel ? (
+          <StaticPhotoAlbum
+            {...sharedAlbumProps}
+            layout="rows"
+            model={staticModel}
+          />
+        ) : null}
+        <ProjectMediaLightbox
+          activeIndex={activeIndex}
+          closePreviewLabel={closePreviewLabel}
+          items={dimensionalItems}
+          locale={locale}
+          onClose={() => setActiveIndex(null)}
+          previewDialogLabel={previewDialogLabel}
+        />
+      </>
+    </StrictMode>
+  );
+}
+
+function ArchiveOverlayIcon({ type }: { type: OverlayLinkMeta["icon"] }) {
+  const path = type === "youtube" ? YOUTUBE_ICON_PATH : EXTERNAL_LINK_ICON_PATH;
+
+  return (
+    <svg
+      aria-hidden="true"
+      className="project-media__wall-link-icon"
+      viewBox="0 0 24 24"
+    >
+      <path d={path} fill="currentColor" />
     </svg>
   );
 }

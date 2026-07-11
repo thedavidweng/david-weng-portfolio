@@ -5,7 +5,8 @@ import {
   aboutContent,
   navigationItems
 } from "@/content/site";
-import { SITE_URL, formatServices, formatProjects } from "@/lib/agent-content";
+import { formatServices, formatProjects } from "@/lib/agent-content";
+import { SITE_URL } from "@/lib/site-config";
 
 export function generateLlmsFull(): string {
   return `# ${siteIdentity.name} — Complete Site Documentation

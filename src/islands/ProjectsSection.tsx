@@ -1,10 +1,21 @@
-
-import { StrictMode, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+  StrictMode,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Container } from "@/src/islands/_shared/Container";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
 import { projectSectionContent } from "@/content/project-section";
 import { getLocalizedText, getProjectPath } from "@/lib/i18n";
-import { buildProjectCategoryGroups, getCategoryBySnap, orderedProjects } from "@/lib/project-carousel";
+import {
+  buildProjectCategoryGroups,
+  getCategoryBySnap,
+  orderedProjects,
+} from "@/lib/project-carousel";
 import type { Locale } from "@/types/content";
 
 type ProjectsSectionProps = {
@@ -12,10 +23,13 @@ type ProjectsSectionProps = {
 };
 
 export function ProjectsSection({ locale }: ProjectsSectionProps) {
-  const categoryGroups = useMemo(() => buildProjectCategoryGroups(locale), [locale]);
+  const categoryGroups = useMemo(
+    () => buildProjectCategoryGroups(locale),
+    [locale],
+  );
   const categories = useMemo(
     () => categoryGroups.map((group) => ({ id: group.id, label: group.label })),
-    [categoryGroups]
+    [categoryGroups],
   );
   const categoryKey = categories.map((category) => category.id).join("|");
   const viewportRef = useRef<HTMLDivElement | null>(null);
@@ -33,8 +47,11 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
   }
 
   const activeCategory = useMemo(
-    () => getCategoryBySnap(categoryGroups, activeIndex)?.id ?? categoryGroups[0]?.id ?? "Client",
-    [activeIndex, categoryGroups]
+    () =>
+      getCategoryBySnap(categoryGroups, activeIndex)?.id ??
+      categoryGroups[0]?.id ??
+      "Client",
+    [activeIndex, categoryGroups],
   );
   const canScrollPrev = activeIndex > 0;
   const canScrollNext = activeIndex < orderedProjects.length - 1;
@@ -60,14 +77,18 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
       }
     });
 
-    setActiveIndex((currentIndex) => (currentIndex === closestIndex ? currentIndex : closestIndex));
+    setActiveIndex((currentIndex) =>
+      currentIndex === closestIndex ? currentIndex : closestIndex,
+    );
   }, []);
 
   const scheduleScrollSyncRef = useRef<() => void>(() => {});
 
   const measureSlideOffsets = useCallback(() => {
     slideRefs.current = slideRefs.current.slice(0, orderedProjects.length);
-    slideOffsetsRef.current = slideRefs.current.map((slide) => slide?.offsetLeft ?? 0);
+    slideOffsetsRef.current = slideRefs.current.map(
+      (slide) => slide?.offsetLeft ?? 0,
+    );
   }, []);
 
   const measureSlidesRef = useRef(measureSlideOffsets);
@@ -79,9 +100,13 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
   const scrollToIndex = useCallback(
     (index: number, behavior: ScrollBehavior = "smooth") => {
       const viewport = viewportRef.current;
-      const clampedIndex = Math.max(0, Math.min(index, orderedProjects.length - 1));
+      const clampedIndex = Math.max(
+        0,
+        Math.min(index, orderedProjects.length - 1),
+      );
       const slide = slideRefs.current[clampedIndex];
-      const targetOffset = slideOffsetsRef.current[clampedIndex] ?? slide?.offsetLeft ?? 0;
+      const targetOffset =
+        slideOffsetsRef.current[clampedIndex] ?? slide?.offsetLeft ?? 0;
 
       if (!viewport || !slide) {
         return;
@@ -97,7 +122,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
 
       scheduleScrollSyncRef.current();
     },
-    []
+    [],
   );
 
   const prevMeasuredCategoryKeyRef = useRef(categoryKey);
@@ -159,7 +184,9 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
   }
 
   function scrollToCategory(categoryId: string) {
-    const nextCategory = categoryGroups.find((group) => group.id === categoryId);
+    const nextCategory = categoryGroups.find(
+      (group) => group.id === categoryId,
+    );
 
     if (!nextCategory) {
       return;
@@ -170,111 +197,142 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
 
   return (
     <StrictMode>
-    <section className="section-shell" id="projects">
-      <Container>
-        <div className="projects__layout">
-          <div className="poster-section__intro">
-            <h2 className="poster-section__title">{getLocalizedText(projectSectionContent.title, locale)}</h2>
-            <p className="poster-section__copy">{getLocalizedText(projectSectionContent.description, locale)}</p>
-          </div>
-          <div className="projects__topbar">
-            <div
-              className="projects__filters"
-              role="toolbar"
-              aria-label={getLocalizedText(projectSectionContent.filtersLabel, locale)}
-            >
-              {categories.map((category) => (
+      <section className="section-shell" id="projects">
+        <Container>
+          <div className="projects__layout">
+            <div className="poster-section__intro">
+              <h2 className="poster-section__title">
+                {getLocalizedText(projectSectionContent.title, locale)}
+              </h2>
+              <p className="poster-section__copy">
+                {getLocalizedText(projectSectionContent.description, locale)}
+              </p>
+            </div>
+            <div className="projects__topbar">
+              <div
+                className="projects__filters"
+                role="toolbar"
+                aria-label={getLocalizedText(
+                  projectSectionContent.filtersLabel,
+                  locale,
+                )}
+              >
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    aria-controls="projects-carousel"
+                    aria-pressed={activeCategory === category.id}
+                    className={`filter-chip${activeCategory === category.id ? " filter-chip--active" : ""}`}
+                    onClick={() => scrollToCategory(category.id)}
+                    type="button"
+                  >
+                    {category.label}
+                  </button>
+                ))}
+              </div>
+              <div className="projects__reel-controls">
                 <button
-                  key={category.id}
+                  aria-label={getLocalizedText(
+                    projectSectionContent.previousLabel,
+                    locale,
+                  )}
                   aria-controls="projects-carousel"
-                  aria-pressed={activeCategory === category.id}
-                  className={`filter-chip${activeCategory === category.id ? " filter-chip--active" : ""}`}
-                  onClick={() => scrollToCategory(category.id)}
+                  className="reel-nav"
+                  disabled={!canScrollPrev}
+                  onClick={() => scrollReel("previous")}
                   type="button"
                 >
-                  {category.label}
+                  {getLocalizedText(
+                    projectSectionContent.previousButtonText,
+                    locale,
+                  )}
                 </button>
-              ))}
-            </div>
-            <div className="projects__reel-controls">
-              <button
-                aria-label={getLocalizedText(projectSectionContent.previousLabel, locale)}
-                aria-controls="projects-carousel"
-                className="reel-nav"
-                disabled={!canScrollPrev}
-                onClick={() => scrollReel("previous")}
-                type="button"
-              >
-                {getLocalizedText(projectSectionContent.previousButtonText, locale)}
-              </button>
-              <button
-                aria-label={getLocalizedText(projectSectionContent.nextLabel, locale)}
-                aria-controls="projects-carousel"
-                className="reel-nav"
-                disabled={!canScrollNext}
-                onClick={() => scrollReel("next")}
-                type="button"
-              >
-                {getLocalizedText(projectSectionContent.nextButtonText, locale)}
-              </button>
-            </div>
-          </div>
-          <section
-            aria-label={getLocalizedText(projectSectionContent.carouselLabel, locale)}
-            className="projects__viewport"
-            id="projects-carousel"
-            ref={viewportRef}
-          >
-            <div className="projects__reel">
-              {orderedProjects.map((project, index) => (
-                <a
-                  key={project.slug}
-                  aria-label={`Open project ${getLocalizedText(project.title, locale)}`}
-                  className="project-card projects__slide signal-panel"
-                  href={getProjectPath(locale, project.slug)}
-                  ref={(node) => {
-                    slideRefs.current[index] = node;
-                  }}
-                  style={{
-                    ["--project-cover-palette" as string]: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`
-                  }}
+                <button
+                  aria-label={getLocalizedText(
+                    projectSectionContent.nextLabel,
+                    locale,
+                  )}
+                  aria-controls="projects-carousel"
+                  className="reel-nav"
+                  disabled={!canScrollNext}
+                  onClick={() => scrollReel("next")}
+                  type="button"
                 >
-                  <div aria-hidden="true" className="project-card__backdrop">
-                    {project.coverImage ? (
-                      <PortfolioImage
-                        alt=""
-                        className="project-card__image"
-                        fill
-                        priority={index === 0}
-                        fetchPriority={index === 0 ? "high" : "low"}
-                        sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
-                        src={project.coverImage}
-                      />
-                    ) : null}
-                  </div>
-                  <div aria-hidden="true" className="project-card__word">
-                    {project.posterWord}
-                  </div>
-                  <div className="project-card__content">
-                    <div className="project-card__meta">
-                      <span>{project.code}</span>
-                      <span>{getLocalizedText(project.category, locale)}</span>
-                      <span>{project.year}</span>
-                    </div>
-                    <h3 className="project-card__title">{getLocalizedText(project.title, locale)}</h3>
-                    <p className="project-card__summary">{getLocalizedText(project.teaser, locale)}</p>
-                    <div className="project-card__footer">
-                      <span>{getLocalizedText(project.coverLabel, locale)}</span>
-                    </div>
-                  </div>
-                </a>
-              ))}
+                  {getLocalizedText(
+                    projectSectionContent.nextButtonText,
+                    locale,
+                  )}
+                </button>
+              </div>
             </div>
-          </section>
-        </div>
-      </Container>
-    </section>
+            <section
+              aria-label={getLocalizedText(
+                projectSectionContent.carouselLabel,
+                locale,
+              )}
+              className="projects__viewport"
+              id="projects-carousel"
+              ref={viewportRef}
+            >
+              <div className="projects__reel">
+                {orderedProjects.map((project, index) => (
+                  <a
+                    key={project.slug}
+                    aria-label={`Open project ${getLocalizedText(project.title, locale)}`}
+                    className="project-card projects__slide signal-panel"
+                    href={getProjectPath(locale, project.slug)}
+                    ref={(node) => {
+                      slideRefs.current[index] = node;
+                    }}
+                    style={{
+                      ["--project-cover-palette" as string]: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`,
+                    }}
+                  >
+                    <div aria-hidden="true" className="project-card__backdrop">
+                      {project.coverImage ? (
+                        <PortfolioImage
+                          alt=""
+                          className="project-card__image"
+                          fill
+                          priority={index === 0}
+                          fetchPriority={index === 0 ? "high" : "low"}
+                          sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
+                          src={project.coverImage}
+                        />
+                      ) : null}
+                    </div>
+                    <div aria-hidden="true" className="project-card__word">
+                      {project.posterWord}
+                    </div>
+                    <div className="project-card__content">
+                      <div className="project-card__meta">
+                        <span>{project.code}</span>
+                        <span>
+                          {getLocalizedText(project.category, locale)}
+                        </span>
+                        <span>{project.year}</span>
+                      </div>
+                      <h3 className="project-card__title">
+                        {getLocalizedText(project.title, locale)}
+                      </h3>
+                      <p className="project-card__summary">
+                        {getLocalizedText(project.teaser, locale)}
+                      </p>
+                      <div className="project-card__footer">
+                        <span>
+                          {getLocalizedText(project.coverLabel, locale)}
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+          </div>
+        </Container>
+      </section>
     </StrictMode>
   );
 }
+
 export default ProjectsSection;

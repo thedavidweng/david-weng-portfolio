@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { SITEMAP_URL } from "@/lib/agent-content";
+import { SITEMAP_URL } from "@/lib/site-config";
 
 export const prerender = true;
 

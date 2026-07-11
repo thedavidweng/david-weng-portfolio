@@ -119,7 +119,7 @@ const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
                   <p class="project-handoff__copy">{projectLabel(projectDetailContent.externalHint, locale)}</p>
                   <div class="project-handoff__meta">
                     <span>{projectLabel(projectDetailContent.externalDestinationLabel, locale)}</span>
-                    <span>beaconjournal.arts.ubc.ca</span>
+                    <span>{new URL(primaryExternalLink.href).hostname.replace(/^www\./, "")}</span>
                   </div>
                   <a class="button button--signal" href={primaryExternalLink.href} rel="noreferrer" target="_blank">
                     {projectLabel(primaryExternalLink.label, locale)}

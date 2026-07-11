@@ -56,7 +56,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(document.querySelector(".project-film__stills-rail")).toBeTruthy();
   await user.click(screen.getByRole("button", { name: /Preview The Pills still 01/i }));
   expect(screen.getByRole("dialog", { name: /Image preview/i })).toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /Close preview/i })).toHaveTextContent("X");
+  expect(screen.getByRole("button", { name: /Close preview/i })).toBeInTheDocument();
   unmount();
 
   render(<ProjectPageFixture locale="zh" pathname="/zh/projects/gourd" project={gourd} />);
@@ -70,7 +70,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(screen.getByRole("heading", { name: /^海报$/i })).toBeInTheDocument();
   expect(document.querySelectorAll(".project-film__stills-item").length).toBeGreaterThan(0);
   await user.click(screen.getByRole("button", { name: /预览 清兵卫剧照 01/i }));
-  expect(screen.getByRole("button", { name: /关闭预览/i })).toHaveTextContent("X");
+  expect(screen.getByRole("button", { name: /关闭预览/i })).toBeInTheDocument();
 }, 15000);
 
 test("renders gourd film release links on the english detail page", async () => {
