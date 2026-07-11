@@ -9,6 +9,7 @@ import "react-photo-album/rows.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
+import { getHostname } from "@/lib/url";
 import { YOUTUBE_ICON_PATH, EXTERNAL_LINK_ICON_PATH } from "@/src/icons";
 
 type ArchiveMediaWallProps = {
@@ -54,18 +55,14 @@ function isDimensionalImageItem(
 }
 
 function getOverlayLinkMeta(href: string): OverlayLinkMeta {
-  try {
-    const hostname = new URL(href).hostname.replace(/^www\./, "");
+  const hostname = getHostname(href);
 
-    if (hostname === "youtu.be" || hostname.endsWith("youtube.com")) {
-      return {
-        icon: "youtube",
-        label: "YouTube",
-        platform: "youtube",
-      };
-    }
-  } catch {
-    // Fall back to a generic label if the URL is malformed.
+  if (hostname === "youtu.be" || hostname.endsWith("youtube.com")) {
+    return {
+      icon: "youtube",
+      label: "YouTube",
+      platform: "youtube",
+    };
   }
 
   return {

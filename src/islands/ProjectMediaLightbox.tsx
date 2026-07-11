@@ -4,13 +4,11 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel, projectDetailContent } from "@/content/projects";
+import { CLOSE_ICON_PATH } from "@/src/icons";
 
 const DEFAULT_SLIDE_HEIGHT = 900;
 const DEFAULT_SLIDE_WIDTH = 1600;
 const MAX_ZOOM_PIXEL_RATIO = 3;
-
-const CLOSE_ICON_PATH =
-  "M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6 6.4 5Z";
 
 type ProjectMediaLightboxProps = {
   activeIndex: number | null;

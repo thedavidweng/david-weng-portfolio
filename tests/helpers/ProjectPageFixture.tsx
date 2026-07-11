@@ -6,6 +6,7 @@ import { ArchiveMediaWall } from "@/src/islands/ArchiveMediaWall";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
 import { projectDetailContent, projectLabel } from "@/content/projects";
 import { getLocaleHomePath, getLocalizedValue } from "@/lib/i18n";
+import { getHostname } from "@/lib/url";
 import { YOUTUBE_ICON_PATH, EXTERNAL_LINK_ICON_PATH } from "@/src/icons";
 import type {
   FilmCreditGroup,
@@ -473,7 +474,7 @@ export function ProjectPageFixture({ locale, pathname, project }: ProjectPageFix
                     <p className="project-handoff__copy">{projectLabel(projectDetailContent.externalHint, locale)}</p>
                     <div className="project-handoff__meta">
                       <span>{projectLabel(projectDetailContent.externalDestinationLabel, locale)}</span>
-                      <span>{new URL(primaryExternalLink.href).hostname.replace(/^www\./, "")}</span>
+                      <span>{getHostname(primaryExternalLink.href)}</span>
                     </div>
                     <a className="button button--signal" href={primaryExternalLink.href} rel="noreferrer" target="_blank">
                       {projectLabel(primaryExternalLink.label, locale)}

@@ -28,7 +28,8 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `content/film-data.ts` | Film project detail pages, archive layouts |
 | `content/archives/*.ts` | Archive project pages, agent project listings |
 | `lib/site-config.ts` | `SITE_URL`, `SITEMAP_URL` — single source for all URL constants |
-| `src/icons.ts` | Shared SVG path data for social/external-link icons (Header, Footer, ArchiveMediaWall, ProjectExternalLinkButton) |
+| `lib/url.ts` | `getHostname` — defensive hostname extraction used by ProjectLayout, ArchiveMediaWall, test fixtures |
+| `src/icons.ts` | Shared SVG path data for social/external-link/close icons (Header, Footer, ArchiveMediaWall, ProjectExternalLinkButton, ProjectMediaLightbox) |
 
 ### Dual-Maintenance Content
 
