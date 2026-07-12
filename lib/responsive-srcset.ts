@@ -64,13 +64,16 @@ export function buildSrcSetArray(
   }
 
   const aspectRatio = originalHeight / originalWidth;
-  const variants = RESPONSIVE_WIDTHS.filter(
+  const variants: ResponsiveImage[] = RESPONSIVE_WIDTHS.filter(
     (w) => w < originalWidth,
   ).map((w) => ({
     src: variantPath(src, w),
     width: w,
     height: Math.round(w * aspectRatio),
   }));
+
+  // Include the original as the largest candidate (matches buildSrcset behavior)
+  variants.push({ src, width: originalWidth, height: originalHeight });
 
   return variants;
 }
