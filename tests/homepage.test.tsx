@@ -110,7 +110,7 @@ test("renders the english homepage with a switch to the chinese route", () => {
   expect(container.querySelector(".site-shell--home")).toBeTruthy();
   expect(container.querySelector(".site-main--home")).toBeTruthy();
   expect(container.querySelector(".site-header--home")).toBeTruthy();
-}, 10000);
+});
 
 test("renders the chinese homepage with a switch back to the english route", () => {
   const { container } = render(<HomePageFixture locale="zh" pathname="/zh/" />);
@@ -164,4 +164,4 @@ test("renders the chinese homepage with a switch back to the english route", () 
   expect(contact).toBeTruthy();
   expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /主页/i })).toHaveAttribute("href", "https://thedavidweng.github.io/");
-}, 10000);
+});

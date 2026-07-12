@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { SITE_URL, SITEMAP_URL } from "@/lib/agent-content";
+import { SITE_URL, SITEMAP_URL } from "@/lib/site-config";
 
 test("robots.txt route advertises canonical sitemap URL from shared constant", () => {
   const source = readFileSync(join(process.cwd(), "src/pages/robots.txt.ts"), "utf8");

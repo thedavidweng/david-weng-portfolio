@@ -1,13 +1,12 @@
 import { projects } from "@/content/projects";
 import { heroContent, contactContent } from "@/content/site";
-import { SITE_URL } from "@/lib/agent-content";
-
-const CATEGORY_ORDER = ["Client", "Film", "Video", "Writing"] as const;
+import { SITE_URL } from "@/lib/site-config";
+import { PROJECT_CATEGORY_SEQUENCE } from "@/lib/project-carousel";
 
 function groupProjectsByCategory() {
   const groups = new Map<string, typeof projects>();
 
-  for (const category of CATEGORY_ORDER) {
+  for (const category of PROJECT_CATEGORY_SEQUENCE) {
     groups.set(category, []);
   }
 
@@ -23,7 +22,7 @@ function groupProjectsByCategory() {
 
 export function generateLlmsTxt(): string {
   const groups = groupProjectsByCategory();
-  const projectSections = CATEGORY_ORDER.map((category) => {
+  const projectSections = PROJECT_CATEGORY_SEQUENCE.map((category) => {
     const items = groups.get(category) ?? [];
     if (items.length === 0) return "";
 
@@ -66,9 +65,9 @@ ${projectSections}
 
 ## External Profiles
 
-- LinkedIn: https://www.linkedin.com/in/thedavidweng/
-- Instagram: https://www.instagram.com/davidwengpro/
-- GitHub: https://github.com/thedavidweng
+- LinkedIn: ${contactContent.linkedinHref}
+- Instagram: ${contactContent.instagramHref}
+- GitHub: ${contactContent.githubHref}
 - Blog: https://blog.davidweng.eu.org/
 
 ## Contact

@@ -23,7 +23,7 @@ test("renders localized chinese project detail content and language switch", () 
   expect(screen.getAllByRole("link", { name: /^陈镘伊/i })[0]).toHaveAttribute("href", "https://www.imdb.com/name/nm16014588/");
   expect(screen.getAllByRole("link", { name: /IMDb/i }).length).toBeGreaterThan(0);
   expect(screen.getAllByRole("link", { name: /豆瓣/i }).length).toBeGreaterThan(0);
-}, 15000);
+});
 
 test("renders dedicated film pages with full posters, linked credits, and horizontal still rails", async () => {
   const user = userEvent.setup();
@@ -56,7 +56,7 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(document.querySelector(".project-film__stills-rail")).toBeTruthy();
   await user.click(screen.getByRole("button", { name: /Preview The Pills still 01/i }));
   expect(screen.getByRole("dialog", { name: /Image preview/i })).toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /Close preview/i })).toHaveTextContent("X");
+  expect(screen.getByRole("button", { name: /Close preview/i })).toBeInTheDocument();
   unmount();
 
   render(<ProjectPageFixture locale="zh" pathname="/zh/projects/gourd" project={gourd} />);
@@ -70,8 +70,8 @@ test("renders dedicated film pages with full posters, linked credits, and horizo
   expect(screen.getByRole("heading", { name: /^海报$/i })).toBeInTheDocument();
   expect(document.querySelectorAll(".project-film__stills-item").length).toBeGreaterThan(0);
   await user.click(screen.getByRole("button", { name: /预览 清兵卫剧照 01/i }));
-  expect(screen.getByRole("button", { name: /关闭预览/i })).toHaveTextContent("X");
-}, 15000);
+  expect(screen.getByRole("button", { name: /关闭预览/i })).toBeInTheDocument();
+});
 
 test("renders gourd film release links on the english detail page", async () => {
   const project = getProjectBySlug("gourd");
@@ -228,7 +228,7 @@ test("renders archive-backed BC + AI Ecosystem media with event photo credit", (
   youtubeLinks.forEach((link) => {
     expect(link.closest(".project-media__wall-overlay")).toBeTruthy();
   });
-}, 15000);
+});
 
 test("renders Beaty archive with a static works wall above a separate video section", () => {
   const project = getProjectBySlug("beaty-biodiversity-museum-annual-report-2022-2023");

@@ -1,5 +1,5 @@
 import type { Locale, ProjectItem } from "@/types/content";
-import { SITE_URL } from "@/lib/agent-content";
+import { SITE_URL } from "@/lib/site-config";
 import { getLocalizedText } from "@/lib/i18n";
 
 export function generateProjectMd(project: ProjectItem, locale: Locale): string {

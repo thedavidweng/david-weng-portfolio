@@ -1,6 +1,7 @@
 ---
 import JsonLd from "@/src/components/JsonLd.astro";
 import { buildPersonSchema, buildWebSiteSchema } from "@/lib/jsonld";
+import { SITE_URL } from "@/lib/site-config";
 import type { Locale } from "@/types/content";
 import manropeFont from "../../assets/fonts/manrope-latin-wght-normal.woff2?url";
 import notoSansSc400Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2?url";
@@ -19,7 +20,6 @@ interface Props {
   ogImage?: string;
 }
 
-const siteUrl = "https://davidweng.eu.org";
 const {
   title = "David Weng | Visual Storytelling, Design, and Creative Systems",
   description = "Portfolio of David Weng — video editing, photography, graphic design, and content operations.",
@@ -42,20 +42,20 @@ const htmlLang = locale;
     <meta name="theme-color" content="#070607" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={`${siteUrl}${canonical}`} />
-    <link rel="alternate" hreflang="en" href={`${siteUrl}${alternateEn}`} />
-    <link rel="alternate" hreflang="zh" href={`${siteUrl}${alternateZh}`} />
+    <link rel="canonical" href={`${SITE_URL}${canonical}`} />
+    <link rel="alternate" hreflang="en" href={`${SITE_URL}${alternateEn}`} />
+    <link rel="alternate" hreflang="zh" href={`${SITE_URL}${alternateZh}`} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={locale === "zh" ? "zh" : "en"} />
     <meta property="og:site_name" content="David Weng" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={`${siteUrl}${canonical}`} />
-    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:url" content={`${SITE_URL}${canonical}`} />
+    <meta property="og:image" content={`${SITE_URL}${ogImage}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+    <meta name="twitter:image" content={`${SITE_URL}${ogImage}`} />
     <link rel="icon" href="/brand/favicon.png" />
     <link rel="apple-touch-icon" href="/brand/favicon.png" />
     {locale === "zh" ? (
