@@ -15,8 +15,7 @@ const cache = new Map<string, number | undefined>();
  */
 export function getImageWidth(publicPath: string): number | undefined {
   if (!publicPath) return undefined;
-  const cached = cache.get(publicPath);
-  if (cached !== undefined) return cached;
+  if (cache.has(publicPath)) return cache.get(publicPath);
 
   try {
     const filePath = join(process.cwd(), "public", publicPath);

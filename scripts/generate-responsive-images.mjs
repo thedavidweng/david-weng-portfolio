@@ -29,7 +29,7 @@ function findAvifFiles(dir) {
     const stat = statSync(fullPath);
     if (stat.isDirectory()) {
       results.push(...findAvifFiles(fullPath));
-    } else if (extname(entry).toLowerCase() === ".avif") {
+    } else if (extname(entry).toLowerCase() === ".avif" && !/@\d+w\.avif$/i.test(entry)) {
       results.push(fullPath);
     }
   }
