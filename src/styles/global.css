@@ -1,16 +1,16 @@
 :root {
-  --bg: #030303;
-  --bg-deep: #000000;
-  --bg-raised: #080808;
+  --bg: oklch(0.012 0.008 25);
+  --bg-deep: oklch(0.005 0.008 25);
+  --bg-raised: oklch(0.025 0.008 25);
   --bg-panel: transparent;
   --bg-panel-strong: transparent;
   --line: rgba(255, 255, 255, 0.15);
   --line-strong: rgba(255, 255, 255, 0.3);
-  --text: #ffffff;
-  --text-soft: #a0a0a0;
-  --text-faint: #949494;
-  --text-on-accent: #000000;
-  --accent: #E11D25;
+  --text: oklch(0.995 0.004 25);
+  --text-soft: oklch(0.656 0.005 25);
+  --text-faint: oklch(0.626 0.005 25);
+  --text-on-accent: oklch(0.005 0.008 25);
+  --accent: oklch(0.58 0.24 27);
   --accent-rgb: 225, 29, 37;
   --accent-soft: rgba(225, 29, 37, 0.72);
   --accent-glow: rgba(225, 29, 37, 0.15);
@@ -212,7 +212,7 @@ main {
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text);
 }
 
 .site-header__descriptor,
@@ -277,7 +277,7 @@ main {
   height: 44px;
   border: 0;
   background: transparent;
-  color: #ffffff;
+  color: var(--text);
   padding: 0;
   position: relative;
   z-index: 52;
@@ -375,12 +375,12 @@ main {
 }
 
 .site-header__nav-link:focus-visible {
-  color: #ffffff;
+  color: var(--text);
 }
 
 @media (hover: hover) {
   .site-header__nav-link:hover {
-    color: #ffffff;
+    color: var(--text);
   }
 }
 
@@ -1220,14 +1220,14 @@ main {
 }
 
 .site-footer__social-link:focus-visible {
-  color: #fff;
+  color: var(--text);
   border-color: rgba(var(--accent-rgb), 0.72);
   background: rgba(var(--neutral-rgb), 0.08);
 }
 
 @media (hover: hover) {
   .site-footer__social-link:hover {
-    color: #fff;
+    color: var(--text);
     border-color: rgba(var(--accent-rgb), 0.72);
     background: rgba(var(--neutral-rgb), 0.08);
   }
@@ -2386,7 +2386,7 @@ main {
     display: flex;
     flex-direction: column;
     background: var(--accent);
-    color: #ffffff;
+    color: var(--text);
     opacity: 1;
     transform: translate3d(100%, 0, 0);
     z-index: 39;
@@ -2436,7 +2436,7 @@ main {
     width: 40px;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.54);
-    color: #fff;
+    color: var(--text);
     background: rgba(255, 255, 255, 0.04);
     transition: background-color var(--ease), border-color var(--ease);
   }
@@ -2481,14 +2481,14 @@ main {
     padding: 0.66rem 0.5rem;
     border-color: rgba(255, 255, 255, 0.6);
     background: transparent;
-    color: #ffffff;
+    color: var(--text);
     font-size: 0.74rem;
     letter-spacing: 0.06em;
   }
 
   .site-header__actions .button--signal {
-    background: #ffffff;
-    border-color: #ffffff;
+    background: var(--text);
+    border-color: var(--text);
     color: var(--accent);
   }
 
