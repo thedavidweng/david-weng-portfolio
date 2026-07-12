@@ -76,7 +76,7 @@ function getOverlayLinkMeta(href: string): OverlayLinkMeta {
 /**
  * `useSyncExternalStore` for SSR-safe feature detection of `ResizeObserver`.
  * The subscribe function is a no-op because `ResizeObserver` availability is
- * static — it never changes during a component's lifetime — so there is nothing
+ * static, it never changes during a component's lifetime, so there is nothing
  * to subscribe to. `useSyncExternalStore` is still used (rather than a plain
  * `useState`/`useMemo`) because it provides the `getServerSnapshot` parameter,
  * which keeps SSR output deterministic.

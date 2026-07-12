@@ -26,7 +26,7 @@ personalVideoArchive.items = [
     kind: "video",
     title: localized("Project Race", "Project Race"),
     caption: localized(
-      "Miniature racing short — pacing and motion as the main focus.",
+      "Miniature racing short, pacing and motion as the main focus.",
       "玩具车竞速短视频，以节奏与运动感为核心。"
     ),
     publishedUrl: "https://youtu.be/i64iXe_CPfw/",

@@ -71,7 +71,7 @@ export const aboutContent = {
   eyebrow: localized("03 / Background", "03 / 背景"),
   title: localized("About", "关于我"),
   lead: localized(
-    "Video production, graphic design, and content operations — concept to delivery.",
+    "Video production, graphic design, and content operations: concept to delivery.",
     "视频制作、平面设计与内容运营，从概念到交付。"
   ),
   body: localized(
@@ -79,7 +79,7 @@ export const aboutContent = {
     "背景涵盖视频剪辑、摄影、平面设计与社交媒体内容。多数项目从概念到成品独立完成，在有助于提速或提升质量的环节引入 AI 工具。"
   ),
   bodySecondary: localized(
-    "Also involved in research, publication, and teaching — including co-developing and instructing a course on AI film production.",
+    "Also involved in research, publication, and teaching, including co-developing and instructing a course on AI film production.",
     "同时参与研究、出版与教学工作，包括共同开发并教授一门 AI 电影制作课程。"
   ),
   stats: [

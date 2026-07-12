@@ -29,7 +29,7 @@ export function generateLlmsTxt(): string {
     const lines = items
       .map(
         (p) =>
-          `- [${p.title.en}](${SITE_URL}/projects/${p.slug}) — ${p.summary.en}`
+          `- [${p.title.en}](${SITE_URL}/projects/${p.slug}): ${p.summary.en}`
       )
       .join("\n");
 
@@ -38,7 +38,7 @@ export function generateLlmsTxt(): string {
     .filter(Boolean)
     .join("\n\n");
 
-  return `# David Weng — Portfolio
+  return `# David Weng Portfolio
 
 > ${heroContent.support.en} Based in Vancouver, working globally.
 
@@ -77,12 +77,12 @@ ${projectSections}
 
 ## Machine-Readable Endpoints
 
-- ${SITE_URL}/agent — JSON agent view
-- ${SITE_URL}/llms.txt — This file
-- ${SITE_URL}/llms-full.txt — Complete site content
-- ${SITE_URL}/index.md — Markdown version of homepage
-- ${SITE_URL}/zh/index.md — Chinese homepage markdown
-- ${SITE_URL}/sitemap.xml — XML sitemap
-- ${SITE_URL}/robots.txt — Robots policy
+- ${SITE_URL}/agent: JSON agent view
+- ${SITE_URL}/llms.txt: This file
+- ${SITE_URL}/llms-full.txt: Complete site content
+- ${SITE_URL}/index.md: Markdown version of homepage
+- ${SITE_URL}/zh/index.md: Chinese homepage markdown
+- ${SITE_URL}/sitemap.xml: XML sitemap
+- ${SITE_URL}/robots.txt: Robots policy
 `;
 }

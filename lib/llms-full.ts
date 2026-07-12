@@ -9,7 +9,7 @@ import { formatServices, formatProjects } from "@/lib/agent-content";
 import { SITE_URL } from "@/lib/site-config";
 
 export function generateLlmsFull(): string {
-  return `# ${siteIdentity.name} — Complete Site Documentation
+  return `# ${siteIdentity.name}: Complete Site Documentation
 
 Last updated: ${new Date().toISOString().split("T")[0]}
 
@@ -74,13 +74,13 @@ ${navigationItems
 
 ## Agent Endpoints
 
-- \`/agent\` — JSON data about this person and their work
-- \`/llms.txt\` — LLM discovery file
-- \`/llms-full.txt\` — Complete documentation (this file)
-- \`/index.md\` — Markdown version of homepage
-- \`/zh/index.md\` — Chinese homepage markdown
-- \`/sitemap.xml\` — Site map
-- \`/robots.txt\` — Crawling policy
+- \`/agent\`: JSON data about this person and their work
+- \`/llms.txt\`: LLM discovery file
+- \`/llms-full.txt\`: Complete documentation (this file)
+- \`/index.md\`: Markdown version of homepage
+- \`/zh/index.md\`: Chinese homepage markdown
+- \`/sitemap.xml\`: Site map
+- \`/robots.txt\`: Crawling policy
 
 ---
 
