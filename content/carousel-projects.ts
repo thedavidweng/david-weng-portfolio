@@ -25,6 +25,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#d2e8ff"
     ],
     "coverImage": "/projects/client-work/beaty-biodiversity-museum/covers/Big-Blue-lights-3-scaled.avif",
+    "coverWidth": 2560,
     "teaser": {
       "en": "Booklet, signage, report, and video work for the Beaty Biodiversity Museum.",
       "zh": "为 Beaty Biodiversity Museum 制作的册页、导视、报告与视频。"
@@ -81,6 +82,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#f0d6d0"
     ],
     "coverImage": "/projects/film-video/film/fraud/cover.avif",
+    "coverWidth": 1920,
     "teaser": {
       "en": "Short drama about debt, manipulation, and fraud among international students.",
       "zh": "围绕债务、操控与国际学生欺诈展开的剧情短片。"
@@ -109,6 +111,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#f1d5db"
     ],
     "coverImage": "/projects/film-video/film/the-pills/cover.avif",
+    "coverWidth": 1280,
     "teaser": {
       "en": "Short horror microfilm built around a medicine-fueled nightmare setup.",
       "zh": "围绕药物失控设定展开的惊悚微电影。"
@@ -137,6 +140,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#d9ceb8"
     ],
     "coverImage": "/projects/film-video/film/gourd/stills/still-gourd-01.avif",
+    "coverWidth": 1920,
     "teaser": {
       "en": "Early short film project centered on a young ensemble and a spare, atmospheric setup.",
       "zh": "早期短片项目，以年轻群像和克制氛围为核心。"
@@ -165,6 +169,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#dae7ff"
     ],
     "coverImage": "/projects/film-video/video/youtube-WlLGuSej0Yg.avif",
+    "coverWidth": 1280,
     "teaser": {
       "en": "Video projects created on commission.",
       "zh": "受委托制作的视频项目。"
@@ -193,6 +198,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#d8e3f8"
     ],
     "coverImage": "/projects/personal-video/video/persona-5-style-campaign-video-cover.avif",
+    "coverWidth": 2646,
     "teaser": {
       "en": "Personal video work — campaign edits, short films, and experiments.",
       "zh": "个人视频作品，包括宣传片剪辑、短片与实验性项目。"
@@ -221,6 +227,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#f2d7d4"
     ],
     "coverImage": "/projects/client-work/bc-ai-ecosystem/covers/cover-bcai-apr-26-speaker.avif",
+    "coverWidth": 1500,
     "teaser": {
       "en": "Social graphics, slides, event photos, and design work for BC + AI Ecosystem.",
       "zh": "为 BC + AI Ecosystem 制作的社交图片、幻灯片、活动照片与设计作品。"
@@ -249,6 +256,7 @@ export const carouselProjects: CarouselProjectItem[] = [
       "#e8d8db"
     ],
     "coverImage": "/projects/client-work/theupgrade-ai/covers/cover-theupgrade-meet-our-team.avif",
+    "coverWidth": 1200,
     "teaser": {
       "en": "Posters, social graphics, and brand visuals for TheUpgrade.AI.",
       "zh": "为 TheUpgrade.AI 制作的海报、社交图片与品牌视觉。"

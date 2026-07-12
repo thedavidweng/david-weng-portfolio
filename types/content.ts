@@ -88,6 +88,7 @@ export type CarouselProjectItem = {
   coverLabel: LocalizedText;
   coverPalette: [string, string, string];
   coverImage: string;
+  coverWidth?: number;
   teaser: LocalizedText;
 };
 

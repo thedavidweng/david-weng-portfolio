@@ -298,6 +298,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
                           fetchPriority={index === 0 ? "high" : "low"}
                           sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
                           src={project.coverImage}
+                          width={project.coverWidth}
                         />
                       ) : null}
                     </div>

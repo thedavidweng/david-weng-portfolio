@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+import { imageSize } from "image-size";
+import { join } from "node:path";
 import type { CarouselProjectItem, ProjectItem } from "@/types/content";
 
 export const CAROUSEL_FIELDS = [
@@ -10,13 +13,36 @@ export const CAROUSEL_FIELDS = [
   "coverLabel",
   "coverPalette",
   "coverImage",
+  "coverWidth",
   "teaser"
 ] as const satisfies ReadonlyArray<keyof CarouselProjectItem>;
 
+function getCoverWidth(coverImage: string): number | undefined {
+  if (!coverImage) return undefined;
+  try {
+    const filePath = join(process.cwd(), "public", coverImage);
+    const buffer = readFileSync(filePath);
+    return imageSize(buffer).width;
+  } catch {
+    return undefined;
+  }
+}
+
 export function buildCarouselProjects(source: ProjectItem[]): CarouselProjectItem[] {
-  return source.map((project) =>
-    Object.fromEntries(CAROUSEL_FIELDS.map((field) => [field, project[field]])) as CarouselProjectItem
-  );
+  return source.map((project) => {
+    const entry = Object.fromEntries(
+      CAROUSEL_FIELDS.filter((f) => f !== "coverWidth").map((field) => [
+        field,
+        project[field as keyof ProjectItem],
+      ]),
+    ) as unknown as CarouselProjectItem;
+
+    if (project.coverImage) {
+      entry.coverWidth = getCoverWidth(project.coverImage);
+    }
+
+    return entry;
+  });
 }
 
 export function formatCarouselProjectsModule(carouselProjects: CarouselProjectItem[]): string {

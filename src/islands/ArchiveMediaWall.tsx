@@ -10,6 +10,7 @@ import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
 import { getHostname } from "@/lib/url";
+import { buildSrcSetArray } from "@/lib/responsive-srcset";
 import { YOUTUBE_ICON_PATH, EXTERNAL_LINK_ICON_PATH } from "@/src/icons";
 
 type ArchiveMediaWallProps = {
@@ -125,6 +126,7 @@ export function ArchiveMediaWall({
           alt: title,
           title,
           label: `${projectLabel(previewLabel, locale)} ${title}`,
+          srcSet: buildSrcSetArray(item.src, item.width, item.height),
           item,
         };
       }),

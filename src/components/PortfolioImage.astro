@@ -1,4 +1,6 @@
 ---
+import { buildSrcset } from "@/lib/responsive-srcset";
+
 interface Props {
   alt: string;
   class?: string;
@@ -13,6 +15,7 @@ interface Props {
 
 const { alt, class: className, fill, height, loading, priority, sizes, src, width } = Astro.props;
 const resolvedLoading = priority ? "eager" : (loading ?? "lazy");
+const srcset = buildSrcset(src, width);
 ---
 
 {fill ? (
@@ -23,6 +26,7 @@ const resolvedLoading = priority ? "eager" : (loading ?? "lazy");
     loading={resolvedLoading}
     sizes={sizes}
     src={src}
+    srcset={srcset}
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"
   />
 ) : (
@@ -34,6 +38,7 @@ const resolvedLoading = priority ? "eager" : (loading ?? "lazy");
     loading={resolvedLoading}
     sizes={sizes}
     src={src}
+    srcset={srcset}
     width={width}
   />
 )}

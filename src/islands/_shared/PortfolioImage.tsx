@@ -1,3 +1,5 @@
+import { buildSrcset } from "@/lib/responsive-srcset";
+
 type PortfolioImageProps = {
   alt: string;
   className?: string;
@@ -24,6 +26,7 @@ export function PortfolioImage({
   width
 }: PortfolioImageProps) {
   const resolvedLoading = priority ? "eager" : (loading ?? "lazy");
+  const srcset = buildSrcset(src, width);
 
   if (fill) {
     return (
@@ -35,6 +38,7 @@ export function PortfolioImage({
         loading={resolvedLoading}
         sizes={sizes}
         src={src}
+        srcSet={srcset}
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
       />
     );
@@ -50,6 +54,7 @@ export function PortfolioImage({
       loading={resolvedLoading}
       sizes={sizes}
       src={src}
+      srcSet={srcset}
       width={width}
     />
   );

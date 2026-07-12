@@ -4,6 +4,7 @@ import PortfolioImage from "@/src/components/PortfolioImage.astro";
 import ProjectExternalLinkButton from "@/src/components/ProjectExternalLinkButton.astro";
 import ProjectSummary from "@/src/components/ProjectSummary.astro";
 import { projectDetailContent, projectLabel } from "@/content/projects";
+import { getImageWidth } from "@/lib/image-dimensions";
 import type { Locale, ProjectItem } from "@/types/content";
 
 interface Props {
@@ -14,6 +15,8 @@ interface Props {
 const { locale, project } = Astro.props;
 const film = project.film;
 const filmHeroPoster = film ? film.heroPoster[locale] : null;
+const posterSrc = filmHeroPoster?.src ?? project.coverImage;
+const posterWidth = filmHeroPoster?.width ?? (posterSrc ? getImageWidth(posterSrc) : undefined) ?? 1728;
 ---
 
 {film && filmHeroPoster ? (
@@ -48,8 +51,8 @@ const filmHeroPoster = film ? film.heroPoster[locale] : null;
         height={filmHeroPoster.height ?? 2304}
         priority
         sizes="(max-width: 760px) 100vw, (max-width: 1120px) 78vw, 42vw"
-        src={filmHeroPoster.src ?? project.coverImage}
-        width={filmHeroPoster.width ?? 1728}
+        src={posterSrc}
+        width={posterWidth}
       />
     </div>
     <div class="project-film__credits-wrap">
