@@ -1,13 +1,22 @@
 ---
+import Footer from "@/src/components/Footer.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
+import Header from "@/src/islands/Header";
 ---
 
 <BaseLayout title="Page not found | David Weng">
-  <div class="error-page error-page--global">
-    <h1 class="error-page__title">Page not found</h1>
-    <p class="error-page__copy">The page you requested does not exist. Return to the homepage to continue browsing.</p>
-    <div class="error-page__actions">
-      <a class="button" href="/">Go home</a>
-    </div>
+  <div id="site-content" class="site-shell site-shell--en">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Header client:load locale="en" pathname="/" />
+    <main id="main-content">
+      <div class="error-page error-page--global">
+        <h1 class="error-page__title">Page not found</h1>
+        <p class="error-page__copy">The page you requested does not exist. Return to the homepage to continue browsing.</p>
+        <div class="error-page__actions">
+          <a class="button" href="/">Go home</a>
+        </div>
+      </div>
+    </main>
+    <Footer locale="en" />
   </div>
 </BaseLayout>
