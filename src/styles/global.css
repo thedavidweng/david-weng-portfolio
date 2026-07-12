@@ -1206,8 +1206,8 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border: 1px solid rgba(229, 226, 225, 0.24);
   color: rgba(229, 226, 225, 0.88);
   transition: color var(--ease), border-color var(--ease), background-color var(--ease);
@@ -2433,8 +2433,8 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border: 1px solid rgba(255, 255, 255, 0.54);
     color: var(--text);
     background: rgba(255, 255, 255, 0.04);
@@ -3373,11 +3373,6 @@ main {
     gap: 0.55rem;
   }
 
-  .site-footer__social-link {
-    width: 32px;
-    height: 32px;
-  }
-
   .site-shell--zh.site-shell--home .hero__title {
     max-width: none;
   }
@@ -3454,8 +3449,10 @@ main {
   cursor: pointer;
 }
 
-.contact-hero__button:hover {
-  background: var(--bg-raised);
+@media (hover: hover) {
+  .contact-hero__button:hover {
+    background: var(--bg-raised);
+  }
 }
 
 .contact-hero__button--primary {
@@ -3464,8 +3461,10 @@ main {
   border-color: var(--accent);
 }
 
-.contact-hero__button--primary:hover {
-  background: var(--accent-soft);
+@media (hover: hover) {
+  .contact-hero__button--primary:hover {
+    background: var(--accent-soft);
+  }
 }
 
 @keyframes reveal-up {
