@@ -214,8 +214,8 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(headerBrandBlock).toContain("align-items: center;");
   expect(rootBlock).toContain("--line: rgba(255, 255, 255, 0.15);");
   expect(rootBlock).toContain("--line-strong: rgba(255, 255, 255, 0.3);");
-  expect(rootBlock).toContain("--text-soft: #a0a0a0;");
-  expect(rootBlock).toContain("--text-faint: #949494;");
+  expect(rootBlock).toContain("--text-soft: oklch(0.656 0.005 25);");
+  expect(rootBlock).toContain("--text-faint: oklch(0.626 0.005 25);");
   expect(rootBlock).toContain("--accent-soft: rgba(225, 29, 37, 0.72);");
   expect(rootBlock).toContain("--radius-xl: 0;");
   expect(rootBlock).toContain("--radius-lg: 0;");

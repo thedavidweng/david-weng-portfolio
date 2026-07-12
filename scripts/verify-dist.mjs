@@ -17,7 +17,7 @@ function ok(label) {
   console.log(`OK: ${label}`);
 }
 
-assert(existsSync(distDir), "dist/ is missing — run pnpm build first");
+assert(existsSync(distDir), "dist/ is missing, run pnpm build first");
 
 assert(!existsSync(join(root, "app")), "app/ must not exist");
 ok("no app/ directory");

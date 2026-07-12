@@ -238,7 +238,7 @@ export const projects: ProjectItem[] = [
     highlights: localized(
       [
         "Spare mise-en-scène, foregrounding performance and atmosphere.",
-        "An earlier piece — before the later festival short films."
+        "An earlier piece, before the later festival short films."
       ],
       ["克制的场面调度，注意力集中在表演与气氛上。", "更早期的作品，拍于后续电影节短片之前。"]
     ),
@@ -270,7 +270,7 @@ export const projects: ProjectItem[] = [
       "受委托制作的视频项目。"
     ),
     summary: localized(
-      "Video projects created on commission — event recaps, promotional content, and more.",
+      "Video projects created on commission: event recaps, promotional content, and more.",
       "受委托制作的视频项目，包括活动回顾、宣传内容等。"
     ),
     roles: localized(
@@ -299,7 +299,7 @@ export const projects: ProjectItem[] = [
       "个人视频档案封面"
     ),
     teaser: localized(
-      "Personal video work — campaign edits, short films, and experiments.",
+      "Personal video work: campaign edits, short films, and experiments.",
       "个人视频作品，包括宣传片剪辑、短片与实验性项目。"
     ),
     summary: localized(
@@ -338,7 +338,7 @@ export const projects: ProjectItem[] = [
       "为 BC + AI Ecosystem 制作的社交图片、幻灯片、活动照片与设计作品。"
     ),
     summary: localized(
-      "Design work for BC + AI Ecosystem — meetup graphics, presentation slides, social assets, and event documentation.",
+      "Design work for BC + AI Ecosystem: meetup graphics, presentation slides, social assets, and event documentation.",
       "BC + AI Ecosystem 的设计工作，包括线下聚会视觉、演示文稿、社交图片与活动记录。"
     ),
     roles: localized(
@@ -373,7 +373,7 @@ export const projects: ProjectItem[] = [
       "为 TheUpgrade.AI 制作的海报、社交图片与品牌视觉。"
     ),
     summary: localized(
-      "Visual work for TheUpgrade.AI — posters, social graphics, and branded launch materials.",
+      "Visual work for TheUpgrade.AI: posters, social graphics, and branded launch materials.",
       "TheUpgrade.AI 的视觉设计，包括海报、社交图片与品牌发布物料。"
     ),
     roles: localized(

@@ -10,6 +10,7 @@ import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
 import { getHostname } from "@/lib/url";
+import { buildSrcSetArray } from "@/lib/responsive-srcset";
 import { YOUTUBE_ICON_PATH, EXTERNAL_LINK_ICON_PATH } from "@/src/icons";
 
 type ArchiveMediaWallProps = {
@@ -75,7 +76,7 @@ function getOverlayLinkMeta(href: string): OverlayLinkMeta {
 /**
  * `useSyncExternalStore` for SSR-safe feature detection of `ResizeObserver`.
  * The subscribe function is a no-op because `ResizeObserver` availability is
- * static — it never changes during a component's lifetime — so there is nothing
+ * static, it never changes during a component's lifetime, so there is nothing
  * to subscribe to. `useSyncExternalStore` is still used (rather than a plain
  * `useState`/`useMemo`) because it provides the `getServerSnapshot` parameter,
  * which keeps SSR output deterministic.
@@ -125,6 +126,7 @@ export function ArchiveMediaWall({
           alt: title,
           title,
           label: `${projectLabel(previewLabel, locale)} ${title}`,
+          srcSet: buildSrcSetArray(item.src, item.width, item.height),
           item,
         };
       }),

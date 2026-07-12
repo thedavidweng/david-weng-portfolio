@@ -194,38 +194,38 @@ bcAiEcosystemArchive.items = [
     kind: "square",
     title: localized("Vancouver AI community description", "Vancouver AI 社区简介"),
     caption: localized(
-      "Community description graphic — what the Vancouver AI meetups are about.",
-      "社区介绍图 — Vancouver AI 聚会的定位与愿景。"
+      "Community description graphic: what the Vancouver AI meetups are about.",
+      "社区介绍图：Vancouver AI 聚会的定位与愿景。"
     ),
     order: 51
   },
   {
     file: "square/square-bcai-apr-26-hosts-aliza-noa.avif",
     kind: "square",
-    title: localized("April hosts — Aliza & Noa", "四月主持人 — Aliza & Noa"),
+    title: localized("April hosts: Aliza & Noa", "四月主持人：Aliza & Noa"),
     caption: localized(
       "Host card for Aliza and Noa, April 29th meetup.",
-      "4 月 29 日聚会主持人卡 — Aliza 与 Noa。"
+      "4 月 29 日聚会主持人卡：Aliza 与 Noa。"
     ),
     order: 52
   },
   {
     file: "square/square-bcai-apr-26-speaker-martin-lopatka.avif",
     kind: "square",
-    title: localized("April speaker — Martin Lopatka", "四月讲者 — Martin Lopatka"),
+    title: localized("April speaker: Martin Lopatka", "四月讲者：Martin Lopatka"),
     caption: localized(
       "Speaker card for Martin Lopatka (EPAM Systems), April 29th meetup.",
-      "4 月 29 日聚会讲者卡 — Martin Lopatka（EPAM Systems）。"
+      "4 月 29 日聚会讲者卡：Martin Lopatka（EPAM Systems）。"
     ),
     order: 53
   },
   {
     file: "square/square-bcai-apr-26-speaker-sev-geraskin.avif",
     kind: "square",
-    title: localized("April speaker — Sev Geraskin", "四月讲者 — Sev Geraskin"),
+    title: localized("April speaker: Sev Geraskin", "四月讲者：Sev Geraskin"),
     caption: localized(
       "Speaker card for Sev Geraskin, April 29th meetup.",
-      "4 月 29 日聚会讲者卡 — Sev Geraskin。"
+      "4 月 29 日聚会讲者卡：Sev Geraskin。"
     ),
     order: 54
   },
@@ -243,10 +243,10 @@ bcAiEcosystemArchive.items = [
   {
     file: "square/square-bcai-recruit-2026-04-15-demo.avif",
     kind: "square",
-    title: localized("Recruit — Demo", "招募 — Demo 演示"),
+    title: localized("Recruit: Demo", "招募：Demo 演示"),
     caption: localized(
-      "Year-round recruitment graphic for demo presenters — show your work, get feedback, find collaborators.",
-      "全年招募 Demo 演示者 — 展示作品、获得反馈、寻找协作者。"
+      "Year-round recruitment graphic for demo presenters: show your work, get feedback, find collaborators.",
+      "全年招募 Demo 演示者：展示作品、获得反馈、寻找协作者。"
     ),
     order: 61
   },
@@ -263,27 +263,27 @@ bcAiEcosystemArchive.items = [
   {
     file: "square/square-bcai-recruit-2026-04-15-speaker.avif",
     kind: "square",
-    title: localized("Recruit — Speaker", "招募 — 讲者"),
+    title: localized("Recruit: Speaker", "招募：讲者"),
     caption: localized(
-      "Year-round recruitment graphic for speakers — share ideas with the community.",
-      "全年招募讲者 — 与社区分享你的想法。"
+      "Year-round recruitment graphic for speakers: share ideas with the community.",
+      "全年招募讲者：与社区分享你的想法。"
     ),
     order: 63
   },
   {
     file: "square/square-bcai-recruit-2026-04-15-sponsor.avif",
     kind: "square",
-    title: localized("Recruit — Sponsor", "招募 — 赞助商"),
+    title: localized("Recruit: Sponsor", "招募：赞助商"),
     caption: localized(
-      "Year-round sponsorship recruitment — support grassroots AI community.",
-      "全年招募赞助商 — 支持草根 AI 社区。"
+      "Year-round sponsorship recruitment: support grassroots AI community.",
+      "全年招募赞助商：支持草根 AI 社区。"
     ),
     order: 64
   },
   {
     file: "square/square-bcai-recruit-2026-04-15-volunteer.avif",
     kind: "square",
-    title: localized("Recruit — Volunteer", "招募 — 志愿者"),
+    title: localized("Recruit: Volunteer", "招募：志愿者"),
     caption: localized(
       "Year-round volunteer recruitment for the BC+AI ecosystem.",
       "BC+AI 生态全年志愿者招募。"

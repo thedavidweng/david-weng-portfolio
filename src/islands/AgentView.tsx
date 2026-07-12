@@ -24,7 +24,7 @@ export function AgentView({ locale }: AgentViewProps) {
     <div style={panelStyle}>
       <header>
         <h1>
-          {data.identity.name} — {data.identity.roles.join(", ")}
+          {data.identity.name}: {data.identity.roles.join(", ")}
         </h1>
         <p>
           <strong>{data.hero.kicker}</strong>
@@ -111,29 +111,29 @@ export function AgentView({ locale }: AgentViewProps) {
         <h2 id="meta-heading">Machine-Readable Endpoints</h2>
         <ul>
           <li>
-            <a href={`${SITE_URL}/agent`}>/agent</a> — JSON representation of
+            <a href={`${SITE_URL}/agent`}>/agent</a>: JSON representation of
             this page
           </li>
           <li>
-            <a href={`${SITE_URL}/llms.txt`}>/llms.txt</a> — LLM discovery file
+            <a href={`${SITE_URL}/llms.txt`}>/llms.txt</a>: LLM discovery file
           </li>
           <li>
-            <a href={`${SITE_URL}/llms-full.txt`}>/llms-full.txt</a> — Complete
+            <a href={`${SITE_URL}/llms-full.txt`}>/llms-full.txt</a>: Complete
             site documentation
           </li>
           <li>
-            <a href={`${SITE_URL}/index.md`}>/index.md</a> — Markdown version of
+            <a href={`${SITE_URL}/index.md`}>/index.md</a>: Markdown version of
             homepage
           </li>
           <li>
-            <a href={`${SITE_URL}/zh/index.md`}>/zh/index.md</a> — Chinese
+            <a href={`${SITE_URL}/zh/index.md`}>/zh/index.md</a>: Chinese
             homepage markdown
           </li>
           <li>
-            <a href={`${SITE_URL}/sitemap.xml`}>/sitemap.xml</a> — XML sitemap
+            <a href={`${SITE_URL}/sitemap.xml`}>/sitemap.xml</a>: XML sitemap
           </li>
           <li>
-            <a href={`${SITE_URL}/robots.txt`}>/robots.txt</a> — Robots policy
+            <a href={`${SITE_URL}/robots.txt`}>/robots.txt</a>: Robots policy
           </li>
         </ul>
       </section>

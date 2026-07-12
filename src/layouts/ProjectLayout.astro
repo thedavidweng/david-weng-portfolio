@@ -14,6 +14,7 @@ import Header from "@/src/islands/Header";
 import { projectDetailContent, projectLabel } from "@/content/projects";
 import { getLocaleHomePath } from "@/lib/i18n";
 import { getHostname } from "@/lib/url";
+import { getImageWidth } from "@/lib/image-dimensions";
 import type { Locale, ProjectItem } from "@/types/content";
 
 interface Props {
@@ -42,6 +43,7 @@ const isDedicatedFilmProject = isFilmProject && Boolean(project.film) && !useIma
 const isArchiveVideoProject = isVideoProject && useImageWall;
 const primaryExternalLink = project.externalLinks[0];
 const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
+const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : undefined;
 ---
 
 <BaseLayout
@@ -140,6 +142,7 @@ const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
                     priority
                     sizes="(max-width: 1120px) 100vw, 40vw"
                     src={project.coverImage}
+                    width={coverWidth}
                   />
                   {!useImageWall ? (
                     <>

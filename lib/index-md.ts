@@ -12,7 +12,7 @@ import { SITE_URL } from "@/lib/site-config";
 export function generateIndexMd(locale: Locale): string {
   const roles = siteIdentity.roles[locale].join(", ");
 
-  return `# ${siteIdentity.name} — ${roles}
+  return `# ${siteIdentity.name}: ${roles}
 
 ${heroContent.kicker[locale]}
 
@@ -55,13 +55,13 @@ ${navigationItems
 
 ## Agent Endpoints
 
-- [/agent](${SITE_URL}/agent) — JSON data about this person and their work
-- [/llms.txt](${SITE_URL}/llms.txt) — LLM discovery file
-- [/llms-full.txt](${SITE_URL}/llms-full.txt) — Complete documentation
-- [/index.md](${SITE_URL}/index.md) — English homepage markdown
-- [/zh/index.md](${SITE_URL}/zh/index.md) — Chinese homepage markdown
-- [/sitemap.xml](${SITE_URL}/sitemap.xml) — Site map
-- [/robots.txt](${SITE_URL}/robots.txt) — Crawling policy
+- [/agent](${SITE_URL}/agent): JSON data about this person and their work
+- [/llms.txt](${SITE_URL}/llms.txt): LLM discovery file
+- [/llms-full.txt](${SITE_URL}/llms-full.txt): Complete documentation
+- [/index.md](${SITE_URL}/index.md): English homepage markdown
+- [/zh/index.md](${SITE_URL}/zh/index.md): Chinese homepage markdown
+- [/sitemap.xml](${SITE_URL}/sitemap.xml): Site map
+- [/robots.txt](${SITE_URL}/robots.txt): Crawling policy
 
 ---
 

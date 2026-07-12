@@ -19,6 +19,10 @@ const archiveFolderKindMap: Record<string, ArchiveItemKind> = {
 
 const ignoredArchiveFiles = new Set([".gitkeep", ".DS_Store", "README.md"]);
 
+function isResponsiveVariant(filename: string): boolean {
+  return /@\d{3,4}w\.(avif|webp|jpg|jpeg|png)$/i.test(filename);
+}
+
 const archiveFallbackDimensions: Record<ArchiveItemKind, { width: number; height: number }> = {
   cover: { width: 1600, height: 1600 },
   poster: { width: 1200, height: 1800 },
@@ -51,7 +55,7 @@ export function scanArchiveItemsFromDirectory(directory: string, collection: Arc
     }
 
     for (const entry of entries.toSorted((left, right) => left.localeCompare(right, undefined, { numeric: true }))) {
-      if (ignoredArchiveFiles.has(entry)) {
+      if (ignoredArchiveFiles.has(entry) || isResponsiveVariant(entry)) {
         continue;
       }
 
