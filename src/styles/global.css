@@ -3444,7 +3444,7 @@ main {
   border: 1px solid rgba(229, 226, 225, 0.3);
   color: var(--text);
   background: transparent;
-  transition: all var(--ease);
+  transition: background-color var(--ease), border-color var(--ease), color var(--ease);
   text-decoration: none;
   cursor: pointer;
 }
