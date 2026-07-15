@@ -3,7 +3,7 @@ import { imageSize } from "image-size";
 import { join } from "node:path";
 import type { CarouselProjectItem, ProjectItem } from "@/types/content";
 
-export const CAROUSEL_FIELDS = [
+const CAROUSEL_FIELDS = [
   "slug",
   "title",
   "code",
