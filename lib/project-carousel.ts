@@ -4,7 +4,7 @@ import type { CarouselProjectItem, Locale } from "@/types/content";
 
 export const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing"] as const;
 
-export type ProjectCategoryId = (typeof PROJECT_CATEGORY_SEQUENCE)[number];
+type ProjectCategoryId = (typeof PROJECT_CATEGORY_SEQUENCE)[number];
 
 export type ProjectCategoryGroup = {
   id: ProjectCategoryId;

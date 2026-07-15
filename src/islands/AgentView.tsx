@@ -152,5 +152,3 @@ export function AgentView({ locale }: AgentViewProps) {
     </div>
   );
 }
-
-export default AgentView;

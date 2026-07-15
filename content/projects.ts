@@ -6,8 +6,6 @@ import { theUpgradeAiArchive } from "@/content/archives/theupgrade-ai";
 import { fraudFilmDetails, gourdFilmDetails, thePillsFilmDetails } from "@/content/film-data";
 import { getArchiveCoverItem, getArchiveFilePath } from "@/lib/archives";
 
-export { projectSectionContent } from "@/content/project-section";
-
 export const projectDetailContent = {
   backLabel: localized("Back to projects", "返回项目列表"),
   highlightsEyebrow: localized("Highlights", "亮点"),
