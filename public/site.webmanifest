@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "David Weng",
+  "short_name": "David Weng",
+  "description": "Portfolio of David Weng: visual storytelling, design, and creative systems.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070607",
+  "theme_color": "#070607",
+  "icons": [
+    {
+      "src": "/brand/favicon.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
