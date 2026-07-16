@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Header } from "@/src/islands/Header";
@@ -39,6 +41,17 @@ function getMobileMenuPanel() {
   }
 
   return panel;
+}
+
+function installThemeColorMeta() {
+  document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')?.remove();
+
+  const themeColor = document.createElement("meta");
+  themeColor.name = "theme-color";
+  themeColor.content = "#070607";
+  document.head.append(themeColor);
+
+  return themeColor;
 }
 
 test("mobile menu inerts only non-header page content inside site-content", async () => {
@@ -87,6 +100,59 @@ test("mobile menu inerts only non-header page content inside site-content", asyn
   } finally {
     vi.useRealTimers();
   }
+});
+
+test("mobile menu keeps Safari browser chrome dark", async () => {
+  const user = userEvent.setup();
+  const themeColor = installThemeColorMeta();
+
+  try {
+    renderHeaderInProductionShell();
+    await openMobileMenu(user);
+
+    expect(themeColor).toHaveAttribute("content", "#070607");
+
+    await user.keyboard("{Escape}");
+
+    expect(themeColor).toHaveAttribute("content", "#070607");
+  } finally {
+    themeColor.remove();
+  }
+});
+
+test("base layout enables a standalone mobile menu without recoloring Safari", () => {
+  const layoutSource = readFileSync(
+    join(process.cwd(), "src/layouts/BaseLayout.astro"),
+    "utf8",
+  );
+  const manifest = JSON.parse(
+    readFileSync(join(process.cwd(), "public/site.webmanifest"), "utf8"),
+  );
+  const globalStyles = readFileSync(
+    join(process.cwd(), "src/styles/global.css"),
+    "utf8",
+  );
+
+  expect(layoutSource).toContain(
+    '<meta name="theme-color" content="#070607" />',
+  );
+  expect(layoutSource).toContain('rel="manifest" href="/site.webmanifest"');
+  expect(layoutSource).toContain('name="mobile-web-app-capable"');
+  expect(layoutSource).toContain('name="apple-mobile-web-app-capable"');
+  expect(layoutSource).toContain(
+    'name="apple-mobile-web-app-status-bar-style" content="black-translucent"',
+  );
+  expect(manifest).toMatchObject({
+    id: "/",
+    start_url: "/",
+    scope: "/",
+    display: "standalone",
+    background_color: "#070607",
+    theme_color: "#070607",
+  });
+  expect(globalStyles).toContain("height: 100vh;\n    height: 100dvh;");
+  expect(globalStyles).toContain("calc(env(safe-area-inset-top) + 5.5rem)");
+  expect(globalStyles).toContain("calc(env(safe-area-inset-bottom) + 1.2rem)");
 });
 
 test("mobile menu remains keyboard reachable when rendered inside site-content", async () => {
