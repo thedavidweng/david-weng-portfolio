@@ -2378,6 +2378,7 @@ main {
     top: 0;
     right: 0;
     width: min(86vw, 430px);
+    height: 100vh;
     height: 100dvh;
     padding:
       calc(env(safe-area-inset-top) + 5.5rem)
