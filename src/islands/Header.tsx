@@ -205,7 +205,7 @@ type MobileMenuPanelProps = {
   resolveNavHref: (href: string) => string;
   closeMenu: () => void;
   menuAnimatedOpen: boolean;
-  panelRef: RefObject<HTMLDivElement | null>;
+  dialogRef: RefObject<HTMLDialogElement | null>;
 };
 
 function MobileMenuPanel({
@@ -219,7 +219,7 @@ function MobileMenuPanel({
   resolveNavHref,
   closeMenu,
   menuAnimatedOpen,
-  panelRef,
+  dialogRef,
 }: MobileMenuPanelProps) {
   const motionClass = menuAnimatedOpen
     ? "site-header__menu-backdrop--open"
@@ -237,12 +237,15 @@ function MobileMenuPanel({
         tabIndex={-1}
         type="button"
       />
-      <div
+      <dialog
         aria-labelledby="site-mobile-menu-label"
         className={`site-header__menu-panel ${panelMotionClass}`}
         id="site-mobile-menu-panel"
-        ref={panelRef}
-        role="dialog"
+        onCancel={(event) => {
+          event.preventDefault();
+          closeMenu();
+        }}
+        ref={dialogRef}
       >
         <h2 className="visually-hidden" id="site-mobile-menu-label">
           {menuLabel}
@@ -260,7 +263,7 @@ function MobileMenuPanel({
           contactButtonLabel={contactButtonLabel}
           locale={locale}
         />
-      </div>
+      </dialog>
     </>
   );
 }
@@ -275,7 +278,7 @@ export function Header({ locale, pathname }: HeaderProps) {
     typeof createHeaderScrollController
   > | null>(null);
   const menuToggleRef = useRef<HTMLButtonElement>(null);
-  const menuPanelRef = useRef<HTMLDivElement>(null);
+  const menuDialogRef = useRef<HTMLDialogElement>(null);
 
   if (scrollControllerRef.current === null) {
     scrollControllerRef.current = createHeaderScrollController();
@@ -390,6 +393,28 @@ export function Header({ locale, pathname }: HeaderProps) {
   }, [isDesktop, menuOpen, menuRendered]);
 
   useEffect(() => {
+    if (!menuRendered) {
+      return;
+    }
+
+    const dialog = menuDialogRef.current;
+
+    if (!dialog || typeof dialog.showModal !== "function") {
+      return;
+    }
+
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+
+    return () => {
+      if (dialog.open) {
+        dialog.close();
+      }
+    };
+  }, [menuRendered]);
+
+  useEffect(() => {
     const shell = getMobileMenuPageShell();
 
     if (!shell) {
@@ -423,7 +448,7 @@ export function Header({ locale, pathname }: HeaderProps) {
       return;
     }
 
-    const panel = menuPanelRef.current;
+    const panel = menuDialogRef.current;
 
     if (!panel) {
       return;
@@ -526,7 +551,7 @@ export function Header({ locale, pathname }: HeaderProps) {
                 locale={locale}
                 menuAnimatedOpen={menuAnimatedOpen}
                 menuLabel={menuLabel}
-                panelRef={menuPanelRef}
+                dialogRef={menuDialogRef}
                 resolveNavHref={resolveNavHref}
                 socialLinksLabel={socialLinksLabel}
                 switchHref={switchHref}

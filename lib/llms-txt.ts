@@ -22,9 +22,9 @@ function groupProjectsByCategory() {
 
 export function generateLlmsTxt(): string {
   const groups = groupProjectsByCategory();
-  const projectSections = PROJECT_CATEGORY_SEQUENCE.map((category) => {
+  const projectSections = PROJECT_CATEGORY_SEQUENCE.flatMap((category) => {
     const items = groups.get(category) ?? [];
-    if (items.length === 0) return "";
+    if (items.length === 0) return [];
 
     const lines = items
       .map(
@@ -33,10 +33,8 @@ export function generateLlmsTxt(): string {
       )
       .join("\n");
 
-    return `### ${category}\n${lines}`;
-  })
-    .filter(Boolean)
-    .join("\n\n");
+    return [`### ${category}\n${lines}`];
+  }).join("\n\n");
 
   return `# David Weng Portfolio
 

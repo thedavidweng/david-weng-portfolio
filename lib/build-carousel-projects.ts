@@ -31,10 +31,11 @@ function getCoverWidth(coverImage: string): number | undefined {
 export function buildCarouselProjects(source: ProjectItem[]): CarouselProjectItem[] {
   return source.map((project) => {
     const entry = Object.fromEntries(
-      CAROUSEL_FIELDS.filter((f) => f !== "coverWidth").map((field) => [
-        field,
-        project[field as keyof ProjectItem],
-      ]),
+      CAROUSEL_FIELDS.flatMap((field) =>
+        field !== "coverWidth"
+          ? [[field, project[field as keyof ProjectItem]]]
+          : [],
+      ),
     ) as unknown as CarouselProjectItem;
 
     if (project.coverImage) {
