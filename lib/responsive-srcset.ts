@@ -33,9 +33,9 @@ export function buildSrcset(
     return undefined;
   }
 
-  const candidates = RESPONSIVE_WIDTHS.filter(
-    (w) => w < originalWidth,
-  ).map((w) => `${variantPath(src, w)} ${w}w`);
+  const candidates = RESPONSIVE_WIDTHS.flatMap((w) =>
+    w < originalWidth ? [`${variantPath(src, w)} ${w}w`] : [],
+  );
 
   // Always include the original as the largest candidate
   candidates.push(`${src} ${originalWidth}w`);
@@ -64,13 +64,15 @@ export function buildSrcSetArray(
   }
 
   const aspectRatio = originalHeight / originalWidth;
-  const variants: ResponsiveImage[] = RESPONSIVE_WIDTHS.filter(
-    (w) => w < originalWidth,
-  ).map((w) => ({
-    src: variantPath(src, w),
-    width: w,
-    height: Math.round(w * aspectRatio),
-  }));
+  const variants: ResponsiveImage[] = RESPONSIVE_WIDTHS.flatMap((w) =>
+    w < originalWidth
+      ? [{
+          src: variantPath(src, w),
+          width: w,
+          height: Math.round(w * aspectRatio),
+        }]
+      : [],
+  );
 
   // Include the original as the largest candidate (matches buildSrcset behavior)
   variants.push({ src, width: originalWidth, height: originalHeight });

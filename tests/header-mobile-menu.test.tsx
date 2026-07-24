@@ -66,7 +66,7 @@ test("mobile menu inerts only non-header page content inside site-content", asyn
     expect(headerHost?.inert).not.toBe(true);
     expect(headerHost).not.toHaveAttribute("aria-hidden");
     expect(getMobileMenuPanel()).toBeInTheDocument();
-    expect(screen.getByRole("dialog", { name: /main menu/i })).toHaveAttribute(
+    expect(getMobileMenuPanel()).toHaveAttribute(
       "aria-labelledby",
       "site-mobile-menu-label"
     );
@@ -107,4 +107,37 @@ test("mobile menu remains keyboard reachable when rendered inside site-content",
 
   await user.tab();
   expect(document.activeElement).toBe(first);
+});
+
+test("tapping the backdrop dismisses the mobile menu", async () => {
+  const user = userEvent.setup();
+
+  renderHeaderInProductionShell();
+  await openMobileMenu(user);
+
+  const toggle = screen.getByRole("button", { name: /close menu/i });
+  const backdrop = document.querySelector(".site-header__menu-backdrop");
+
+  expect(backdrop).not.toBeNull();
+  await user.click(backdrop as HTMLElement);
+
+  await waitFor(() => {
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+  });
+});
+
+test("tapping the hamburger toggle closes an open mobile menu", async () => {
+  const user = userEvent.setup();
+
+  renderHeaderInProductionShell();
+  await openMobileMenu(user);
+
+  const toggle = screen.getByRole("button", { name: /close menu/i });
+  expect(toggle).toHaveAttribute("aria-expanded", "true");
+
+  await user.click(toggle);
+
+  await waitFor(() => {
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+  });
 });

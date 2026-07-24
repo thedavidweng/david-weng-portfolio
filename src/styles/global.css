@@ -2377,8 +2377,12 @@ main {
     position: fixed;
     top: 0;
     right: 0;
+    bottom: auto;
+    left: auto;
     width: min(86vw, 430px);
     height: 100dvh;
+    margin: 0;
+    border: 0;
     padding:
       calc(env(safe-area-inset-top) + 5.5rem)
       1.1rem
@@ -2395,6 +2399,11 @@ main {
     animation-duration: 380ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     animation-fill-mode: forwards;
+  }
+
+  .site-header__menu-panel::backdrop {
+    background: transparent;
+    pointer-events: none;
   }
 
   .site-header__menu-panel--desktop {
