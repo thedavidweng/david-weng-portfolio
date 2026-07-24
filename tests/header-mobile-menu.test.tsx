@@ -108,3 +108,36 @@ test("mobile menu remains keyboard reachable when rendered inside site-content",
   await user.tab();
   expect(document.activeElement).toBe(first);
 });
+
+test("tapping the backdrop dismisses the mobile menu", async () => {
+  const user = userEvent.setup();
+
+  renderHeaderInProductionShell();
+  await openMobileMenu(user);
+
+  const toggle = screen.getByRole("button", { name: /close menu/i });
+  const backdrop = document.querySelector(".site-header__menu-backdrop");
+
+  expect(backdrop).not.toBeNull();
+  await user.click(backdrop as HTMLElement);
+
+  await waitFor(() => {
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+  });
+});
+
+test("tapping the hamburger toggle closes an open mobile menu", async () => {
+  const user = userEvent.setup();
+
+  renderHeaderInProductionShell();
+  await openMobileMenu(user);
+
+  const toggle = screen.getByRole("button", { name: /close menu/i });
+  expect(toggle).toHaveAttribute("aria-expanded", "true");
+
+  await user.click(toggle);
+
+  await waitFor(() => {
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+  });
+});

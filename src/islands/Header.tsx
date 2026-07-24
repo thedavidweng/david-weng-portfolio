@@ -399,12 +399,17 @@ export function Header({ locale, pathname }: HeaderProps) {
 
     const dialog = menuDialogRef.current;
 
-    if (!dialog || typeof dialog.showModal !== "function") {
+    // Use show() (non-modal) instead of showModal(): the custom focus trap,
+    // inert management, and backdrop/toggle close handlers below already
+    // provide modal behavior. showModal() would inert the entire document
+    // outside the <dialog>, breaking the external backdrop button and
+    // hamburger toggle — the only close paths on touch devices (no Escape).
+    if (!dialog || typeof dialog.show !== "function") {
       return;
     }
 
     if (!dialog.open) {
-      dialog.showModal();
+      dialog.show();
     }
 
     return () => {
