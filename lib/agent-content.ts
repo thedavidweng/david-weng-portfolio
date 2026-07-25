@@ -5,11 +5,20 @@ import {
   servicesContent,
   contactContent,
   aboutContent,
-  navigationItems
+  navigationItems,
+  blogUrl
 } from "@/content/site";
 import { projects } from "@/content/projects";
-import { SITE_URL } from "@/lib/site-config";
+import { AGENT_ENDPOINTS, SITE_URL } from "@/lib/site-config";
 import { getLocalizedText, getLocalizedValue } from "@/lib/i18n";
+
+export function formatEndpoints(style: "linked" | "absolute"): string {
+  return AGENT_ENDPOINTS.map((endpoint) =>
+    style === "linked"
+      ? `- [${endpoint.path}](${SITE_URL}${endpoint.path}): ${endpoint.description}`
+      : `- ${SITE_URL}${endpoint.path}: ${endpoint.description}`
+  ).join("\n");
+}
 
 export function formatServices(locale: Locale): string {
   return servicesContent.items
@@ -58,11 +67,7 @@ export function buildAgentData(locale: Locale) {
       kicker: getLocalizedText(heroContent.kicker, locale),
       support: getLocalizedText(heroContent.support, locale)
     },
-    location: {
-      city: "Vancouver",
-      country: "Canada",
-      workingScope: "Global"
-    },
+    location: siteIdentity.location,
     services: servicesContent.items.map((s) => ({
       name: getLocalizedText(s.title, locale),
       description: getLocalizedText(s.description, locale)
@@ -91,13 +96,22 @@ export function buildAgentData(locale: Locale) {
     },
     meta: {
       website: SITE_URL,
-      blog: "https://blog.davidweng.eu.org/",
+      blog: blogUrl,
       languages: ["en", "zh"],
-      sitemap: `${SITE_URL}/sitemap.xml`,
-      llmsTxt: `${SITE_URL}/llms.txt`,
-      robotsTxt: `${SITE_URL}/robots.txt`,
-      agentEndpoint: `${SITE_URL}/agent`,
-      markdownVersion: `${SITE_URL}/index.md`
+      endpoints: AGENT_ENDPOINTS.map((endpoint) => ({
+        url: `${SITE_URL}${endpoint.path}`,
+        description: endpoint.description
+      }))
     }
+  };
+}
+
+export function buildAgentEndpointPayload() {
+  return {
+    defaultLocale: "en" as const,
+    locales: {
+      en: buildAgentData("en"),
+      zh: buildAgentData("zh")
+    } satisfies Record<Locale, ReturnType<typeof buildAgentData>>
   };
 }

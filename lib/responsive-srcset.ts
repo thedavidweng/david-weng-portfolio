@@ -7,8 +7,8 @@
  * 400w, 800w, 1200w, and 1920w for images wider than 1200px.
  */
 
-const RESPONSIVE_WIDTHS = [400, 800, 1200, 1920] as const;
-const MIN_ORIGINAL_WIDTH = 1200;
+export const RESPONSIVE_WIDTHS = [400, 800, 1200, 1920] as const;
+export const MIN_ORIGINAL_WIDTH = 1200;
 
 function variantPath(src: string, width: number): string {
   const dotIndex = src.lastIndexOf(".");

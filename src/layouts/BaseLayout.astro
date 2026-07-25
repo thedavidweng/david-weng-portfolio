@@ -1,5 +1,6 @@
 ---
 import JsonLd from "@/src/components/JsonLd.astro";
+import { siteIdentity } from "@/content/site";
 import { buildPersonSchema, buildWebSiteSchema } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site-config";
 import type { Locale } from "@/types/content";
@@ -46,7 +47,7 @@ const {
     <link rel="alternate" hreflang="zh" href={`${SITE_URL}${alternateZh}`} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={locale === "zh" ? "zh" : "en"} />
-    <meta property="og:site_name" content="David Weng" />
+    <meta property="og:site_name" content={siteIdentity.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={`${SITE_URL}${canonical}`} />

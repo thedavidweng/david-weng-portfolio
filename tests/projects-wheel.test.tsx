@@ -2,6 +2,10 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
+import { projects } from "@/content/projects";
+import { buildCarouselProjects } from "@/lib/build-carousel-projects";
+
+const carouselProjects = buildCarouselProjects(projects);
 import { installNativeScrollLayout } from "@/tests/helpers/projects-scroll";
 
 test("projects section no longer imports embla or intercepts wheel gestures directly", () => {
@@ -13,7 +17,7 @@ test("projects section no longer imports embla or intercepts wheel gestures dire
 });
 
 test("clicking a category chip scrolls natively to the first slide in that group", () => {
-  const { container } = render(<ProjectsSection locale="en" />);
+  const { container } = render(<ProjectsSection locale="en" projects={carouselProjects} />);
   const { scrollTo } = installNativeScrollLayout(container);
   const videoButton = screen.getByRole("button", { name: /^video$/i });
 
@@ -25,7 +29,7 @@ test("clicking a category chip scrolls natively to the first slide in that group
 });
 
 test("prev and next buttons move by adjacent slides and reflect boundary states", async () => {
-  const { container } = render(<ProjectsSection locale="en" />);
+  const { container } = render(<ProjectsSection locale="en" projects={carouselProjects} />);
   const { scrollTo, viewport } = installNativeScrollLayout(container);
   const previousButton = screen.getByRole("button", { name: /previous projects/i });
   const nextButton = screen.getByRole("button", { name: /next projects/i });
@@ -48,7 +52,7 @@ test("prev and next buttons move by adjacent slides and reflect boundary states"
 });
 
 test("active category follows native horizontal scroll position", async () => {
-  const { container } = render(<ProjectsSection locale="en" />);
+  const { container } = render(<ProjectsSection locale="en" projects={carouselProjects} />);
   const { viewport } = installNativeScrollLayout(container);
 
   viewport.scrollLeft = 960;

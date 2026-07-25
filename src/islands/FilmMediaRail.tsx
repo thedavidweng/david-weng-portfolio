@@ -1,6 +1,6 @@
 import { StrictMode, useMemo, useState } from "react";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
-import { projectLabel } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
 import { isPreviewImageItem } from "@/src/islands/_shared/preview-image";
@@ -41,13 +41,13 @@ export function FilmMediaRail({
           {previewItems.map((item, index) => (
             <figure key={item.src} className={`${cardClassName} signal-panel`}>
               <button
-                aria-label={`${projectLabel(previewLabel, locale)} ${projectLabel(item.title, locale)}`}
+                aria-label={`${getLocalizedText(previewLabel, locale)} ${getLocalizedText(item.title, locale)}`}
                 className="project-film__rail-button"
                 onClick={() => setActiveIndex(index)}
                 type="button"
               >
                 <PortfolioImage
-                  alt={projectLabel(item.title, locale)}
+                  alt={getLocalizedText(item.title, locale)}
                   className={imageClassName}
                   height={item.height ?? 1080}
                   loading="lazy"
@@ -72,5 +72,3 @@ export function FilmMediaRail({
     </StrictMode>
   );
 }
-
-export default FilmMediaRail;

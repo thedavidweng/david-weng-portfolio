@@ -1,6 +1,5 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "exclude": ["duplicates"],
-  "ignoreBinaries": ["identify", "magick"],
+  "ignoreBinaries": ["magick"],
   "ignoreExportsUsedInFile": { "type": true }
 }

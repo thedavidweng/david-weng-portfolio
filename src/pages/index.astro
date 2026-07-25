@@ -1,34 +1,5 @@
 ---
-import ContactSection from "@/src/components/ContactSection.astro";
-import Footer from "@/src/components/Footer.astro";
-import HeroSection from "@/src/components/HeroSection.astro";
-import JsonLd from "@/src/components/JsonLd.astro";
-import ServicesSection from "@/src/components/ServicesSection.astro";
-import BaseLayout from "@/src/layouts/BaseLayout.astro";
-import Header from "@/src/islands/Header";
-import ProjectsSection from "@/src/islands/ProjectsSection";
-import { buildOrganizationSchema } from "@/lib/jsonld";
+import HomeLayout from "@/src/layouts/HomeLayout.astro";
 ---
 
-<BaseLayout locale="en" canonical="/" alternateEn="/" alternateZh="/zh/">
-  <JsonLd data={buildOrganizationSchema("en")} slot="head" />
-  <div id="site-content" class="site-shell site-shell--en site-shell--home">
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    <Header client:load locale="en" pathname="/" />
-    <main class="site-main--home" id="main-content">
-      <HeroSection locale="en" />
-      <ProjectsSection client:visible locale="en" />
-      <ServicesSection locale="en" />
-      <ContactSection locale="en" />
-    </main>
-    <Footer locale="en" />
-  </div>
-  <script>
-    if (new URLSearchParams(window.location.search).get("mode") === "agent") {
-      const locale = document.documentElement.lang === "zh" ? "zh" : "en";
-      void import("@/src/islands/AgentModeGate.tsx").then(({ mountAgentModeGate }) =>
-        mountAgentModeGate(locale)
-      );
-    }
-  </script>
-</BaseLayout>
+<HomeLayout locale="en" />

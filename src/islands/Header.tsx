@@ -568,5 +568,3 @@ export function Header({ locale, pathname }: HeaderProps) {
     </StrictMode>
   );
 }
-
-export default Header;

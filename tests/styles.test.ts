@@ -209,16 +209,16 @@ test("home layout uses dedicated modern font variables without changing project 
 
 test("homepage components separate services from hero instead of rendering hero capabilities inline", () => {
   const heroSource = readFileSync(join(process.cwd(), "src/components/HeroSection.astro"), "utf8");
-  const homeSource = readFileSync(join(process.cwd(), "src/pages/index.astro"), "utf8");
+  const homeSource = readFileSync(join(process.cwd(), "src/layouts/HomeLayout.astro"), "utf8");
 
   expect(heroSource).not.toContain("ServiceCard");
   expect(heroSource).not.toContain("hero__capabilities");
   expect(heroSource).not.toContain('id="services"');
   expect(homeSource).toContain("ServicesSection");
-  expect(homeSource).toContain('<ServicesSection locale="en" />');
-  expect(homeSource).toContain('<ProjectsSection client:visible locale="en" />');
-  expect(homeSource.indexOf('<ProjectsSection client:visible locale="en" />')).toBeLessThan(
-    homeSource.indexOf('<ServicesSection locale="en" />'),
+  expect(homeSource).toContain("<ServicesSection locale={locale} />");
+  expect(homeSource).toContain("<ProjectsSection client:visible locale={locale}");
+  expect(homeSource.indexOf("<ProjectsSection client:visible locale={locale}")).toBeLessThan(
+    homeSource.indexOf("<ServicesSection locale={locale} />"),
   );
   expect(homeSource).toContain('import("@/src/islands/AgentModeGate.tsx")');
   expect(homeSource).not.toContain("AgentModeGate client:only");

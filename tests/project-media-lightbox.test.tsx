@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { projectDetailContent } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
@@ -55,6 +55,28 @@ test("opens a YARL lightbox with the active slide image", () => {
   const lightbox = screen.getByRole("dialog", { name: /image preview/i });
   expect(lightbox).toHaveClass("project-media__lightbox");
   expect(lightbox.querySelector(".yarl__slide:not([inert]) img")).toHaveAttribute("alt", "Still 01");
+});
+
+test("closes when the slide backdrop is clicked", async () => {
+  const onClose = vi.fn();
+
+  render(
+    <ProjectMediaLightbox
+      {...lightboxProps}
+      activeIndex={0}
+      items={previewImages}
+      onClose={onClose}
+    />
+  );
+
+  const slideBackdrop = document.querySelector(".yarl__slide:not([inert])");
+
+  expect(slideBackdrop).toBeTruthy();
+  fireEvent.pointerDown(slideBackdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
+  fireEvent.pointerUp(slideBackdrop as HTMLElement, { isPrimary: true, pointerId: 1 });
+  await waitFor(() => {
+    expect(onClose).toHaveBeenCalled();
+  });
 });
 
 test("closes from the custom close button", async () => {

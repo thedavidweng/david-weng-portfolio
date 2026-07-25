@@ -5,7 +5,7 @@ import {
   buildPersonSchema,
   buildWebSiteSchema
 } from "@/lib/jsonld";
-import { servicesContent } from "@/content/site";
+import { servicesContent, siteIdentity, contactContent, aboutContent } from "@/content/site";
 
 test("buildPersonSchema exposes identity, services catalog, and social links", () => {
   const schema = buildPersonSchema("en");
@@ -13,14 +13,13 @@ test("buildPersonSchema exposes identity, services catalog, and social links", (
   expect(schema["@type"]).toBe("Person");
   expect(schema.name).toBeTruthy();
   expect(schema.jobTitle).toBeTruthy();
-  expect(schema.sameAs).toEqual(
-    expect.arrayContaining([
-      "https://www.linkedin.com/in/thedavidweng/",
-      "https://www.instagram.com/davidwengpro/",
-      "https://github.com/thedavidweng",
-      "https://thedavidweng.github.io/"
-    ])
-  );
+  expect(schema.sameAs).toEqual([
+    contactContent.linkedinHref,
+    contactContent.instagramHref,
+    contactContent.githubHref,
+    aboutContent.homepageHref
+  ]);
+  expect(schema.knowsAbout).toEqual(siteIdentity.knowsAbout);
   expect(schema.knowsAbout).toContain("Content Operations");
   expect(schema.hasOfferCatalog.itemListElement).toHaveLength(servicesContent.items.length);
 });

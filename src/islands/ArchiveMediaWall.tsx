@@ -7,7 +7,7 @@ import {
 } from "react-photo-album";
 import "react-photo-album/rows.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
-import { projectLabel } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
 import { getHostname } from "@/lib/url";
 import { buildSrcSetArray } from "@/lib/responsive-srcset";
@@ -116,7 +116,7 @@ export function ArchiveMediaWall({
   const photos = useMemo<ArchivePhoto[]>(
     () =>
       dimensionalItems.map((item) => {
-        const title = projectLabel(item.title, locale);
+        const title = getLocalizedText(item.title, locale);
 
         return {
           key: `${title}-${item.src}`,
@@ -125,7 +125,7 @@ export function ArchiveMediaWall({
           height: item.height,
           alt: title,
           title,
-          label: `${projectLabel(previewLabel, locale)} ${title}`,
+          label: `${getLocalizedText(previewLabel, locale)} ${title}`,
           srcSet: buildSrcSetArray(item.src, item.width, item.height),
           item,
         };
@@ -181,14 +181,14 @@ export function ArchiveMediaWall({
             <div className="project-media__wall-overlay">
               {photo.item.credit ? (
                 <span className="project-media__wall-credit">
-                  {projectLabel(photoCreditLabel, locale)}:{" "}
+                  {getLocalizedText(photoCreditLabel, locale)}:{" "}
                   <a
                     href={photo.item.credit.href}
                     onClick={(event) => event.stopPropagation()}
                     rel="noreferrer"
                     target="_blank"
                   >
-                    {projectLabel(photo.item.credit.label, locale)}
+                    {getLocalizedText(photo.item.credit.label, locale)}
                     <span className="visually-hidden">(opens in new tab)</span>
                   </a>
                 </span>
@@ -293,5 +293,3 @@ function ArchiveOverlayIcon({ type }: { type: OverlayLinkMeta["icon"] }) {
     </svg>
   );
 }
-
-export default ArchiveMediaWall;

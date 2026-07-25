@@ -110,31 +110,12 @@ export function AgentView({ locale }: AgentViewProps) {
       <section aria-labelledby="meta-heading">
         <h2 id="meta-heading">Machine-Readable Endpoints</h2>
         <ul>
-          <li>
-            <a href={`${SITE_URL}/agent`}>/agent</a>: JSON representation of
-            this page
-          </li>
-          <li>
-            <a href={`${SITE_URL}/llms.txt`}>/llms.txt</a>: LLM discovery file
-          </li>
-          <li>
-            <a href={`${SITE_URL}/llms-full.txt`}>/llms-full.txt</a>: Complete
-            site documentation
-          </li>
-          <li>
-            <a href={`${SITE_URL}/index.md`}>/index.md</a>: Markdown version of
-            homepage
-          </li>
-          <li>
-            <a href={`${SITE_URL}/zh/index.md`}>/zh/index.md</a>: Chinese
-            homepage markdown
-          </li>
-          <li>
-            <a href={`${SITE_URL}/sitemap.xml`}>/sitemap.xml</a>: XML sitemap
-          </li>
-          <li>
-            <a href={`${SITE_URL}/robots.txt`}>/robots.txt</a>: Robots policy
-          </li>
+          {data.meta.endpoints.map((endpoint) => (
+            <li key={endpoint.url}>
+              <a href={endpoint.url}>{endpoint.url.replace(SITE_URL, "")}</a>:{" "}
+              {endpoint.description}
+            </li>
+          ))}
         </ul>
       </section>
 

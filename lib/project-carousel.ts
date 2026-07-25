@@ -1,4 +1,3 @@
-import { carouselProjects } from "@/content/carousel-projects";
 import { getLocalizedText } from "@/lib/i18n";
 import type { CarouselProjectItem, Locale } from "@/types/content";
 
@@ -13,11 +12,16 @@ export type ProjectCategoryGroup = {
   endIndex: number;
 };
 
-export const orderedProjects: CarouselProjectItem[] = PROJECT_CATEGORY_SEQUENCE.flatMap((categoryId) =>
-  carouselProjects.filter((project) => project.category.en === categoryId)
-);
+export function orderProjectsByCategory(projects: CarouselProjectItem[]): CarouselProjectItem[] {
+  return PROJECT_CATEGORY_SEQUENCE.flatMap((categoryId) =>
+    projects.filter((project) => project.category.en === categoryId)
+  );
+}
 
-export function buildProjectCategoryGroups(locale: Locale): ProjectCategoryGroup[] {
+export function buildProjectCategoryGroups(
+  orderedProjects: CarouselProjectItem[],
+  locale: Locale
+): ProjectCategoryGroup[] {
   const groups: ProjectCategoryGroup[] = [];
   let startIndex = 0;
 

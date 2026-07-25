@@ -4,17 +4,34 @@ import { localized } from "@/lib/i18n";
 export const siteIdentity = {
   name: "David Weng",
   fullName: "David (Jiachen) Weng",
+  location: {
+    city: "Vancouver",
+    country: "Canada",
+    workingScope: "Global",
+    display: "Vancouver, Canada (working globally)"
+  },
+  knowsAbout: [
+    "Video Editing",
+    "Photography",
+    "Graphic Design",
+    "Visual Storytelling",
+    "Brand System Design",
+    "Content Operations",
+    "AI-integrated Creative Work"
+  ],
   roles: localized(
     ["Video Editor", "Photographer", "Graphic Designer", "ContentOps"],
     ["视频剪辑", "摄影", "平面设计", "内容运营"]
   )
 };
 
+export const blogUrl = "https://blog.davidweng.eu.org/";
+
 export const navigationItems = [
   { label: localized("Projects", "项目"), href: "#projects" },
   { label: localized("What I Do", "能力"), href: "#services" },
   { label: localized("Contact", "联系"), href: "#contact" },
-  { label: localized("Blog", "博客"), href: "https://blog.davidweng.eu.org/" }
+  { label: localized("Blog", "博客"), href: blogUrl }
 ];
 
 export const heroContent = {

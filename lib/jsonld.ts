@@ -36,15 +36,7 @@ export function buildPersonSchema(locale: Locale) {
       name: siteIdentity.name,
       url: SITE_URL
     },
-    knowsAbout: [
-      "Video Editing",
-      "Photography",
-      "Graphic Design",
-      "Visual Storytelling",
-      "Brand System Design",
-      "Content Operations",
-      "AI-integrated Creative Work"
-    ],
+    knowsAbout: siteIdentity.knowsAbout,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services",
@@ -90,7 +82,7 @@ export function buildWebSiteSchema(locale: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "David Weng",
+    name: siteIdentity.name,
     url: SITE_URL,
     description: getLocalizedText(heroContent.support, locale),
     inLanguage: ["en", "zh"]

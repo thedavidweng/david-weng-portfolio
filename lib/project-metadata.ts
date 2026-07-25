@@ -1,4 +1,5 @@
 import type { Locale, ProjectItem } from "@/types/content";
+import { siteIdentity } from "@/content/site";
 import { getLocalizedText } from "@/lib/i18n";
 
 export type PageMetadata = {
@@ -31,7 +32,7 @@ type BuildProjectMetadataInput = {
 };
 
 export function buildProjectMetadata({ locale, pathname, project }: BuildProjectMetadataInput): PageMetadata {
-  const title = `${getLocalizedText(project.title, locale)} | David Weng`;
+  const title = `${getLocalizedText(project.title, locale)} | ${siteIdentity.name}`;
   const description = getLocalizedText(project.summary, locale);
 
   return {
@@ -47,7 +48,7 @@ export function buildProjectMetadata({ locale, pathname, project }: BuildProject
       title,
       description,
       url: pathname,
-      siteName: "David Weng",
+      siteName: siteIdentity.name,
       locale,
       alternateLocale: locale === "zh" ? "en" : "zh",
       images: [

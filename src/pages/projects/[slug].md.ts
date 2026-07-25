@@ -1,19 +1,12 @@
 import type { APIRoute } from "astro";
-import { getProjectMarkdownStaticPaths } from "@/lib/astro-static-paths";
+import { getProjectMarkdownStaticPaths } from "@/lib/project-pages";
 import { generateProjectMd } from "@/lib/project-md";
+import { markdownResponse } from "@/lib/responses";
 import type { ProjectItem } from "@/types/content";
 
 export const prerender = true;
 
-export function getStaticPaths() {
-  return getProjectMarkdownStaticPaths();
-}
+export const getStaticPaths = getProjectMarkdownStaticPaths;
 
-export const GET: APIRoute<{ project: ProjectItem }> = ({ props }) => {
-  return new Response(generateProjectMd(props.project, "en"), {
-    headers: {
-      "Content-Type": "text/markdown; charset=utf-8",
-      "Cache-Control": "public, max-age=3600"
-    }
-  });
-};
+export const GET: APIRoute<{ project: ProjectItem }> = ({ props }) =>
+  markdownResponse(generateProjectMd(props.project, "en"));

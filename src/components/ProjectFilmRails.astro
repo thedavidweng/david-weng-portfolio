@@ -1,7 +1,8 @@
 ---
 import Container from "@/src/components/Container.astro";
-import FilmMediaRail from "@/src/islands/FilmMediaRail";
-import { projectDetailContent, projectLabel } from "@/content/projects";
+import { FilmMediaRail } from "@/src/islands/FilmMediaRail";
+import { projectDetailContent } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import type { Locale, ProjectItem } from "@/types/content";
 
 interface Props {
@@ -18,8 +19,8 @@ const film = project.film;
     <Container>
       <div class="project-film__section">
         <div class="poster-section__intro">
-          <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
-          <h2 class="poster-section__title">{projectLabel(projectDetailContent.stillsTitle, locale)}</h2>
+          <p class="poster-section__eyebrow">{getLocalizedText(projectDetailContent.materialsEyebrow, locale)}</p>
+          <h2 class="poster-section__title">{getLocalizedText(projectDetailContent.stillsTitle, locale)}</h2>
         </div>
         <FilmMediaRail
           client:visible
@@ -36,8 +37,8 @@ const film = project.film;
       </div>
       <div class="project-film__section">
         <div class="poster-section__intro">
-          <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
-          <h2 class="poster-section__title">{projectLabel(projectDetailContent.postersTitle, locale)}</h2>
+          <p class="poster-section__eyebrow">{getLocalizedText(projectDetailContent.materialsEyebrow, locale)}</p>
+          <h2 class="poster-section__title">{getLocalizedText(projectDetailContent.postersTitle, locale)}</h2>
         </div>
         <FilmMediaRail
           client:visible

@@ -1,6 +1,7 @@
 import { projects } from "@/content/projects";
-import { heroContent, contactContent } from "@/content/site";
+import { siteIdentity, heroContent, servicesContent, contactContent, blogUrl } from "@/content/site";
 import { SITE_URL } from "@/lib/site-config";
+import { formatEndpoints } from "@/lib/agent-content";
 import { PROJECT_CATEGORY_SEQUENCE } from "@/lib/project-carousel";
 
 export function generateLlmsTxt(): string {
@@ -18,18 +19,19 @@ export function generateLlmsTxt(): string {
     return [`### ${category}\n${lines}`];
   }).join("\n\n");
 
-  return `# David Weng Portfolio
+  const serviceLines = servicesContent.items
+    .map((s) => `- ${s.title.en}: ${s.description.en}`)
+    .join("\n");
 
-> ${heroContent.support.en} Based in Vancouver, working globally.
+  return `# ${siteIdentity.name} Portfolio
+
+> ${heroContent.support.en} Based in ${siteIdentity.location.city}, working globally.
 
 ## Overview
 
-David Weng is a visual content creator specializing in:
+${siteIdentity.name} is a visual content creator specializing in:
 
-- Video editing and post-production (commercial campaigns, event recaps, short-form video, social-first content)
-- Photography and visual storytelling (portraits, live events, editorial coverage)
-- Graphic and brand system design (visual systems, content design, guidelines)
-- AI-integrated experimental work (image-making, visual prototyping, content operations acceleration)
+${serviceLines}
 
 ## Projects
 
@@ -48,21 +50,15 @@ ${projectSections}
 - LinkedIn: ${contactContent.linkedinHref}
 - Instagram: ${contactContent.instagramHref}
 - GitHub: ${contactContent.githubHref}
-- Blog: https://blog.davidweng.eu.org/
+- Blog: ${blogUrl}
 
 ## Contact
 
 - Email: ${contactContent.emailDisplay}
-- Location: Vancouver, Canada (working globally)
+- Location: ${siteIdentity.location.display}
 
 ## Machine-Readable Endpoints
 
-- ${SITE_URL}/agent: JSON agent view
-- ${SITE_URL}/llms.txt: This file
-- ${SITE_URL}/llms-full.txt: Complete site content
-- ${SITE_URL}/index.md: Markdown version of homepage
-- ${SITE_URL}/zh/index.md: Chinese homepage markdown
-- ${SITE_URL}/sitemap.xml: XML sitemap
-- ${SITE_URL}/robots.txt: Robots policy
+${formatEndpoints("absolute")}
 `;
 }

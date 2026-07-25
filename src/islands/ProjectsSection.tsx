@@ -13,18 +13,23 @@ import { getLocalizedText, getProjectPath } from "@/lib/i18n";
 import {
   buildProjectCategoryGroups,
   getCategoryBySnap,
-  orderedProjects,
+  orderProjectsByCategory,
 } from "@/lib/project-carousel";
-import type { Locale } from "@/types/content";
+import type { CarouselProjectItem, Locale } from "@/types/content";
 
 type ProjectsSectionProps = {
   locale: Locale;
+  projects: CarouselProjectItem[];
 };
 
-export function ProjectsSection({ locale }: ProjectsSectionProps) {
+export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
+  const orderedProjects = useMemo(
+    () => orderProjectsByCategory(projects),
+    [projects],
+  );
   const categoryGroups = useMemo(
-    () => buildProjectCategoryGroups(locale),
-    [locale],
+    () => buildProjectCategoryGroups(orderedProjects, locale),
+    [orderedProjects, locale],
   );
   const categories = useMemo(
     () => categoryGroups.map((group) => ({ id: group.id, label: group.label })),
@@ -88,7 +93,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
     slideOffsetsRef.current = slideRefs.current.map(
       (slide) => slide?.offsetLeft ?? 0,
     );
-  }, []);
+  }, [orderedProjects.length]);
 
   const measureSlidesRef = useRef(measureSlideOffsets);
   measureSlidesRef.current = () => {
@@ -121,7 +126,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
 
       scheduleScrollSyncRef.current();
     },
-    [],
+    [orderedProjects.length],
   );
 
   const prevMeasuredCategoryKeyRef = useRef(categoryKey);
@@ -334,5 +339,3 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
     </StrictMode>
   );
 }
-
-export default ProjectsSection;

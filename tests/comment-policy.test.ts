@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 const SCAN_DIRS = ["src", "lib", "content", "types", "tests"];
 const SCAN_EXTENSIONS = /\.(ts|tsx|astro|css)$/;
-const GENERATED_FILES = new Set(["content/carousel-projects.ts"]);
+const GENERATED_FILES = new Set<string>();
 
 const ALLOWED_COMMENT_UNITS: Record<string, number> = {
   "lib/image-dimensions.ts": 1,

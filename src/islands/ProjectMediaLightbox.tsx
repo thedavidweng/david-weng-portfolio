@@ -3,7 +3,8 @@ import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
-import { projectLabel, projectDetailContent } from "@/content/projects";
+import { projectDetailContent } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import { CLOSE_ICON_PATH } from "@/src/icons";
 import { isPreviewImageItem } from "@/src/islands/_shared/preview-image";
 
@@ -35,7 +36,7 @@ export function ProjectMediaLightbox({
       items
         .filter(isPreviewImageItem)
         .map((item) => ({
-          alt: projectLabel(item.title, locale),
+          alt: getLocalizedText(item.title, locale),
           height: item.height ?? DEFAULT_SLIDE_HEIGHT,
           src: item.src,
           width: item.width ?? DEFAULT_SLIDE_WIDTH,
@@ -44,8 +45,8 @@ export function ProjectMediaLightbox({
   );
   const isOpen =
     activeIndex !== null && activeIndex >= 0 && activeIndex < slides.length;
-  const previewLabel = projectLabel(previewDialogLabel, locale);
-  const closeLabel = projectLabel(closePreviewLabel, locale);
+  const previewLabel = getLocalizedText(previewDialogLabel, locale);
+  const closeLabel = getLocalizedText(closePreviewLabel, locale);
 
   return (
     <Lightbox
@@ -64,8 +65,8 @@ export function ProjectMediaLightbox({
       index={activeIndex ?? 0}
       labels={{
         Close: closeLabel,
-        Next: projectLabel(projectDetailContent.nextPreviewLabel, locale),
-        Previous: projectLabel(
+        Next: getLocalizedText(projectDetailContent.nextPreviewLabel, locale),
+        Previous: getLocalizedText(
           projectDetailContent.previousPreviewLabel,
           locale,
         ),
