@@ -207,6 +207,25 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(projectCardTitleBlock).toContain("font-family: var(--font-body);");
 });
 
+test("mobile menu fixed shells stay transparent so iOS 26 Safari samples dark chrome (ADR-0005)", () => {
+  const panelBlock = css.match(/\.site-header__menu-panel\s*\{[^}]+\}/g)?.at(-1) ?? "";
+  const panelBefore = css.match(/\.site-header__menu-panel::before\s*\{[^}]+\}/)?.[0] ?? "";
+  const backdropBlock = css.match(/\.site-header__menu-backdrop\s*\{[^}]+\}/g)?.at(-1) ?? "";
+  const backdropBefore = css.match(/\.site-header__menu-backdrop::before\s*\{[^}]+\}/)?.[0] ?? "";
+  const contentBlock = css.match(/\.site-header__menu-panel-content\s*\{[^}]+\}/)?.[0] ?? "";
+  const reducedMotionBlock = css.match(/@media \(prefers-reduced-motion: reduce\) \{[\s\S]+?\n\}/)?.[0] ?? "";
+
+  expect(panelBlock).toContain("background: transparent;");
+  expect(panelBefore).toContain("background: var(--accent);");
+  expect(panelBefore).toContain("position: absolute;");
+  expect(backdropBlock).toContain("background: transparent;");
+  expect(backdropBefore).toContain("background: rgba(0, 0, 0, 0.45);");
+  expect(contentBlock).toContain("calc(env(safe-area-inset-top) + 5.5rem)");
+  expect(contentBlock).toContain("calc(env(safe-area-inset-bottom) + 1.2rem)");
+  expect(reducedMotionBlock).toContain(".site-header__menu-panel--open");
+  expect(reducedMotionBlock).toContain("transform: translate3d(0, 0, 0);");
+});
+
 test("homepage components separate services from hero instead of rendering hero capabilities inline", () => {
   const heroSource = readFileSync(join(process.cwd(), "src/components/HeroSection.astro"), "utf8");
   const homeSource = readFileSync(join(process.cwd(), "src/layouts/HomeLayout.astro"), "utf8");

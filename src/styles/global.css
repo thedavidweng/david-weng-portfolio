@@ -2292,12 +2292,19 @@ main {
     inset: 0;
     display: block;
     border: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: transparent;
     opacity: 0;
     z-index: 38;
     animation-duration: 320ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     animation-fill-mode: forwards;
+  }
+
+  .site-header__menu-backdrop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
   }
 
   .site-header__menu-panel {
@@ -2310,22 +2317,39 @@ main {
     height: 100dvh;
     margin: 0;
     border: 0;
-    padding:
-      calc(env(safe-area-inset-top) + 5.5rem)
-      1.1rem
-      calc(env(safe-area-inset-bottom) + 1.2rem);
-    display: flex;
-    flex-direction: column;
-    background: var(--accent);
+    padding: 0;
+    display: block;
+    background: transparent;
     color: var(--text);
     opacity: 1;
     transform: translate3d(100%, 0, 0);
     z-index: 39;
-    overflow-y: auto;
+    overflow: visible;
     will-change: transform;
     animation-duration: 380ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     animation-fill-mode: forwards;
+  }
+
+  .site-header__menu-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--accent);
+  }
+
+  .site-header__menu-panel-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    padding:
+      calc(env(safe-area-inset-top) + 5.5rem)
+      1.1rem
+      calc(env(safe-area-inset-bottom) + 1.2rem);
   }
 
   .site-header__menu-panel::backdrop {
@@ -3433,5 +3457,21 @@ main {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .site-header__menu-panel--open {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .site-header__menu-panel--closed {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .site-header__menu-backdrop--open {
+    opacity: 1;
+  }
+
+  .site-header__menu-backdrop--closed {
+    opacity: 0;
   }
 }

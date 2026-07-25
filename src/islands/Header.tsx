@@ -246,22 +246,24 @@ function MobileMenuPanel({
         }}
         ref={dialogRef}
       >
-        <h2 className="visually-hidden" id="site-mobile-menu-label">
-          {menuLabel}
-        </h2>
-        <NavLinks
-          externalWindowHint={externalWindowHint}
-          locale={locale}
-          onNavClick={closeMenu}
-          resolveNavHref={resolveNavHref}
-          switchHref={switchHref}
-          switchLabel={switchLabel}
-        />
-        <SocialLinks socialLinksLabel={socialLinksLabel} />
-        <HeaderActions
-          contactButtonLabel={contactButtonLabel}
-          locale={locale}
-        />
+        <div className="site-header__menu-panel-content">
+          <h2 className="visually-hidden" id="site-mobile-menu-label">
+            {menuLabel}
+          </h2>
+          <NavLinks
+            externalWindowHint={externalWindowHint}
+            locale={locale}
+            onNavClick={closeMenu}
+            resolveNavHref={resolveNavHref}
+            switchHref={switchHref}
+            switchLabel={switchLabel}
+          />
+          <SocialLinks socialLinksLabel={socialLinksLabel} />
+          <HeaderActions
+            contactButtonLabel={contactButtonLabel}
+            locale={locale}
+          />
+        </div>
       </dialog>
     </>
   );
