@@ -42,7 +42,7 @@ async function probeRedirect(url) {
 /** @param {string} label @param {string} url @param {string | null | undefined} expectedLocation */
 function reportRedirect(label, { status, location }, expectedLocation) {
   const ok =
-    expectedLocation === undefined
+    expectedLocation == null
       ? status >= 200 && status < 400 && !location
       : status >= 300 && status < 400 && location === expectedLocation;
 
