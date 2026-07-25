@@ -1,10 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "ignore": [
-    "scripts/apply-cf-zone-free-tier.mjs",
-    "scripts/generate-responsive-images.mjs",
-    "workers/site.mjs"
-  ],
   "exclude": ["duplicates"],
+  "ignoreBinaries": ["identify", "magick"],
   "ignoreExportsUsedInFile": { "type": true }
 }

@@ -7,7 +7,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { Container } from "@/src/islands/_shared/Container";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
 import { projectSectionContent } from "@/content/project-section";
 import { getLocalizedText, getProjectPath } from "@/lib/i18n";
@@ -198,7 +197,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
   return (
     <StrictMode>
       <section className="section-shell" id="projects">
-        <Container>
+        <div className="container">
           <div className="projects__layout">
             <div className="poster-section__intro">
               <h2 className="poster-section__title">
@@ -330,7 +329,7 @@ export function ProjectsSection({ locale }: ProjectsSectionProps) {
               </div>
             </section>
           </div>
-        </Container>
+        </div>
       </section>
     </StrictMode>
   );

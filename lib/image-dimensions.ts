@@ -1,7 +1,3 @@
-/**
- * Server-side helper to read image dimensions from the public directory.
- * Used in Astro components to populate `width` for PortfolioImage srcset.
- */
 import { readFileSync } from "node:fs";
 import { imageSize } from "image-size";
 import { join } from "node:path";

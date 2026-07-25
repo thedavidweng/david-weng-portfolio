@@ -37,7 +37,5 @@ flags:
 ignore:
   - "**/*.d.ts"
   - "**/*.config.*"
-  - ".next/**"
   - "public/**"
   - "content/**"
-  - "proxy.ts"

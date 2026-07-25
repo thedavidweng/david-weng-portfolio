@@ -1,16 +1,4 @@
 #!/usr/bin/env node
-/**
- * Generate responsive AVIF image variants for srcset.
- *
- * For each AVIF image in public/projects/ wider than 1200px, generates
- * variants at 400w, 800w, 1200w, and 1920w (only those smaller than the
- * original). Variants are written alongside the original with a
- * `@<width>w` suffix, e.g. `still-fraud-08@800w.avif`.
- *
- * Usage:
- *   node scripts/generate-responsive-images.mjs          # generate missing
- *   node scripts/generate-responsive-images.mjs --force   # regenerate all
- */
 
 import { execSync } from "node:child_process";
 import { readdirSync, statSync, existsSync } from "node:fs";
@@ -18,7 +6,7 @@ import { join, dirname, basename, extname } from "node:path";
 
 const PROJECTS_DIR = new URL("../public/projects", import.meta.url).pathname;
 const WIDTHS = [400, 800, 1200, 1920];
-const MIN_ORIGINAL_WIDTH = 1200; // only generate variants for images wider than this
+const MIN_ORIGINAL_WIDTH = 1200;
 
 const force = process.argv.includes("--force");
 

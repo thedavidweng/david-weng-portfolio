@@ -1,9 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-test("project card title styling keeps letter-spacing stable without block highlight overrides", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
+const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
 
+test("project card title styling keeps letter-spacing stable without block highlight overrides", () => {
   expect(css).toContain(".project-card__title");
   expect(css).not.toContain("transition: letter-spacing var(--ease);");
   expect(css).not.toContain(".project-card:hover .project-card__title");
@@ -11,7 +11,6 @@ test("project card title styling keeps letter-spacing stable without block highl
 });
 
 test("project card covers use a softened default filter and sharpen slightly on hover", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const source = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
 
   expect(source).toContain('PortfolioImage');
@@ -26,8 +25,6 @@ test("project card covers use a softened default filter and sharpen slightly on 
 });
 
 test("archive media hover keeps the bottom shadow aligned with the image scale", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
-
   expect(css).toContain("--archive-media-hover-scale: 1;");
   expect(css).toContain(".project-media__rows-button::after");
   expect(css).toContain("inset: 0;");
@@ -40,7 +37,6 @@ test("archive media hover keeps the bottom shadow aligned with the image scale",
 });
 
 test("project hero content stays layered above the cover panel", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const contentBlock = css.match(/\.project-hero__content\s*\{[^}]+\}/)?.[0] ?? "";
   const coverBlock = css.match(/\.project-hero__cover\s*\{[^}]+\}/)?.[0] ?? "";
 
@@ -50,7 +46,6 @@ test("project hero content stays layered above the cover panel", () => {
 });
 
 test("external handoff titles use article-scale typography instead of poster styling", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const externalTitleBlock = css.match(/\.project-page--external-handoff \.project-hero__title\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(externalTitleBlock).toContain("max-width: 14ch;");
@@ -61,14 +56,12 @@ test("external handoff titles use article-scale typography instead of poster sty
 });
 
 test("beaty video badge stays content-width inside the video card grid", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const videoCopyBadgeBlock = css.match(/\.project-media__video-copy \.project-media__badge\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(videoCopyBadgeBlock).toContain("justify-self: start;");
 });
 
 test("archive-backed titles use article-scale typography instead of poster styling", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveTitleBlock = css.match(/\.project-page--archive \.project-hero__title\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(archiveTitleBlock).toContain("max-width: none;");
@@ -80,7 +73,6 @@ test("archive-backed titles use article-scale typography instead of poster styli
 });
 
 test("archive-backed hero layout anchors a catalog ledger beneath the title block", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveContentBlock = css.match(/\.project-hero__content--archive\s*\{[^}]+\}/)?.[0] ?? "";
   const archiveLedgerBlock = css.match(/\.project-hero__archive-ledger\s*\{[^}]+\}/)?.[0] ?? "";
 
@@ -93,7 +85,6 @@ test("archive-backed hero layout anchors a catalog ledger beneath the title bloc
 });
 
 test("archive-backed hero layout gives the cover panel more width and height on detail pages", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveGridBlock = css.match(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/)?.[0] ?? "";
   const archiveCoverBlock = css.match(/\.project-page--archive \.project-hero__cover\s*\{[^}]+\}/)?.[0] ?? "";
 
@@ -102,7 +93,6 @@ test("archive-backed hero layout gives the cover panel more width and height on 
 });
 
 test("beaty video thumbnails render in a fixed 16:9 frame instead of a cropped min-height box", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const videoThumbBlock = css.match(/\.project-media__video-thumb\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(videoThumbBlock).toContain("aspect-ratio: 16 / 9;");
@@ -119,8 +109,6 @@ test("archive media wall defers ResizeObserver-based branching until after mount
 });
 
 test("film poster hero uses contain sizing and dedicated horizontal rails for stills", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
-
   expect(css).toContain(".project-film__poster-image");
   expect(css).toContain("object-fit: contain;");
   expect(css).toContain(".project-film__stills-rail");
@@ -129,8 +117,6 @@ test("film poster hero uses contain sizing and dedicated horizontal rails for st
 });
 
 test("mobile film pages define a dedicated stacked layout with tighter credits and media spacing", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
-
   expect(css).toContain(".project-page--film .project-hero__grid");
   expect(css).toContain("grid-template-areas:");
   expect(css).toContain('"intro"');
@@ -147,8 +133,6 @@ test("mobile film pages define a dedicated stacked layout with tighter credits a
 });
 
 test("mobile home shell keeps a visible header nav with built-in separators instead of a duplicate hero nav", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
-
   expect(css).toContain(".site-header--home");
   expect(css).toContain(".site-main--home .hero");
   expect(css).toContain(".site-header__descriptor");
@@ -165,7 +149,6 @@ test("mobile home shell keeps a visible header nav with built-in separators inst
 });
 
 test("home layout uses dedicated modern font variables without changing project card typography", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const layoutSource = readFileSync(join(process.cwd(), "src/layouts/BaseLayout.astro"), "utf8");
   const fontsSource = readFileSync(join(process.cwd(), "src/styles/fonts.css"), "utf8");
   const projectCardTitleBlock = css.match(/\.project-card__title\s*\{[^}]+\}/)?.[0] ?? "";
@@ -242,14 +225,12 @@ test("homepage components separate services from hero instead of rendering hero 
 });
 
 test("sticky header reserves the iPhone safe-area inset instead of exposing page content behind the status bar", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const headerBlock = css.match(/\.site-header\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(headerBlock).toContain("padding-top: env(safe-area-inset-top);");
 });
 
 test("home backgrounds remove the red radial glow layers from the page and hero shell", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const bodyBlock = css.match(/body\s*\{[^}]+\}/)?.[0] ?? "";
   const heroFrameBlock = css.match(/\.hero__frame\s*\{[^}]+\}/)?.[0] ?? "";
   const homeHeroFrameBlock = css.match(/\.site-main--home \.hero__frame\s*\{[^}]+\}/)?.[0] ?? "";
@@ -263,7 +244,6 @@ test("home backgrounds remove the red radial glow layers from the page and hero 
 });
 
 test("home hero and contact no longer use the same boxed panel treatment", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const homeHeroFrameBlock = Array.from(css.matchAll(/\.site-main--home \.hero__frame\s*\{[^}]+\}/g))
     .map((match) => match[0])
     .join("\n");
@@ -282,7 +262,6 @@ test("home hero and contact no longer use the same boxed panel treatment", () =>
 });
 
 test("global controls switch to square noir styling without pill buttons or slash suffixes", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const filterBlock = css.match(/\.filter-chip\s*\{[^}]+\}/)?.[0] ?? "";
   const reelNavBlock = css.match(/\.reel-nav\s*\{[^}]+\}/)?.[0] ?? "";
   const signalButtonBlock = css.match(/\.button--signal\s*\{[^}]+\}/)?.[0] ?? "";
@@ -307,7 +286,6 @@ test("global controls switch to square noir styling without pill buttons or slas
 });
 
 test("mobile menu toggle keeps the line morph and adds immediate press feedback", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const toggleBlock = css.match(/\.site-header__menu-toggle\s*\{[^}]+\}/)?.[0] ?? "";
   const toggleActiveBlock = css.match(/\.site-header__menu-toggle:active\s*\{[^}]+\}/)?.[0] ?? "";
   const iconLineBlock = css.match(/\.site-header__menu-icon span\s*\{[^}]+\}/)?.[0] ?? "";
@@ -319,7 +297,6 @@ test("mobile menu toggle keeps the line morph and adds immediate press feedback"
 });
 
 test("signal panels restore the red border and top-right corner accent on hover", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const signalPanelBlock = Array.from(css.matchAll(/\.signal-panel\s*\{[^}]+\}/g))
     .map((match) => match[0])
     .join("\n");
@@ -338,7 +315,6 @@ test("signal panels restore the red border and top-right corner accent on hover"
 });
 
 test("home hero uses a single minimalist portfolio title without accent title lines", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const heroSource = readFileSync(join(process.cwd(), "src/components/HeroSection.astro"), "utf8");
   const siteSource = readFileSync(join(process.cwd(), "content/site.ts"), "utf8");
   const homeHeroTitleBlock = css.match(/\.site-main--home \.hero__title\s*\{[^}]+\}/)?.[0] ?? "";
@@ -353,7 +329,6 @@ test("home hero uses a single minimalist portfolio title without accent title li
 });
 
 test("home services use a full border and tighter vertical spacing instead of a top-only divider", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const homeServiceCardBlock = css.match(/\.site-main--home \.service-card\s*\{[^}]+\}/)?.[0] ?? "";
   const homeServiceCopyBlock = css.match(/\.site-main--home \.service-card p\s*\{[^}]+\}/)?.[0] ?? "";
 
@@ -367,7 +342,6 @@ test("home services use a full border and tighter vertical spacing instead of a 
 });
 
 test("homepage sections remove eyebrow labels and tighten section intro spacing", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const servicesSource = readFileSync(join(process.cwd(), "src/components/ServicesSection.astro"), "utf8");
   const projectsSource = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
   const contactSource = readFileSync(join(process.cwd(), "src/components/ContactSection.astro"), "utf8");
@@ -382,7 +356,6 @@ test("homepage sections remove eyebrow labels and tighten section intro spacing"
 });
 
 test("home sections share a stage gutter so projects services and contact do not pin to the container edge", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const homeHeroContentBlock = css.match(/\.site-main--home \.hero__content\s*\{[^}]+\}/)?.[0] ?? "";
   const homeHeroStageBlock = css.match(/\.site-main--home \.hero__content--stage\s*\{[^}]+\}/)?.[0] ?? "";
 
@@ -400,7 +373,6 @@ test("home sections share a stage gutter so projects services and contact do not
 });
 
 test("project pages and media modules use open-stage containers instead of dark boxed panels", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const heroFrameBlock = css.match(/\.project-hero__frame\s*\{[^}]+\}/)?.[0] ?? "";
   const handoffBlock = css.match(/\.project-handoff\s*\{[^}]+\}/)?.[0] ?? "";
   const videoThumbBlock = css.match(/\.project-media__video-thumb\s*\{[^}]+\}/)?.[0] ?? "";
@@ -421,7 +393,6 @@ test("project pages and media modules use open-stage containers instead of dark 
 });
 
 test("mobile non-film project pages define tighter archive and external-handoff hero spacing rules", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const archiveGridBlocks = Array.from(css.matchAll(/\.project-page--archive \.project-hero__grid\s*\{[^}]+\}/g)).map(
     (match) => match[0]
   );
@@ -439,8 +410,6 @@ test("mobile non-film project pages define tighter archive and external-handoff 
 });
 
 test("mobile archive hero titles switch out of poster uppercase styling and use a protected reading layer", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
-
   expect(css).toContain(".project-page--archive .project-hero__content");
   expect(css).toContain(".project-page--archive .project-hero__cover::after");
   expect(css).toContain(".project-page--archive .project-hero__cover-image");
@@ -453,7 +422,6 @@ test("mobile archive hero titles switch out of poster uppercase styling and use 
 });
 
 test("project media lightbox styles YARL with noir chrome and mobile pinch-zoom support", () => {
-  const css = readFileSync(join(process.cwd(), "src/styles/global.css"), "utf8");
   const closeBlock = css.match(/\.project-media__lightbox-close\s*\{[^}]+\}/)?.[0] ?? "";
   const mobileSlideBlock =
     css.match(/@media \(max-width: 760px\)[\s\S]*?\.project-media__lightbox \.yarl__slide\s*\{[^}]+\}/)?.[0] ?? "";

@@ -3,10 +3,9 @@ import {
   siteIdentity,
   heroContent,
   contactContent,
-  aboutContent,
   navigationItems
 } from "@/content/site";
-import { formatServices, formatProjects } from "@/lib/agent-content";
+import { formatServices, formatProjects, formatAbout } from "@/lib/agent-content";
 import { SITE_URL } from "@/lib/site-config";
 
 export function generateIndexMd(locale: Locale): string {
@@ -28,17 +27,7 @@ ${formatProjects(locale)}
 
 ## About
 
-${aboutContent.lead[locale]}
-
-${aboutContent.body[locale]}
-
-${aboutContent.bodySecondary[locale]}
-
-### Focus Areas
-
-${aboutContent.stats
-  .map((s) => `- **${s.value}**: ${s.label[locale]}`)
-  .join("\n")}
+${formatAbout(locale)}
 
 ## Contact
 

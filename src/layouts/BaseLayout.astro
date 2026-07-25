@@ -30,11 +30,10 @@ const {
   ogImage = "/brand/og-image.png"
 } = Astro.props;
 
-const htmlLang = locale;
 ---
 
 <!doctype html>
-<html lang={htmlLang}>
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -71,7 +70,7 @@ const htmlLang = locale;
     )}
     <slot name="head" />
   </head>
-  <body class={locale === "zh" ? "site-body--zh" : undefined} style={locale === "zh" ? "--font-home-zh-active: var(--font-home-zh)" : undefined}>
+  <body class={locale === "zh" ? "site-body--zh" : undefined}>
     <slot />
     <JsonLd data={buildPersonSchema(locale)} />
     <JsonLd data={buildWebSiteSchema(locale)} />

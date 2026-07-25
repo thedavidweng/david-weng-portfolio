@@ -1,0 +1,29 @@
+name: React Doctor
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  statuses: write
+
+concurrency:
+  group: react-doctor-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  react-doctor:
+    runs-on: ubuntu-latest
+    steps:
+      # fetch-depth: 0 required — a shallow checkout has no merge base, so PR runs
+      # would report pre-existing issues instead of only newly introduced ones.
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: millionco/react-doctor@v2

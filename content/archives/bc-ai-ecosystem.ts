@@ -1,5 +1,3 @@
-// Use this collection to map files from public/projects/bc-ai-ecosystem by filename.
-// Keep semantic metadata here instead of relying on image metadata exported from Canva.
 import { createEmptyArchiveCollection } from "@/content/archives/_shared";
 import { localized } from "@/lib/i18n";
 
@@ -178,7 +176,6 @@ bcAiEcosystemArchive.items = [
     publishedUrl: "https://youtu.be/RUGucjG76Y0",
     order: 46
   },
-  // --- April Speaker series (April 29th meetup) ---
   {
     file: "square/square-bcai-apr-26-meetup-announcement.avif",
     kind: "square",
@@ -229,7 +226,6 @@ bcAiEcosystemArchive.items = [
     ),
     order: 54
   },
-  // --- Recruit Graphics series (year-round BC+AI ecosystem) ---
   {
     file: "square/square-bcai-recruit-2026-04-15-author.avif",
     kind: "square",

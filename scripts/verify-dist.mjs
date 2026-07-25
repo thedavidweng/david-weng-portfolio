@@ -19,17 +19,10 @@ function ok(label) {
 
 assert(existsSync(distDir), "dist/ is missing, run pnpm build first");
 
-assert(!existsSync(join(root, "app")), "app/ must not exist");
-ok("no app/ directory");
-
-assert(!existsSync(join(root, "next.config.ts")), "next.config.ts must not exist");
-ok("no next.config.ts");
-
-assert(!existsSync(join(root, "vite.config.ts")), "vite.config.ts must not exist");
-ok("no vite.config.ts");
-
-assert(!existsSync(join(root, "proxy.ts")), "proxy.ts must not exist");
-ok("no proxy.ts");
+for (const name of ["app", "next.config.ts", "vite.config.ts", "proxy.ts"]) {
+  assert(!existsSync(join(root, name)), `${name} must not exist`);
+  ok(`no ${name}`);
+}
 
 assert(existsSync(join(root, "astro.config.mjs")), "astro.config.mjs must exist");
 ok("astro.config.mjs present");

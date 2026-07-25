@@ -2,51 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
-
-function installNativeScrollLayout(container: HTMLElement) {
-  const viewport = screen.getByRole("region", { name: /projects carousel/i }) as HTMLDivElement;
-  const slides = Array.from(container.querySelectorAll(".projects__slide")) as HTMLAnchorElement[];
-  const slideWidth = 320;
-
-  Object.defineProperty(viewport, "scrollLeft", {
-    configurable: true,
-    value: 0,
-    writable: true
-  });
-
-  Object.defineProperty(viewport, "clientWidth", {
-    configurable: true,
-    value: 960
-  });
-
-  Object.defineProperty(viewport, "scrollWidth", {
-    configurable: true,
-    value: slides.length * slideWidth
-  });
-
-  slides.forEach((slide, index) => {
-    Object.defineProperty(slide, "offsetLeft", {
-      configurable: true,
-      get: () => index * slideWidth
-    });
-  });
-
-  const scrollTo = vi.fn((options?: number | ScrollToOptions) => {
-    const left = typeof options === "object" ? (options?.left ?? 0) : (options ?? 0);
-
-    viewport.scrollLeft = left;
-    fireEvent.scroll(viewport);
-  });
-
-  Object.defineProperty(viewport, "scrollTo", {
-    configurable: true,
-    value: scrollTo
-  });
-
-  fireEvent(window, new Event("resize"));
-
-  return { scrollTo, viewport };
-}
+import { installNativeScrollLayout } from "@/tests/helpers/projects-scroll";
 
 test("projects section no longer imports embla or intercepts wheel gestures directly", () => {
   const source = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");

@@ -5,6 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel, projectDetailContent } from "@/content/projects";
 import { CLOSE_ICON_PATH } from "@/src/icons";
+import { isPreviewImageItem } from "@/src/islands/_shared/preview-image";
 
 const DEFAULT_SLIDE_HEIGHT = 900;
 const DEFAULT_SLIDE_WIDTH = 1600;
@@ -20,11 +21,6 @@ type ProjectMediaLightboxProps = {
   previewDialogLabel: LocalizedText;
 };
 
-type PreviewImageItem = ProjectMediaItem & {
-  type: "image";
-  src: string;
-};
-
 export function ProjectMediaLightbox({
   activeIndex,
   closePreviewLabel,
@@ -37,10 +33,7 @@ export function ProjectMediaLightbox({
   const slides = useMemo(
     () =>
       items
-        .filter(
-          (item): item is PreviewImageItem =>
-            item.type === "image" && typeof item.src === "string",
-        )
+        .filter(isPreviewImageItem)
         .map((item) => ({
           alt: projectLabel(item.title, locale),
           height: item.height ?? DEFAULT_SLIDE_HEIGHT,

@@ -17,43 +17,21 @@ export const orderedProjects: CarouselProjectItem[] = PROJECT_CATEGORY_SEQUENCE.
   carouselProjects.filter((project) => project.category.en === categoryId)
 );
 
-/**
- * Build category groups with start/end indices into `orderedProjects`.
- *
- * Single-pass O(n) implementation: iterates `orderedProjects` once, tracking
- * the current category and emitting a group each time the category changes.
- */
 export function buildProjectCategoryGroups(locale: Locale): ProjectCategoryGroup[] {
   const groups: ProjectCategoryGroup[] = [];
-  let currentGroupId: ProjectCategoryId | null = null;
-  let currentStart = 0;
+  let startIndex = 0;
 
-  for (let index = 0; index < orderedProjects.length; index++) {
-    const project = orderedProjects[index];
-    const categoryId = project.category.en as ProjectCategoryId;
+  for (const id of PROJECT_CATEGORY_SEQUENCE) {
+    const items = orderedProjects.filter((project) => project.category.en === id);
+    if (items.length === 0) continue;
 
-    if (categoryId !== currentGroupId) {
-      if (currentGroupId !== null) {
-        groups.push({
-          id: currentGroupId,
-          label: getLocalizedText(orderedProjects[currentStart].category, locale),
-          startIndex: currentStart,
-          endIndex: index - 1
-        });
-      }
-
-      currentGroupId = categoryId;
-      currentStart = index;
-    }
-  }
-
-  if (currentGroupId !== null) {
     groups.push({
-      id: currentGroupId,
-      label: getLocalizedText(orderedProjects[currentStart].category, locale),
-      startIndex: currentStart,
-      endIndex: orderedProjects.length - 1
+      id,
+      label: getLocalizedText(items[0].category, locale),
+      startIndex,
+      endIndex: startIndex + items.length - 1
     });
+    startIndex += items.length;
   }
 
   return groups;

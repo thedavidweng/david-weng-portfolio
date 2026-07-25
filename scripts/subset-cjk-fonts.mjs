@@ -9,18 +9,9 @@ const FULL_DIR = join(ROOT, "assets/fonts/full");
 const OUTPUT_DIR = join(ROOT, "assets/fonts");
 
 const NOTO_FONTS = [
-  {
-    full: "noto-sans-sc-chinese-simplified-400-normal.woff2",
-    out: "noto-sans-sc-chinese-simplified-400-normal.woff2",
-  },
-  {
-    full: "noto-sans-sc-chinese-simplified-700-normal.woff2",
-    out: "noto-sans-sc-chinese-simplified-700-normal.woff2",
-  },
-  {
-    full: "noto-sans-sc-chinese-simplified-900-normal.woff2",
-    out: "noto-sans-sc-chinese-simplified-900-normal.woff2",
-  },
+  "noto-sans-sc-chinese-simplified-400-normal.woff2",
+  "noto-sans-sc-chinese-simplified-700-normal.woff2",
+  "noto-sans-sc-chinese-simplified-900-normal.woff2",
 ];
 
 const CJK_RE = /[\u3400-\u4dbf\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/g;
@@ -74,9 +65,9 @@ function collectText() {
 }
 
 async function subsetFonts(text) {
-  for (const font of NOTO_FONTS) {
-    const inputPath = join(FULL_DIR, font.full);
-    const outputPath = join(OUTPUT_DIR, font.out);
+  for (const name of NOTO_FONTS) {
+    const inputPath = join(FULL_DIR, name);
+    const outputPath = join(OUTPUT_DIR, name);
     const input = readFileSync(inputPath);
     const output = await subsetFont(input, text, { targetFormat: "woff2" });
 

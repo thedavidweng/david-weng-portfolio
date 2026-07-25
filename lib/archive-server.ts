@@ -91,9 +91,7 @@ function getArchiveImageDimensions(filePath: string, kind: ArchiveItemKind) {
         height: dimensions.height
       };
     }
-  } catch {
-    // Fall through to the layout-based defaults below.
-  }
+  } catch {}
 
   return archiveFallbackDimensions[kind];
 }

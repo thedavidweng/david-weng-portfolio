@@ -11,6 +11,8 @@
     "dev": "astro dev",
     "subset:fonts": "node scripts/subset-cjk-fonts.mjs",
     "generate:carousel": "GENERATE_CAROUSEL=1 vitest run tests/generate-carousel-projects.test.ts -t regenerate",
+    "generate:images": "node scripts/generate-responsive-images.mjs",
+    "apply:zone": "node scripts/apply-cf-zone-free-tier.mjs",
     "prebuild": "pnpm subset:fonts",
     "build": "astro build && node scripts/write-headers.mjs",
     "verify:dist": "node scripts/verify-dist.mjs",

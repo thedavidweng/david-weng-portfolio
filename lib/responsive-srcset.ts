@@ -10,21 +10,12 @@
 const RESPONSIVE_WIDTHS = [400, 800, 1200, 1920] as const;
 const MIN_ORIGINAL_WIDTH = 1200;
 
-/**
- * Insert a `@<width>w` suffix before the file extension.
- * `/foo/bar.avif` -> `/foo/bar@800w.avif`
- */
 function variantPath(src: string, width: number): string {
   const dotIndex = src.lastIndexOf(".");
   if (dotIndex === -1) return `${src}@${width}w`;
   return `${src.slice(0, dotIndex)}@${width}w${src.slice(dotIndex)}`;
 }
 
-/**
- * Build a srcset string for an image, given its known original width.
- * If the original width is unknown or <= 1200, returns undefined
- * (no variants exist, so srcset is not useful).
- */
 export function buildSrcset(
   src: string,
   originalWidth?: number,
@@ -37,7 +28,6 @@ export function buildSrcset(
     w < originalWidth ? [`${variantPath(src, w)} ${w}w`] : [],
   );
 
-  // Always include the original as the largest candidate
   candidates.push(`${src} ${originalWidth}w`);
 
   return candidates.join(", ");
@@ -49,11 +39,6 @@ export type ResponsiveImage = {
   height: number;
 };
 
-/**
- * Build a srcSet array (for react-photo-album's `srcSet` prop) from an
- * image path, original width, and original height. Returns undefined if
- * no variants exist.
- */
 export function buildSrcSetArray(
   src: string,
   originalWidth?: number,
@@ -74,7 +59,6 @@ export function buildSrcSetArray(
       : [],
   );
 
-  // Include the original as the largest candidate (matches buildSrcset behavior)
   variants.push({ src, width: originalWidth, height: originalHeight });
 
   return variants;

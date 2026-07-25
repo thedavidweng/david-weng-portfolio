@@ -1,10 +1,6 @@
 import { localized } from "@/lib/i18n";
 import type { FilmCreditGroup, FilmDetails, FilmInfoItem, LocalizedText, ProjectMediaItem } from "@/types/content";
 
-function filmAssetPath(project: string, file: string) {
-  return `/projects/film-video/film/${project}/${file}`;
-}
-
 function createFilmImage(
   project: string,
   file: string,
@@ -14,7 +10,7 @@ function createFilmImage(
 ): ProjectMediaItem {
   return {
     type: "image",
-    src: filmAssetPath(project, file),
+    src: `/projects/film-video/film/${project}/${file}`,
     width: fallback.width,
     height: fallback.height,
     title,

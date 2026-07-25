@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { projectDetailContent } from "@/content/projects";
 import { ArchiveMediaWall } from "@/src/islands/ArchiveMediaWall";
+import { MockResizeObserver } from "@/tests/helpers/dom-observers";
+import { wallLabels } from "@/tests/helpers/wall-labels";
 import type { ProjectMediaItem } from "@/types/content";
 
 const { rowsAlbumSpy } = vi.hoisted(() => ({
@@ -29,13 +30,6 @@ vi.mock("react-photo-album", async (importOriginal) => {
   };
 });
 
-const wallLabels = {
-  photoCreditLabel: projectDetailContent.photoCreditLabel,
-  previewLabel: projectDetailContent.previewLabel,
-  previewDialogLabel: projectDetailContent.previewDialogLabel,
-  closePreviewLabel: projectDetailContent.closePreviewLabel
-};
-
 const archiveItems: ProjectMediaItem[] = [
   {
     type: "image",
@@ -49,20 +43,6 @@ const archiveItems: ProjectMediaItem[] = [
 ];
 
 test("archive media wall wires responsive row sizing hooks into RowsPhotoAlbum", () => {
-  class MockResizeObserver {
-    disconnect() {
-      return undefined;
-    }
-
-    observe() {
-      return undefined;
-    }
-
-    unobserve() {
-      return undefined;
-    }
-  }
-
   const originalResizeObserver = globalThis.ResizeObserver;
   globalThis.ResizeObserver = MockResizeObserver as typeof ResizeObserver;
 

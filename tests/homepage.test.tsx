@@ -1,56 +1,8 @@
 import { render, screen, within } from "@testing-library/react";
 import { HomePageFixture } from "@/tests/helpers/HomePageFixture";
+import { installObserverMocks } from "@/tests/helpers/dom-observers";
 
-class MockIntersectionObserver {
-  disconnect() {
-    return undefined;
-  }
-
-  observe() {
-    return undefined;
-  }
-
-  takeRecords() {
-    return [];
-  }
-
-  unobserve() {
-    return undefined;
-  }
-}
-
-class MockResizeObserver {
-  disconnect() {
-    return undefined;
-  }
-
-  observe() {
-    return undefined;
-  }
-
-  unobserve() {
-    return undefined;
-  }
-}
-
-beforeAll(() => {
-  Object.defineProperty(window, "IntersectionObserver", {
-    configurable: true,
-    value: MockIntersectionObserver
-  });
-  Object.defineProperty(globalThis, "IntersectionObserver", {
-    configurable: true,
-    value: MockIntersectionObserver
-  });
-  Object.defineProperty(window, "ResizeObserver", {
-    configurable: true,
-    value: MockResizeObserver
-  });
-  Object.defineProperty(globalThis, "ResizeObserver", {
-    configurable: true,
-    value: MockResizeObserver
-  });
-});
+installObserverMocks();
 
 test("renders the english homepage with a switch to the chinese route", () => {
   const { container } = render(<HomePageFixture locale="en" pathname="/" />);

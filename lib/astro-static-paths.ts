@@ -22,5 +22,5 @@ export function getProjectPageStaticPaths(locale: Locale) {
 }
 
 export function getProjectMarkdownStaticPaths() {
-  return projects.map((project) => ({ params: { slug: project.slug } }));
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
 }

@@ -6,7 +6,6 @@ import {
   buildCarouselProjects,
   formatCarouselProjectsModule
 } from "@/lib/build-carousel-projects";
-import { expect, test } from "vitest";
 
 test("carousel-projects.ts stays in sync with projects.ts", () => {
   expect(carouselProjects).toEqual(buildCarouselProjects(projects));

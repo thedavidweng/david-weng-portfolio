@@ -33,6 +33,20 @@ export function formatProjects(locale: Locale): string {
     .join("\n\n");
 }
 
+export function formatAbout(locale: Locale): string {
+  return `${getLocalizedText(aboutContent.lead, locale)}
+
+${getLocalizedText(aboutContent.body, locale)}
+
+${getLocalizedText(aboutContent.bodySecondary, locale)}
+
+### Focus Areas
+
+${aboutContent.stats
+  .map((s) => `- **${s.value}**: ${getLocalizedText(s.label, locale)}`)
+  .join("\n")}`;
+}
+
 export function buildAgentData(locale: Locale) {
   return {
     identity: {

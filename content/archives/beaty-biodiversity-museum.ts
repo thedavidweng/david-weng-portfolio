@@ -1,5 +1,3 @@
-// Use this collection to map files from public/projects/beaty-biodiversity-museum by filename.
-// Keep semantic metadata here instead of relying on image metadata exported from design tools.
 import { createEmptyArchiveCollection } from "@/content/archives/_shared";
 import { localized } from "@/lib/i18n";
 

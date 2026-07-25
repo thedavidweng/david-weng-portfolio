@@ -29,16 +29,16 @@ export function archiveItemsToProjectMedia(collection: ArchiveCollection): Proje
     .toSorted((left, right) => (left.order ?? Number.MAX_SAFE_INTEGER) - (right.order ?? Number.MAX_SAFE_INTEGER))
     .map((item) => ({
       type: "image",
-      title: item.title ?? getFallbackArchiveTitle(item),
-      description: item.caption ?? getFallbackArchiveCaption(item),
+      title: item.title ?? archiveMeta[item.kind].title,
+      description: item.caption ?? archiveMeta[item.kind].caption,
       archiveKind: item.kind,
       src: getArchiveItemSource(collection.group, item),
       width: item.width,
       height: item.height,
       href: item.publishedUrl,
-      badge: getArchiveBadge(item.kind),
+      badge: archiveMeta[item.kind].badge,
       credit: item.credit,
-      layout: getArchiveLayout(item.kind)
+      layout: archiveMeta[item.kind].layout
     }));
 }
 
@@ -111,19 +111,3 @@ const archiveMeta: Record<ArchiveItem["kind"], ArchiveMeta> = {
     layout: "landscape"
   }
 };
-
-function getFallbackArchiveTitle(item: ArchiveItem): LocalizedText {
-  return archiveMeta[item.kind].title;
-}
-
-function getFallbackArchiveCaption(item: ArchiveItem): LocalizedText {
-  return archiveMeta[item.kind].caption;
-}
-
-function getArchiveBadge(kind: ArchiveItem["kind"]): LocalizedText {
-  return archiveMeta[kind].badge;
-}
-
-function getArchiveLayout(kind: ArchiveItem["kind"]): ProjectMediaItem["layout"] {
-  return archiveMeta[kind].layout;
-}

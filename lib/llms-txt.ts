@@ -3,27 +3,9 @@ import { heroContent, contactContent } from "@/content/site";
 import { SITE_URL } from "@/lib/site-config";
 import { PROJECT_CATEGORY_SEQUENCE } from "@/lib/project-carousel";
 
-function groupProjectsByCategory() {
-  const groups = new Map<string, typeof projects>();
-
-  for (const category of PROJECT_CATEGORY_SEQUENCE) {
-    groups.set(category, []);
-  }
-
-  for (const project of projects) {
-    const category = project.category.en;
-    const list = groups.get(category) ?? [];
-    list.push(project);
-    groups.set(category, list);
-  }
-
-  return groups;
-}
-
 export function generateLlmsTxt(): string {
-  const groups = groupProjectsByCategory();
   const projectSections = PROJECT_CATEGORY_SEQUENCE.flatMap((category) => {
-    const items = groups.get(category) ?? [];
+    const items = projects.filter((p) => p.category.en === category);
     if (items.length === 0) return [];
 
     const lines = items

@@ -8,7 +8,6 @@ import {
   type RefObject,
 } from "react";
 import type { Locale } from "@/types/content";
-import { Container } from "@/src/islands/_shared/Container";
 import {
   footerContent,
   headerContent,
@@ -515,7 +514,7 @@ export function Header({ locale, pathname }: HeaderProps) {
       <header
         className={`site-header${isHomePath ? " site-header--home" : ""}${menuRendered ? " site-header--menu-open" : ""}${headerVisible ? " site-header--visible" : " site-header--hidden"}${headerScrolled ? " site-header--scrolled" : ""}`}
       >
-        <Container>
+        <div className="container">
           <div className="site-header__inner">
             <a className="site-header__brand" href={homePath}>
               <span className="site-header__title">{siteIdentity.name}</span>
@@ -564,7 +563,7 @@ export function Header({ locale, pathname }: HeaderProps) {
               />
             ) : null}
           </div>
-        </Container>
+        </div>
       </header>
     </StrictMode>
   );

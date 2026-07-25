@@ -9,6 +9,13 @@ import {
 } from "@/content/site";
 import { SITE_URL } from "@/lib/site-config";
 
+const socialProfiles = [
+  contactContent.linkedinHref,
+  contactContent.instagramHref,
+  contactContent.githubHref,
+  aboutContent.homepageHref
+];
+
 export function buildPersonSchema(locale: Locale) {
   const services = servicesContent.items;
 
@@ -23,12 +30,7 @@ export function buildPersonSchema(locale: Locale) {
     description: getLocalizedText(heroContent.support, locale),
     url: SITE_URL,
     email: contactContent.email,
-    sameAs: [
-      contactContent.linkedinHref,
-      contactContent.instagramHref,
-      contactContent.githubHref,
-      aboutContent.homepageHref
-    ],
+    sameAs: socialProfiles,
     worksFor: {
       "@type": "Organization",
       name: siteIdentity.name,
@@ -70,12 +72,7 @@ export function buildOrganizationSchema(locale: Locale) {
     url: SITE_URL,
     email: contactContent.email,
     logo: `${SITE_URL}/brand/og-image.png`,
-    sameAs: [
-      contactContent.linkedinHref,
-      contactContent.instagramHref,
-      contactContent.githubHref,
-      aboutContent.homepageHref
-    ],
+    sameAs: socialProfiles,
     contactPoint: {
       "@type": "ContactPoint",
       email: contactContent.email,

@@ -1,6 +1,4 @@
-import { readFileSync } from "node:fs";
-import { imageSize } from "image-size";
-import { join } from "node:path";
+import { getImageWidth } from "@/lib/image-dimensions";
 import type { CarouselProjectItem, ProjectItem } from "@/types/content";
 
 const CAROUSEL_FIELDS = [
@@ -17,17 +15,6 @@ const CAROUSEL_FIELDS = [
   "teaser"
 ] as const satisfies ReadonlyArray<keyof CarouselProjectItem>;
 
-function getCoverWidth(coverImage: string): number | undefined {
-  if (!coverImage) return undefined;
-  try {
-    const filePath = join(process.cwd(), "public", coverImage);
-    const buffer = readFileSync(filePath);
-    return imageSize(buffer).width;
-  } catch {
-    return undefined;
-  }
-}
-
 export function buildCarouselProjects(source: ProjectItem[]): CarouselProjectItem[] {
   return source.map((project) => {
     const entry = Object.fromEntries(
@@ -39,7 +26,7 @@ export function buildCarouselProjects(source: ProjectItem[]): CarouselProjectIte
     ) as unknown as CarouselProjectItem;
 
     if (project.coverImage) {
-      entry.coverWidth = getCoverWidth(project.coverImage);
+      entry.coverWidth = getImageWidth(project.coverImage);
     }
 
     return entry;

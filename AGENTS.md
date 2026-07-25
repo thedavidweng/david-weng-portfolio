@@ -2,6 +2,12 @@
 
 This project serves both human visitors and AI agents. The human-visible UI and agent-visible endpoints draw from the same content sources where possible.
 
+## Coding Conventions
+
+1. **No comments unless absolutely necessary.** Code must self-explain. A comment is justified only when it states a constraint the code cannot express (the `show()`-vs-`showModal()` note in `src/islands/Header.tsx` is the bar to clear). Machine-read directives (JSDoc type annotations, `/// <reference>`, `@ts-expect-error` with reason) are not comments. Enforced in CI by `tests/comment-policy.test.ts` and oxlint (`no-inline-comments`, `no-warning-comments`).
+2. **Rationale goes to `docs/adr/`, not inline.** If a comment would explain *why* a decision was made, write an ADR instead (`NNNN-slug.md`, sequential — see `docs/adr/0001-record-architecture-decisions.md`). Operational knowledge agents need day-to-day belongs in this file.
+3. **Minimize line count without hurting readability.** Prefer deleting code to documenting it; inline single-use abstractions; no code golf — clarity beats brevity when they conflict.
+
 ## Agent-Visible Endpoints
 
 | Endpoint | Format | Purpose | Human Equivalent |
@@ -39,6 +45,10 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `lib/jsonld.ts` | `sameAs` array | `content/site.ts` contact links | **LOW** |
 
 `lib/llms-txt.ts` now auto-generates from `content/projects.ts` — no manual sync needed.
+
+### Archive Collections
+
+`content/archives/*.ts` map media files stored under `public/projects/<storage-path>` by filename; semantic metadata (titles, captions, order) lives in the collection, never in filenames. Each group's storage path comes from `archiveStoragePathMap` in `content/archives/_shared.ts` — never hardcode storage paths in comments or docs.
 
 ## Modification Checklist
 
@@ -107,6 +117,17 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `@astrojs/sitemap` | Sitemap generator (excludes `.md` and `/agent`) |
 | `scripts/write-headers.mjs` | Security + agent Link headers in `dist/_headers` |
 
+## Operational Scripts
+
+| Command | Purpose |
+|---|---|
+| `pnpm generate:images` | Regenerate AVIF `srcset` variants (`@400w/@800w/@1200w/@1920w` suffix) for `public/projects/` images wider than 1200px; widths must stay in sync with `lib/responsive-srcset.ts`. `--force` regenerates all. |
+| `pnpm generate:carousel` | Regenerate `content/carousel-projects.ts` (CI fails if stale). |
+| `pnpm subset:fonts` | Subset Noto CJK fonts to the glyphs used in `src`/`content`/`lib`/`tests` (runs automatically on prebuild). |
+| `pnpm apply:zone` | Apply Cloudflare Zone free-tier defaults, incl. HTTPS + www→apex redirect rules. Requires `CLOUDFLARE_API_TOKEN` with Zone Settings:Edit + Zone:Edit. See `docs/adr/0002-zone-layer-redirects.md`. |
+| `pnpm verify:zone` | Post-deploy Zone redirect checks via curl; add `CLOUDFLARE_API_TOKEN` to also inspect the ruleset via API. |
+| `pnpm verify:dist` | Assert the build output contains required files and no foreign artifacts. |
+
 ## Testing Agent Content
 
 ```bash
@@ -118,19 +139,9 @@ curl -s "http://localhost:4321/llms-full.txt" | head -n 20
 curl -s "http://localhost:4321/index.md" | head -n 10
 ```
 
-## Agent skills
+## Decisions & Issues
 
-### Issue tracker
-
-GitHub Issues — skills use `gh` CLI. See `docs/agents/issue-tracker.md`.
-
-### Triage labels
-
-Default five-role vocabulary (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). See `docs/agents/triage-labels.md`.
-
-### Domain docs
-
-Single-context layout — `CONTEXT.md` + `docs/adr/` at repo root. See `docs/agents/domain.md`.
+Architecture decisions and their rationale live in `docs/adr/`. Issues are tracked in GitHub Issues (`gh` CLI); triage labels: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix.
 
 ## Cursor Cloud specific instructions
 
@@ -139,4 +150,4 @@ This is a static Astro 7 + React 19 site (pnpm). Standard commands live in `READ
 - **Node version gotcha:** the project requires Node `>=24` (see `package.json` `engines`, `.node-version` / `.nvmrc`). Node is managed with **`fnm`** (default alias `24`), wired into `~/.bashrc` via `eval "$(fnm env --use-on-cd)"`. Login/interactive shells and `tmux` (`bash -l`) resolve Node 24 automatically (and `--use-on-cd` re-reads `.node-version` when entering the repo). However, non-login shells (including direct Shell tool commands) do not source `~/.bashrc` and hit `/exec-daemon/node` (Node 22) first on `PATH`, which fails the engine check. For one-off commands, run them through a login shell (e.g. `bash -lc 'pnpm ...'`) or `eval "$(fnm env)"` first. `pnpm` is provided via `corepack` and is only on `PATH` once Node 24 is active.
 - **Dev server:** `pnpm dev` serves at `http://localhost:4321`. It is a static site with no database or external service dependencies, so no extra services are needed.
 - The site's top-nav `HOME` link points at the production URL (`https://davidweng.eu.org`), not the local dev server — this is expected, not a bug. Use the browser back button when navigating locally.
-- **Production preview / routing:** production uses **assets-only** Workers Static Assets (`wrangler.jsonc` has no `main` script — static requests are free/unlimited). HTTPS and www→apex redirects live in Cloudflare Zone settings (`scripts/apply-cf-zone-free-tier.mjs`). Verify after deploy: `pnpm verify:zone` (add `CLOUDFLARE_API_TOKEN` to also inspect the ruleset via API). `workers/site.mjs` is kept as a legacy reference only. Astro emits directory-style output (`dist/index.html`, `dist/projects/<slug>/index.html`), so `assets.html_handling` MUST stay `"auto-trailing-slash"` (the default). Setting it to `"none"` breaks clean-URL routing — `/` and `/projects/<slug>/` return 404 while only `/index.html` works. To preview production routing locally, run `pnpm build` then `npx wrangler dev`. Production deploys happen automatically via Cloudflare's Git integration on push to the production branch — no manual `wrangler deploy` / credentials needed from the agent. **PR preview URLs** are enabled via `preview_urls: true` in `wrangler.jsonc`; Cloudflare posts a per-branch `*.workers.dev` link on each pull request (production stays on `davidweng.eu.org`).
+- **Production preview / routing:** production uses **assets-only** Workers Static Assets (`wrangler.jsonc` has no `main` script — static requests are free/unlimited). HTTPS and www→apex redirects live in Cloudflare Zone settings (`scripts/apply-cf-zone-free-tier.mjs`). Verify after deploy: `pnpm verify:zone` (add `CLOUDFLARE_API_TOKEN` to also inspect the ruleset via API). Redirect architecture rationale: `docs/adr/0002-zone-layer-redirects.md`. Astro emits directory-style output (`dist/index.html`, `dist/projects/<slug>/index.html`), so `assets.html_handling` MUST stay `"auto-trailing-slash"` (the default). Setting it to `"none"` breaks clean-URL routing — `/` and `/projects/<slug>/` return 404 while only `/index.html` works. To preview production routing locally, run `pnpm build` then `npx wrangler dev`. Production deploys happen automatically via Cloudflare's Git integration on push to the production branch — no manual `wrangler deploy` / credentials needed from the agent. **PR preview URLs** are enabled via `preview_urls: true` in `wrangler.jsonc`; Cloudflare posts a per-branch `*.workers.dev` link on each pull request (production stays on `davidweng.eu.org`).

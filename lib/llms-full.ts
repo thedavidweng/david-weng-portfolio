@@ -2,10 +2,9 @@ import {
   siteIdentity,
   heroContent,
   contactContent,
-  aboutContent,
   navigationItems
 } from "@/content/site";
-import { formatServices, formatProjects } from "@/lib/agent-content";
+import { formatServices, formatProjects, formatAbout } from "@/lib/agent-content";
 import { SITE_URL } from "@/lib/site-config";
 
 export function generateLlmsFull(): string {
@@ -40,17 +39,7 @@ ${formatProjects("en")}
 
 ## About
 
-${aboutContent.lead.en}
-
-${aboutContent.body.en}
-
-${aboutContent.bodySecondary.en}
-
-### Focus Areas
-
-${aboutContent.stats
-  .map((s) => `- **${s.value}**: ${s.label.en}`)
-  .join("\n")}
+${formatAbout("en")}
 
 ---
 

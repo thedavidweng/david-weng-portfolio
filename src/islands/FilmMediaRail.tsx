@@ -3,6 +3,7 @@ import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
 import { projectLabel } from "@/content/projects";
 import { ProjectMediaLightbox } from "@/src/islands/ProjectMediaLightbox";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
+import { isPreviewImageItem } from "@/src/islands/_shared/preview-image";
 
 type FilmMediaRailProps = {
   cardClassName: string;
@@ -28,11 +29,7 @@ export function FilmMediaRail({
   sizes,
 }: FilmMediaRailProps) {
   const previewItems = useMemo(
-    () =>
-      items.filter(
-        (item): item is ProjectMediaItem & { type: "image"; src: string } =>
-          item.type === "image" && typeof item.src === "string",
-      ),
+    () => items.filter(isPreviewImageItem),
     [items],
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

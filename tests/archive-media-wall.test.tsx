@@ -1,15 +1,8 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { projectDetailContent } from "@/content/projects";
 import { ArchiveMediaWall } from "@/src/islands/ArchiveMediaWall";
+import { wallLabels } from "@/tests/helpers/wall-labels";
 import type { ProjectMediaItem } from "@/types/content";
-
-const wallLabels = {
-  photoCreditLabel: projectDetailContent.photoCreditLabel,
-  previewLabel: projectDetailContent.previewLabel,
-  previewDialogLabel: projectDetailContent.previewDialogLabel,
-  closePreviewLabel: projectDetailContent.closePreviewLabel
-};
 
 const archiveItems: ProjectMediaItem[] = [
   {

@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-/**
- * Apply Cloudflare free-tier performance + monitoring defaults for davidweng.eu.org.
- * Requires CLOUDFLARE_API_TOKEN with Zone Settings:Edit and Zone:Edit on the zone.
- *
- * Usage: CLOUDFLARE_API_TOKEN=... node scripts/apply-cf-zone-free-tier.mjs
- */
 
 const ZONE_ID = "b67d2a0bef27e51f5325b579013c78a4";
 const REDIRECT_RULESET_ID = "4543589b903540c78ab94395e6813c07";
