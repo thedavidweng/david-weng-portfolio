@@ -10,8 +10,9 @@ import ProjectFilmRails from "@/src/components/ProjectFilmRails.astro";
 import ProjectMaterialsSection from "@/src/components/ProjectMaterialsSection.astro";
 import ProjectSummary from "@/src/components/ProjectSummary.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
-import Header from "@/src/islands/Header";
-import { projectDetailContent, projectLabel } from "@/content/projects";
+import { Header } from "@/src/islands/Header";
+import { projectDetailContent } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import { getLocaleHomePath } from "@/lib/i18n";
 import { getHostname } from "@/lib/url";
 import { getImageWidth } from "@/lib/image-dimensions";
@@ -68,11 +69,11 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
           <div class="project-hero__frame">
             <div class="project-hero__header">
               <a class="project-hero__back signal-control signal-control--nav" href={`${homePath}#projects`}>
-                {projectLabel(projectDetailContent.backLabel, locale)}
+                {getLocalizedText(projectDetailContent.backLabel, locale)}
               </a>
               <div class="project-hero__micro">
                 <span>[{project.code}]</span>
-                <span>[{projectLabel(project.category, locale)}]</span>
+                <span>[{getLocalizedText(project.category, locale)}]</span>
                 <span>[{project.year}]</span>
               </div>
             </div>
@@ -86,9 +87,9 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
                 >
                   <div class={`project-hero__archive-intro${useImageWall ? " project-hero__archive-intro--stacked" : ""}`}>
                     {isExternalHandoff ? (
-                      <p class="project-hero__article-eyebrow">{projectLabel(project.projectType, locale)}</p>
+                      <p class="project-hero__article-eyebrow">{getLocalizedText(project.projectType, locale)}</p>
                     ) : null}
-                    <h1 class="project-hero__title">{projectLabel(project.title, locale)}</h1>
+                    <h1 class="project-hero__title">{getLocalizedText(project.title, locale)}</h1>
                     {!isTitleOnly && !isExternalHandoff ? (
                       <>
                         <p class="project-hero__summary">
@@ -96,7 +97,7 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
                         </p>
                         <div class="project-detail__links">
                           {project.externalLinks.map((link) => (
-                            <ProjectExternalLinkButton href={link.href} label={projectLabel(link.label, locale)} />
+                            <ProjectExternalLinkButton href={link.href} label={getLocalizedText(link.label, locale)} />
                           ))}
                         </div>
                       </>
@@ -104,7 +105,7 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
                     {isExternalHandoff ? (
                       <>
                         <p class="project-hero__publication">
-                          {projectLabel(projectDetailContent.publicationLabel, locale)} {projectLabel(project.duration, locale)}
+                          {getLocalizedText(projectDetailContent.publicationLabel, locale)} {getLocalizedText(project.duration, locale)}
                         </p>
                         <p class="project-hero__summary">
                           <ProjectSummary locale={locale} project={project} />
@@ -117,15 +118,15 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
               ) : null}
               {isExternalHandoff && primaryExternalLink ? (
                 <aside class="project-handoff signal-panel">
-                  <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.externalEyebrow, locale)}</p>
-                  <h2 class="project-handoff__title">{projectLabel(project.duration, locale)}</h2>
-                  <p class="project-handoff__copy">{projectLabel(projectDetailContent.externalHint, locale)}</p>
+                  <p class="poster-section__eyebrow">{getLocalizedText(projectDetailContent.externalEyebrow, locale)}</p>
+                  <h2 class="project-handoff__title">{getLocalizedText(project.duration, locale)}</h2>
+                  <p class="project-handoff__copy">{getLocalizedText(projectDetailContent.externalHint, locale)}</p>
                   <div class="project-handoff__meta">
-                    <span>{projectLabel(projectDetailContent.externalDestinationLabel, locale)}</span>
+                    <span>{getLocalizedText(projectDetailContent.externalDestinationLabel, locale)}</span>
                     <span>{getHostname(primaryExternalLink.href)}</span>
                   </div>
                   <a class="button button--signal" href={primaryExternalLink.href} rel="noreferrer" target="_blank">
-                    {projectLabel(primaryExternalLink.label, locale)}
+                    {getLocalizedText(primaryExternalLink.label, locale)}
                     <span class="visually-hidden">(opens in new tab)</span>
                   </a>
                 </aside>
@@ -136,7 +137,7 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
                   style={`background:linear-gradient(145deg,${project.coverPalette[0]},${project.coverPalette[1]} 55%,${project.coverPalette[2]})`}
                 >
                   <PortfolioImage
-                    alt={projectLabel(project.coverAlt, locale)}
+                    alt={getLocalizedText(project.coverAlt, locale)}
                     class="project-hero__cover-image"
                     fill
                     priority
@@ -148,13 +149,13 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
                     <>
                       <div class="project-hero__word" aria-hidden="true">{project.posterWord}</div>
                       <div class="project-hero__cover-meta">
-                        <span>{projectLabel(project.coverLabel, locale)}</span>
-                        <span>{projectLabel(project.duration, locale)}</span>
+                        <span>{getLocalizedText(project.coverLabel, locale)}</span>
+                        <span>{getLocalizedText(project.duration, locale)}</span>
                       </div>
                     </>
                   ) : (
                     <div class="project-hero__cover-meta project-hero__cover-meta--archive">
-                      <span>{projectLabel(project.coverLabel, locale)}</span>
+                      <span>{getLocalizedText(project.coverLabel, locale)}</span>
                     </div>
                   )}
                 </div>
@@ -169,8 +170,8 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
           <Container>
             <div class="project-detail__grid">
               <div class="signal-panel">
-                <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.highlightsEyebrow, locale)}</p>
-                <h2 class="project-detail__title">{projectLabel(projectDetailContent.highlightsTitle, locale)}</h2>
+                <p class="poster-section__eyebrow">{getLocalizedText(projectDetailContent.highlightsEyebrow, locale)}</p>
+                <h2 class="project-detail__title">{getLocalizedText(projectDetailContent.highlightsTitle, locale)}</h2>
                 <ul class="project-detail__list">
                   {project.highlights[locale].map((highlight) => (
                     <li>{highlight}</li>

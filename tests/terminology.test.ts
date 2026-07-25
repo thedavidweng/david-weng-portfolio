@@ -5,7 +5,7 @@ const filesToClean = [
   "content/site.ts",
   "content/projects.ts",
   "README.md",
-  "tests/homepage.test.tsx"
+  "tests/pages/home-page.test.ts"
 ];
 
 test("repository uses content operations / 内容运营 consistently in active copy and docs", () => {

@@ -63,23 +63,20 @@ function buildProjectHtmlCacheRules() {
   const htmlCache = "  Cache-Control: public, max-age=300, stale-while-revalidate=86400";
   const rules = [];
 
-  for (const slug of readdirSync(projectsDir)) {
-    if (!existsSync(join(projectsDir, slug, "index.html"))) {
-      continue;
+  const pushSlugRules = (dir, prefix) => {
+    if (!existsSync(dir)) {
+      return;
     }
 
-    rules.push(`/projects/${slug}/\n${htmlCache}`);
-  }
-
-  if (existsSync(zhProjectsDir)) {
-    for (const slug of readdirSync(zhProjectsDir)) {
-      if (!existsSync(join(zhProjectsDir, slug, "index.html"))) {
-        continue;
+    for (const slug of readdirSync(dir)) {
+      if (existsSync(join(dir, slug, "index.html"))) {
+        rules.push(`${prefix}/${slug}/\n${htmlCache}`);
       }
-
-      rules.push(`/zh/projects/${slug}/\n${htmlCache}`);
     }
-  }
+  };
+
+  pushSlugRules(projectsDir, "/projects");
+  pushSlugRules(zhProjectsDir, "/zh/projects");
 
   if (rules.length === 0) {
     return "";

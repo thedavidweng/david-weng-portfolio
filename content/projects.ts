@@ -1,5 +1,5 @@
-import type { Locale, LocalizedText, ProjectItem } from "@/types/content";
-import { getLocalizedText, localized } from "@/lib/i18n";
+import type { ProjectItem } from "@/types/content";
+import { localized } from "@/lib/i18n";
 import { beatyBiodiversityMuseumArchive } from "@/content/archives/beaty-biodiversity-museum";
 import { bcAiEcosystemArchive } from "@/content/archives/bc-ai-ecosystem";
 import { theUpgradeAiArchive } from "@/content/archives/theupgrade-ai";
@@ -383,7 +383,3 @@ export const projects: ProjectItem[] = [
     media: []
   }
 ];
-
-export function projectLabel(text: LocalizedText, locale: Locale) {
-  return getLocalizedText(text, locale);
-}

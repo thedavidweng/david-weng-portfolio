@@ -18,27 +18,15 @@ const resolvedLoading = priority ? "eager" : (loading ?? "lazy");
 const srcset = buildSrcset(src, width);
 ---
 
-{fill ? (
-  <img
-    alt={alt}
-    class={className}
-    decoding="async"
-    loading={resolvedLoading}
-    sizes={sizes}
-    src={src}
-    srcset={srcset}
-    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"
-  />
-) : (
-  <img
-    alt={alt}
-    class={className}
-    decoding="async"
-    height={height}
-    loading={resolvedLoading}
-    sizes={sizes}
-    src={src}
-    srcset={srcset}
-    width={width}
-  />
-)}
+<img
+  alt={alt}
+  class={className}
+  decoding="async"
+  height={fill ? undefined : height}
+  loading={resolvedLoading}
+  sizes={sizes}
+  src={src}
+  srcset={srcset}
+  style={fill ? "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" : undefined}
+  width={fill ? undefined : width}
+/>

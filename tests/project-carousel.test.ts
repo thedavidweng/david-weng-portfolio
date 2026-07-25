@@ -1,13 +1,16 @@
-import { describe, expect, test } from "vitest";
+import { projects } from "@/content/projects";
+import { buildCarouselProjects } from "@/lib/build-carousel-projects";
 import {
   buildProjectCategoryGroups,
   getCategoryBySnap,
-  orderedProjects
+  orderProjectsByCategory
 } from "@/lib/project-carousel";
+
+const orderedProjects = orderProjectsByCategory(buildCarouselProjects(projects));
 
 describe("project carousel grouping", () => {
   test("orders the homepage project rail by explicit category sequence without an all bucket", () => {
-    const groups = buildProjectCategoryGroups("en");
+    const groups = buildProjectCategoryGroups(orderedProjects, "en");
 
     expect(groups.map((group) => group.id)).toEqual([
       "Client",
@@ -35,7 +38,7 @@ describe("project carousel grouping", () => {
   });
 
   test("maps snap indices back to the owning category", () => {
-    const groups = buildProjectCategoryGroups("zh");
+    const groups = buildProjectCategoryGroups(orderedProjects, "zh");
 
     expect(getCategoryBySnap(groups, 0)?.label).toBe("客户");
     expect(getCategoryBySnap(groups, 3)?.label).toBe("电影");

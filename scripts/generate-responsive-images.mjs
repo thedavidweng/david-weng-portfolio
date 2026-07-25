@@ -1,24 +1,13 @@
 #!/usr/bin/env node
-/**
- * Generate responsive AVIF image variants for srcset.
- *
- * For each AVIF image in public/projects/ wider than 1200px, generates
- * variants at 400w, 800w, 1200w, and 1920w (only those smaller than the
- * original). Variants are written alongside the original with a
- * `@<width>w` suffix, e.g. `still-fraud-08@800w.avif`.
- *
- * Usage:
- *   node scripts/generate-responsive-images.mjs          # generate missing
- *   node scripts/generate-responsive-images.mjs --force   # regenerate all
- */
 
 import { execSync } from "node:child_process";
 import { readdirSync, statSync, existsSync } from "node:fs";
-import { join, dirname, basename, extname } from "node:path";
+import { join, dirname, basename, extname, relative, sep } from "node:path";
+import { MIN_ORIGINAL_WIDTH, RESPONSIVE_WIDTHS } from "../lib/responsive-srcset.ts";
+import { getImageWidth } from "../lib/image-dimensions.ts";
 
-const PROJECTS_DIR = new URL("../public/projects", import.meta.url).pathname;
-const WIDTHS = [400, 800, 1200, 1920];
-const MIN_ORIGINAL_WIDTH = 1200; // only generate variants for images wider than this
+const PUBLIC_DIR = new URL("../public", import.meta.url).pathname;
+const PROJECTS_DIR = join(PUBLIC_DIR, "projects");
 
 const force = process.argv.includes("--force");
 
@@ -36,11 +25,8 @@ function findAvifFiles(dir) {
   return results;
 }
 
-function getImageWidth(filePath) {
-  const output = execSync(`identify -format "%w" "${filePath}" 2>/dev/null`, {
-    encoding: "utf-8",
-  }).trim();
-  return parseInt(output, 10);
+function toPublicPath(filePath) {
+  return `/${relative(PUBLIC_DIR, filePath).split(sep).join("/")}`;
 }
 
 function generateVariant(srcPath, width) {
@@ -66,14 +52,14 @@ function main() {
   let untouched = 0;
 
   for (const file of files) {
-    const originalWidth = getImageWidth(file);
+    const originalWidth = getImageWidth(toPublicPath(file));
 
-    if (originalWidth <= MIN_ORIGINAL_WIDTH) {
+    if (!originalWidth || originalWidth <= MIN_ORIGINAL_WIDTH) {
       untouched++;
       continue;
     }
 
-    for (const width of WIDTHS) {
+    for (const width of RESPONSIVE_WIDTHS) {
       if (width >= originalWidth) continue;
 
       const result = generateVariant(file, width);

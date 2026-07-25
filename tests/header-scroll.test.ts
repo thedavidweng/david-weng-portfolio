@@ -1,4 +1,3 @@
-import { describe, expect, test } from "vitest";
 import { createHeaderScrollController } from "@/lib/header-scroll";
 
 describe("createHeaderScrollController", () => {

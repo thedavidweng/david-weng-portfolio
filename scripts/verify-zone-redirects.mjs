@@ -1,12 +1,4 @@
 #!/usr/bin/env node
-/**
- * Post-deploy checks for davidweng.eu.org Zone redirects.
- * Requires CLOUDFLARE_API_TOKEN for API rule inspection (optional).
- *
- * Usage:
- *   node scripts/verify-zone-redirects.mjs
- *   node scripts/verify-zone-redirects.mjs --curl
- */
 
 const ZONE_ID = "b67d2a0bef27e51f5325b579013c78a4";
 const REDIRECT_RULESET_ID = "4543589b903540c78ab94395e6813c07";

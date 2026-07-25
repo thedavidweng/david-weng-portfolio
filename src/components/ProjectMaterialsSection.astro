@@ -1,8 +1,9 @@
 ---
 import Container from "@/src/components/Container.astro";
 import PortfolioImage from "@/src/components/PortfolioImage.astro";
-import ArchiveMediaWall from "@/src/islands/ArchiveMediaWall";
-import { projectDetailContent, projectLabel } from "@/content/projects";
+import { ArchiveMediaWall } from "@/src/islands/ArchiveMediaWall";
+import { projectDetailContent } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import { getImageWidth } from "@/lib/image-dimensions";
 import type { Locale, ProjectItem, ProjectMediaItem } from "@/types/content";
 
@@ -27,8 +28,8 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
 <section class="project-media">
   <Container>
     <div class="poster-section__intro">
-      <p class="poster-section__eyebrow">{projectLabel(projectDetailContent.materialsEyebrow, locale)}</p>
-      <h2 class="poster-section__title">{projectLabel(projectDetailContent.materialsTitle, locale)}</h2>
+      <p class="poster-section__eyebrow">{getLocalizedText(projectDetailContent.materialsEyebrow, locale)}</p>
+      <h2 class="poster-section__title">{getLocalizedText(projectDetailContent.materialsTitle, locale)}</h2>
     </div>
     {useImageWall ? (
       <div class="project-media__sections">
@@ -36,7 +37,7 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
           <div class="project-media__section">
             {useSplitArchiveLayout ? (
               <h3 class="project-media__section-title">
-                {projectLabel(projectDetailContent.staticWorksTitle, locale)}
+                {getLocalizedText(projectDetailContent.staticWorksTitle, locale)}
               </h3>
             ) : null}
             <ArchiveMediaWall
@@ -53,7 +54,7 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
         {useSplitArchiveLayout ? (
           <div class="project-media__section">
             <h3 class="project-media__section-title">
-              {projectLabel(projectDetailContent.videoWorksTitle, locale)}
+              {getLocalizedText(projectDetailContent.videoWorksTitle, locale)}
             </h3>
             <div class="project-media__video-grid">
               {archiveVideoItems.map((item) => (
@@ -61,7 +62,7 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
                   {item.src ? (
                     <div class="project-media__video-thumb">
                       <PortfolioImage
-                        alt={projectLabel(item.title, locale)}
+                        alt={getLocalizedText(item.title, locale)}
                         fill
                         loading="lazy"
                         sizes="(max-width: 760px) 100vw, (max-width: 1120px) 50vw, 42vw"
@@ -71,11 +72,11 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
                     </div>
                   ) : null}
                   <div class="project-media__video-copy">
-                    <h3>{projectLabel(item.title, locale)}</h3>
-                    <p>{projectLabel(item.description, locale)}</p>
+                    <h3>{getLocalizedText(item.title, locale)}</h3>
+                    <p>{getLocalizedText(item.description, locale)}</p>
                     {item.href ? (
                       <a class="button button--signal" href={item.href} rel="noreferrer" target="_blank">
-                        {projectLabel(projectDetailContent.watchOnYouTubeLabel, locale)}
+                        {getLocalizedText(projectDetailContent.watchOnYouTubeLabel, locale)}
                         <span class="visually-hidden">(opens in new tab)</span>
                       </a>
                     ) : null}
@@ -90,11 +91,11 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
       <div class="project-media__grid">
         {project.media.map((item) => (
           <article class={`project-media__card signal-panel${item.layout ? ` project-media__card--${item.layout}` : ""}`}>
-            <div class="project-media__badge">{item.badge ? projectLabel(item.badge, locale) : item.type}</div>
+            <div class="project-media__badge">{item.badge ? getLocalizedText(item.badge, locale) : item.type}</div>
             {item.type === "image" && item.src ? (
               <div class={`project-media__image${item.layout ? ` project-media__image--${item.layout}` : ""}`}>
                 <PortfolioImage
-                  alt={projectLabel(item.title, locale)}
+                  alt={getLocalizedText(item.title, locale)}
                   fill
                   loading="lazy"
                   sizes="(max-width: 1120px) 100vw, 28vw"
@@ -103,20 +104,20 @@ const archiveWallItems = useSplitArchiveLayout ? archiveStaticItems : project.me
                 />
               </div>
             ) : null}
-            <h3>{projectLabel(item.title, locale)}</h3>
-            <p>{projectLabel(item.description, locale)}</p>
+            <h3>{getLocalizedText(item.title, locale)}</h3>
+            <p>{getLocalizedText(item.description, locale)}</p>
             {item.credit ? (
               <p class="project-media__credit">
-                {projectLabel(projectDetailContent.photoCreditLabel, locale)}:{" "}
+                {getLocalizedText(projectDetailContent.photoCreditLabel, locale)}:{" "}
                 <a href={item.credit.href} rel="noreferrer" target="_blank">
-                  {projectLabel(item.credit.label, locale)}
+                  {getLocalizedText(item.credit.label, locale)}
                   <span class="visually-hidden">(opens in new tab)</span>
                 </a>
               </p>
             ) : null}
             {item.href ? (
               <a class="project-card__cta" href={item.href} rel="noreferrer" target="_blank">
-                {projectLabel(projectDetailContent.openResourceLabel, locale)}
+                {getLocalizedText(projectDetailContent.openResourceLabel, locale)}
                 <span class="visually-hidden">(opens in new tab)</span>
               </a>
             ) : null}

@@ -12,10 +12,9 @@ let agentRoot: Root | null = null;
 /**
  * Mount the agent-mode panel into a dedicated root element.
  *
- * Called directly from an inline <script> in the homepage pages
- * (src/pages/index.astro, src/pages/zh/index.astro) when ?mode=agent is
- * present in the URL. The panel replaces the normal site content with a
- * simplified, agent-optimized HTML view.
+ * Called directly from an inline <script> in src/layouts/HomeLayout.astro
+ * when ?mode=agent is present in the URL. The panel replaces the normal
+ * site content with a simplified, agent-optimized HTML view.
  */
 export function mountAgentModeGate(locale: Locale) {
   const siteContent = document.getElementById("site-content");
@@ -66,5 +65,3 @@ export function AgentModeGate({ locale }: AgentModeGateProps) {
 
   return null;
 }
-
-export default AgentModeGate;

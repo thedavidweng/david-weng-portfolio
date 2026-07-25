@@ -9,6 +9,13 @@ import {
 } from "@/content/site";
 import { SITE_URL } from "@/lib/site-config";
 
+const socialProfiles = [
+  contactContent.linkedinHref,
+  contactContent.instagramHref,
+  contactContent.githubHref,
+  aboutContent.homepageHref
+];
+
 export function buildPersonSchema(locale: Locale) {
   const services = servicesContent.items;
 
@@ -23,26 +30,13 @@ export function buildPersonSchema(locale: Locale) {
     description: getLocalizedText(heroContent.support, locale),
     url: SITE_URL,
     email: contactContent.email,
-    sameAs: [
-      contactContent.linkedinHref,
-      contactContent.instagramHref,
-      contactContent.githubHref,
-      aboutContent.homepageHref
-    ],
+    sameAs: socialProfiles,
     worksFor: {
       "@type": "Organization",
       name: siteIdentity.name,
       url: SITE_URL
     },
-    knowsAbout: [
-      "Video Editing",
-      "Photography",
-      "Graphic Design",
-      "Visual Storytelling",
-      "Brand System Design",
-      "Content Operations",
-      "AI-integrated Creative Work"
-    ],
+    knowsAbout: siteIdentity.knowsAbout,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services",
@@ -70,12 +64,7 @@ export function buildOrganizationSchema(locale: Locale) {
     url: SITE_URL,
     email: contactContent.email,
     logo: `${SITE_URL}/brand/og-image.png`,
-    sameAs: [
-      contactContent.linkedinHref,
-      contactContent.instagramHref,
-      contactContent.githubHref,
-      aboutContent.homepageHref
-    ],
+    sameAs: socialProfiles,
     contactPoint: {
       "@type": "ContactPoint",
       email: contactContent.email,
@@ -93,7 +82,7 @@ export function buildWebSiteSchema(locale: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "David Weng",
+    name: siteIdentity.name,
     url: SITE_URL,
     description: getLocalizedText(heroContent.support, locale),
     inLanguage: ["en", "zh"]

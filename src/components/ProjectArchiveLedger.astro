@@ -1,5 +1,5 @@
 ---
-import { projectLabel } from "@/content/projects";
+import { getLocalizedText } from "@/lib/i18n";
 import type { Locale, ProjectItem } from "@/types/content";
 
 interface Props {
@@ -13,10 +13,10 @@ const roles = project.roles[locale];
 
 <aside
   class="project-hero__archive-ledger"
-  aria-label={`${projectLabel(project.category, locale)} ${project.year}`}
+  aria-label={`${getLocalizedText(project.category, locale)} ${project.year}`}
 >
   <p class="poster-section__eyebrow">
-    {projectLabel(project.category, locale)} · {project.year}
+    {getLocalizedText(project.category, locale)} · {project.year}
   </p>
   {roles.length > 0 ? (
     <ul class="project-hero__archive-roles">

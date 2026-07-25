@@ -1,91 +1,19 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
+import { projects } from "@/content/projects";
+import { buildCarouselProjects } from "@/lib/build-carousel-projects";
 
-class MockIntersectionObserver {
-  disconnect() {
-    return undefined;
-  }
+const carouselProjects = buildCarouselProjects(projects);
+import { installObserverMocks } from "@/tests/helpers/dom-observers";
+import { installNativeScrollLayout } from "@/tests/helpers/projects-scroll";
 
-  observe() {
-    return undefined;
-  }
-
-  takeRecords() {
-    return [];
-  }
-
-  unobserve() {
-    return undefined;
-  }
-}
-
-class MockResizeObserver {
-  disconnect() {
-    return undefined;
-  }
-
-  observe() {
-    return undefined;
-  }
-
-  unobserve() {
-    return undefined;
-  }
-}
-
-beforeAll(() => {
-  Object.defineProperty(window, "IntersectionObserver", {
-    configurable: true,
-    value: MockIntersectionObserver
-  });
-  Object.defineProperty(globalThis, "IntersectionObserver", {
-    configurable: true,
-    value: MockIntersectionObserver
-  });
-  Object.defineProperty(window, "ResizeObserver", {
-    configurable: true,
-    value: MockResizeObserver
-  });
-  Object.defineProperty(globalThis, "ResizeObserver", {
-    configurable: true,
-    value: MockResizeObserver
-  });
-});
-
-function installNativeScrollLayout(container: HTMLElement) {
-  const viewport = screen.getByRole("region", { name: /projects carousel|项目轮播/i }) as HTMLDivElement;
-  const slides = Array.from(container.querySelectorAll(".projects__slide")) as HTMLAnchorElement[];
-  const slideWidth = 320;
-
-  Object.defineProperty(viewport, "scrollLeft", {
-    configurable: true,
-    value: 0,
-    writable: true
-  });
-
-  slides.forEach((slide, index) => {
-    Object.defineProperty(slide, "offsetLeft", {
-      configurable: true,
-      get: () => index * slideWidth
-    });
-  });
-
-  Object.defineProperty(viewport, "scrollTo", {
-    configurable: true,
-    value: ({ left = 0 }: ScrollToOptions) => {
-      viewport.scrollLeft = left;
-      fireEvent.scroll(viewport);
-    }
-  });
-
-  fireEvent(window, new Event("resize"));
-}
+installObserverMocks();
 
 test("renders a responsive reel with legacy project content and filtering controls", async () => {
   const user = userEvent.setup();
 
-  const { container } = render(<ProjectsSection locale="en" />);
+  const { container } = render(<ProjectsSection locale="en" projects={carouselProjects} />);
   installNativeScrollLayout(container);
 
   const topbar = container.querySelector(".projects__topbar");
@@ -171,7 +99,7 @@ test("renders a responsive reel with legacy project content and filtering contro
 test("renders localized labels and links in chinese", async () => {
   const user = userEvent.setup();
 
-  const { container } = render(<ProjectsSection locale="zh" />);
+  const { container } = render(<ProjectsSection locale="zh" projects={carouselProjects} />);
   installNativeScrollLayout(container);
 
   expect(screen.getByRole("toolbar", { name: /项目分类/i })).toBeInTheDocument();

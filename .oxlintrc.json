@@ -6,6 +6,15 @@
     "perf": "warn"
   },
   "rules": {
+    "no-inline-comments": "error",
+    "no-warning-comments": [
+      "error",
+      {
+        "terms": ["todo", "fixme", "xxx", "hack"],
+        "location": "anywhere"
+      }
+    ],
+    "typescript/ban-ts-comment": "error",
     "no-unused-vars": [
       "error",
       {

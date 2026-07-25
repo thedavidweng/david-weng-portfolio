@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { buildAgentEndpointPayload } from "@/lib/agent-endpoint";
+import { buildAgentEndpointPayload } from "@/lib/agent-content";
 
 export const prerender = true;
 

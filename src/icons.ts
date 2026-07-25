@@ -1,13 +1,3 @@
-/**
- * Shared SVG path data for icons used across React islands and Astro components.
- *
- * Extracting the path strings avoids duplicating identical SVG markup across
- * Header.tsx (desktop + mobile), Footer.astro, ArchiveMediaWall.tsx, and
- * ProjectExternalLinkButton.astro. Each consumer renders its own <svg> wrapper
- * with framework-appropriate attributes (className vs class, etc.) and references
- * the path data from here.
- */
-
 export const SOCIAL_ICON_PATHS = {
   linkedin:
     "M6.94 8.5v8.56H4.1V8.5h2.84ZM5.52 4c.91 0 1.65.74 1.65 1.65S6.43 7.3 5.52 7.3a1.65 1.65 0 1 1 0-3.3Zm13.38 8.2v4.86h-2.83v-4.53c0-1.08-.02-2.48-1.5-2.48-1.51 0-1.74 1.18-1.74 2.4v4.6h-2.84V8.5h2.72v1.17h.04c.38-.72 1.3-1.48 2.68-1.48 2.87 0 3.4 1.9 3.4 4.01Z",

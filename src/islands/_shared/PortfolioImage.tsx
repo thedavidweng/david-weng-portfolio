@@ -28,34 +28,19 @@ export function PortfolioImage({
   const resolvedLoading = priority ? "eager" : (loading ?? "lazy");
   const srcset = buildSrcset(src, width);
 
-  if (fill) {
-    return (
-      <img
-        alt={alt}
-        className={className}
-        decoding="async"
-        fetchPriority={fetchPriority}
-        loading={resolvedLoading}
-        sizes={sizes}
-        src={src}
-        srcSet={srcset}
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-      />
-    );
-  }
-
   return (
     <img
       alt={alt}
       className={className}
       decoding="async"
       fetchPriority={fetchPriority}
-      height={height}
       loading={resolvedLoading}
       sizes={sizes}
       src={src}
       srcSet={srcset}
-      width={width}
+      {...(fill
+        ? { style: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" } }
+        : { width, height })}
     />
   );
 }

@@ -1,13 +1,7 @@
 import type { APIRoute } from "astro";
-import { generateLlmsFull } from "@/lib/llms-full";
+import { generateLlmsFull } from "@/lib/site-markdown";
+import { textResponse } from "@/lib/responses";
 
 export const prerender = true;
 
-export const GET: APIRoute = () => {
-  return new Response(generateLlmsFull(), {
-    headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=3600"
-    }
-  });
-};
+export const GET: APIRoute = () => textResponse(generateLlmsFull());

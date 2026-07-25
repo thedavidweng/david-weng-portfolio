@@ -424,12 +424,6 @@ main {
   padding: clamp(2rem, 5vw, 4rem);
 }
 
-.hero__content--compact {
-  min-height: auto;
-  justify-content: flex-start;
-  padding: 1.5rem 1.75rem 1.35rem;
-}
-
 .hero__eyebrow,
 .poster-section__eyebrow {
   margin: 0;
@@ -454,7 +448,6 @@ main {
 .poster-section__copy,
 .service-card p,
 .project-card__summary,
-.about__copy,
 .contact__copy,
 .contact__list span,
 .project-detail__list,
@@ -517,7 +510,6 @@ main {
 }
 
 .site-shell--zh .poster-section__title,
-.site-shell--zh .about__title,
 .site-shell--zh .contact__title {
   font-family:
     "PingFang SC",
@@ -533,7 +525,6 @@ main {
 }
 
 .site-shell--zh .poster-section__copy,
-.site-shell--zh .about__copy,
 .site-shell--zh .contact__copy {
   font-family:
     "PingFang SC",
@@ -544,7 +535,6 @@ main {
   line-height: 1.72;
 }
 
-.about__actions,
 .contact__actions,
 .project-detail__links {
   display: flex;
@@ -621,7 +611,6 @@ main {
 }
 
 .poster-section__title,
-.about__title,
 .contact__title,
 .project-detail__title {
   margin: 0;
@@ -638,8 +627,7 @@ main {
 }
 
 .services__grid,
-.project-media__grid,
-.about__stats {
+.project-media__grid {
   display: grid;
   gap: 1rem;
 }
@@ -1067,32 +1055,14 @@ main {
   line-height: 1.45;
 }
 
-.about__panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
-  gap: clamp(1.5rem, 3vw, 2.75rem);
-  border-top: 1px solid rgba(229, 226, 225, 0.08);
-  overflow: visible;
-  background: transparent;
-  box-shadow: none;
-}
-
-.about__content,
-.about__rail {
-  padding: 1.6rem 0 0;
-}
-
-.about__content,
 .contact__rail {
   background: transparent;
 }
 
-.about__rail,
 .contact__content {
   background: transparent;
 }
 
-.about__lead,
 .contact__lead {
   margin: 0.9rem 0 0;
   color: var(--text);
@@ -1100,52 +1070,10 @@ main {
   line-height: 1.45;
 }
 
-.about__copy,
 .contact__copy {
   max-width: 40rem;
   margin: 1rem 0 0;
   overflow-wrap: anywhere;
-}
-
-.about__stats {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 1.4rem;
-}
-
-.about__portrait {
-  position: relative;
-  min-height: 260px;
-  margin-top: 1rem;
-  overflow: hidden;
-  border: 1px solid rgba(229, 226, 225, 0.08);
-  border-radius: 0;
-}
-
-.about__portrait img {
-  object-fit: cover;
-  object-position: center top;
-}
-
-.about__stat {
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 230, 230, 0.08);
-}
-
-.about__stat strong {
-  display: block;
-  color: var(--accent);
-  font-family: var(--font-display);
-  font-size: 2.4rem;
-  line-height: 0.9;
-  letter-spacing: 0.04em;
-}
-
-.about__stat span {
-  display: block;
-  margin-top: 0.45rem;
-  color: var(--text-soft);
-  font-size: 0.92rem;
-  line-height: 1.5;
 }
 
 .contact__list {
@@ -2253,7 +2181,6 @@ main {
   }
 
   .hero__grid,
-  .about__panel,
   .contact__panel,
   .project-hero__grid,
   .project-detail__grid {
@@ -2548,9 +2475,7 @@ main {
   }
 
   .hero__content,
-  .about__content,
   .contact__content,
-  .about__rail,
   .contact__rail,
   .project-hero__grid,
   .project-detail__grid > div,
@@ -2559,7 +2484,6 @@ main {
   }
 
   .services__grid,
-  .about__stats,
   .project-media__grid,
   .project-media__video-grid {
     grid-template-columns: 1fr;
@@ -2903,7 +2827,6 @@ main {
   .hero__title,
   .project-hero__title,
   .poster-section__title,
-  .about__title,
   .contact__title {
     letter-spacing: 0.03em;
   }
@@ -2964,8 +2887,6 @@ main {
     transform: translate3d(100%, 0, 0);
   }
 }
-
-/* Homepage editorial refresh */
 
 .site-main--home {
   gap: clamp(1rem, 2vw, 1.45rem);
@@ -3407,7 +3328,6 @@ main {
   }
 }
 
-/* --- Contact Hero Minimalist Layout --- */
 .contact-hero {
   display: flex;
   flex-direction: column;
