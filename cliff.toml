@@ -16,6 +16,9 @@ body = """
 ### {{ group | upper_first }}
 {% for commit in commits %}
 - {% if commit.scope %}**{{ commit.scope }}**: {% endif %}{{ commit.message | upper_first | trim }}\
+{% if commit.breaking_description and commit.breaking_description != commit.message %}
+  - *Breaking*: {{ commit.breaking_description | upper_first | trim }}\
+{% endif %}
 {% endfor %}
 {% endfor %}
 
@@ -29,7 +32,9 @@ conventional_commits = true
 filter_unconventional = true
 commit_parsers = [
   { message = "^WIP", skip = true },
-  { message = "^[a-z]+!:", group = "🚨 Breaking Changes" },
+  { message = "^[a-z]+(\\([^)]+\\))?!:", group = "🚨 Breaking Changes" },
+  { body = "BREAKING[ -]CHANGE:", group = "🚨 Breaking Changes" },
+  { footer = "BREAKING[ -]CHANGE:", group = "🚨 Breaking Changes" },
   { message = "^sec", group = "🔒 Security" },
   { message = "^feat", group = "✨ Features" },
   { message = "^fix", group = "🐛 Bug Fixes" },

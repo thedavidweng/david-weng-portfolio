@@ -2,11 +2,12 @@
 
 import { readdirSync, statSync, existsSync } from "node:fs";
 import { join, dirname, basename, extname, relative, sep } from "node:path";
+import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { MIN_ORIGINAL_WIDTH, RESPONSIVE_WIDTHS } from "../lib/responsive-srcset.ts";
 import { getImageWidth } from "../lib/image-dimensions.ts";
 
-const PUBLIC_DIR = new URL("../public", import.meta.url).pathname;
+const PUBLIC_DIR = fileURLToPath(new URL("../public", import.meta.url));
 const PROJECTS_DIR = join(PUBLIC_DIR, "projects");
 const CONCURRENCY = 4;
 const AVIF_OPTIONS = { quality: 55, effort: 6, chromaSubsampling: "4:2:0" };
@@ -32,9 +33,9 @@ function toPublicPath(filePath) {
 }
 
 async function generateVariant(srcPath, width) {
-  const dir = dirname(srcPath);
-  const name = basename(srcPath, ".avif");
-  const variantPath = join(dir, `${name}@${width}w.avif`);
+  const ext = extname(srcPath);
+  const base = basename(srcPath, ext);
+  const variantPath = join(dirname(srcPath), `${base}@${width}w${ext}`);
 
   if (!force && existsSync(variantPath)) {
     return { skipped: true };
@@ -89,4 +90,7 @@ async function main() {
   );
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -207,13 +207,29 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(projectCardTitleBlock).toContain("font-family: var(--font-body);");
 });
 
+function extractCssBlock(source: string, selector: string): string {
+  const startIndex = source.indexOf(selector);
+  if (startIndex === -1) return "";
+  const openBrace = source.indexOf("{", startIndex);
+  if (openBrace === -1) return "";
+  let depth = 0;
+  for (let i = openBrace; i < source.length; i++) {
+    if (source[i] === "{") depth++;
+    else if (source[i] === "}") {
+      depth--;
+      if (depth === 0) return source.slice(startIndex, i + 1);
+    }
+  }
+  return "";
+}
+
 test("mobile menu fixed shells stay transparent so iOS 26 Safari samples dark chrome (ADR-0005)", () => {
   const panelBlock = css.match(/\.site-header__menu-panel\s*\{[^}]+\}/g)?.at(-1) ?? "";
   const panelBefore = css.match(/\.site-header__menu-panel::before\s*\{[^}]+\}/)?.[0] ?? "";
   const backdropBlock = css.match(/\.site-header__menu-backdrop\s*\{[^}]+\}/g)?.at(-1) ?? "";
   const backdropBefore = css.match(/\.site-header__menu-backdrop::before\s*\{[^}]+\}/)?.[0] ?? "";
   const contentBlock = css.match(/\.site-header__menu-panel-content\s*\{[^}]+\}/)?.[0] ?? "";
-  const reducedMotionBlock = css.match(/@media \(prefers-reduced-motion: reduce\) \{[\s\S]+?\n\}/)?.[0] ?? "";
+  const reducedMotionBlock = extractCssBlock(css, "@media (prefers-reduced-motion: reduce)");
 
   expect(panelBlock).toContain("background: transparent;");
   expect(panelBefore).toContain("background: var(--accent);");
@@ -224,6 +240,12 @@ test("mobile menu fixed shells stay transparent so iOS 26 Safari samples dark ch
   expect(contentBlock).toContain("calc(env(safe-area-inset-bottom) + 1.2rem)");
   expect(reducedMotionBlock).toContain(".site-header__menu-panel--open");
   expect(reducedMotionBlock).toContain("transform: translate3d(0, 0, 0);");
+  expect(reducedMotionBlock).toContain(".site-header__menu-panel--closed");
+  expect(reducedMotionBlock).toContain("transform: translate3d(100%, 0, 0);");
+  expect(reducedMotionBlock).toContain(".site-header__menu-backdrop--open");
+  expect(reducedMotionBlock).toContain("opacity: 1;");
+  expect(reducedMotionBlock).toContain(".site-header__menu-backdrop--closed");
+  expect(reducedMotionBlock).toContain("opacity: 0;");
 });
 
 test("homepage components separate services from hero instead of rendering hero capabilities inline", () => {
