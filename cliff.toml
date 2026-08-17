@@ -1,0 +1,53 @@
+[changelog]
+header = """
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+"""
+body = """
+{% if version %}\
+## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+{% else %}\
+## [Unreleased]
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+
+### {{ group | upper_first }}
+{% for commit in commits %}
+- {% if commit.scope %}**{{ commit.scope }}**: {% endif %}{{ commit.message | upper_first | trim }}\
+{% if commit.breaking_description and commit.breaking_description != commit.message %}
+  - *Breaking*: {{ commit.breaking_description | upper_first | trim }}\
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+"""
+footer = """
+"""
+trim = true
+
+[git]
+conventional_commits = true
+filter_unconventional = true
+commit_parsers = [
+  { message = "^WIP", skip = true },
+  { message = "^[a-z]+(\\([^)]+\\))?!:", group = "🚨 Breaking Changes" },
+  { body = "BREAKING[ -]CHANGE:", group = "🚨 Breaking Changes" },
+  { footer = "BREAKING[ -]CHANGE:", group = "🚨 Breaking Changes" },
+  { message = "^sec", group = "🔒 Security" },
+  { message = "^feat", group = "✨ Features" },
+  { message = "^fix", group = "🐛 Bug Fixes" },
+  { message = "^refactor", group = "♻️ Refactoring" },
+  { message = "^perf", group = "⚡ Performance" },
+  { message = "^style", group = "🎨 Styling" },
+  { message = "^docs", group = "📝 Documentation" },
+  { message = "^test", group = "🧪 Tests" },
+  { message = "^revert", group = "◀️ Revert" },
+  { message = "^(lint|a11y)", group = "🧹 Polish" },
+  { message = "^chore", group = "🔧 Chores" },
+  { message = "^(build|ci)", group = "📦 Dependencies & CI" },
+]
+tag_pattern = "v[0-9]*"
+skip_tags = ""
+ignore_tags = ""
