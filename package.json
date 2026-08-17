@@ -21,6 +21,7 @@
     "typecheck": "astro check && tsc --noEmit",
     "lint": "oxlint --fix",
     "lint:check": "oxlint",
+    "changelog": "git-cliff -o CHANGELOG.md",
     "test": "vitest run"
   },
   "dependencies": {
