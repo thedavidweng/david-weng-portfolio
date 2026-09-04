@@ -50,7 +50,7 @@
     "oxlint": "1.81.0",
     "sharp": "^0.35.4",
     "subset-font": "2.7.0",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "vitest": "5.0.0",
     "wrangler": "4.129.0"
   },
