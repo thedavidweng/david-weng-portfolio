@@ -1,6 +1,6 @@
 packages:
   - "."
-minimumReleaseAge: 0
+minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - vite
   - "@vitejs/*"
