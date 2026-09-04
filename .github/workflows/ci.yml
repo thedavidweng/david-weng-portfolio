@@ -27,7 +27,7 @@ jobs:
           cache: pnpm
 
       - name: Fetch dependency store
-        run: pnpm fetch --frozen-lockfile
+        run: pnpm fetch
 
   test:
     name: Test
