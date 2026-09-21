@@ -12,7 +12,7 @@ env:
 jobs:
   prepare-dependencies:
     name: Prepare dependencies
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -31,7 +31,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: prepare-dependencies
     steps:
       - name: Checkout
@@ -61,7 +61,7 @@ jobs:
 
   codecov:
     name: Upload coverage
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: test
     if: always()
     permissions:
@@ -83,7 +83,7 @@ jobs:
 
   lint:
     name: Lint
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: prepare-dependencies
     steps:
       - name: Checkout
@@ -106,7 +106,7 @@ jobs:
 
   knip:
     name: Knip
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: prepare-dependencies
     steps:
       - name: Checkout
@@ -129,7 +129,7 @@ jobs:
 
   typecheck:
     name: Typecheck
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: prepare-dependencies
     steps:
       - name: Checkout
@@ -152,7 +152,7 @@ jobs:
 
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: prepare-dependencies
     steps:
       - name: Checkout
