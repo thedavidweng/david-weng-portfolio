@@ -30,7 +30,7 @@
     "astro": "7.3.1",
     "image-size": "2.0.2",
     "react": "19.3.0",
-    "react-dom": "19.2.8",
+    "react-dom": "19.3.0",
     "react-photo-album": "3.6.1",
     "yet-another-react-lightbox": "3.32.2"
   },
@@ -43,7 +43,7 @@
     "@types/jsdom": "^30.0.0",
     "@types/node": "26.4.1",
     "@types/react": "19.3.0",
-    "@types/react-dom": "19.2.7",
+    "@types/react-dom": "19.3.0",
     "@vitest/coverage-v8": "5.0.0",
     "jsdom": "30.0.1",
     "knip": "^6.34.0",
