@@ -52,7 +52,7 @@
     "subset-font": "2.7.0",
     "typescript": "6.0.3",
     "vitest": "5.0.0",
-    "wrangler": "4.129.0"
+    "wrangler": "4.134.0"
   },
   "packageManager": "pnpm@12.3.2"
 }
