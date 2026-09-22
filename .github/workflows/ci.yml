@@ -9,6 +9,10 @@ permissions:
 env:
   NODE_VERSION: "24"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   prepare-dependencies:
     name: Prepare dependencies
