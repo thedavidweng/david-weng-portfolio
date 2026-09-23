@@ -27,10 +27,19 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Plain git push — no Docker action. cssnr/mirror-repository-action
+      # builds a container and needs docker.sock access, which the mbp2019
+      # runner user does not have.
       - name: Mirror to GitLab
-        uses: cssnr/mirror-repository-action@2af5bf347684245f52b5f56502956a57f9b8813e # v1.2.0
-        with:
-          host: https://gitlab.com
-          username: thedavidweng
-          password: ${{ secrets.GITLAB_TOKEN }}
-          force_push: true
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GITLAB_TOKEN:-}" ]; then
+            echo "GITLAB_TOKEN is not available in this context; skipping."
+            exit 0
+          fi
+          git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@gitlab.com/thedavidweng/david-weng-portfolio.git"
+          ref="${GITHUB_REF#refs/heads/}"
+          ref="${ref#refs/tags/}"
+          git push gitlab "HEAD:refs/heads/${ref}" --force
