@@ -3,6 +3,7 @@
 .vinext
 .vercel
 .wrangler
+.cloudflare
 node_modules
 coverage
 dist
