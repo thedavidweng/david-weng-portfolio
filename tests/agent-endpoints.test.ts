@@ -41,8 +41,8 @@ test("agent content generators include services and projects", () => {
 });
 
 test("agent and llms.txt routes return typed bodies without route-level cache headers", async () => {
-  const agent = getAgent({} as never);
-  const llms = getLlmsTxt({} as never);
+  const agent = await getAgent({} as never);
+  const llms = await getLlmsTxt({} as never);
 
   expect(agent.headers.get("Content-Type")).toBe("application/json; charset=utf-8");
   expect(agent.headers.get("Cache-Control")).toBeNull();
