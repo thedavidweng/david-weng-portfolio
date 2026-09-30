@@ -39,7 +39,12 @@ jobs:
             echo "GITLAB_TOKEN is not available in this context; skipping."
             exit 0
           fi
-          git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@gitlab.com/thedavidweng/david-weng-portfolio.git"
+          gitlab_url="https://oauth2:${GITLAB_TOKEN}@gitlab.com/thedavidweng/david-weng-portfolio.git"
+          if git remote get-url gitlab >/dev/null 2>&1; then
+            git remote set-url gitlab "$gitlab_url"
+          else
+            git remote add gitlab "$gitlab_url"
+          fi
           ref="${GITHUB_REF#refs/heads/}"
           ref="${ref#refs/tags/}"
           git push gitlab "HEAD:refs/heads/${ref}" --force
