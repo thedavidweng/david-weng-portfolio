@@ -135,7 +135,6 @@ test("mobile film pages define a dedicated stacked layout with tighter credits a
 test("mobile home shell keeps a visible header nav with built-in separators instead of a duplicate hero nav", () => {
   expect(css).toContain(".site-header--home");
   expect(css).toContain(".site-main--home .hero");
-  expect(css).toContain(".site-header__descriptor");
   expect(css).toContain(".site-header__nav");
   expect(css).toContain(".site-header__nav-link");
   expect(css).toContain("text-decoration: none;");
@@ -186,7 +185,6 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(rootBlock).not.toContain("Inter Tight");
   expect(css).toContain(".site-main--home .hero__title");
   expect(css).toContain(".site-main--home .poster-section__title");
-  expect(css).toContain(".site-main--home .contact__title");
   expect(headerTitleBlock).toContain("font-family: var(--font-home-display);");
   expect(headerTitleBlock).toContain("display: inline-flex;");
   expect(headerTitleBlock).toContain("align-items: center;");
@@ -284,12 +282,8 @@ test("home backgrounds remove the red radial glow layers from the page and hero 
   expect(heroFrameAfterBlock).not.toContain("linear-gradient(90deg, rgba(255, 77, 90, 0.14), transparent 14%, transparent 86%, rgba(255, 77, 90, 0.14))");
 });
 
-test("home hero and contact no longer use the same boxed panel treatment", () => {
+test("home hero frame drops the boxed panel treatment", () => {
   const homeHeroFrameBlock = Array.from(css.matchAll(/\.site-main--home \.hero__frame\s*\{[^}]+\}/g))
-    .map((match) => match[0])
-    .join("\n");
-  const homeContactContentBlock = css.match(/\.site-main--home \.contact__content,\s*\.site-main--home \.contact__rail\s*\{[^}]+\}/)?.[0] ?? "";
-  const homeContactRailBlock = Array.from(css.matchAll(/\.site-main--home \.contact__rail\s*\{[^}]+\}/g))
     .map((match) => match[0])
     .join("\n");
 
@@ -297,9 +291,6 @@ test("home hero and contact no longer use the same boxed panel treatment", () =>
   expect(homeHeroFrameBlock).toContain("border-radius: 0;");
   expect(homeHeroFrameBlock).toContain("background: transparent;");
   expect(homeHeroFrameBlock).toContain("box-shadow: none;");
-  expect(homeContactContentBlock).toContain("border: none;");
-  expect(homeContactContentBlock).toContain("border-radius: 0;");
-  expect(homeContactRailBlock).toContain("border-left: 1px solid rgba(229, 226, 225, 0.08);");
 });
 
 test("global controls switch to square noir styling without pill buttons or slash suffixes", () => {
@@ -371,7 +362,9 @@ test("home hero uses a single minimalist portfolio title without accent title li
 
 test("home services use a full border and tighter vertical spacing instead of a top-only divider", () => {
   const homeServiceCardBlock = css.match(/\.site-main--home \.service-card\s*\{[^}]+\}/)?.[0] ?? "";
-  const homeServiceCopyBlock = css.match(/\.site-main--home \.service-card p\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeServiceCopyBlock = Array.from(css.matchAll(/\.site-main--home \.service-card p\s*\{[^}]+\}/g))
+    .map((match) => match[0])
+    .join("\n");
 
   expect(homeServiceCardBlock).toContain("min-height: 264px;");
   expect(homeServiceCardBlock).toContain("justify-content: flex-start;");
@@ -387,7 +380,9 @@ test("homepage sections remove eyebrow labels and tighten section intro spacing"
   const projectsSource = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
   const contactSource = readFileSync(join(process.cwd(), "src/components/ContactSection.astro"), "utf8");
   const introBlock = css.match(/\.poster-section__intro\s*\{[^}]+\}/)?.[0] ?? "";
-  const homeServicesIntroBlock = css.match(/\.site-main--home \.services \.poster-section__intro\s*\{[^}]+\}/)?.[0] ?? "";
+  const homeServicesIntroBlock = Array.from(css.matchAll(/\.site-main--home \.services \.poster-section__intro\s*\{[^}]+\}/g))
+    .map((match) => match[0])
+    .join("\n");
 
   expect(servicesSource).not.toContain("poster-section__eyebrow");
   expect(projectsSource).not.toContain("poster-section__eyebrow");
@@ -396,15 +391,14 @@ test("homepage sections remove eyebrow labels and tighten section intro spacing"
   expect(homeServicesIntroBlock).toContain("gap: 0.55rem;");
 });
 
-test("home sections share a stage gutter so projects services and contact do not pin to the container edge", () => {
+test("home sections share a stage gutter so projects and services do not pin to the container edge", () => {
   const homeHeroContentBlock = css.match(/\.site-main--home \.hero__content\s*\{[^}]+\}/)?.[0] ?? "";
   const homeHeroStageBlock = css.match(/\.site-main--home \.hero__content--stage\s*\{[^}]+\}/)?.[0] ?? "";
 
   expect(css).toContain("--home-stage-gutter: clamp(1.2rem, 3.6vw, 3.25rem);");
   expect(css).toContain(".site-main--home .projects__layout,");
   expect(css).toContain(".site-main--home .services .poster-section__intro,");
-  expect(css).toContain(".site-main--home .services__grid,");
-  expect(css).toContain(".site-main--home .contact__panel {");
+  expect(css).toContain(".site-main--home .services__grid {");
   expect(css).toContain("padding-inline: var(--home-stage-gutter);");
   expect(css).toContain("--home-section-top: clamp(1.4rem, 3.8vw, 2.7rem);");
   expect(homeHeroContentBlock).toContain("align-items: center;");
