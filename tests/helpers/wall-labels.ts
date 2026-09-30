@@ -1,4 +1,4 @@
-import { projectDetailContent } from "@/content/projects";
+import { projectDetailContent } from "@/content/project-detail";
 
 export const wallLabels = {
   photoCreditLabel: projectDetailContent.photoCreditLabel,

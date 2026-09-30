@@ -31,6 +31,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 |---|---|
 | `content/site.ts` | `src/layouts/HomeLayout.astro`, `src/islands/AgentView.tsx`, `src/pages/agent.ts`, `lib/site-markdown.ts`, `lib/llms-txt.ts`, `lib/jsonld.ts`. Includes `siteIdentity.location`, `siteIdentity.knowsAbout`, and `blogUrl` — edit here, every generator follows. |
 | `content/projects.ts` | `src/pages/projects/*.astro`, `src/islands/AgentView.tsx`, `src/pages/agent.ts`, `lib/llms-txt.ts`, `lib/site-markdown.ts`, `src/layouts/HomeLayout.astro` (carousel via `buildCarouselProjects`) |
+| `content/project-section.ts`, `content/project-detail.ts` | UI labels for the homepage carousel and project pages. Islands import labels from these, never from `content/projects.ts`, which drags every archive collection into the browser bundle. |
 | `content/film-data.ts` | Film project detail pages, archive layouts |
 | `content/archives/*.ts` | Archive project pages, agent project listings |
 | `lib/site-config.ts` | `SITE_URL`, `SITEMAP_URL`, `AGENT_ENDPOINTS` — single source for URL constants and the machine-readable endpoint table (also imported by `astro.config.mjs`) |

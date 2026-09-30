@@ -3,7 +3,7 @@ import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import type { Locale, LocalizedText, ProjectMediaItem } from "@/types/content";
-import { projectDetailContent } from "@/content/projects";
+import { projectDetailContent } from "@/content/project-detail";
 import { getLocalizedText } from "@/lib/i18n";
 import { CLOSE_ICON_PATH } from "@/src/icons";
 import { isPreviewImageItem } from "@/src/islands/_shared/preview-image";

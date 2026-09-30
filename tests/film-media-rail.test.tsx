@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { projectDetailContent } from "@/content/projects";
+import { projectDetailContent } from "@/content/project-detail";
 import { getProjectBySlug } from "@/lib/projects";
 import { FilmMediaRail } from "@/src/islands/FilmMediaRail";
 
