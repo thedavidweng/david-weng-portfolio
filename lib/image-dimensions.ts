@@ -1,19 +1,10 @@
 import { readFileSync } from "node:fs";
 import { imageSize } from "image-size";
 import { join } from "node:path";
-import { fileURLToPath } from "node:url";
 
 const cache = new Map<string, number | undefined>();
 
-function getPublicDir(): string {
-  try {
-    return fileURLToPath(new URL("../public", import.meta.url).href);
-  } catch {
-    return join(process.cwd(), "public");
-  }
-}
-
-const PUBLIC_DIR = getPublicDir();
+const PUBLIC_DIR = join(process.cwd(), "public");
 
 /**
  * Returns the pixel width of an image stored under `public/`.

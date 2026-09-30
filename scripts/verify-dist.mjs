@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
@@ -59,6 +59,22 @@ assert(existsSync(robotsPath), "dist/robots.txt is missing");
 const robots = readFileSync(robotsPath, "utf8");
 assert(robots.includes(`Sitemap: ${SITEMAP_URL}`), "dist/robots.txt must advertise /sitemap.xml");
 ok("dist/robots.txt sitemap URL");
+
+const imagesMissingSrcset = readdirSync(distDir, { recursive: true, encoding: "utf8" })
+  .filter((file) => file.endsWith(".html"))
+  .flatMap((file) =>
+    [...readFileSync(join(distDir, file), "utf8").matchAll(/<img\b[^>]*>/g)]
+      .map(([tag]) => tag)
+      .filter((tag) => !/\ssrcset=/i.test(tag))
+      .map((tag) => tag.match(/\ssrc="([^"]+)"/)?.[1] ?? "")
+      .filter((src) => existsSync(join(root, "public", src.replace(/(\.[a-z0-9]+)$/i, "@400w$1"))))
+      .map((src) => `${file}: ${src}`)
+  );
+assert(
+  imagesMissingSrcset.length === 0,
+  `images with responsive variants must ship a srcset:\n  ${imagesMissingSrcset.join("\n  ")}`
+);
+ok("responsive images carry srcset");
 
 const requiredPages = [
   "src/pages/index.astro",
