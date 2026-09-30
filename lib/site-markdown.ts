@@ -10,7 +10,8 @@ import {
   formatServices,
   formatProjects,
   formatAbout,
-  formatEndpoints
+  formatEndpoints,
+  formatSoftware
 } from "@/lib/agent-content";
 import { SITE_URL } from "@/lib/site-config";
 
@@ -42,6 +43,10 @@ ${formatServices(locale)}
 ## Projects
 
 ${formatProjects(locale)}
+
+## Software
+
+${formatSoftware(locale)}
 
 ## About
 
@@ -92,6 +97,12 @@ ${formatServices("en")}
 ## Projects
 
 ${formatProjects("en")}
+
+---
+
+## Software
+
+${formatSoftware("en")}
 
 ---
 

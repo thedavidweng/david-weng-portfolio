@@ -26,7 +26,7 @@ All colors defined as CSS custom properties in `:root` of `src/styles/global.css
 
 | Token | OKLCH | Usage |
 |---|---|---|
-| `--bg` | `oklch(0.012 0.008 25)` | Page background |
+| `--bg` | `oklch(0.012 0.008 25)` (light: `oklch(0.968 0.006 25)`) | Page background |
 | `--bg-deep` | `oklch(0.005 0.008 25)` | Deepest black (footer, overlays) |
 | `--bg-raised` | `oklch(0.025 0.008 25)` | Raised surfaces |
 | `--text` | `oklch(0.995 0.004 25)` | Primary text |
@@ -37,8 +37,12 @@ All colors defined as CSS custom properties in `:root` of `src/styles/global.css
 | `--accent-rgb` | `225, 29, 37` | RGB triplet for rgba() |
 | `--accent-soft` | `rgba(225, 29, 37, 0.72)` | Soft red for borders/focus |
 | `--accent-glow` | `rgba(225, 29, 37, 0.15)` | Red glow for backgrounds |
-| `--line` | `rgba(255, 255, 255, 0.15)` | Hairline borders |
-| `--line-strong` | `rgba(255, 255, 255, 0.3)` | Emphasized borders |
+| `--line` | `color-mix(in srgb, var(--ink) 15%, transparent)` | Hairline borders |
+| `--line-strong` | `color-mix(in srgb, var(--ink) 30%, transparent)` | Emphasized borders |
+
+### Light Theme
+
+Tokens are declared with `light-dark()`, so `--bg`, `--text`, `--line`, and friends flip with `color-scheme`. The header toggle (and the ⌘K palette) set `data-theme` on `<html>`; without a stored choice the site follows the OS. Light mode is a warm off-white (`oklch(0.968 0.006 25)`) with near-black ink and the same red. `--ink` is the theme-aware base for translucent neutrals (`color-mix(in srgb, var(--ink) X%, transparent)`); `--paper` is the fixed light color for text on red. Surfaces that sit on photographs or read as screens (project cards, covers, lightbox, stems monitor, tools terminal) force `color-scheme: dark`. See `docs/adr/0008`.
 
 ### Rules
 
@@ -62,7 +66,7 @@ All fonts are self-hosted as woff2 in `assets/fonts/`. CJK fonts are subsetted v
 - `--container: min(1440px, calc(100vw - 4rem))` — max content width
 - Breakpoints: 360px, 520px, 760px, 1120px, 1260px
 - All major text sizes use `clamp()` for fluid responsiveness
-- `env(safe-area-inset-*)` used in header, mobile menu, lightbox, film rails
+- `env(safe-area-inset-*)` used in header, lightbox, film rails
 
 ## Motion
 

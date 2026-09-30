@@ -1,6 +1,6 @@
 # 0005 — Mobile menu color lives on non-sampled layers to defeat iOS 26 bar tinting
 
-**Status:** accepted · **Date:** 2026-07-25
+**Status:** superseded by 0008 · **Date:** 2026-07-25
 
 ## Context
 

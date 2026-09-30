@@ -284,7 +284,7 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
                     key={project.slug}
                     aria-label={`Open project ${getLocalizedText(project.title, locale)}`}
                     className="project-card projects__slide signal-panel"
-                    href={getProjectPath(locale, project.slug)}
+                    href={project.href ? getLocalizedText(project.href, locale) : getProjectPath(locale, project.slug)}
                     ref={(node) => {
                       slideRefs.current[index] = node;
                     }}

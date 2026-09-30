@@ -90,6 +90,7 @@ export type CarouselProjectItem = {
   coverImage: string;
   coverWidth?: number;
   teaser: LocalizedText;
+  href?: LocalizedText;
 };
 
 export type ProjectItem = {

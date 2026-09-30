@@ -26,6 +26,10 @@ export function getProjectPath(locale: Locale, slug: string): string {
   return locale === "zh" ? `/zh/projects/${slug}` : `/projects/${slug}`;
 }
 
+export function getSoftwarePath(locale: Locale): string {
+  return locale === "zh" ? "/zh/software/" : "/software/";
+}
+
 export function toLocalePath(pathname: string, locale: Locale): string {
   const normalized = pathname === "/zh" ? "/zh/" : pathname;
 

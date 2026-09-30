@@ -1,13 +1,13 @@
 ---
 import Footer from "@/src/components/Footer.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
-import { Header } from "@/src/islands/Header";
+import SiteHeader from "@/src/components/SiteHeader.astro";
 ---
 
-<BaseLayout title="Page not found | David Weng">
+<BaseLayout title="Page not found | David Weng" pathname="/">
   <div id="site-content" class="site-shell site-shell--en">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <Header client:load locale="en" pathname="/" />
+    <SiteHeader locale="en" pathname="/" />
     <main id="main-content">
       <div class="error-page error-page--global">
         <h1 class="error-page__title">Page not found</h1>

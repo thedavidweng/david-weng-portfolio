@@ -1,0 +1,210 @@
+---
+import ContactSection from "@/src/components/ContactSection.astro";
+import Container from "@/src/components/Container.astro";
+import Footer from "@/src/components/Footer.astro";
+import Icon from "@/src/components/Icon.astro";
+import SiteHeader from "@/src/components/SiteHeader.astro";
+import BaseLayout from "@/src/layouts/BaseLayout.astro";
+import {
+  contributionUrl,
+  contributions,
+  githubUser,
+  repoUrl,
+  resumeHref,
+  roles,
+  softwarePageContent as copy,
+  softwareProjects,
+  softwareTools
+} from "@/content/software";
+import { projectSectionContent } from "@/content/project-section";
+import { getLocalizedText, getLocalizedValue, getSoftwarePath } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
+const pathname = getSoftwarePath(locale);
+const index = (n: number) => String(n + 1).padStart(2, "0");
+const stats = [
+  { ...copy.stats.repos, attrs: { "data-stat": "repos" } },
+  { ...copy.stats.stars, attrs: { "data-stat": "stars" } },
+  { ...copy.stats.prs, attrs: { "data-prs": "" } },
+  { ...copy.stats.upstream, attrs: {} }
+];
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${t(copy.title)} | David Weng`}
+  description={t(copy.lede)}
+  canonical={pathname}
+  alternateEn="/software/"
+  alternateZh="/zh/software/"
+>
+  <div class={`site-shell site-shell--${locale} site-shell--software`}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <SiteHeader locale={locale} pathname={pathname} />
+    <main
+      id="main-content"
+      class="software-page"
+      data-live
+      data-github-user={githubUser}
+      data-updated-template={t(copy.updatedLabel)}
+      data-pushed-template={t(copy.pushedLabel)}
+    >
+      <section class="software-hero" id="top" aria-labelledby="software-title">
+        <Container>
+          <p class="software-hero__eyebrow">
+            <span>{projectSectionContent.software.code}</span>
+            <span data-activity>{t(copy.eyebrow)}</span>
+          </p>
+          <h1 class="software-hero__title" id="software-title">{t(copy.title)}</h1>
+          <div class="software-hero__intro">
+            <p class="software-hero__lede">{t(copy.lede)}</p>
+            <div class="software-hero__actions">
+              <a class="button button--signal" href="#software-projects">{t(copy.seeProjectsLabel)}</a>
+              <a class="button button--ghost" href={`https://github.com/${githubUser}`}><Icon name="github" />{t(copy.githubLabel)}</a>
+              <a class="button button--ghost" href={resumeHref}>{t(copy.resumeLabel)}</a>
+            </div>
+          </div>
+          <dl class="software-stats">
+            {stats.map((stat) => (
+              <div class="software-stats__item">
+                <dt>{t(stat.label)}</dt>
+                <dd {...stat.attrs}>{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <figure class="stems js-only">
+            <div class="stems__bar">
+              <span class="stems__title">{t(copy.stems.title)}</span>
+              <span id="timecode" aria-hidden="true">00:00 / 03:32</span>
+            </div>
+            <canvas id="stems" role="img" aria-label={t(copy.stems.label)}></canvas>
+            <figcaption class="stems__bar">
+              <span class="stems__legend">
+                {getLocalizedValue(copy.stems.stems, locale).map((stem) => <span data-stem>{stem}</span>)}
+              </span>
+              <span>{t(copy.stems.caption)}<span class="stems__hint">{t(copy.stems.scrubHint)}</span></span>
+            </figcaption>
+          </figure>
+        </Container>
+      </section>
+
+      <section class="section-shell software-section" id="software-projects" aria-labelledby="software-projects-title">
+        <Container>
+          <div class="poster-section__intro">
+            <p class="poster-section__eyebrow">[{copy.projects.kicker}]</p>
+            <h2 class="poster-section__title" id="software-projects-title">{t(copy.projects.title)}</h2>
+            <p class="poster-section__copy">{t(copy.projects.intro)}</p>
+          </div>
+          <div class="software-grid">
+            {softwareProjects.map((project, i) => (
+              <article class={`software-card signal-panel${i === 0 ? " software-card--feature" : ""}`} data-repo={project.repo}>
+                <div class="software-card__meta">
+                  <span>({index(i)}) {project.language}</span>
+                  <time data-ago datetime={project.pushedAt}></time>
+                  <span class="software-card__stars" data-stars data-zero={project.stars === 0 ? "" : undefined}>
+                    <Icon name="star" /><span>{project.stars}</span>
+                  </span>
+                </div>
+                <h3 class="software-card__title"><a href={repoUrl(project.repo)}>{project.repo}</a></h3>
+                <p class="software-card__summary">{t(project.description)}</p>
+                {project.points ? (
+                  <ol class="software-card__points">
+                    {project.points.map((point) => (
+                      <li><span><b>{t(point.title)}</b> {t(point.body)}</span></li>
+                    ))}
+                  </ol>
+                ) : null}
+                <div class="software-card__footer">
+                  <span class="software-card__tags">
+                    {getLocalizedValue(project.tags, locale).map((tag) => <span>{tag}</span>)}
+                  </span>
+                  {project.links?.map((link) => <a class="button button--ghost" href={link.href}>{t(link.label)}</a>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section class="section-shell software-section" id="tools" aria-labelledby="tools-title">
+        <Container>
+          <div class="poster-section__intro">
+            <p class="poster-section__eyebrow">[{copy.tools.kicker}]</p>
+            <h2 class="poster-section__title" id="tools-title">{t(copy.tools.title)}</h2>
+            <p class="poster-section__copy">{t(copy.tools.intro)}</p>
+          </div>
+          <div class="software-terminal">
+            <p class="software-terminal__prompt" aria-hidden="true"><b>$</b> ls ~/tools</p>
+            <ul class="software-terminal__list">
+              {softwareTools.map((tool) => (
+                <li data-repo={tool.repo}>
+                  <a class="software-terminal__name" href={repoUrl(tool.repo)}>{tool.repo}</a>
+                  <span class="software-terminal__desc">{t(tool.description)}</span>
+                  {tool.docs ? <a class="software-terminal__docs" href={tool.docs}>{t(copy.tools.docsLabel)}</a> : <span></span>}
+                  <span class="software-card__stars" data-stars data-zero={tool.stars === 0 ? "" : undefined}>
+                    <Icon name="star" /><span>{tool.stars}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section class="section-shell software-section" id="contributions" aria-labelledby="contributions-title">
+        <Container>
+          <div class="poster-section__intro">
+            <p class="poster-section__eyebrow">[{copy.contributions.kicker}]</p>
+            <h2 class="poster-section__title" id="contributions-title">{t(copy.contributions.title)}</h2>
+            <p class="poster-section__copy"><span data-prs>{copy.stats.prs.value}</span>+ {t(copy.contributions.intro)}</p>
+          </div>
+          <div class="upstream">
+            {contributions.map((item, i) => (
+              <a class="upstream__item" href={contributionUrl(item)}>
+                <span class="upstream__index">({index(i)})</span>
+                <span class="upstream__repo"><span>{item.owner}/</span>{item.repo}</span>
+                <span class="upstream__what">{t(item.description)}</span>
+              </a>
+            ))}
+          </div>
+          <a class="software-more" href={copy.contributions.allHref}>{t(copy.contributions.allLabel)}</a>
+        </Container>
+      </section>
+
+      <section class="section-shell software-section" id="roles" aria-labelledby="roles-title">
+        <Container>
+          <div class="poster-section__intro">
+            <p class="poster-section__eyebrow">[{copy.roles.kicker}]</p>
+            <h2 class="poster-section__title" id="roles-title">{t(copy.roles.title)}</h2>
+            <p class="poster-section__copy">{t(copy.roles.intro)}</p>
+          </div>
+          <div class="software-roles">
+            {roles.map((role) => (
+              <article class="software-card signal-panel">
+                <div class="software-card__meta"><span>{t(role.since)}</span><span>{role.host}</span></div>
+                <h3 class="software-card__title"><a href={role.href}>{t(role.title)}</a></h3>
+                <p class="software-card__summary">{t(role.description)}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <ContactSection locale={locale} />
+    </main>
+    <Footer locale={locale} />
+  </div>
+  <script>
+    import { initGithubLive } from "@/src/scripts/github-live";
+    import { initStems } from "@/src/scripts/stems";
+
+    initStems();
+    initGithubLive();
+  </script>
+</BaseLayout>

@@ -9,8 +9,51 @@ import {
   blogUrl
 } from "@/content/site";
 import { projects } from "@/content/projects";
+import { contributionUrl, contributions, repoUrl, softwareProjects, softwareTools } from "@/content/software";
 import { AGENT_ENDPOINTS, SITE_URL } from "@/lib/site-config";
-import { getLocalizedText, getLocalizedValue } from "@/lib/i18n";
+import { getLocalizedText, getLocalizedValue, getSoftwarePath } from "@/lib/i18n";
+
+function buildSoftwareData(locale: Locale) {
+  return {
+    url: `${SITE_URL}${getSoftwarePath(locale)}`,
+    projects: softwareProjects.map((p) => ({
+      name: p.repo,
+      language: p.language,
+      description: getLocalizedText(p.description, locale),
+      url: repoUrl(p.repo)
+    })),
+    tools: softwareTools.map((tool) => ({
+      name: tool.repo,
+      description: getLocalizedText(tool.description, locale),
+      url: repoUrl(tool.repo)
+    })),
+    contributions: contributions.map((item) => ({
+      project: `${item.owner}/${item.repo}`,
+      description: getLocalizedText(item.description, locale),
+      url: contributionUrl(item)
+    }))
+  };
+}
+
+const list = (items: { name?: string; project?: string; description: string; url: string }[]) =>
+  items.map((item) => `- [${item.name ?? item.project}](${item.url}): ${item.description}`).join("\n");
+
+export function formatSoftware(locale: Locale): string {
+  const data = buildSoftwareData(locale);
+  return `Full page: ${data.url}
+
+### Projects
+
+${list(data.projects)}
+
+### Command Line Tools
+
+${list(data.tools)}
+
+### Upstream Contributions
+
+${list(data.contributions)}`;
+}
 
 export function formatEndpoints(style: "linked" | "absolute"): string {
   return AGENT_ENDPOINTS.map((endpoint) =>
@@ -82,6 +125,7 @@ export function buildAgentData(locale: Locale) {
       summary: getLocalizedText(p.summary, locale),
       url: `${SITE_URL}/projects/${p.slug}`
     })),
+    software: buildSoftwareData(locale),
     navigation: navigationItems.map((item) => ({
       label: getLocalizedText(item.label, locale),
       href: item.href

@@ -86,7 +86,8 @@ const requiredPages = [
   "src/pages/index.astro",
   "src/pages/zh/index.astro",
   "src/pages/projects/[slug].astro",
-  "src/islands/Header.tsx",
+  "src/pages/software.astro",
+  "src/pages/zh/software.astro",
   "src/layouts/BaseLayout.astro"
 ];
 

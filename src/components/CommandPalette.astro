@@ -1,0 +1,39 @@
+---
+import Icon from "@/src/components/Icon.astro";
+import { headerContent, paletteContent } from "@/content/site";
+import { getLocalizedText } from "@/lib/i18n";
+import { buildPaletteData } from "@/lib/search-index";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+  pathname: string;
+}
+
+const { locale, pathname } = Astro.props;
+const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
+---
+
+<dialog class="palette" id="palette" aria-label={t(headerContent.searchLabel)}>
+  <div class="palette__field">
+    <Icon name="search" />
+    <input
+      id="palette-input"
+      type="text"
+      placeholder={t(paletteContent.placeholder)}
+      autocomplete="off"
+      spellcheck="false"
+      role="combobox"
+      aria-expanded="true"
+      aria-controls="palette-list"
+      aria-autocomplete="list"
+    />
+  </div>
+  <ul id="palette-list" role="listbox" aria-label={t(paletteContent.resultsLabel)}></ul>
+  <div class="palette__foot" aria-hidden="true">
+    <span><kbd>↑</kbd><kbd>↓</kbd>{t(paletteContent.move)}</span>
+    <span><kbd>Enter</kbd>{t(paletteContent.open)}</span>
+    <span><kbd>Esc</kbd>{t(paletteContent.close)}</span>
+  </div>
+</dialog>
+<script is:inline type="application/json" id="palette-data" set:html={JSON.stringify(buildPaletteData(locale, pathname)).replace(/</g, "\\u003c")} />

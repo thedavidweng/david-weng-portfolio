@@ -1,6 +1,7 @@
 ---
 import Container from "@/src/components/Container.astro";
 import Footer from "@/src/components/Footer.astro";
+import SiteHeader from "@/src/components/SiteHeader.astro";
 import JsonLd from "@/src/components/JsonLd.astro";
 import PortfolioImage from "@/src/components/PortfolioImage.astro";
 import ProjectArchiveLedger from "@/src/components/ProjectArchiveLedger.astro";
@@ -10,7 +11,6 @@ import ProjectFilmRails from "@/src/components/ProjectFilmRails.astro";
 import ProjectMaterialsSection from "@/src/components/ProjectMaterialsSection.astro";
 import ProjectSummary from "@/src/components/ProjectSummary.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
-import { Header } from "@/src/islands/Header";
 import { projectDetailContent } from "@/content/project-detail";
 import { getLocalizedText } from "@/lib/i18n";
 import { getLocaleHomePath } from "@/lib/i18n";
@@ -55,11 +55,12 @@ const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : unde
   alternateEn={metadata.languages.en}
   alternateZh={metadata.languages.zh}
   ogImage={ogImage}
+  pathname={pathname}
 >
   <JsonLd data={jsonLd} slot="head" />
   <div class={`site-shell site-shell--${locale}`}>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <Header client:load locale={locale} pathname={pathname} />
+    <SiteHeader locale={locale} pathname={pathname} />
     <main
       id="main-content"
       class={`project-page${useImageWall ? " project-page--archive" : ""}${isTitleOnly ? " project-page--title-only" : ""}${isExternalHandoff ? " project-page--external-handoff" : ""}${isDedicatedFilmProject ? " project-page--film" : ""}`}

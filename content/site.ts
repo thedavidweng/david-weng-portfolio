@@ -29,6 +29,7 @@ export const blogUrl = "https://blog.davidweng.eu.org/";
 
 export const navigationItems = [
   { label: localized("Projects", "项目"), href: "#projects" },
+  { label: localized("Software", "软件"), href: "/software/" },
   { label: localized("What I Do", "能力"), href: "#services" },
   { label: localized("Contact", "联系"), href: "#contact" },
   { label: localized("Blog", "博客"), href: blogUrl }
@@ -107,7 +108,6 @@ export const aboutContent = {
   ],
   homepageHref: "https://thedavidweng.github.io/",
   linkedinHref: "https://www.linkedin.com/in/thedavidweng/",
-  homepageLabel: localized("Home", "主页"),
   focusLabel: localized("Practice Focus", "实践重点")
 };
 
@@ -129,6 +129,16 @@ export const contactContent = {
   instagramHref: "https://www.instagram.com/davidwengpro/",
   githubHref: "https://github.com/thedavidweng",
   emailLabel: localized("Email Me", "发邮件"),
+  copyLabel: localized("Copy Address", "复制地址"),
+  copiedLabel: localized("Copied", "已复制"),
+  socialsLabel: localized("Social links", "社交链接"),
+  socials: [
+    { label: "GitHub", icon: "github", href: "https://github.com/thedavidweng" },
+    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/thedavidweng/" },
+    { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/davidwengpro/" },
+    { label: "YouTube", icon: "youtube", href: "https://www.youtube.com/@davyweng" },
+    { label: "X", icon: "x", href: "https://x.com/thedavidweng" }
+  ] as const,
   linkedinLabel: localized("LinkedIn", "领英"),
   instagramLabel: localized("Instagram", "Instagram")
 };
@@ -136,13 +146,40 @@ export const contactContent = {
 export const footerContent = {
   copyright: localized("© 2026 David Weng.", "© 2026 David Weng."),
   languageLabel: localized("中文", "EN"),
-  externalWindowHint: localized("opens in new tab", "将在新标签页打开")
+  languageName: localized("Switch to Chinese", "切换到英文")
 };
 
 export const headerContent = {
-  menuLabel: localized("Main menu", "主菜单"),
-  openMenuLabel: localized("Open menu", "打开菜单"),
-  closeMenuLabel: localized("Close menu", "关闭菜单"),
-  socialLinksLabel: localized("Social links", "社交链接"),
-  contactButtonLabel: localized("CONTACT", "联系")
+  navLabel: localized("Main navigation", "主导航"),
+  searchLabel: localized("Search the site", "搜索本站"),
+  searchShortLabel: localized("Search", "搜索"),
+  menuLabel: localized("Menu and search", "菜单与搜索"),
+  themeLabel: localized("Switch between light and dark", "切换浅色与深色")
+};
+
+export const paletteContent = {
+  placeholder: localized("Search projects, pages, and actions", "搜索项目、页面与操作"),
+  resultsLabel: localized("Results", "结果"),
+  empty: localized("No results", "没有结果"),
+  move: localized("move", "移动"),
+  open: localized("open", "打开"),
+  close: localized("close", "关闭"),
+  groups: {
+    sections: localized("Sections", "栏目"),
+    work: localized("Projects", "项目"),
+    software: localized("Software", "软件"),
+    tools: localized("Tools", "工具"),
+    links: localized("Links", "链接"),
+    social: localized("Social", "社交媒体"),
+    actions: localized("Actions", "操作")
+  },
+  actions: {
+    lightTheme: localized("Switch to light theme", "切换到浅色主题"),
+    darkTheme: localized("Switch to dark theme", "切换到深色主题"),
+    theme: localized("Theme", "主题"),
+    language: localized("Read in Chinese", "Read in English"),
+    copyEmail: localized("Copy email address", "复制邮箱地址"),
+    sendEmail: localized("Send an email", "发送邮件"),
+    copied: localized("Copied", "已复制")
+  }
 };

@@ -132,19 +132,14 @@ test("mobile film pages define a dedicated stacked layout with tighter credits a
   expect(css).toContain("gap: 0.02rem;");
 });
 
-test("mobile home shell keeps a visible header nav with built-in separators instead of a duplicate hero nav", () => {
-  expect(css).toContain(".site-header--home");
+test("mobile header hides the inline nav and turns the search button into the menu", () => {
+  const mobileBlock = extractCssBlock(css.slice(css.indexOf(".site-header__inner {")), "@media (max-width: 760px)");
+
   expect(css).toContain(".site-main--home .hero");
-  expect(css).toContain(".site-header__nav");
   expect(css).toContain(".site-header__nav-link");
-  expect(css).toContain("text-decoration: none;");
-  expect(css).not.toContain(".site-header__nav-link + .site-header__nav-link::before");
-  expect(css).not.toContain('content: "/";');
-  expect(css).toContain("@media (max-width: 760px)");
-  const hiddenHomeNavBlock = css.match(
-    /\.site-header--home\s+\.site-header__nav\s*\{[^}]*display:\s*none;[^}]*\}/
-  );
-  expect(hiddenHomeNavBlock).toBeNull();
+  expect(css).not.toContain(".site-header__menu-panel");
+  expect(mobileBlock).toContain(".site-header__nav,\n  .site-header__search-icon,\n  html.js .site-header__locale {\n    display: none;");
+  expect(mobileBlock).toContain(".site-header__menu-icon {\n    display: block;");
 });
 
 test("home layout uses dedicated modern font variables without changing project card typography", () => {
@@ -186,17 +181,14 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(css).toContain(".site-main--home .hero__title");
   expect(css).toContain(".site-main--home .poster-section__title");
   expect(headerTitleBlock).toContain("font-family: var(--font-home-display);");
-  expect(headerTitleBlock).toContain("display: inline-flex;");
-  expect(headerTitleBlock).toContain("align-items: center;");
-  expect(headerTitleBlock).toContain("min-height: 44px;");
-  expect(headerTitleBlock).toContain("font-style: normal;");
   expect(headerTitleBlock).toContain("font-weight: 900;");
   const headerBrandBlock = css.match(/\.site-header__brand\s*\{[^}]+\}/)?.[0] ?? "";
   expect(headerBrandBlock).toContain("align-items: center;");
-  expect(rootBlock).toContain("--line: rgba(255, 255, 255, 0.15);");
-  expect(rootBlock).toContain("--line-strong: rgba(255, 255, 255, 0.3);");
-  expect(rootBlock).toContain("--text-soft: oklch(0.656 0.005 25);");
-  expect(rootBlock).toContain("--text-faint: oklch(0.626 0.005 25);");
+  expect(rootBlock).toContain("color-scheme: dark light;");
+  expect(rootBlock).toContain("--line: color-mix(in srgb, var(--ink) 15%, transparent);");
+  expect(rootBlock).toContain("--line-strong: color-mix(in srgb, var(--ink) 30%, transparent);");
+  expect(rootBlock).toContain("--text-soft: light-dark(oklch(0.42 0.01 25), oklch(0.656 0.005 25));");
+  expect(rootBlock).toContain("--text-faint: light-dark(oklch(0.47 0.01 25), oklch(0.626 0.005 25));");
   expect(rootBlock).toContain("--accent-soft: rgba(225, 29, 37, 0.72);");
   expect(rootBlock).toContain("--radius-xl: 0;");
   expect(rootBlock).toContain("--radius-lg: 0;");
@@ -221,29 +213,14 @@ function extractCssBlock(source: string, selector: string): string {
   return "";
 }
 
-test("mobile menu fixed shells stay transparent so iOS 26 Safari samples dark chrome (ADR-0005)", () => {
-  const panelBlock = css.match(/\.site-header__menu-panel\s*\{[^}]+\}/g)?.at(-1) ?? "";
-  const panelBefore = css.match(/\.site-header__menu-panel::before\s*\{[^}]+\}/)?.[0] ?? "";
-  const backdropBlock = css.match(/\.site-header__menu-backdrop\s*\{[^}]+\}/g)?.at(-1) ?? "";
-  const backdropBefore = css.match(/\.site-header__menu-backdrop::before\s*\{[^}]+\}/)?.[0] ?? "";
-  const contentBlock = css.match(/\.site-header__menu-panel-content\s*\{[^}]+\}/)?.[0] ?? "";
-  const reducedMotionBlock = extractCssBlock(css, "@media (prefers-reduced-motion: reduce)");
+test("theme toggle uses a plain view transition and keeps image surfaces dark in light mode", () => {
+  const layoutSource = readFileSync(join(process.cwd(), "src/layouts/BaseLayout.astro"), "utf8");
 
-  expect(panelBlock).toContain("background: transparent;");
-  expect(panelBefore).toContain("background: var(--accent);");
-  expect(panelBefore).toContain("position: absolute;");
-  expect(backdropBlock).toContain("background: transparent;");
-  expect(backdropBefore).toContain("background: rgba(0, 0, 0, 0.45);");
-  expect(contentBlock).toContain("calc(env(safe-area-inset-top) + 5.5rem)");
-  expect(contentBlock).toContain("calc(env(safe-area-inset-bottom) + 1.2rem)");
-  expect(reducedMotionBlock).toContain(".site-header__menu-panel--open");
-  expect(reducedMotionBlock).toContain("transform: translate3d(0, 0, 0);");
-  expect(reducedMotionBlock).toContain(".site-header__menu-panel--closed");
-  expect(reducedMotionBlock).toContain("transform: translate3d(100%, 0, 0);");
-  expect(reducedMotionBlock).toContain(".site-header__menu-backdrop--open");
-  expect(reducedMotionBlock).toContain("opacity: 1;");
-  expect(reducedMotionBlock).toContain(".site-header__menu-backdrop--closed");
-  expect(reducedMotionBlock).toContain("opacity: 0;");
+  expect(layoutSource).toContain('localStorage.getItem("theme")');
+  expect(css).toContain(":root[data-theme-transition]::view-transition-new(root)");
+  expect(css).toContain(':root[data-theme="light"] {\n  color-scheme: light;');
+  expect(css).toContain(".project-card,\n.project-hero__cover,");
+  expect(css).toContain("html:not(.js) .js-only");
 });
 
 test("homepage components separate services from hero instead of rendering hero capabilities inline", () => {
@@ -317,24 +294,13 @@ test("global controls switch to square noir styling without pill buttons or slas
   expect(lightboxCloseBlock).toContain("min-height: 44px;");
 });
 
-test("mobile menu toggle keeps the line morph and adds immediate press feedback", () => {
-  const toggleBlock = css.match(/\.site-header__menu-toggle\s*\{[^}]+\}/)?.[0] ?? "";
-  const toggleActiveBlock = css.match(/\.site-header__menu-toggle:active\s*\{[^}]+\}/)?.[0] ?? "";
-  const iconLineBlock = css.match(/\.site-header__menu-icon span\s*\{[^}]+\}/)?.[0] ?? "";
-
-  expect(toggleBlock).toContain("transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1);");
-  expect(toggleActiveBlock).toContain("transform: scale(0.97);");
-  expect(iconLineBlock).toContain("transition: transform var(--ease), opacity var(--ease);");
-  expect(iconLineBlock).not.toContain("filter");
-});
-
 test("signal panels restore the red border and top-right corner accent on hover", () => {
   const signalPanelBlock = Array.from(css.matchAll(/\.signal-panel\s*\{[^}]+\}/g))
     .map((match) => match[0])
     .join("\n");
   const signalPanelAfterBlock = css.match(/\.signal-panel::after\s*\{[^}]+\}/)?.[0] ?? "";
 
-  expect(signalPanelBlock).toContain("border: 1px solid rgba(229, 226, 225, 0.08);");
+  expect(signalPanelBlock).toContain("border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);");
   expect(css).toContain(".signal-panel:hover");
   expect(css).toContain("border-color: rgba(var(--accent-rgb), 0.76);");
   expect(css).toContain("outline: 1px solid rgba(var(--accent-rgb), 0.92);");
@@ -369,7 +335,7 @@ test("home services use a full border and tighter vertical spacing instead of a 
   expect(homeServiceCardBlock).toContain("min-height: 264px;");
   expect(homeServiceCardBlock).toContain("justify-content: flex-start;");
   expect(homeServiceCardBlock).toContain("gap: 0.78rem;");
-  expect(homeServiceCardBlock).toContain("border: 1px solid rgba(229, 226, 225, 0.08);");
+  expect(homeServiceCardBlock).toContain("border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);");
   expect(homeServiceCardBlock).not.toContain("border-top:");
   expect(homeServiceCopyBlock).toContain("margin-top: 0.25rem;");
   expect(homeServiceCopyBlock).toContain("line-height: 1.62;");
@@ -420,7 +386,7 @@ test("project pages and media modules use open-stage containers instead of dark 
   expect(heroFrameBlock).toContain("box-shadow: none;");
   expect(heroFrameBlock).toContain("border-radius: 0;");
   expect(handoffBlock).toContain("background: transparent;");
-  expect(handoffBlock).toContain("border-top: 1px solid rgba(229, 226, 225, 0.12);");
+  expect(handoffBlock).toContain("border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);");
   expect(signalPanelBlock).toContain("background: transparent;");
   expect(signalPanelBlock).toContain("border-radius: 0;");
   expect(videoThumbBlock).toContain("border-radius: 0;");
