@@ -1,5 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["cloudflare.config.ts", "wrangler.config.ts"],
   "ignoreBinaries": ["git-cliff"],
   "ignoreExportsUsedInFile": { "type": true }
 }
