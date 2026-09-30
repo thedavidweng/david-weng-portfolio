@@ -6,10 +6,6 @@ import { SITE_URL } from "./lib/site-config.ts";
 export default defineConfig({
   site: SITE_URL,
   output: "static",
-  prefetch: {
-    prefetchAll: false,
-    defaultStrategy: "hover"
-  },
   integrations: [
     react(),
     sitemap({
