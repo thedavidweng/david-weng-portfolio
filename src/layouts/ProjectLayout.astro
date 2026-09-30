@@ -27,7 +27,7 @@ interface Props {
     description: string;
     canonical: string;
     languages: { en: string; zh: string };
-    openGraph: { images: Array<{ url: string; alt: string }> };
+    image: string;
   };
   jsonLd: object;
 }
@@ -43,7 +43,7 @@ const isFilmOrVideoProject = isFilmProject || isVideoProject;
 const isDedicatedFilmProject = isFilmProject && Boolean(project.film) && !useImageWall;
 const isArchiveVideoProject = isVideoProject && useImageWall;
 const primaryExternalLink = project.externalLinks[0];
-const ogImage = metadata.openGraph.images[0]?.url ?? project.coverImage;
+const ogImage = metadata.image || project.coverImage;
 const coverWidth = project.coverImage ? getImageWidth(project.coverImage) : undefined;
 ---
 

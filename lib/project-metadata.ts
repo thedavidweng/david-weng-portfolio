@@ -7,22 +7,7 @@ export type PageMetadata = {
   description: string;
   canonical: string;
   languages: { en: string; zh: string };
-  openGraph: {
-    type: string;
-    title: string;
-    description: string;
-    url: string;
-    siteName: string;
-    locale: string;
-    alternateLocale: string;
-    images: Array<{ url: string; alt: string }>;
-  };
-  twitter: {
-    card: string;
-    title: string;
-    description: string;
-    images: string[];
-  };
+  image: string;
 };
 
 type BuildProjectMetadataInput = {
@@ -43,26 +28,6 @@ export function buildProjectMetadata({ locale, pathname, project }: BuildProject
       en: `/projects/${project.slug}`,
       zh: `/zh/projects/${project.slug}`
     },
-    openGraph: {
-      type: "website",
-      title,
-      description,
-      url: pathname,
-      siteName: siteIdentity.name,
-      locale,
-      alternateLocale: locale === "zh" ? "en" : "zh",
-      images: [
-        {
-          url: project.coverImage,
-          alt: getLocalizedText(project.coverAlt, locale)
-        }
-      ]
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [project.coverImage]
-    }
+    image: project.coverImage
   };
 }
