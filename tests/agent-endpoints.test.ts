@@ -2,6 +2,8 @@ import { projects } from "@/content/projects";
 import { buildAgentEndpointPayload, buildAgentData } from "@/lib/agent-content";
 import { generateIndexMd, generateLlmsFull } from "@/lib/site-markdown";
 import { generateLlmsTxt } from "@/lib/llms-txt";
+import { GET as getAgent } from "@/src/pages/agent";
+import { GET as getLlmsTxt } from "@/src/pages/llms.txt";
 
 test("agent payload and locale data include every project in both languages", () => {
   const payload = buildAgentEndpointPayload();
@@ -36,4 +38,18 @@ test("agent content generators include services and projects", () => {
     expect(llmsFull).toContain(project.slug);
     expect(indexMd).toContain(project.slug);
   }
+});
+
+test("agent and llms.txt routes return typed bodies without route-level cache headers", async () => {
+  const agent = getAgent({} as never);
+  const llms = getLlmsTxt({} as never);
+
+  expect(agent.headers.get("Content-Type")).toBe("application/json; charset=utf-8");
+  expect(agent.headers.get("Cache-Control")).toBeNull();
+  expect(agent.headers.get("X-Robots-Tag")).toBeNull();
+  expect(JSON.parse(await agent.text())).toEqual(buildAgentEndpointPayload());
+
+  expect(llms.headers.get("Content-Type")).toBe("text/plain; charset=utf-8");
+  expect(llms.headers.get("Cache-Control")).toBeNull();
+  expect(await llms.text()).toBe(generateLlmsTxt());
 });
