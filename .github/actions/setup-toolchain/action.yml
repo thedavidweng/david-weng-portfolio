@@ -1,0 +1,25 @@
+name: Setup toolchain
+description: Install Node from .mise.toml via mise, then pnpm with a cached store
+
+runs:
+  using: composite
+  steps:
+    - name: Setup mise
+      uses: jdx/mise-action@9149ea85001c7435d5a66bb127d6a1b6227cb0a5 # v5.0.0
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      with:
+        dest: ${{ runner.temp }}/pnpm
+
+    - name: Cache pnpm store
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+      with:
+        path: ${{ runner.temp }}/pnpm-store
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Configure pnpm store
+      shell: bash
+      run: pnpm config set store-dir "${{ runner.temp }}/pnpm-store"
