@@ -11,6 +11,7 @@ test("wrangler uses assets-only deploy for free unlimited static requests", () =
   expect(wranglerConfig).not.toContain("run_worker_first");
   expect(wranglerConfig).not.toContain('"routes"');
   expect(wranglerConfig).toContain('"preview_urls": true');
+  expect(wranglerConfig).toContain('"previews": {}');
 });
 
 test("zone apply keeps Bot Fight Mode off so machine clients can read agent endpoints", () => {

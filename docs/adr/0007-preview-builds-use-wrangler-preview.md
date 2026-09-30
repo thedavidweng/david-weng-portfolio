@@ -9,6 +9,7 @@ The non-production Workers Builds trigger ran `pnpm exec cf previews deploy`. Th
 ## Decision
 
 - Set the non-production trigger deploy command to `pnpm exec wrangler preview`.
+- Keep an empty `previews: {}` block in `wrangler.jsonc` so that command accepts the config.
 - Keep `pnpm build` as the build command and `wrangler.jsonc` as the assets-only source of truth for that path.
 - Leave local `pnpm preview` as `pnpm build && cf dev` for interactive work.
 

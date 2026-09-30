@@ -32,6 +32,7 @@ assert(wranglerConfig.includes('"directory": "./dist"'), 'wrangler.jsonc must se
 assert(wranglerConfig.includes('"not_found_handling": "404-page"'), 'wrangler.jsonc must set assets.not_found_handling to "404-page"');
 assert(!wranglerConfig.includes('"main"'), "wrangler.jsonc must use assets-only deploy (no main worker script)");
 assert(!wranglerConfig.includes("run_worker_first"), "wrangler.jsonc must not set run_worker_first (static assets are free/unlimited)");
+assert(wranglerConfig.includes('"previews": {}'), 'wrangler.jsonc must include an empty previews block for wrangler preview');
 ok("wrangler Workers static assets config");
 
 const headersPath = join(distDir, "_headers");
