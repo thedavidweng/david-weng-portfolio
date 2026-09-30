@@ -45,6 +45,11 @@ assert(headers.includes("stale-while-revalidate=86400"), "dist/_headers must set
 assert(!headers.includes("/projects/*\n"), "dist/_headers must not blanket-cache all /projects/* HTML");
 assert(headers.includes("/projects/fraud/\n  Cache-Control:"), "dist/_headers must pair project HTML paths with cache headers");
 ok("dist/_headers cache rules");
+assert(
+  headers.includes("/agent\n  Content-Type: application/json; charset=utf-8\n  X-Robots-Tag: noindex"),
+  "dist/_headers must type /agent as JSON and mark it noindex (static endpoints cannot set headers)"
+);
+ok("dist/_headers /agent content type");
 
 const sitemapPath = join(distDir, "sitemap.xml");
 assert(existsSync(sitemapPath), "dist/sitemap.xml is missing");

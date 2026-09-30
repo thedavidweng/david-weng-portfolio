@@ -1,16 +1,11 @@
-function cachedResponse(body: string, contentType: string, maxAge: number) {
-  return new Response(body, {
-    headers: {
-      "Content-Type": `${contentType}; charset=utf-8`,
-      "Cache-Control": `public, max-age=${maxAge}`
-    }
-  });
+function typedResponse(body: string, contentType: string) {
+  return new Response(body, { headers: { "Content-Type": `${contentType}; charset=utf-8` } });
 }
 
 export function markdownResponse(body: string) {
-  return cachedResponse(body, "text/markdown", 3600);
+  return typedResponse(body, "text/markdown");
 }
 
-export function textResponse(body: string, maxAge = 3600) {
-  return cachedResponse(body, "text/plain", maxAge);
+export function textResponse(body: string) {
+  return typedResponse(body, "text/plain");
 }

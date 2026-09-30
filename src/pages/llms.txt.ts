@@ -4,4 +4,4 @@ import { textResponse } from "@/lib/responses";
 
 export const prerender = true;
 
-export const GET: APIRoute = () => textResponse(generateLlmsTxt(), 86400);
+export const GET: APIRoute = () => textResponse(generateLlmsTxt());

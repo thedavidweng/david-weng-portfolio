@@ -16,6 +16,10 @@ const SECURITY_HEADERS = `/*
 
 /
   Link: </llms.txt>; rel="llms.txt", </llms-full.txt>; rel="llms-full.txt", </index.md>; rel="index.md", </agent>; rel="agent-catalog", </sitemap.xml>; rel="sitemap", </robots.txt>; rel="robots"
+
+/agent
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: noindex
 `;
 
 const ASSET_CACHE_RULES = `
