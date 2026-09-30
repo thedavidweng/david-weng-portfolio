@@ -66,6 +66,9 @@ async function inspectZoneRules() {
   const httpsSetting = await cfGet(`/zones/${ZONE_ID}/settings/always_use_https`);
   console.log(`always_use_https: ${httpsSetting?.value}`);
 
+  const botManagement = await cfGet(`/zones/${ZONE_ID}/bot_management`);
+  console.log(`bot_management.fight_mode: ${botManagement?.fight_mode}`);
+
   const ruleset = await cfGet(`/zones/${ZONE_ID}/rulesets/${REDIRECT_RULESET_ID}`);
   const wwwRule = ruleset?.rules?.find((rule) =>
     String(rule.description ?? "").includes("www.davidweng.eu.org")
@@ -107,7 +110,18 @@ async function runCurlChecks() {
     }
   }
 
-  return passed === checks.length;
+  const agent = await fetch(`https://${APEX}/agent`, {
+    headers: { "User-Agent": UA, Accept: "application/json" }
+  });
+  const mitigated = agent.headers.get("cf-mitigated");
+  const contentType = agent.headers.get("content-type") ?? "";
+  const agentOk = agent.status === 200 && !mitigated && contentType.includes("application/json");
+  console.log(`${agentOk ? "PASS" : "FAIL"} non-browser client receives /agent as JSON`);
+  console.log(`  status: ${agent.status}`);
+  console.log(`  content-type: ${contentType || "<none>"}`);
+  console.log(`  cf-mitigated: ${mitigated ?? "<none>"}`);
+
+  return passed === checks.length && agentOk;
 }
 
 async function main() {
@@ -116,7 +130,7 @@ async function main() {
   await inspectZoneRules();
 
   if (!runLive) {
-    console.log("\nRun with --curl to probe live redirects (may be blocked by bot challenges).");
+    console.log("\nRun with --curl to probe live redirects and /agent.");
     return;
   }
 

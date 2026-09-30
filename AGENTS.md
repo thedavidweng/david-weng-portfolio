@@ -117,8 +117,8 @@ There is no dual-maintenance content: `lib/jsonld.ts` derives `knowsAbout` and `
 |---|---|
 | `pnpm generate:images` | Regenerate AVIF `srcset` variants (`@400w/@800w/@1200w/@1920w` suffix) for `public/projects/` images wider than 1200px via sharp (`quality: 55, effort: 6, chromaSubsampling: "4:2:0"` — quality matches the commit-time source quality to avoid throwing bits on already-compressed AVIF); widths are imported from `lib/responsive-srcset.ts`. `--force` regenerates all. |
 | `pnpm subset:fonts` | Subset Noto CJK fonts to the glyphs used in `src`/`content`/`lib`/`tests` (runs automatically on prebuild). |
-| `pnpm apply:zone` | Apply Cloudflare Zone free-tier defaults, incl. HTTPS + www→apex redirect rules. Requires `CLOUDFLARE_API_TOKEN` with Zone Settings:Edit + Zone:Edit. See `docs/adr/0002-zone-layer-redirects.md`. |
-| `pnpm verify:zone` | Post-deploy Zone redirect checks via curl; add `CLOUDFLARE_API_TOKEN` to also inspect the ruleset via API. |
+| `pnpm apply:zone` | Apply Cloudflare Zone free-tier defaults: HTTPS, www→apex, and Bot Fight Mode off. Requires `CLOUDFLARE_API_TOKEN` with Zone Settings:Edit + Zone:Edit. See `docs/adr/0002-zone-layer-redirects.md` and `docs/adr/0006-agent-endpoints-stay-reachable.md`. |
+| `pnpm verify:zone` | Post-deploy checks for redirects and for `/agent` returning JSON to a non-browser client. Add `CLOUDFLARE_API_TOKEN` to also inspect the ruleset and Bot Fight Mode via API. |
 | `pnpm verify:dist` | Assert the build output contains required files and no foreign artifacts. |
 
 ## Testing Agent Content

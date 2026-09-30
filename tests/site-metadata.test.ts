@@ -7,6 +7,7 @@ test("robots.txt route advertises canonical sitemap URL from shared constant", (
 
   expect(source).toContain("SITEMAP_URL");
   expect(source).toContain("Sitemap: ${SITEMAP_URL}");
+  expect(source).toContain("Content-Signal: ai-train=no, search=yes, ai-input=yes");
   expect(SITEMAP_URL).toBe(`${SITE_URL}/sitemap.xml`);
 });
 

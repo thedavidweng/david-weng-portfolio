@@ -8,7 +8,7 @@ Allow: /
 
 Sitemap: ${SITEMAP_URL}
 
-Content-Signal: ai-train=no, search=yes, ai-input=no
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 `;
 
 export const GET: APIRoute = () => {

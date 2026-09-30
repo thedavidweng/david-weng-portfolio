@@ -12,3 +12,10 @@ test("wrangler uses assets-only deploy for free unlimited static requests", () =
   expect(wranglerConfig).not.toContain('"routes"');
   expect(wranglerConfig).toContain('"preview_urls": true');
 });
+
+test("zone apply keeps Bot Fight Mode off so machine clients can read agent endpoints", () => {
+  const source = readFileSync(join(process.cwd(), "scripts/apply-cf-zone-free-tier.mjs"), "utf8");
+
+  expect(source).toContain("fight_mode: false");
+  expect(source).toContain("/bot_management");
+});

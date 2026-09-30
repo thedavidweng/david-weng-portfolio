@@ -66,6 +66,14 @@ async function ensureWwwRedirectRule() {
   console.log("OK: created www→apex redirect rule");
 }
 
+async function ensureBotFightModeOff() {
+  const result = await cf(`/zones/${ZONE_ID}/bot_management`, {
+    method: "PUT",
+    body: JSON.stringify({ fight_mode: false })
+  });
+  console.log(`OK: bot_management.fight_mode = ${result.fight_mode}`);
+}
+
 async function main() {
   const settings = [
     ["brotli", "on"],
@@ -91,6 +99,7 @@ async function main() {
   }
 
   await ensureWwwRedirectRule();
+  await ensureBotFightModeOff();
   console.log("[cf-zone] Done.");
 }
 
