@@ -1,112 +1,110 @@
 # Design System — David Weng Portfolio
 
-## Brand Personality
+## Concept: The Screening Room
 
-1. **Cult/Industrial** — intense, confident, avant-garde
-2. **Trendy/High-Impact** — boundary-pushing, memorable
-3. **Dark & Dramatic** — high contrast, editorial boldness
+The site merges two earlier designs: the calm, readable software homepage and the cult-film poster portfolio. The rule that holds them together: **the room is quiet, the screen is loud.**
+
+- **The room** (chrome, reading text, controls) comes from the software homepage: Mona Sans, generous spacing, a 80rem column, pill controls, a status pill, indexed section heads, soft surfaces, and a spotlight on hover.
+- **The screen** (what is being shown) comes from the portfolio: Outfit 900 uppercase poster titles, square frames, the horizontal project rail with full-bleed covers, mono indices, and the red corner bracket.
+- **Red is a signal, not a fill.** It marks the REC square in the header, section indices, the status dot, the corner bracket, hover states, and the second line of the contact title. Large red surfaces are not used.
 
 ## Aesthetic Direction
 
-- **Visual Tone:** Extreme contrast, dramatic, bold. Archival, brutalist structural elements like prominent indexing (`[01]`, `(01)`), copyright marks (`©`), and metadata used stylistically.
-- **Palette:** Strict Black and Red pairing. Cult aesthetic relying on intense reds against deep blacks. Grays relegated to subtle structural elements or muted text, never competing with the red/black dichotomy.
-- **Typography & Scale:** Massive, impactful typography as the primary graphic element. Small touches extremely precise.
-- **Motion:** Dramatic staggered entrances. Sharp transitions, no soft easing.
+- **Visual Tone:** Editorial and precise with moments of drama. Poster type carries the drama; everything around it stays calm so the poster reads.
+- **Palette:** Warm neutral black or off-white, near-black or near-white ink, one red. Grays sit between them for lines and secondary text.
+- **Typography & Scale:** One poster title per page (PORTFOLIO, SOFTWARE, 404, the contact title), sized to the column width. Everything else is set in Mona Sans at reading sizes.
+- **Motion:** Short, quiet transitions (`cubic-bezier(0.2, 0, 0, 1)`). The hero rises in once; the status dot pulses; the terminal caret blinks.
 
-## Design Principles
+## Shape Rules
 
-1. **Unapologetic Contrast:** Scale (massive type vs micro copy) and color (deep black vs aggressive red) create tension and drama.
-2. **Industrial Precision:** No soft AI styles (glassmorphism, glowing purple gradients). Sharp edges, solid blocks, rigid grid breaking.
-3. **Dramatic Pacing:** Motion and staggered entrances create striking first impressions.
-4. **Cult Minimalism:** Restrain palette to Black and Red. Let emptiness do the heavy lifting.
+| Element | Shape |
+|---|---|
+| Frames: project covers, cards (`.frame-card`), monitor, terminal, media | Square (0 radius) |
+| Controls: buttons, filter chips, nav links, header controls, social links, status pill | Pill (`--radius-pill: 999px`) |
+| Signals: REC mark, status dot, legend swatches | Square |
+
+A frame shows work; a pill is something you press. Do not mix them on one element.
+
+## Signature Components
+
+| Component | Class | Notes |
+|---|---|---|
+| Poster title | `.poster` | Outfit 900, uppercase, `line-height: 0.84`. Size with `calc(var(--container) / N)` so the word fills the column. |
+| Status pill | `.status-pill` | Square red dot plus live text (latest GitHub push). Links to `/software/` on the homepage. |
+| Section head | `SectionHead.astro` / `.section-head` | Red mono index `(NN)`, title, optional intro in the second column. |
+| Frame card | `.frame-card` inside `.frame-grid[data-spotlight]` | Square card with a pointer spotlight (`--mx`/`--my`, set by `initSpotlight()` in `src/scripts/ui.ts`) and a red corner bracket on hover. |
+| Buttons | `.button`, `.button--signal`, `.button--small` | `--signal` is filled with ink and turns red on hover. Only one signal button per group. |
+| Screens | `.monitor`, `.terminal`, project covers | Always `color-scheme: dark`, in both themes. |
 
 ## Color Tokens
 
-All colors defined as CSS custom properties in `:root` of `src/styles/global.css`. Values use OKLCH for perceptual uniformity. Neutrals are tinted toward the brand hue (red, ~25° in OKLCH) — never pure #000 or #fff.
+All colors are CSS custom properties in `:root` of `src/styles/global.css`, declared with `light-dark()`. Neutrals are tinted toward the brand hue (~25° in OKLCH), never pure black or white.
 
-| Token | OKLCH | Usage |
-|---|---|---|
-| `--bg` | `oklch(0.012 0.008 25)` (light: `oklch(0.968 0.006 25)`) | Page background |
-| `--bg-deep` | `oklch(0.005 0.008 25)` | Deepest black (footer, overlays) |
-| `--bg-raised` | `oklch(0.025 0.008 25)` | Raised surfaces |
-| `--text` | `oklch(0.995 0.004 25)` | Primary text |
-| `--text-soft` | `oklch(0.656 0.005 25)` | Secondary text |
-| `--text-faint` | `oklch(0.626 0.005 25)` | Tertiary text |
-| `--text-on-accent` | `oklch(0.005 0.008 25)` | Text on red accent |
-| `--accent` | `oklch(0.58 0.24 27)` | Brand red |
-| `--accent-rgb` | `225, 29, 37` | RGB triplet for rgba() |
-| `--accent-soft` | `rgba(225, 29, 37, 0.72)` | Soft red for borders/focus |
-| `--accent-glow` | `rgba(225, 29, 37, 0.15)` | Red glow for backgrounds |
-| `--line` | `color-mix(in srgb, var(--ink) 15%, transparent)` | Hairline borders |
-| `--line-strong` | `color-mix(in srgb, var(--ink) 30%, transparent)` | Emphasized borders |
+| Token | Light | Dark | Usage |
+|---|---|---|---|
+| `--bg` | `oklch(0.988 0.002 25)` | `oklch(0.165 0.004 25)` | Page background |
+| `--bg-deep` | `oklch(0.955 0.003 25)` | `oklch(0.13 0.004 25)` | Terminal, deepest surfaces |
+| `--bg-raised` | `oklch(0.965 0.003 25)` | `oklch(0.215 0.005 25)` | Current nav item, hover rows |
+| `--surface` | `oklch(1 0 0)` | `oklch(0.19 0.005 25)` | Cards, buttons, palette |
+| `--line` / `--line-strong` | `oklch(0.915 …)` / `oklch(0.86 …)` | `oklch(0.265 …)` / `oklch(0.33 …)` | Solid hairlines |
+| `--text` (`--ink`) | `oklch(0.2 0.006 25)` | `oklch(0.95 0.004 25)` | Primary text |
+| `--text-soft` / `--text-faint` | | | Secondary and tertiary text |
+| `--accent` | `oklch(0.55 0.22 27)` | `oklch(0.64 0.21 27)` | Brand red (signal only) |
+| `--spot` | `color-mix(in srgb, var(--accent) 7%, transparent)` | | Spotlight gradient on frame cards |
+| `--shadow-1` / `--shadow-2` | | | Small lift on hover; palette dialog |
 
-### Light Theme
-
-Tokens are declared with `light-dark()`, so `--bg`, `--text`, `--line`, and friends flip with `color-scheme`. The header toggle (and the ⌘K palette) set `data-theme` on `<html>`; without a stored choice the site follows the OS. Light mode is a warm off-white (`oklch(0.968 0.006 25)`) with near-black ink and the same red. `--ink` is the theme-aware base for translucent neutrals (`color-mix(in srgb, var(--ink) X%, transparent)`); `--paper` is the fixed light color for text on red. Surfaces that sit on photographs or read as screens (project cards, covers, lightbox, stems monitor, tools terminal) force `color-scheme: dark`. See `docs/adr/0008`.
+The header toggle and the ⌘K palette set `data-theme` on `<html>`; without a stored choice the site follows the OS. `--paper` is the fixed light color for text on red. See `docs/adr/0008` and `docs/adr/0009`.
 
 ### Rules
 
-- **Never** use hard-coded hex values (`#fff`, `#000`, etc.) in component CSS. Always reference tokens.
-- **Never** use pure `#000000` or `#ffffff`. All neutrals are tinted toward the brand hue.
-- Project cover gradients (`coverPalette`) are the only exception — they are per-project custom colors defined in `content/projects.ts`.
+- **Never** use hard-coded hex values in component CSS. Always reference tokens.
+- Project cover gradients (`coverPalette`) in `content/projects.ts` are the only exception.
 
 ## Typography
 
 | Token | Font | Usage |
 |---|---|---|
-| `--font-display` | Outfit (100-900, `font-display: optional`) | Headlines, hero text |
-| `--font-body` | Manrope (100-900, `font-display: optional`) | Body copy, UI text |
-| `--font-home-zh` | Noto Sans SC (400/700/900, `font-display: optional`) | Chinese homepage |
-| `--font-mono` | IBM Plex Mono (400/500/600, `font-display: swap`) | Metadata, code, labels |
+| `--font-display` | Outfit (100-900, `font-display: optional`) | Poster titles, project titles |
+| `--font-body` | Mona Sans (200-900, `font-display: optional`) | Body copy, UI text, section titles |
+| `--font-home-zh` | Noto Sans SC (400/700/900, `font-display: optional`) | Chinese text |
+| `--font-mono` | IBM Plex Mono (400/500/600, `font-display: swap`) | Indices, metadata, terminal |
 
 All fonts are self-hosted as woff2 in `assets/fonts/`. CJK fonts are subsetted via `scripts/subset-cjk-fonts.mjs`.
 
 ## Spacing & Layout
 
-- `--container: min(1440px, calc(100vw - 4rem))` — max content width
-- Breakpoints: 360px, 520px, 760px, 1120px, 1260px
-- All major text sizes use `clamp()` for fluid responsiveness
+- `--gutter: clamp(1.25rem, 5vw, 2.5rem)`; `--container: min(80rem, calc(100vw - 2 * var(--gutter)))`
+- The project rail bleeds past the column to the right edge of the viewport.
+- Breakpoints: 760px (mobile header, single-column cards), 1120px
 - `env(safe-area-inset-*)` used in header, lightbox, film rails
 
 ## Motion
 
 | Token | Value | Usage |
 |---|---|---|
-| `--ease` | `220ms cubic-bezier(0.19, 1, 0.22, 1)` | Standard transitions |
-| `--ease-slow` | `600ms cubic-bezier(0.19, 1, 0.22, 1)` | Slow, dramatic transitions |
+| `--ease` | `220ms cubic-bezier(0.2, 0, 0, 1)` | Standard transitions |
+| `--ease-slow` | `600ms cubic-bezier(0.2, 0, 0, 1)` | Slow transitions |
 
-### Rules
-
-- All hover styles wrapped in `@media (hover: hover)` to prevent sticky hover on touch.
+- All hover styles wrapped in `@media (hover: hover)`.
 - `prefers-reduced-motion` disables all animations and transitions globally.
-- `scroll-behavior: smooth` on `html`, disabled under `prefers-reduced-motion`.
-- Animate `transform` and `opacity` only. Never animate layout properties (`width`, `height`, `top`, `left`).
-- `filter: blur()` may be used statically but never animated (causes per-frame re-rasterization).
-
-## Borders & Radius
-
-- `--radius-xl: 0`, `--radius-lg: 0`, `--radius-md: 0`, `--radius-pill: 0`
-- All corners are sharp (0px). This is intentional for the industrial aesthetic.
-- The `.signal-panel::after` corner bracket is the only decorative border element, visible on focus/hover.
+- Animate `transform` and `opacity` only.
 
 ## Copy Rules
 
-- **No em dashes** (`—`) in user-visible copy. Use commas, colons, semicolons, periods, or parentheses.
+- **No em dashes** (`—`) in user-visible copy.
 - For Chinese text, use full-width punctuation (，、：；。).
-- Metadata labels use bracketed indexing: `[01]`, `(01)`, `©`.
-- No AI copywriting voice ("not just X — it's Y", "seamless", "powerful", etc.).
+- Metadata labels use indexing: `(01)`, `[01]`, `©`.
+- No AI copywriting voice ("not just X, it's Y", "seamless", "powerful", etc.).
 
 ## Anti-Patterns (Banned)
 
 - Glassmorphism (`backdrop-filter: blur()` on permanent UI elements)
 - Gradient text (`background-clip: text`)
-- Colored side-stripe borders (rounded left-border callouts)
-- Pastel rounded-square icon tiles
-- Badge and pill spam
-- All-caps card grids with identical styling
-- Warm amber/stone "cozy" palettes
-- Indigo-to-violet gradients
+- Rounded cards or rounded media frames
+- Large red fills or red backgrounds behind text blocks
+- More than one poster title per viewport
+- Tag and pill spam: tags belong in cards, not in headings
+- Indigo-to-violet gradients, pastel icon tiles
 - Serif-italic emphasis on single words
-- Decorative highlights and strikes on keywords
-- Glowing status dots
+- Glows around status dots; the dot pulses with opacity and scale only
 - Oversized drop shadows

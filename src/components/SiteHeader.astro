@@ -20,6 +20,7 @@ const otherLocale = locale === "en" ? "zh" : "en";
   <div class="container">
     <div class="site-header__inner">
       <a class="site-header__brand" href={homePath}>
+        <span class="site-header__rec" aria-hidden="true"></span>
         <span class="site-header__title">{siteIdentity.name}</span>
       </a>
       <nav class="site-header__nav" aria-label={t(headerContent.navLabel)}>

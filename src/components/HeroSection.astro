@@ -1,7 +1,8 @@
 ---
 import Container from "@/src/components/Container.astro";
 import { heroContent } from "@/content/site";
-import { getLocalizedText } from "@/lib/i18n";
+import { githubUser, softwarePageContent } from "@/content/software";
+import { getLocalizedText, getSoftwarePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 
 interface Props {
@@ -9,21 +10,26 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-const headline = getLocalizedText(heroContent.headline, locale);
+const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
+const headline = t(heroContent.headline);
 ---
 
-<section class={`hero section-shell${locale === "zh" ? " hero--zh" : ""}`} id="top">
+<section
+  class={`home-hero${locale === "zh" ? " home-hero--zh" : ""}`}
+  id="top"
+  data-live
+  data-github-user={githubUser}
+  data-pushed-template={t(softwarePageContent.pushedLabel)}
+>
   <Container>
-    <div class="hero__frame">
-      <div class="hero__content hero__content--stage">
-        <div class="hero__stage">
-          <p class="hero__eyebrow">{getLocalizedText(heroContent.kicker, locale)}</p>
-          <h1 aria-label={headline} class="hero__title">{headline}</h1>
-          <div class="hero__copy">
-            <p class="hero__lede">{getLocalizedText(heroContent.support, locale)}</p>
-          </div>
-        </div>
-      </div>
+    <a class="status-pill" href={getSoftwarePath(locale)}>
+      <span class="status-pill__dot" aria-hidden="true"></span>
+      <span data-activity>{t(softwarePageContent.eyebrow)}</span>
+    </a>
+    <h1 class="poster home-hero__title">{headline}</h1>
+    <div class="home-hero__copy">
+      <p class="home-hero__kicker">{t(heroContent.kicker)}</p>
+      <p class="home-hero__lede">{t(heroContent.support)}</p>
     </div>
   </Container>
 </section>

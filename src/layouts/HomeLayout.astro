@@ -36,6 +36,9 @@ const carouselProjects = [...buildCarouselProjects(projects), buildSoftwareSlide
     <Footer locale={locale} />
   </div>
   <script>
+    import { initGithubLive } from "@/src/scripts/github-live";
+
+    initGithubLive();
     if (new URLSearchParams(window.location.search).get("mode") === "agent") {
       const locale = document.documentElement.lang === "zh" ? "zh" : "en";
       void import("@/src/islands/AgentModeGate.tsx").then(({ mountAgentModeGate }) =>

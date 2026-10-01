@@ -1,4 +1,5 @@
 ---
+import Container from "@/src/components/Container.astro";
 import Footer from "@/src/components/Footer.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
 import SiteHeader from "@/src/components/SiteHeader.astro";
@@ -9,13 +10,16 @@ import SiteHeader from "@/src/components/SiteHeader.astro";
     <a class="skip-link" href="#main-content">Skip to content</a>
     <SiteHeader locale="en" pathname="/" />
     <main id="main-content">
-      <div class="error-page error-page--global">
-        <h1 class="error-page__title">Page not found</h1>
-        <p class="error-page__copy">The page you requested does not exist. Return to the homepage to continue browsing.</p>
-        <div class="error-page__actions">
-          <a class="button" href="/">Go home</a>
-        </div>
-      </div>
+      <section class="error-page">
+        <Container>
+          <p class="status-pill"><span class="status-pill__dot" aria-hidden="true"></span>Page not found</p>
+          <h1 class="poster error-page__title">404</h1>
+          <p class="error-page__copy">The page you requested does not exist. Return to the homepage to continue browsing.</p>
+          <div class="pill-row">
+            <a class="button button--signal" href="/">Go home</a>
+          </div>
+        </Container>
+      </section>
     </main>
     <Footer locale="en" />
   </div>

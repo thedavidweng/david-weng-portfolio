@@ -201,14 +201,17 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
 
   return (
     <StrictMode>
-      <section className="section-shell" id="projects">
+      <section aria-labelledby="projects-title" className="section" id="projects">
         <div className="container">
           <div className="projects__layout">
-            <div className="poster-section__intro">
-              <h2 className="poster-section__title">
-                {getLocalizedText(projectSectionContent.title, locale)}
-              </h2>
-              <p className="poster-section__copy">
+            <div className="section-head">
+              <div>
+                <p className="section-head__index">(01)</p>
+                <h2 className="section-head__title" id="projects-title">
+                  {getLocalizedText(projectSectionContent.title, locale)}
+                </h2>
+              </div>
+              <p className="section-head__intro">
                 {getLocalizedText(projectSectionContent.description, locale)}
               </p>
             </div>

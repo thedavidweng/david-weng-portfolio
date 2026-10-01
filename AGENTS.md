@@ -41,7 +41,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `src/icons.ts` | Shared SVG icons: `ICONS` map rendered by `src/components/Icon.astro` (header, palette, contact, software page), plus path constants for ArchiveMediaWall, ProjectExternalLinkButton, ProjectMediaLightbox |
 | `content/software.ts` | `/software/` page (`src/layouts/SoftwareLayout.astro`), agent endpoints (`formatSoftware`, `buildAgentData().software`), `lib/llms-txt.ts`, palette index |
 | `lib/search-index.ts` | Server-built ⌘K palette index embedded as JSON by `src/components/CommandPalette.astro`; the browser only loads `lib/palette-search.ts` |
-| `src/scripts/*.ts` | Plain client scripts: `theme` (light/dark + circular view transition), `palette`, `ui` (copy buttons), `github-live` and `stems` (software page only). See `docs/adr/0008`. |
+| `src/scripts/*.ts` | Plain client scripts: `theme` (light/dark + circular view transition), `palette`, `ui` (copy buttons, frame-card spotlight), `github-live` (homepage status pill and software page), `stems` (software page). See `docs/adr/0008`; visual language in `DESIGN.md` and `docs/adr/0009`. |
 
 There is no dual-maintenance content: `lib/jsonld.ts` derives `knowsAbout` and `sameAs` from `content/site.ts`, and all generators (`lib/llms-txt.ts`, `lib/site-markdown.ts`, `src/islands/AgentView.tsx`) derive services, location, blog URL, and the endpoint list from `content/site.ts` + `lib/site-config.ts`.
 

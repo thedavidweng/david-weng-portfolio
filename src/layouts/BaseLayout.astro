@@ -5,7 +5,7 @@ import { siteIdentity } from "@/content/site";
 import { buildPersonSchema, buildWebSiteSchema } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site-config";
 import type { Locale } from "@/types/content";
-import manropeFont from "../../assets/fonts/manrope-latin-wght-normal.woff2?url";
+import monaSansFont from "../../assets/fonts/mona-sans-latin.woff2?url";
 import notoSansSc400Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2?url";
 import notoSansSc700Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2?url";
 import outfitFont from "../../assets/fonts/outfit-latin-wght-normal.woff2?url";
@@ -77,7 +77,7 @@ const {
     ) : (
       <>
         <link rel="preload" href={outfitFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
-        <link rel="preload" href={manropeFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
+        <link rel="preload" href={monaSansFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
       </>
     )}
     <slot name="head" />
@@ -90,11 +90,12 @@ const {
     <script>
       import { initPalette } from "@/src/scripts/palette";
       import { initThemeToggle } from "@/src/scripts/theme";
-      import { initCopyButtons } from "@/src/scripts/ui";
+      import { initCopyButtons, initSpotlight } from "@/src/scripts/ui";
 
       initThemeToggle();
       initPalette();
       initCopyButtons();
+      initSpotlight();
     </script>
   </body>
 </html>

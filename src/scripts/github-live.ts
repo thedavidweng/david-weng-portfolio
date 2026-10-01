@@ -40,8 +40,10 @@ export function initGithubLive() {
       if (activity) activity.textContent = fillTemplate(pushedTemplate, { time: formatAgo(latest.pushed_at, lang), repo: latest.name });
 
       if (incomplete_results || items.length < total_count) return;
-      document.querySelector('[data-stat="repos"]')!.textContent = String(total_count);
-      document.querySelector('[data-stat="stars"]')!.textContent = String(items.reduce((sum, repo) => sum + repo.stargazers_count, 0));
+      const repoStat = document.querySelector('[data-stat="repos"]');
+      const starStat = document.querySelector('[data-stat="stars"]');
+      if (repoStat) repoStat.textContent = String(total_count);
+      if (starStat) starStat.textContent = String(items.reduce((sum, repo) => sum + repo.stargazers_count, 0));
     })
     .catch(() => {});
 
