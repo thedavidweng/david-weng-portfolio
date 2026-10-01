@@ -37,6 +37,18 @@ test("toggleTheme flips the theme, persists it, and announces the change", () =>
   removeEventListener("themechange", listener);
 });
 
+test("toggleTheme points the browser bar color at the chosen theme", () => {
+  document.head.innerHTML = `
+    <meta name="theme-color" content="#100e0d" media="(prefers-color-scheme: dark)" data-scheme="dark" />
+    <meta name="theme-color" content="#fcfbfa" media="(prefers-color-scheme: light)" data-scheme="light" />`;
+  const [darkMeta, lightMeta] = document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]');
+  toggleTheme();
+  expect([darkMeta.media, lightMeta.media]).toEqual(["all", "not all"]);
+  toggleTheme();
+  expect([darkMeta.media, lightMeta.media]).toEqual(["not all", "all"]);
+  document.head.innerHTML = "";
+});
+
 test("toggleTheme reveals the new theme with a circular view transition", async () => {
   const animate = vi.fn();
   root.animate = animate;

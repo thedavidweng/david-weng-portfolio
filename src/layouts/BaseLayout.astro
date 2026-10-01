@@ -40,15 +40,18 @@ const {
 <html lang={locale}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#070607" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#f5f1ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#100e0d" media="(prefers-color-scheme: dark)" data-scheme="dark" />
+    <meta name="theme-color" content="#fcfbfa" media="(prefers-color-scheme: light)" data-scheme="light" />
     <script is:inline>
       document.documentElement.classList.add("js");
       try {
         const theme = localStorage.getItem("theme");
-        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+          for (const meta of document.querySelectorAll('meta[name="theme-color"]')) meta.media = meta.dataset.scheme === theme ? "all" : "not all";
+        }
       } catch {}
     </script>
     <title>{title}</title>

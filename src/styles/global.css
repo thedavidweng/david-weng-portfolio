@@ -24,7 +24,7 @@
   --radius-lg: 0;
   --radius-md: 0;
   --radius-pill: 999px;
-  --gutter: clamp(1.25rem, 5vw, 2.5rem);
+  --gutter: max(clamp(1.25rem, 5vw, 2.5rem), env(safe-area-inset-left), env(safe-area-inset-right));
   --container: min(80rem, calc(100vw - 2 * var(--gutter)));
   --ease: 220ms cubic-bezier(0.2, 0, 0, 1);
   --ease-slow: 600ms cubic-bezier(0.2, 0, 0, 1);
@@ -85,7 +85,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: calc(5.5rem + env(safe-area-inset-top));
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -928,7 +930,7 @@ main {
 .project-film__poster-image {
   width: 100%;
   height: auto;
-  max-height: min(78vh, 960px);
+  max-height: min(78svh, 960px);
   object-fit: contain;
 }
 
@@ -1362,7 +1364,7 @@ main {
 .error-page {
   display: grid;
   align-content: center;
-  min-height: 80vh;
+  min-height: 80svh;
   padding-block: clamp(4rem, 10vw, 8rem);
 }
 
@@ -1505,6 +1507,12 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .project-media__card--landscape {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 1120px), (hover: none) {
   .project-media__wall-overlay {
     opacity: 1;
     transform: translateY(0);
@@ -1513,10 +1521,6 @@ main {
   .project-media__rows-button::after {
     opacity: 1;
     transform: translateY(0) scale(var(--archive-media-hover-scale));
-  }
-
-  .project-media__card--landscape {
-    grid-column: span 2;
   }
 }
 
@@ -1812,7 +1816,7 @@ main {
 
   .project-page--film .project-film__poster-image {
     width: min(100%, 26rem);
-    max-height: 65vh;
+    max-height: 65svh;
     margin: 0 auto;
   }
 
@@ -3219,7 +3223,7 @@ figcaption.monitor__bar {
 }
 
 .site-footer {
-  padding: 0 0 2.5rem;
+  padding: 0 0 calc(2.5rem + env(safe-area-inset-bottom));
 }
 
 .site-footer__inner {
@@ -3346,6 +3350,40 @@ figcaption.monitor__bar {
 
   .palette__foot {
     display: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .site-header__control {
+    min-width: 44px;
+    height: 44px;
+  }
+
+  .site-header__nav-link,
+  .status-pill,
+  .filter-chip,
+  .reel-nav,
+  .button--small,
+  .contact-hero__social,
+  .palette__option {
+    min-height: 44px;
+  }
+
+  .palette__option {
+    align-items: center;
+  }
+
+  .project-hero__back,
+  .site-footer__links a,
+  .more-link a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .terminal__list a {
+    padding-block: 0.625rem;
+    margin-block: -0.625rem;
   }
 }
 

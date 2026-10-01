@@ -14,7 +14,7 @@ const { locale, pathname } = Astro.props;
 const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
 ---
 
-<dialog class="palette" id="palette" aria-label={t(headerContent.searchLabel)}>
+<dialog class="palette" id="palette" tabindex="-1" aria-label={t(headerContent.searchLabel)}>
   <div class="palette__field">
     <Icon name="search" />
     <input
@@ -22,6 +22,9 @@ const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale)
       type="text"
       placeholder={t(paletteContent.placeholder)}
       autocomplete="off"
+      autocapitalize="off"
+      autocorrect="off"
+      enterkeyhint="go"
       spellcheck="false"
       role="combobox"
       aria-expanded="true"

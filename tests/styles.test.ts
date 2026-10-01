@@ -170,7 +170,8 @@ test("home layout uses dedicated modern font variables without changing project 
   expect(layoutSource).toContain("outfit-latin-wght-normal.woff2?url");
   expect(layoutSource).toContain('fetchpriority="high"');
   expect(layoutSource).toContain('name="theme-color"');
-  expect(layoutSource).toContain("#070607");
+  expect(layoutSource).toContain('content="#100e0d" media="(prefers-color-scheme: dark)" data-scheme="dark"');
+  expect(layoutSource).toContain('content="#fcfbfa" media="(prefers-color-scheme: light)" data-scheme="light"');
   expect(layoutSource).toContain('name="color-scheme"');
   expect(layoutSource).toContain("viewport-fit=cover");
   expect(layoutSource).toContain('rel="apple-touch-icon"');
@@ -232,6 +233,19 @@ test("homepage components separate services from hero instead of rendering hero 
   );
   expect(homeSource).toContain('import("@/src/islands/AgentModeGate.tsx")');
   expect(homeSource).not.toContain("AgentModeGate client:only");
+});
+
+test("touch screens get 44px targets, safe-area gutters, and visible archive overlays", () => {
+  const coarseBlock = extractCssBlock(css, "@media (pointer: coarse)");
+  const rootBlock = css.match(/:root\s*\{[^}]+\}/)?.[0] ?? "";
+
+  expect(coarseBlock).toContain(".site-header__control {\n    min-width: 44px;\n    height: 44px;");
+  expect(coarseBlock).toContain(".filter-chip,");
+  expect(coarseBlock).toContain(".site-footer__links a,");
+  expect(rootBlock).toContain("env(safe-area-inset-left), env(safe-area-inset-right)");
+  expect(css).toContain("text-size-adjust: 100%;");
+  expect(css).toContain("padding: 0 0 calc(2.5rem + env(safe-area-inset-bottom));");
+  expect(extractCssBlock(css, "@media (max-width: 1120px), (hover: none)")).toContain(".project-media__wall-overlay");
 });
 
 test("sticky header reserves the iPhone safe-area inset instead of exposing page content behind the status bar", () => {

@@ -76,7 +76,8 @@ All fonts are self-hosted as woff2 in `assets/fonts/`. CJK fonts are subsetted v
 - `--gutter: clamp(1.25rem, 5vw, 2.5rem)`; `--container: min(80rem, calc(100vw - 2 * var(--gutter)))`
 - The project rail bleeds past the column to the right edge of the viewport.
 - Breakpoints: 760px (mobile header, single-column cards), 1120px
-- `env(safe-area-inset-*)` used in header, lightbox, film rails
+- `env(safe-area-inset-*)` used in header, gutter (left/right), footer, lightbox, film rails
+- On `(pointer: coarse)` every standalone control is at least 44px tall; inline text links are exempt
 
 ## Motion
 

@@ -86,8 +86,11 @@ export function initPalette() {
     if (dialog!.open) return;
     input!.value = "";
     render();
+    const touch = matchMedia("(pointer: coarse)").matches;
+    dialog!.toggleAttribute("autofocus", touch);
     dialog!.showModal();
-    input!.focus();
+    if (touch) dialog!.focus();
+    else input!.focus();
   }
 
   const indexOf = (event: Event) => options.indexOf((event.target as Element).closest(".palette__option") as HTMLLIElement);

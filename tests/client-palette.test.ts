@@ -28,7 +28,7 @@ document.body.innerHTML = `
   <button data-palette-open><kbd data-shortcut>⌘K</kbd></button>
   <section id="contact"></section>
   <textarea></textarea>
-  <dialog id="palette"><input id="palette-input" /><ul id="palette-list"></ul></dialog>
+  <dialog id="palette" tabindex="-1"><input id="palette-input" /><ul id="palette-list"></ul></dialog>
   <script id="palette-data" type="application/json">${JSON.stringify(data)}</script>`;
 initPalette();
 
@@ -65,6 +65,18 @@ test("opening lists every entry under group headings with the first selected", (
   expect(input).toHaveAttribute("aria-activedescendant", "palette-option-0");
   open();
   expect(options()).toHaveLength(4);
+});
+
+test("on touch screens the palette opens as a menu without raising the keyboard", () => {
+  vi.stubGlobal("matchMedia", (query: string) => ({ matches: query === "(pointer: coarse)" }));
+  open();
+  expect(dialog).toHaveAttribute("autofocus");
+  expect(document.activeElement).toBe(dialog);
+  dialog.close();
+  vi.unstubAllGlobals();
+  open();
+  expect(dialog).not.toHaveAttribute("autofocus");
+  expect(document.activeElement).toBe(input);
 });
 
 test("typing filters entries and shows an empty state", () => {
