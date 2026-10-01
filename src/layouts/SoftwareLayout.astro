@@ -1,0 +1,203 @@
+---
+import ContactSection from "@/src/components/ContactSection.astro";
+import Container from "@/src/components/Container.astro";
+import Footer from "@/src/components/Footer.astro";
+import Icon from "@/src/components/Icon.astro";
+import SectionHead from "@/src/components/SectionHead.astro";
+import SiteHeader from "@/src/components/SiteHeader.astro";
+import BaseLayout from "@/src/layouts/BaseLayout.astro";
+import {
+  contributionUrl,
+  contributions,
+  githubUser,
+  repoUrl,
+  resumeHref,
+  roles,
+  softwarePageContent as copy,
+  softwareProjects,
+  softwareTools
+} from "@/content/software";
+import { getLocalizedText, getLocalizedValue, getSoftwarePath } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
+const [feature, ...rest] = softwareProjects;
+const pathname = getSoftwarePath(locale);
+const stats = [
+  { ...copy.stats.repos, attrs: { "data-stat": "repos" } },
+  { ...copy.stats.stars, attrs: { "data-stat": "stars" } },
+  { ...copy.stats.prs, attrs: { "data-prs": "" } },
+  { ...copy.stats.upstream, attrs: {} }
+];
+const langClass = (language: string) => `lang lang--${language.toLowerCase()}`;
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${t(copy.title)} | David Weng`}
+  description={t(copy.lede)}
+  canonical={pathname}
+  alternateEn="/software/"
+  alternateZh="/zh/software/"
+>
+  <div class={`site-shell site-shell--${locale}`}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <SiteHeader locale={locale} pathname={pathname} />
+    <main
+      id="main-content"
+      class="software-page"
+      data-live
+      data-github-user={githubUser}
+      data-updated-template={t(copy.updatedLabel)}
+      data-pushed-template={t(copy.pushedLabel)}
+    >
+      <section class="software-hero" id="top" aria-labelledby="software-title">
+        <Container>
+          <p class="status-pill">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            <span data-activity>{t(copy.eyebrow)}</span>
+          </p>
+          <h1 class="poster software-hero__title" id="software-title">{t(copy.title)}</h1>
+          <p class="software-hero__lede">{t(copy.lede)}</p>
+          <div class="pill-row">
+            <a class="button button--signal" href="#software-projects">{t(copy.seeProjectsLabel)}<Icon name="arrow-down" /></a>
+            <a class="button" href={`https://github.com/${githubUser}`}><Icon name="github" />{t(copy.githubLabel)}</a>
+            <a class="button" href={resumeHref}>{t(copy.resumeLabel)}</a>
+          </div>
+          <dl class="stat-row">
+            {stats.map((stat) => (
+              <div class="stat-row__item">
+                <dt>{t(stat.label)}</dt>
+                <dd {...stat.attrs}>{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <figure class="monitor js-only">
+            <div class="monitor__bar">
+              <span class="monitor__rec" aria-hidden="true">REC</span>
+              <span class="monitor__title">{t(copy.stems.title)}</span>
+              <span class="monitor__time" id="timecode" aria-hidden="true">00:00 / 03:32</span>
+            </div>
+            <canvas id="stems" role="img" aria-label={t(copy.stems.label)}></canvas>
+            <figcaption class="monitor__bar">
+              <span class="monitor__legend">
+                {getLocalizedValue(copy.stems.stems, locale).map((stem) => <span data-stem>{stem}</span>)}
+              </span>
+              <span>{t(copy.stems.caption)}<span class="monitor__hint">{t(copy.stems.scrubHint)}</span></span>
+            </figcaption>
+          </figure>
+        </Container>
+      </section>
+
+      <section class="section" id="software-projects" aria-labelledby="software-projects-title">
+        <Container>
+          <SectionHead index={copy.projects.kicker} title={t(copy.projects.title)} id="software-projects-title">
+            {t(copy.projects.intro)}
+          </SectionHead>
+          <div class="frame-grid frame-grid--software" data-spotlight>
+            <article class="frame-card frame-card--feature" data-repo={feature.repo}>
+              <div>
+                <div class="frame-card__top">
+                  <span><span class={langClass(feature.language)}>{feature.language}</span> <time data-ago datetime={feature.pushedAt}></time></span>
+                  <span class="stars" data-stars><Icon name="star" /><span>{feature.stars}</span></span>
+                </div>
+                <h3 class="frame-card__title frame-card__title--feature"><a class="frame-card__link" href={repoUrl(feature.repo)}>{feature.repo}</a></h3>
+                <p class="frame-card__desc">{t(feature.description)}</p>
+                <div class="pill-row frame-card__actions">
+                  {feature.links?.map((link) => <a class="button button--small" href={link.href}>{t(link.label)}</a>)}
+                </div>
+              </div>
+              <ol class="frame-card__points">
+                {feature.points?.map((point) => (
+                  <li><span><b>{t(point.title)}</b> {t(point.body)}</span></li>
+                ))}
+              </ol>
+              <span class="tags frame-card__tags--feature">{getLocalizedValue(feature.tags, locale).map((tag) => <span class="tag">{tag}</span>)}</span>
+            </article>
+            {rest.map((project) => (
+              <article class="frame-card" data-repo={project.repo}>
+                <div class="frame-card__top">
+                  <span class={langClass(project.language)}>{project.language}</span>
+                  <span class="stars" data-stars data-zero={project.stars === 0 ? "" : undefined}><Icon name="star" /><span>{project.stars}</span></span>
+                </div>
+                <h3 class="frame-card__title"><a class="frame-card__link" href={repoUrl(project.repo)}>{project.repo}</a></h3>
+                <p class="frame-card__desc">{t(project.description)}</p>
+                <div class="frame-card__foot">
+                  <span class="tags">{getLocalizedValue(project.tags, locale).map((tag) => <span class="tag">{tag}</span>)}</span>
+                  <time data-ago datetime={project.pushedAt}></time>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section class="section" id="tools" aria-labelledby="tools-title">
+        <Container>
+          <SectionHead index={copy.tools.kicker} title={t(copy.tools.title)} id="tools-title">{t(copy.tools.intro)}</SectionHead>
+          <div class="terminal">
+            <div class="monitor__bar terminal__bar"><span class="monitor__rec" aria-hidden="true">TTY</span><span>~/tools</span></div>
+            <p class="terminal__prompt" aria-hidden="true"><b>$</b> ls<span class="terminal__caret"></span></p>
+            <ul class="terminal__list">
+              {softwareTools.map((tool) => (
+                <li data-repo={tool.repo}>
+                  <a class="terminal__name" href={repoUrl(tool.repo)}>{tool.repo}</a>
+                  <span class="terminal__desc">{t(tool.description)}</span>
+                  {tool.docs ? <a class="terminal__docs" href={tool.docs}>{t(copy.tools.docsLabel)}</a> : null}
+                  <span class="stars" data-stars data-zero={tool.stars === 0 ? "" : undefined}><Icon name="star" /><span>{tool.stars}</span></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section class="section" id="contributions" aria-labelledby="contributions-title">
+        <Container>
+          <SectionHead index={copy.contributions.kicker} title={t(copy.contributions.title)} id="contributions-title">
+            <span data-prs>{copy.stats.prs.value}</span>+ {t(copy.contributions.intro)}
+          </SectionHead>
+          <div class="upstream">
+            {contributions.map((item) => (
+              <a class="upstream__item" href={contributionUrl(item)}>
+                <span class="upstream__repo"><span>{item.owner}/</span>{item.repo}</span>
+                <span class="upstream__what">{t(item.description)}</span>
+              </a>
+            ))}
+          </div>
+          <p class="more-link"><a href={copy.contributions.allHref}>{t(copy.contributions.allLabel)}</a></p>
+        </Container>
+      </section>
+
+      <section class="section" id="roles" aria-labelledby="roles-title">
+        <Container>
+          <SectionHead index={copy.roles.kicker} title={t(copy.roles.title)} id="roles-title">{t(copy.roles.intro)}</SectionHead>
+          <div class="frame-grid frame-grid--thirds" data-spotlight>
+            {roles.map((role) => (
+              <article class="frame-card">
+                <div class="frame-card__top"><span>{t(role.since)}</span><span>{role.host}</span></div>
+                <h3 class="frame-card__title"><a class="frame-card__link" href={role.href}>{t(role.title)}</a></h3>
+                <p class="frame-card__desc">{t(role.description)}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <ContactSection locale={locale} index="05" />
+    </main>
+    <Footer locale={locale} />
+  </div>
+  <script>
+    import { initGithubLive } from "@/src/scripts/github-live";
+    import { initStems } from "@/src/scripts/stems";
+
+    initStems();
+    initGithubLive();
+  </script>
+</BaseLayout>

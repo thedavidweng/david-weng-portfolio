@@ -9,9 +9,9 @@
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("../../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2");
-  font-weight: 100 900;
+  font-family: "Mona Sans";
+  src: url("../../assets/fonts/mona-sans-latin.woff2") format("woff2");
+  font-weight: 200 900;
   font-style: normal;
   font-display: optional;
 }
@@ -66,7 +66,7 @@
 
 :root {
   --font-display: "Outfit", "display Fallback", system-ui, sans-serif;
-  --font-body: "Manrope", "body Fallback", system-ui, sans-serif;
+  --font-body: "Mona Sans", "body Fallback", system-ui, sans-serif;
   --font-home-display: var(--font-display);
   --font-home-body: var(--font-body);
   --font-home-zh: "Noto Sans SC", "homeZh Fallback", system-ui, sans-serif;

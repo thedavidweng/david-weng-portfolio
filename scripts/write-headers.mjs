@@ -53,6 +53,12 @@ const ASSET_CACHE_RULES = `
 
 /zh/
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/software/
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/zh/software/
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
 `;
 
 /** @returns {string} */

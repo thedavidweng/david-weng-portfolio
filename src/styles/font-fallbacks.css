@@ -11,10 +11,10 @@
 @font-face {
   font-family: "body Fallback";
   src: local("Arial");
-  ascent-override: 106.45%;
-  descent-override: 29.96%;
+  ascent-override: 106.59%;
+  descent-override: 31.29%;
   line-gap-override: 0%;
-  size-adjust: 100.14%;
+  size-adjust: 102.26%;
 }
 
 @font-face {

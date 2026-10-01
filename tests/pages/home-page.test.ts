@@ -6,7 +6,7 @@ test("renders the english homepage with a switch to the chinese route", async ()
   const doc = await renderAstroPage(HomeLayout, { locale: "en" });
   const page = within(doc.body);
   const main = doc.querySelector("#main-content");
-  const hero = doc.querySelector(".hero");
+  const hero = doc.querySelector(".home-hero");
 
   expect(doc.documentElement.getAttribute("lang")).toBe("en");
   expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe(
@@ -62,11 +62,20 @@ test("renders the english homepage with a switch to the chinese route", async ()
   expect(contact).toBeTruthy();
   expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
   expect(within(contact as HTMLElement).getByRole("link", { name: /email me/i })).toBeInTheDocument();
-  expect(within(contact as HTMLElement).getByRole("link", { name: /^home$/i })).toHaveAttribute(
+  expect(within(contact as HTMLElement).getByRole("link", { name: "mail@davidweng.eu.org" })).toHaveAttribute(
     "href",
-    "https://thedavidweng.github.io/"
+    "mailto:mail@davidweng.eu.org"
+  );
+  expect(within(contact as HTMLElement).getByRole("link", { name: "GitHub" })).toHaveAttribute(
+    "href",
+    "https://github.com/thedavidweng"
   );
   expect(page.getByRole("navigation", { name: /main navigation/i })).toBeInTheDocument();
+  expect(page.getByRole("link", { name: /^software$/i })).toHaveAttribute("href", "/software/");
+  expect(doc.querySelector("[data-palette-open]")).toBeTruthy();
+  expect(doc.querySelector("[data-theme-toggle]")).toBeTruthy();
+  expect(doc.querySelector("dialog#palette")).toBeTruthy();
+  expect(doc.querySelector('#projects a[href="/software/"]')).toBeTruthy();
   expect(doc.querySelector(".site-shell--home")).toBeTruthy();
   expect(doc.querySelector(".site-main--home")).toBeTruthy();
   expect(doc.querySelector(".site-header--home")).toBeTruthy();
@@ -76,7 +85,7 @@ test("renders the chinese homepage with a switch back to the english route", asy
   const doc = await renderAstroPage(HomeLayout, { locale: "zh" });
   const page = within(doc.body);
   const main = doc.querySelector("#main-content");
-  const hero = doc.querySelector(".hero");
+  const hero = doc.querySelector(".home-hero");
 
   expect(doc.documentElement.getAttribute("lang")).toBe("zh");
   expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe(
@@ -104,7 +113,7 @@ test("renders the chinese homepage with a switch back to the english route", asy
   expect(page.queryByText(/^03 \/ 联系$/i)).not.toBeInTheDocument();
   expect(page.queryByText(/^适合合作$/i)).not.toBeInTheDocument();
   expect(page.getByText(/视频剪辑、摄影、平面设计。从概念到交付。/i)).toBeInTheDocument();
-  expect(doc.querySelector(".hero.hero--zh")).toBeTruthy();
+  expect(doc.querySelector(".home-hero.home-hero--zh")).toBeTruthy();
 
   const sectionIds = Array.from(
     (main as HTMLElement).querySelectorAll("#top, #projects, #services, #contact")
@@ -131,8 +140,6 @@ test("renders the chinese homepage with a switch back to the english route", asy
   const contact = doc.querySelector("#contact");
   expect(contact).toBeTruthy();
   expect(within(contact as HTMLElement).getByRole("heading", { level: 2 })).toBeInTheDocument();
-  expect(within(contact as HTMLElement).getByRole("link", { name: /主页/i })).toHaveAttribute(
-    "href",
-    "https://thedavidweng.github.io/"
-  );
+  expect(within(contact as HTMLElement).getByRole("link", { name: "GitHub" })).toBeInTheDocument();
+  expect(page.getByRole("link", { name: /^软件$/ })).toHaveAttribute("href", "/zh/software/");
 });

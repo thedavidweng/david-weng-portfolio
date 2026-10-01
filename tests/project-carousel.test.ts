@@ -1,5 +1,5 @@
 import { projects } from "@/content/projects";
-import { buildCarouselProjects } from "@/lib/build-carousel-projects";
+import { buildCarouselProjects, buildSoftwareSlide } from "@/lib/build-carousel-projects";
 import {
   buildProjectCategoryGroups,
   getCategoryBySnap,
@@ -9,6 +9,14 @@ import {
 const orderedProjects = orderProjectsByCategory(buildCarouselProjects(projects));
 
 describe("project carousel grouping", () => {
+  test("leads with the software slide as its own category linking to the software page", () => {
+    const withSoftware = orderProjectsByCategory([...buildCarouselProjects(projects), buildSoftwareSlide()]);
+    const groups = buildProjectCategoryGroups(withSoftware, "zh");
+
+    expect(withSoftware[0]?.href).toEqual({ en: "/software/", zh: "/zh/software/" });
+    expect(groups[0]).toMatchObject({ id: "Software", label: "软件", startIndex: 0, endIndex: 0 });
+  });
+
   test("orders the homepage project rail by explicit category sequence without an all bucket", () => {
     const groups = buildProjectCategoryGroups(orderedProjects, "en");
 

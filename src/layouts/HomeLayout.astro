@@ -4,12 +4,12 @@ import Footer from "@/src/components/Footer.astro";
 import HeroSection from "@/src/components/HeroSection.astro";
 import JsonLd from "@/src/components/JsonLd.astro";
 import ServicesSection from "@/src/components/ServicesSection.astro";
+import SiteHeader from "@/src/components/SiteHeader.astro";
 import BaseLayout from "@/src/layouts/BaseLayout.astro";
-import { Header } from "@/src/islands/Header";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
 import { buildOrganizationSchema } from "@/lib/jsonld";
 import { projects } from "@/content/projects";
-import { buildCarouselProjects } from "@/lib/build-carousel-projects";
+import { buildCarouselProjects, buildSoftwareSlide } from "@/lib/build-carousel-projects";
 import { getLocaleHomePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 
@@ -19,14 +19,14 @@ interface Props {
 
 const { locale } = Astro.props;
 const homePath = getLocaleHomePath(locale);
-const carouselProjects = buildCarouselProjects(projects);
+const carouselProjects = [buildSoftwareSlide(), ...buildCarouselProjects(projects)];
 ---
 
 <BaseLayout locale={locale} canonical={homePath} alternateEn="/" alternateZh="/zh/">
   <JsonLd data={buildOrganizationSchema(locale)} slot="head" />
   <div id="site-content" class={`site-shell site-shell--${locale} site-shell--home`}>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <Header client:load locale={locale} pathname={homePath} />
+    <SiteHeader locale={locale} pathname={homePath} />
     <main class="site-main--home" id="main-content">
       <HeroSection locale={locale} />
       <ProjectsSection client:visible locale={locale} projects={carouselProjects} />
@@ -36,6 +36,9 @@ const carouselProjects = buildCarouselProjects(projects);
     <Footer locale={locale} />
   </div>
   <script>
+    import { initGithubLive } from "@/src/scripts/github-live";
+
+    initGithubLive();
     if (new URLSearchParams(window.location.search).get("mode") === "agent") {
       const locale = document.documentElement.lang === "zh" ? "zh" : "en";
       void import("@/src/islands/AgentModeGate.tsx").then(({ mountAgentModeGate }) =>

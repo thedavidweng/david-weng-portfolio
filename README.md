@@ -5,7 +5,8 @@ Portfolio site of David, focused on visual storytelling, design, content operati
 ## Stack
 
 - Astro 7 (static output)
-- React 19 islands (Header, Projects carousel, project media gallery + `yet-another-react-lightbox` zoom preview)
+- React 19 islands (Projects carousel, project media gallery + `yet-another-react-lightbox` zoom preview)
+- Static Astro header, ⌘K command palette, and light/dark theme via small scripts in `src/scripts/`
 - TypeScript
 - Cloudflare Workers Static Assets (`cf deploy`, assets-only — no Worker script)
 - Vitest + Testing Library

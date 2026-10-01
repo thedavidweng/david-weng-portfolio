@@ -12,7 +12,6 @@ const ALLOWED_COMMENT_UNITS: Record<string, number> = {
   "lib/url.ts": 1,
   "src/islands/AgentModeGate.tsx": 3,
   "src/islands/ArchiveMediaWall.tsx": 1,
-  "src/islands/Header.tsx": 1,
   "src/styles/font-fallbacks.css": 1,
 };
 

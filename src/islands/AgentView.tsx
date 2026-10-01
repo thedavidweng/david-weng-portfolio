@@ -65,6 +65,22 @@ export function AgentView({ locale }: AgentViewProps) {
 
       <hr style={sectionDividerStyle} />
 
+      <section aria-labelledby="software-heading">
+        <h2 id="software-heading">Software</h2>
+        <p>
+          <a href={data.software.url}>{data.software.url}</a>
+        </p>
+        <ul>
+          {[...data.software.projects, ...data.software.tools].map((item) => (
+            <li key={item.name}>
+              <a href={item.url}>{item.name}</a>: {item.description}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <hr style={sectionDividerStyle} />
+
       <section aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
         <ul>

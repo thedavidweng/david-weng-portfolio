@@ -1,8 +1,7 @@
 ---
 import Container from "@/src/components/Container.astro";
-import { contactContent, footerContent, headerContent } from "@/content/site";
+import { contactContent, footerContent } from "@/content/site";
 import { getLocalizedText } from "@/lib/i18n";
-import { SOCIAL_ICON_PATHS } from "@/src/icons";
 import type { Locale } from "@/types/content";
 
 interface Props {
@@ -10,7 +9,6 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-const socialLinksLabel = getLocalizedText(headerContent.socialLinksLabel, locale);
 ---
 
 <footer class="site-footer">
@@ -18,22 +16,9 @@ const socialLinksLabel = getLocalizedText(headerContent.socialLinksLabel, locale
     <div class="site-footer__inner">
       <span>{getLocalizedText(footerContent.copyright, locale)}</span>
       <span>{contactContent.emailDisplay}</span>
-      <div class="site-footer__social" aria-label={socialLinksLabel}>
-        <a aria-label="LinkedIn" class="site-footer__social-link" href={contactContent.linkedinHref} rel="noreferrer" target="_blank">
-          <svg class="site-footer__social-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d={SOCIAL_ICON_PATHS.linkedin} />
-          </svg>
-        </a>
-        <a aria-label="Instagram" class="site-footer__social-link" href={contactContent.instagramHref} rel="noreferrer" target="_blank">
-          <svg class="site-footer__social-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d={SOCIAL_ICON_PATHS.instagram} />
-          </svg>
-        </a>
-        <a aria-label="GitHub" class="site-footer__social-link" href={contactContent.githubHref} rel="noreferrer" target="_blank">
-          <svg class="site-footer__social-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d={SOCIAL_ICON_PATHS.github} />
-          </svg>
-        </a>
+      <div class="site-footer__links">
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/agent">/agent</a>
       </div>
     </div>
   </Container>

@@ -4,7 +4,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 
 ## Coding Conventions
 
-1. **No comments unless absolutely necessary.** Code must self-explain. A comment is justified only when it states a constraint the code cannot express (the `show()`-vs-`showModal()` note in `src/islands/Header.tsx` is the bar to clear). Machine-read directives (JSDoc type annotations, `/// <reference>`, `@ts-expect-error` with reason) are not comments. Enforced in CI by `tests/comment-policy.test.ts` and oxlint (`no-inline-comments`, `no-warning-comments`).
+1. **No comments unless absolutely necessary.** Code must self-explain. A comment is justified only when it states a constraint the code cannot express (a note on a browser quirk that would otherwise be "fixed" back into a bug is the bar to clear). Machine-read directives (JSDoc type annotations, `/// <reference>`, `@ts-expect-error` with reason) are not comments. Enforced in CI by `tests/comment-policy.test.ts` and oxlint (`no-inline-comments`, `no-warning-comments`).
 2. **Rationale goes to `docs/adr/`, not inline.** If a comment would explain *why* a decision was made, write an ADR instead (`NNNN-slug.md`, sequential — see `docs/adr/0001-record-architecture-decisions.md`). Operational knowledge agents need day-to-day belongs in this file.
 3. **Minimize line count without hurting readability.** Prefer deleting code to documenting it; inline single-use abstractions; no code golf — clarity beats brevity when they conflict.
 
@@ -38,7 +38,10 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 | `lib/agent-content.ts` | Hub turning `content/*` into agent-facing data and markdown fragments (`buildAgentData`, `buildAgentEndpointPayload`, `formatServices/Projects/About/Endpoints`) |
 | `lib/responsive-srcset.ts` | `RESPONSIVE_WIDTHS`, `MIN_ORIGINAL_WIDTH` — imported by both the runtime srcset builders and `scripts/generate-responsive-images.mjs` (no manual sync) |
 | `lib/url.ts` | `getHostname` — defensive hostname extraction used by ProjectLayout, ArchiveMediaWall |
-| `src/icons.ts` | Shared SVG path data for social/external-link/close icons (Header, Footer, ArchiveMediaWall, ProjectExternalLinkButton, ProjectMediaLightbox) |
+| `src/icons.ts` | Shared SVG icons: `ICONS` map rendered by `src/components/Icon.astro` (header, palette, contact, software page), plus path constants for ArchiveMediaWall, ProjectExternalLinkButton, ProjectMediaLightbox |
+| `content/software.ts` | `/software/` page (`src/layouts/SoftwareLayout.astro`), agent endpoints (`formatSoftware`, `buildAgentData().software`), `lib/llms-txt.ts`, palette index |
+| `lib/search-index.ts` | Server-built ⌘K palette index embedded as JSON by `src/components/CommandPalette.astro`; the browser only loads `lib/palette-search.ts` |
+| `src/scripts/*.ts` | Plain client scripts: `theme` (light/dark + circular view transition), `palette`, `ui` (copy buttons, frame-card spotlight), `github-live` (homepage status pill and software page), `stems` (software page). See `docs/adr/0008`; visual language in `DESIGN.md` and `docs/adr/0009`. |
 
 There is no dual-maintenance content: `lib/jsonld.ts` derives `knowsAbout` and `sameAs` from `content/site.ts`, and all generators (`lib/llms-txt.ts`, `lib/site-markdown.ts`, `src/islands/AgentView.tsx`) derive services, location, blog URL, and the endpoint list from `content/site.ts` + `lib/site-config.ts`.
 
@@ -79,6 +82,7 @@ There is no dual-maintenance content: `lib/jsonld.ts` derives `knowsAbout` and `
 | `src/pages/zh/index.astro` | Chinese homepage (`/zh/`) |
 | `src/pages/projects/[slug].astro` | English project detail |
 | `src/pages/zh/projects/[slug].astro` | Chinese project detail |
+| `src/pages/software.astro`, `src/pages/zh/software.astro` | Open source software page (`SoftwareLayout`) |
 
 ### React Islands
 

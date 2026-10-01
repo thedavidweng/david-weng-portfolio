@@ -1,5 +1,6 @@
 import { projects } from "@/content/projects";
 import { siteIdentity, heroContent, servicesContent, contactContent, blogUrl } from "@/content/site";
+import { repoUrl, softwareProjects, softwareTools } from "@/content/software";
 import { SITE_URL } from "@/lib/site-config";
 import { formatEndpoints } from "@/lib/agent-content";
 import { PROJECT_CATEGORY_SEQUENCE } from "@/lib/project-carousel";
@@ -39,11 +40,19 @@ Selected work spanning archive collections, published writing, and video project
 
 ${projectSections}
 
+## Software
+
+Open source desktop apps and command line tools: ${SITE_URL}/software/
+
+${softwareProjects.map((p) => `- [${p.repo}](${repoUrl(p.repo)}): ${p.description.en}`).join("\n")}
+- Go command line tools: ${softwareTools.map((tool) => tool.repo).join(", ")}
+
 ## Roles & Responsibilities
 
 - Direction, writing, editing (film)
 - Graphic design, editorial layout, archive curation (client work)
 - Video editing, motion graphics (commissioned video)
+- Desktop apps, command line tools, upstream fixes (software)
 
 ## External Profiles
 

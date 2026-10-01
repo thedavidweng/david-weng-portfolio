@@ -1,31 +1,45 @@
 ---
 import Container from "@/src/components/Container.astro";
-import { aboutContent, contactContent } from "@/content/site";
+import Icon from "@/src/components/Icon.astro";
+import { contactContent } from "@/content/site";
 import { getLocalizedText } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 
 interface Props {
   locale: Locale;
+  index?: string;
 }
 
-const { locale } = Astro.props;
+const { locale, index = "03" } = Astro.props;
+const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
+const mailto = `mailto:${contactContent.email}`;
 ---
 
-<section class="section-shell" id="contact">
+<section class="section" id="contact">
   <Container>
     <div class="contact-hero">
-      <h2 class="contact-hero__title">
-        {getLocalizedText(contactContent.title, locale)}{" "}
-        <span>{getLocalizedText(contactContent.unseenLabel, locale)}</span>
+      <p class="section-head__index">({index})</p>
+      <h2 class="poster contact-hero__title">
+        {t(contactContent.title)}{" "}
+        <span>{t(contactContent.unseenLabel)}</span>
       </h2>
-      <div class="contact-hero__actions">
-        <a class="contact-hero__button contact-hero__button--primary" href={`mailto:${contactContent.email}`}>
-          {getLocalizedText(contactContent.emailLabel, locale)}
-        </a>
-        <a class="contact-hero__button" href={aboutContent.homepageHref}>
-          {getLocalizedText(aboutContent.homepageLabel, locale)}
-        </a>
+      <a class="contact-hero__email" href={mailto}>{contactContent.email}</a>
+      <div class="pill-row contact-hero__actions">
+        <a class="button button--signal" href={mailto}>{t(contactContent.emailLabel)}</a>
+        <button
+          class="button js-only"
+          type="button"
+          data-copy={contactContent.email}
+          data-copied-label={t(contactContent.copiedLabel)}
+        >
+          <Icon name="copy" /><span aria-live="polite">{t(contactContent.copyLabel)}</span>
+        </button>
       </div>
+      <nav class="contact-hero__socials" aria-label={t(contactContent.socialsLabel)}>
+        {contactContent.socials.map((item) => (
+          <a class="contact-hero__social" href={item.href}><Icon name={item.icon} />{item.label}</a>
+        ))}
+      </nav>
     </div>
   </Container>
 </section>

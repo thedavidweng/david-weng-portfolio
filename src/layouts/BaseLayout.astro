@@ -1,10 +1,11 @@
 ---
+import CommandPalette from "@/src/components/CommandPalette.astro";
 import JsonLd from "@/src/components/JsonLd.astro";
 import { siteIdentity } from "@/content/site";
 import { buildPersonSchema, buildWebSiteSchema } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site-config";
 import type { Locale } from "@/types/content";
-import manropeFont from "../../assets/fonts/manrope-latin-wght-normal.woff2?url";
+import monaSansFont from "../../assets/fonts/mona-sans-latin.woff2?url";
 import notoSansSc400Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2?url";
 import notoSansSc700Font from "../../assets/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2?url";
 import outfitFont from "../../assets/fonts/outfit-latin-wght-normal.woff2?url";
@@ -15,6 +16,7 @@ interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  pathname?: string;
   locale?: Locale;
   alternateEn?: string;
   alternateZh?: string;
@@ -25,6 +27,7 @@ const {
   title = "David Weng | Visual Storytelling, Design, and Creative Systems",
   description = "Portfolio of David Weng: video editing, photography, graphic design, and content operations.",
   canonical = "/",
+  pathname = canonical,
   locale = "en",
   alternateEn = "/",
   alternateZh = "/zh/",
@@ -38,8 +41,16 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#070607" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#070607" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f5f1ef" media="(prefers-color-scheme: light)" />
+    <script is:inline>
+      document.documentElement.classList.add("js");
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={`${SITE_URL}${canonical}`} />
@@ -66,15 +77,26 @@ const {
     ) : (
       <>
         <link rel="preload" href={outfitFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
-        <link rel="preload" href={manropeFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
+        <link rel="preload" href={monaSansFont} as="font" type="font/woff2" crossorigin fetchpriority="high" />
       </>
     )}
     <slot name="head" />
   </head>
   <body class={locale === "zh" ? "site-body--zh" : undefined}>
     <slot />
+    <CommandPalette locale={locale} pathname={pathname} />
     <JsonLd data={buildPersonSchema(locale)} />
     <JsonLd data={buildWebSiteSchema(locale)} />
+    <script>
+      import { initPalette } from "@/src/scripts/palette";
+      import { initThemeToggle } from "@/src/scripts/theme";
+      import { initCopyButtons, initSpotlight } from "@/src/scripts/ui";
+
+      initThemeToggle();
+      initPalette();
+      initCopyButtons();
+      initSpotlight();
+    </script>
   </body>
 </html>
 

@@ -1,0 +1,65 @@
+---
+import Icon from "@/src/components/Icon.astro";
+import { footerContent, headerContent, navigationItems, siteIdentity } from "@/content/site";
+import { getLocaleHomePath, getLocalizedText, toLocalePath } from "@/lib/i18n";
+import { resolveNavHref } from "@/lib/search-index";
+import type { Locale } from "@/types/content";
+
+interface Props {
+  locale: Locale;
+  pathname: string;
+}
+
+const { locale, pathname } = Astro.props;
+const t = (value: { en: string; zh: string }) => getLocalizedText(value, locale);
+const homePath = getLocaleHomePath(locale);
+const otherLocale = locale === "en" ? "zh" : "en";
+---
+
+<header class={`site-header${pathname === homePath ? " site-header--home" : ""}`}>
+  <div class="container">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href={homePath}>
+        <span class="site-header__rec" aria-hidden="true"></span>
+        <span class="site-header__title">{siteIdentity.name}</span>
+      </a>
+      <nav class="site-header__nav" aria-label={t(headerContent.navLabel)}>
+        {navigationItems.map((item) => {
+          const href = resolveNavHref(item.href, locale);
+          return (
+            <a class="site-header__nav-link" href={href} aria-current={href === pathname ? "page" : undefined}>
+              {t(item.label)}
+            </a>
+          );
+        })}
+      </nav>
+      <div class="site-header__actions">
+        <a
+          class="site-header__control site-header__locale"
+          href={toLocalePath(pathname, otherLocale)}
+          hreflang={otherLocale}
+          lang={otherLocale}
+          title={t(footerContent.languageName)}
+        >
+          {t(footerContent.languageLabel)}
+        </a>
+        <button
+          class="site-header__control site-header__search js-only"
+          type="button"
+          data-palette-open
+          aria-haspopup="dialog"
+          aria-label={t(headerContent.menuLabel)}
+        >
+          <Icon name="search" class="site-header__search-icon" />
+          <Icon name="menu" class="site-header__menu-icon" />
+          <span class="site-header__search-label">{t(headerContent.searchShortLabel)}</span>
+          <kbd data-shortcut>⌘K</kbd>
+        </button>
+        <button class="site-header__control site-header__theme js-only" type="button" data-theme-toggle aria-label={t(headerContent.themeLabel)}>
+          <Icon name="sun" class="site-header__sun" />
+          <Icon name="moon" class="site-header__moon" />
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
