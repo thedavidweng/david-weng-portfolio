@@ -15,6 +15,14 @@ minimumReleaseAgeExclude:
   - miniflare
   - "@cloudflare/*"
   - "@napi-rs/*"
+  - vite-plus
+  - "@voidzero-dev/*"
+  - oxlint-tsgolint
+  - "@oxlint-tsgolint/*"
+  - oxfmt
+  - "@oxfmt/*"
+  - vitest
+  - "@vitest/*"
 trustPolicy: no-downgrade
 trustPolicyExclude:
   - "chokidar@4.0.3"
@@ -28,3 +36,18 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@1.0.0
+  vitest: 5.0.3
+  vite-plus: 1.0.0
+  "@vitest/coverage-v8": 5.0.3
+overrides:
+  vite@*: "catalog:"
+  vitest@*: "catalog:"
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: "*"
+    vitest: "*"

@@ -8,7 +8,7 @@ Production needs `http→https` and `www→apex` (301) redirects for `davidweng.
 
 ## Decision
 
-- `wrangler.jsonc` stays **assets-only**: no `main`, no `routes`, no `run_worker_first`. `tests/www-redirect.test.ts` pins this.
+- `cloudflare.config.ts` stays **assets-only**: no `entrypoint`, no `routes`, no `runWorkerFirst` (`wrangler.config.ts` only supplies `assetsDirectory` to the bundler). `tests/www-redirect.test.ts` pins this.
 - Redirects are Zone configuration: `always_use_https` plus a `www→apex` Redirect Rule, applied by `pnpm apply:zone` (`scripts/apply-cf-zone-free-tier.mjs`) and checked post-deploy by `pnpm verify:zone`.
 - `assets.html_handling` must stay `"auto-trailing-slash"` (the default): Astro emits directory-style output, and `"none"` 404s every clean URL.
 

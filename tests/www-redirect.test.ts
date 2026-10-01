@@ -1,17 +1,18 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-test("wrangler uses assets-only deploy for free unlimited static requests", () => {
-  const wranglerConfig = readFileSync(join(process.cwd(), "wrangler.jsonc"), "utf8");
+test("cf uses assets-only deploy for free unlimited static requests", () => {
+  const cfConfig = readFileSync(join(process.cwd(), "cloudflare.config.ts"), "utf8");
+  const bundlerConfig = readFileSync(join(process.cwd(), "wrangler.config.ts"), "utf8");
 
-  expect(wranglerConfig).toContain('"directory": "./dist"');
-  expect(wranglerConfig).toContain('"not_found_handling": "404-page"');
-  expect(wranglerConfig).toContain('"html_handling": "auto-trailing-slash"');
-  expect(wranglerConfig).not.toContain('"main"');
-  expect(wranglerConfig).not.toContain("run_worker_first");
-  expect(wranglerConfig).not.toContain('"routes"');
-  expect(wranglerConfig).toContain('"preview_urls": true');
-  expect(wranglerConfig).toContain('"previews": {}');
+  expect(existsSync(join(process.cwd(), "wrangler.jsonc"))).toBe(false);
+  expect(bundlerConfig).toContain('assetsDirectory: "./dist"');
+  expect(cfConfig).toContain('notFoundHandling: "404-page"');
+  expect(cfConfig).toContain('htmlHandling: "auto-trailing-slash"');
+  expect(cfConfig).not.toContain("entrypoint");
+  expect(cfConfig).not.toContain("runWorkerFirst");
+  expect(cfConfig).not.toContain("routes");
+  expect(cfConfig).toContain("previewUrls: true");
 });
 
 test("zone apply keeps Bot Fight Mode off so machine clients can read agent endpoints", () => {
