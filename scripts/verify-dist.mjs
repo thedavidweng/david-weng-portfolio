@@ -19,7 +19,7 @@ function ok(label) {
 
 assert(existsSync(distDir), "dist/ is missing, run pnpm build first");
 
-for (const name of ["app", "next.config.ts", "vite.config.ts", "proxy.ts"]) {
+for (const name of ["app", "next.config.ts", "proxy.ts"]) {
   assert(!existsSync(join(root, name)), `${name} must not exist`);
   ok(`no ${name}`);
 }
@@ -27,13 +27,14 @@ for (const name of ["app", "next.config.ts", "vite.config.ts", "proxy.ts"]) {
 assert(existsSync(join(root, "astro.config.mjs")), "astro.config.mjs must exist");
 ok("astro.config.mjs present");
 
-const wranglerConfig = readFileSync(join(root, "wrangler.jsonc"), "utf8");
-assert(wranglerConfig.includes('"directory": "./dist"'), 'wrangler.jsonc must set assets.directory to "./dist"');
-assert(wranglerConfig.includes('"not_found_handling": "404-page"'), 'wrangler.jsonc must set assets.not_found_handling to "404-page"');
-assert(!wranglerConfig.includes('"main"'), "wrangler.jsonc must use assets-only deploy (no main worker script)");
-assert(!wranglerConfig.includes("run_worker_first"), "wrangler.jsonc must not set run_worker_first (static assets are free/unlimited)");
-assert(wranglerConfig.includes('"previews": {}'), 'wrangler.jsonc must include an empty previews block for wrangler preview');
-ok("wrangler Workers static assets config");
+const cfConfig = readFileSync(join(root, "cloudflare.config.ts"), "utf8");
+assert(cfConfig.includes('notFoundHandling: "404-page"'), 'cloudflare.config.ts must set assets.notFoundHandling to "404-page"');
+assert(cfConfig.includes('htmlHandling: "auto-trailing-slash"'), 'cloudflare.config.ts must set assets.htmlHandling to "auto-trailing-slash"');
+assert(!cfConfig.includes("entrypoint"), "cloudflare.config.ts must use assets-only deploy (no worker entrypoint)");
+assert(!cfConfig.includes("runWorkerFirst"), "cloudflare.config.ts must not set runWorkerFirst (static assets are free/unlimited)");
+const bundlerConfig = readFileSync(join(root, "wrangler.config.ts"), "utf8");
+assert(bundlerConfig.includes('assetsDirectory: "./dist"'), 'wrangler.config.ts must set assetsDirectory to "./dist"');
+ok("cf Workers static assets config");
 
 const headersPath = join(distDir, "_headers");
 assert(existsSync(headersPath), "dist/_headers is missing");

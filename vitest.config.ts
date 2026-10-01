@@ -1,10 +1,10 @@
-/// <reference types="vitest" />
+/// <reference types="vite-plus/test" />
 import { getViteConfig } from "astro/config";
 import path from "node:path";
 
 export default getViteConfig({
   resolve: {
-    alias: { "@": path.resolve(__dirname, ".") }
+    alias: { "@": path.resolve(__dirname, ".") },
   },
   test: {
     globals: true,
@@ -18,17 +18,17 @@ export default getViteConfig({
           name: "unit",
           environment: "jsdom",
           include: ["tests/**/*.test.{ts,tsx}"],
-          exclude: ["tests/pages/**"]
-        }
+          exclude: ["tests/pages/**"],
+        },
       },
       {
         extends: true,
         test: {
           name: "pages",
           environment: "node",
-          include: ["tests/pages/**/*.test.{ts,tsx}"]
-        }
-      }
+          include: ["tests/pages/**/*.test.{ts,tsx}"],
+        },
+      },
     ],
     coverage: {
       provider: "v8",
@@ -40,8 +40,8 @@ export default getViteConfig({
         "**/*.d.ts",
         "**/*.config.*",
         "**/vitest.setup.ts",
-        "tests/helpers/**"
-      ]
-    }
-  }
+        "tests/helpers/**",
+      ],
+    },
+  },
 });
