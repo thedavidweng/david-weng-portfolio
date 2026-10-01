@@ -19,7 +19,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const homePath = getLocaleHomePath(locale);
-const carouselProjects = [...buildCarouselProjects(projects), buildSoftwareSlide()];
+const carouselProjects = [buildSoftwareSlide(), ...buildCarouselProjects(projects)];
 ---
 
 <BaseLayout locale={locale} canonical={homePath} alternateEn="/" alternateZh="/zh/">

@@ -9,12 +9,12 @@ import {
 const orderedProjects = orderProjectsByCategory(buildCarouselProjects(projects));
 
 describe("project carousel grouping", () => {
-  test("appends the software slide as its own category linking to the software page", () => {
-    const withSoftware = orderProjectsByCategory([buildSoftwareSlide(), ...buildCarouselProjects(projects)]);
+  test("leads with the software slide as its own category linking to the software page", () => {
+    const withSoftware = orderProjectsByCategory([...buildCarouselProjects(projects), buildSoftwareSlide()]);
     const groups = buildProjectCategoryGroups(withSoftware, "zh");
 
-    expect(withSoftware.at(-1)?.href).toEqual({ en: "/software/", zh: "/zh/software/" });
-    expect(groups.at(-1)).toMatchObject({ id: "Software", label: "软件", endIndex: withSoftware.length - 1 });
+    expect(withSoftware[0]?.href).toEqual({ en: "/software/", zh: "/zh/software/" });
+    expect(groups[0]).toMatchObject({ id: "Software", label: "软件", startIndex: 0, endIndex: 0 });
   });
 
   test("orders the homepage project rail by explicit category sequence without an all bucket", () => {

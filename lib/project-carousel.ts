@@ -1,7 +1,7 @@
 import { getLocalizedText } from "@/lib/i18n";
 import type { CarouselProjectItem, Locale } from "@/types/content";
 
-export const PROJECT_CATEGORY_SEQUENCE = ["Client", "Film", "Video", "Writing", "Software"] as const;
+export const PROJECT_CATEGORY_SEQUENCE = ["Software", "Client", "Film", "Video", "Writing"] as const;
 
 type ProjectCategoryId = (typeof PROJECT_CATEGORY_SEQUENCE)[number];
 
