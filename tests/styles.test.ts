@@ -10,6 +10,14 @@ test("project card title styling keeps letter-spacing stable without block highl
   expect(css).not.toContain(".project-card:focus-visible .project-card__title");
 });
 
+test("project card meta stays readable on light covers", () => {
+  const metaBlock = css.match(/\.project-card__meta span\s*\{[^}]+\}/g)?.at(-1) ?? "";
+
+  expect(metaBlock).toContain("border-color: color-mix(in srgb, var(--paper) 52%, transparent);");
+  expect(metaBlock).toContain("background: rgba(0, 0, 0, 0.68);");
+  expect(metaBlock).toContain("color: var(--paper);");
+});
+
 test("project card covers use a softened default filter and sharpen slightly on hover", () => {
   const source = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
 
