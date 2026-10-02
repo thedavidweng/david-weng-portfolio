@@ -27,11 +27,10 @@ test("renders a responsive reel with legacy project content and filtering contro
   expect(screen.getByRole("toolbar", { name: /project categories/i })).toBeInTheDocument();
   expect(screen.getByRole("region", { name: /projects carousel/i })).toBeInTheDocument();
   expect(screen.queryByRole("button", { name: /^all$/i })).not.toBeInTheDocument();
-  expect(screen.getAllByRole("button").slice(0, 4).map((button) => button.textContent)).toEqual([
+  expect(screen.getAllByRole("button").slice(0, 3).map((button) => button.textContent)).toEqual([
     "Client",
     "Film",
-    "Video",
-    "Writing"
+    "Video"
   ]);
   expect(screen.getByRole("button", { name: /next projects/i })).toBeInTheDocument();
   expect(
@@ -52,17 +51,12 @@ test("renders a responsive reel with legacy project content and filtering contro
     })
   ).toBeInTheDocument();
 
-  await user.click(screen.getByRole("button", { name: /writing/i }));
-
-  await waitFor(() => {
-    expect(screen.getByRole("button", { name: /writing/i })).toHaveClass("filter-chip--active");
-    expect(screen.getByRole("button", { name: /writing/i })).toHaveAttribute("aria-pressed", "true");
-  });
+  expect(screen.queryByRole("button", { name: /^writing$/i })).not.toBeInTheDocument();
   expect(
-    screen.getByRole("link", {
+    screen.queryByRole("link", {
       name: /open project transcending barriers/i
     })
-  ).toBeInTheDocument();
+  ).not.toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /^video$/i }));
 
@@ -106,11 +100,10 @@ test("renders localized labels and links in chinese", async () => {
   expect(screen.getByRole("region", { name: /项目轮播/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^客户$/i })).toHaveClass("filter-chip--active");
   expect(screen.queryByRole("button", { name: /^全部$/i })).not.toBeInTheDocument();
-  expect(screen.getAllByRole("button").slice(0, 4).map((button) => button.textContent)).toEqual([
+  expect(screen.getAllByRole("button").slice(0, 3).map((button) => button.textContent)).toEqual([
     "客户",
     "电影",
-    "视频",
-    "写作"
+    "视频"
   ]);
   expect(screen.getByRole("button", { name: /下一组项目/i })).toBeInTheDocument();
   expect(
@@ -129,10 +122,10 @@ test("renders localized labels and links in chinese", async () => {
     screen.queryByRole("link", {
       name: /open project transcending barriers/i
     })
-  ).toBeInTheDocument();
+  ).not.toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^电影$/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /^视频$/i })).toBeInTheDocument();
-  expect(screen.getByRole("button", { name: /^写作$/i })).toBeInTheDocument();
+  expect(screen.queryByRole("button", { name: /^写作$/i })).not.toBeInTheDocument();
 
   await user.click(screen.getByRole("button", { name: /^视频$/i }));
 

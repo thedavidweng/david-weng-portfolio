@@ -45,9 +45,6 @@ const ASSET_CACHE_RULES = `
 /projects/personal-video/*
   Cache-Control: public, max-age=31536000, immutable
 
-/projects/research-publication/*
-  Cache-Control: public, max-age=31536000, immutable
-
 /
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
 

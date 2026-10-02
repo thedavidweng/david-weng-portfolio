@@ -73,12 +73,12 @@ test("active category follows native horizontal scroll position", async () => {
     expect(videoButton).toHaveAttribute("aria-pressed", "true");
   });
 
-  viewport.scrollLeft = 2560;
+  viewport.scrollLeft = 2240;
   fireEvent.scroll(viewport);
   await waitFor(() => {
-    const writingButton = screen.getByRole("button", { name: /^writing$/i });
+    const videoButton = screen.getByRole("button", { name: /^video$/i });
 
-    expect(writingButton).toHaveClass("filter-chip--active");
-    expect(writingButton).toHaveAttribute("aria-pressed", "true");
+    expect(videoButton).toHaveClass("filter-chip--active");
+    expect(videoButton).toHaveAttribute("aria-pressed", "true");
   });
 });

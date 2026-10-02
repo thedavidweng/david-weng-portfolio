@@ -52,44 +52,6 @@ export const projects: ProjectItem[] = [
     media: []
   },
   {
-    slug: "transcending-barriers",
-    detailLayout: "external-handoff",
-    title: localized(
-      'Transcending Barriers: Viewing Practices of "Games of Thrones" in China, India, and Russia',
-      'Transcending Barriers: Viewing Practices of "Games of Thrones" in China, India, and Russia'
-    ),
-    code: "[RESEARCH-01]",
-    posterWord: "BARRIERS",
-    category: localized("Writing", "写作"),
-    year: "2024",
-    projectType: localized("Published Article", "已发表文章"),
-    duration: localized("Beacon: Journal of Media Studies", "Beacon: Journal of Media Studies"),
-    coverLabel: localized("Research / Publication", "研究 / 出版"),
-    coverPalette: ["#121515", "#46595b", "#dfe9ea"],
-    coverImage: "",
-    coverAlt: localized(
-      "Article cover for Transcending Barriers publication",
-      "《跨越边界》文章封面图"
-    ),
-    teaser: localized(
-      "Published piece on transnational viewing practices and media circulation.",
-      "关于跨国观看实践与媒介流通的已发表研究文章。"
-    ),
-    summary: localized(
-      "Examines how audiences in China, India, and Russia engaged with Game of Thrones across different media environments.",
-      "讨论中国、印度与俄罗斯观众如何在不同媒介环境中观看《权力的游戏》。"
-    ),
-    roles: localized(["Research", "Writing", "Publication"], ["研究", "写作", "出版"]),
-    highlights: localized([], []),
-    externalLinks: [
-      {
-        label: localized("Read on Beacon", "前往 Beacon 阅读"),
-        href: "https://beaconjournal.arts.ubc.ca/transcending-barriers-viewing-practices-of-games-of-thrones-in-china-india-and-russia/"
-      }
-    ],
-    media: []
-  },
-  {
     slug: "fraud",
     film: fraudFilmDetails,
     title: localized("FRAÜD", "信途"),

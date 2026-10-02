@@ -5,7 +5,6 @@ import { theUpgradeAiArchive } from "@/content/archives/theupgrade-ai";
 import { personalArchive } from "@/content/archives/personal";
 import { personalVideoArchive } from "@/content/archives/personal-video";
 import { clientWorkArchive } from "@/content/archives/client-work";
-import { researchPublicationArchive } from "@/content/archives/research-publication";
 import { filmVideoArchive } from "@/content/archives/film-video";
 
 const archiveCollections: Record<ArchiveGroup, ArchiveCollection> = {
@@ -15,7 +14,6 @@ const archiveCollections: Record<ArchiveGroup, ArchiveCollection> = {
   personal: personalArchive,
   "personal-video": personalVideoArchive,
   "client-work": clientWorkArchive,
-  "research-publication": researchPublicationArchive,
   "film-video": filmVideoArchive
 };
 

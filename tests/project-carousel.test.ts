@@ -23,14 +23,12 @@ describe("project carousel grouping", () => {
     expect(groups.map((group) => group.id)).toEqual([
       "Client",
       "Film",
-      "Video",
-      "Writing"
+      "Video"
     ]);
     expect(groups.map((group) => group.label)).toEqual([
       "Client",
       "Film",
-      "Video",
-      "Writing"
+      "Video"
     ]);
     expect(orderedProjects.map((project) => project.category.en)).toEqual([
       "Client",
@@ -40,8 +38,7 @@ describe("project carousel grouping", () => {
       "Film",
       "Film",
       "Video",
-      "Video",
-      "Writing"
+      "Video"
     ]);
   });
 
@@ -51,6 +48,6 @@ describe("project carousel grouping", () => {
     expect(getCategoryBySnap(groups, 0)?.label).toBe("客户");
     expect(getCategoryBySnap(groups, 3)?.label).toBe("电影");
     expect(getCategoryBySnap(groups, 6)?.label).toBe("视频");
-    expect(getCategoryBySnap(groups, 8)?.label).toBe("写作");
+    expect(getCategoryBySnap(groups, 7)?.label).toBe("视频");
   });
 });

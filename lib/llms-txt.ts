@@ -36,7 +36,7 @@ ${serviceLines}
 
 ## Projects
 
-Selected work spanning archive collections, published writing, and video projects:
+Selected work spanning archive collections, films, and video projects:
 
 ${projectSections}
 

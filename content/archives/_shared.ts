@@ -8,7 +8,6 @@ export const archiveGroups: ArchiveGroup[] = [
   "personal",
   "personal-video",
   "client-work",
-  "research-publication",
   "film-video"
 ];
 

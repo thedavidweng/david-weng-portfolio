@@ -6,7 +6,6 @@ import { bcAiEcosystemArchive } from "@/content/archives/bc-ai-ecosystem";
 import { theUpgradeAiArchive } from "@/content/archives/theupgrade-ai";
 import { personalArchive } from "@/content/archives/personal";
 import { clientWorkArchive } from "@/content/archives/client-work";
-import { researchPublicationArchive } from "@/content/archives/research-publication";
 import { filmVideoArchive } from "@/content/archives/film-video";
 import { personalVideoArchive } from "@/content/archives/personal-video";
 import { legacyArchiveMap } from "@/content/archives/legacy-map";
@@ -19,7 +18,6 @@ test("defines the approved archive groups, collections, and directory skeleton",
     "personal",
     "personal-video",
     "client-work",
-    "research-publication",
     "film-video"
   ]);
   expect(isArchiveGroup("bc-ai-ecosystem")).toBe(true);
@@ -36,7 +34,6 @@ test("defines the approved archive groups, collections, and directory skeleton",
   expect(theUpgradeAiArchive.group).toBe("theupgrade-ai");
   expect(personalArchive.group).toBe("personal");
   expect(clientWorkArchive.group).toBe("client-work");
-  expect(researchPublicationArchive.group).toBe("research-publication");
   expect(filmVideoArchive.group).toBe("film-video");
   expect(personalVideoArchive.group).toBe("personal-video");
 
@@ -76,7 +73,7 @@ test("classifies current legacy projects into the approved archive groups", () =
   expect(legacyArchiveMap["beaty-biodiversity-museum-annual-report-2022-2023"]).toBe(
     "beaty-biodiversity-museum"
   );
-  expect(legacyArchiveMap["transcending-barriers"]).toBe("research-publication");
+  expect(legacyArchiveMap["transcending-barriers"]).toBeUndefined();
   expect(legacyArchiveMap["davids-blog"]).toBe("personal");
   expect(legacyArchiveMap["fraud"]).toBe("film-video");
   expect(legacyArchiveMap["the-pills"]).toBe("film-video");

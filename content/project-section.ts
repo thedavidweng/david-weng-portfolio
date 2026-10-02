@@ -4,8 +4,8 @@ export const projectSectionContent = {
   eyebrow: localized("02 / Archive", "02 / 档案"),
   title: localized("Projects", "项目"),
   description: localized(
-    "Current work spanning open source software, archive collections, films, video, and published writing.",
-    "当前作品包含开源软件、档案集合、电影、视频与已发表文章。"
+    "Current work spanning open source software, archive collections, films, and video.",
+    "当前作品包含开源软件、档案集合、电影与视频。"
   ),
   filtersLabel: localized("Project categories", "项目分类"),
   carouselLabel: localized("Projects carousel", "项目轮播"),

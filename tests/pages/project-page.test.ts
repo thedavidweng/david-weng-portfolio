@@ -130,22 +130,6 @@ test("renders dedicated film hero blocks in intro-poster-credits order for mobil
   expect(posterBlock?.compareDocumentPosition(creditsBlock as Node)).toBe(4);
 });
 
-test("renders article projects as branded handoff pages to the published Beacon article", async () => {
-  const { doc, page } = await renderProjectPage("transcending-barriers", "en");
-
-  expect(page.getByRole("heading", { name: /Transcending Barriers/i })).toBeInTheDocument();
-  expect(doc.querySelector(".project-page--external-handoff")).toBeTruthy();
-  expect(doc.querySelector(".project-hero__cover")).toBeFalsy();
-  expect(page.getByText(/Published in Beacon: Journal of Media Studies/i)).toBeInTheDocument();
-  expect(page.getByRole("heading", { name: /^Beacon: Journal of Media Studies$/i })).toBeInTheDocument();
-  expect(page.getByRole("link", { name: /Read on Beacon/i })).toHaveAttribute(
-    "href",
-    "https://beaconjournal.arts.ubc.ca/transcending-barriers-viewing-practices-of-games-of-thrones-in-china-india-and-russia/"
-  );
-  expect(page.queryByRole("heading", { name: /Why it matters/i })).not.toBeInTheDocument();
-  expect(page.queryByRole("heading", { name: /^Archives$/i })).not.toBeInTheDocument();
-});
-
 test("renders archive-backed BC + AI Ecosystem media with event photo credit", async () => {
   const { doc, page } = await renderProjectPage("designs-for-bc-ai-ecosystem", "en");
 

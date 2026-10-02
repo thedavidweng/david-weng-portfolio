@@ -7,7 +7,6 @@ export type ArchiveGroup =
   | "personal"
   | "personal-video"
   | "client-work"
-  | "research-publication"
   | "film-video";
 
 export type LocalizedValue<T> = {
