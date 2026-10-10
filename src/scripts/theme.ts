@@ -4,7 +4,7 @@ const prefersDark = matchMedia("(prefers-color-scheme: dark)");
 
 export const isDark = () => (root.dataset.theme ? root.dataset.theme === "dark" : prefersDark.matches);
 
-export function syncThemeColor(theme: string) {
+function syncThemeColor(theme: string) {
   for (const meta of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) {
     meta.media = meta.dataset.scheme === theme ? "all" : "not all";
   }
