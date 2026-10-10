@@ -22,6 +22,33 @@ jobs:
     timeout-minutes: 5
 
     steps:
+      - name: Verify private mirror destination
+        env:
+          MIRROR_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PYTHON'
+          import json
+          import os
+          import urllib.parse
+          import urllib.request
+
+          repository = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["MIRROR_TOKEN"]
+          if not token:
+              raise SystemExit("Mirror authentication is required")
+          project = urllib.parse.quote(repository, safe="")
+          request = urllib.request.Request(
+              "https://gitlab.com/api/v4/projects/" + project,
+              headers={"PRIVATE-TOKEN": token},
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              destination = json.load(response)
+          if destination["visibility"] != "private":
+              raise SystemExit("Mirror destination must be private")
+          print("Authenticated private mirror destination verified")
+          PYTHON
+
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -35,10 +62,6 @@ jobs:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: |
           set -euo pipefail
-          if [ -z "${GITLAB_TOKEN:-}" ]; then
-            echo "GITLAB_TOKEN is not available in this context; skipping."
-            exit 0
-          fi
           gitlab_url="https://oauth2:${GITLAB_TOKEN}@gitlab.com/thedavidweng/david-weng-portfolio.git"
           if git remote get-url gitlab >/dev/null 2>&1; then
             git remote set-url gitlab "$gitlab_url"

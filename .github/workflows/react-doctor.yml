@@ -18,12 +18,14 @@ concurrency:
 
 jobs:
   react-doctor:
+    timeout-minutes: 60
     runs-on: [self-hosted, linux, x64]
     steps:
       # fetch-depth: 0 required — a shallow checkout has no merge base, so PR runs
       # would report pre-existing issues instead of only newly introduced ones.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          persist-credentials: false
           fetch-depth: 0
 
-      - uses: millionco/react-doctor@013f7373f91a3b9e68bd1dc7d4d354f4b041b117 # v2.2.9
+      - uses: millionco/react-doctor@673ce802a375eeb4c3c5cb9a96d21eaeb7eafd93 # v2.3.1
