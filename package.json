@@ -53,7 +53,7 @@
     "typescript": "6.0.3",
     "vite-plus": "catalog:",
     "vitest": "catalog:",
-    "wrangler": "4.145.0"
+    "wrangler": "4.149.0"
   },
   "packageManager": "pnpm@12.8.1"
 }
