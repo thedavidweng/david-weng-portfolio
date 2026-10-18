@@ -2,7 +2,7 @@ name: React Doctor
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
   push:
     branches: ["main"]
 
@@ -10,17 +10,18 @@ permissions: {}
 
 concurrency:
   group: react-doctor-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   react-doctor:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
     permissions:
       contents: read
       pull-requests: write
       issues: write
       statuses: write
-    timeout-minutes: 60
-    runs-on: [self-hosted, linux, x64]
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
     steps:
       # fetch-depth: 0 required — a shallow checkout has no merge base, so PR runs
       # would report pre-existing issues instead of only newly introduced ones.
