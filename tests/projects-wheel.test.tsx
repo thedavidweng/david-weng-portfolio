@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { Suspense, startTransition } from "react";
+import { Suspense, lazy, startTransition } from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
 import { projects } from "@/content/projects";
@@ -9,15 +9,10 @@ import { buildCarouselProjects } from "@/lib/build-carousel-projects";
 const carouselProjects = buildCarouselProjects(projects);
 import { installNativeScrollLayout } from "@/tests/helpers/projects-scroll";
 
-const pendingReplacement = new Promise<never>(() => {});
-
-function SuspendReplacement({ onSuspend }: { onSuspend: () => void }): never {
-  onSuspend();
-  throw pendingReplacement;
-}
+const loadReplacement = vi.fn(() => new Promise<{ default: () => null }>(() => {}));
+const SuspendReplacement = lazy(loadReplacement);
 
 test("resize keeps the committed carousel usable while a replacement render suspends", async () => {
-  const onSuspend = vi.fn();
   const { container, rerender } = render(
     <Suspense fallback="Loading projects">
       <ProjectsSection locale="en" projects={carouselProjects} />
@@ -28,10 +23,10 @@ test("resize keeps the committed carousel usable while a replacement render susp
   startTransition(() => rerender(
     <Suspense fallback="Loading projects">
       <ProjectsSection locale="en" projects={carouselProjects.slice(0, 1)} />
-      <SuspendReplacement onSuspend={onSuspend} />
+      <SuspendReplacement />
     </Suspense>,
   ));
-  await waitFor(() => expect(onSuspend).toHaveBeenCalled());
+  await waitFor(() => expect(loadReplacement).toHaveBeenCalled());
   expect(screen.queryByText("Loading projects")).not.toBeInTheDocument();
 
   fireEvent(window, new Event("resize"));
