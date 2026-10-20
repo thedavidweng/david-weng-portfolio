@@ -2,10 +2,12 @@ import {
   StrictMode,
   useCallback,
   useEffect,
+  useEffectEvent,
   useLayoutEffect,
   useMemo,
   useRef,
   useState,
+  type Ref,
 } from "react";
 import { PortfolioImage } from "@/src/islands/_shared/PortfolioImage";
 import { projectSectionContent } from "@/content/project-section";
@@ -40,10 +42,10 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
   const slideRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const slideOffsetsRef = useRef<number[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
-  const prevCategoryKeyRef = useRef(categoryKey);
+  const [prevCategoryKey, setPrevCategoryKey] = useState(categoryKey);
 
-  if (categoryKey !== prevCategoryKeyRef.current) {
-    prevCategoryKeyRef.current = categoryKey;
+  if (categoryKey !== prevCategoryKey) {
+    setPrevCategoryKey(categoryKey);
 
     if (activeIndex !== 0) {
       setActiveIndex(0);
@@ -95,12 +97,6 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
     );
   }, [orderedProjects.length]);
 
-  const measureSlidesRef = useRef(measureSlideOffsets);
-  measureSlidesRef.current = () => {
-    measureSlideOffsets();
-    scheduleScrollSyncRef.current();
-  };
-
   const scrollToIndex = useCallback(
     (index: number, behavior: ScrollBehavior = "smooth") => {
       const viewport = viewportRef.current;
@@ -144,6 +140,8 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
     }
   }, [categoryKey, measureSlideOffsets]);
 
+  const measureOnResize = useEffectEvent(measureSlideOffsets);
+
   useEffect(() => {
     const viewport = viewportRef.current;
 
@@ -167,7 +165,10 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
     scheduleScrollSyncRef.current = scheduleScrollSync;
 
     const handleScroll = () => scheduleScrollSync();
-    const handleResize = () => measureSlidesRef.current();
+    const handleResize = () => {
+      measureOnResize();
+      scheduleScrollSync();
+    };
 
     viewport.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleResize);
@@ -283,56 +284,15 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
             >
               <div className="projects__reel">
                 {orderedProjects.map((project, index) => (
-                  <a
+                  <ProjectCard
                     key={project.slug}
-                    aria-label={`Open project ${getLocalizedText(project.title, locale)}`}
-                    className="project-card projects__slide signal-panel"
-                    href={project.href ? getLocalizedText(project.href, locale) : getProjectPath(locale, project.slug)}
+                    index={index}
+                    locale={locale}
+                    project={project}
                     ref={(node) => {
                       slideRefs.current[index] = node;
                     }}
-                    style={{
-                      ["--project-cover-palette" as string]: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`,
-                    }}
-                  >
-                    <div aria-hidden="true" className="project-card__backdrop">
-                      {project.coverImage ? (
-                        <PortfolioImage
-                          alt=""
-                          className="project-card__image"
-                          fill
-                          priority={index === 0}
-                          fetchPriority={index === 0 ? "high" : "low"}
-                          sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
-                          src={project.coverImage}
-                          width={project.coverWidth}
-                        />
-                      ) : null}
-                    </div>
-                    <div aria-hidden="true" className="project-card__word">
-                      {project.posterWord}
-                    </div>
-                    <div className="project-card__content">
-                      <div className="project-card__meta">
-                        <span>{project.code}</span>
-                        <span>
-                          {getLocalizedText(project.category, locale)}
-                        </span>
-                        <span>{project.year}</span>
-                      </div>
-                      <h3 className="project-card__title">
-                        {getLocalizedText(project.title, locale)}
-                      </h3>
-                      <p className="project-card__summary">
-                        {getLocalizedText(project.teaser, locale)}
-                      </p>
-                      <div className="project-card__footer">
-                        <span>
-                          {getLocalizedText(project.coverLabel, locale)}
-                        </span>
-                      </div>
-                    </div>
-                  </a>
+                  />
                 ))}
               </div>
             </section>
@@ -340,5 +300,67 @@ export function ProjectsSection({ locale, projects }: ProjectsSectionProps) {
         </div>
       </section>
     </StrictMode>
+  );
+}
+
+function ProjectCard({
+  index,
+  locale,
+  project,
+  ref,
+}: {
+  index: number;
+  locale: Locale;
+  project: CarouselProjectItem;
+  ref: Ref<HTMLAnchorElement>;
+}) {
+  return (
+    <a
+      aria-label={`Open project ${getLocalizedText(project.title, locale)}`}
+      className="project-card projects__slide signal-panel"
+      href={project.href ? getLocalizedText(project.href, locale) : getProjectPath(locale, project.slug)}
+      ref={ref}
+      style={{
+        ["--project-cover-palette" as string]: `linear-gradient(145deg, ${project.coverPalette[0]}, ${project.coverPalette[1]} 58%, ${project.coverPalette[2]})`,
+      }}
+    >
+      <div aria-hidden="true" className="project-card__backdrop">
+        {project.coverImage ? (
+          <PortfolioImage
+            alt=""
+            className="project-card__image"
+            fill
+            priority={index === 0}
+            fetchPriority={index === 0 ? "high" : "low"}
+            sizes="(max-width: 760px) 82vw, (max-width: 1320px) 31vw, 388px"
+            src={project.coverImage}
+            width={project.coverWidth}
+          />
+        ) : null}
+      </div>
+      <div aria-hidden="true" className="project-card__word">
+        {project.posterWord}
+      </div>
+      <div className="project-card__content">
+        <div className="project-card__meta">
+          <span>{project.code}</span>
+          <span>
+            {getLocalizedText(project.category, locale)}
+          </span>
+          <span>{project.year}</span>
+        </div>
+        <h3 className="project-card__title">
+          {getLocalizedText(project.title, locale)}
+        </h3>
+        <p className="project-card__summary">
+          {getLocalizedText(project.teaser, locale)}
+        </p>
+        <div className="project-card__footer">
+          <span>
+            {getLocalizedText(project.coverLabel, locale)}
+          </span>
+        </div>
+      </div>
+    </a>
   );
 }
