@@ -19,6 +19,10 @@ test("resize keeps the committed carousel usable while a replacement render susp
     </Suspense>,
   );
   const { scrollTo } = installNativeScrollLayout(container);
+  const video = screen.getByRole("button", { name: /^video$/i });
+  fireEvent.click(video);
+  expect(video).toHaveAttribute("aria-pressed", "true");
+  expect(scrollTo).toHaveBeenCalledTimes(1);
 
   startTransition(() => rerender(
     <Suspense fallback="Loading projects">
@@ -28,10 +32,15 @@ test("resize keeps the committed carousel usable while a replacement render susp
   ));
   await waitFor(() => expect(loadReplacement).toHaveBeenCalled());
   expect(screen.queryByText("Loading projects")).not.toBeInTheDocument();
+  expect(container.querySelectorAll(".projects__slide")).toHaveLength(carouselProjects.length);
+  expect(video).toHaveAttribute("aria-pressed", "true");
 
   fireEvent(window, new Event("resize"));
-  fireEvent.click(screen.getByRole("button", { name: /^video$/i }));
+  expect(video).toHaveAttribute("aria-pressed", "true");
+  expect(scrollTo).toHaveBeenCalledTimes(1);
+  fireEvent.click(video);
 
+  expect(scrollTo).toHaveBeenCalledTimes(2);
   expect(scrollTo).toHaveBeenLastCalledWith({ behavior: "smooth", left: 1920 });
 });
 
