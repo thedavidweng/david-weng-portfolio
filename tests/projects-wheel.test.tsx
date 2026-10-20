@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { Suspense, startTransition } from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
 import { projects } from "@/content/projects";
@@ -7,6 +8,49 @@ import { buildCarouselProjects } from "@/lib/build-carousel-projects";
 
 const carouselProjects = buildCarouselProjects(projects);
 import { installNativeScrollLayout } from "@/tests/helpers/projects-scroll";
+
+const pendingReplacement = new Promise<never>(() => {});
+
+function SuspendReplacement({ onSuspend }: { onSuspend: () => void }): never {
+  onSuspend();
+  throw pendingReplacement;
+}
+
+test("resize keeps the committed carousel usable while a replacement render suspends", async () => {
+  const onSuspend = vi.fn();
+  const { container, rerender } = render(
+    <Suspense fallback="Loading projects">
+      <ProjectsSection locale="en" projects={carouselProjects} />
+    </Suspense>,
+  );
+  const { scrollTo } = installNativeScrollLayout(container);
+
+  startTransition(() => rerender(
+    <Suspense fallback="Loading projects">
+      <ProjectsSection locale="en" projects={carouselProjects.slice(0, 1)} />
+      <SuspendReplacement onSuspend={onSuspend} />
+    </Suspense>,
+  ));
+  await waitFor(() => expect(onSuspend).toHaveBeenCalled());
+  expect(screen.queryByText("Loading projects")).not.toBeInTheDocument();
+
+  fireEvent(window, new Event("resize"));
+  fireEvent.click(screen.getByRole("button", { name: /^video$/i }));
+
+  expect(scrollTo).toHaveBeenLastCalledWith({ behavior: "smooth", left: 1920 });
+});
+
+test("a committed category replacement resets navigation to its first slide", () => {
+  const { container, rerender } = render(<ProjectsSection locale="en" projects={carouselProjects} />);
+  const { viewport } = installNativeScrollLayout(container);
+  fireEvent.click(screen.getByRole("button", { name: /^video$/i }));
+
+  rerender(<ProjectsSection locale="en" projects={carouselProjects.slice(0, 1)} />);
+
+  expect(viewport.scrollLeft).toBe(0);
+  expect(screen.getByRole("button", { name: /previous projects/i })).toBeDisabled();
+  expect(screen.getByRole("button", { name: /next projects/i })).toBeDisabled();
+});
 
 test("projects section no longer imports embla or intercepts wheel gestures directly", () => {
   const source = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
