@@ -58,6 +58,15 @@ test("archive media wall renders credit, YouTube, and generic overlay links", as
   expect(within(lightbox).getByRole("img", { name: /April meetup slides/i })).toBeInTheDocument();
 });
 
+test("archive media wall does not treat lookalike hosts as YouTube", () => {
+  const items: ProjectMediaItem[] = [{ ...archiveItems[1], href: "https://evilyoutube.com/watch?v=launch-video" }];
+
+  render(<ArchiveMediaWall locale="en" items={items} {...wallLabels} />);
+
+  expect(screen.queryAllByRole("link", { name: /YouTube/i })).toHaveLength(0);
+  expect(screen.getAllByRole("link", { name: /^Open/i }).length).toBeGreaterThan(0);
+});
+
 test("archive media wall falls back to the static album layout without ResizeObserver", () => {
   const originalResizeObserver = globalThis.ResizeObserver;
 
