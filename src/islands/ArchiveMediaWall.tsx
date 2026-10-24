@@ -58,7 +58,7 @@ function isDimensionalImageItem(
 function getOverlayLinkMeta(href: string): OverlayLinkMeta {
   const hostname = getHostname(href);
 
-  if (hostname === "youtu.be" || hostname.endsWith("youtube.com")) {
+  if (hostname === "youtu.be" || hostname === "youtube.com" || hostname.endsWith(".youtube.com")) {
     return {
       icon: "youtube",
       label: "YouTube",
