@@ -51,7 +51,7 @@
     "knip": "6.43.0",
     "sharp": "^0.35.5",
     "subset-font": "2.9.0",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vite-plus": "catalog:",
     "vitest": "catalog:"
   },
