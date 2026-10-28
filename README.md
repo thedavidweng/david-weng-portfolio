@@ -14,21 +14,21 @@ Portfolio site of David, focused on visual storytelling, design, content operati
 ## Local Development
 
 ```bash
-pnpm install
-pnpm dev
+bun install
+bun run dev
 ```
 
 ## Verification
 
 ```bash
-pnpm test
-pnpm lint:check
-pnpm typecheck
-pnpm build
+bun run test
+bun run lint:check
+bun run typecheck
+bun run build
 ```
 
 ## Deploy
 
 ```bash
-pnpm deploy
+bun run deploy
 ```

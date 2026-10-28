@@ -17,7 +17,7 @@ function ok(label) {
   console.log(`OK: ${label}`);
 }
 
-assert(existsSync(distDir), "dist/ is missing, run pnpm build first");
+assert(existsSync(distDir), "dist/ is missing, run bun run build first");
 
 for (const name of ["app", "next.config.ts", "proxy.ts"]) {
   assert(!existsSync(join(root, name)), `${name} must not exist`);

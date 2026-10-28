@@ -104,7 +104,7 @@ function stripManagedHeaders(headers) {
 }
 
 if (!existsSync(distDir)) {
-  throw new Error(`[write-headers] Missing build output at ${distDir}. Run pnpm build first.`);
+  throw new Error(`[write-headers] Missing build output at ${distDir}. Run bun run build first.`);
 }
 
 aliasSitemapXml(distDir);

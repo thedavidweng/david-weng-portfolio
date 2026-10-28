@@ -1,0 +1,3 @@
+[install]
+minimumReleaseAge = 0
+minimumReleaseAgeExcludes = ["vite", "astro", "oxlint", "@types/node", "webpack", "workerd", "wrangler", "miniflare", "vite-plus", "oxlint-tsgolint", "oxfmt", "vitest"]
