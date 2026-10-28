@@ -25,3 +25,7 @@ The same change fixes a latent reduced-motion bug: the global `animation: none !
 - The drawer's visual design is unchanged; only layering moved. Focus trap, inert management, and `dialog.show()` semantics are untouched.
 - The fix relies on reverse-engineered sampling rules (Apple publishes none). If a future iOS samples composited descendant pixels instead of element backgrounds, the artifact returns — the worst case is today's status quo, and the invariant test plus this ADR mark where to revisit. Real-device verification on iOS 26 is required for any change to these blocks; the tint cannot be reproduced in simulators or jsdom.
 - Do not add a PWA standalone manifest or JS `theme-color` swapping for this problem; both are proven no-ops on iOS 26 Safari.
+
+## Update — 2026-10-27
+
+The source-text style tests were removed. The mobile menu has since been superseded; real-device verification remains necessary for Safari tinting.

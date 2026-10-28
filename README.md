@@ -20,6 +20,8 @@ pnpm dev
 
 ## Verification
 
+Tests exercise rendered pages, interactions, and generated responses. Verify deployment routing with `pnpm verify:zone` after deploys.
+
 ```bash
 pnpm test
 pnpm lint:check

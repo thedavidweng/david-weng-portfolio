@@ -16,3 +16,7 @@ Production needs `http→https` and `www→apex` (301) redirects for `davidweng.
 
 - The former `workers/site.mjs` redirect worker (never invoked in production) is deleted; this ADR is its replacement as documentation of the redirect behavior.
 - Redirect changes are made in the Zone apply script, not in application code, and verified with `pnpm verify:zone` after deploys.
+
+## Update — 2026-10-27
+
+The configuration source-text test was removed. Use `pnpm verify:zone` after deployment to check live redirects and agent access.

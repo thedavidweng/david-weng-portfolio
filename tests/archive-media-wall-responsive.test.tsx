@@ -1,3 +1,6 @@
+import { act } from "react";
+import { hydrateRoot } from "react-dom/client";
+import { renderToString } from "react-dom/server";
 import { render, screen } from "@testing-library/react";
 import { ArchiveMediaWall } from "@/src/islands/ArchiveMediaWall";
 import { MockResizeObserver } from "@/tests/helpers/dom-observers";
@@ -54,4 +57,23 @@ test("archive media wall wires responsive row sizing hooks into RowsPhotoAlbum",
   } finally {
     globalThis.ResizeObserver = originalResizeObserver;
   }
+});
+
+
+test("server-rendered archive hydrates before enabling the responsive album", async () => {
+  const originalResizeObserver = globalThis.ResizeObserver;
+  // @ts-expect-error simulate server without ResizeObserver
+  delete globalThis.ResizeObserver;
+  const container = document.createElement("div");
+  const view = <ArchiveMediaWall locale="en" items={archiveItems} {...wallLabels} />;
+  container.innerHTML = renderToString(view);
+  globalThis.ResizeObserver = MockResizeObserver as typeof ResizeObserver;
+  document.body.append(container);
+  const onRecoverableError = vi.fn();
+  let root: ReturnType<typeof hydrateRoot>;
+  await act(async () => { root = hydrateRoot(container, view, { onRecoverableError }); });
+  expect(onRecoverableError).not.toHaveBeenCalled();
+  await act(async () => root.unmount());
+  container.remove();
+  globalThis.ResizeObserver = originalResizeObserver;
 });
