@@ -2,9 +2,11 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { aliasSitemapXml } from "./sitemap-alias.mjs";
 
-const distDir = join(process.cwd(), "dist");
+const distDir = join(process.cwd(), ".cloudflare/output/v0/workers/default/assets");
 const headersPath = join(distDir, "_headers");
 const MANAGED_MARKER = "# managed-by: write-headers.mjs";
+const ADAPTER_ASSET_CACHE = `/_astro/*
+  Cache-Control: public, max-age=31536000, immutable`;
 
 const SECURITY_HEADERS = `/*
   X-Content-Type-Options: nosniff
@@ -95,12 +97,13 @@ function buildProjectHtmlCacheRules() {
 /** @param {string} headers */
 function stripManagedHeaders(headers) {
   const markerIndex = headers.indexOf(MANAGED_MARKER);
+  const preserved = markerIndex === -1 ? headers.trimEnd() : headers.slice(0, markerIndex).trimEnd();
 
-  if (markerIndex === -1) {
-    return headers.trimEnd();
+  if (preserved.trim() === ADAPTER_ASSET_CACHE) {
+    return "";
   }
 
-  return headers.slice(0, markerIndex).trimEnd();
+  return preserved;
 }
 
 if (!existsSync(distDir)) {
