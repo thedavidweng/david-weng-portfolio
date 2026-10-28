@@ -15,7 +15,3 @@ Design decisions and their rationale are recorded here in `docs/adr/`, one file 
 - A comment explaining rationale is a signal to write an ADR instead.
 - `tests/comment-policy.test.ts` enforces the comment policy in CI; the few permitted inline comments state constraints code cannot express.
 - ADRs are immutable history: supersede with a new ADR rather than editing an accepted one.
-
-## Update — 2026-10-27
-
-The comment allowlist test was removed; oxlint continues to enforce its configured comment rules.
