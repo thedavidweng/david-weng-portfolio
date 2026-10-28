@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
-const distDir = join(root, "dist");
+const distDir = join(root, ".cloudflare/output/v0/workers/default/assets");
 const SITEMAP_URL = "https://davidweng.eu.org/sitemap.xml";
 
 /** @param {boolean} condition @param {string} message */
@@ -17,7 +17,7 @@ function ok(label) {
   console.log(`OK: ${label}`);
 }
 
-assert(existsSync(distDir), "dist/ is missing, run pnpm build first");
+assert(existsSync(distDir), "Cloudflare asset output is missing, run pnpm build first");
 
 for (const name of ["app", "next.config.ts", "proxy.ts"]) {
   assert(!existsSync(join(root, name)), `${name} must not exist`);
@@ -32,12 +32,12 @@ assert(cfConfig.includes('notFoundHandling: "404-page"'), 'cloudflare.config.ts 
 assert(cfConfig.includes('htmlHandling: "auto-trailing-slash"'), 'cloudflare.config.ts must set assets.htmlHandling to "auto-trailing-slash"');
 assert(!cfConfig.includes("entrypoint"), "cloudflare.config.ts must use assets-only deploy (no worker entrypoint)");
 assert(!cfConfig.includes("runWorkerFirst"), "cloudflare.config.ts must not set runWorkerFirst (static assets are free/unlimited)");
-const bundlerConfig = readFileSync(join(root, "wrangler.config.ts"), "utf8");
-assert(bundlerConfig.includes('assetsDirectory: "./dist"'), 'wrangler.config.ts must set assetsDirectory to "./dist"');
+assert(!existsSync(join(root, "wrangler.config.ts")), "wrangler.config.ts must not exist (assets-only deploy has no Wrangler bundler config)");
+assert(!existsSync(join(root, "wrangler.jsonc")), "wrangler.jsonc must not exist");
 ok("cf Workers static assets config");
 
 const headersPath = join(distDir, "_headers");
-assert(existsSync(headersPath), "dist/_headers is missing");
+assert(existsSync(headersPath), "_headers is missing from the Cloudflare asset output");
 const headers = readFileSync(headersPath, "utf8");
 assert(headers.includes("/_astro/*"), "dist/_headers must cache /_astro/*");
 assert(headers.includes("/projects/film-video/*"), "dist/_headers must cache portfolio media paths");
@@ -54,7 +54,7 @@ assert(
 ok("dist/_headers /agent content type");
 
 const sitemapPath = join(distDir, "sitemap.xml");
-assert(existsSync(sitemapPath), "dist/sitemap.xml is missing");
+assert(existsSync(sitemapPath), "sitemap.xml is missing from the Cloudflare asset output");
 const sitemap = readFileSync(sitemapPath, "utf8");
 assert(sitemap.includes("<urlset"), "dist/sitemap.xml must be a urlset document");
 assert(!sitemap.includes("<sitemapindex"), "dist/sitemap.xml must not be a sitemap index");
@@ -62,7 +62,7 @@ assert(sitemap.includes("https://davidweng.eu.org/"), "dist/sitemap.xml must inc
 ok("dist/sitemap.xml urlset preserved at legacy path");
 
 const robotsPath = join(distDir, "robots.txt");
-assert(existsSync(robotsPath), "dist/robots.txt is missing");
+assert(existsSync(robotsPath), "robots.txt is missing from the Cloudflare asset output");
 const robots = readFileSync(robotsPath, "utf8");
 assert(robots.includes(`Sitemap: ${SITEMAP_URL}`), "dist/robots.txt must advertise /sitemap.xml");
 ok("dist/robots.txt sitemap URL");

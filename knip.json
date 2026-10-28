@@ -1,6 +1,7 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "entry": ["cloudflare.config.ts", "wrangler.config.ts"],
+  "entry": ["cloudflare.config.ts"],
+  "ignoreDependencies": ["@cloudflare/vite-plugin"],
   "ignoreBinaries": ["git-cliff"],
   "ignoreExportsUsedInFile": { "type": true }
 }

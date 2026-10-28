@@ -1,3 +1,3 @@
 [tools]
-node = "24"
+node = "lts"
 jactionlint = "2.3.0"
