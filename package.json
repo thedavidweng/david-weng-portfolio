@@ -4,20 +4,19 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=24.0.0",
-    "pnpm": ">=12.8.1"
+    "node": ">=24.0.0"
   },
   "scripts": {
     "dev": "astro dev",
     "subset:fonts": "node scripts/subset-cjk-fonts.mjs",
     "generate:images": "node scripts/generate-responsive-images.mjs",
     "apply:zone": "node scripts/apply-cf-zone-free-tier.mjs",
-    "prebuild": "pnpm subset:fonts",
+    "prebuild": "bun run subset:fonts",
     "build": "astro build && node scripts/write-headers.mjs",
     "verify:dist": "node scripts/verify-dist.mjs",
     "verify:zone": "node scripts/verify-zone-redirects.mjs --curl",
-    "preview": "pnpm build && astro preview",
-    "deploy": "pnpm build && cf deploy --prebuilt",
+    "preview": "bun run build && astro preview",
+    "deploy": "bun run build && cf deploy --prebuilt",
     "typecheck": "astro check && tsc --noEmit",
     "lint": "vp lint --fix",
     "lint:check": "vp lint",
@@ -56,5 +55,24 @@
     "vite-plus": "catalog:",
     "vitest": "catalog:"
   },
-  "packageManager": "pnpm@12.15.0"
+  "workspaces": {
+    "packages": ["."],
+    "catalog": {
+      "vitest": "5.0.5",
+      "vite-plus": "1.4.0",
+      "@vitest/coverage-v8": "5.0.5"
+    }
+  },
+  "overrides": {
+    "zod": ">=4.6.7",
+    "undici@7": ">=7.30.1 <8",
+    "vite@*": "npm:@voidzero-dev/vite-plus-core@1.0.0",
+    "vitest@*": "catalog:"
+  },
+  "trustedDependencies": [
+    "esbuild",
+    "sharp",
+    "unrs-resolver",
+    "workerd"
+  ]
 }

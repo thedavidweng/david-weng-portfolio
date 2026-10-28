@@ -1,0 +1,24 @@
+[install]
+minimumReleaseAge = 0
+minimumReleaseAgeExcludes = [
+  "vite",
+  "@vitejs/*",
+  "astro",
+  "@astrojs/*",
+  "oxlint",
+  "@oxlint/*",
+  "@types/node",
+  "webpack",
+  "workerd",
+  "miniflare",
+  "@cloudflare/*",
+  "@napi-rs/*",
+  "vite-plus",
+  "@voidzero-dev/*",
+  "oxlint-tsgolint",
+  "@oxlint-tsgolint/*",
+  "oxfmt",
+  "@oxfmt/*",
+  "vitest",
+  "@vitest/*",
+]
