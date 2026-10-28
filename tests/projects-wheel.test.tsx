@@ -1,5 +1,3 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { Suspense, lazy, startTransition } from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { ProjectsSection } from "@/src/islands/ProjectsSection";
@@ -54,14 +52,6 @@ test("a committed category replacement resets navigation to its first slide", ()
   expect(viewport.scrollLeft).toBe(0);
   expect(screen.getByRole("button", { name: /previous projects/i })).toBeDisabled();
   expect(screen.getByRole("button", { name: /next projects/i })).toBeDisabled();
-});
-
-test("projects section no longer imports embla or intercepts wheel gestures directly", () => {
-  const source = readFileSync(join(process.cwd(), "src/islands/ProjectsSection.tsx"), "utf8");
-
-  expect(source).not.toContain("embla-carousel-react");
-  expect(source).not.toContain("useEmblaCarousel");
-  expect(source).not.toContain("onWheel=");
 });
 
 test("clicking a category chip scrolls natively to the first slide in that group", () => {

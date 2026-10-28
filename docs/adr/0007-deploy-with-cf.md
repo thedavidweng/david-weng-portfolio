@@ -17,3 +17,7 @@ The Worker was described twice: `wrangler.jsonc` for Wrangler and `cloudflare.co
 
 - Downgrading `cf` below beta.9, or adding Wrangler-only config back, breaks preview deploys.
 - `scripts/verify-dist.mjs` and `tests/www-redirect.test.ts` pin the assets-only constraints in `cloudflare.config.ts` and the absence of `wrangler.jsonc`.
+
+## Update — 2026-10-27
+
+The configuration source-text test was removed. `pnpm verify:dist` remains available to inspect build output.

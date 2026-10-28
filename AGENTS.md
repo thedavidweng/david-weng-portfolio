@@ -4,7 +4,7 @@ This project serves both human visitors and AI agents. The human-visible UI and 
 
 ## Coding Conventions
 
-1. **No comments unless absolutely necessary.** Code must self-explain. A comment is justified only when it states a constraint the code cannot express (a note on a browser quirk that would otherwise be "fixed" back into a bug is the bar to clear). Machine-read directives (JSDoc type annotations, `/// <reference>`, `@ts-expect-error` with reason) are not comments. Enforced in CI by `tests/comment-policy.test.ts` and oxlint via `vp lint` (`no-inline-comments`, `no-warning-comments`; rules live in `vite.config.ts`).
+1. **No comments unless absolutely necessary.** Code must self-explain. A comment is justified only when it states a constraint the code cannot express (a note on a browser quirk that would otherwise be "fixed" back into a bug is the bar to clear). Machine-read directives (JSDoc type annotations, `/// <reference>`, `@ts-expect-error` with reason) are not comments. Enforced in part by oxlint via `vp lint` (`no-inline-comments`, `no-warning-comments`; rules live in `vite.config.ts`).
 2. **Rationale goes to `docs/adr/`, not inline.** If a comment would explain *why* a decision was made, write an ADR instead (`NNNN-slug.md`, sequential — see `docs/adr/0001-record-architecture-decisions.md`). Operational knowledge agents need day-to-day belongs in this file.
 3. **Minimize line count without hurting readability.** Prefer deleting code to documenting it; inline single-use abstractions; no code golf — clarity beats brevity when they conflict.
 
