@@ -514,7 +514,7 @@ main {
   gap: 0.8rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(var(--accent-rgb), 0.12);
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-family: var(--font-mono);
   font-size: 0.74rem;
   letter-spacing: 0.08em;
@@ -2754,7 +2754,7 @@ figcaption.monitor__bar {
 
 .terminal__bar {
   justify-content: flex-start;
-  color: var(--text-faint);
+  color: var(--text-soft);
 }
 
 .terminal__prompt {
@@ -2856,7 +2856,7 @@ figcaption.monitor__bar {
 }
 
 .upstream__repo span {
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-weight: 400;
 }
 
@@ -3234,7 +3234,7 @@ figcaption.monitor__bar {
 
 .site-footer__inner {
   border-top-color: var(--line);
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-family: var(--font-body);
   font-size: 0.875rem;
   letter-spacing: 0;
