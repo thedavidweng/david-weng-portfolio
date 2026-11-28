@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
-const distDir = join(root, ".cloudflare/output/v0/workers/default/assets");
+const distDir = join(root, ".cloudflare/output/v1/workers/default/assets");
 const SITEMAP_URL = "https://davidweng.eu.org/sitemap.xml";
 
 /** @param {boolean} condition @param {string} message */
