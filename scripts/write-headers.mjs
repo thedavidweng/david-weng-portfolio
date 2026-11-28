@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { aliasSitemapXml } from "./sitemap-alias.mjs";
 
-const distDir = join(process.cwd(), ".cloudflare/output/v0/workers/default/assets");
+const distDir = join(process.cwd(), ".cloudflare/output/v1/workers/default/assets");
 const headersPath = join(distDir, "_headers");
 const MANAGED_MARKER = "# managed-by: write-headers.mjs";
 const ADAPTER_ASSET_CACHE = `/_astro/*
